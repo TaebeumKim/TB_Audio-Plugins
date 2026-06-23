@@ -15,12 +15,18 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 *Currently available plug-ins in this collection:*
 
 * **TB_EQ** - A professional-grade 24-band EQ featuring dynamic and spectral processing, complete with delta monitoring capabilities.
-* **TB_Compressor** - A high-performance compressor equipped with integrated oversampling and saturation features.
-* **TB_Transient Shaper** - A spectral-based transient shaper that separates attack and sustain components. Features transient boost/cut capabilities and an EQ mode for transient sensitivity.
-* **TB_XYZ Panner** - A spatial panner providing control over depth and height for both headphones and speakers, featuring advanced binaural support.
-* **TB_Parallel Reverb (Coming soon)** - A high-quality reverb utilizing a parallel structure to achieve superior diffusion and density.
+* <img width="1102" height="780" alt="image" src="https://github.com/user-attachments/assets/c73d4896-b433-4c9e-8416-77753f0a8df9" />
 
-## 🚀 Installation Guide
+* **TB_Compressor** - A high-performance compressor equipped with integrated oversampling and saturation features.
+* <img width="1082" height="680" alt="image" src="https://github.com/user-attachments/assets/dc8713d4-2e1a-41d2-b397-aae3cc9e35d1" />
+
+* **TB_Transient Shaper** - A spectral-based transient shaper that separates attack and sustain components. Features transient boost/cut capabilities and an EQ mode for transient sensitivity.
+* <img width="1062" height="900" alt="image" src="https://github.com/user-attachments/assets/ba80796a-6504-4523-9a28-a977d3fc676a" />
+
+* **TB_XYZ Panner** - A spatial panner providing control over depth and height for both headphones and speakers, featuring advanced binaural support.
+* <img width="1082" height="780" alt="image" src="https://github.com/user-attachments/assets/5428acaf-06bb-4e76-9330-0ccd784d2172" />
+
+* **TB_Parallel Reverb (Coming soon)** - A high-quality reverb utilizing a parallel structure to achieve superior diffusion and density.
 
 ## 🚀 Installation Guide
 
