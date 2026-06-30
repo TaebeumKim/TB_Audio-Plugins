@@ -21,6 +21,7 @@
       "SDKVersion": "VST 3.8.0",
       "Sub Categories": [
         "Fx",
+        "Reverb",
       ],
       "Class Flags": 0,
       "Cardinality": 2147483647,
@@ -36,6 +37,7 @@
       "SDKVersion": "VST 3.8.0",
       "Sub Categories": [
         "Fx",
+        "Reverb",
       ],
       "Class Flags": 0,
       "Cardinality": 2147483647,
