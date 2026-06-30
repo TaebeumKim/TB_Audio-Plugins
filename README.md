@@ -22,7 +22,7 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 <img width="1182" height="820" alt="스크린샷 2026-06-30 095149" src="https://github.com/user-attachments/assets/2fafa147-5f58-4ba0-b4d4-b93dd986ea48" />
 
 * **TB_EQ** - A professional-grade 24-band EQ featuring dynamic and spectral processing, complete with delta monitoring capabilities.
- <img width="1102" height="780" alt="image" src="https://github.com/user-attachments/assets/c73d4896-b433-4c9e-8416-77753f0a8df9" />
+<img width="1102" height="780" alt="스크린샷 2026-06-30 095644" src="https://github.com/user-attachments/assets/cbca4810-2725-4bd3-87a1-bfdfbb9dd992" />
 
 * **TB_Compressor** - A high-performance compressor equipped with integrated oversampling and saturation features.
  <img width="1082" height="680" alt="image" src="https://github.com/user-attachments/assets/dc8713d4-2e1a-41d2-b397-aae3cc9e35d1" />
@@ -43,18 +43,27 @@ Extract the downloaded zip/archive file and move the plug-in files to your syste
 
 #### **Windows:**
 * **VST3:** `C:\Program Files\Common Files\VST3`
-* **AAX:** `C:\Program Files\Common Files\Avid\Audio\Plug-Ins`
 
-#### **macOS:**
+#### **macOS:**(soon)
 * **VST3:** `/Library/Audio/Plug-Ins/VST3`
 * **AU (Audio Unit):** `/Library/Audio/Plug-Ins/Components`
 * **AAX:** `/Library/Application Support/Avid/Audio/Plug-Ins`
 
-#### **Linux:**
+#### **Linux:**(soon)
 * **VST3:** `~/.vst3` (User) or `/usr/lib/vst3` (System)
 
 ## 📄 License
 The pre-compiled binaries distributed in this repository are licensed under the terms of the **MIT License**. You are free to use these plug-ins in any commercial or non-commercial musical works. For more detailed information, please refer to the [LICENSE](LICENSE) file.
 
+#P.S
+---
+I am an independent developer who doesn't currently earn any income from my work. In Korea, you can buy a coffee for $1 (really!). Would you be willing to buy me a cup of coffee?
+
+(We are still preparing the page, so please wait a little longer!)
+https://ko-fi.com/teamimpulseimpact
+---
+Fab is offering free audio sources. Please search for "TII" on Fab!
+
+https://www.fab.com/search?q=tii
 ---
 *Built with passion for the audio community. Enjoy creating!* 🎧
