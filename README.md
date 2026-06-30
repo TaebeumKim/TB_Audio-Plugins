@@ -13,20 +13,25 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 ## 📦 Included Plug-ins
 *Currently available plug-ins in this collection:*
+(NEW!)
+* **TB_Jewel Digger & Finder** - A harmonic motion filter and crystal-grain effect that transforms audio through scale-aware Dig/Find filtering. Features musical notch and band-style harmonic sweeping, tempo-syncable motion, controlled randomization, base-note low-cut shaping, and a parallel crystallizing engine for pitch-shifted granular textures.
+<img width="942" height="760" alt="dig_find_diagonal_half_shadow_only_subtle" src="https://github.com/user-attachments/assets/d2ebfafa-84fe-4c90-8cf0-c2ce7e81f515" />
+
+(NEW!)
+* **TB_Parallel Reverb** - A multi-engine parallel reverb designed to create rich, spacious, and highly dimensional ambience while preserving the clarity of the dry signal. It combines independent Glue, Bright, and Space reverb engines with dedicated send control, stereo width shaping, tonal color, solo monitoring, and a final wet/dry blend for precise spatial design.
+<img width="1182" height="820" alt="스크린샷 2026-06-30 095149" src="https://github.com/user-attachments/assets/2fafa147-5f58-4ba0-b4d4-b93dd986ea48" />
 
 * **TB_EQ** - A professional-grade 24-band EQ featuring dynamic and spectral processing, complete with delta monitoring capabilities.
-* <img width="1102" height="780" alt="image" src="https://github.com/user-attachments/assets/c73d4896-b433-4c9e-8416-77753f0a8df9" />
+ <img width="1102" height="780" alt="image" src="https://github.com/user-attachments/assets/c73d4896-b433-4c9e-8416-77753f0a8df9" />
 
 * **TB_Compressor** - A high-performance compressor equipped with integrated oversampling and saturation features.
-* <img width="1082" height="680" alt="image" src="https://github.com/user-attachments/assets/dc8713d4-2e1a-41d2-b397-aae3cc9e35d1" />
+ <img width="1082" height="680" alt="image" src="https://github.com/user-attachments/assets/dc8713d4-2e1a-41d2-b397-aae3cc9e35d1" />
 
 * **TB_Transient Shaper** - A spectral-based transient shaper that separates attack and sustain components. Features transient boost/cut capabilities and an EQ mode for transient sensitivity.
 * <img width="1062" height="900" alt="image" src="https://github.com/user-attachments/assets/ba80796a-6504-4523-9a28-a977d3fc676a" />
 
 * **TB_XYZ Panner** - A spatial panner providing control over depth and height for both headphones and speakers, featuring advanced binaural support.
-* <img width="1082" height="780" alt="image" src="https://github.com/user-attachments/assets/5428acaf-06bb-4e76-9330-0ccd784d2172" />
-
-* **TB_Parallel Reverb (Coming soon)** - A high-quality reverb utilizing a parallel structure to achieve superior diffusion and density.
+ <img width="1082" height="780" alt="image" src="https://github.com/user-attachments/assets/5428acaf-06bb-4e76-9330-0ccd784d2172" />
 
 ## 🚀 Installation Guide
 
