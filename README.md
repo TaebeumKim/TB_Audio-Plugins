@@ -12,7 +12,9 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 * **100% Free:** Completely free for both personal and commercial audio production.
 
 ## 📦 Included Plug-ins
+
 *Currently available plug-ins in this collection:*
+
 (NEW!)
 TB_Inverted Flanger - A sci-fi inverted-phase flanger that carves hollow, sweeping motion by blending dry signal with phase-inverted modulated delay voices. Features a focused one-concept control set, strong LFO-driven flanging, feedback-enhanced metallic motion, and a Color control that removes the extra dry source for deeper empty-space cancellation tones.
 <img width="562" height="620" alt="스크린샷 2026-07-07 022901" src="https://github.com/user-attachments/assets/efb12b54-ee18-475d-b814-0558fb05a381" />
