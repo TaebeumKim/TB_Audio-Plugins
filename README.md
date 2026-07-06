@@ -14,6 +14,10 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 ## 📦 Included Plug-ins
 *Currently available plug-ins in this collection:*
 (NEW!)
+TB_Inverted Flanger - A sci-fi inverted-phase flanger that carves hollow, sweeping motion by blending dry signal with phase-inverted modulated delay voices. Features a focused one-concept control set, strong LFO-driven flanging, feedback-enhanced metallic motion, and a Color control that removes the extra dry source for deeper empty-space cancellation tones.
+<img width="562" height="620" alt="스크린샷 2026-07-07 022901" src="https://github.com/user-attachments/assets/efb12b54-ee18-475d-b814-0558fb05a381" />
+
+(NEW!)
 * **TB_Jewel Digger & Finder** - A harmonic motion filter and crystal-grain effect that transforms audio through scale-aware Dig/Find filtering. Features musical notch and band-style harmonic sweeping, tempo-syncable motion, controlled randomization, base-note low-cut shaping, and a parallel crystallizing engine for pitch-shifted granular textures.
 <img width="942" height="760" alt="dig_find_diagonal_half_shadow_only_subtle" src="https://github.com/user-attachments/assets/d2ebfafa-84fe-4c90-8cf0-c2ce7e81f515" />
 
