@@ -1,0 +1,48 @@
+{
+  "Name": "TB_Compressor",
+  "Version": "1.1",
+  "Factory Info": {
+    "Vendor": "Team Impulse Impact",
+    "URL": "www.TeamImpulseImpact.com",
+    "E-Mail": "ktb7056@gmail.com",
+    "Flags": {
+      "Unicode": true,
+      "Classes Discardable": false,
+      "Component Non Discardable": false,
+    },
+  },
+  "Classes": [
+    {
+      "CID": "ABCDEF019182FAEB4D616E754D6B7465",
+      "Category": "Audio Module Class",
+      "Name": "TB_Compressor",
+      "Vendor": "Team Impulse Impact",
+      "Version": "1.1",
+      "SDKVersion": "VST 3.8.0",
+      "Sub Categories": [
+        "Fx",
+        "Dynamics",
+      ],
+      "Class Flags": 0,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+    {
+      "CID": "ABCDEF011234ABCD4D616E754D6B7465",
+      "Category": "Component Controller Class",
+      "Name": "TB_Compressor",
+      "Vendor": "Team Impulse Impact",
+      "Version": "1.1",
+      "SDKVersion": "VST 3.8.0",
+      "Sub Categories": [
+        "Fx",
+        "Dynamics",
+      ],
+      "Class Flags": 0,
+      "Cardinality": 2147483647,
+      "Snapshots": [
+      ],
+    },
+  ],
+}
