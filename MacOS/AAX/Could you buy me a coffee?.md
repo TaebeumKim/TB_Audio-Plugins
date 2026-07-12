@@ -1,5 +1,7 @@
 # Buy me a coffee?
-<img width="161" height="130" alt="image" src="https://github.com/user-attachments/assets/39011a3e-a8c2-4a5a-8bfa-5545cba15a77" />
+
+<img width="80" height="65" alt="image" src="https://github.com/user-attachments/assets/39011a3e-a8c2-4a5a-8bfa-5545cba15a77" />
+
 https://ko-fi.com/teamimpulseimpact
 
 A little interest and encouragement go a long way in keeping development going.
