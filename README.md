@@ -38,12 +38,12 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 *Currently available plug-ins in this collection:*
 
-(NEW!)
-* **TB_Inverted Phaser**
+
+* **(NEW!) TB_Inverted Phaser**
 <img width="762" height="820" alt="스크린샷 2026-07-12 201651" src="https://github.com/user-attachments/assets/926c11db-2a58-4d28-bfa2-681804e5e65f" />
 
-(NEW!)
-* **TB_Step Shifter**
+
+* **(NEW!) TB_Step Shifter**
 <img width="642" height="310" alt="스크린샷 2026-07-12 201658" src="https://github.com/user-attachments/assets/1c0d3b57-ee73-475d-8f2c-e41642648e81" />
 
 * **TB_Inverted Flanger** - A sci-fi inverted-phase flanger that carves hollow, sweeping motion by blending dry signal with phase-inverted modulated delay voices. Features a focused one-concept control set, strong LFO-driven flanging, feedback-enhanced metallic motion, and a Color control that removes the extra dry source for deeper empty-space cancellation tones.
