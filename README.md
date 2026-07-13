@@ -3,6 +3,11 @@
 </div>
 
 # Update Note
+* **2026/07/13**
+  - update TB_EQ : upgrade function that control mid / side
+  - update TB_Comp : upgrade sidechain function.
+ 
+    
 * **2026/07/12**
   - new plugins : TB_StepShifer, TB_InvertedPhaser
   - new OS update : for MacOS VST3, AAX, AU(component)
@@ -38,6 +43,11 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 *Currently available plug-ins in this collection:*
 
+* **(Update) TB_EQ** - A professional-grade 24-band EQ featuring dynamic and spectral processing, complete with delta monitoring capabilities.
+<img width="1122" height="860" alt="이큐" src="https://github.com/user-attachments/assets/7205236a-b04b-4819-b371-9c1d651998f8" />
+
+* **(Update) TB_Compressor** - A high-performance compressor equipped with integrated oversampling and saturation features.
+<img width="1202" height="680" alt="컴프 사이드체인" src="https://github.com/user-attachments/assets/5afc44be-16f1-45cf-adf7-b9553730ad09" />
 
 * **(NEW!) TB_Inverted Phaser**
 <img width="762" height="820" alt="스크린샷 2026-07-12 201651" src="https://github.com/user-attachments/assets/926c11db-2a58-4d28-bfa2-681804e5e65f" />
@@ -55,11 +65,7 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 * **TB_Parallel Reverb** - A multi-engine parallel reverb designed to create rich, spacious, and highly dimensional ambience while preserving the clarity of the dry signal. It combines independent Glue, Bright, and Space reverb engines with dedicated send control, stereo width shaping, tonal color, solo monitoring, and a final wet/dry blend for precise spatial design.
 <img width="1182" height="820" alt="리버브" src="https://github.com/user-attachments/assets/6bc458a3-96d7-45f9-aa37-fa5c3d9f8557" />
 
-* **TB_EQ** - A professional-grade 24-band EQ featuring dynamic and spectral processing, complete with delta monitoring capabilities.
-<img width="1122" height="860" alt="이큐" src="https://github.com/user-attachments/assets/7ff40c84-3deb-475a-b749-21390bd5fc16" />
 
-* **TB_Compressor** - A high-performance compressor equipped with integrated oversampling and saturation features.
-<img width="1082" height="680" alt="컴프" src="https://github.com/user-attachments/assets/35146d43-cc3a-4dd0-8e10-3da5ae32781d" />
 
 * **TB_Transient Shaper** - A spectral-based transient shaper that separates attack and sustain components. Features transient boost/cut capabilities and an EQ mode for transient sensitivity.
 <img width="1102" height="820" alt="스펙트럴" src="https://github.com/user-attachments/assets/4e1fd5e5-527b-48ea-9d26-e81ec89cb28b" />
