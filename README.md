@@ -3,6 +3,12 @@
 </div>
 
 # Update Note
+
+* **2026/07/24**
+  - update TB_Center : new realese plug in. 
+  - update TB_Distortion : new realese plug in. 
+
+
 * **2026/07/13**
   - update TB_EQ : upgrade function that control mid / side
   - update TB_Comp : upgrade sidechain function.
@@ -42,18 +48,26 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 ## 📦 Included Plug-ins
 
 *Currently available plug-ins in this collection:*
+* **(new!)TB_Center** - This is a professional-grade plugin that centers the signal.
+<img width="902" height="640" alt="센터" src="https://github.com/user-attachments/assets/d045741a-c18f-4e40-b114-e8259faca266" />
 
-* **(Update) TB_EQ** - A professional-grade 24-band EQ featuring dynamic and spectral processing, complete with delta monitoring capabilities.
+
+
+* **(new!)TB_Distortion** - A distortion plugin that allows you to specify the frequency range, in addition to offering unique distortion characteristics.
+<img width="722" height="360" alt="디스토션" src="https://github.com/user-attachments/assets/cc3f1006-501c-42e5-83a3-8b81da02b9b5" />
+
+
+* **TB_EQ** - A professional-grade 24-band EQ featuring dynamic and spectral processing, complete with delta monitoring capabilities.
 <img width="1122" height="860" alt="이큐" src="https://github.com/user-attachments/assets/7205236a-b04b-4819-b371-9c1d651998f8" />
 
-* **(Update) TB_Compressor** - A high-performance compressor equipped with integrated oversampling and saturation features.
+* **TB_Compressor** - A high-performance compressor equipped with integrated oversampling and saturation features.
 <img width="1202" height="680" alt="컴프 사이드체인" src="https://github.com/user-attachments/assets/5afc44be-16f1-45cf-adf7-b9553730ad09" />
 
-* **(NEW!) TB_Inverted Phaser**
+* **TB_Inverted Phaser**
 <img width="762" height="820" alt="스크린샷 2026-07-12 201651" src="https://github.com/user-attachments/assets/926c11db-2a58-4d28-bfa2-681804e5e65f" />
 
 
-* **(NEW!) TB_Step Shifter**
+* **TB_Step Shifter**
 <img width="642" height="310" alt="스크린샷 2026-07-12 201658" src="https://github.com/user-attachments/assets/1c0d3b57-ee73-475d-8f2c-e41642648e81" />
 
 * **TB_Inverted Flanger** - A sci-fi inverted-phase flanger that carves hollow, sweeping motion by blending dry signal with phase-inverted modulated delay voices. Features a focused one-concept control set, strong LFO-driven flanging, feedback-enhanced metallic motion, and a Color control that removes the extra dry source for deeper empty-space cancellation tones.
