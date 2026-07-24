@@ -49,7 +49,7 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 *Currently available plug-ins in this collection:*
 * **(new!)TB_Center** - This is a professional-grade plugin that centers the signal.
-<img width="902" height="640" alt="센터" src="https://github.com/user-attachments/assets/d045741a-c18f-4e40-b114-e8259faca266" />
+<img width="900" height="610" alt="image" src="https://github.com/user-attachments/assets/1a82becf-dd4d-451b-8cff-18fcb0be6499" />
 
 
 
