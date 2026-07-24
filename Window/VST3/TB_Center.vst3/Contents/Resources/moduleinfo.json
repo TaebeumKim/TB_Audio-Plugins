@@ -1,6 +1,6 @@
 {
   "Name": "TB_Center",
-  "Version": "0.2.1",
+  "Version": "0.3.1",
   "Factory Info": {
     "Vendor": "Team Impulse Impact",
     "URL": "www.TeamImpulseImpact.com",
@@ -17,7 +17,7 @@
       "Category": "Audio Module Class",
       "Name": "TB_Center",
       "Vendor": "Team Impulse Impact",
-      "Version": "0.2.1",
+      "Version": "0.3.1",
       "SDKVersion": "VST 3.8.0",
       "Sub Categories": [
         "Fx",
@@ -33,7 +33,7 @@
       "Category": "Component Controller Class",
       "Name": "TB_Center",
       "Vendor": "Team Impulse Impact",
-      "Version": "0.2.1",
+      "Version": "0.3.1",
       "SDKVersion": "VST 3.8.0",
       "Sub Categories": [
         "Fx",
