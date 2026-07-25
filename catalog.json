@@ -1,0 +1,186 @@
+{
+  "catalogVersion": 1,
+  "hubVersion": "0.1.0",
+  "plugins": [
+    {
+      "id": "tb_center",
+      "name": "TB Center",
+      "version": "1.0.0",
+      "category": "Utility",
+      "description": "Mid/side 기반 센터 채널 컨트롤.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip",
+        "sha256": "e9d1fca03bdfd6c455e38ef3434655dbb9048ae08a6c0b799d6158002c016da1",
+        "sizeBytes": 2384062
+      }
+    },
+    {
+      "id": "tb_compressor",
+      "name": "TB Compressor",
+      "version": "1.0.0",
+      "category": "Dynamics",
+      "description": "투명한 피크/RMS 컴프레서.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip",
+        "sha256": "3902bca78e72b34f9df5520f70c93934ddf43cdaf52687b16b5e8fc3578b4602",
+        "sizeBytes": 2794349
+      }
+    },
+    {
+      "id": "tb_distortion",
+      "name": "TB Distortion",
+      "version": "1.0.0",
+      "category": "Distortion",
+      "description": "멀티 스테이지 새추레이션/디스토션.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip",
+        "sha256": "1e23d8a1919532402b55cf052bba77684421a399b7741573dcafe0dcd9994609",
+        "sizeBytes": 2801375
+      }
+    },
+    {
+      "id": "tb_eq",
+      "name": "TB EQ",
+      "version": "1.0.0",
+      "category": "EQ",
+      "description": "파라메트릭 이퀄라이저.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip",
+        "sha256": "3c21c94c04b935492567c914ddd4b956c03115dfcdec53c73cb59940a886ef86",
+        "sizeBytes": 6779498
+      }
+    },
+    {
+      "id": "tb_gender_changer",
+      "name": "TB Gender Changer",
+      "version": "1.0.0",
+      "category": "Voice",
+      "description": "보이스 성별/음색 변환.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_GenderChanger.zip",
+        "sha256": "acef85ba7b152f9322031a520a695e30fd2fb9c2714ab253ee82af7b440009ee",
+        "sizeBytes": 2956648
+      }
+    },
+    {
+      "id": "tb_inverted_flanger",
+      "name": "TB Inverted Flanger",
+      "version": "1.0.0",
+      "category": "Modulation",
+      "description": "인버티드 플랜저.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip",
+        "sha256": "f6dbcfba5b860d2690a8872bb9ca933827005d4ad9e032bf7717b4be4dfad10e",
+        "sizeBytes": 2362299
+      }
+    },
+    {
+      "id": "tb_inverted_phaser",
+      "name": "TB Inverted Phaser",
+      "version": "1.0.0",
+      "category": "Modulation",
+      "description": "인버티드 페이저.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip",
+        "sha256": "6a9b20638cebbfba92f66786b20280c0f9ba8d4646eb80a2ba51072504aee809",
+        "sizeBytes": 2376936
+      }
+    },
+    {
+      "id": "tb_jewel_digger",
+      "name": "TB Jewel Digger & Finder",
+      "version": "1.0.0",
+      "category": "Creative",
+      "description": "하모닉 탐색/강조 툴.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip",
+        "sha256": "08faa1637199d881bc28e1bce7481fc5d447980e0460a3a1368e0505f0330574",
+        "sizeBytes": 2418311
+      }
+    },
+    {
+      "id": "tb_noise_remover",
+      "name": "TB Noise Remover",
+      "version": "1.0.0",
+      "category": "Restoration",
+      "description": "노이즈 제거.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip",
+        "sha256": "13a82dee4bcf4e017c841a5dff749ad13b3c7a54c81f11cd791548e8f3884765",
+        "sizeBytes": 13175144
+      }
+    },
+    {
+      "id": "tb_parallel_reverb",
+      "name": "TB Parallel Reverb",
+      "version": "1.0.0",
+      "category": "Reverb",
+      "description": "패러렐 리버브.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip",
+        "sha256": "9304170bc3e6f264418f76d5b14535f7680141390969663a69d7570460dc9c5f",
+        "sizeBytes": 2833970
+      }
+    },
+    {
+      "id": "tb_scrambler",
+      "name": "TB Scrambler",
+      "version": "1.0.0",
+      "category": "Creative",
+      "description": "오디오 스크램블/글리치 효과.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip",
+        "sha256": "747c15063091b877cd01b66653840f1270d9f586d0342fddc403334dc05f2218",
+        "sizeBytes": 2776022
+      }
+    },
+    {
+      "id": "tb_transient_shaper",
+      "name": "TB Spectral Transient Shaper",
+      "version": "1.0.0",
+      "category": "Dynamics",
+      "description": "스펙트럴 트랜지언트 셰이퍼.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip",
+        "sha256": "4f9e3c3c227c8dff2fad28ed8807139090f2b79ea7e3d2a344b3dab9a81b7125",
+        "sizeBytes": 2831575
+      }
+    },
+    {
+      "id": "tb_step_shifter",
+      "name": "TB Step Shifter",
+      "version": "1.0.0",
+      "category": "Creative",
+      "description": "스텝 시퀀스 피치/게이트 시프터.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip",
+        "sha256": "d14ba19b4943d463e4b8431676b6e56fe67292eee242b1a7c76b8df494b93887",
+        "sizeBytes": 2782397
+      }
+    },
+    {
+      "id": "tb_vocoder",
+      "name": "TB Vocoder",
+      "version": "1.0.0",
+      "category": "Creative",
+      "description": "보코더.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Vocoder.zip",
+        "sha256": "d4759e2f3badfb3390d7b6ac7014dc583d0b2536281c29b5f8818f697ea1ce59",
+        "sizeBytes": 2789810
+      }
+    },
+    {
+      "id": "tb_xyz_panner",
+      "name": "TB XYZ Panner",
+      "version": "1.0.0",
+      "category": "Utility",
+      "description": "다차원 패너.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip",
+        "sha256": "e1fd7ae593b112bdf32daf7e614f52e7286a5d62c8c95cdbd4feb33bf0ada4ef",
+        "sizeBytes": 2988896
+      }
+    }
+  ]
+}
