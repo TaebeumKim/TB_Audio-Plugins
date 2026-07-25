@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "hubVersion": "0.1.0",
+  "hubVersion": "1.0.0",
   "plugins": [
     {
       "id": "tb_center",
