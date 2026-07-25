@@ -7,6 +7,7 @@
       "name": "TB Center",
       "version": "1.0.0",
       "category": "Utility",
+      "price": 3,
       "description": "Mid/side center channel control.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip",
@@ -19,6 +20,7 @@
       "name": "TB Compressor",
       "version": "1.0.0",
       "category": "Dynamics",
+      "price": 4,
       "description": "Transparent peak and RMS compressor.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip",
@@ -31,6 +33,7 @@
       "name": "TB Distortion",
       "version": "1.0.0",
       "category": "Distortion",
+      "price": 4,
       "description": "Multi-stage saturation and distortion.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip",
@@ -43,6 +46,7 @@
       "name": "TB EQ",
       "version": "1.0.0",
       "category": "EQ",
+      "price": 5,
       "description": "Parametric equalizer.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip",
@@ -55,6 +59,7 @@
       "name": "TB Gender Changer",
       "version": "1.0.0",
       "category": "Voice",
+      "price": 5,
       "description": "Voice gender and timbre transformer.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_GenderChanger.zip",
@@ -67,6 +72,7 @@
       "name": "TB Inverted Flanger",
       "version": "1.0.0",
       "category": "Modulation",
+      "price": 2,
       "description": "Inverted flanger.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip",
@@ -79,6 +85,7 @@
       "name": "TB Inverted Phaser",
       "version": "1.0.0",
       "category": "Modulation",
+      "price": 2,
       "description": "Inverted phaser.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip",
@@ -91,6 +98,7 @@
       "name": "TB Jewel Digger & Finder",
       "version": "1.0.0",
       "category": "Creative",
+      "price": 3,
       "description": "Harmonic search and enhancement.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip",
@@ -103,6 +111,7 @@
       "name": "TB Noise Remover",
       "version": "1.0.0",
       "category": "Restoration",
+      "price": 7,
       "description": "Noise removal.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip",
@@ -115,6 +124,7 @@
       "name": "TB Parallel Reverb",
       "version": "1.0.0",
       "category": "Reverb",
+      "price": 4,
       "description": "Parallel reverb.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip",
@@ -127,6 +137,7 @@
       "name": "TB Scrambler",
       "version": "1.0.0",
       "category": "Creative",
+      "price": 2,
       "description": "Audio scramble and glitch effect.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip",
@@ -139,6 +150,7 @@
       "name": "TB Spectral Transient Shaper",
       "version": "1.0.0",
       "category": "Dynamics",
+      "price": 5,
       "description": "Spectral transient shaper.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip",
@@ -151,6 +163,7 @@
       "name": "TB Step Shifter",
       "version": "1.0.0",
       "category": "Creative",
+      "price": 3,
       "description": "Step-sequenced pitch and gate shifter.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip",
@@ -163,6 +176,7 @@
       "name": "TB Vocoder",
       "version": "1.0.0",
       "category": "Creative",
+      "price": 5,
       "description": "Vocoder.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Vocoder.zip",
@@ -175,6 +189,7 @@
       "name": "TB XYZ Panner",
       "version": "1.0.0",
       "category": "Utility",
+      "price": 3,
       "description": "Multi-axis panner.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip",
