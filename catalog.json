@@ -7,7 +7,7 @@
       "name": "TB Center",
       "version": "1.0.0",
       "category": "Utility",
-      "price": 3,
+      "price": 7,
       "description": "Mid/side center channel control.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip",
@@ -33,7 +33,7 @@
       "name": "TB Distortion",
       "version": "1.0.0",
       "category": "Distortion",
-      "price": 4,
+      "price": 3,
       "description": "Multi-stage saturation and distortion.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip",
@@ -46,7 +46,7 @@
       "name": "TB EQ",
       "version": "1.0.0",
       "category": "EQ",
-      "price": 5,
+      "price": 7,
       "description": "Parametric equalizer.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip",
@@ -59,7 +59,7 @@
       "name": "TB Gender Changer",
       "version": "1.0.0",
       "category": "Voice",
-      "price": 5,
+      "price": 3,
       "description": "Voice gender and timbre transformer.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_GenderChanger.zip",
@@ -98,7 +98,7 @@
       "name": "TB Jewel Digger & Finder",
       "version": "1.0.0",
       "category": "Creative",
-      "price": 3,
+      "price": 4,
       "description": "Harmonic search and enhancement.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip",
@@ -137,7 +137,7 @@
       "name": "TB Scrambler",
       "version": "1.0.0",
       "category": "Creative",
-      "price": 2,
+      "price": 1,
       "description": "Audio scramble and glitch effect.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip",
@@ -150,7 +150,7 @@
       "name": "TB Spectral Transient Shaper",
       "version": "1.0.0",
       "category": "Dynamics",
-      "price": 5,
+      "price": 7,
       "description": "Spectral transient shaper.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip",
@@ -163,7 +163,7 @@
       "name": "TB Step Shifter",
       "version": "1.0.0",
       "category": "Creative",
-      "price": 3,
+      "price": 1,
       "description": "Step-sequenced pitch and gate shifter.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip",
@@ -189,7 +189,7 @@
       "name": "TB XYZ Panner",
       "version": "1.0.0",
       "category": "Utility",
-      "price": 3,
+      "price": 2,
       "description": "Multi-axis panner.",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip",
