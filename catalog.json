@@ -1,13 +1,13 @@
 {
   "catalogVersion": 1,
-  "hubVersion": "1.3.0",
+  "hubVersion": "1.3.1",
   "hub": {
-    "version": "1.3.0",
-    "notes": "Adds Install All and system-wide VST3 installation detection.",
+    "version": "1.3.1",
+    "notes": "Remembers your theme and improves Hub updates and plug-in install safety.",
     "windows": {
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.0/TBHub-Setup-1.3.0.exe",
-      "sha256": "28b5d27fb5c1e7649e75974c104070cf08c8f273980dfa5fdbae91afdd306923",
-      "sizeBytes": 45782590
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.1/TBHub-Setup-1.3.1.exe",
+      "sha256": "8452d30c8ebd8a91a63a9ead208ece15bd9916483635f9a0ac43cacac201eae2",
+      "sizeBytes": 45786331
     }
   },
   "plugins": [
