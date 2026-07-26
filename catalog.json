@@ -1,6 +1,15 @@
 {
   "catalogVersion": 1,
-  "hubVersion": "1.1.1",
+  "hubVersion": "1.2.0",
+  "hub": {
+    "version": "1.2.0",
+    "notes": "Adds automatic hub updates and per-plug-in support links.",
+    "windows": {
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.2.0/TBHub-Setup-1.2.0.exe",
+      "sha256": "6fc0c425055521bd8af5ec1664172a7886132501cd8f1ece2b6d91002fbe2739",
+      "sizeBytes": 45782807
+    }
+  },
   "plugins": [
     {
       "id": "tb_center",
