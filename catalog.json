@@ -5,7 +5,7 @@
     {
       "id": "tb_center",
       "name": "TB Center",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "Utility",
       "price": 7,
       "description": "Mid/side center channel control.",
