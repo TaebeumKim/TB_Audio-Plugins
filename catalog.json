@@ -14,85 +14,85 @@
     {
       "id": "tb_center",
       "name": "TB Center",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "category": "Utility",
       "price": 7,
-      "description": "Mid/side center channel control.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_center.png?v=1.0.1",
+      "description": "Stereo image centering with phase-safe time and multiband control.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_center.png?v=1.1.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip",
-        "sha256": "e9d1fca03bdfd6c455e38ef3434655dbb9048ae08a6c0b799d6158002c016da1",
-        "sizeBytes": 2384062
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip?v=1.1.0",
+        "sha256": "7fb40a54fbe2969bcc71699996b6631665e127416607f3714483a4ab521083c6",
+        "sizeBytes": 2386387
       }
     },
     {
       "id": "tb_compressor",
       "name": "TB Compressor",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Dynamics",
       "price": 4,
       "description": "Transparent peak and RMS compressor.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=1.1.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip",
-        "sha256": "3902bca78e72b34f9df5520f70c93934ddf43cdaf52687b16b5e8fc3578b4602",
-        "sizeBytes": 2794349
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=1.1.0",
+        "sha256": "36a73adc402b0a43400aeb4df9c4f975e9d29722b84bbfc24e715ea41efbf217",
+        "sizeBytes": 2803877
       }
     },
     {
       "id": "tb_distortion",
       "name": "TB Distortion",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Distortion",
       "price": 3,
       "description": "Multi-stage saturation and distortion.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_distortion.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_distortion.png?v=1.1.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip",
-        "sha256": "1e23d8a1919532402b55cf052bba77684421a399b7741573dcafe0dcd9994609",
-        "sizeBytes": 2801375
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip?v=1.1.0",
+        "sha256": "e28128687b6d215ac11e40323855fc0c9ffef3bcc3f246493e807436de5ba4e1",
+        "sizeBytes": 2801539
       }
     },
     {
       "id": "tb_disperser",
       "name": "TB Disperser",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Creative",
       "price": 4,
       "description": "Phase dispersion with controllable timing and frequency modulation.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_disperser.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_disperser.png?v=1.1.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=1.0.0",
-        "sha256": "15b9f7e593de3abcde0b24fab32298b6dc1ec90e467e17c6d65f087f8923571f",
-        "sizeBytes": 2411039
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=1.1.0",
+        "sha256": "f5ceb0782677eb0f51c2bd0098d55489a3b9a14adf6b3ff68d3843bfad2200ee",
+        "sizeBytes": 2411871
       }
     },
     {
       "id": "tb_eq",
       "name": "TB EQ",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "EQ",
       "price": 7,
       "description": "Parametric equalizer.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=1.1.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip",
-        "sha256": "3c21c94c04b935492567c914ddd4b956c03115dfcdec53c73cb59940a886ef86",
-        "sizeBytes": 6779498
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=1.1.0",
+        "sha256": "45eb9885d895ee2d526d511a758e57871eab7dee39b0e1895d13384feb0362df",
+        "sizeBytes": 6781488
       }
     },
     {
       "id": "tb_colorizer",
       "name": "TB Colorizer",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "category": "Voice",
       "price": 2,
       "description": "Eight selectable colors reshape voice and spectral character.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=2.0.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=1.0.0",
-        "sha256": "221b9eb6d574adc6927add2e7b014f2030009b96954290f30d3ef98121bad11f",
-        "sizeBytes": 2959514
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.0.0",
+        "sha256": "2b17d44de88bebb324a522b9db1c479db6fb75e10304a699645c0941c9f1cd55",
+        "sizeBytes": 2961964
       }
     },
     {
@@ -112,99 +112,127 @@
     {
       "id": "tb_inverted_phaser",
       "name": "TB Inverted Phaser",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "category": "Modulation",
       "price": 2,
-      "description": "Inverted phaser.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=1.0.0",
+      "description": "Subtractive phasing with deep, sharply defined moving notches.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=2.0.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip",
-        "sha256": "6a9b20638cebbfba92f66786b20280c0f9ba8d4646eb80a2ba51072504aee809",
-        "sizeBytes": 2376936
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip?v=2.0.0",
+        "sha256": "428243ff62c657f4de97b5d8a8e493d8fc8239b6d6bb9340a369deab3526415c",
+        "sizeBytes": 2384492
       }
     },
     {
       "id": "tb_jewel_digger",
       "name": "TB Jewel Digger & Finder",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Creative",
       "price": 4,
-      "description": "Harmonic search and enhancement.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_jewel_digger.png?v=1.0.0",
+      "description": "Harmonic discovery with pitch-stacked shimmer and spectral enhancement.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_jewel_digger.png?v=1.1.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip",
-        "sha256": "08faa1637199d881bc28e1bce7481fc5d447980e0460a3a1368e0505f0330574",
-        "sizeBytes": 2418311
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip?v=1.1.0",
+        "sha256": "6b97d626794494348244bb9399471df8c60f79355cf97165bdf7bb33e8cbb6c0",
+        "sizeBytes": 2418474
       }
     },
     {
       "id": "tb_noise_remover",
       "name": "TB Noise Remover",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "category": "Restoration",
       "price": 7,
-      "description": "Noise removal.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=1.0.0",
+      "description": "Targeted noise and environmental ambience removal.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=2.0.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip",
-        "sha256": "13a82dee4bcf4e017c841a5dff749ad13b3c7a54c81f11cd791548e8f3884765",
-        "sizeBytes": 13175144
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.0.0",
+        "sha256": "c775d5efc2fedcf87b41feec16f015f9ef35e54914570fbbe6d9e89d64280e33",
+        "sizeBytes": 13175349
       }
     },
     {
       "id": "tb_parallel_reverb",
       "name": "TB Parallel Reverb",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Reverb",
       "price": 4,
       "description": "Parallel reverb.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=1.1.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip",
-        "sha256": "9304170bc3e6f264418f76d5b14535f7680141390969663a69d7570460dc9c5f",
-        "sizeBytes": 2833970
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=1.1.0",
+        "sha256": "5f642de394abea165dbcb7a3b9a8f211bc8fe18d0922a0132e58a9a86945205b",
+        "sizeBytes": 2834207
       }
     },
     {
       "id": "tb_scrambler",
       "name": "TB Scrambler",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "category": "Creative",
       "price": 1,
       "description": "Audio scramble and glitch effect.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=1.0.0&rev=55b311c1",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=2.0.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip",
-        "sha256": "747c15063091b877cd01b66653840f1270d9f586d0342fddc403334dc05f2218",
-        "sizeBytes": 2776022
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.0.0",
+        "sha256": "3f1c42184e82c6925e539e1eaba6b317eac720d028a7ae002bd6abed5e24be07",
+        "sizeBytes": 3491470
       }
     },
     {
       "id": "tb_transient_shaper",
       "name": "TB Spectral Transient Shaper",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Dynamics",
       "price": 7,
       "description": "Spectral transient shaper.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=1.1.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip",
-        "sha256": "4f9e3c3c227c8dff2fad28ed8807139090f2b79ea7e3d2a344b3dab9a81b7125",
-        "sizeBytes": 2831575
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.1.0",
+        "sha256": "27788519927a40a7cb2ab60f8d290aacf693c364e796f95be0cd970ca8f07cc1",
+        "sizeBytes": 2854545
       }
     },
     {
       "id": "tb_step_shifter",
       "name": "TB Step Shifter",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "category": "Creative",
       "price": 1,
-      "description": "Step-sequenced pitch and gate shifter.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_step_shifter.png?v=1.0.0",
+      "description": "Spectral harmonic shifting that moves selected overtones between pitches.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_step_shifter.png?v=2.0.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip",
-        "sha256": "d14ba19b4943d463e4b8431676b6e56fe67292eee242b1a7c76b8df494b93887",
-        "sizeBytes": 2782397
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip?v=2.0.0",
+        "sha256": "b0c9110bf823f22df95131303d1548c4adcf83d3accb856984dc13b3b7c3632a",
+        "sizeBytes": 2788091
+      }
+    },
+    {
+      "id": "tb_tune",
+      "name": "TB Tune",
+      "version": "1.0.0",
+      "category": "Voice",
+      "price": 3,
+      "description": "Direction-aware monophonic vocal pitch correction.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=1.0.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=1.0.0",
+        "sha256": "b3ec192f487cdb68d2bccc1da48f0662c0233bdd4e4d0662ec439913a372ab55",
+        "sizeBytes": 2396945
+      }
+    },
+    {
+      "id": "tb_volume",
+      "name": "TB Volume",
+      "version": "1.0.0",
+      "category": "Utility",
+      "price": 1,
+      "description": "Simple gain control tool.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_volume.png?v=1.0.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.0.0",
+        "sha256": "8a38898969f146c5f4b8f711c5cd49993ddb207b016929842222154737be484e",
+        "sizeBytes": 2333905
       }
     },
     {
