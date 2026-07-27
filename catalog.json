@@ -18,6 +18,7 @@
       "category": "Utility",
       "price": 7,
       "description": "Mid/side center channel control.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_center.png?v=1.0.1",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip",
         "sha256": "e9d1fca03bdfd6c455e38ef3434655dbb9048ae08a6c0b799d6158002c016da1",
@@ -31,6 +32,7 @@
       "category": "Dynamics",
       "price": 4,
       "description": "Transparent peak and RMS compressor.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip",
         "sha256": "3902bca78e72b34f9df5520f70c93934ddf43cdaf52687b16b5e8fc3578b4602",
@@ -44,6 +46,7 @@
       "category": "Distortion",
       "price": 3,
       "description": "Multi-stage saturation and distortion.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_distortion.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip",
         "sha256": "1e23d8a1919532402b55cf052bba77684421a399b7741573dcafe0dcd9994609",
@@ -57,6 +60,7 @@
       "category": "Creative",
       "price": 4,
       "description": "Phase dispersion with controllable timing and frequency modulation.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_disperser.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=1.0.0",
         "sha256": "15b9f7e593de3abcde0b24fab32298b6dc1ec90e467e17c6d65f087f8923571f",
@@ -70,6 +74,7 @@
       "category": "EQ",
       "price": 7,
       "description": "Parametric equalizer.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip",
         "sha256": "3c21c94c04b935492567c914ddd4b956c03115dfcdec53c73cb59940a886ef86",
@@ -83,6 +88,7 @@
       "category": "Voice",
       "price": 3,
       "description": "Voice gender and timbre transformer.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_gender_changer.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_GenderChanger.zip",
         "sha256": "acef85ba7b152f9322031a520a695e30fd2fb9c2714ab253ee82af7b440009ee",
@@ -96,6 +102,7 @@
       "category": "Modulation",
       "price": 2,
       "description": "Inverted flanger.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip",
         "sha256": "f6dbcfba5b860d2690a8872bb9ca933827005d4ad9e032bf7717b4be4dfad10e",
@@ -109,6 +116,7 @@
       "category": "Modulation",
       "price": 2,
       "description": "Inverted phaser.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip",
         "sha256": "6a9b20638cebbfba92f66786b20280c0f9ba8d4646eb80a2ba51072504aee809",
@@ -122,6 +130,7 @@
       "category": "Creative",
       "price": 4,
       "description": "Harmonic search and enhancement.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_jewel_digger.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip",
         "sha256": "08faa1637199d881bc28e1bce7481fc5d447980e0460a3a1368e0505f0330574",
@@ -135,6 +144,7 @@
       "category": "Restoration",
       "price": 7,
       "description": "Noise removal.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip",
         "sha256": "13a82dee4bcf4e017c841a5dff749ad13b3c7a54c81f11cd791548e8f3884765",
@@ -148,6 +158,7 @@
       "category": "Reverb",
       "price": 4,
       "description": "Parallel reverb.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip",
         "sha256": "9304170bc3e6f264418f76d5b14535f7680141390969663a69d7570460dc9c5f",
@@ -161,6 +172,7 @@
       "category": "Creative",
       "price": 1,
       "description": "Audio scramble and glitch effect.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip",
         "sha256": "747c15063091b877cd01b66653840f1270d9f586d0342fddc403334dc05f2218",
@@ -174,6 +186,7 @@
       "category": "Dynamics",
       "price": 7,
       "description": "Spectral transient shaper.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip",
         "sha256": "4f9e3c3c227c8dff2fad28ed8807139090f2b79ea7e3d2a344b3dab9a81b7125",
@@ -187,6 +200,7 @@
       "category": "Creative",
       "price": 1,
       "description": "Step-sequenced pitch and gate shifter.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_step_shifter.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip",
         "sha256": "d14ba19b4943d463e4b8431676b6e56fe67292eee242b1a7c76b8df494b93887",
@@ -200,6 +214,7 @@
       "category": "Creative",
       "price": 5,
       "description": "Vocoder.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_vocoder.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Vocoder.zip",
         "sha256": "d4759e2f3badfb3390d7b6ac7014dc583d0b2536281c29b5f8818f697ea1ce59",
@@ -213,6 +228,7 @@
       "category": "Utility",
       "price": 2,
       "description": "Multi-axis panner.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=1.0.0",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip",
         "sha256": "e1fd7ae593b112bdf32daf7e614f52e7286a5d62c8c95cdbd4feb33bf0ada4ef",
