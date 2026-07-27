@@ -172,7 +172,7 @@
       "category": "Creative",
       "price": 1,
       "description": "Audio scramble and glitch effect.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=1.0.0&rev=55b311c1",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip",
         "sha256": "747c15063091b877cd01b66653840f1270d9f586d0342fddc403334dc05f2218",
