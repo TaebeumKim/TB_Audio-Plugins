@@ -51,6 +51,19 @@
       }
     },
     {
+      "id": "tb_disperser",
+      "name": "TB Disperser",
+      "version": "1.0.0",
+      "category": "Creative",
+      "price": 4,
+      "description": "Phase dispersion with controllable timing and frequency modulation.",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=1.0.0",
+        "sha256": "15b9f7e593de3abcde0b24fab32298b6dc1ec90e467e17c6d65f087f8923571f",
+        "sizeBytes": 2411039
+      }
+    },
+    {
       "id": "tb_eq",
       "name": "TB EQ",
       "version": "1.0.0",
