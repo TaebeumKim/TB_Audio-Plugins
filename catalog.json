@@ -1,13 +1,13 @@
 {
   "catalogVersion": 1,
-  "hubVersion": "1.3.1",
+  "hubVersion": "1.3.2",
   "hub": {
-    "version": "1.3.1",
-    "notes": "Remembers your theme and improves Hub updates and plug-in install safety.",
+    "version": "1.3.2",
+    "notes": "Adds hourly Windows update alerts with click-to-focus highlighting.",
     "windows": {
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.1/TBHub-Setup-1.3.1.exe",
-      "sha256": "8452d30c8ebd8a91a63a9ead208ece15bd9916483635f9a0ac43cacac201eae2",
-      "sizeBytes": 45786331
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.2/TBHub-Setup-1.3.2.exe",
+      "sha256": "6c1276b4ef964e1b93784294f1d32bd8c70128f5797367cf4e06fd4410f08de7",
+      "sizeBytes": 59458632
     }
   },
   "plugins": [
