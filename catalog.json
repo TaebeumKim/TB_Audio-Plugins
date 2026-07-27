@@ -1,13 +1,13 @@
 {
   "catalogVersion": 1,
-  "hubVersion": "1.3.2",
+  "hubVersion": "1.3.3",
   "hub": {
-    "version": "1.3.2",
-    "notes": "Adds hourly Windows update alerts with click-to-focus highlighting.",
+    "version": "1.3.3",
+    "notes": "Displays New Plugin! for first-version plug-ins.",
     "windows": {
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.2/TBHub-Setup-1.3.2.exe",
-      "sha256": "6c1276b4ef964e1b93784294f1d32bd8c70128f5797367cf4e06fd4410f08de7",
-      "sizeBytes": 59458632
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.3/TBHub-Setup-1.3.3.exe",
+      "sha256": "b17691a08c7991d6b9542ea86ae13c2e19450bcd56e9fba2b0dca3f2b56171e4",
+      "sizeBytes": 59468967
     }
   },
   "plugins": [
