@@ -82,17 +82,17 @@
       }
     },
     {
-      "id": "tb_gender_changer",
-      "name": "TB Gender Changer",
+      "id": "tb_colorizer",
+      "name": "TB Colorizer",
       "version": "1.0.0",
       "category": "Voice",
-      "price": 3,
-      "description": "Voice gender and timbre transformer.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_gender_changer.png?v=1.0.0",
+      "price": 2,
+      "description": "Eight selectable colors reshape voice and spectral character.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=1.0.0",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_GenderChanger.zip",
-        "sha256": "acef85ba7b152f9322031a520a695e30fd2fb9c2714ab253ee82af7b440009ee",
-        "sizeBytes": 2956648
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=1.0.0",
+        "sha256": "221b9eb6d574adc6927add2e7b014f2030009b96954290f30d3ef98121bad11f",
+        "sizeBytes": 2959514
       }
     },
     {
