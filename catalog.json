@@ -1,10 +1,10 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-28T20:38:47+09:00",
+  "updatedAt": "2026-07-29T00:45:44+09:00",
   "hubVersion": "1.3.4",
   "hub": {
     "version": "1.3.4",
-    "notes": "macOS 1.3.5 adds separate VST3, AU, and AAX actions plus platform-specific Hub updates.",
+    "notes": "macOS 1.3.6 fixes VST3, AU, and AAX label rendering and centers each per-format action.",
     "windows": {
       "version": "1.3.4",
       "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.4/TBHub-Setup-1.3.4.exe",
@@ -12,10 +12,10 @@
       "sizeBytes": 59481037
     },
     "macos": {
-      "version": "1.3.5",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.5/TBHub-1.3.5-macOS-AppleSilicon.dmg",
-      "sha256": "eeadb54061762dc991a9f93ffe9149de29e8d04a586468e0ba7870b22402c9c7",
-      "sizeBytes": 53890132
+      "version": "1.3.6",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.6/TBHub-1.3.6-macOS-AppleSilicon.dmg",
+      "sha256": "259b049c49c489065f48a4bfd8f57b0b07f32b1f314b384ae431a5fc9bcc4519",
+      "sizeBytes": 53890062
     }
   },
   "plugins": [
@@ -25,7 +25,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_center.png",
         "descriptionKo": "스테레오 이미지를 위상 안정성을 유지하며 중앙으로 정돈하고 멀티밴드로 제어합니다.",
-        "tags": ["Stereo", "Phase", "Multiband"],
+        "tags": [
+          "Stereo",
+          "Phase",
+          "Multiband"
+        ],
         "order": 1,
         "visible": true
       },
@@ -63,7 +67,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_compressor.png",
         "descriptionKo": "피크와 RMS 감지를 결합해 투명하게 다이내믹을 제어하는 컴프레서입니다.",
-        "tags": ["Dynamics", "Peak", "RMS"],
+        "tags": [
+          "Dynamics",
+          "Peak",
+          "RMS"
+        ],
         "order": 2,
         "visible": true
       },
@@ -107,7 +115,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_distortion.png",
         "descriptionKo": "여러 단계의 새추레이션과 디스토션으로 음색과 밀도를 조절합니다.",
-        "tags": ["Saturation", "Distortion", "Color"],
+        "tags": [
+          "Saturation",
+          "Distortion",
+          "Color"
+        ],
         "order": 3,
         "visible": true
       },
@@ -145,7 +157,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_disperser.png",
         "descriptionKo": "시간과 주파수 변조를 조절해 위상 분산과 트랜지언트 질감을 만듭니다.",
-        "tags": ["Phase", "Dispersion", "Modulation"],
+        "tags": [
+          "Phase",
+          "Dispersion",
+          "Modulation"
+        ],
         "order": 4,
         "visible": true
       },
@@ -183,7 +199,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_eq.png",
         "descriptionKo": "정밀한 주파수 조정을 위한 파라메트릭 이퀄라이저입니다.",
-        "tags": ["EQ", "Parametric", "Tone"],
+        "tags": [
+          "EQ",
+          "Parametric",
+          "Tone"
+        ],
         "order": 5,
         "visible": true
       },
@@ -227,7 +247,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_colorizer.png",
         "descriptionKo": "여덟 가지 컬러 모드로 보이스와 스펙트럼 캐릭터를 변형합니다.",
-        "tags": ["Voice", "Spectral", "Color"],
+        "tags": [
+          "Voice",
+          "Spectral",
+          "Color"
+        ],
         "order": 6,
         "visible": true
       },
@@ -265,7 +289,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_inverted_flanger.png",
         "descriptionKo": "반전된 플랜징 움직임으로 독특한 위상감과 공간감을 만듭니다.",
-        "tags": ["Flanger", "Phase", "Modulation"],
+        "tags": [
+          "Flanger",
+          "Phase",
+          "Modulation"
+        ],
         "order": 7,
         "visible": true
       },
@@ -309,7 +337,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_inverted_phaser.png",
         "descriptionKo": "깊고 선명하게 움직이는 노치를 만드는 감산형 페이저입니다.",
-        "tags": ["Phaser", "Notch", "Modulation"],
+        "tags": [
+          "Phaser",
+          "Notch",
+          "Modulation"
+        ],
         "order": 8,
         "visible": true
       },
@@ -353,7 +385,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_jewel_digger.png",
         "descriptionKo": "피치가 쌓인 쉬머와 스펙트럴 강조로 숨은 하모닉을 드러냅니다.",
-        "tags": ["Harmonics", "Shimmer", "Spectral"],
+        "tags": [
+          "Harmonics",
+          "Shimmer",
+          "Spectral"
+        ],
         "order": 9,
         "visible": true
       },
@@ -397,7 +433,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_noise_remover.png",
         "descriptionKo": "특정 노이즈와 환경 앰비언스를 선택적으로 줄이는 복원 도구입니다.",
-        "tags": ["Restoration", "Noise", "Ambience"],
+        "tags": [
+          "Restoration",
+          "Noise",
+          "Ambience"
+        ],
         "order": 10,
         "visible": true
       },
@@ -435,7 +475,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_parallel_reverb.png",
         "descriptionKo": "원음과 병렬로 공간감을 더하는 간결한 리버브입니다.",
-        "tags": ["Reverb", "Parallel", "Space"],
+        "tags": [
+          "Reverb",
+          "Parallel",
+          "Space"
+        ],
         "order": 11,
         "visible": true
       },
@@ -479,7 +523,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_scrambler.png",
         "descriptionKo": "오디오를 재배열해 글리치와 예측 불가능한 리듬 질감을 만듭니다.",
-        "tags": ["Glitch", "Scramble", "Creative"],
+        "tags": [
+          "Glitch",
+          "Scramble",
+          "Creative"
+        ],
         "order": 12,
         "visible": true
       },
@@ -517,7 +565,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_transient_shaper.png",
         "descriptionKo": "주파수 영역별로 어택과 서스테인을 다듬는 스펙트럴 트랜지언트 셰이퍼입니다.",
-        "tags": ["Transient", "Spectral", "Dynamics"],
+        "tags": [
+          "Transient",
+          "Spectral",
+          "Dynamics"
+        ],
         "order": 13,
         "visible": true
       },
@@ -561,7 +613,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_step_shifter.png",
         "descriptionKo": "선택한 오버톤을 피치 사이로 단계적으로 이동시키는 베타 스펙트럴 이펙트입니다.",
-        "tags": ["Beta", "Harmonics", "Pitch"],
+        "tags": [
+          "Beta",
+          "Harmonics",
+          "Pitch"
+        ],
         "order": 14,
         "visible": true
       },
@@ -605,7 +661,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_tune.png",
         "descriptionKo": "음정 이동 방향을 고려해 모노 보컬 피치를 보정합니다.",
-        "tags": ["Voice", "Pitch", "Correction"],
+        "tags": [
+          "Voice",
+          "Pitch",
+          "Correction"
+        ],
         "order": 15,
         "visible": true
       },
@@ -643,7 +703,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_volume.png",
         "descriptionKo": "간단하고 빠르게 레벨을 조절하는 게인 도구입니다.",
-        "tags": ["Gain", "Utility", "Level"],
+        "tags": [
+          "Gain",
+          "Utility",
+          "Level"
+        ],
         "order": 16,
         "visible": true
       },
@@ -681,7 +745,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_vocoder.png",
         "descriptionKo": "캐리어와 모듈레이터의 스펙트럼을 결합하는 베타 보코더입니다.",
-        "tags": ["Beta", "Vocoder", "Voice"],
+        "tags": [
+          "Beta",
+          "Vocoder",
+          "Voice"
+        ],
         "order": 17,
         "visible": true
       },
@@ -719,7 +787,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_xyz_panner.png",
         "descriptionKo": "여러 축을 이용해 사운드의 공간 위치를 조절하는 패너입니다.",
-        "tags": ["Panner", "Spatial", "XYZ"],
+        "tags": [
+          "Panner",
+          "Spatial",
+          "XYZ"
+        ],
         "order": 18,
         "visible": true
       },
@@ -763,7 +835,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_limiter.png",
         "descriptionKo": "스테레오 링크와 트루 피크 측정을 제공하는 마스터링 리미터입니다.",
-        "tags": ["Limiter", "True Peak", "Mastering"],
+        "tags": [
+          "Limiter",
+          "True Peak",
+          "Mastering"
+        ],
         "order": 19,
         "visible": true
       },
@@ -801,7 +877,11 @@
       "portfolio": {
         "image": "assets/plugins/tb_sublow.png",
         "descriptionKo": "Core, Bloom, Punch를 조절해 입력에 서브베이스 에너지를 더합니다.",
-        "tags": ["Sub Bass", "Generator", "Low End"],
+        "tags": [
+          "Sub Bass",
+          "Generator",
+          "Low End"
+        ],
         "order": 20,
         "visible": true
       },
