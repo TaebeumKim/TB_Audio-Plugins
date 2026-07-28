@@ -1,0 +1,641 @@
+{
+  "catalogVersion": 1,
+  "hubVersion": "1.3.5",
+  "hub": {
+    "version": "1.3.5",
+    "notes": "macOS-only 1.3.5 updater end-to-end test. Production catalog remains on 1.3.4.",
+    "macos": {
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.5-update-test.1/TBHub-1.3.5-macOS-AppleSilicon.dmg",
+      "sha256": "9a648dcf7eb15a586f3161946bfb2cfa8111563efdf372affb661a00e158a1e3",
+      "sizeBytes": 53888146
+    }
+  },
+  "plugins": [
+    {
+      "id": "tb_center",
+      "name": "TB Center",
+      "version": "1.2.0",
+      "category": "Utility",
+      "price": 3,
+      "description": "Stereo image centering with phase-safe time and multiband control.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_center.png?v=1.2.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip?v=1.2.0",
+        "sha256": "fb4013782db4b5ddbb1952b94b3df10047e36706f01f358fdfae064e5ac7978a",
+        "sizeBytes": 2386913
+      },
+      "macos": {
+        "version": "0.3.2",
+        "bundleName": "TB-Center.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Center-VST3-macOS-arm64.zip",
+        "sha256": "d043f91825cb8d0a2c21507623bcc010d23bc36ca72baca8f867d129ee62b5d0",
+        "sizeBytes": 3041768,
+        "formats": {
+          "au": {
+            "version": "0.3.2",
+            "bundleName": "TB-Center.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Center-AU-macOS-arm64.zip",
+            "sha256": "2f1fbfb4be03cd88046fc7e2701c3008c114e94aee7edc692efe13d0d738bd9e",
+            "sizeBytes": 2939021
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_compressor",
+      "name": "TB Compressor",
+      "version": "1.2.0",
+      "category": "Dynamics",
+      "price": 3,
+      "description": "Transparent peak and RMS compressor.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=1.2.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=1.2.0",
+        "sha256": "1d932a09428ef66657602d510dbd1840ed784b3f0de3b57ba391c7ffd42c7f97",
+        "sizeBytes": 2804704
+      },
+      "macos": {
+        "version": "1.1.0",
+        "bundleName": "TB-Compressor.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Compressor-VST3-macOS-arm64.zip",
+        "sha256": "b9bfbf1566f0acc47652683dbed061d07e166ee819a01e2621d7540122840f85",
+        "sizeBytes": 3657353,
+        "formats": {
+          "au": {
+            "version": "1.1.0",
+            "bundleName": "TB-Compressor.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Compressor-AU-macOS-arm64.zip",
+            "sha256": "33af2512d781c82b9f64fe198ceb02268e48a722f0beb4711014374acf8fa752",
+            "sizeBytes": 3547305
+          },
+          "aax": {
+            "version": "1.1",
+            "bundleName": "TB-Compressor.aaxplugin",
+            "repoPath": "MacOS/AAX/TB-Compressor.aaxplugin",
+            "installMode": "elevated-copy"
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_distortion",
+      "name": "TB Distortion",
+      "version": "1.2.0",
+      "category": "Distortion",
+      "price": 3,
+      "description": "Multi-stage saturation and distortion.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_distortion.png?v=1.2.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip?v=1.2.0",
+        "sha256": "66caf8f18be5d10e4d0686cb32ae8cf232a9ac3764673c7348a59cbda990552d",
+        "sizeBytes": 2801637
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-Distortion.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Distortion-VST3-macOS-arm64.zip",
+        "sha256": "d0f3c9dcb36f5e21d9dc821045170e4e5c17f76ad59c5a71f6b09097dbfb1918",
+        "sizeBytes": 3652627,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-Distortion.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Distortion-AU-macOS-arm64.zip",
+            "sha256": "2630611049ba2b3d2cd720f406a54835a3e74977bb743922de545c9a4099b146",
+            "sizeBytes": 3541746
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_disperser",
+      "name": "TB Disperser",
+      "version": "1.2.0",
+      "category": "Creative",
+      "price": 3,
+      "description": "Phase dispersion with controllable timing and frequency modulation.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_disperser.png?v=1.2.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=1.2.0",
+        "sha256": "d01fc7bd7482144aa2a10890234ebca60e64687e1a09f8b00fb50623f6a9aaa5",
+        "sizeBytes": 2411866
+      },
+      "macos": {
+        "version": "0.1.0",
+        "bundleName": "TB-Disperser.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Disperser-VST3-macOS-arm64.zip",
+        "sha256": "d52973472934e35b71b5c7d90941f8833ab41dd08fcb2c70af2170fc3931c7d3",
+        "sizeBytes": 3073119,
+        "formats": {
+          "au": {
+            "version": "0.1.0",
+            "bundleName": "TB-Disperser.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Disperser-AU-macOS-arm64.zip",
+            "sha256": "0736312ba3b5cd59f495a37fc6639926c1bd88d069d6d4197e59614fae5df148",
+            "sizeBytes": 2971377
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_eq",
+      "name": "TB EQ",
+      "version": "1.2.0",
+      "category": "EQ",
+      "price": 3,
+      "description": "Parametric equalizer.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=1.2.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=1.2.0",
+        "sha256": "e105aedaa9a011a0bdc47aeeb1936f902b27764fd4a4ae2c29d8ed59e032c00e",
+        "sizeBytes": 6782576
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-EQ.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-EQ-VST3-macOS-arm64.zip",
+        "sha256": "6a94c571b15cc51633cf3831f7da135775970e5807df1d0de73d669da0297b58",
+        "sizeBytes": 7681097,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-EQ.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-EQ-AU-macOS-arm64.zip",
+            "sha256": "907350c748196d3d69607870a530d603665b22521d275e6072f3b73c0d069425",
+            "sizeBytes": 7571002
+          },
+          "aax": {
+            "version": "1.0.0",
+            "bundleName": "TB-EQ.aaxplugin",
+            "repoPath": "MacOS/AAX/TB-EQ.aaxplugin",
+            "installMode": "elevated-copy"
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_colorizer",
+      "name": "TB Colorizer",
+      "version": "2.1.0",
+      "category": "Voice",
+      "price": 3,
+      "description": "Eight selectable colors reshape voice and spectral character.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=2.1.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.1.0",
+        "sha256": "fad88a5df2d5cfab271f07ef88427c210aa971913bd65ed5a7d87c6c5e17aa1a",
+        "sizeBytes": 2961897
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-Colorizer.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Colorizer-VST3-macOS-arm64.zip",
+        "sha256": "e5562dd7cc1ca2a5eec00458b920a0186dd9d0513b316f070ab004e06ea9a28a",
+        "sizeBytes": 3043456,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-Colorizer.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Colorizer-AU-macOS-arm64.zip",
+            "sha256": "1ea5af697cce9f454eea63e049e34b32c83e502e249e6d6b86cb66d85f8d0c3d",
+            "sizeBytes": 2940074
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_inverted_flanger",
+      "name": "TB Inverted Flanger",
+      "version": "1.1.0",
+      "category": "Modulation",
+      "price": 3,
+      "description": "Inverted flanger.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=1.1.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=1.1.0",
+        "sha256": "a32d44cba3a2c3a0e49daa71e676043f422df64219e5c75e66c9712e27db6d9c",
+        "sizeBytes": 2364859
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-InvertedFlanger.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-InvertedFlanger-VST3-macOS-arm64.zip",
+        "sha256": "dc07a34a344dcd9e8e516dd428935322ff72f44acbfa5a41d10b134ccf9cbca1",
+        "sizeBytes": 3022784,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-InvertedFlanger.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-InvertedFlanger-AU-macOS-arm64.zip",
+            "sha256": "ec3a5bf96205a9268f942e7703913fd0ddde37931bd6fd069372d7bd65272c16",
+            "sizeBytes": 2918551
+          },
+          "aax": {
+            "version": "1.0.0",
+            "bundleName": "TB-InvertedFlanger.aaxplugin",
+            "repoPath": "MacOS/AAX/TB-InvertedFlanger.aaxplugin",
+            "installMode": "elevated-copy"
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_inverted_phaser",
+      "name": "TB Inverted Phaser",
+      "version": "2.1.0",
+      "category": "Modulation",
+      "price": 3,
+      "description": "Subtractive phasing with deep, sharply defined moving notches.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=2.1.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip?v=2.1.0",
+        "sha256": "af977ac3287b751ce2d77949c1eb6ad8fa3782809ae07ff5619c4ccd81319b97",
+        "sizeBytes": 2385227
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-InvertedPhaser.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-InvertedPhaser-VST3-macOS-arm64.zip",
+        "sha256": "88355a39b7e8ffbd75a544f441b701df3f82556266aef11447e62bfd452c9bdf",
+        "sizeBytes": 3034648,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-InvertedPhaser.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-InvertedPhaser-AU-macOS-arm64.zip",
+            "sha256": "048161c33c277161e2eb2da3458b6052c0e9c714e6c1abb7f2f73920b1f70a80",
+            "sizeBytes": 2931747
+          },
+          "aax": {
+            "version": "1.0.0",
+            "bundleName": "TB-InvertedPhaser.aaxplugin",
+            "repoPath": "MacOS/AAX/TB-InvertedPhaser.aaxplugin",
+            "installMode": "elevated-copy"
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_jewel_digger",
+      "name": "TB Jewel Digger & Finder",
+      "version": "1.2.0",
+      "category": "Creative",
+      "price": 3,
+      "description": "Harmonic discovery with pitch-stacked shimmer and spectral enhancement.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_jewel_digger.png?v=1.2.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip?v=1.2.0",
+        "sha256": "92a28e2113412b0ae61163e7708e59742a46056714daf9ba4d69e7447d5cc339",
+        "sizeBytes": 2418934
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-JewelDiggerAndFinder.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-JewelDiggerAndFinder-VST3-macOS-arm64.zip",
+        "sha256": "284a8dd5df9f7b8d9377bbf4cb098979823594ee2e916531dbcd13362cb7a567",
+        "sizeBytes": 3079785,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-JewelDiggerAndFinder.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-JewelDiggerAndFinder-AU-macOS-arm64.zip",
+            "sha256": "4939d0b334af9e32097eacfc42f3303ad45227001b0b6e464ec728aa5ef00d8f",
+            "sizeBytes": 2973776
+          },
+          "aax": {
+            "version": "1.0.0",
+            "bundleName": "TB-JewelDiggerAndFinder.aaxplugin",
+            "repoPath": "MacOS/AAX/TB-JewelDiggerAndFinder.aaxplugin",
+            "installMode": "elevated-copy"
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_noise_remover",
+      "name": "TB Noise Remover",
+      "version": "2.1.0",
+      "category": "Restoration",
+      "price": 3,
+      "description": "Targeted noise and environmental ambience removal.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=2.1.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.1.0",
+        "sha256": "9a167a9562b7e67087941083c143e1a4f2b54177a030934f975070d254245dfc",
+        "sizeBytes": 13205449
+      },
+      "macos": {
+        "version": "1.1.0",
+        "bundleName": "TB-NoiseRemover.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-NoiseRemover-VST3-macOS-arm64.zip",
+        "sha256": "f7511a30c7a71d95163c8396beb3bcc39b2cf558a1814746c45a0f5bdf387873",
+        "sizeBytes": 3632592,
+        "formats": {
+          "au": {
+            "version": "1.1.0",
+            "bundleName": "TB-NoiseRemover.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-NoiseRemover-AU-macOS-arm64.zip",
+            "sha256": "d6e33e571cdaa703a7c0319a615d80c1a95941cf427afcfa3dd8e589f246efa6",
+            "sizeBytes": 3521299
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_parallel_reverb",
+      "name": "TB Parallel Reverb",
+      "version": "1.2.0",
+      "category": "Reverb",
+      "price": 3,
+      "description": "Parallel reverb.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=1.2.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=1.2.0",
+        "sha256": "7ada2c00eb3799d26fe630de8e5bfc98480503f3f5a262faf110782e1cda464f",
+        "sizeBytes": 2834785
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-ParallelReverb.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-ParallelReverb-VST3-macOS-arm64.zip",
+        "sha256": "ce4b9e18f66828b36fde5b55dcf34d457293e1b52fff1978d7d5a00abce3436e",
+        "sizeBytes": 3691266,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-ParallelReverb.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-ParallelReverb-AU-macOS-arm64.zip",
+            "sha256": "6a3090bfff21097b69b3cc4854a9c3057c5151c720eb5f4aba7193d0fe8d201f",
+            "sizeBytes": 3581093
+          },
+          "aax": {
+            "version": "1.0.0",
+            "bundleName": "TB-ParallelReverb.aaxplugin",
+            "repoPath": "MacOS/AAX/TB-ParallelReverb.aaxplugin",
+            "installMode": "elevated-copy"
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_scrambler",
+      "name": "TB Scrambler",
+      "version": "2.1.0",
+      "category": "Creative",
+      "price": 3,
+      "description": "Audio scramble and glitch effect.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=2.1.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.1.0",
+        "sha256": "78a6678e2a798a6fd3158b8b4014f4e1ced16785121a5220f5690795037cc6f8",
+        "sizeBytes": 3491909
+      },
+      "macos": {
+        "version": "1.1.1",
+        "bundleName": "TB-Scrambler.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Scrambler-VST3-macOS-arm64.zip",
+        "sha256": "efa14dff3caa8df14982f2d63eafe0da95e323c69612866ecad9da8dd06c80aa",
+        "sizeBytes": 4353129,
+        "formats": {
+          "au": {
+            "version": "1.1.1",
+            "bundleName": "TB-Scrambler.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Scrambler-AU-macOS-arm64.zip",
+            "sha256": "af6e99835bd0a407a0b9fbaead1d1eb579da9189bfadc871c1d29ea4dd888e0e",
+            "sizeBytes": 4243437
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_transient_shaper",
+      "name": "TB Spectral Transient Shaper",
+      "version": "1.2.0",
+      "category": "Dynamics",
+      "price": 3,
+      "description": "Spectral transient shaper.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=1.2.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.2.0",
+        "sha256": "3d1b08a1e766fbfffd60960bd7b0f3c597ece23356b2ca899430921cfdf61561",
+        "sizeBytes": 2853754
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-SpectralTransientShaper.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-SpectralTransientShaper-VST3-macOS-arm64.zip",
+        "sha256": "199d89d3703cda2d0a89526dcb3888d0eeb401faaeba8086401720f1d99d54b3",
+        "sizeBytes": 3711877,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-SpectralTransientShaper.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-SpectralTransientShaper-AU-macOS-arm64.zip",
+            "sha256": "7dcd25e6bc72a034dd657e07241290fda20c0c09afdadd3606b91d1c004fb71c",
+            "sizeBytes": 3603705
+          },
+          "aax": {
+            "version": "1.0.0",
+            "bundleName": "TB-TransientShaper.aaxplugin",
+            "repoPath": "MacOS/AAX/TB-TransientShaper.aaxplugin",
+            "installMode": "elevated-copy"
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_step_shifter",
+      "name": "TB Step Shifter (Beta)",
+      "version": "2.1.0",
+      "category": "Creative",
+      "price": 3,
+      "description": "Spectral harmonic shifting that moves selected overtones between pitches.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_step_shifter.png?v=2.1.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip?v=2.1.0",
+        "sha256": "ebc5a6ed8e0a3b38a737dbcd9af1c14643b2d0082c40a02bec91627e5f3768d9",
+        "sizeBytes": 2788384
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-StepShifter.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-StepShifter-VST3-macOS-arm64.zip",
+        "sha256": "49f39ff2a60aee83d4ab829ed10e457e3a608fb36de5c9bfcbf6184af46c5cb3",
+        "sizeBytes": 3649023,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-StepShifter.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-StepShifter-AU-macOS-arm64.zip",
+            "sha256": "8da1d36f63f3e2ec715a19057392af56076761f64590c1293747aacc7a3d8d4b",
+            "sizeBytes": 3537490
+          },
+          "aax": {
+            "version": "1.0.0",
+            "bundleName": "TB-StepShifter.aaxplugin",
+            "repoPath": "MacOS/AAX/TB-StepShifter.aaxplugin",
+            "installMode": "elevated-copy"
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_tune",
+      "name": "TB Tune",
+      "version": "1.1.0",
+      "category": "Voice",
+      "price": 3,
+      "description": "Direction-aware monophonic vocal pitch correction.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=1.1.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=1.1.0",
+        "sha256": "0e0e31c0aa614d5cf2c9b125989b7a8b2555721b53a81aa61603e6a7ce0be251",
+        "sizeBytes": 2396844
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-Tune.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Tune-VST3-macOS-arm64.zip",
+        "sha256": "2fcde7e80093a7bb389ca817a9ab550ebb7cdcf57199a16a8509a21c7d84a49f",
+        "sizeBytes": 3056197,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-Tune.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Tune-AU-macOS-arm64.zip",
+            "sha256": "cc363ebdb88e1a4b0ec3b31a22e29d858e58c27aa71db5a1d29a98f279a0a4af",
+            "sizeBytes": 2950889
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_volume",
+      "name": "TB Volume",
+      "version": "1.1.0",
+      "category": "Utility",
+      "price": 3,
+      "description": "Simple gain control tool.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_volume.png?v=1.1.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.1.0",
+        "sha256": "8e72868787cea3256c4d7303495d5ee28da2747008381218b15e569b83c5bfb0",
+        "sizeBytes": 2333824
+      },
+      "macos": {
+        "version": "1.0.5",
+        "bundleName": "TB-Volume.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Volume-VST3-macOS-arm64.zip",
+        "sha256": "9858005a00efa4eefd31ca272f4a4a2b4607a9c2b9695ba43f5309b2cab47ded",
+        "sizeBytes": 2995588,
+        "formats": {
+          "au": {
+            "version": "1.0.5",
+            "bundleName": "TB-Volume.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Volume-AU-macOS-arm64.zip",
+            "sha256": "94a71a71fe939e1121feff088128ec08f6b428a9cc78c025b0c14b4d19b0ae5e",
+            "sizeBytes": 2890025
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_vocoder",
+      "name": "TB Vocoder (Beta)",
+      "version": "1.1.0",
+      "category": "Creative",
+      "price": 3,
+      "description": "Vocoder.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_vocoder.png?v=1.1.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Vocoder.zip?v=1.1.0",
+        "sha256": "2a41b0e5ab4a4b2852ae4214ce8ee82930b02a22beee7a7abdda42fdd4454485",
+        "sizeBytes": 2794043
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-Vocoder.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Vocoder-VST3-macOS-arm64.zip",
+        "sha256": "423759a9e244348eb6daf3dd790fb44f13626a580a33ef26c856002d53791586",
+        "sizeBytes": 3665470,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-Vocoder.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-Vocoder-AU-macOS-arm64.zip",
+            "sha256": "5485595c561a1fc322245435b95a45ea862575bd9f7aa562f28f45f272ed64c1",
+            "sizeBytes": 3555793
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_xyz_panner",
+      "name": "TB XYZ Panner",
+      "version": "1.1.0",
+      "category": "Utility",
+      "price": 3,
+      "description": "Multi-axis panner.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=1.1.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.1.0",
+        "sha256": "713b4aaefd5f3ce4f330450c181c3880cc332804678c12a5ecc4f5c6854495c1",
+        "sizeBytes": 2991317
+      },
+      "macos": {
+        "version": "1.0.0",
+        "bundleName": "TB-XYZPanner.vst3",
+        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-XYZPanner-VST3-macOS-arm64.zip",
+        "sha256": "5fc499c0310731a9bb796f40c45ef4a8d728de0c146b06031e58289a08619b12",
+        "sizeBytes": 3856112,
+        "formats": {
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-XYZPanner.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-2026-07-28/TB-XYZPanner-AU-macOS-arm64.zip",
+            "sha256": "893d1d34b394aeb28664095714d550626b08d0b7636b5245d421bc2285f5cb3f",
+            "sizeBytes": 3745331
+          },
+          "aax": {
+            "version": "1.0.0",
+            "bundleName": "TB-XYZPanner.aaxplugin",
+            "repoPath": "MacOS/AAX/TB-XYZPanner.aaxplugin",
+            "installMode": "elevated-copy"
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_limiter",
+      "name": "TB Limiter",
+      "version": "1.0.0",
+      "category": "Dynamics",
+      "price": 3,
+      "description": "Stereo-linked true peak mastering limiter with programme-aware recovery.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_limiter.png?v=1.0.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Limiter.zip?v=1.0.0",
+        "sha256": "8ef932af9019e923e548c3d83688dc01322abc261136ad95ce92330361d7d425",
+        "sizeBytes": 3220192
+      }
+    },
+    {
+      "id": "tb_sublow",
+      "name": "TB SubLow",
+      "version": "1.0.0",
+      "category": "Creative",
+      "price": 3,
+      "description": "Additive sub-bass generator with controllable core, bloom, and punch.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_sublow.png?v=1.0.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.0.0",
+        "sha256": "bf9812ebcd2ae738961c5ac239dc28bb0f4175d2ee76e2ec8bd797645bf0b10f",
+        "sizeBytes": 2431817
+      }
+    }
+  ],
+  "github": {
+    "repo": "TaebeumKim/TB_Audio-Plugins",
+    "branch": "main"
+  }
+}
