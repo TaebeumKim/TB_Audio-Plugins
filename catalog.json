@@ -1,10 +1,10 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-28T20:25:19+09:00",
+  "updatedAt": "2026-07-28T20:38:47+09:00",
   "hubVersion": "1.3.4",
   "hub": {
     "version": "1.3.4",
-    "notes": "Loads plug-in logos from the catalog with bundled offline fallbacks.",
+    "notes": "macOS 1.3.5 adds separate VST3, AU, and AAX actions plus platform-specific Hub updates.",
     "windows": {
       "version": "1.3.4",
       "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.4/TBHub-Setup-1.3.4.exe",
@@ -12,10 +12,10 @@
       "sizeBytes": 59481037
     },
     "macos": {
-      "version": "1.3.4",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.4/TBHub-1.3.4-macOS-AppleSilicon.dmg",
-      "sha256": "f8d8d4b5c0e9a6091f397569dea487327463a556a302dec5f6fac3a685ad1d66",
-      "sizeBytes": 53896078
+      "version": "1.3.5",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.5/TBHub-1.3.5-macOS-AppleSilicon.dmg",
+      "sha256": "eeadb54061762dc991a9f93ffe9149de29e8d04a586468e0ba7870b22402c9c7",
+      "sizeBytes": 53890132
     }
   },
   "plugins": [
