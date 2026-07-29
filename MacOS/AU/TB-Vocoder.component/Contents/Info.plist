@@ -4,15 +4,15 @@
 <plist>
   <dict>
     <key>CFBundleExecutable</key>
-    <string>TB-XYZPanner</string>
+    <string>TB-Vocoder</string>
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.teamimpulseimpact.tb-xyzpanner</string>
+    <string>com.teamimpulseimpact.tb-vocoder</string>
     <key>CFBundleName</key>
-    <string>TB-XYZPanner</string>
+    <string>TB-Vocoder</string>
     <key>CFBundleDisplayName</key>
-    <string>TB-XYZPanner</string>
+    <string>TB-Vocoder</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
@@ -29,17 +29,17 @@
     <array>
       <dict>
         <key>name</key>
-        <string>Team Impulse Impact: TB-XYZPanner</string>
+        <string>Team Impulse Impact: TB-Vocoder</string>
         <key>description</key>
-        <string>TB-XYZPanner</string>
+        <string>TB-Vocoder</string>
         <key>factoryFunction</key>
-        <string>TB_XYZPannerAUFactory</string>
+        <string>TB_VocoderAUFactory</string>
         <key>manufacturer</key>
         <string>Tbii</string>
         <key>type</key>
         <string>aufx</string>
         <key>subtype</key>
-        <string>Tnpe</string>
+        <string>Tanm</string>
         <key>version</key>
         <integer>65537</integer>
         <key>resourceUsage</key>

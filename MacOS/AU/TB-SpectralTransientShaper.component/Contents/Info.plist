@@ -4,15 +4,15 @@
 <plist>
   <dict>
     <key>CFBundleExecutable</key>
-    <string>TB-XYZPanner</string>
+    <string>TB-SpectralTransientShaper</string>
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.teamimpulseimpact.tb-xyzpanner</string>
+    <string>com.teamimpulseimpact.tb-spectraltransientshaper</string>
     <key>CFBundleName</key>
-    <string>TB-XYZPanner</string>
+    <string>TB-SpectralTransientShaper</string>
     <key>CFBundleDisplayName</key>
-    <string>TB-XYZPanner</string>
+    <string>TB-SpectralTransientShaper</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
@@ -29,17 +29,17 @@
     <array>
       <dict>
         <key>name</key>
-        <string>Team Impulse Impact: TB-XYZPanner</string>
+        <string>Team Impulse Impact: TB-SpectralTransientShaper</string>
         <key>description</key>
-        <string>TB-XYZPanner</string>
+        <string>TB-SpectralTransientShaper</string>
         <key>factoryFunction</key>
-        <string>TB_XYZPannerAUFactory</string>
+        <string>TB_SpectralTransientShaperAUFactory</string>
         <key>manufacturer</key>
-        <string>Tbii</string>
+        <string>Manu</string>
         <key>type</key>
         <string>aufx</string>
         <key>subtype</key>
-        <string>Tnpe</string>
+        <string>Shf9</string>
         <key>version</key>
         <integer>65537</integer>
         <key>resourceUsage</key>
