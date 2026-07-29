@@ -267,8 +267,7 @@ function noiseRemoverMark() {
       stroke-linecap="round" stroke-linejoin="round"
       ><path d="${pressedTailOuter}"/><path d="${pressedTailInner}"/>
       <path d="${JOIN_OUTER}"/><path d="${JOIN_INNER}"/></g>
-    <path d="${overTailBand}" fill="${BLACK}" stroke="${WHITE}" stroke-width="7"
-      stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="${overTailBand}" fill="${WHITE}"/>
     <path d="${BODY}" fill="${BLACK}"/>
     <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="7"
       stroke-linecap="round" stroke-linejoin="round"/>
@@ -276,13 +275,11 @@ function noiseRemoverMark() {
     <path d="M256 171 C278 167 300 182 307 205 L313 246
       C316 271 300 291 277 293 C254 295 236 275 235 248
       L235 210 C236 191 246 177 256 171 Z"
-      fill="${BLACK}" stroke="${WHITE}" stroke-width="10"
-      stroke-linecap="round" stroke-linejoin="round"/>
+      fill="${WHITE}"/>
     <path d="M263 195 C276 192 287 203 290 217 L294 245
       C296 258 288 269 277 270 C266 271 258 261 257 247
       L257 214 C257 205 260 198 263 195 Z"
-      fill="none" stroke="${WHITE}" stroke-width="7"
-      stroke-linecap="round" stroke-linejoin="round"/>`;
+      fill="${BLACK}"/>`;
 }
 
 function parallelReverbMark() {
