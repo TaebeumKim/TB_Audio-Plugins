@@ -4,15 +4,15 @@
 <plist>
   <dict>
     <key>CFBundleExecutable</key>
-    <string>TB-StepShifter</string>
+    <string>TB-SpectralTransientShaper</string>
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.teamimpulseimpact.tb-stepshifter</string>
+    <string>com.teamimpulseimpact.tb-spectraltransientshaper</string>
     <key>CFBundleName</key>
-    <string>TB-StepShifter</string>
+    <string>TB-SpectralTransientShaper</string>
     <key>CFBundleDisplayName</key>
-    <string>TB-StepShifter</string>
+    <string>TB-SpectralTransientShaper</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>

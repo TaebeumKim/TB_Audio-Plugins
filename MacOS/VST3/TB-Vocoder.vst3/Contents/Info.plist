@@ -4,15 +4,15 @@
 <plist>
   <dict>
     <key>CFBundleExecutable</key>
-    <string>TB-StepShifter</string>
+    <string>TB-Vocoder</string>
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.teamimpulseimpact.tb-stepshifter</string>
+    <string>com.teamimpulseimpact.tb-vocoder</string>
     <key>CFBundleName</key>
-    <string>TB-StepShifter</string>
+    <string>TB-Vocoder</string>
     <key>CFBundleDisplayName</key>
-    <string>TB-StepShifter</string>
+    <string>TB-Vocoder</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
