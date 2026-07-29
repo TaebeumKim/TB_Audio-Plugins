@@ -3,22 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>files</key>
-	<dict>
-		<key>Resources/RecentFilesMenuTemplate.nib</key>
-		<data>
-		4cEN55flubpq9bxeGSBG3zMPYQw=
-		</data>
-	</dict>
+	<dict/>
 	<key>files2</key>
-	<dict>
-		<key>Resources/RecentFilesMenuTemplate.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cY60xaOlVk3YMq6aNs9knz7yV86JbdkhaT7rYQG9AIo=
-			</data>
-		</dict>
-	</dict>
+	<dict/>
 	<key>rules</key>
 	<dict>
 		<key>^Resources/</key>

@@ -58,16 +58,16 @@
           "vst3": {
             "version": "0.3.3",
             "bundleName": "TB-Center.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Center-VST3-macOS-arm64.zip",
-            "sha256": "2c4621ca6b033821b2073ca7141850f51920b621c89d12ab505497828ee23e8e",
-            "sizeBytes": 3045955
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Center-VST3-macOS-arm64.zip",
+            "sha256": "6837cf6c03500404ea89a54c23936eb70f73cc1e1a13bda308d3f064c6fd1dba",
+            "sizeBytes": 3045930
           },
           "au": {
             "version": "0.3.3",
             "bundleName": "TB-Center.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Center-AU-macOS-arm64.zip",
-            "sha256": "00feb88192f60f5ef83f4585eaef5977a0c0388978c3682f135635214da21c05",
-            "sizeBytes": 2940377
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Center-AU-macOS-arm64.zip",
+            "sha256": "acdbdee1f690dd7aceed15a60ccc2968b2f318f6ce9cdf0d8aed6e2e456f3432",
+            "sizeBytes": 2940372
           }
         }
       }
@@ -111,16 +111,16 @@
           "vst3": {
             "version": "1.1.1",
             "bundleName": "TB-Compressor.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Compressor-VST3-macOS-arm64.zip",
-            "sha256": "c58e586d34f74c46df268e04248e1982dfbd6eac37978e4bb98862b68b172bb1",
-            "sizeBytes": 3662156
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Compressor-VST3-macOS-arm64.zip",
+            "sha256": "03354c9714b6a9e757911b1e1fddd699dddd0cc2a13cd772a5810ab3ff1d612f",
+            "sizeBytes": 3662175
           },
           "au": {
             "version": "1.1.1",
             "bundleName": "TB-Compressor.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Compressor-AU-macOS-arm64.zip",
-            "sha256": "50c916e8958d90cd0f897f2c9ff90f5eae0d599f6a725fcf2bc3b4a2dcedcebb",
-            "sizeBytes": 3549950
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Compressor-AU-macOS-arm64.zip",
+            "sha256": "4ab364ad94549e269f4cd78a4c0bdce901e511237bdab51d53a1f5318ca6d238",
+            "sizeBytes": 3549947
           },
           "aax": {
             "version": "1.1",
@@ -170,16 +170,16 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-Distortion.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Distortion-VST3-macOS-arm64.zip",
-            "sha256": "45996df2e50662f41a39b0d18c982af0d29b3721c49ff622cf7fa02a6e7394a5",
-            "sizeBytes": 3653624
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Distortion-VST3-macOS-arm64.zip",
+            "sha256": "9229b93af17745ef81107c91495e0c76e78566ca33ca719d5737b8b55a0c8622",
+            "sizeBytes": 3653644
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-Distortion.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Distortion-AU-macOS-arm64.zip",
-            "sha256": "c74215febdf1bc16bf3a8948a173a0d05a9bafaacb5aeea86cd7fe389968e2b8",
-            "sizeBytes": 3544530
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Distortion-AU-macOS-arm64.zip",
+            "sha256": "9469880b60e3158bc2328c498d5877b7c887fccff0889a1749f04396b7c181e3",
+            "sizeBytes": 3544533
           }
         }
       }
@@ -223,16 +223,16 @@
           "vst3": {
             "version": "0.1.1",
             "bundleName": "TB-Disperser.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Disperser-VST3-macOS-arm64.zip",
-            "sha256": "222511d7482345b9c0bd4971d941071cf762b3ed2be9e139a42bcc42e4138847",
-            "sizeBytes": 3073621
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Disperser-VST3-macOS-arm64.zip",
+            "sha256": "0ea1a10339db344409579e4111f3fe630fc2b6649409e13a8e9221006bcfd2fe",
+            "sizeBytes": 3073591
           },
           "au": {
             "version": "0.1.1",
             "bundleName": "TB-Disperser.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Disperser-AU-macOS-arm64.zip",
-            "sha256": "3e972ada5ba8de239e2caa8f8022d432111e41f99ee85f9eddacc048d3e95233",
-            "sizeBytes": 2970347
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Disperser-AU-macOS-arm64.zip",
+            "sha256": "3ad4db1ee1b6fb93d97ad6ee252aafbc9ca0965bf669647aab4f41e759437929",
+            "sizeBytes": 2970345
           }
         }
       }
@@ -275,16 +275,16 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-EQ.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-EQ-VST3-macOS-arm64.zip",
-            "sha256": "10b56c903bea1b91773efdacdcc935e528a6538672e322d61fc661c5b2d1db22",
-            "sizeBytes": 7714237
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-EQ-VST3-macOS-arm64.zip",
+            "sha256": "984ceb0603d2a43b4f3445bc5fde88936ebd739cad9bd58d2217a0925afba515",
+            "sizeBytes": 7714233
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-EQ.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-EQ-AU-macOS-arm64.zip",
-            "sha256": "d9a64ae864ac76f931cbb36f0214fd9da8cd1403c0bd7140663f1aee9a27e578",
-            "sizeBytes": 7606236
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-EQ-AU-macOS-arm64.zip",
+            "sha256": "0742059a37433603b04ea145a9a3fd7d2720fe6009b681bc4d16096563fa2288",
+            "sizeBytes": 7606238
           },
           "aax": {
             "version": "1.0.0",
@@ -334,16 +334,16 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-Colorizer.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Colorizer-VST3-macOS-arm64.zip",
-            "sha256": "fc6196cf248ea060d6995846487ae7f27c851f04e4366e47d54ddff2c7ccd0e2",
-            "sizeBytes": 3056787
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Colorizer-VST3-macOS-arm64.zip",
+            "sha256": "92469c2e29d8d1afd0932bc2f909da495466f751fade98e74d73e06b1752e937",
+            "sizeBytes": 3056738
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-Colorizer.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Colorizer-AU-macOS-arm64.zip",
-            "sha256": "f3cfa18156af30f72e71c32eb017653624a23bf08eab3b88dc04218bfad46f46",
-            "sizeBytes": 2951813
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Colorizer-AU-macOS-arm64.zip",
+            "sha256": "4b388dfd458cd127fa36ff724b037aee12f5d5fcc309f8d33b21c6725454ba52",
+            "sizeBytes": 2951809
           }
         }
       }
@@ -387,16 +387,16 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-InvertedFlanger.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-InvertedFlanger-VST3-macOS-arm64.zip",
-            "sha256": "f57d89ebf4e569925a3143ba06f8af2acbf23515f108131e9006082e10824808",
-            "sizeBytes": 3026992
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-InvertedFlanger-VST3-macOS-arm64.zip",
+            "sha256": "f944e4ea486fa2b6f7189e67dab8411f35f01cf92137bee6220ee3357d1ef342",
+            "sizeBytes": 3026949
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-InvertedFlanger.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-InvertedFlanger-AU-macOS-arm64.zip",
-            "sha256": "4d1a7fe146f76efe2644ffa642a0443bdf1bb2c7a59a90079948f3d368f0f5c5",
-            "sizeBytes": 2921576
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-InvertedFlanger-AU-macOS-arm64.zip",
+            "sha256": "b84e9d461ff124685f6d7853bb9931324b01e1e69af507a62840eac7b4d5950c",
+            "sizeBytes": 2921574
           },
           "aax": {
             "version": "1.0.0",
@@ -446,16 +446,16 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-InvertedPhaser.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-InvertedPhaser-VST3-macOS-arm64.zip",
-            "sha256": "21de668cf473dea1de6436b0ec488d11420dbaff096f9b8122f6757426425b15",
-            "sizeBytes": 3045002
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-InvertedPhaser-VST3-macOS-arm64.zip",
+            "sha256": "e5e78aae78451e9a415ae9cb90be0c44dc8c7bb0bd301490342c4e8740e8a94f",
+            "sizeBytes": 3044998
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-InvertedPhaser.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-InvertedPhaser-AU-macOS-arm64.zip",
-            "sha256": "f880664e3a3ae1e73f9d72e3b6e58d378a0f40adcc123e76c10ee6108973a33b",
-            "sizeBytes": 2939394
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-InvertedPhaser-AU-macOS-arm64.zip",
+            "sha256": "4108744faa5b8219d8ff8fcf147cbe67f073fca0a0488059fe77468402a734b3",
+            "sizeBytes": 2939388
           },
           "aax": {
             "version": "1.0.0",
@@ -505,16 +505,16 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-JewelDiggerAndFinder.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-JewelDiggerAndFinder-VST3-macOS-arm64.zip",
-            "sha256": "401191c2fa631c18751362a4c62a23c0ee480e5366ba7bb3321a2cd3e875a3f0",
-            "sizeBytes": 3083824
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-JewelDiggerAndFinder-VST3-macOS-arm64.zip",
+            "sha256": "61797aa7c76a2c21efab010fadfc3a7bf6aacc961a4beebe1662030c04dd05ae",
+            "sizeBytes": 3083760
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-JewelDiggerAndFinder.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-JewelDiggerAndFinder-AU-macOS-arm64.zip",
-            "sha256": "2c86d50050693229d9435bd81e0b9927736883f78604ad521b8b41beade2ea5a",
-            "sizeBytes": 2977612
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-JewelDiggerAndFinder-AU-macOS-arm64.zip",
+            "sha256": "076beda24e5d2c7dd5ec61ceaf0bbb96a11cb20515a7615a1350abcbe78cba4f",
+            "sizeBytes": 2977611
           },
           "aax": {
             "version": "1.0.0",
@@ -564,16 +564,16 @@
           "vst3": {
             "version": "1.1.1",
             "bundleName": "TB-NoiseRemover.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-NoiseRemover-VST3-macOS-arm64.zip",
-            "sha256": "66fb975262f82bbc6252be22762e2746809a79fe4a29feace9da5904b121bc25",
-            "sizeBytes": 8022750
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-NoiseRemover-VST3-macOS-arm64.zip",
+            "sha256": "89553fe470c2fea378e73306fdbe4ef66c533c5bf53881fe75db1756417ac9b9",
+            "sizeBytes": 8022745
           },
           "au": {
             "version": "1.1.1",
             "bundleName": "TB-NoiseRemover.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-NoiseRemover-AU-macOS-arm64.zip",
-            "sha256": "d28ec2b011696082bf5fc529fc577f1624ffd6d8426d5cc750577391f446684c",
-            "sizeBytes": 7909761
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-NoiseRemover-AU-macOS-arm64.zip",
+            "sha256": "3f16e6e1a10ade18fc2abe358d72e42d3c180b1e7184db383a97d52d9a28f624",
+            "sizeBytes": 7909758
           }
         }
       }
@@ -617,15 +617,15 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-ParallelReverb.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-ParallelReverb-VST3-macOS-arm64.zip",
-            "sha256": "b6b25aad2da57d57ccab14becd9f5d4b2b78e8ca05dd1523f4651f6a303e4511",
-            "sizeBytes": 3692339
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-ParallelReverb-VST3-macOS-arm64.zip",
+            "sha256": "1f5d76cccd4115e967bb56113e034620c6d279d30a4375f28e4739ba22ff04b0",
+            "sizeBytes": 3692344
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-ParallelReverb.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-ParallelReverb-AU-macOS-arm64.zip",
-            "sha256": "0eea5e13f4c71e17702d7bd5eadc41fb35d3b63bf66ed774fb51c01ee7713bcc",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-ParallelReverb-AU-macOS-arm64.zip",
+            "sha256": "7d7cef0ea415584f1c7462b8d9a05ee67d0ed4117a992274be34a71c55f7cf77",
             "sizeBytes": 3584249
           },
           "aax": {
@@ -676,16 +676,16 @@
           "vst3": {
             "version": "1.1.2",
             "bundleName": "TB-Scrambler.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Scrambler-VST3-macOS-arm64.zip",
-            "sha256": "a4f2402f4a67edefaf6e89e8646726644935d2688eb521b94281dfc5f3583434",
-            "sizeBytes": 4362298
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Scrambler-VST3-macOS-arm64.zip",
+            "sha256": "9b07783cf73d7144b523c78a0afc4e311a8d7b99c49be133fb2a8d30a342eb31",
+            "sizeBytes": 4362204
           },
           "au": {
             "version": "1.1.2",
             "bundleName": "TB-Scrambler.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Scrambler-AU-macOS-arm64.zip",
-            "sha256": "520586a547c54c46907a4281404f701a44a4c7214bd1c61a4817d9aed48a8d4f",
-            "sizeBytes": 4254157
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Scrambler-AU-macOS-arm64.zip",
+            "sha256": "df183d861f521361535546d67b8c8b96f5e17bdb01c372a2f9860fbee7b78430",
+            "sizeBytes": 4254153
           }
         }
       }
@@ -728,16 +728,16 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-SpectralTransientShaper.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-SpectralTransientShaper-VST3-macOS-arm64.zip",
-            "sha256": "fc3dfecb7db42977ad1c9ee1c23ea291dcd562496aa6c81196e071a4f1dc84b4",
-            "sizeBytes": 3716661
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-SpectralTransientShaper-VST3-macOS-arm64.zip",
+            "sha256": "d26f6a1da1075071f73eb10f440701485452bf36c1b1a769d62a6fd204cb481d",
+            "sizeBytes": 3716616
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-SpectralTransientShaper.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-SpectralTransientShaper-AU-macOS-arm64.zip",
-            "sha256": "77d558b39e95fa50bb9477c9b20acdb326fff89157a13fb93da2ebcc1ca7871c",
-            "sizeBytes": 3608191
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-SpectralTransientShaper-AU-macOS-arm64.zip",
+            "sha256": "978843bea80e96fe03386a775e270f6de5ae6008f10d5b74161efd4c34006b23",
+            "sizeBytes": 3608190
           },
           "aax": {
             "version": "1.0.0",
@@ -787,16 +787,16 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-StepShifter.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-StepShifter-VST3-macOS-arm64.zip",
-            "sha256": "dd4036aec47ddd8a5f2f8732a7c5e8a6c1353dd12f0cd2e8507d942d96cda130",
-            "sizeBytes": 3659178
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-StepShifter-VST3-macOS-arm64.zip",
+            "sha256": "f1013259618f9e15e350e1793a11e4db0789480043d3bf28a381694c203864a7",
+            "sizeBytes": 3659113
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-StepShifter.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-StepShifter-AU-macOS-arm64.zip",
-            "sha256": "552f378bf219cb11ae5877c1bf5d11f116184eda5f6f8bd3a05796acb443813f",
-            "sizeBytes": 3548248
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-StepShifter-AU-macOS-arm64.zip",
+            "sha256": "95ad2bd737aeb584d6fc3f73162abd843b774ab2eb4ee22080cd953f18bea741",
+            "sizeBytes": 3548243
           },
           "aax": {
             "version": "1.0.0",
@@ -846,16 +846,16 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-Tune.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Tune-VST3-macOS-arm64.zip",
-            "sha256": "a29688a3eeeb3c503eb437190d0071a7a4f962a58b8b168bd82c4917f6d29abe",
-            "sizeBytes": 3065638
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Tune-VST3-macOS-arm64.zip",
+            "sha256": "cca355d1ec5af8fc7f884b0a25048394a8c8727396a932670422867be7645400",
+            "sizeBytes": 3065630
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-Tune.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Tune-AU-macOS-arm64.zip",
-            "sha256": "0304bdc53ea2df9445ef03edcae8ef093c5e28bff760f028ab65f471244d8507",
-            "sizeBytes": 2959622
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Tune-AU-macOS-arm64.zip",
+            "sha256": "977c56a85aef9192465030a39ceb5c63789bf2c7dfeccdf4f72b2c97aa547dca",
+            "sizeBytes": 2959623
           }
         }
       }
@@ -899,16 +899,16 @@
           "vst3": {
             "version": "1.0.6",
             "bundleName": "TB-Volume.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Volume-VST3-macOS-arm64.zip",
-            "sha256": "733676b3997ceca69bfbc5bb140d5e4a92f27065965cdfd027638d7fdd773293",
-            "sizeBytes": 3009070
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Volume-VST3-macOS-arm64.zip",
+            "sha256": "81f588f7543318f3bd54b5ef045c2f02fda4cdc2bf62466babe3c411299237ce",
+            "sizeBytes": 3009054
           },
           "au": {
             "version": "1.0.6",
             "bundleName": "TB-Volume.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Volume-AU-macOS-arm64.zip",
-            "sha256": "83a0c88246af30e4b73cda8ef3f8b55994fe647e15096462e2525136a0a5c27c",
-            "sizeBytes": 2903144
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Volume-AU-macOS-arm64.zip",
+            "sha256": "ccb4cec00227cc04a9c704b8e00fca0b9fe2983df93caa7114a39d9ce23576c3",
+            "sizeBytes": 2903143
           }
         }
       }
@@ -952,16 +952,16 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-Vocoder.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Vocoder-VST3-macOS-arm64.zip",
-            "sha256": "573a77568a8788da5d45968b15d53e7d81ec0836080e9b453593b2dbb5f53c2a",
-            "sizeBytes": 3671951
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Vocoder-VST3-macOS-arm64.zip",
+            "sha256": "758f9e09a29f6cdd7735962b51bf0764af819781759625c8fb7721c3674f318f",
+            "sizeBytes": 3671883
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-Vocoder.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Vocoder-AU-macOS-arm64.zip",
-            "sha256": "171963882548dca3420ba3eb6c0e3c12b78698cbc136438a2ebf01b567cc40fe",
-            "sizeBytes": 3564788
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Vocoder-AU-macOS-arm64.zip",
+            "sha256": "3d5db588d3b5df39f370af62160c8c2dc2857cccc8e57cdceab5f2afccc0f238",
+            "sizeBytes": 3564785
           }
         }
       }
@@ -1005,15 +1005,15 @@
           "vst3": {
             "version": "1.0.1",
             "bundleName": "TB-XYZPanner.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-XYZPanner-VST3-macOS-arm64.zip",
-            "sha256": "f0fc736044b3eb154c6ca42c0bb34bdd2be68cbc4dea926680e280a6655ce20e",
-            "sizeBytes": 3863116
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-XYZPanner-VST3-macOS-arm64.zip",
+            "sha256": "f0f1995bb18d069acfe8e6734943a4c8383922f8c4730f1f189084c6ceb90482",
+            "sizeBytes": 3863091
           },
           "au": {
             "version": "1.0.1",
             "bundleName": "TB-XYZPanner.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-XYZPanner-AU-macOS-arm64.zip",
-            "sha256": "7101b3be5065b9b6c5a0bbbf7a4b8ae405b0de79cb384d572437d6fdaf5ae811",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-XYZPanner-AU-macOS-arm64.zip",
+            "sha256": "3ef687e204a42a41fac507b65f5522ffb72c2a1b117c758dcff58cfcbae10ce4",
             "sizeBytes": 3754141
           },
           "aax": {
@@ -1063,16 +1063,16 @@
           "vst3": {
             "version": "0.4.1",
             "bundleName": "TB-Limiter.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Limiter-VST3-macOS-arm64.zip",
-            "sha256": "2b2df2aef078a21478bb2b3f745dfe763de0ffb62c5bef545afb982fc599ef6d",
-            "sizeBytes": 4091178
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Limiter-VST3-macOS-arm64.zip",
+            "sha256": "3dbcb5f1304339844e56f4e4d8cfdb16651e33925484963d3dad91bac789fb9c",
+            "sizeBytes": 4091186
           },
           "au": {
             "version": "0.4.1",
             "bundleName": "TB-Limiter.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Limiter-AU-macOS-arm64.zip",
-            "sha256": "6c2f70da75d06bfc78f4fe110dc160f3707c0294c27aae75ab76cd826b6aee5f",
-            "sizeBytes": 3978812
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Limiter-AU-macOS-arm64.zip",
+            "sha256": "18483aba25e64e3f7445d87027087eb29add9f33e09b74d0e33b4e92c2e386a9",
+            "sizeBytes": 3978809
           }
         }
       }
@@ -1116,16 +1116,16 @@
           "vst3": {
             "version": "0.1.1",
             "bundleName": "TB-SubLow.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-SubLow-VST3-macOS-arm64.zip",
-            "sha256": "8a9add737cc411f8e26a42a6146c115db82bf40732f9229e0fceec40855894ef",
-            "sizeBytes": 3095083
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-SubLow-VST3-macOS-arm64.zip",
+            "sha256": "b747b09f0f92f5cbeace777819a8e056d80c5268c9a8edac0dd38fed8e991ee8",
+            "sizeBytes": 3095068
           },
           "au": {
             "version": "0.1.1",
             "bundleName": "TB-SubLow.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-SubLow-AU-macOS-arm64.zip",
-            "sha256": "43eba8a1009e39ec153e94e880e45c65a1a314c22f018add352064fdcc5d8208",
-            "sizeBytes": 2990299
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-SubLow-AU-macOS-arm64.zip",
+            "sha256": "aa6f875706020b766734ec510d33b72826cecfe6de1c9b33baea0d0404406cd4",
+            "sizeBytes": 2990296
           }
         }
       }
@@ -1168,15 +1168,15 @@
           "vst3": {
             "version": "1.0.0",
             "bundleName": "TB-Delay.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Delay-VST3-macOS-arm64.zip",
-            "sha256": "dbafcb1b557367c3247276c319ba5fe5d1bc9ed10d2ad3a8667977eddd258fcc",
-            "sizeBytes": 3101583
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Delay-VST3-macOS-arm64.zip",
+            "sha256": "bf7b30c39abfc3e76a3cc86d3d0a2a9d1d0672e8f2415f305b56d19ec0c005cf",
+            "sizeBytes": 3101553
           },
           "au": {
             "version": "1.0.0",
             "bundleName": "TB-Delay.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Delay-AU-macOS-arm64.zip",
-            "sha256": "31e57c5c07779063a2c0778d6ce99df75d4db87f9cd269e7994f9e780eea719d",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Delay-AU-macOS-arm64.zip",
+            "sha256": "50782eefd8d0bbbcebf0edd34d62d92be4629be5c4615529b1a108001c4aa2f9",
             "sizeBytes": 2996337
           }
         }
