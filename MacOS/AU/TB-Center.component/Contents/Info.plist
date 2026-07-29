@@ -4,23 +4,23 @@
 <plist>
   <dict>
     <key>CFBundleExecutable</key>
-    <string>TB-Compressor</string>
+    <string>TB-Center</string>
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.teamimpulseimpact.tb-compressor</string>
+    <string>com.teamimpulseimpact.tb-center</string>
     <key>CFBundleName</key>
-    <string>TB-Compressor</string>
+    <string>TB-Center</string>
     <key>CFBundleDisplayName</key>
-    <string>TB-Compressor</string>
+    <string>TB-Center</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.1.1</string>
+    <string>0.3.3</string>
     <key>CFBundleVersion</key>
-    <string>1.1.1</string>
+    <string>0.3.3</string>
     <key>NSHumanReadableCopyright</key>
     <string></string>
     <key>NSHighResolutionCapable</key>
@@ -29,19 +29,19 @@
     <array>
       <dict>
         <key>name</key>
-        <string>Team Impulse Impact: TB-Compressor</string>
+        <string>Team Impulse Impact: TB-Center</string>
         <key>description</key>
-        <string>TB-Compressor</string>
+        <string>TB-Center</string>
         <key>factoryFunction</key>
-        <string>TB_CompressorAUFactory</string>
+        <string>TB_CenterAUFactory</string>
         <key>manufacturer</key>
-        <string>Tbii</string>
+        <string>Manu</string>
         <key>type</key>
         <string>aufx</string>
         <key>subtype</key>
-        <string>Tlcb</string>
+        <string>Kivd</string>
         <key>version</key>
-        <integer>65793</integer>
+        <integer>771</integer>
         <key>resourceUsage</key>
         <dict>
           <key>network.client</key>

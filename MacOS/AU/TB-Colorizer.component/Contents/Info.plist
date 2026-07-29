@@ -4,23 +4,23 @@
 <plist>
   <dict>
     <key>CFBundleExecutable</key>
-    <string>TB-Compressor</string>
+    <string>TB-Colorizer</string>
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.teamimpulseimpact.tb-compressor</string>
+    <string>com.teamimpulseimpact.tb-colorizer</string>
     <key>CFBundleName</key>
-    <string>TB-Compressor</string>
+    <string>TB-Colorizer</string>
     <key>CFBundleDisplayName</key>
-    <string>TB-Compressor</string>
+    <string>TB-Colorizer</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.1.1</string>
+    <string>1.0.1</string>
     <key>CFBundleVersion</key>
-    <string>1.1.1</string>
+    <string>1.0.1</string>
     <key>NSHumanReadableCopyright</key>
     <string></string>
     <key>NSHighResolutionCapable</key>
@@ -29,19 +29,19 @@
     <array>
       <dict>
         <key>name</key>
-        <string>Team Impulse Impact: TB-Compressor</string>
+        <string>Team Impulse Impact: TB-Colorizer</string>
         <key>description</key>
-        <string>TB-Compressor</string>
+        <string>TB-Colorizer</string>
         <key>factoryFunction</key>
-        <string>TB_CompressorAUFactory</string>
+        <string>TB_ColorizerAUFactory</string>
         <key>manufacturer</key>
-        <string>Tbii</string>
+        <string>TbSd</string>
         <key>type</key>
         <string>aufx</string>
         <key>subtype</key>
-        <string>Tlcb</string>
+        <string>TbCz</string>
         <key>version</key>
-        <integer>65793</integer>
+        <integer>65537</integer>
         <key>resourceUsage</key>
         <dict>
           <key>network.client</key>
