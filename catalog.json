@@ -575,7 +575,7 @@
       "category": "Reverb",
       "price": 3,
       "description": "Parallel convolution reverb.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=mark-noise-connected-silver-headphones-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=mark-reverb-softer-decay-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=1.2.0",
@@ -793,7 +793,7 @@
       "category": "Voice",
       "price": 3,
       "description": "Vocal pitch correction.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=mark-noise-connected-silver-headphones-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=mark-tune-symmetric-mic-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=1.1.0",
@@ -1099,7 +1099,7 @@
       "category": "Delay",
       "price": 4,
       "description": "Creative stereo delay.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_delay.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_delay.png?v=mark-delay-shrinking-echoes-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.0.0",
