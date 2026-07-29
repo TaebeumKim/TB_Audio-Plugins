@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-29T00:45:44+09:00",
+  "updatedAt": "2026-07-29T20:38:52+09:00",
   "hubVersion": "1.3.4",
   "hub": {
     "version": "1.3.4",
@@ -195,7 +195,7 @@
     },
     {
       "id": "tb_eq",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-29",
       "portfolio": {
         "image": "assets/plugins/tb_eq.png",
         "descriptionKo": "정밀한 주파수 조정을 위한 파라메트릭 이퀄라이저입니다.",
@@ -208,15 +208,15 @@
         "visible": true
       },
       "name": "TB EQ",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "EQ",
       "price": 3,
       "description": "Parametric equalizer.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=mark-double-biceps-flounder-20260729",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=1.2.0",
-        "sha256": "e105aedaa9a011a0bdc47aeeb1936f902b27764fd4a4ae2c29d8ed59e032c00e",
-        "sizeBytes": 6782576
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=1.3.0",
+        "sha256": "e75fdb26a5ebc059c529f24439d25ea1381bf867e6e139bd4865db51d138edea",
+        "sizeBytes": 6807119
       },
       "macos": {
         "version": "1.0.0",
@@ -561,7 +561,7 @@
     },
     {
       "id": "tb_transient_shaper",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-29",
       "portfolio": {
         "image": "assets/plugins/tb_transient_shaper.png",
         "descriptionKo": "주파수 영역별로 어택과 서스테인을 다듬는 스펙트럴 트랜지언트 셰이퍼입니다.",
@@ -574,15 +574,15 @@
         "visible": true
       },
       "name": "TB Spectral Transient Shaper",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Dynamics",
       "price": 3,
       "description": "Spectral transient shaper.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=mark-double-biceps-flounder-20260729",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.2.0",
-        "sha256": "3d1b08a1e766fbfffd60960bd7b0f3c597ece23356b2ca899430921cfdf61561",
-        "sizeBytes": 2853754
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.3.0",
+        "sha256": "5d37db11bf081254a0840baac826a73da3e69f72fc400a5e45d2021691e06ff7",
+        "sizeBytes": 2862050
       },
       "macos": {
         "version": "1.0.0",
