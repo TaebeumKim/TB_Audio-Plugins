@@ -412,29 +412,64 @@ function vocoderMark() {
 }
 
 function xyzMark() {
-  return `<g fill="none" stroke="${WHITE}" stroke-width="5" stroke-linejoin="miter">
-      <path d="M236 166 L250 130 L278 108 L307 110 L337 128 L358 165
-        L374 220 L384 278 L397 340 L405 365 L402 386 L393 389
-        L377 363 L362 322 L350 278 L337 225 L324 195 L292 176"/>
-      <path d="M250 168 L264 140 L286 120 L307 122 L329 139 L345 171
-        L360 223 L371 280 L384 340 L390 358 L387 373 L381 362
-        L367 318 L355 275 L343 221 L330 192 L293 173"/>
-    </g>
-    <polygon points="113,228 149,192 194,174 220,166 260,166 295,179 318,198 330,221 330,267 292,277 247,284 199,281 158,269 113,244 129,238"
-      fill="${BLACK}" stroke="${WHITE}" stroke-width="5" stroke-linejoin="miter"/>
-    <g stroke="#909090" stroke-width="2.5" stroke-linejoin="miter">
-      <polygon points="113,228 194,174 220,225 129,238" fill="#353535"/>
-      <polygon points="194,174 260,166 247,226 220,225" fill="#5A5A5A"/>
-      <polygon points="260,166 318,198 247,226" fill="#2E2E2E"/>
-      <polygon points="129,238 220,225 199,281 158,269" fill="#484848"/>
-      <polygon points="220,225 247,226 292,277 199,281" fill="#666666"/>
-      <polygon points="247,226 318,198 330,267 292,277" fill="#3C3C3C"/>
-    </g>
-    <path d="M274 272 L268 230 L274 202 L288 185 L305 185 L317 199 L326 236 L331 265
-      M290 277 L284 238 L289 211 L300 195 L313 204 L322 238 L327 260"
-      fill="none" stroke="${WHITE}" stroke-width="5" stroke-linejoin="miter"/>
-    <polygon points="149,205 158,201 167,209 163,219 152,220 146,212" fill="${WHITE}"/>
-    <polygon points="178,204 190,199 202,207 203,220 193,228 180,223 175,213" fill="${WHITE}"/>`;
+  const gameBody =
+    "M104 228 C140 184 186 160 230 158 C277 156 317 174 339 205 " +
+    "C351 222 351 247 341 267 C308 292 249 302 190 292 " +
+    "C153 286 120 270 96 248 L120 238 Z";
+  const gameTail =
+    "M244 160 C263 107 306 92 341 111 C377 131 388 188 394 239 " +
+    "C402 298 417 345 419 365 C421 382 413 395 402 392 " +
+    "C382 387 366 350 357 313 L333 219 C327 194 311 177 289 171";
+  return `<defs>
+      <clipPath id="xyz-body-clip"><path d="${gameBody}"/></clipPath>
+    </defs>
+    <ellipse cx="254" cy="365" rx="145" ry="26"
+      fill="url(#xyzGround)" filter="url(#xyzGroundBlur)"/>
+    <g transform="rotate(-7 250 250)">
+      <path d="${gameTail}" transform="translate(16 14)"
+        fill="none" stroke="#120A2D" stroke-width="36"
+        stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="${gameTail}" fill="none" stroke="url(#xyzTail)"
+        stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="${gameTail}" transform="translate(-3 -4)"
+        fill="none" stroke="#C7FFFF" stroke-width="6" opacity="0.72"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+      <path d="${gameBody}" transform="translate(16 14)"
+        fill="url(#xyzBodyDepth)" stroke="#100923" stroke-width="8"
+        stroke-linejoin="round"/>
+      <path d="M341 267 C308 292 249 302 190 292
+        C153 286 120 270 96 248 L112 262
+        C138 282 172 297 209 305 C267 315 326 303 357 281 Z"
+        fill="url(#xyzBodyDepth)" opacity="0.92"/>
+      <path d="${gameBody}" fill="url(#xyzBody)"
+        stroke="#170B2C" stroke-width="8" stroke-linejoin="round"/>
+      <ellipse cx="201" cy="185" rx="96" ry="48"
+        fill="url(#xyzSpecular)" clip-path="url(#xyz-body-clip)"
+        filter="url(#xyzSpecularBlur)"/>
+      <path d="M111 226 C149 185 188 168 229 166
+        C267 163 297 173 320 191"
+        fill="none" stroke="#D8FFFF" stroke-width="8" opacity="0.72"
+        stroke-linecap="round"/>
+      <path d="M113 253 C159 282 221 292 279 282
+        C304 278 324 270 340 258"
+        fill="none" stroke="#7D2CC9" stroke-width="10" opacity="0.58"
+        stroke-linecap="round"/>
+      <ellipse cx="282" cy="236" rx="58" ry="38"
+        fill="#EE4EFF" opacity="0.16" filter="url(#xyzSpecularBlur)"
+        clip-path="url(#xyz-body-clip)"/>
+
+      <circle cx="162" cy="216" r="16" fill="#091126" opacity="0.7"/>
+      <circle cx="198" cy="221" r="23" fill="#091126" opacity="0.72"/>
+      <circle cx="157" cy="211" r="14" fill="url(#xyzEye)"
+        stroke="#D8FFFF" stroke-width="3"/>
+      <circle cx="192" cy="215" r="21" fill="url(#xyzEye)"
+        stroke="#D8FFFF" stroke-width="3"/>
+      <circle cx="161" cy="214" r="5.5" fill="#081024"/>
+      <circle cx="187" cy="220" r="8.5" fill="#081024"/>
+      <circle cx="154" cy="205" r="3.2" fill="${WHITE}"/>
+      <circle cx="185" cy="207" r="4.5" fill="${WHITE}"/>
+    </g>`;
 }
 
 function limiterMark() {
@@ -514,11 +549,50 @@ function iconSvg(product) {
         <stop offset="0.76" stop-color="#F6C85F" stop-opacity="0.11"/>
         <stop offset="1" stop-color="#000000" stop-opacity="0"/>
       </radialGradient>
+      <linearGradient id="xyzBody" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#9AFFFF"/>
+        <stop offset="0.32" stop-color="#57B8FF"/>
+        <stop offset="0.62" stop-color="#7654F6"/>
+        <stop offset="0.84" stop-color="#EC4DDB"/>
+        <stop offset="1" stop-color="#4B187B"/>
+      </linearGradient>
+      <linearGradient id="xyzBodyDepth" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#25316F"/>
+        <stop offset="0.52" stop-color="#27144E"/>
+        <stop offset="1" stop-color="#120922"/>
+      </linearGradient>
+      <linearGradient id="xyzTail" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#9AFFFF"/>
+        <stop offset="0.45" stop-color="#4DA4FF"/>
+        <stop offset="0.72" stop-color="#7751F4"/>
+        <stop offset="1" stop-color="#ED4DCC"/>
+      </linearGradient>
+      <radialGradient id="xyzEye" cx="30%" cy="25%" r="75%">
+        <stop offset="0" stop-color="#FFFFFF"/>
+        <stop offset="0.62" stop-color="#E4F7FF"/>
+        <stop offset="1" stop-color="#7586B0"/>
+      </radialGradient>
+      <radialGradient id="xyzSpecular" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.9"/>
+        <stop offset="0.38" stop-color="#A8FFFF" stop-opacity="0.5"/>
+        <stop offset="1" stop-color="#8CFFFF" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="xyzGround" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#5C3BDE" stop-opacity="0.48"/>
+        <stop offset="0.58" stop-color="#3C1A8D" stop-opacity="0.24"/>
+        <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+      </radialGradient>
       <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
         <feGaussianBlur stdDeviation="5"/>
       </filter>
       <filter id="reverbBlur" x="-30%" y="-40%" width="160%" height="180%">
         <feGaussianBlur stdDeviation="18"/>
+      </filter>
+      <filter id="xyzGroundBlur" x="-30%" y="-100%" width="160%" height="300%">
+        <feGaussianBlur stdDeviation="12"/>
+      </filter>
+      <filter id="xyzSpecularBlur" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="5"/>
       </filter>
     </defs>
     <rect width="500" height="500" fill="${BLACK}"/>

@@ -2,7 +2,7 @@
 
 The GitHub and TB Hub logo family is derived from the approved Team Impulse Impact
 line mark and the integrated-redraw registry in `TB_PLUGIN_UI_DESIGN_GUIDE.md`
-1.23 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.2 or later.
+1.24 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.3 or later.
 
 ## Canonical inputs
 
@@ -35,6 +35,14 @@ front microphone, Transient Shaper's anatomically normal flexed arm, Step
 Shifter's stairs, Jewel Digger's single sparkle and Parallel Reverb's gradient
 bloom. QA contact-sheet labels are outside the exported icons and are not
 product artwork.
+
+XYZ Panner is the deliberately isolated rendering exception: it must be a fully
+rendered in-game 3D toy fish object with smooth coloured material, directional
+lighting, specular and rim highlights, visible extrusion and depth, a thick
+material tail, a projected ground glow or shadow, and volumetric eyes. It must
+not be reduced to white outline art, wireframe, flat polygons or facet-line
+illustration, and must remain immediately and humorously different from the
+other marks at 64 px. This exception does not authorize a suite-wide 3D style.
 
 ## Outputs
 

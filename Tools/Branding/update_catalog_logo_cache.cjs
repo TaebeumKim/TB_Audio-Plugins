@@ -6,7 +6,7 @@ const catalogFiles = [
   path.join(repoRoot, "catalog.json"),
   path.join(repoRoot, "catalog-macos-update-test.json"),
 ];
-const cacheKey = "mark-refine-20260729";
+const cacheKey = "mark-xyz3d-20260729";
 
 for (const filePath of catalogFiles) {
   const source = fs.readFileSync(filePath, "utf8");
