@@ -252,25 +252,22 @@ function jewelMark() {
 }
 
 function noiseRemoverMark() {
-  return `<g fill="none" stroke="${WHITE}" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M139 211 C145 154 184 125 228 127
-        C274 129 306 163 307 214" stroke-width="9"/>
-      <path d="M157 210 C163 173 191 147 226 148
-        C262 149 285 176 287 211" stroke-width="6"/>
-    </g>
-    <path d="${BODY}" fill="${BLACK}"/>
-    <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="7"
+  const headphoneBand =
+    "M214 205 C217 148 243 117 275 116 C311 116 331 151 333 207";
+  return `${baseMark({ strokeWidth: 7 })}
+    <path d="${headphoneBand}" fill="none" stroke="${BLACK}" stroke-width="26"
       stroke-linecap="round" stroke-linejoin="round"/>
-    ${eyeMarkup()}
-    <path d="M224 178 C247 174 269 187 276 208 L280 234
-      C283 258 269 276 248 278 C228 279 214 263 213 241
-      L213 213 C214 194 218 183 224 178 Z"
-      fill="${BLACK}" stroke="${WHITE}" stroke-width="8"
+    <path d="${headphoneBand}" fill="none" stroke="${WHITE}" stroke-width="12"
       stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M233 197 C245 193 257 202 260 215 L262 237
-      C264 249 257 258 247 259 C237 260 231 251 231 240
-      L231 216 C231 207 231 201 233 197 Z"
-      fill="none" stroke="${WHITE}" stroke-width="6"
+    <path d="M234 171 C256 167 278 182 285 205 L291 246
+      C294 271 278 291 255 293 C232 295 214 275 213 248
+      L213 210 C214 191 224 177 234 171 Z"
+      fill="${BLACK}" stroke="${WHITE}" stroke-width="11"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M243 195 C256 192 267 203 270 217 L274 245
+      C276 258 268 269 257 270 C246 271 238 261 237 247
+      L237 214 C237 205 240 198 243 195 Z"
+      fill="none" stroke="${WHITE}" stroke-width="7"
       stroke-linecap="round" stroke-linejoin="round"/>`;
 }
 

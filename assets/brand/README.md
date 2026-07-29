@@ -2,7 +2,7 @@
 
 The GitHub and TB Hub logo family is derived from the approved Team Impulse Impact
 line mark and the integrated-redraw registry in `TB_PLUGIN_UI_DESIGN_GUIDE.md`
-1.24 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.3 or later.
+1.25 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.4 or later.
 
 ## Canonical inputs
 
@@ -32,9 +32,15 @@ Do not place an unregistered prop, badge, letter, rounded card or decorative
 panel beside or on top of an otherwise unchanged mark. The product registry
 explicitly controls the few scene elements that are allowed, including Tune's
 front microphone, Transient Shaper's anatomically normal flexed arm, Step
-Shifter's stairs, Jewel Digger's single sparkle and Parallel Reverb's gradient
-bloom. QA contact-sheet labels are outside the exported icons and are not
-product artwork.
+Shifter's stairs, Jewel Digger's single sparkle, Noise Remover's worn headphones
+and Parallel Reverb's gradient bloom. QA contact-sheet labels are outside the
+exported icons and are not product artwork.
+
+Noise Remover must preserve both the original fish body and the double folded
+tail while showing the fish actually wearing headphones. Make the headband and
+ear cup large, place the ear cup immediately behind the eyes at the implied ear
+position, and keep the wearing gesture legible at 64 px. The headphones must
+not replace, erase or masquerade as the tail.
 
 XYZ Panner is the deliberately isolated rendering exception: it must be a fully
 rendered in-game 3D toy fish object with smooth coloured material, directional
