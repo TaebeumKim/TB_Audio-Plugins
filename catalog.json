@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-29T23:09:18+09:00",
+  "updatedAt": "2026-07-30T01:05:27+09:00",
   "hubVersion": "1.3.8",
   "hub": {
     "version": "1.3.8",
@@ -21,12 +21,13 @@
   "plugins": [
     {
       "id": "tb_center",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -41,16 +42,16 @@
         "visible": true
       },
       "name": "TB Center",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Utility",
       "price": 3,
       "description": "Stereo centering.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_center.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip?v=1.2.0",
-        "sha256": "fb4013782db4b5ddbb1952b94b3df10047e36706f01f358fdfae064e5ac7978a",
-        "sizeBytes": 2386913
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip?v=1.3.0",
+        "sha256": "2e6bc2139d31f3bb18cc84806710d4ba89d9603eec57c243406d3db330e4fc21",
+        "sizeBytes": 2388507
       },
       "macos": {
         "version": "0.3.2",
@@ -71,12 +72,13 @@
     },
     {
       "id": "tb_compressor",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Safer latency changes."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -91,16 +93,16 @@
         "visible": true
       },
       "name": "TB Compressor",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Dynamics",
       "price": 3,
       "description": "Peak and RMS compression.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=1.2.0",
-        "sha256": "1d932a09428ef66657602d510dbd1840ed784b3f0de3b57ba391c7ffd42c7f97",
-        "sizeBytes": 2804704
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=1.3.0",
+        "sha256": "b2d205bda5b39dd8767e3a0390b2aaa78a663a4035df2bd7edbf5e381032933f",
+        "sizeBytes": 2809471
       },
       "macos": {
         "version": "1.1.0",
@@ -127,12 +129,13 @@
     },
     {
       "id": "tb_distortion",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -147,16 +150,16 @@
         "visible": true
       },
       "name": "TB Distortion",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Distortion",
       "price": 3,
       "description": "Multi-stage distortion.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_distortion.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip?v=1.2.0",
-        "sha256": "66caf8f18be5d10e4d0686cb32ae8cf232a9ac3764673c7348a59cbda990552d",
-        "sizeBytes": 2801637
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip?v=1.3.0",
+        "sha256": "4fd9401726780e246ec65e7f04a2f89fc473822a051b66e6f65719f633580bec",
+        "sizeBytes": 2804430
       },
       "macos": {
         "version": "1.0.0",
@@ -177,12 +180,13 @@
     },
     {
       "id": "tb_disperser",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -197,16 +201,16 @@
         "visible": true
       },
       "name": "TB Disperser",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Creative",
       "price": 3,
       "description": "Phase dispersion.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_disperser.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=1.2.0",
-        "sha256": "d01fc7bd7482144aa2a10890234ebca60e64687e1a09f8b00fb50623f6a9aaa5",
-        "sizeBytes": 2411866
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=1.3.0",
+        "sha256": "3da6f136e3c19dba5228be0fdd276cb8f440b5feb8e16ec1c616cf9d55b74c74",
+        "sizeBytes": 2412293
       },
       "macos": {
         "version": "0.1.0",
@@ -283,12 +287,13 @@
     },
     {
       "id": "tb_colorizer",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "2.1.0",
-        "date": "2026-07-28",
+        "version": "2.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -303,16 +308,16 @@
         "visible": true
       },
       "name": "TB Colorizer",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "Voice",
       "price": 3,
       "description": "Voice color shaping.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.1.0",
-        "sha256": "fad88a5df2d5cfab271f07ef88427c210aa971913bd65ed5a7d87c6c5e17aa1a",
-        "sizeBytes": 2961897
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.2.0",
+        "sha256": "bc3a7d78eb2fb5c6496e321f07b95bc3fbee817b90bfed85604713ba3181a2f3",
+        "sizeBytes": 2972461
       },
       "macos": {
         "version": "1.0.0",
@@ -333,12 +338,13 @@
     },
     {
       "id": "tb_inverted_flanger",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-07-28",
+        "version": "1.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -353,16 +359,16 @@
         "visible": true
       },
       "name": "TB Inverted Flanger",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Modulation",
       "price": 3,
       "description": "Inverted flanging.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=1.1.0",
-        "sha256": "a32d44cba3a2c3a0e49daa71e676043f422df64219e5c75e66c9712e27db6d9c",
-        "sizeBytes": 2364859
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=1.2.0",
+        "sha256": "12888a4c41ac114383019ad4459a88f57db3d077387cb2bf6c27eec045ee47e5",
+        "sizeBytes": 2367739
       },
       "macos": {
         "version": "1.0.0",
@@ -389,12 +395,13 @@
     },
     {
       "id": "tb_inverted_phaser",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "2.1.0",
-        "date": "2026-07-28",
+        "version": "2.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -409,16 +416,16 @@
         "visible": true
       },
       "name": "TB Inverted Phaser",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "Modulation",
       "price": 3,
       "description": "Subtractive phasing.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip?v=2.1.0",
-        "sha256": "af977ac3287b751ce2d77949c1eb6ad8fa3782809ae07ff5619c4ccd81319b97",
-        "sizeBytes": 2385227
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip?v=2.2.0",
+        "sha256": "824579ed7e87e653f43324a6a5f3593d0e0f3a22ad3626c463d51e536de496a2",
+        "sizeBytes": 2388253
       },
       "macos": {
         "version": "1.0.0",
@@ -445,12 +452,13 @@
     },
     {
       "id": "tb_jewel_digger",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -465,16 +473,16 @@
         "visible": true
       },
       "name": "TB Jewel Digger & Finder",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Creative",
       "price": 3,
       "description": "Harmonic enhancement.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_jewel_digger.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip?v=1.2.0",
-        "sha256": "92a28e2113412b0ae61163e7708e59742a46056714daf9ba4d69e7447d5cc339",
-        "sizeBytes": 2418934
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip?v=1.3.0",
+        "sha256": "ef115d9eba19daf26715a08c4b07e565fbf1fa5898bbb4561247be5a44876e32",
+        "sizeBytes": 2420989
       },
       "macos": {
         "version": "1.0.0",
@@ -501,12 +509,13 @@
     },
     {
       "id": "tb_noise_remover",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "2.1.0",
-        "date": "2026-07-28",
+        "version": "2.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Lighter UI metering."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -521,16 +530,16 @@
         "visible": true
       },
       "name": "TB Noise Remover",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "Restoration",
       "price": 3,
       "description": "Noise and ambience removal.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=mark-noise-white-top-connected-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.1.0",
-        "sha256": "9a167a9562b7e67087941083c143e1a4f2b54177a030934f975070d254245dfc",
-        "sizeBytes": 13205449
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.2.0",
+        "sha256": "a53a7666561860585f4f0155c09d3dd659e775471ec260e16e27e1da61e2fa70",
+        "sizeBytes": 13217109
       },
       "macos": {
         "version": "1.1.0",
@@ -551,12 +560,13 @@
     },
     {
       "id": "tb_parallel_reverb",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Safer IR loading."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -571,16 +581,16 @@
         "visible": true
       },
       "name": "TB Parallel Reverb",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Reverb",
       "price": 3,
       "description": "Parallel convolution reverb.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=mark-reverb-softer-decay-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=1.2.0",
-        "sha256": "7ada2c00eb3799d26fe630de8e5bfc98480503f3f5a262faf110782e1cda464f",
-        "sizeBytes": 2834785
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=1.3.0",
+        "sha256": "e77a89dbea72855e6b4b25f9a7d3310a48d7672fe5aea212c319715977508d4d",
+        "sizeBytes": 2837800
       },
       "macos": {
         "version": "1.0.0",
@@ -607,12 +617,13 @@
     },
     {
       "id": "tb_scrambler",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "2.1.0",
-        "date": "2026-07-28",
+        "version": "2.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -627,16 +638,16 @@
         "visible": true
       },
       "name": "TB Scrambler",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "Creative",
       "price": 3,
       "description": "Scramble and glitch effects.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.1.0",
-        "sha256": "78a6678e2a798a6fd3158b8b4014f4e1ced16785121a5220f5690795037cc6f8",
-        "sizeBytes": 3491909
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.2.0",
+        "sha256": "3e99641d20030082d7ca977eb62628d54ea0e7fe81c3178bd0e39bc2ec6f0694",
+        "sizeBytes": 3494037
       },
       "macos": {
         "version": "1.1.1",
@@ -713,12 +724,13 @@
     },
     {
       "id": "tb_step_shifter",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "2.1.0",
-        "date": "2026-07-28",
+        "version": "2.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Smoother resolution changes."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -733,16 +745,16 @@
         "visible": true
       },
       "name": "TB Step Shifter (Beta)",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "Creative",
       "price": 3,
       "description": "Harmonic pitch shifting.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_step_shifter.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip?v=2.1.0",
-        "sha256": "ebc5a6ed8e0a3b38a737dbcd9af1c14643b2d0082c40a02bec91627e5f3768d9",
-        "sizeBytes": 2788384
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip?v=2.2.0",
+        "sha256": "a71ecc68ebf1c316b4074a029476a250a2664ed6e4bb046e9091d47579b20b33",
+        "sizeBytes": 2794355
       },
       "macos": {
         "version": "1.0.0",
@@ -769,12 +781,13 @@
     },
     {
       "id": "tb_tune",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-07-28",
+        "version": "1.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Lower CPU and UI load."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -789,16 +802,16 @@
         "visible": true
       },
       "name": "TB Tune",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Voice",
       "price": 3,
       "description": "Vocal pitch correction.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=mark-tune-symmetric-mic-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=1.1.0",
-        "sha256": "0e0e31c0aa614d5cf2c9b125989b7a8b2555721b53a81aa61603e6a7ce0be251",
-        "sizeBytes": 2396844
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=1.2.0",
+        "sha256": "298d7b4b525efe2bb6ebf4d767ae13b706eb39c11264ff33550138bbe899b60d",
+        "sizeBytes": 2412296
       },
       "macos": {
         "version": "1.0.0",
@@ -819,12 +832,13 @@
     },
     {
       "id": "tb_volume",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-07-28",
+        "version": "1.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Faster gain processing."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -839,16 +853,16 @@
         "visible": true
       },
       "name": "TB Volume",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Utility",
       "price": 3,
       "description": "Simple gain control.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_volume.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.1.0",
-        "sha256": "8e72868787cea3256c4d7303495d5ee28da2747008381218b15e569b83c5bfb0",
-        "sizeBytes": 2333824
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.2.0",
+        "sha256": "d55bb757564556bbcd503395b10433dd3c47d31f85caa1fc5df48bfa85a612a5",
+        "sizeBytes": 2347831
       },
       "macos": {
         "version": "1.0.5",
@@ -869,12 +883,13 @@
     },
     {
       "id": "tb_vocoder",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-07-28",
+        "version": "1.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -889,16 +904,16 @@
         "visible": true
       },
       "name": "TB Vocoder (Beta)",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Creative",
       "price": 3,
       "description": "Vocoder.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_vocoder.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Vocoder.zip?v=1.1.0",
-        "sha256": "2a41b0e5ab4a4b2852ae4214ce8ee82930b02a22beee7a7abdda42fdd4454485",
-        "sizeBytes": 2794043
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Vocoder.zip?v=1.2.0",
+        "sha256": "4ad3e5e9080e271ba0a7d1dcbf75536483830e0fc2d8683361ced1f08d7d941b",
+        "sizeBytes": 2802442
       },
       "macos": {
         "version": "1.0.0",
@@ -919,12 +934,13 @@
     },
     {
       "id": "tb_xyz_panner",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-07-28",
+        "version": "1.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Lighter UI updates."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -939,16 +955,16 @@
         "visible": true
       },
       "name": "TB XYZ Panner",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Utility",
       "price": 3,
       "description": "Multi-axis panning.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.1.0",
-        "sha256": "713b4aaefd5f3ce4f330450c181c3880cc332804678c12a5ecc4f5c6854495c1",
-        "sizeBytes": 2991317
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.2.0",
+        "sha256": "e476c436e03f6c23dbb4824b67c0fa41530097166eb4f92eda7376c0f2435d3c",
+        "sizeBytes": 2999033
       },
       "macos": {
         "version": "1.0.0",
@@ -1025,12 +1041,13 @@
     },
     {
       "id": "tb_sublow",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.0.0",
-        "date": "2026-07-28",
+        "version": "1.1.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Initial sub-bass release."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -1045,16 +1062,16 @@
         "visible": true
       },
       "name": "TB SubLow",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Creative",
       "price": 3,
       "description": "Sub-bass generator.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_sublow.png?v=mark-noise-connected-silver-headphones-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.0.0",
-        "sha256": "bf9812ebcd2ae738961c5ac239dc28bb0f4175d2ee76e2ec8bd797645bf0b10f",
-        "sizeBytes": 2431817
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.1.0",
+        "sha256": "f0321e40ec2df033e97588d322c5f46ae013342480f6d53a0502e89197be4292",
+        "sizeBytes": 2433215
       },
       "macos": {
         "version": "0.1.0",
