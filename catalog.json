@@ -1,15 +1,15 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-29T20:38:52+09:00",
-  "hubVersion": "1.3.4",
+  "updatedAt": "2026-07-29T21:16:28+09:00",
+  "hubVersion": "1.3.5",
   "hub": {
-    "version": "1.3.4",
-    "notes": "macOS 1.3.6 fixes VST3, AU, and AAX label rendering and centers each per-format action.",
+    "version": "1.3.5",
+    "notes": "Shows each plug-in's latest update version, date, and notes on the Info card.",
     "windows": {
-      "version": "1.3.4",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.4/TBHub-Setup-1.3.4.exe",
-      "sha256": "82f640b717393836485e1e2f142429a60308ea7e707727eecb5432d6d382df91",
-      "sizeBytes": 59481037
+      "version": "1.3.5",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.5/TBHub-Setup-1.3.5.exe",
+      "sha256": "8a7266b1a2f569f2ede2724551f7b7de797cad30d048e791381f2a3bc03a9f59",
+      "sizeBytes": 59485279
     },
     "macos": {
       "version": "1.3.6",
@@ -22,6 +22,13 @@
     {
       "id": "tb_center",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.2.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "오디오 처리와 UI 갱신 경로를 최적화해 실시간 및 유휴 부하를 줄였습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_center.png",
         "descriptionKo": "스테레오 이미지를 위상 안정성을 유지하며 중앙으로 정돈하고 멀티밴드로 제어합니다.",
@@ -64,6 +71,14 @@
     {
       "id": "tb_compressor",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.2.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "파라미터 처리 경로를 최적화해 오디오 콜백 부하를 줄였습니다.",
+          "레이턴시 변경을 블록 경계에서 안전하게 전환하도록 개선했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_compressor.png",
         "descriptionKo": "피크와 RMS 감지를 결합해 투명하게 다이내믹을 제어하는 컴프레서입니다.",
@@ -112,6 +127,13 @@
     {
       "id": "tb_distortion",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.2.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "중립 상태의 불필요한 처리와 반복 파라미터 조회를 줄여 CPU 효율을 개선했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_distortion.png",
         "descriptionKo": "여러 단계의 새추레이션과 디스토션으로 음색과 밀도를 조절합니다.",
@@ -154,6 +176,13 @@
     {
       "id": "tb_disperser",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.2.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "오디오 콜백의 반복 파라미터 조회와 불필요한 UI 갱신을 줄였습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_disperser.png",
         "descriptionKo": "시간과 주파수 변조를 조절해 위상 분산과 트랜지언트 질감을 만듭니다.",
@@ -196,6 +225,14 @@
     {
       "id": "tb_eq",
       "updatedAt": "2026-07-29",
+      "latestUpdate": {
+        "version": "1.3.0",
+        "date": "2026-07-29",
+        "notesKo": [
+          "최대 96 dB/oct 기울기와 Q 조절을 지원하는 All Pass 필터를 추가했습니다.",
+          "PRE/POST, Freeze, Range, Speed, Tilt와 스펙트럼 직접 편집을 제공하도록 분석기를 개선했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_eq.png",
         "descriptionKo": "정밀한 주파수 조정을 위한 파라메트릭 이퀄라이저입니다.",
@@ -244,6 +281,13 @@
     {
       "id": "tb_colorizer",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "2.1.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "비활성 처리와 UI 갱신 경로를 최적화해 유휴 부하를 줄였습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_colorizer.png",
         "descriptionKo": "여덟 가지 컬러 모드로 보이스와 스펙트럼 캐릭터를 변형합니다.",
@@ -286,6 +330,13 @@
     {
       "id": "tb_inverted_flanger",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.1.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "오디오 처리 경로를 점검하고 반복 계산을 줄여 실시간 성능을 개선했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_inverted_flanger.png",
         "descriptionKo": "반전된 플랜징 움직임으로 독특한 위상감과 공간감을 만듭니다.",
@@ -334,6 +385,13 @@
     {
       "id": "tb_inverted_phaser",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "2.1.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "오디오 처리와 UI 갱신 경로를 최적화해 실시간 및 유휴 부하를 줄였습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_inverted_phaser.png",
         "descriptionKo": "깊고 선명하게 움직이는 노치를 만드는 감산형 페이저입니다.",
@@ -382,6 +440,13 @@
     {
       "id": "tb_jewel_digger",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.2.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "스펙트럼 처리와 UI 갱신 경로를 최적화해 CPU 효율을 개선했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_jewel_digger.png",
         "descriptionKo": "피치가 쌓인 쉬머와 스펙트럴 강조로 숨은 하모닉을 드러냅니다.",
@@ -430,6 +495,14 @@
     {
       "id": "tb_noise_remover",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "2.1.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "표시 데이터를 잠금 없는 최신값 방식으로 전달해 오디오 처리 간섭을 줄였습니다.",
+          "GUI가 닫혀 있거나 오프라인 렌더링 중일 때 불필요한 표시 계산을 끄도록 개선했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_noise_remover.png",
         "descriptionKo": "특정 노이즈와 환경 앰비언스를 선택적으로 줄이는 복원 도구입니다.",
@@ -472,6 +545,14 @@
     {
       "id": "tb_parallel_reverb",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.2.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "IR 파일 확인과 컨볼루션 로드 예약을 오디오 스레드 밖으로 옮겨 재생 안정성을 개선했습니다.",
+          "레이턴시와 테일을 유지하면서 비활성 처리 부하를 줄였습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_parallel_reverb.png",
         "descriptionKo": "원음과 병렬로 공간감을 더하는 간결한 리버브입니다.",
@@ -520,6 +601,13 @@
     {
       "id": "tb_scrambler",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "2.1.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "오디오 콜백의 파라미터 처리와 비활성 경로를 최적화해 CPU 효율을 개선했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_scrambler.png",
         "descriptionKo": "오디오를 재배열해 글리치와 예측 불가능한 리듬 질감을 만듭니다.",
@@ -562,6 +650,15 @@
     {
       "id": "tb_transient_shaper",
       "updatedAt": "2026-07-29",
+      "latestUpdate": {
+        "version": "1.3.0",
+        "date": "2026-07-29",
+        "notesKo": [
+          "프리셋 이동·저장과 Undo/Redo를 상단 헤더에 정리하고 키보드 조작을 개선했습니다.",
+          "Delta 모니터가 레이턴시를 맞춘 입력과 최종 처리 출력을 정확히 비교하도록 수정했습니다.",
+          "Simple/EQ 및 모니터 모드 선택 흐름을 간결하게 정리했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_transient_shaper.png",
         "descriptionKo": "주파수 영역별로 어택과 서스테인을 다듬는 스펙트럴 트랜지언트 셰이퍼입니다.",
@@ -610,6 +707,13 @@
     {
       "id": "tb_step_shifter",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "2.1.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "중립 상태의 FFT 경로를 가볍게 유지하고 Resolution 전환을 레이턴시 정렬해 끊김을 줄였습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_step_shifter.png",
         "descriptionKo": "선택한 오버톤을 피치 사이로 단계적으로 이동시키는 베타 스펙트럴 이펙트입니다.",
@@ -658,6 +762,13 @@
     {
       "id": "tb_tune",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.1.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "파라미터 조회를 캐시하고 값이 바뀐 표시만 갱신하도록 최적화해 CPU와 UI 부하를 줄였습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_tune.png",
         "descriptionKo": "음정 이동 방향을 고려해 모노 보컬 피치를 보정합니다.",
@@ -700,6 +811,13 @@
     {
       "id": "tb_volume",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.1.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "빈 입력과 0 dB 상태의 불필요한 처리를 건너뛰도록 게인 처리 경로를 최적화했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_volume.png",
         "descriptionKo": "간단하고 빠르게 레벨을 조절하는 게인 도구입니다.",
@@ -742,6 +860,13 @@
     {
       "id": "tb_vocoder",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.1.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "오디오 콜백의 파라미터 처리와 UI 분석 경로를 최적화해 CPU 효율을 개선했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_vocoder.png",
         "descriptionKo": "캐리어와 모듈레이터의 스펙트럼을 결합하는 베타 보코더입니다.",
@@ -784,6 +909,13 @@
     {
       "id": "tb_xyz_panner",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.1.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "변경된 위치 표시만 다시 그리고 유휴 UI 갱신 속도를 낮춰 화면 부하를 줄였습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_xyz_panner.png",
         "descriptionKo": "여러 축을 이용해 사운드의 공간 위치를 조절하는 패너입니다.",
@@ -832,6 +964,14 @@
     {
       "id": "tb_limiter",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "스테레오 링크, 트루 피크 측정과 프로그램 반응형 릴리즈를 갖춘 마스터링 리미터를 처음 공개했습니다.",
+          "미터가 필요할 때만 측정하고 유휴 UI 갱신 속도를 낮추도록 최적화했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_limiter.png",
         "descriptionKo": "스테레오 링크와 트루 피크 측정을 제공하는 마스터링 리미터입니다.",
@@ -874,6 +1014,14 @@
     {
       "id": "tb_sublow",
       "updatedAt": "2026-07-28",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-07-28",
+        "notesKo": [
+          "Core, Bloom, Punch로 입력에 서브베이스 에너지를 더하는 플러그인을 처음 공개했습니다.",
+          "표시 미터와 프리셋 I/O를 필요할 때만 실행하도록 최적화했습니다."
+        ]
+      },
       "portfolio": {
         "image": "assets/plugins/tb_sublow.png",
         "descriptionKo": "Core, Bloom, Punch를 조절해 입력에 서브베이스 에너지를 더합니다.",
