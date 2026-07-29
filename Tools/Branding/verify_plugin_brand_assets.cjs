@@ -27,8 +27,17 @@ const canonicalMark = path.join(
   "source",
   "team-impulse-mark.svg"
 );
+const xyzPhoto = path.join(
+  repoRoot,
+  "assets",
+  "brand",
+  "source",
+  "xyz-panner-fish-photography.png"
+);
 const referenceMarkSha256 =
   "be0295014ec34eae3076aee26d5727e6ef57474acf95c76f176a5319749041d6";
+const xyzPhotoSha256 =
+  "bee1e6806f706310682a7545f6bdd7f3d8cc3a3a275319e41aa8a4423caadb60";
 
 const ids = [
   "tb_center",
@@ -164,6 +173,10 @@ async function main() {
       `Canonical vector is not a precise trace of the approved mark: IoU ${markIou.toFixed(4)}`
     );
   }
+  await verifyPng(xyzPhoto, 1024, 1024);
+  if (sha256(fs.readFileSync(xyzPhoto)) !== xyzPhotoSha256) {
+    throw new Error("XYZ Panner photo does not match the approved flounder source");
+  }
 
   for (const id of ids) {
     const master = path.join(masterDir, `${id}.png`);
@@ -196,6 +209,7 @@ async function main() {
   await verifyPng(socialPreview, 1280, 640, 0.01, 0.5);
   process.stdout.write(
     `PASS: approved reference, canonical vector (IoU ${markIou.toFixed(4)}), ` +
+      "pinned XYZ flounder photo, " +
       `${ids.length} masters, ` +
       `${ids.length * 2} runtime copies, and the social preview are valid.\n`
   );

@@ -2,7 +2,7 @@
 
 The GitHub and TB Hub logo family is derived from the approved Team Impulse Impact
 line mark and the integrated-redraw registry in `TB_PLUGIN_UI_DESIGN_GUIDE.md`
-1.27 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.6 or later.
+1.28 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.7 or later.
 
 ## Canonical inputs
 
@@ -10,14 +10,22 @@ line mark and the integrated-redraw registry in `TB_PLUGIN_UI_DESIGN_GUIDE.md`
    `assets/brand/source/team-impulse-mark-reference.png`
 2. Deterministic vector trace, generated from that exact raster:
    `assets/brand/source/team-impulse-mark.svg`
-3. Trace tool:
+3. Pinned XYZ Panner photography source:
+   `assets/brand/source/xyz-panner-fish-photography.png`
+4. Trace tool:
    `Tools/Branding/trace_team_impulse_mark.cjs`
-4. Product redraws:
+5. Product redraws:
    `Tools/Branding/generate_plugin_brand_assets.cjs`
 
 The approved reference is a `500 × 500` opaque black square with a single white
 line mark. It is not lettering. The verifier pins its SHA-256 so it cannot be
 silently replaced.
+
+The XYZ Panner source is a `1024 × 1024` raster pinned to SHA-256
+`BEE1E6806F706310682A7545F6BDD7F3D8CC3A3A275319E41AA8A4423CAADB60`.
+It is generated and approved once, then treated as an immutable deterministic
+raster input. The generator consumes this exact file; it must not regenerate,
+reinterpret or procedurally redraw it.
 
 ## Redraw rule
 
@@ -37,8 +45,8 @@ remain visible with global black separator halos or trenches.
 Do not place an unregistered prop, badge, letter, rounded card or decorative
 panel beside or on top of an otherwise unchanged mark. The product registry
 explicitly controls the few scene elements that are allowed, including Tune's
-front microphone, Transient Shaper's integrated anatomically normal flexed arm
-sprouting from the fish body, Step
+front microphone, Transient Shaper's integrated anatomically normal muscular
+arms sprouting from both sides of the fish body, Step
 Shifter's stairs, Jewel Digger's single sparkle, Noise Remover's worn headphones
 and Parallel Reverb's gradient bloom. QA contact-sheet labels are outside the
 exported icons and are not product artwork.
@@ -52,20 +60,23 @@ it. Do not use a global black separator stroke to expose the complete band, and
 do not replace, erase or masquerade as the tail.
 
 Transient Shaper must structurally preserve the original fish body and double
-folded tail without replacing the tail or treating it as an arm. Grow an
-anatomically normal near-side human arm from the body in a conventional
-flexed-biceps strength pose. Extend the arm root into the body, hide that root
-with the black body fill, and omit only the local body outline at the attachment;
-do not add a separate shoulder bridge. The near-side arm may hide the tail where
-they cross.
+folded tail without replacing the tail or treating it as an arm. Grow two
+anatomically normal muscular human arms naturally from both sides of the body in
+a conventional symmetrical double-biceps flex pose. Preserve and enlarge the
+two original eyes, then add inward-descending white eyebrows for an angry face.
+Painter order is tail/rear connections, both opaque black-filled arms, black body
+fill, a body outline masked only at both attachments, enlarged original eyes,
+then angry brows. The body fill hides both roots. Do not add shoulder bridges,
+separator halos or trenches. The near-side right arm may naturally occlude the
+tail where they cross.
 
-XYZ Panner is the deliberately isolated rendering exception: it must be a fully
-rendered in-game 3D toy fish object with smooth coloured material, directional
-lighting, specular and rim highlights, visible extrusion and depth, a thick
-material tail, a projected ground glow or shadow, and volumetric eyes. It must
-not be reduced to white outline art, wireframe, flat polygons or facet-line
-illustration, and must remain immediately and humorously different from the
-other marks at 64 px. This exception does not authorize a suite-wide 3D style.
+XYZ Panner is the deliberately isolated photography exception. It uses one real
+olive flounder / Japanese flounder (`Paralichthys olivaceus`), showing the whole
+eyed upper side with both eyes on the same side and a broad, flat, mottled
+olive-brown body. The fish is centred on a black seamless background as square
+studio/macro wildlife photography. Do not use illustration, CGI, toys, 3D,
+vectors, scenery, text, cards or watermarks. At 64 px the flatfish silhouette
+must remain legible.
 
 ## Outputs
 
@@ -100,6 +111,10 @@ double folded tail, uniform white stroke and roughly 20% black outer margin.
 For 64 px product variants, require recognisable original lineage and the product
 accessory or transformation, not simultaneous visibility of every occluded
 canonical contour.
+
+Transient Shaper must retain two muscular arms, the angry face and fish lineage;
+XYZ Panner must retain the broad flatfish silhouette.
+
 Automatic verification also requires a thresholded raster/vector mask IoU of at
 least `0.98`; the current deterministic trace is approximately `0.99`.
 
