@@ -2,7 +2,7 @@
 
 The GitHub and TB Hub logo family is derived from the approved Team Impulse Impact
 line mark and the integrated-redraw registry in `TB_PLUGIN_UI_DESIGN_GUIDE.md`
-1.26 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.5 or later.
+1.27 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.6 or later.
 
 ## Canonical inputs
 
@@ -28,27 +28,36 @@ only that tail into a different object each time. Distribute the effect across
 the body, face or expression, whole silhouette, guide planes, repetition or an
 explicitly approved background effect.
 
+The approved raster is the structural source for the body, eyes, rear connection
+and folded tail, not an instruction to expose every contour simultaneously.
+Integrated additions must use real painter-order occlusion: rear parts disappear
+behind opaque front body, tail or accessory surfaces. Do not force every rail to
+remain visible with global black separator halos or trenches.
+
 Do not place an unregistered prop, badge, letter, rounded card or decorative
 panel beside or on top of an otherwise unchanged mark. The product registry
 explicitly controls the few scene elements that are allowed, including Tune's
-front microphone, Transient Shaper's separate anatomically normal flexed arm
+front microphone, Transient Shaper's integrated anatomically normal flexed arm
 sprouting from the fish body, Step
 Shifter's stairs, Jewel Digger's single sparkle, Noise Remover's worn headphones
 and Parallel Reverb's gradient bloom. QA contact-sheet labels are outside the
 exported icons and are not product artwork.
 
-Noise Remover must preserve both the original fish body and the double folded
-tail while showing the fish actually wearing headphones. Make the headband and
-ear cup large, place the ear cup immediately behind the eyes at the implied ear
-position, and keep the wearing gesture legible at 64 px. The headphones must
-not replace, erase or masquerade as the tail.
+Noise Remover must structurally preserve the original fish body and double
+folded tail while showing the fish actually wearing headphones. Mask the rear
+headband behind `BODY` and the closed tail-ribbon silhouette, draw the complete
+base mark, then place a black-filled front ear cup immediately behind the eyes
+at the implied ear position. The cup may naturally hide the body and tail below
+it. Do not use a global black separator stroke to expose the complete band, and
+do not replace, erase or masquerade as the tail.
 
-Transient Shaper must preserve both the original fish body and the complete
-double folded tail. Do not replace or remove the tail, or treat it as an arm.
-Add a separate anatomically normal human arm sprouting from the fish body in a
-conventional flexed-biceps strength pose. Keep the arm strong and prominent
-while ensuring that both the complete tail and the arm remain separately
-legible at 64 px.
+Transient Shaper must structurally preserve the original fish body and double
+folded tail without replacing the tail or treating it as an arm. Grow an
+anatomically normal near-side human arm from the body in a conventional
+flexed-biceps strength pose. Extend the arm root into the body, hide that root
+with the black body fill, and omit only the local body outline at the attachment;
+do not add a separate shoulder bridge. The near-side arm may hide the tail where
+they cross.
 
 XYZ Panner is the deliberately isolated rendering exception: it must be a fully
 rendered in-game 3D toy fish object with smooth coloured material, directional
@@ -88,6 +97,9 @@ local-only QA images to the repository sibling `../output/github-logo-qa`
 Inspect all three whenever any geometry changes. The reference/vector comparison
 must preserve the V-shaped mouth, two unequal white circles, rounded body,
 double folded tail, uniform white stroke and roughly 20% black outer margin.
+For 64 px product variants, require recognisable original lineage and the product
+accessory or transformation, not simultaneous visibility of every occluded
+canonical contour.
 Automatic verification also requires a thresholded raster/vector mask IoU of at
 least `0.98`; the current deterministic trace is approximately `0.99`.
 

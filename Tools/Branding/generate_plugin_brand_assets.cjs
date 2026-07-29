@@ -252,21 +252,35 @@ function jewelMark() {
 }
 
 function noiseRemoverMark() {
-  const headphoneBand =
-    "M214 205 C217 148 243 117 275 116 C311 116 331 151 333 207";
-  return `${baseMark({ strokeWidth: 7 })}
-    <path d="${headphoneBand}" fill="none" stroke="${BLACK}" stroke-width="26"
+  const rearBand =
+    "M185 211 C190 158 211 134 239 135 C268 136 283 158 284 204";
+  const tailRibbon =
+    "M236 166 C249 121 278 104 306 107 C349 111 367 151 376 205 " +
+    "C384 259 395 322 404 354 C409 377 402 391 393 389 " +
+    "C375 386 360 352 351 317 L326 218 C321 197 310 183 292 176 " +
+    "L293 173 C312 178 327 192 333 215 L356 314 " +
+    "C363 340 374 370 385 373 C389 375 392 368 389 355 " +
+    "C380 325 368 263 360 211 C352 158 339 123 306 120 " +
+    "C283 118 263 134 250 168 Z";
+  return `<defs>
+      <mask id="noise-band-visible">
+        <rect width="500" height="500" fill="${WHITE}"/>
+        <path d="${BODY}" fill="${BLACK}"/>
+        <path d="${tailRibbon}" fill="${BLACK}"/>
+      </mask>
+    </defs>
+    <path d="${rearBand}" fill="none" stroke="${WHITE}" stroke-width="11"
+      stroke-linecap="round" stroke-linejoin="round"
+      mask="url(#noise-band-visible)"/>
+    ${baseMark({ strokeWidth: 7 })}
+    <path d="M256 171 C278 167 300 182 307 205 L313 246
+      C316 271 300 291 277 293 C254 295 236 275 235 248
+      L235 210 C236 191 246 177 256 171 Z"
+      fill="${BLACK}" stroke="${WHITE}" stroke-width="10"
       stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="${headphoneBand}" fill="none" stroke="${WHITE}" stroke-width="12"
-      stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M234 171 C256 167 278 182 285 205 L291 246
-      C294 271 278 291 255 293 C232 295 214 275 213 248
-      L213 210 C214 191 224 177 234 171 Z"
-      fill="${BLACK}" stroke="${WHITE}" stroke-width="11"
-      stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M243 195 C256 192 267 203 270 217 L274 245
-      C276 258 268 269 257 270 C246 271 238 261 237 247
-      L237 214 C237 205 240 198 243 195 Z"
+    <path d="M263 195 C276 192 287 203 290 217 L294 245
+      C296 258 288 269 277 270 C266 271 258 261 257 247
+      L257 214 C257 205 260 198 263 195 Z"
       fill="none" stroke="${WHITE}" stroke-width="7"
       stroke-linecap="round" stroke-linejoin="round"/>`;
 }
@@ -331,6 +345,7 @@ function scramblerMark() {
 
 function transientMark() {
   const fishTransform = transformAround(170, 250, 0.72);
+  const armTransform = "translate(423 95) scale(-9.5 9.5)";
   const flexedArm =
     "M12.4 13.1 " +
     "C14.2 10.6 17.5 10.4 19.8 12.1 " +
@@ -342,39 +357,35 @@ function transientMark() {
     "C11.5 1.9 13 3.2 13 5 " +
     "C13 6.3 12.2 7.2 11 7.2 " +
     "C10 7.2 9.3 6.7 8.9 5.9";
-  const shoulder = "M218 263 C238 256 256 261 274 273";
-  return `<g transform="translate(250 95) scale(9.5)"
+  return `<defs>
+      <mask id="transient-body-outline-visible" maskUnits="userSpaceOnUse"
+        x="0" y="0" width="500" height="500">
+        <rect width="500" height="500" fill="${WHITE}"/>
+        <ellipse cx="326" cy="272" rx="27" ry="35"
+          transform="rotate(-12 326 272)" fill="${BLACK}"/>
+      </mask>
+    </defs>
+    <g transform="${fishTransform}" fill="none" stroke="${WHITE}"
+      stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="${TAIL_OUTER}"/>
+      <path d="${TAIL_INNER}"/>
+      <path d="${JOIN_OUTER}"/>
+      <path d="${JOIN_INNER}"/>
+    </g>
+    <g transform="${armTransform}"
       stroke-linecap="round" stroke-linejoin="round">
-      <path d="${flexedArm}" fill="${BLACK}" stroke="${BLACK}" stroke-width="1.8"/>
+      <path d="${flexedArm}" fill="${BLACK}" stroke="none"/>
       <path d="${flexedArm}" fill="none" stroke="${WHITE}" stroke-width="0.82"/>
       <path d="M15.1 14.2 C13.3 12.2 9.6 12.2 7.5 16"
         fill="none" stroke="${WHITE}" stroke-width="0.76"/>
       <path d="M9 6.9 C7.8 8.8 9.1 12.8 7.9 15.1"
         fill="none" stroke="${WHITE}" stroke-width="0.76"/>
     </g>
-    <g transform="${fishTransform}" fill="none" stroke-linecap="round"
-      stroke-linejoin="round">
-      <g stroke="${BLACK}" stroke-width="20">
-        <path d="${TAIL_OUTER}"/>
-        <path d="${TAIL_INNER}"/>
-      </g>
-      <g stroke="${WHITE}" stroke-width="8">
-        <path d="${TAIL_OUTER}"/>
-        <path d="${TAIL_INNER}"/>
-      </g>
-    </g>
-    <path d="${shoulder}" fill="none" stroke="${BLACK}" stroke-width="28"
-      stroke-linecap="round"/>
-    <path d="${shoulder}" fill="none" stroke="${WHITE}" stroke-width="12"
-      stroke-linecap="round"/>
     <g transform="${fishTransform}">
       <path d="${BODY}" fill="${BLACK}" stroke="none"/>
-      <g fill="none" stroke="${WHITE}" stroke-width="8"
-        stroke-linecap="round" stroke-linejoin="round">
-        <path d="${JOIN_OUTER}"/>
-        <path d="${JOIN_INNER}"/>
-        <path d="${BODY}"/>
-      </g>
+      <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="8"
+        stroke-linecap="round" stroke-linejoin="round"
+        mask="url(#transient-body-outline-visible)"/>
       ${eyeMarkup()}
     </g>`;
 }
