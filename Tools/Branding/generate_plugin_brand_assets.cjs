@@ -22,19 +22,10 @@ const canonicalMarkPath = path.join(
   "source",
   "team-impulse-mark.svg"
 );
-const xyzPhotoPath = path.join(
-  repoRoot,
-  "assets",
-  "brand",
-  "source",
-  "xyz-panner-fish-photography.png"
-);
 const canonicalMarkMarkup = fs
   .readFileSync(canonicalMarkPath, "utf8")
   .match(/<svg[^>]*>([\s\S]*?)<\/svg>/i)[1]
   .trim();
-const xyzPhotoDataUri =
-  `data:image/png;base64,${fs.readFileSync(xyzPhotoPath).toString("base64")}`;
 
 const WHITE = "#FFFFFF";
 const BLACK = "#000000";
@@ -354,8 +345,8 @@ function scramblerMark() {
 
 function transientMark() {
   const fishTransform = transformAround(250, 270, 0.78);
-  const leftArmTransform = "translate(62 98) scale(6.6 6.6)";
-  const rightArmTransform = "translate(438 98) scale(-6.6 6.6)";
+  const leftArmTransform = "translate(62 128) scale(6.6 6.6)";
+  const rightArmTransform = "translate(438 128) scale(-6.6 6.6)";
   const flexedArm =
     "M12.4 13.1 " +
     "C14.2 10.6 17.5 10.4 19.8 12.1 " +
@@ -468,8 +459,80 @@ function vocoderMark() {
 }
 
 function xyzMark() {
-  return `<image href="${xyzPhotoDataUri}" x="0" y="-22"
-    width="500" height="500" preserveAspectRatio="xMidYMid meet"/>`;
+  const fishTransform =
+    "translate(260 228) rotate(-6) skewY(-3) scale(0.72) translate(-250 -250)";
+  const depthLayers = [
+    [18, 14, "#172138"],
+    [15, 11.5, "#1B2B45"],
+    [12, 9, "#203954"],
+    [9, 6.5, "#285068"],
+    [6, 4.25, "#347083"],
+    [3, 2, "#4D95A0"],
+  ]
+    .map(
+      ([x, y, fill]) =>
+        `<g transform="translate(${x} ${y})">${exactMark({ fill })}</g>`
+    )
+    .join("");
+
+  return `<defs>
+      <linearGradient id="xyz-fish-face" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#FFFFFF"/>
+        <stop offset="0.34" stop-color="#D8F8FF"/>
+        <stop offset="0.68" stop-color="#91C8D8"/>
+        <stop offset="1" stop-color="#7183B6"/>
+      </linearGradient>
+      <radialGradient id="xyz-floor-glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#78C4BD" stop-opacity="0.38"/>
+        <stop offset="0.55" stop-color="#5966B5" stop-opacity="0.16"/>
+        <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+      </radialGradient>
+      <filter id="xyz-floor-blur" x="-30%" y="-150%" width="160%" height="400%">
+        <feGaussianBlur stdDeviation="8"/>
+      </filter>
+    </defs>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M105 344 L400 344 L468 392 L173 392 Z"
+        stroke="#6B7EA0" stroke-width="3" opacity="0.48"/>
+      <g stroke="#61738E" stroke-width="2" opacity="0.3">
+        <path d="M122 356 L417 356 M139 368 L434 368 M156 380 L451 380"/>
+        <path d="M164 344 L232 392 M223 344 L291 392
+          M282 344 L350 392 M341 344 L409 392"/>
+      </g>
+      <g stroke="#66789C" stroke-width="2.5" opacity="0.22">
+        <path d="M105 100 L400 100 L468 148 L173 148 Z"/>
+        <path d="M105 100 V344 M400 100 V344
+          M468 148 V392 M173 148 V392"/>
+      </g>
+    </g>
+    <ellipse cx="280" cy="355" rx="118" ry="24"
+      fill="url(#xyz-floor-glow)" filter="url(#xyz-floor-blur)"/>
+    <g transform="${fishTransform}">
+      ${depthLayers}
+      ${exactMark({
+        fill: "url(#xyz-fish-face)",
+        stroke: "#F4FFFF",
+        strokeWidth: 2.4,
+      })}
+      <path d="M139 211 C174 179 207 168 245 168"
+        fill="none" stroke="#FFFFFF" stroke-width="4.5"
+        stroke-linecap="round" opacity="0.72"/>
+    </g>
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M105 344 H431" stroke="#ED9251" stroke-width="5"/>
+      <path d="M431 344 L416 335 M431 344 L416 353"
+        stroke="#ED9251" stroke-width="5"/>
+      <path d="M105 344 L188 403" stroke="#78C4BD" stroke-width="5"/>
+      <path d="M188 403 L172 398 M188 403 L181 388"
+        stroke="#78C4BD" stroke-width="5"/>
+      <path d="M105 344 V73" stroke="#8B82FF" stroke-width="5"/>
+      <path d="M105 73 L96 89 M105 73 L114 89"
+        stroke="#8B82FF" stroke-width="5"/>
+      <path d="M173 392 H468 V148"
+        stroke="#91A5C8" stroke-width="3" opacity="0.55"/>
+    </g>
+    <circle cx="105" cy="344" r="7" fill="#FFFFFF"/>
+    <circle cx="105" cy="344" r="3.5" fill="#5966B5"/>`;
 }
 
 function limiterMark() {
@@ -666,7 +729,7 @@ async function buildSocialPreview() {
     <text x="0" y="184" font-family="Arial, sans-serif" font-size="70" font-weight="800" letter-spacing="3" fill="#FFFFFF">PLUG-INS</text>
     <path d="M0 224 H360" stroke="#FFFFFF" stroke-width="5"/>
     <text x="0" y="275" font-family="Arial, sans-serif" font-size="23" font-weight="600" letter-spacing="4" fill="#CFCFCF">TEAM IMPULSE IMPACT</text>
-    <text x="0" y="335" font-family="Arial, sans-serif" font-size="20" fill="#A6A6A6">Nineteen redraws. One real flounder.</text>
+    <text x="0" y="335" font-family="Arial, sans-serif" font-size="20" fill="#A6A6A6">One mark. Twenty integrated redraws.</text>
   </svg>`);
   composites.unshift({ input: title, left: 70, top: 80 });
 

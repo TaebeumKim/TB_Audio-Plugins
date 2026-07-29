@@ -2,7 +2,7 @@
 
 The GitHub and TB Hub logo family is derived from the approved Team Impulse Impact
 line mark and the integrated-redraw registry in `TB_PLUGIN_UI_DESIGN_GUIDE.md`
-1.28 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.7 or later.
+1.29 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.8 or later.
 
 ## Canonical inputs
 
@@ -10,22 +10,14 @@ line mark and the integrated-redraw registry in `TB_PLUGIN_UI_DESIGN_GUIDE.md`
    `assets/brand/source/team-impulse-mark-reference.png`
 2. Deterministic vector trace, generated from that exact raster:
    `assets/brand/source/team-impulse-mark.svg`
-3. Pinned XYZ Panner photography source:
-   `assets/brand/source/xyz-panner-fish-photography.png`
-4. Trace tool:
+3. Trace tool:
    `Tools/Branding/trace_team_impulse_mark.cjs`
-5. Product redraws:
+4. Product redraws:
    `Tools/Branding/generate_plugin_brand_assets.cjs`
 
 The approved reference is a `500 × 500` opaque black square with a single white
 line mark. It is not lettering. The verifier pins its SHA-256 so it cannot be
 silently replaced.
-
-The XYZ Panner source is a `1024 × 1024` raster pinned to SHA-256
-`BEE1E6806F706310682A7545F6BDD7F3D8CC3A3A275319E41AA8A4423CAADB60`.
-It is generated and approved once, then treated as an immutable deterministic
-raster input. The generator consumes this exact file; it must not regenerate,
-reinterpret or procedurally redraw it.
 
 ## Redraw rule
 
@@ -62,21 +54,22 @@ do not replace, erase or masquerade as the tail.
 Transient Shaper must structurally preserve the original fish body and double
 folded tail without replacing the tail or treating it as an arm. Grow two
 anatomically normal muscular human arms naturally from both sides of the body in
-a conventional symmetrical double-biceps flex pose. Preserve and enlarge the
-two original eyes, then add inward-descending white eyebrows for an angry face.
-Painter order is tail/rear connections, both opaque black-filled arms, black body
-fill, a body outline masked only at both attachments, enlarged original eyes,
-then angry brows. The body fill hides both roots. Do not add shoulder bridges,
-separator halos or trenches. The near-side right arm may naturally occlude the
-tail where they cross.
+a conventional symmetrical double-biceps flex pose. Both arm transforms use a
+Y translation of `128`, lowering the shoulders and body attachments. Preserve
+and enlarge the two original eyes, then add inward-descending white eyebrows for
+an angry face. Painter order is tail/rear connections, both opaque black-filled
+arms, black body fill, a body outline masked only at both attachments, enlarged
+original eyes, then angry brows. The body fill naturally hides both lowered
+roots. Do not add shoulder bridges, separator halos or trenches. The near-side
+right arm may naturally occlude the tail where they cross.
 
-XYZ Panner is the deliberately isolated photography exception. It uses one real
-olive flounder / Japanese flounder (`Paralichthys olivaceus`), showing the whole
-eyed upper side with both eyes on the same side and a broad, flat, mottled
-olive-brown body. The fish is centred on a black seamless background as square
-studio/macro wildlife photography. Do not use illustration, CGI, toys, 3D,
-vectors, scenery, text, cards or watermarks. At 64 px the flatfish silhouette
-must remain legible.
+XYZ Panner preserves the approved original fish's V mouth, two unequal eyes,
+rounded body and folded tail as a volumetric extruded object in 3D coordinate
+space. Apply depth extrusion and directional shading to the fish. Surround it
+with three non-text axes ending in arrowheads, a perspective floor grid and
+wireframe volume, plus a ground projection/glow. Do not use axis labels or
+`X/Y/Z` text, real fish, photography, a polygon-only replacement, cards or
+bezels.
 
 ## Outputs
 
@@ -113,7 +106,8 @@ accessory or transformation, not simultaneous visibility of every occluded
 canonical contour.
 
 Transient Shaper must retain two muscular arms, the angry face and fish lineage;
-XYZ Panner must retain the broad flatfish silhouette.
+XYZ Panner must retain the original fish plus recognisable three-axis coordinate
+space at 64 px.
 
 Automatic verification also requires a thresholded raster/vector mask IoU of at
 least `0.98`; the current deterministic trace is approximately `0.99`.
