@@ -1,5 +1,5 @@
 <div align="center">
-<img width="1254" height="1254" alt="1x1 text" src="https://github.com/user-attachments/assets/46bf2a60-23c1-4693-bef5-3a393dd54ab6" />
+<img width="1280" height="640" alt="TB Audio Plug-ins — 20 effect-specific Team Impulse Impact fish marks" src="assets/social/tb_audio_plugins_social_preview.png" />
 </div>
 
 # Update Note

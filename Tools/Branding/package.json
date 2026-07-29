@@ -1,0 +1,13 @@
+{
+  "name": "tb-plugin-brand-assets",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "node generate_plugin_brand_assets.cjs",
+    "update-catalog-cache": "node update_catalog_logo_cache.cjs",
+    "verify": "node verify_plugin_brand_assets.cjs"
+  },
+  "dependencies": {
+    "sharp": "0.34.5"
+  }
+}
