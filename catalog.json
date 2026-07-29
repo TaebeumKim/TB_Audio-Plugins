@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-29T21:16:28+09:00",
+  "updatedAt": "2026-07-29T21:47:15+09:00",
   "hubVersion": "1.3.5",
   "hub": {
     "version": "1.3.5",
@@ -1059,6 +1059,40 @@
             "sizeBytes": 2989238
           }
         }
+      }
+    },
+    {
+      "id": "tb_delay",
+      "updatedAt": "2026-07-29",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-07-29",
+        "notesKo": [
+          "테이프, BBD, 디지털 캐릭터를 갖춘 스테레오 피드백 딜레이를 처음 공개했습니다.",
+          "주파수 이동, 디퓨전, 그레인과 Freeze로 반복음을 변형할 수 있습니다."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_delay.png",
+        "descriptionKo": "테이프, 주파수 이동, 디퓨전과 그레인 변형을 한 스테레오 피드백 안에서 조합하는 크리에이티브 딜레이입니다.",
+        "tags": [
+          "Delay",
+          "Stereo",
+          "Granular"
+        ],
+        "order": 21,
+        "visible": true
+      },
+      "name": "TB Delay",
+      "version": "1.0.0",
+      "category": "Delay",
+      "price": 4,
+      "description": "Creative stereo feedback delay with tape, frequency shifting, diffusion, and granular transformation.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_delay.png?v=1.0.0",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.0.0",
+        "sha256": "a123984b79abaebfb596e93da529120157e4356a78237af00b0080772f0b5800",
+        "sizeBytes": 2442333
       }
     }
   ],
