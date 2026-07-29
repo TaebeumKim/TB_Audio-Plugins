@@ -13,6 +13,22 @@ const socialPreview = path.join(
   "social",
   "tb_audio_plugins_social_preview.png"
 );
+const referenceMark = path.join(
+  repoRoot,
+  "assets",
+  "brand",
+  "source",
+  "team-impulse-mark-reference.png"
+);
+const canonicalMark = path.join(
+  repoRoot,
+  "assets",
+  "brand",
+  "source",
+  "team-impulse-mark.svg"
+);
+const referenceMarkSha256 =
+  "be0295014ec34eae3076aee26d5727e6ef57474acf95c76f176a5319749041d6";
 
 const ids = [
   "tb_center",
@@ -41,11 +57,31 @@ function sha256(buffer) {
   return crypto.createHash("sha256").update(buffer).digest("hex");
 }
 
+async function canonicalMaskIou() {
+  const reference = await sharp(referenceMark).greyscale().raw().toBuffer();
+  const vector = await sharp(canonicalMark)
+    .resize(500, 500)
+    .flatten({ background: "#000000" })
+    .greyscale()
+    .raw()
+    .toBuffer();
+  let intersection = 0;
+  let union = 0;
+  for (let index = 0; index < reference.length; index += 1) {
+    const referenceIsLight = reference[index] > 127;
+    const vectorIsLight = vector[index] > 127;
+    if (referenceIsLight && vectorIsLight) intersection += 1;
+    if (referenceIsLight || vectorIsLight) union += 1;
+  }
+  return intersection / union;
+}
+
 async function verifyPng(
   filePath,
   expectedWidth,
   expectedHeight,
-  requireTransparentCorners = true
+  minLightRatio = 0.003,
+  maxLightRatio = 0.45
 ) {
   if (!fs.existsSync(filePath)) {
     throw new Error(`Missing asset: ${filePath}`);
@@ -67,26 +103,68 @@ async function verifyPng(
   const { data, info } = await image.ensureAlpha().raw().toBuffer({
     resolveWithObject: true,
   });
-  const cornerAlpha = [
-    data[3],
-    data[(info.width - 1) * info.channels + 3],
-    data[(info.height - 1) * info.width * info.channels + 3],
-    data[(info.width * info.height - 1) * info.channels + 3],
+  const cornerOffsets = [
+    0,
+    (info.width - 1) * info.channels,
+    (info.height - 1) * info.width * info.channels,
+    (info.width * info.height - 1) * info.channels,
   ];
-  if (requireTransparentCorners && cornerAlpha.some((alpha) => alpha !== 0)) {
-    throw new Error(`Rounded-square corner is not transparent: ${filePath}`);
+  if (
+    cornerOffsets.some(
+      (offset) =>
+        data[offset] !== 0 ||
+        data[offset + 1] !== 0 ||
+        data[offset + 2] !== 0 ||
+        data[offset + 3] !== 255
+    )
+  ) {
+    throw new Error(`Canvas corner is not opaque black: ${filePath}`);
   }
 
-  let visiblePixels = 0;
-  for (let offset = 3; offset < data.length; offset += info.channels) {
-    if (data[offset] > 12) visiblePixels += 1;
+  let lightPixels = 0;
+  let translucentPixels = 0;
+  for (let offset = 0; offset < data.length; offset += info.channels) {
+    const luminance =
+      data[offset] * 0.2126 +
+      data[offset + 1] * 0.7152 +
+      data[offset + 2] * 0.0722;
+    if (luminance > 32) lightPixels += 1;
+    if (data[offset + 3] !== 255) translucentPixels += 1;
   }
-  if (visiblePixels < expectedWidth * expectedHeight * 0.22) {
-    throw new Error(`Asset is unexpectedly empty: ${filePath}`);
+  if (translucentPixels !== 0) {
+    throw new Error(`Canvas is not fully opaque: ${filePath}`);
+  }
+  const lightRatio = lightPixels / (expectedWidth * expectedHeight);
+  if (lightRatio < minLightRatio || lightRatio > maxLightRatio) {
+    throw new Error(
+      `Unexpected light-pixel ratio for ${filePath}: ${lightRatio.toFixed(4)}`
+    );
   }
 }
 
 async function main() {
+  await verifyPng(referenceMark, 500, 500, 0.02, 0.08);
+  if (sha256(fs.readFileSync(referenceMark)) !== referenceMarkSha256) {
+    throw new Error("Canonical reference PNG does not match the approved source");
+  }
+  if (!fs.existsSync(canonicalMark)) {
+    throw new Error(`Missing canonical vector: ${canonicalMark}`);
+  }
+  const canonicalSvg = fs.readFileSync(canonicalMark, "utf8");
+  if (
+    !canonicalSvg.includes('viewBox="0 0 500 500"') ||
+    /<text\b/i.test(canonicalSvg) ||
+    /<image\b/i.test(canonicalSvg)
+  ) {
+    throw new Error("Canonical vector must be a text-free 500×500 native mark");
+  }
+  const markIou = await canonicalMaskIou();
+  if (markIou < 0.98) {
+    throw new Error(
+      `Canonical vector is not a precise trace of the approved mark: IoU ${markIou.toFixed(4)}`
+    );
+  }
+
   for (const id of ids) {
     const master = path.join(masterDir, `${id}.png`);
     const hub = path.join(hubDir, `${id}.png`);
@@ -115,10 +193,11 @@ async function main() {
     }
   }
 
-  await verifyPng(socialPreview, 1280, 640, false);
+  await verifyPng(socialPreview, 1280, 640, 0.01, 0.5);
   process.stdout.write(
-    `PASS: ${ids.length} masters, ${ids.length * 2} runtime copies, ` +
-      "and the social preview are valid.\n"
+    `PASS: approved reference, canonical vector (IoU ${markIou.toFixed(4)}), ` +
+      `${ids.length} masters, ` +
+      `${ids.length * 2} runtime copies, and the social preview are valid.\n`
   );
 }
 
