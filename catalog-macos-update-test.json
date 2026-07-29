@@ -446,7 +446,7 @@
       "category": "Restoration",
       "price": 3,
       "description": "Targeted noise and environmental ambience removal.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=mark-noise-connected-silver-headphones-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=mark-noise-white-top-connected-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.1.0",
         "sha256": "9a167a9562b7e67087941083c143e1a4f2b54177a030934f975070d254245dfc",
