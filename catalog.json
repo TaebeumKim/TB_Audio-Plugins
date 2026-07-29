@@ -1,15 +1,15 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-29T23:04:48+09:00",
-  "hubVersion": "1.3.7",
+  "updatedAt": "2026-07-29T23:09:18+09:00",
+  "hubVersion": "1.3.8",
   "hub": {
-    "version": "1.3.7",
-    "notes": "Keeps plug-in artwork smooth and intact when scaled down on library cards.",
+    "version": "1.3.8",
+    "notes": "Makes plug-in artwork larger on library cards for easier recognition.",
     "windows": {
-      "version": "1.3.7",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.7/TBHub-Setup-1.3.7.exe",
-      "sha256": "6d410392426297be377716ef4bc2a00a90429d46195c54f6e8fac610409a8c47",
-      "sizeBytes": 59499100
+      "version": "1.3.8",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.8/TBHub-Setup-1.3.8.exe",
+      "sha256": "090e8b9b14ae12ef4bf5131438b635b06c098c2db6ee456ed7c647bd5f07c546",
+      "sizeBytes": 59498125
     },
     "macos": {
       "version": "1.3.6",
