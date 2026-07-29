@@ -460,18 +460,18 @@ function vocoderMark() {
 
 function xyzMark() {
   const fishTransform =
-    "translate(260 228) rotate(-6) skewY(-3) scale(0.72) translate(-250 -250)";
+    "translate(285 226) rotate(-5) skewY(-10) scale(0.7 0.66) translate(-250 -250)";
   const depthLayers = [
-    [18, 14, "#172138"],
-    [15, 11.5, "#1B2B45"],
-    [12, 9, "#203954"],
-    [9, 6.5, "#285068"],
-    [6, 4.25, "#347083"],
-    [3, 2, "#4D95A0"],
+    [18, -18, "#172138"],
+    [15, -15, "#1B2B45"],
+    [12, -12, "#203954"],
+    [9, -9, "#285068"],
+    [6, -6, "#347083"],
+    [3, -3, "#4D95A0"],
   ]
     .map(
       ([x, y, fill]) =>
-        `<g transform="translate(${x} ${y})">${exactMark({ fill })}</g>`
+        `<g transform="translate(${x} ${y}) ${fishTransform}">${exactMark({ fill })}</g>`
     )
     .join("");
 
@@ -492,23 +492,25 @@ function xyzMark() {
       </filter>
     </defs>
     <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M105 344 L400 344 L468 392 L173 392 Z"
+      <path d="M92 394 L392 394 L470 316 L170 316 Z"
         stroke="#6B7EA0" stroke-width="3" opacity="0.48"/>
       <g stroke="#61738E" stroke-width="2" opacity="0.3">
-        <path d="M122 356 L417 356 M139 368 L434 368 M156 380 L451 380"/>
-        <path d="M164 344 L232 392 M223 344 L291 392
-          M282 344 L350 392 M341 344 L409 392"/>
+        <path d="M111.5 374.5 H411.5 M131 355 H431
+          M150.5 335.5 H450.5"/>
+        <path d="M152 394 L230 316 M212 394 L290 316
+          M272 394 L350 316 M332 394 L410 316"/>
       </g>
       <g stroke="#66789C" stroke-width="2.5" opacity="0.22">
-        <path d="M105 100 L400 100 L468 148 L173 148 Z"/>
-        <path d="M105 100 V344 M400 100 V344
-          M468 148 V392 M173 148 V392"/>
+        <path d="M92 150 L392 150 L470 72 L170 72 Z"/>
+        <path d="M92 150 V394 M392 150 V394
+          M470 72 V316 M170 72 V316"/>
       </g>
     </g>
-    <ellipse cx="280" cy="355" rx="118" ry="24"
+    <ellipse cx="300" cy="354" rx="118" ry="23"
+      transform="rotate(-7 300 354)"
       fill="url(#xyz-floor-glow)" filter="url(#xyz-floor-blur)"/>
+    ${depthLayers}
     <g transform="${fishTransform}">
-      ${depthLayers}
       ${exactMark({
         fill: "url(#xyz-fish-face)",
         stroke: "#F4FFFF",
@@ -519,20 +521,20 @@ function xyzMark() {
         stroke-linecap="round" opacity="0.72"/>
     </g>
     <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M105 344 H431" stroke="#ED9251" stroke-width="5"/>
-      <path d="M431 344 L416 335 M431 344 L416 353"
+      <path d="M92 394 H429" stroke="#ED9251" stroke-width="5"/>
+      <path d="M429 394 L414 385 M429 394 L414 403"
         stroke="#ED9251" stroke-width="5"/>
-      <path d="M105 344 L188 403" stroke="#78C4BD" stroke-width="5"/>
-      <path d="M188 403 L172 398 M188 403 L181 388"
+      <path d="M92 394 L196 290" stroke="#78C4BD" stroke-width="5"/>
+      <path d="M196 290 L192 308 M196 290 L178 294"
         stroke="#78C4BD" stroke-width="5"/>
-      <path d="M105 344 V73" stroke="#8B82FF" stroke-width="5"/>
-      <path d="M105 73 L96 89 M105 73 L114 89"
+      <path d="M92 394 V98" stroke="#8B82FF" stroke-width="5"/>
+      <path d="M92 98 L83 114 M92 98 L101 114"
         stroke="#8B82FF" stroke-width="5"/>
-      <path d="M173 392 H468 V148"
+      <path d="M170 316 H470 V72"
         stroke="#91A5C8" stroke-width="3" opacity="0.55"/>
     </g>
-    <circle cx="105" cy="344" r="7" fill="#FFFFFF"/>
-    <circle cx="105" cy="344" r="3.5" fill="#5966B5"/>`;
+    <circle cx="92" cy="394" r="7" fill="#FFFFFF"/>
+    <circle cx="92" cy="394" r="3.5" fill="#5966B5"/>`;
 }
 
 function limiterMark() {

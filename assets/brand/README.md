@@ -2,7 +2,7 @@
 
 The GitHub and TB Hub logo family is derived from the approved Team Impulse Impact
 line mark and the integrated-redraw registry in `TB_PLUGIN_UI_DESIGN_GUIDE.md`
-1.29 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.8 or later.
+1.30 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.9 or later.
 
 ## Canonical inputs
 
@@ -65,11 +65,16 @@ right arm may naturally occlude the tail where they cross.
 
 XYZ Panner preserves the approved original fish's V mouth, two unequal eyes,
 rounded body and folded tail as a volumetric extruded object in 3D coordinate
-space. Apply depth extrusion and directional shading to the fish. Surround it
-with three non-text axes ending in arrowheads, a perspective floor grid and
-wireframe volume, plus a ground projection/glow. Do not use axis labels or
-`X/Y/Z` text, real fish, photography, a polygon-only replacement, cards or
-bezels.
+space. Do not rotate the whole icon or fish 45 degrees in the image plane.
+Instead, use a camera-yaw view like looking diagonally across an FFT analyzer
+waterfall: project the receding scene axis exactly 45 degrees up and right on
+screen (`|dx| = |dy|`). Align the fish extrusion with that same up-right
+45-degree depth direction and apply directional shading. Surround it with three
+non-text, differently coloured axes ending in arrowheads, a perspective floor
+grid and wireframe volume, plus a ground projection/glow. The FFT analyzer is a
+viewpoint analogy only; do not add FFT bars, waveforms, spectrum decoration or
+text. Do not use axis labels or `X/Y/Z` text, real fish, photography, a
+polygon-only replacement, cards or bezels.
 
 ## Outputs
 
@@ -106,8 +111,9 @@ accessory or transformation, not simultaneous visibility of every occluded
 canonical contour.
 
 Transient Shaper must retain two muscular arms, the angry face and fish lineage;
-XYZ Panner must retain the original fish plus recognisable three-axis coordinate
-space at 64 px.
+XYZ Panner must retain the original V mouth, two eyes and folded tail plus
+recognisable three-colour axes at 64 px. Its receding axis and fish extrusion
+must share the same on-screen up-right 45-degree direction.
 
 Automatic verification also requires a thresholded raster/vector mask IoU of at
 least `0.98`; the current deterministic trace is approximately `0.99`.
