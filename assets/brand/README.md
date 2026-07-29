@@ -2,7 +2,7 @@
 
 The GitHub and TB Hub logo family is derived from the approved Team Impulse Impact
 line mark and the integrated-redraw registry in `TB_PLUGIN_UI_DESIGN_GUIDE.md`
-1.25 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.4 or later.
+1.26 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.5 or later.
 
 ## Canonical inputs
 
@@ -31,7 +31,8 @@ explicitly approved background effect.
 Do not place an unregistered prop, badge, letter, rounded card or decorative
 panel beside or on top of an otherwise unchanged mark. The product registry
 explicitly controls the few scene elements that are allowed, including Tune's
-front microphone, Transient Shaper's anatomically normal flexed arm, Step
+front microphone, Transient Shaper's separate anatomically normal flexed arm
+sprouting from the fish body, Step
 Shifter's stairs, Jewel Digger's single sparkle, Noise Remover's worn headphones
 and Parallel Reverb's gradient bloom. QA contact-sheet labels are outside the
 exported icons and are not product artwork.
@@ -41,6 +42,13 @@ tail while showing the fish actually wearing headphones. Make the headband and
 ear cup large, place the ear cup immediately behind the eyes at the implied ear
 position, and keep the wearing gesture legible at 64 px. The headphones must
 not replace, erase or masquerade as the tail.
+
+Transient Shaper must preserve both the original fish body and the complete
+double folded tail. Do not replace or remove the tail, or treat it as an arm.
+Add a separate anatomically normal human arm sprouting from the fish body in a
+conventional flexed-biceps strength pose. Keep the arm strong and prominent
+while ensuring that both the complete tail and the arm remain separately
+legible at 64 px.
 
 XYZ Panner is the deliberately isolated rendering exception: it must be a fully
 rendered in-game 3D toy fish object with smooth coloured material, directional

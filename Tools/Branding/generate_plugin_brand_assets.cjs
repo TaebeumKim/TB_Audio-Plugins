@@ -330,27 +330,51 @@ function scramblerMark() {
 }
 
 function transientMark() {
-  const fishTransform = transformAround(180, 250, 0.72);
-  return `<g transform="translate(180 70) scale(11.5)"
-      fill="none" stroke="${WHITE}" stroke-width="0.7"
+  const fishTransform = transformAround(170, 250, 0.72);
+  const flexedArm =
+    "M12.4 13.1 " +
+    "C14.2 10.6 17.5 10.4 19.8 12.1 " +
+    "C22.2 13.9 22.6 17.1 20.7 19.4 " +
+    "C18.8 21.8 15.6 22.3 12.6 22.1 " +
+    "C8.8 22 5.1 21.2 2.9 19.7 " +
+    "C2.3 19.3 2 18.6 2.1 17.8 " +
+    "C2.3 13.1 3.3 3 9.7 2.1 " +
+    "C11.5 1.9 13 3.2 13 5 " +
+    "C13 6.3 12.2 7.2 11 7.2 " +
+    "C10 7.2 9.3 6.7 8.9 5.9";
+  const shoulder = "M218 263 C238 256 256 261 274 273";
+  return `<g transform="translate(250 95) scale(9.5)"
       stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12.4 13.1
-        C14.2 10.6 17.5 10.4 19.8 12.1
-        C22.2 13.9 22.6 17.1 20.7 19.4
-        C18.8 21.8 15.6 22.3 12.6 22.1
-        C8.8 22 5.1 21.2 2.9 19.7
-        C2.3 19.3 2 18.6 2.1 17.8
-        C2.3 13.1 3.3 3 9.7 2.1
-        C11.5 1.9 13 3.2 13 5
-        C13 6.3 12.2 7.2 11 7.2
-        C10 7.2 9.3 6.7 8.9 5.9"/>
-      <path d="M15.1 14.2 C13.3 12.2 9.6 12.2 7.5 16"/>
-      <path d="M9 6.9 C7.8 8.8 9.1 12.8 7.9 15.1"/>
+      <path d="${flexedArm}" fill="${BLACK}" stroke="${BLACK}" stroke-width="1.8"/>
+      <path d="${flexedArm}" fill="none" stroke="${WHITE}" stroke-width="0.82"/>
+      <path d="M15.1 14.2 C13.3 12.2 9.6 12.2 7.5 16"
+        fill="none" stroke="${WHITE}" stroke-width="0.76"/>
+      <path d="M9 6.9 C7.8 8.8 9.1 12.8 7.9 15.1"
+        fill="none" stroke="${WHITE}" stroke-width="0.76"/>
     </g>
+    <g transform="${fishTransform}" fill="none" stroke-linecap="round"
+      stroke-linejoin="round">
+      <g stroke="${BLACK}" stroke-width="20">
+        <path d="${TAIL_OUTER}"/>
+        <path d="${TAIL_INNER}"/>
+      </g>
+      <g stroke="${WHITE}" stroke-width="8">
+        <path d="${TAIL_OUTER}"/>
+        <path d="${TAIL_INNER}"/>
+      </g>
+    </g>
+    <path d="${shoulder}" fill="none" stroke="${BLACK}" stroke-width="28"
+      stroke-linecap="round"/>
+    <path d="${shoulder}" fill="none" stroke="${WHITE}" stroke-width="12"
+      stroke-linecap="round"/>
     <g transform="${fishTransform}">
-      <path d="${BODY}" fill="${BLACK}"/>
-      <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="8"
-        stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="${BODY}" fill="${BLACK}" stroke="none"/>
+      <g fill="none" stroke="${WHITE}" stroke-width="8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="${JOIN_OUTER}"/>
+        <path d="${JOIN_INNER}"/>
+        <path d="${BODY}"/>
+      </g>
       ${eyeMarkup()}
     </g>`;
 }
