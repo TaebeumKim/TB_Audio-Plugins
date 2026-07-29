@@ -45,7 +45,7 @@
       "category": "Utility",
       "price": 3,
       "description": "Stereo image centering with phase-safe time and multiband control.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_center.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_center.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip?v=1.2.0",
         "sha256": "fb4013782db4b5ddbb1952b94b3df10047e36706f01f358fdfae064e5ac7978a",
@@ -95,7 +95,7 @@
       "category": "Dynamics",
       "price": 3,
       "description": "Transparent peak and RMS compressor.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=1.2.0",
         "sha256": "1d932a09428ef66657602d510dbd1840ed784b3f0de3b57ba391c7ffd42c7f97",
@@ -150,7 +150,7 @@
       "category": "Distortion",
       "price": 3,
       "description": "Multi-stage saturation and distortion.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_distortion.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_distortion.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip?v=1.2.0",
         "sha256": "66caf8f18be5d10e4d0686cb32ae8cf232a9ac3764673c7348a59cbda990552d",
@@ -199,7 +199,7 @@
       "category": "Creative",
       "price": 3,
       "description": "Phase dispersion with controllable timing and frequency modulation.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_disperser.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_disperser.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=1.2.0",
         "sha256": "d01fc7bd7482144aa2a10890234ebca60e64687e1a09f8b00fb50623f6a9aaa5",
@@ -249,7 +249,7 @@
       "category": "EQ",
       "price": 3,
       "description": "Parametric equalizer.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=1.3.0",
         "sha256": "e75fdb26a5ebc059c529f24439d25ea1381bf867e6e139bd4865db51d138edea",
@@ -304,7 +304,7 @@
       "category": "Voice",
       "price": 3,
       "description": "Eight selectable colors reshape voice and spectral character.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.1.0",
         "sha256": "fad88a5df2d5cfab271f07ef88427c210aa971913bd65ed5a7d87c6c5e17aa1a",
@@ -353,7 +353,7 @@
       "category": "Modulation",
       "price": 3,
       "description": "Inverted flanger.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=1.1.0",
         "sha256": "a32d44cba3a2c3a0e49daa71e676043f422df64219e5c75e66c9712e27db6d9c",
@@ -408,7 +408,7 @@
       "category": "Modulation",
       "price": 3,
       "description": "Subtractive phasing with deep, sharply defined moving notches.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip?v=2.1.0",
         "sha256": "af977ac3287b751ce2d77949c1eb6ad8fa3782809ae07ff5619c4ccd81319b97",
@@ -463,7 +463,7 @@
       "category": "Creative",
       "price": 3,
       "description": "Harmonic discovery with pitch-stacked shimmer and spectral enhancement.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_jewel_digger.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_jewel_digger.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip?v=1.2.0",
         "sha256": "92a28e2113412b0ae61163e7708e59742a46056714daf9ba4d69e7447d5cc339",
@@ -519,7 +519,7 @@
       "category": "Restoration",
       "price": 3,
       "description": "Targeted noise and environmental ambience removal.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.1.0",
         "sha256": "9a167a9562b7e67087941083c143e1a4f2b54177a030934f975070d254245dfc",
@@ -569,7 +569,7 @@
       "category": "Reverb",
       "price": 3,
       "description": "Parallel reverb.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=1.2.0",
         "sha256": "7ada2c00eb3799d26fe630de8e5bfc98480503f3f5a262faf110782e1cda464f",
@@ -624,7 +624,7 @@
       "category": "Creative",
       "price": 3,
       "description": "Audio scramble and glitch effect.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.1.0",
         "sha256": "78a6678e2a798a6fd3158b8b4014f4e1ced16785121a5220f5690795037cc6f8",
@@ -675,7 +675,7 @@
       "category": "Dynamics",
       "price": 3,
       "description": "Spectral transient shaper.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.3.0",
         "sha256": "5d37db11bf081254a0840baac826a73da3e69f72fc400a5e45d2021691e06ff7",
@@ -730,7 +730,7 @@
       "category": "Creative",
       "price": 3,
       "description": "Spectral harmonic shifting that moves selected overtones between pitches.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_step_shifter.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_step_shifter.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip?v=2.1.0",
         "sha256": "ebc5a6ed8e0a3b38a737dbcd9af1c14643b2d0082c40a02bec91627e5f3768d9",
@@ -785,7 +785,7 @@
       "category": "Voice",
       "price": 3,
       "description": "Direction-aware monophonic vocal pitch correction.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=1.1.0",
         "sha256": "0e0e31c0aa614d5cf2c9b125989b7a8b2555721b53a81aa61603e6a7ce0be251",
@@ -834,7 +834,7 @@
       "category": "Utility",
       "price": 3,
       "description": "Simple gain control tool.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_volume.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_volume.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.1.0",
         "sha256": "8e72868787cea3256c4d7303495d5ee28da2747008381218b15e569b83c5bfb0",
@@ -883,7 +883,7 @@
       "category": "Creative",
       "price": 3,
       "description": "Vocoder.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_vocoder.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_vocoder.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Vocoder.zip?v=1.1.0",
         "sha256": "2a41b0e5ab4a4b2852ae4214ce8ee82930b02a22beee7a7abdda42fdd4454485",
@@ -932,7 +932,7 @@
       "category": "Utility",
       "price": 3,
       "description": "Multi-axis panner.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.1.0",
         "sha256": "713b4aaefd5f3ce4f330450c181c3880cc332804678c12a5ecc4f5c6854495c1",
@@ -988,7 +988,7 @@
       "category": "Dynamics",
       "price": 3,
       "description": "Stereo-linked true peak mastering limiter with programme-aware recovery.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_limiter.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_limiter.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Limiter.zip?v=1.0.0",
         "sha256": "8ef932af9019e923e548c3d83688dc01322abc261136ad95ce92330361d7d425",
@@ -1038,7 +1038,7 @@
       "category": "Creative",
       "price": 3,
       "description": "Additive sub-bass generator with controllable core, bloom, and punch.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_sublow.png?v=mark-xyz-fft45-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_sublow.png?v=mark-noise-over-tail-headband-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.0.0",
         "sha256": "bf9812ebcd2ae738961c5ac239dc28bb0f4175d2ee76e2ec8bd797645bf0b10f",

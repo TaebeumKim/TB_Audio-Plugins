@@ -252,27 +252,27 @@ function jewelMark() {
 }
 
 function noiseRemoverMark() {
-  const rearBand =
-    "M185 211 C190 158 211 134 239 135 C268 136 283 158 284 204";
-  const tailRibbon =
-    "M236 166 C249 121 278 104 306 107 C349 111 367 151 376 205 " +
+  const overTailBand =
+    "M181 211 C186 151 209 119 240 120 C276 121 302 151 306 201 " +
+    "L281 204 C278 168 262 146 241 146 C219 146 205 169 202 215 Z";
+  const pressedTailOuter =
+    "M236 166 C249 129 278 112 306 115 C349 119 367 155 376 205 " +
     "C384 259 395 322 404 354 C409 377 402 391 393 389 " +
-    "C375 386 360 352 351 317 L326 218 C321 197 310 183 292 176 " +
-    "L293 173 C312 178 327 192 333 215 L356 314 " +
-    "C363 340 374 370 385 373 C389 375 392 368 389 355 " +
-    "C380 325 368 263 360 211 C352 158 339 123 306 120 " +
-    "C283 118 263 134 250 168 Z";
-  return `<defs>
-      <mask id="noise-band-visible">
-        <rect width="500" height="500" fill="${WHITE}"/>
-        <path d="${BODY}" fill="${BLACK}"/>
-        <path d="${tailRibbon}" fill="${BLACK}"/>
-      </mask>
-    </defs>
-    <path d="${rearBand}" fill="none" stroke="${WHITE}" stroke-width="11"
+    "C375 386 360 352 351 317 L326 218 C321 197 310 183 292 176";
+  const pressedTailInner =
+    "M250 168 C263 142 283 126 306 128 C339 131 352 162 360 211 " +
+    "C368 263 380 325 389 355 C392 368 389 375 385 373 " +
+    "C374 370 363 340 356 314 L333 215 C327 192 312 178 293 173";
+  return `<g fill="none" stroke="${WHITE}" stroke-width="7"
       stroke-linecap="round" stroke-linejoin="round"
-      mask="url(#noise-band-visible)"/>
-    ${baseMark({ strokeWidth: 7 })}
+      ><path d="${pressedTailOuter}"/><path d="${pressedTailInner}"/>
+      <path d="${JOIN_OUTER}"/><path d="${JOIN_INNER}"/></g>
+    <path d="${overTailBand}" fill="${BLACK}" stroke="${WHITE}" stroke-width="7"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="${BODY}" fill="${BLACK}"/>
+    <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="7"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    ${eyeMarkup()}
     <path d="M256 171 C278 167 300 182 307 205 L313 246
       C316 271 300 291 277 293 C254 295 236 275 235 248
       L235 210 C236 191 246 177 256 171 Z"
