@@ -7,6 +7,7 @@ const catalogFiles = [
   path.join(repoRoot, "catalog-macos-update-test.json"),
 ];
 const cacheKeys = new Map([
+  ["tb_noise_remover.png", "mark-noise-white-top-connected-20260729"],
   ["tb_parallel_reverb.png", "mark-reverb-softer-decay-20260729"],
   ["tb_delay.png", "mark-delay-shrinking-echoes-20260729"],
   ["tb_tune.png", "mark-tune-symmetric-mic-20260729"],

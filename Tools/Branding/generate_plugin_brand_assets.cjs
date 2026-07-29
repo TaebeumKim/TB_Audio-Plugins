@@ -269,14 +269,13 @@ function jewelMark() {
 }
 
 function noiseRemoverMark() {
-  const headphonePad = "#414852";
-  const headphoneSilver = "#C7CDD4";
   const overTailBand =
-    "M181 211 C186 151 209 119 240 120 C276 121 302 151 306 201 " +
-    "L281 204 C278 168 262 146 241 146 C219 146 205 169 202 215 Z";
-  const filledBridge =
-    "M275 157 C298 161 315 180 319 203 L322 225 L301 231 " +
-    "L297 209 C294 191 285 180 271 176 Z";
+    "M181 211 C186 151 209 119 240 120 C266 121 291 140 303 168 " +
+    "L279 178 C271 158 257 146 241 146 C219 146 205 169 202 215 Z";
+  const earCup =
+    "M265 165 C288 164 305 180 311 202 L316 246 " +
+    "C319 272 302 292 278 294 C253 296 234 275 233 248 " +
+    "L233 210 C234 188 246 171 265 165 Z";
   const pressedTailOuter =
     "M236 166 C249 129 278 112 306 115 C349 119 367 155 376 205 " +
     "C384 259 395 322 404 354 C409 377 402 391 393 389 " +
@@ -294,26 +293,7 @@ function noiseRemoverMark() {
     <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="7"
       stroke-linecap="round" stroke-linejoin="round"/>
     ${eyeMarkup()}
-    <path d="${filledBridge}" fill="${WHITE}"/>
-    <path d="M256 171 C278 167 300 182 307 205 L313 246
-      C316 271 300 291 277 293 C254 295 236 275 235 248
-      L235 210 C236 191 246 177 256 171 Z"
-      fill="${WHITE}"/>
-    <path d="M263 195 C276 192 287 203 290 217 L294 245
-      C296 258 288 269 277 270 C266 271 258 261 257 247
-      L257 214 C257 205 260 198 263 195 Z"
-      fill="${headphonePad}"/>
-    <g transform="translate(281 223) scale(0.64) translate(-281 -223)">
-      <path d="M266 229 C264 222 267 216 272 214
-        C276 212 279 215 281 215 C284 215 287 212 290 214
-        C294 216 295 221 293 225 C291 230 288 234 284 237
-        C281 239 278 239 276 237 C273 239 269 236 266 229 Z"
-        fill="${headphoneSilver}"/>
-      <path d="M278 210 C279 205 283 202 288 203
-        C286 208 283 210 278 210 Z"
-        fill="${headphoneSilver}"/>
-      <circle cx="293" cy="219" r="3.5" fill="${headphonePad}"/>
-    </g>`;
+    <path d="${earCup}" fill="${WHITE}"/>`;
 }
 
 function parallelReverbMark() {
