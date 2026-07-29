@@ -4,23 +4,23 @@
 <plist>
   <dict>
     <key>CFBundleExecutable</key>
-    <string>TB-Compressor</string>
+    <string>TB-Distortion</string>
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.teamimpulseimpact.tb-compressor</string>
+    <string>com.teamimpulseimpact.tb-distortion</string>
     <key>CFBundleName</key>
-    <string>TB-Compressor</string>
+    <string>TB-Distortion</string>
     <key>CFBundleDisplayName</key>
-    <string>TB-Compressor</string>
+    <string>TB-Distortion</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.1.1</string>
+    <string>1.0.1</string>
     <key>CFBundleVersion</key>
-    <string>1.1.1</string>
+    <string>1.0.1</string>
     <key>NSHumanReadableCopyright</key>
     <string></string>
     <key>NSHighResolutionCapable</key>
