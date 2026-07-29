@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-29T21:16:28+09:00",
+  "updatedAt": "2026-07-29T21:42:21+09:00",
   "hubVersion": "1.3.5",
   "hub": {
     "version": "1.3.5",
@@ -26,7 +26,7 @@
         "version": "1.2.0",
         "date": "2026-07-28",
         "notesKo": [
-          "오디오 처리와 UI 갱신 경로를 최적화해 실시간 및 유휴 부하를 줄였습니다."
+          "Performance improved."
         ]
       },
       "portfolio": {
@@ -75,8 +75,7 @@
         "version": "1.2.0",
         "date": "2026-07-28",
         "notesKo": [
-          "파라미터 처리 경로를 최적화해 오디오 콜백 부하를 줄였습니다.",
-          "레이턴시 변경을 블록 경계에서 안전하게 전환하도록 개선했습니다."
+          "Safer latency changes."
         ]
       },
       "portfolio": {
@@ -131,7 +130,7 @@
         "version": "1.2.0",
         "date": "2026-07-28",
         "notesKo": [
-          "중립 상태의 불필요한 처리와 반복 파라미터 조회를 줄여 CPU 효율을 개선했습니다."
+          "Performance improved."
         ]
       },
       "portfolio": {
@@ -180,7 +179,7 @@
         "version": "1.2.0",
         "date": "2026-07-28",
         "notesKo": [
-          "오디오 콜백의 반복 파라미터 조회와 불필요한 UI 갱신을 줄였습니다."
+          "Performance improved."
         ]
       },
       "portfolio": {
@@ -229,8 +228,7 @@
         "version": "1.3.0",
         "date": "2026-07-29",
         "notesKo": [
-          "최대 96 dB/oct 기울기와 Q 조절을 지원하는 All Pass 필터를 추가했습니다.",
-          "PRE/POST, Freeze, Range, Speed, Tilt와 스펙트럼 직접 편집을 제공하도록 분석기를 개선했습니다."
+          "All Pass filter added."
         ]
       },
       "portfolio": {
@@ -285,7 +283,7 @@
         "version": "2.1.0",
         "date": "2026-07-28",
         "notesKo": [
-          "비활성 처리와 UI 갱신 경로를 최적화해 유휴 부하를 줄였습니다."
+          "Performance improved."
         ]
       },
       "portfolio": {
@@ -334,7 +332,7 @@
         "version": "1.1.0",
         "date": "2026-07-28",
         "notesKo": [
-          "오디오 처리 경로를 점검하고 반복 계산을 줄여 실시간 성능을 개선했습니다."
+          "Performance improved."
         ]
       },
       "portfolio": {
@@ -389,7 +387,7 @@
         "version": "2.1.0",
         "date": "2026-07-28",
         "notesKo": [
-          "오디오 처리와 UI 갱신 경로를 최적화해 실시간 및 유휴 부하를 줄였습니다."
+          "Performance improved."
         ]
       },
       "portfolio": {
@@ -444,7 +442,7 @@
         "version": "1.2.0",
         "date": "2026-07-28",
         "notesKo": [
-          "스펙트럼 처리와 UI 갱신 경로를 최적화해 CPU 효율을 개선했습니다."
+          "Performance improved."
         ]
       },
       "portfolio": {
@@ -499,8 +497,7 @@
         "version": "2.1.0",
         "date": "2026-07-28",
         "notesKo": [
-          "표시 데이터를 잠금 없는 최신값 방식으로 전달해 오디오 처리 간섭을 줄였습니다.",
-          "GUI가 닫혀 있거나 오프라인 렌더링 중일 때 불필요한 표시 계산을 끄도록 개선했습니다."
+          "Lighter UI metering."
         ]
       },
       "portfolio": {
@@ -549,8 +546,7 @@
         "version": "1.2.0",
         "date": "2026-07-28",
         "notesKo": [
-          "IR 파일 확인과 컨볼루션 로드 예약을 오디오 스레드 밖으로 옮겨 재생 안정성을 개선했습니다.",
-          "레이턴시와 테일을 유지하면서 비활성 처리 부하를 줄였습니다."
+          "Safer IR loading."
         ]
       },
       "portfolio": {
@@ -605,7 +601,7 @@
         "version": "2.1.0",
         "date": "2026-07-28",
         "notesKo": [
-          "오디오 콜백의 파라미터 처리와 비활성 경로를 최적화해 CPU 효율을 개선했습니다."
+          "Performance improved."
         ]
       },
       "portfolio": {
@@ -654,9 +650,7 @@
         "version": "1.3.0",
         "date": "2026-07-29",
         "notesKo": [
-          "프리셋 이동·저장과 Undo/Redo를 상단 헤더에 정리하고 키보드 조작을 개선했습니다.",
-          "Delta 모니터가 레이턴시를 맞춘 입력과 최종 처리 출력을 정확히 비교하도록 수정했습니다.",
-          "Simple/EQ 및 모니터 모드 선택 흐름을 간결하게 정리했습니다."
+          "Controls and Delta improved."
         ]
       },
       "portfolio": {
@@ -711,7 +705,7 @@
         "version": "2.1.0",
         "date": "2026-07-28",
         "notesKo": [
-          "중립 상태의 FFT 경로를 가볍게 유지하고 Resolution 전환을 레이턴시 정렬해 끊김을 줄였습니다."
+          "Smoother resolution changes."
         ]
       },
       "portfolio": {
@@ -766,7 +760,7 @@
         "version": "1.1.0",
         "date": "2026-07-28",
         "notesKo": [
-          "파라미터 조회를 캐시하고 값이 바뀐 표시만 갱신하도록 최적화해 CPU와 UI 부하를 줄였습니다."
+          "Lower CPU and UI load."
         ]
       },
       "portfolio": {
@@ -815,7 +809,7 @@
         "version": "1.1.0",
         "date": "2026-07-28",
         "notesKo": [
-          "빈 입력과 0 dB 상태의 불필요한 처리를 건너뛰도록 게인 처리 경로를 최적화했습니다."
+          "Faster gain processing."
         ]
       },
       "portfolio": {
@@ -864,7 +858,7 @@
         "version": "1.1.0",
         "date": "2026-07-28",
         "notesKo": [
-          "오디오 콜백의 파라미터 처리와 UI 분석 경로를 최적화해 CPU 효율을 개선했습니다."
+          "Performance improved."
         ]
       },
       "portfolio": {
@@ -913,7 +907,7 @@
         "version": "1.1.0",
         "date": "2026-07-28",
         "notesKo": [
-          "변경된 위치 표시만 다시 그리고 유휴 UI 갱신 속도를 낮춰 화면 부하를 줄였습니다."
+          "Lighter UI updates."
         ]
       },
       "portfolio": {
@@ -968,8 +962,7 @@
         "version": "1.0.0",
         "date": "2026-07-28",
         "notesKo": [
-          "스테레오 링크, 트루 피크 측정과 프로그램 반응형 릴리즈를 갖춘 마스터링 리미터를 처음 공개했습니다.",
-          "미터가 필요할 때만 측정하고 유휴 UI 갱신 속도를 낮추도록 최적화했습니다."
+          "Initial limiter release."
         ]
       },
       "portfolio": {
@@ -1018,8 +1011,7 @@
         "version": "1.0.0",
         "date": "2026-07-28",
         "notesKo": [
-          "Core, Bloom, Punch로 입력에 서브베이스 에너지를 더하는 플러그인을 처음 공개했습니다.",
-          "표시 미터와 프리셋 I/O를 필요할 때만 실행하도록 최적화했습니다."
+          "Initial sub-bass release."
         ]
       },
       "portfolio": {
