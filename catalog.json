@@ -1,15 +1,15 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-29T21:00:55+09:00",
-  "hubVersion": "1.3.4",
+  "updatedAt": "2026-07-29T21:16:28+09:00",
+  "hubVersion": "1.3.5",
   "hub": {
-    "version": "1.3.4",
-    "notes": "macOS 1.3.6 fixes VST3, AU, and AAX label rendering and centers each per-format action.",
+    "version": "1.3.5",
+    "notes": "Shows each plug-in's latest update version, date, and notes on the Info card.",
     "windows": {
-      "version": "1.3.4",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.4/TBHub-Setup-1.3.4.exe",
-      "sha256": "82f640b717393836485e1e2f142429a60308ea7e707727eecb5432d6d382df91",
-      "sizeBytes": 59481037
+      "version": "1.3.5",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.5/TBHub-Setup-1.3.5.exe",
+      "sha256": "8a7266b1a2f569f2ede2724551f7b7de797cad30d048e791381f2a3bc03a9f59",
+      "sizeBytes": 59485279
     },
     "macos": {
       "version": "1.3.6",
