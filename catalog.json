@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-29T23:09:18+09:00",
+  "updatedAt": "2026-07-30T01:05:27+09:00",
   "hubVersion": "1.3.8",
   "hub": {
     "version": "1.3.8",
@@ -12,21 +12,22 @@
       "sizeBytes": 59498125
     },
     "macos": {
-      "version": "1.3.6",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-v1.3.6/TBHub-1.3.6-macOS-AppleSilicon.dmg",
-      "sha256": "259b049c49c489065f48a4bfd8f57b0b07f32b1f314b384ae431a5fc9bcc4519",
-      "sizeBytes": 53890062
+      "version": "1.3.7",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-macos-v1.3.7/TBHub-1.3.7-macOS-AppleSilicon.dmg",
+      "sha256": "79e744da7637cb4c78a789d5de47991e01cd132c23d51392ca80f3fdce7313ff",
+      "sizeBytes": 53884948
     }
   },
   "plugins": [
     {
       "id": "tb_center",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -41,42 +42,45 @@
         "visible": true
       },
       "name": "TB Center",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Utility",
       "price": 3,
       "description": "Stereo centering.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_center.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip?v=1.2.0",
-        "sha256": "fb4013782db4b5ddbb1952b94b3df10047e36706f01f358fdfae064e5ac7978a",
-        "sizeBytes": 2386913
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip?v=1.3.0",
+        "sha256": "2e6bc2139d31f3bb18cc84806710d4ba89d9603eec57c243406d3db330e4fc21",
+        "sizeBytes": 2388507
       },
       "macos": {
-        "version": "0.3.2",
-        "bundleName": "TB-Center.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Center-VST3-macOS-arm64.zip",
-        "sha256": "0bb8e7aa1c490590e1236d48030760d1b134010082011803978869b9853c1ed4",
-        "sizeBytes": 3041700,
         "formats": {
+          "vst3": {
+            "version": "0.3.3",
+            "bundleName": "TB-Center.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Center-VST3-macOS-arm64.zip",
+            "sha256": "2c4621ca6b033821b2073ca7141850f51920b621c89d12ab505497828ee23e8e",
+            "sizeBytes": 3045955
+          },
           "au": {
-            "version": "0.3.2",
+            "version": "0.3.3",
             "bundleName": "TB-Center.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Center-AU-macOS-arm64.zip",
-            "sha256": "058f03d1b3239087c6be8cae752fd0254283365c9ed3a99d34d41490d2c55c09",
-            "sizeBytes": 2937184
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Center-AU-macOS-arm64.zip",
+            "sha256": "00feb88192f60f5ef83f4585eaef5977a0c0388978c3682f135635214da21c05",
+            "sizeBytes": 2940377
           }
         }
       }
     },
     {
       "id": "tb_compressor",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Safer latency changes."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -91,30 +95,32 @@
         "visible": true
       },
       "name": "TB Compressor",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Dynamics",
       "price": 3,
       "description": "Peak and RMS compression.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=1.2.0",
-        "sha256": "1d932a09428ef66657602d510dbd1840ed784b3f0de3b57ba391c7ffd42c7f97",
-        "sizeBytes": 2804704
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=1.3.0",
+        "sha256": "b2d205bda5b39dd8767e3a0390b2aaa78a663a4035df2bd7edbf5e381032933f",
+        "sizeBytes": 2809471
       },
       "macos": {
-        "version": "1.1.0",
-        "bundleName": "TB-Compressor.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Compressor-VST3-macOS-arm64.zip",
-        "sha256": "c11b5a7a79f56418c3d07503aa5d4e3f5f9683d01856024d31db869f86e43ea0",
-        "sizeBytes": 3658270,
         "formats": {
+          "vst3": {
+            "version": "1.1.1",
+            "bundleName": "TB-Compressor.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Compressor-VST3-macOS-arm64.zip",
+            "sha256": "c58e586d34f74c46df268e04248e1982dfbd6eac37978e4bb98862b68b172bb1",
+            "sizeBytes": 3662156
+          },
           "au": {
-            "version": "1.1.0",
+            "version": "1.1.1",
             "bundleName": "TB-Compressor.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Compressor-AU-macOS-arm64.zip",
-            "sha256": "7c2af537ca902bebfe36dc4a79c58d51eccd7a4171075bfeca7ed33a0998aa75",
-            "sizeBytes": 3547477
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Compressor-AU-macOS-arm64.zip",
+            "sha256": "50c916e8958d90cd0f897f2c9ff90f5eae0d599f6a725fcf2bc3b4a2dcedcebb",
+            "sizeBytes": 3549950
           },
           "aax": {
             "version": "1.1",
@@ -127,12 +133,13 @@
     },
     {
       "id": "tb_distortion",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -147,42 +154,45 @@
         "visible": true
       },
       "name": "TB Distortion",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Distortion",
       "price": 3,
       "description": "Multi-stage distortion.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_distortion.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip?v=1.2.0",
-        "sha256": "66caf8f18be5d10e4d0686cb32ae8cf232a9ac3764673c7348a59cbda990552d",
-        "sizeBytes": 2801637
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip?v=1.3.0",
+        "sha256": "4fd9401726780e246ec65e7f04a2f89fc473822a051b66e6f65719f633580bec",
+        "sizeBytes": 2804430
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-Distortion.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Distortion-VST3-macOS-arm64.zip",
-        "sha256": "5a549810cb0b3353b32b45b46a7cf1951d8010144b9796afaa12e4f3d8e977dd",
-        "sizeBytes": 3652149,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-Distortion.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Distortion-VST3-macOS-arm64.zip",
+            "sha256": "45996df2e50662f41a39b0d18c982af0d29b3721c49ff622cf7fa02a6e7394a5",
+            "sizeBytes": 3653624
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-Distortion.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Distortion-AU-macOS-arm64.zip",
-            "sha256": "4ba03443dad90f763109b48709549278f329bc573b35002a1c46b67313c1001e",
-            "sizeBytes": 3542745
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Distortion-AU-macOS-arm64.zip",
+            "sha256": "c74215febdf1bc16bf3a8948a173a0d05a9bafaacb5aeea86cd7fe389968e2b8",
+            "sizeBytes": 3544530
           }
         }
       }
     },
     {
       "id": "tb_disperser",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -197,37 +207,39 @@
         "visible": true
       },
       "name": "TB Disperser",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Creative",
       "price": 3,
       "description": "Phase dispersion.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_disperser.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=1.2.0",
-        "sha256": "d01fc7bd7482144aa2a10890234ebca60e64687e1a09f8b00fb50623f6a9aaa5",
-        "sizeBytes": 2411866
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=1.3.0",
+        "sha256": "3da6f136e3c19dba5228be0fdd276cb8f440b5feb8e16ec1c616cf9d55b74c74",
+        "sizeBytes": 2412293
       },
       "macos": {
-        "version": "0.1.0",
-        "bundleName": "TB-Disperser.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Disperser-VST3-macOS-arm64.zip",
-        "sha256": "913974d90ce74c2366eed9f22857d4212409b7857baf34f46ac201d2c3e775b4",
-        "sizeBytes": 3073226,
         "formats": {
+          "vst3": {
+            "version": "0.1.1",
+            "bundleName": "TB-Disperser.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Disperser-VST3-macOS-arm64.zip",
+            "sha256": "222511d7482345b9c0bd4971d941071cf762b3ed2be9e139a42bcc42e4138847",
+            "sizeBytes": 3073621
+          },
           "au": {
-            "version": "0.1.0",
+            "version": "0.1.1",
             "bundleName": "TB-Disperser.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Disperser-AU-macOS-arm64.zip",
-            "sha256": "59f001d33f7b2b5cf5b1825e852f9edcf39ff15bb7c95c15a4ba703a22c81e66",
-            "sizeBytes": 2969827
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Disperser-AU-macOS-arm64.zip",
+            "sha256": "3e972ada5ba8de239e2caa8f8022d432111e41f99ee85f9eddacc048d3e95233",
+            "sizeBytes": 2970347
           }
         }
       }
     },
     {
       "id": "tb_eq",
-      "updatedAt": "2026-07-29",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
         "version": "1.3.0",
         "date": "2026-07-29",
@@ -259,18 +271,20 @@
         "sizeBytes": 6807119
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-EQ.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-EQ-VST3-macOS-arm64.zip",
-        "sha256": "1bc7f034e741e404b223f6c6701d5934511a5a0308d588f696237ae7e66c82b0",
-        "sizeBytes": 7690162,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-EQ.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-EQ-VST3-macOS-arm64.zip",
+            "sha256": "10b56c903bea1b91773efdacdcc935e528a6538672e322d61fc661c5b2d1db22",
+            "sizeBytes": 7714237
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-EQ.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-EQ-AU-macOS-arm64.zip",
-            "sha256": "7b244d369617101f337a4799b4aca1a95d07fe8129534de68571dbfc1a355b01",
-            "sizeBytes": 7581021
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-EQ-AU-macOS-arm64.zip",
+            "sha256": "d9a64ae864ac76f931cbb36f0214fd9da8cd1403c0bd7140663f1aee9a27e578",
+            "sizeBytes": 7606236
           },
           "aax": {
             "version": "1.0.0",
@@ -283,12 +297,13 @@
     },
     {
       "id": "tb_colorizer",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "2.1.0",
-        "date": "2026-07-28",
+        "version": "2.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -303,42 +318,45 @@
         "visible": true
       },
       "name": "TB Colorizer",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "Voice",
       "price": 3,
       "description": "Voice color shaping.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.1.0",
-        "sha256": "fad88a5df2d5cfab271f07ef88427c210aa971913bd65ed5a7d87c6c5e17aa1a",
-        "sizeBytes": 2961897
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.2.0",
+        "sha256": "bc3a7d78eb2fb5c6496e321f07b95bc3fbee817b90bfed85604713ba3181a2f3",
+        "sizeBytes": 2972461
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-Colorizer.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Colorizer-VST3-macOS-arm64.zip",
-        "sha256": "fd468c8fb3579dc6ecdb2650483623b420552c6ed8dfe16c9ae5429f7d86e3f9",
-        "sizeBytes": 3043698,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-Colorizer.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Colorizer-VST3-macOS-arm64.zip",
+            "sha256": "fc6196cf248ea060d6995846487ae7f27c851f04e4366e47d54ddff2c7ccd0e2",
+            "sizeBytes": 3056787
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-Colorizer.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Colorizer-AU-macOS-arm64.zip",
-            "sha256": "732e430a99bd958a5801dd165d30a3e0d44179005e7953cf16581d2a30470e72",
-            "sizeBytes": 2938259
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Colorizer-AU-macOS-arm64.zip",
+            "sha256": "f3cfa18156af30f72e71c32eb017653624a23bf08eab3b88dc04218bfad46f46",
+            "sizeBytes": 2951813
           }
         }
       }
     },
     {
       "id": "tb_inverted_flanger",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-07-28",
+        "version": "1.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -353,30 +371,32 @@
         "visible": true
       },
       "name": "TB Inverted Flanger",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Modulation",
       "price": 3,
       "description": "Inverted flanging.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=1.1.0",
-        "sha256": "a32d44cba3a2c3a0e49daa71e676043f422df64219e5c75e66c9712e27db6d9c",
-        "sizeBytes": 2364859
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=1.2.0",
+        "sha256": "12888a4c41ac114383019ad4459a88f57db3d077387cb2bf6c27eec045ee47e5",
+        "sizeBytes": 2367739
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-InvertedFlanger.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-InvertedFlanger-VST3-macOS-arm64.zip",
-        "sha256": "e0105da02e11c0f490a6a06ec2b860f509aac746916414cca5aab32ec7fa9769",
-        "sizeBytes": 3022368,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-InvertedFlanger.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-InvertedFlanger-VST3-macOS-arm64.zip",
+            "sha256": "f57d89ebf4e569925a3143ba06f8af2acbf23515f108131e9006082e10824808",
+            "sizeBytes": 3026992
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-InvertedFlanger.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-InvertedFlanger-AU-macOS-arm64.zip",
-            "sha256": "da79fd61c0708f503958d8e40ccf551e064578a9f50800b251ec91d0ad5ee0db",
-            "sizeBytes": 2917320
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-InvertedFlanger-AU-macOS-arm64.zip",
+            "sha256": "4d1a7fe146f76efe2644ffa642a0443bdf1bb2c7a59a90079948f3d368f0f5c5",
+            "sizeBytes": 2921576
           },
           "aax": {
             "version": "1.0.0",
@@ -389,12 +409,13 @@
     },
     {
       "id": "tb_inverted_phaser",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "2.1.0",
-        "date": "2026-07-28",
+        "version": "2.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -409,30 +430,32 @@
         "visible": true
       },
       "name": "TB Inverted Phaser",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "Modulation",
       "price": 3,
       "description": "Subtractive phasing.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip?v=2.1.0",
-        "sha256": "af977ac3287b751ce2d77949c1eb6ad8fa3782809ae07ff5619c4ccd81319b97",
-        "sizeBytes": 2385227
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip?v=2.2.0",
+        "sha256": "824579ed7e87e653f43324a6a5f3593d0e0f3a22ad3626c463d51e536de496a2",
+        "sizeBytes": 2388253
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-InvertedPhaser.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-InvertedPhaser-VST3-macOS-arm64.zip",
-        "sha256": "58c1b1929e696931d69d7c49b14a63f0f31516c886f58727be6551e1674553b0",
-        "sizeBytes": 3033539,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-InvertedPhaser.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-InvertedPhaser-VST3-macOS-arm64.zip",
+            "sha256": "21de668cf473dea1de6436b0ec488d11420dbaff096f9b8122f6757426425b15",
+            "sizeBytes": 3045002
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-InvertedPhaser.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-InvertedPhaser-AU-macOS-arm64.zip",
-            "sha256": "9cd6c1d7ccb47ee3d7ae1829fe7a1688928beac2ca18329b7881bf322feff462",
-            "sizeBytes": 2930451
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-InvertedPhaser-AU-macOS-arm64.zip",
+            "sha256": "f880664e3a3ae1e73f9d72e3b6e58d378a0f40adcc123e76c10ee6108973a33b",
+            "sizeBytes": 2939394
           },
           "aax": {
             "version": "1.0.0",
@@ -445,12 +468,13 @@
     },
     {
       "id": "tb_jewel_digger",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -465,30 +489,32 @@
         "visible": true
       },
       "name": "TB Jewel Digger & Finder",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Creative",
       "price": 3,
       "description": "Harmonic enhancement.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_jewel_digger.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip?v=1.2.0",
-        "sha256": "92a28e2113412b0ae61163e7708e59742a46056714daf9ba4d69e7447d5cc339",
-        "sizeBytes": 2418934
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_JewelDiggerAndFinder.zip?v=1.3.0",
+        "sha256": "ef115d9eba19daf26715a08c4b07e565fbf1fa5898bbb4561247be5a44876e32",
+        "sizeBytes": 2420989
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-JewelDiggerAndFinder.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-JewelDiggerAndFinder-VST3-macOS-arm64.zip",
-        "sha256": "7ea05e5ac21658997e109fd192c5942721e7ebd204d393df23ffb6f6c71a59e4",
-        "sizeBytes": 3079068,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-JewelDiggerAndFinder.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-JewelDiggerAndFinder-VST3-macOS-arm64.zip",
+            "sha256": "401191c2fa631c18751362a4c62a23c0ee480e5366ba7bb3321a2cd3e875a3f0",
+            "sizeBytes": 3083824
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-JewelDiggerAndFinder.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-JewelDiggerAndFinder-AU-macOS-arm64.zip",
-            "sha256": "64898d1b738aa8dc7965f272f077365695c6dba0e52662539f26c1c37e8321db",
-            "sizeBytes": 2973644
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-JewelDiggerAndFinder-AU-macOS-arm64.zip",
+            "sha256": "2c86d50050693229d9435bd81e0b9927736883f78604ad521b8b41beade2ea5a",
+            "sizeBytes": 2977612
           },
           "aax": {
             "version": "1.0.0",
@@ -501,12 +527,13 @@
     },
     {
       "id": "tb_noise_remover",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "2.1.0",
-        "date": "2026-07-28",
+        "version": "2.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Lighter UI metering."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -521,42 +548,45 @@
         "visible": true
       },
       "name": "TB Noise Remover",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "Restoration",
       "price": 3,
       "description": "Noise and ambience removal.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.1.0",
-        "sha256": "9a167a9562b7e67087941083c143e1a4f2b54177a030934f975070d254245dfc",
-        "sizeBytes": 13205449
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.2.0",
+        "sha256": "a53a7666561860585f4f0155c09d3dd659e775471ec260e16e27e1da61e2fa70",
+        "sizeBytes": 13217109
       },
       "macos": {
-        "version": "1.1.0",
-        "bundleName": "TB-NoiseRemover.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-NoiseRemover-VST3-macOS-arm64.zip",
-        "sha256": "02baa6c27e8b37e38ff969d003963e55d91eb13a0f3ce1d012e8caeff8cb70f0",
-        "sizeBytes": 3633304,
         "formats": {
+          "vst3": {
+            "version": "1.1.1",
+            "bundleName": "TB-NoiseRemover.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-NoiseRemover-VST3-macOS-arm64.zip",
+            "sha256": "66fb975262f82bbc6252be22762e2746809a79fe4a29feace9da5904b121bc25",
+            "sizeBytes": 8022750
+          },
           "au": {
-            "version": "1.1.0",
+            "version": "1.1.1",
             "bundleName": "TB-NoiseRemover.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-NoiseRemover-AU-macOS-arm64.zip",
-            "sha256": "e43301f88cc7becb536f44240f94169faa765b4d6d7a3804fcef6d1d4ea71485",
-            "sizeBytes": 3522143
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-NoiseRemover-AU-macOS-arm64.zip",
+            "sha256": "d28ec2b011696082bf5fc529fc577f1624ffd6d8426d5cc750577391f446684c",
+            "sizeBytes": 7909761
           }
         }
       }
     },
     {
       "id": "tb_parallel_reverb",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-28",
+        "version": "1.3.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Safer IR loading."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -571,30 +601,32 @@
         "visible": true
       },
       "name": "TB Parallel Reverb",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Reverb",
       "price": 3,
       "description": "Parallel convolution reverb.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=1.2.0",
-        "sha256": "7ada2c00eb3799d26fe630de8e5bfc98480503f3f5a262faf110782e1cda464f",
-        "sizeBytes": 2834785
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=1.3.0",
+        "sha256": "e77a89dbea72855e6b4b25f9a7d3310a48d7672fe5aea212c319715977508d4d",
+        "sizeBytes": 2837800
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-ParallelReverb.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-ParallelReverb-VST3-macOS-arm64.zip",
-        "sha256": "1d95d8cdf72117145bcdbaf2a0f6007a03ec34d02f4f60dda7341d31b4846105",
-        "sizeBytes": 3690901,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-ParallelReverb.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-ParallelReverb-VST3-macOS-arm64.zip",
+            "sha256": "b6b25aad2da57d57ccab14becd9f5d4b2b78e8ca05dd1523f4651f6a303e4511",
+            "sizeBytes": 3692339
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-ParallelReverb.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-ParallelReverb-AU-macOS-arm64.zip",
-            "sha256": "49a1c9d99390ce7622b96da1523a350733267c5257dd70c5ebd622b9b7e9308d",
-            "sizeBytes": 3580737
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-ParallelReverb-AU-macOS-arm64.zip",
+            "sha256": "0eea5e13f4c71e17702d7bd5eadc41fb35d3b63bf66ed774fb51c01ee7713bcc",
+            "sizeBytes": 3584249
           },
           "aax": {
             "version": "1.0.0",
@@ -607,12 +639,13 @@
     },
     {
       "id": "tb_scrambler",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "2.1.0",
-        "date": "2026-07-28",
+        "version": "2.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -627,37 +660,39 @@
         "visible": true
       },
       "name": "TB Scrambler",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "Creative",
       "price": 3,
       "description": "Scramble and glitch effects.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.1.0",
-        "sha256": "78a6678e2a798a6fd3158b8b4014f4e1ced16785121a5220f5690795037cc6f8",
-        "sizeBytes": 3491909
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.2.0",
+        "sha256": "3e99641d20030082d7ca977eb62628d54ea0e7fe81c3178bd0e39bc2ec6f0694",
+        "sizeBytes": 3494037
       },
       "macos": {
-        "version": "1.1.1",
-        "bundleName": "TB-Scrambler.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Scrambler-VST3-macOS-arm64.zip",
-        "sha256": "dfc5713f7fa3a7269a70f7adbb3d0ff0e5b070e94694444466e45887fc9314bf",
-        "sizeBytes": 4351273,
         "formats": {
+          "vst3": {
+            "version": "1.1.2",
+            "bundleName": "TB-Scrambler.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Scrambler-VST3-macOS-arm64.zip",
+            "sha256": "a4f2402f4a67edefaf6e89e8646726644935d2688eb521b94281dfc5f3583434",
+            "sizeBytes": 4362298
+          },
           "au": {
-            "version": "1.1.1",
+            "version": "1.1.2",
             "bundleName": "TB-Scrambler.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Scrambler-AU-macOS-arm64.zip",
-            "sha256": "1f4bc665531722757f6560f109b986725e05e8c1041fb0ae6595f9a0bf01fef0",
-            "sizeBytes": 4244356
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Scrambler-AU-macOS-arm64.zip",
+            "sha256": "520586a547c54c46907a4281404f701a44a4c7214bd1c61a4817d9aed48a8d4f",
+            "sizeBytes": 4254157
           }
         }
       }
     },
     {
       "id": "tb_transient_shaper",
-      "updatedAt": "2026-07-29",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
         "version": "1.3.0",
         "date": "2026-07-29",
@@ -689,18 +724,20 @@
         "sizeBytes": 2862050
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-SpectralTransientShaper.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-SpectralTransientShaper-VST3-macOS-arm64.zip",
-        "sha256": "c96b11409b50b230fc39fb12914e574d10cbb58e1db3cc1c4f3627a599fdc390",
-        "sizeBytes": 3710535,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-SpectralTransientShaper.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-SpectralTransientShaper-VST3-macOS-arm64.zip",
+            "sha256": "fc3dfecb7db42977ad1c9ee1c23ea291dcd562496aa6c81196e071a4f1dc84b4",
+            "sizeBytes": 3716661
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-SpectralTransientShaper.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-SpectralTransientShaper-AU-macOS-arm64.zip",
-            "sha256": "95ac6603f2e1ae5f52cc8291e89910f8105fa611bc1895399fbbc636cd5bc86b",
-            "sizeBytes": 3602112
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-SpectralTransientShaper-AU-macOS-arm64.zip",
+            "sha256": "77d558b39e95fa50bb9477c9b20acdb326fff89157a13fb93da2ebcc1ca7871c",
+            "sizeBytes": 3608191
           },
           "aax": {
             "version": "1.0.0",
@@ -713,12 +750,13 @@
     },
     {
       "id": "tb_step_shifter",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "2.1.0",
-        "date": "2026-07-28",
+        "version": "2.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Smoother resolution changes."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -733,30 +771,32 @@
         "visible": true
       },
       "name": "TB Step Shifter (Beta)",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "Creative",
       "price": 3,
       "description": "Harmonic pitch shifting.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_step_shifter.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip?v=2.1.0",
-        "sha256": "ebc5a6ed8e0a3b38a737dbcd9af1c14643b2d0082c40a02bec91627e5f3768d9",
-        "sizeBytes": 2788384
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_StepShifter.zip?v=2.2.0",
+        "sha256": "a71ecc68ebf1c316b4074a029476a250a2664ed6e4bb046e9091d47579b20b33",
+        "sizeBytes": 2794355
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-StepShifter.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-StepShifter-VST3-macOS-arm64.zip",
-        "sha256": "1f6a50b11705a234b68a42c5945c7c7393dae5d0296cc610d3b5f76ab157a2c7",
-        "sizeBytes": 3644455,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-StepShifter.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-StepShifter-VST3-macOS-arm64.zip",
+            "sha256": "dd4036aec47ddd8a5f2f8732a7c5e8a6c1353dd12f0cd2e8507d942d96cda130",
+            "sizeBytes": 3659178
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-StepShifter.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-StepShifter-AU-macOS-arm64.zip",
-            "sha256": "212fed79b0a1827ce6a171c5579aac9ef400d2a9a4eb7dc845eda020dafd92c4",
-            "sizeBytes": 3538584
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-StepShifter-AU-macOS-arm64.zip",
+            "sha256": "552f378bf219cb11ae5877c1bf5d11f116184eda5f6f8bd3a05796acb443813f",
+            "sizeBytes": 3548248
           },
           "aax": {
             "version": "1.0.0",
@@ -769,12 +809,13 @@
     },
     {
       "id": "tb_tune",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-07-28",
+        "version": "1.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Lower CPU and UI load."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -789,42 +830,45 @@
         "visible": true
       },
       "name": "TB Tune",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Voice",
       "price": 3,
       "description": "Vocal pitch correction.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=1.1.0",
-        "sha256": "0e0e31c0aa614d5cf2c9b125989b7a8b2555721b53a81aa61603e6a7ce0be251",
-        "sizeBytes": 2396844
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=1.2.0",
+        "sha256": "298d7b4b525efe2bb6ebf4d767ae13b706eb39c11264ff33550138bbe899b60d",
+        "sizeBytes": 2412296
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-Tune.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Tune-VST3-macOS-arm64.zip",
-        "sha256": "5e597f3f9eb7f1218fb488115bb5ee2aa81ecd685dedf3104e5c4bae641a82f2",
-        "sizeBytes": 3053914,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-Tune.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Tune-VST3-macOS-arm64.zip",
+            "sha256": "a29688a3eeeb3c503eb437190d0071a7a4f962a58b8b168bd82c4917f6d29abe",
+            "sizeBytes": 3065638
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-Tune.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Tune-AU-macOS-arm64.zip",
-            "sha256": "e8acdf767171fd2c8ed2ec223e22c9ec760e6e00db536fb53f70849f29a4dab8",
-            "sizeBytes": 2949149
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Tune-AU-macOS-arm64.zip",
+            "sha256": "0304bdc53ea2df9445ef03edcae8ef093c5e28bff760f028ab65f471244d8507",
+            "sizeBytes": 2959622
           }
         }
       }
     },
     {
       "id": "tb_volume",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-07-28",
+        "version": "1.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Faster gain processing."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -839,42 +883,45 @@
         "visible": true
       },
       "name": "TB Volume",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Utility",
       "price": 3,
       "description": "Simple gain control.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_volume.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.1.0",
-        "sha256": "8e72868787cea3256c4d7303495d5ee28da2747008381218b15e569b83c5bfb0",
-        "sizeBytes": 2333824
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.2.0",
+        "sha256": "d55bb757564556bbcd503395b10433dd3c47d31f85caa1fc5df48bfa85a612a5",
+        "sizeBytes": 2347831
       },
       "macos": {
-        "version": "1.0.5",
-        "bundleName": "TB-Volume.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Volume-VST3-macOS-arm64.zip",
-        "sha256": "dfe62316cdd0b65076dba4f68b55eb61e3a4ada3f1350b5f1a5c6372d7913882",
-        "sizeBytes": 2992586,
         "formats": {
+          "vst3": {
+            "version": "1.0.6",
+            "bundleName": "TB-Volume.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Volume-VST3-macOS-arm64.zip",
+            "sha256": "733676b3997ceca69bfbc5bb140d5e4a92f27065965cdfd027638d7fdd773293",
+            "sizeBytes": 3009070
+          },
           "au": {
-            "version": "1.0.5",
+            "version": "1.0.6",
             "bundleName": "TB-Volume.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Volume-AU-macOS-arm64.zip",
-            "sha256": "4fbb649e72815cfe5e93406ddf3ee336de0d8955846164065026c523892dfd9a",
-            "sizeBytes": 2887892
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Volume-AU-macOS-arm64.zip",
+            "sha256": "83a0c88246af30e4b73cda8ef3f8b55994fe647e15096462e2525136a0a5c27c",
+            "sizeBytes": 2903144
           }
         }
       }
     },
     {
       "id": "tb_vocoder",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-07-28",
+        "version": "1.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Performance improved."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -889,42 +936,45 @@
         "visible": true
       },
       "name": "TB Vocoder (Beta)",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Creative",
       "price": 3,
       "description": "Vocoder.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_vocoder.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Vocoder.zip?v=1.1.0",
-        "sha256": "2a41b0e5ab4a4b2852ae4214ce8ee82930b02a22beee7a7abdda42fdd4454485",
-        "sizeBytes": 2794043
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Vocoder.zip?v=1.2.0",
+        "sha256": "4ad3e5e9080e271ba0a7d1dcbf75536483830e0fc2d8683361ced1f08d7d941b",
+        "sizeBytes": 2802442
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-Vocoder.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Vocoder-VST3-macOS-arm64.zip",
-        "sha256": "00fa10e97fa62f0e557f48c96939d54f9ee921e1df4a0519f5bdae77cd839312",
-        "sizeBytes": 3664572,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-Vocoder.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Vocoder-VST3-macOS-arm64.zip",
+            "sha256": "573a77568a8788da5d45968b15d53e7d81ec0836080e9b453593b2dbb5f53c2a",
+            "sizeBytes": 3671951
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-Vocoder.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Vocoder-AU-macOS-arm64.zip",
-            "sha256": "cb3f7c0dcad759fd89349a31feebeb312c4b6d176d5a5a156dd08b94261be221",
-            "sizeBytes": 3552599
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Vocoder-AU-macOS-arm64.zip",
+            "sha256": "171963882548dca3420ba3eb6c0e3c12b78698cbc136438a2ebf01b567cc40fe",
+            "sizeBytes": 3564788
           }
         }
       }
     },
     {
       "id": "tb_xyz_panner",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-07-28",
+        "version": "1.2.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Lighter UI updates."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -939,30 +989,32 @@
         "visible": true
       },
       "name": "TB XYZ Panner",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Utility",
       "price": 3,
       "description": "Multi-axis panning.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.1.0",
-        "sha256": "713b4aaefd5f3ce4f330450c181c3880cc332804678c12a5ecc4f5c6854495c1",
-        "sizeBytes": 2991317
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.2.0",
+        "sha256": "e476c436e03f6c23dbb4824b67c0fa41530097166eb4f92eda7376c0f2435d3c",
+        "sizeBytes": 2999033
       },
       "macos": {
-        "version": "1.0.0",
-        "bundleName": "TB-XYZPanner.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-XYZPanner-VST3-macOS-arm64.zip",
-        "sha256": "1796b4efacdb3c519a37c7f1365a41f5aeed4f8a890070b60e51b3281c98442b",
-        "sizeBytes": 3854986,
         "formats": {
+          "vst3": {
+            "version": "1.0.1",
+            "bundleName": "TB-XYZPanner.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-XYZPanner-VST3-macOS-arm64.zip",
+            "sha256": "f0fc736044b3eb154c6ca42c0bb34bdd2be68cbc4dea926680e280a6655ce20e",
+            "sizeBytes": 3863116
+          },
           "au": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "bundleName": "TB-XYZPanner.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-XYZPanner-AU-macOS-arm64.zip",
-            "sha256": "fe56627330439f4a18641420ba59357c111bbce70609868aa34184eb9298b509",
-            "sizeBytes": 3746873
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-XYZPanner-AU-macOS-arm64.zip",
+            "sha256": "7101b3be5065b9b6c5a0bbbf7a4b8ae405b0de79cb384d572437d6fdaf5ae811",
+            "sizeBytes": 3754141
           },
           "aax": {
             "version": "1.0.0",
@@ -975,7 +1027,7 @@
     },
     {
       "id": "tb_limiter",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
         "version": "1.0.0",
         "date": "2026-07-28",
@@ -1007,30 +1059,33 @@
         "sizeBytes": 3220192
       },
       "macos": {
-        "version": "0.4.0",
-        "bundleName": "TB-Limiter.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Limiter-VST3-macOS-arm64.zip",
-        "sha256": "d72e482f155b7acd4f807c81ac365b068c91ba7374f6e4988e3006762d1be7f9",
-        "sizeBytes": 4071703,
         "formats": {
+          "vst3": {
+            "version": "0.4.1",
+            "bundleName": "TB-Limiter.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Limiter-VST3-macOS-arm64.zip",
+            "sha256": "2b2df2aef078a21478bb2b3f745dfe763de0ffb62c5bef545afb982fc599ef6d",
+            "sizeBytes": 4091178
+          },
           "au": {
-            "version": "0.4.0",
+            "version": "0.4.1",
             "bundleName": "TB-Limiter.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-Limiter-AU-macOS-arm64.zip",
-            "sha256": "ab391b6e2c73823ce94341bc0cbb248562898f9025c910feadc6ee05ad48d656",
-            "sizeBytes": 3965847
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Limiter-AU-macOS-arm64.zip",
+            "sha256": "6c2f70da75d06bfc78f4fe110dc160f3707c0294c27aae75ab76cd826b6aee5f",
+            "sizeBytes": 3978812
           }
         }
       }
     },
     {
       "id": "tb_sublow",
-      "updatedAt": "2026-07-28",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.0.0",
-        "date": "2026-07-28",
+        "version": "1.1.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Initial sub-bass release."
+          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
+          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -1045,37 +1100,39 @@
         "visible": true
       },
       "name": "TB SubLow",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Creative",
       "price": 3,
       "description": "Sub-bass generator.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_sublow.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.0.0",
-        "sha256": "bf9812ebcd2ae738961c5ac239dc28bb0f4175d2ee76e2ec8bd797645bf0b10f",
-        "sizeBytes": 2431817
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.1.0",
+        "sha256": "f0321e40ec2df033e97588d322c5f46ae013342480f6d53a0502e89197be4292",
+        "sizeBytes": 2433215
       },
       "macos": {
-        "version": "0.1.0",
-        "bundleName": "TB-SubLow.vst3",
-        "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-SubLow-VST3-macOS-arm64.zip",
-        "sha256": "be6525ae8ee511b0e629b663cb9ace3c437071e1561ebc79fbc00b2f21231d75",
-        "sizeBytes": 3093596,
         "formats": {
+          "vst3": {
+            "version": "0.1.1",
+            "bundleName": "TB-SubLow.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-SubLow-VST3-macOS-arm64.zip",
+            "sha256": "8a9add737cc411f8e26a42a6146c115db82bf40732f9229e0fceec40855894ef",
+            "sizeBytes": 3095083
+          },
           "au": {
-            "version": "0.1.0",
+            "version": "0.1.1",
             "bundleName": "TB-SubLow.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r8-2026-07-28/TB-SubLow-AU-macOS-arm64.zip",
-            "sha256": "bc57e7ec01b2e9098bcfa21c4b6408bded1f7e8ca3da5d36cef1c698cf56225e",
-            "sizeBytes": 2989238
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-SubLow-AU-macOS-arm64.zip",
+            "sha256": "43eba8a1009e39ec153e94e880e45c65a1a314c22f018add352064fdcc5d8208",
+            "sizeBytes": 2990299
           }
         }
       }
     },
     {
       "id": "tb_delay",
-      "updatedAt": "2026-07-29",
+      "updatedAt": "2026-07-30",
       "latestUpdate": {
         "version": "1.0.0",
         "date": "2026-07-29",
@@ -1105,6 +1162,24 @@
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.0.0",
         "sha256": "a123984b79abaebfb596e93da529120157e4356a78237af00b0080772f0b5800",
         "sizeBytes": 2442333
+      },
+      "macos": {
+        "formats": {
+          "vst3": {
+            "version": "1.0.0",
+            "bundleName": "TB-Delay.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Delay-VST3-macOS-arm64.zip",
+            "sha256": "dbafcb1b557367c3247276c319ba5fe5d1bc9ed10d2ad3a8667977eddd258fcc",
+            "sizeBytes": 3101583
+          },
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-Delay.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-2026-07-30/TB-Delay-AU-macOS-arm64.zip",
+            "sha256": "31e57c5c07779063a2c0778d6ce99df75d4db87f9cd269e7994f9e780eea719d",
+            "sizeBytes": 2996337
+          }
+        }
       }
     }
   ],
