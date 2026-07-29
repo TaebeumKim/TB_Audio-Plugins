@@ -2,7 +2,7 @@
 
 The GitHub and TB Hub logo family is derived from the approved Team Impulse Impact
 line mark and the integrated-redraw registry in `TB_PLUGIN_UI_DESIGN_GUIDE.md`
-1.32 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.11 or later.
+1.33 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.12 or later.
 
 ## Canonical inputs
 
@@ -49,18 +49,25 @@ first, lower its upper apex by only `8` units to suggest gentle pressure, and
 place one closed, white-filled headband over it. The band path is
 `M181 211 C186 151 209 119 240 120 C276 121 302 151 306 201 L281 204
 C278 168 262 146 241 146 C219 146 205 169 202 215 Z`, rendered with a
-white fill and no stroke. Draw the body and eyes next, then render the closed
-outer ear cup path with a white fill and no stroke. Render the closed inner pad
-with a black fill and no stroke so the white shell reads as a solid plane around
-a recessed black pad. The band's right endpoint `(306,201)` must overlap the
-outer cup curve near `(307,205)` for a seamless attachment. Painter order remains
-tail, closed over-tail band, body and eyes, outer ear cup, then inner pad. Do not
-depict the headband or any visible headphone part with strokes or outlines. Do
-not add a separate yoke, separator, headphone contour stroke, global separator
-halo or trench. This filled-surface rule applies to the headphone components;
-the approved fish body and tail line art may remain stroked. The folded tail
-remains distinct from the headphone; do not mistake, replace, erase or
-masquerade it as the band.
+white fill and no stroke. Draw the body and eyes next. The visible band-to-cup
+connection is not a stroke: render one closed white-filled `filledBridge` with
+no stroke using
+`M275 157 C298 161 315 180 319 203 L322 225 L301 231 L297 209
+C294 191 285 180 271 176 Z`, after the body and eyes but before the outer ear
+cup. Render the closed outer ear cup path with a white fill and no stroke.
+Fill the complete inner pad with `#414852` graphite and no stroke. Place a
+generic bitten-fruit body and leaf on the pad using `#C7CDD4` silver closed fills,
+then make the bite with a closed `#414852` pad-colour circle. This is a generic
+fruit motif, not an exact trademark reproduction, and it must contain no text.
+Painter order is tail, white filled band, body and eyes, white filled bridge,
+white filled cup, graphite filled pad, then the silver emblem group; within the
+emblem group, draw the silver fruit and leaf before the graphite bite circle.
+Do not depict any headphone or emblem element with strokes or outlines. Do not
+add a separate stroke yoke, separator, headphone contour stroke, global
+separator halo or trench. This filled-surface rule applies to the headphone and
+emblem components; the approved fish body and tail line art may remain stroked.
+The folded tail remains distinct from the headphone; do not mistake, replace,
+erase or masquerade it as the band.
 
 Transient Shaper must structurally preserve the original fish body and double
 folded tail without replacing the tail or treating it as an arm. Grow two
@@ -125,8 +132,8 @@ Transient Shaper must retain two muscular arms, the angry face and fish lineage;
 XYZ Panner must retain the original V mouth, two eyes and folded tail plus
 recognisable three-colour axes at 64 px. Its receding axis and fish extrusion
 must share the same on-screen up-right 45-degree direction. Noise Remover must
-retain a recognisable over-tail closed band-to-cup wearing structure; the white
-filled band and shell plus black filled pad must remain solid and connected at
+retain a recognisable white filled band-to-bridge-to-cup wearing structure; the
+graphite filled pad and small silver generic fruit motif must remain legible at
 64 px.
 
 Automatic verification also requires a thresholded raster/vector mask IoU of at
