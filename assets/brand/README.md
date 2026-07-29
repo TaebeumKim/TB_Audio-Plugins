@@ -2,7 +2,7 @@
 
 The GitHub and TB Hub logo family is derived from the approved Team Impulse Impact
 line mark and the integrated-redraw registry in `TB_PLUGIN_UI_DESIGN_GUIDE.md`
-1.22 or later.
+1.23 or later and `TB_PLUGIN_ICON_GUIDE.md` 3.2 or later.
 
 ## Canonical inputs
 
@@ -22,13 +22,19 @@ silently replaced.
 ## Redraw rule
 
 Each product icon must be redrawn as one coherent descendant of the canonical
-mark. An effect may reshape, repeat, compress, split, pixelate, colour or extrude
-the original body, eyes and folded tail.
+mark. The folded head-tail is a canonical brand signature, not the default
+semantic carrier for every product. Do not distinguish the family by turning
+only that tail into a different object each time. Distribute the effect across
+the body, face or expression, whole silhouette, guide planes, repetition or an
+explicitly approved background effect.
 
-Do not place a separate prop, badge, letter, rounded card or decorative panel
-beside or on top of an otherwise unchanged mark. Props named in the product brief
-must be formed by replacing or extending the mark's own paths. QA contact-sheet
-labels are outside the exported icons and are not product artwork.
+Do not place an unregistered prop, badge, letter, rounded card or decorative
+panel beside or on top of an otherwise unchanged mark. The product registry
+explicitly controls the few scene elements that are allowed, including Tune's
+front microphone, Transient Shaper's anatomically normal flexed arm, Step
+Shifter's stairs, Jewel Digger's single sparkle and Parallel Reverb's gradient
+bloom. QA contact-sheet labels are outside the exported icons and are not
+product artwork.
 
 ## Outputs
 

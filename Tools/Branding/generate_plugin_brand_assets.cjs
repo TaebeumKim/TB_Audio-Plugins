@@ -51,9 +51,22 @@ function transformAround(cx = 250, cy = 250, sx = 1, sy = sx, rotation = 0) {
   return `translate(${cx} ${cy}) rotate(${rotation}) scale(${sx} ${sy}) translate(-250 -250)`;
 }
 
-function exactMark({ transform = "", fill = WHITE, opacity = 1 } = {}) {
+function exactMark({
+  transform = "",
+  fill = WHITE,
+  opacity = 1,
+  stroke = "",
+  strokeWidth = 0,
+} = {}) {
   const transformAttribute = transform ? ` transform="${transform}"` : "";
-  const markup = canonicalMarkMarkup.replace('fill="#FFFFFF"', `fill="${fill}"`);
+  let markup = canonicalMarkMarkup.replace('fill="#FFFFFF"', `fill="${fill}"`);
+  if (stroke && strokeWidth > 0) {
+    markup = markup.replace(
+      "<path ",
+      `<path stroke="${stroke}" stroke-width="${strokeWidth}" ` +
+        'stroke-linejoin="round" paint-order="stroke fill" '
+    );
+  }
   return `<g${transformAttribute} opacity="${opacity}">${markup}</g>`;
 }
 
@@ -106,21 +119,24 @@ function centerMark() {
   return [
     exactMark({
       transform: transformAround(180, 250, 0.72),
-      opacity: 0.2,
+      opacity: 0.32,
     }),
     exactMark({
       transform: transformAround(320, 250, 0.72),
-      opacity: 0.2,
+      opacity: 0.32,
     }),
-    exactMark({ transform: transformAround(250, 250, 0.86) }),
+    exactMark({
+      transform: transformAround(250, 250, 0.88),
+      stroke: WHITE,
+      strokeWidth: 3.5,
+    }),
   ].join("");
 }
 
 function compressorMark() {
   return `<g fill="none" stroke="${WHITE}" stroke-linecap="round">
-      <path d="M105 154 H395" stroke-width="6" stroke-dasharray="14 12" opacity="0.4"/>
-      <path d="M105 346 H395" stroke-width="6" stroke-dasharray="14 12" opacity="0.4"/>
-      <path d="M105 239 H395" stroke-width="6"/>
+      <path d="M105 154 H395" stroke-width="7" stroke-dasharray="14 12" opacity="0.48"/>
+      <path d="M105 346 H395" stroke-width="7" stroke-dasharray="14 12" opacity="0.48"/>
     </g>
     ${exactMark({ transform: transformAround(250, 250, 1, 0.72) })}`;
 }
@@ -192,71 +208,86 @@ function flangerMark() {
 }
 
 function phaserMark() {
-  const swirlOuter =
-    "M236 166 C259 116 326 106 354 150 C379 190 363 249 324 270 " +
-    "C288 289 244 271 237 236 C230 207 252 182 279 182 " +
-    "C302 182 318 199 316 219 C314 237 299 249 284 245 " +
-    "C271 242 265 230 270 219";
-  const swirlInner =
-    "M250 168 C271 132 319 126 341 158 C359 186 348 228 320 247 " +
-    "C294 263 262 253 255 230 C250 212 263 198 280 198 " +
-    "C293 198 302 207 301 219 C300 227 294 232 287 231";
-  return `<g transform="translate(0 452) scale(1 -1) rotate(-7 250 250)">
-      <g fill="none" stroke="${WHITE}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="${swirlOuter}"/><path d="${swirlInner}"/>
-      </g>
-      <path d="${BODY}" fill="${BLACK}"/>
-      <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="${JOIN_OUTER}" fill="none" stroke="${WHITE}" stroke-width="5" stroke-linecap="round"/>
-      ${eyeMarkup()}
+  const inverted = "translate(0 452) scale(1 -1)";
+  return `<defs>
+      <clipPath id="phaser-mid"><circle cx="250" cy="226" r="112"/></clipPath>
+      <clipPath id="phaser-core"><circle cx="250" cy="226" r="62"/></clipPath>
+    </defs>
+    ${exactMark({ transform: inverted })}
+    <circle cx="250" cy="226" r="112" fill="${BLACK}"/>
+    <g clip-path="url(#phaser-mid)" transform="rotate(12 250 226)">
+      ${exactMark({ transform: inverted })}
+    </g>
+    <circle cx="250" cy="226" r="62" fill="${BLACK}"/>
+    <g clip-path="url(#phaser-core)" transform="rotate(27 250 226)">
+      ${exactMark({ transform: inverted })}
+    </g>
+    <g fill="none" stroke="${WHITE}" stroke-width="7" stroke-linecap="round" opacity="0.48">
+      <path d="M343 132 C385 155 404 195 397 236"/>
+      <path d="M397 236 L386 220 M397 236 L407 218"/>
+      <path d="M157 320 C119 294 103 255 112 216"/>
+      <path d="M112 216 L121 233 M112 216 L102 234"/>
     </g>`;
 }
 
 function jewelMark() {
-  return `<g fill="none" stroke="${WHITE}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M274 272 C280 226 300 180 342 137 L369 106"/>
-      <path d="M292 277 C298 238 316 198 354 153 L382 121"/>
-    </g>
-    <path d="M245 108 L271 88 C306 78 340 86 369 104
-      C389 92 411 94 432 105 L445 119 L441 135
-      C420 123 401 123 382 136 L369 124
-      C338 101 307 100 274 125 Z"
-      fill="${BLACK}" stroke="${WHITE}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  return `<path d="M278 276 L296 284 L375 141 L357 131 Z"
+      fill="${BLACK}" stroke="${WHITE}" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M238 95 C286 91 329 102 366 121
+      L356 140 C322 118 283 105 242 107 Z"
+      fill="${BLACK}" stroke="${WHITE}" stroke-width="7"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M371 123 C401 132 429 147 451 166
+      L425 164 C403 158 383 149 359 139 Z"
+      fill="${BLACK}" stroke="${WHITE}" stroke-width="7"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M350 119 L381 135 L369 154 L339 138 Z"
+      fill="${BLACK}" stroke="${WHITE}" stroke-width="7"
+      stroke-linejoin="round"/>
+    <path d="M219 56 V73 M219 91 V108 M191 82 H208 M230 82 H247"
+      fill="none" stroke="${WHITE}" stroke-width="7" stroke-linecap="round"/>
     <path d="${BODY}" fill="${BLACK}"/>
-    <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
     ${eyeMarkup()}`;
 }
 
 function noiseRemoverMark() {
-  return `<g fill="none" stroke="${WHITE}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M236 166 C249 121 278 104 307 108 C340 111 360 133 363 160
-        C366 183 354 204 331 214 C311 222 286 223 265 217"/>
-      <path d="M250 168 C263 134 283 118 306 121 C331 124 347 140 348 160
-        C349 177 340 190 323 199 C307 207 286 209 269 205"/>
+  return `<g fill="none" stroke="${WHITE}" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M139 211 C145 154 184 125 228 127
+        C274 129 306 163 307 214" stroke-width="9"/>
+      <path d="M157 210 C163 173 191 147 226 148
+        C262 149 285 176 287 211" stroke-width="6"/>
     </g>
     <path d="${BODY}" fill="${BLACK}"/>
-    <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M259 193 C273 193 282 205 282 221 L279 244 C277 258 267 267 255 263
-      C244 259 238 248 239 233 L241 214 C243 201 250 194 259 193 Z"
-      fill="${BLACK}" stroke="${WHITE}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M256 208 C263 207 267 214 266 223 L264 241 C263 247 259 250 255 248
-      C251 246 250 240 251 233 L252 216 C252 211 254 209 256 208 Z"
-      fill="none" stroke="${WHITE}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    ${eyeMarkup()}`;
+    <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="7"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    ${eyeMarkup()}
+    <path d="M224 178 C247 174 269 187 276 208 L280 234
+      C283 258 269 276 248 278 C228 279 214 263 213 241
+      L213 213 C214 194 218 183 224 178 Z"
+      fill="${BLACK}" stroke="${WHITE}" stroke-width="8"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M233 197 C245 193 257 202 260 215 L262 237
+      C264 249 257 258 247 259 C237 260 231 251 231 240
+      L231 216 C231 207 231 201 233 197 Z"
+      fill="none" stroke="${WHITE}" stroke-width="6"
+      stroke-linecap="round" stroke-linejoin="round"/>`;
 }
 
 function parallelReverbMark() {
   const variants = [
-    { x: 215, y: 242, color: "#45E3D2" },
+    { x: 195, y: 242, color: "#45E3D2" },
     { x: 250, y: 250, color: "#F067B7" },
-    { x: 285, y: 258, color: "#F6C85F" },
+    { x: 305, y: 258, color: "#F6C85F" },
   ];
   return (
+    `<ellipse cx="250" cy="250" rx="175" ry="125"
+      fill="url(#reverbBloom)" filter="url(#reverbBlur)" opacity="0.8"/>` +
     variants
       .map(
         ({ x, y, color }) =>
           `<g filter="url(#softBlur)" opacity="0.28">${exactMark({
-            transform: transformAround(x - 5, y + 5, 0.78),
+            transform: transformAround(x - 5, y + 5, 0.68),
             fill: color,
           })}</g>`
       )
@@ -264,7 +295,7 @@ function parallelReverbMark() {
     variants
       .map(({ x, y, color }) =>
         exactMark({
-          transform: transformAround(x, y, 0.78),
+          transform: transformAround(x, y, 0.68),
           fill: color,
         })
       )
@@ -302,20 +333,29 @@ function scramblerMark() {
 }
 
 function transientMark() {
-  const combinedBodyArm =
-    "M113 228 C149 188 194 166 220 166 C253 160 277 167 295 178 " +
-    "C311 145 342 116 374 128 C400 138 410 167 395 197 " +
-    "C388 211 378 223 366 232 C385 227 398 204 404 178 L414 145 " +
-    "L410 134 L421 120 L438 122 L449 135 L447 149 L454 160 " +
-    "L445 174 L431 169 L421 198 C413 225 411 251 394 272 " +
-    "C375 295 351 299 329 282 L318 248 " +
-    "C276 285 184 286 113 244 L129 238 Z";
-  const armInner =
-    "M333 174 C348 153 373 154 385 174 " +
-    "M367 232 C385 234 403 220 413 201";
-  return `<path d="${combinedBodyArm}" fill="${BLACK}" stroke="${WHITE}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="${armInner}" fill="none" stroke="${WHITE}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-    ${eyeMarkup()}`;
+  const fishTransform = transformAround(180, 250, 0.72);
+  return `<g transform="translate(180 70) scale(11.5)"
+      fill="none" stroke="${WHITE}" stroke-width="0.7"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12.4 13.1
+        C14.2 10.6 17.5 10.4 19.8 12.1
+        C22.2 13.9 22.6 17.1 20.7 19.4
+        C18.8 21.8 15.6 22.3 12.6 22.1
+        C8.8 22 5.1 21.2 2.9 19.7
+        C2.3 19.3 2 18.6 2.1 17.8
+        C2.3 13.1 3.3 3 9.7 2.1
+        C11.5 1.9 13 3.2 13 5
+        C13 6.3 12.2 7.2 11 7.2
+        C10 7.2 9.3 6.7 8.9 5.9"/>
+      <path d="M15.1 14.2 C13.3 12.2 9.6 12.2 7.5 16"/>
+      <path d="M9 6.9 C7.8 8.8 9.1 12.8 7.9 15.1"/>
+    </g>
+    <g transform="${fishTransform}">
+      <path d="${BODY}" fill="${BLACK}"/>
+      <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="8"
+        stroke-linecap="round" stroke-linejoin="round"/>
+      ${eyeMarkup()}
+    </g>`;
 }
 
 function stepMark() {
@@ -326,32 +366,34 @@ function stepMark() {
 }
 
 function tuneMark() {
-  return `<g fill="none" stroke="${WHITE}" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M330 267 C294 312 235 329 183 306 C143 289 105 284 70 282"/>
-      <path d="M306 249 C278 282 232 299 195 286 C160 275 120 269 84 268"/>
-      <path d="M70 282 L98 234 M84 268 L109 224"/>
-      <path d="M95 235 C82 228 78 216 84 206 C90 196 103 197 114 205
-        C124 213 127 225 120 234 C114 243 104 242 95 235 Z"/>
-      <path d="M86 210 C97 212 108 220 114 231 M82 219 C93 221 103 228 109 238"/>
-      <path d="M73 270 C81 270 87 274 90 280 M78 261 C86 262 92 267 95 273"/>
+  const fishTransform = transformAround(280, 250, 0.78);
+  return `${exactMark({ transform: fishTransform })}
+    <g transform="${fishTransform}" fill="none" stroke="${WHITE}"
+      stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M137 237 C148 249 163 249 174 238"/>
     </g>
-    <path d="${BODY}" fill="${BLACK}"/>
-    <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    <g fill="none" stroke="${WHITE}" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M119 212 C123 201 131 197 138 201 C146 205 145 217 138 223"/>
-      <path d="M129 199 V181 C129 176 133 174 138 176 L151 181"/>
+    <g fill="${BLACK}" stroke="${WHITE}" stroke-width="8"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M77 174 C61 179 54 195 59 212 L68 234
+        C74 250 91 257 105 249 C119 241 121 224 113 209
+        L102 187 C97 177 87 172 77 174 Z"/>
+      <path d="M96 248 L123 301 L105 310 L79 257 Z"/>
     </g>
-    ${eyeMarkup()}`;
+    <g fill="none" stroke="${WHITE}" stroke-width="5"
+      stroke-linecap="round" opacity="0.9">
+      <path d="M68 197 L103 187 M65 209 L109 198 M69 222 L113 211"/>
+      <path d="M116 211 C125 205 131 198 134 190"/>
+      <path d="M125 228 C136 222 143 214 147 204"/>
+    </g>`;
 }
 
 function volumeMark() {
-  return `<g fill="none" stroke="${WHITE}" stroke-width="6" stroke-linecap="round">
-      <path d="M286 86 V166 M286 282 V414"/>
-      <path d="M306 86 V177 M306 277 V414"/>
-    </g>
+  return `<path d="M250 88 V175 M250 280 V410"
+      fill="none" stroke="${WHITE}" stroke-width="8" stroke-linecap="round"/>
     <path d="${BODY}" fill="${BLACK}"/>
-    <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M278 214 H314 V254 H278 Z" fill="${BLACK}" stroke="${WHITE}" stroke-width="5" stroke-linejoin="round"/>
+    <path d="${BODY}" fill="none" stroke="${WHITE}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M219 217 H281 V259 H219 Z"
+      fill="${BLACK}" stroke="${WHITE}" stroke-width="7" stroke-linejoin="round"/>
     ${eyeMarkup()}`;
 }
 
@@ -407,19 +449,29 @@ function limiterMark() {
 }
 
 function subLowMark() {
-  const bassBody =
-    "M105 228 C137 189 180 168 224 168 C257 168 283 180 295 198 " +
-    "C304 212 300 225 287 235 C305 247 307 263 292 278 " +
-    "C251 294 171 286 105 244 L123 238 Z";
-  return `<path d="${bassBody}" fill="${BLACK}"/>
-    <g fill="none" stroke="${WHITE}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="${bassBody}"/>
-      <path d="M278 194 L410 105 L438 130 L296 228 Z" fill="${BLACK}" stroke-width="6"/>
-      <path d="M286 202 L424 116 M289 209 L429 121 M292 216 L433 126 M295 223 L437 131" stroke-width="3.8"/>
-      <path d="M410 105 L430 90 L458 113 L438 130 Z" fill="${BLACK}" stroke-width="6"/>
-      <path d="M428 96 L435 85 M439 103 L449 94 M447 116 L459 120 M435 128 L444 140"/>
-      <path d="M274 232 C258 226 244 230 237 242 C230 254 237 267 250 271"/>
-      <path d="M225 214 L251 210 L257 244 L231 248 Z M258 206 L278 204 L284 236 L264 240 Z" stroke-width="4"/>
+  const bassHead =
+    "M104 228 C137 190 181 169 224 166 L302 174 " +
+    "C343 178 373 195 385 219 C396 242 386 266 361 283 " +
+    "C331 303 286 305 242 295 C188 284 143 267 104 244 L123 238 Z";
+  return `<path d="${bassHead}" fill="${BLACK}"/>
+    <g fill="none" stroke="${WHITE}" stroke-linecap="round" stroke-linejoin="round">
+      <path d="${bassHead}" stroke-width="7"/>
+      <path d="M207 194 V270" stroke-width="7"/>
+      <path d="M211 211 L252 204 M211 224 L290 199
+        M211 237 L329 205 M211 250 L361 219"
+        stroke-width="5"/>
+      <circle cx="252" cy="204" r="7" fill="${BLACK}" stroke-width="5"/>
+      <circle cx="290" cy="199" r="7" fill="${BLACK}" stroke-width="5"/>
+      <circle cx="329" cy="205" r="7" fill="${BLACK}" stroke-width="5"/>
+      <circle cx="361" cy="219" r="7" fill="${BLACK}" stroke-width="5"/>
+      <path d="M252 197 L250 159 M290 192 L291 153
+        M329 198 L337 163 M361 212 L375 181" stroke-width="7"/>
+    </g>
+    <g fill="${BLACK}" stroke="${WHITE}" stroke-width="6" stroke-linejoin="round">
+      <rect x="235" y="136" width="30" height="22" rx="5"/>
+      <rect x="276" y="130" width="30" height="22" rx="5"/>
+      <rect x="323" y="141" width="30" height="22" rx="5" transform="rotate(8 338 152)"/>
+      <rect x="362" y="159" width="30" height="22" rx="5" transform="rotate(16 377 170)"/>
     </g>
     ${eyeMarkup()}`;
 }
@@ -456,8 +508,17 @@ function iconSvg(product) {
         <stop offset="0.68" stop-color="#EF67D5"/>
         <stop offset="1" stop-color="#FF9D4D"/>
       </linearGradient>
+      <radialGradient id="reverbBloom" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#F067B7" stop-opacity="0.42"/>
+        <stop offset="0.48" stop-color="#45E3D2" stop-opacity="0.2"/>
+        <stop offset="0.76" stop-color="#F6C85F" stop-opacity="0.11"/>
+        <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+      </radialGradient>
       <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
         <feGaussianBlur stdDeviation="5"/>
+      </filter>
+      <filter id="reverbBlur" x="-30%" y="-40%" width="160%" height="180%">
+        <feGaussianBlur stdDeviation="18"/>
       </filter>
     </defs>
     <rect width="500" height="500" fill="${BLACK}"/>
