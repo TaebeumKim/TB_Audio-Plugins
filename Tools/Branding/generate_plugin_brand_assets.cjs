@@ -141,6 +141,23 @@ function compressorMark() {
     ${exactMark({ transform: transformAround(250, 250, 1, 0.72) })}`;
 }
 
+function delayMark() {
+  const echoes = [
+    { x: 400, y: 194, scale: 0.26, opacity: 0.14 },
+    { x: 348, y: 214, scale: 0.4, opacity: 0.28 },
+    { x: 282, y: 236, scale: 0.56, opacity: 0.5 },
+    { x: 198, y: 260, scale: 0.76, opacity: 1 },
+  ];
+  return echoes
+    .map(({ x, y, scale, opacity }) =>
+      exactMark({
+        transform: transformAround(x, y, scale),
+        opacity,
+      })
+    )
+    .join("");
+}
+
 function distortionMark() {
   return `<g fill="none" stroke="${WHITE}" stroke-width="11" stroke-linecap="square" stroke-linejoin="miter">
       <path d="M110 228 H126 V214 H142 V200 H164 V188 H188 V178 H220 V170 H258 V174 H286 V184 H310 V198 H326 V216 H334 V266 H306 V276 H270 V284 H220 V282 H180 V274 H150 V262 H126 V250 H110 L128 239 Z"/>
@@ -307,12 +324,12 @@ function parallelReverbMark() {
   ];
   return (
     `<ellipse cx="250" cy="250" rx="175" ry="125"
-      fill="url(#reverbBloom)" filter="url(#reverbBlur)" opacity="0.8"/>` +
+      fill="url(#reverbBloom)" filter="url(#reverbBlur)" opacity="0.95"/>` +
     variants
       .map(
         ({ x, y, color }) =>
-          `<g filter="url(#softBlur)" opacity="0.28">${exactMark({
-            transform: transformAround(x - 5, y + 5, 0.68),
+          `<g filter="url(#softBlur)" opacity="0.46">${exactMark({
+            transform: transformAround(x - 7, y + 7, 0.68),
             fill: color,
           })}</g>`
       )
@@ -322,6 +339,7 @@ function parallelReverbMark() {
         exactMark({
           transform: transformAround(x, y, 0.68),
           fill: color,
+          opacity: 0.72,
         })
       )
       .join("")
@@ -427,24 +445,24 @@ function stepMark() {
 }
 
 function tuneMark() {
-  const fishTransform = transformAround(280, 250, 0.78);
+  const fishTransform = transformAround(292, 250, 0.78);
   return `${exactMark({ transform: fishTransform })}
-    <g transform="${fishTransform}" fill="none" stroke="${WHITE}"
-      stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M137 237 C148 249 163 249 174 238"/>
-    </g>
     <g fill="${BLACK}" stroke="${WHITE}" stroke-width="8"
       stroke-linecap="round" stroke-linejoin="round">
-      <path d="M77 174 C61 179 54 195 59 212 L68 234
-        C74 250 91 257 105 249 C119 241 121 224 113 209
-        L102 187 C97 177 87 172 77 174 Z"/>
-      <path d="M96 248 L123 301 L105 310 L79 257 Z"/>
+      <path d="M142 158
+        C119 158 104 176 104 199
+        L104 219
+        C104 242 119 260 142 260
+        C165 260 180 242 180 219
+        L180 199
+        C180 176 165 158 142 158 Z"/>
+      <path d="M127 260 H157 V322 H127 Z"/>
     </g>
     <g fill="none" stroke="${WHITE}" stroke-width="5"
-      stroke-linecap="round" opacity="0.9">
-      <path d="M68 197 L103 187 M65 209 L109 198 M69 222 L113 211"/>
-      <path d="M116 211 C125 205 131 198 134 190"/>
-      <path d="M125 228 C136 222 143 214 147 204"/>
+      stroke-linecap="round">
+      <path d="M116 187 H168"/>
+      <path d="M112 204 H172"/>
+      <path d="M112 221 H172"/>
     </g>`;
 }
 
@@ -593,6 +611,7 @@ function subLowMark() {
 const products = [
   { id: "tb_center", label: "TB CENTER", render: centerMark },
   { id: "tb_compressor", label: "TB COMPRESSOR", render: compressorMark },
+  { id: "tb_delay", label: "TB DELAY", render: delayMark },
   { id: "tb_distortion", label: "TB DISTORTION", render: distortionMark },
   { id: "tb_disperser", label: "TB DISPERSER", render: disperserMark },
   { id: "tb_eq", label: "TB EQ", render: eqMark },
@@ -629,10 +648,10 @@ function iconSvg(product) {
         <stop offset="1" stop-color="#000000" stop-opacity="0"/>
       </radialGradient>
       <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
-        <feGaussianBlur stdDeviation="5"/>
+        <feGaussianBlur stdDeviation="8.5"/>
       </filter>
       <filter id="reverbBlur" x="-30%" y="-40%" width="160%" height="180%">
-        <feGaussianBlur stdDeviation="18"/>
+        <feGaussianBlur stdDeviation="24"/>
       </filter>
     </defs>
     <rect width="500" height="500" fill="${BLACK}"/>
@@ -678,7 +697,7 @@ async function renderProduct(product) {
 
 async function buildContactSheet(iconSize, filename) {
   const columns = 5;
-  const rows = 4;
+  const rows = Math.ceil(products.length / columns);
   const cellWidth = iconSize >= 180 ? 240 : 170;
   const cellHeight = iconSize >= 180 ? 250 : 108;
   const width = columns * cellWidth;
@@ -720,15 +739,16 @@ async function buildSocialPreview() {
   const width = 1280;
   const height = 640;
   const composites = [];
-  const iconSize = 112;
+  const iconSize = 86;
   const startX = 650;
   const startY = 70;
-  const gapX = 118;
-  const gapY = 122;
+  const columns = 7;
+  const gapX = 89;
+  const gapY = 155;
 
   for (let index = 0; index < products.length; index += 1) {
-    const row = Math.floor(index / 5);
-    const column = index % 5;
+    const row = Math.floor(index / columns);
+    const column = index % columns;
     const icon = await sharp(path.join(masterDir, `${products[index].id}.png`))
       .resize(iconSize, iconSize, { kernel: sharp.kernel.lanczos3 })
       .png()
@@ -745,7 +765,7 @@ async function buildSocialPreview() {
     <text x="0" y="184" font-family="Arial, sans-serif" font-size="70" font-weight="800" letter-spacing="3" fill="#FFFFFF">PLUG-INS</text>
     <path d="M0 224 H360" stroke="#FFFFFF" stroke-width="5"/>
     <text x="0" y="275" font-family="Arial, sans-serif" font-size="23" font-weight="600" letter-spacing="4" fill="#CFCFCF">TEAM IMPULSE IMPACT</text>
-    <text x="0" y="335" font-family="Arial, sans-serif" font-size="20" fill="#A6A6A6">One mark. Twenty integrated redraws.</text>
+    <text x="0" y="335" font-family="Arial, sans-serif" font-size="20" fill="#A6A6A6">One mark. Twenty-one integrated redraws.</text>
   </svg>`);
   composites.unshift({ input: title, left: 70, top: 80 });
 

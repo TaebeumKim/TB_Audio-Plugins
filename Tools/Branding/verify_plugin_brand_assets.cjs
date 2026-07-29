@@ -33,6 +33,7 @@ const referenceMarkSha256 =
 const ids = [
   "tb_center",
   "tb_compressor",
+  "tb_delay",
   "tb_distortion",
   "tb_disperser",
   "tb_eq",

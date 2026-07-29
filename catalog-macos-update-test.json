@@ -488,7 +488,7 @@
       "category": "Reverb",
       "price": 3,
       "description": "Parallel reverb.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=mark-noise-connected-silver-headphones-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=mark-reverb-softer-decay-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=1.2.0",
         "sha256": "7ada2c00eb3799d26fe630de8e5bfc98480503f3f5a262faf110782e1cda464f",
@@ -674,7 +674,7 @@
       "category": "Voice",
       "price": 3,
       "description": "Direction-aware monophonic vocal pitch correction.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=mark-noise-connected-silver-headphones-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=mark-tune-symmetric-mic-20260729",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=1.1.0",
         "sha256": "0e0e31c0aa614d5cf2c9b125989b7a8b2555721b53a81aa61603e6a7ce0be251",
