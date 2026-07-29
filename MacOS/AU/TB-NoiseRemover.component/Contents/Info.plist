@@ -4,23 +4,23 @@
 <plist>
   <dict>
     <key>CFBundleExecutable</key>
-    <string>TB-InvertedPhaser</string>
+    <string>TB-NoiseRemover</string>
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.teamimpulseimpact.tb-invertedphaser</string>
+    <string>com.teamimpulseimpact.tb-noiseremover</string>
     <key>CFBundleName</key>
-    <string>TB-InvertedPhaser</string>
+    <string>TB-NoiseRemover</string>
     <key>CFBundleDisplayName</key>
-    <string>TB-InvertedPhaser</string>
+    <string>TB-NoiseRemover</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.0.1</string>
+    <string>1.1.1</string>
     <key>CFBundleVersion</key>
-    <string>1.0.1</string>
+    <string>1.1.1</string>
     <key>NSHumanReadableCopyright</key>
     <string></string>
     <key>NSHighResolutionCapable</key>
@@ -29,19 +29,19 @@
     <array>
       <dict>
         <key>name</key>
-        <string>Team Impulse Impact: TB-InvertedPhaser</string>
+        <string>Team Impulse Impact: TB-NoiseRemover</string>
         <key>description</key>
-        <string>TB-InvertedPhaser</string>
+        <string>TB-NoiseRemover</string>
         <key>factoryFunction</key>
-        <string>TB_InvertedPhaserAUFactory</string>
+        <string>TB_NoiseRemoverAUFactory</string>
         <key>manufacturer</key>
         <string>TbSd</string>
         <key>type</key>
         <string>aufx</string>
         <key>subtype</key>
-        <string>Tbip</string>
+        <string>Qc7o</string>
         <key>version</key>
-        <integer>65537</integer>
+        <integer>65793</integer>
         <key>resourceUsage</key>
         <dict>
           <key>network.client</key>
