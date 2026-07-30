@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-30T14:22:51+09:00",
+  "updatedAt": "2026-07-30T14:30:53+09:00",
   "hubVersion": "1.3.10",
   "hub": {
     "version": "1.3.10",
@@ -352,11 +352,11 @@
       "id": "tb_inverted_flanger",
       "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.2.0",
+        "version": "1.3.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "우상단 컨트롤과 effect-fish 사이 간격을 확보해 헤더 요소가 겹치지 않도록 조정했습니다.",
+          "effect-fish 표시 크기를 정규화하고 축소 렌더링의 선명도를 개선했습니다."
         ]
       },
       "portfolio": {
@@ -371,16 +371,16 @@
         "visible": true
       },
       "name": "TB Inverted Flanger",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Modulation",
       "price": 3,
       "description": "Inverted flanging.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=1.3.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=1.2.0",
-        "sha256": "12888a4c41ac114383019ad4459a88f57db3d077387cb2bf6c27eec045ee47e5",
-        "sizeBytes": 2367739
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=1.3.0",
+        "sha256": "eae7497ef8324a70b562f7b3b0d1e4ad01203c6eab5152275b5ecd056f38ef5c",
+        "sizeBytes": 2373527
       },
       "macos": {
         "formats": {
@@ -641,11 +641,11 @@
       "id": "tb_scrambler",
       "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "2.2.0",
+        "version": "2.3.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "우상단 컨트롤과 effect-fish 사이 간격을 확보해 헤더 요소가 겹치지 않도록 조정했습니다.",
+          "effect-fish 표시 크기를 정규화하고 축소 렌더링의 선명도를 개선했습니다."
         ]
       },
       "portfolio": {
@@ -660,16 +660,16 @@
         "visible": true
       },
       "name": "TB Scrambler",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "category": "Creative",
       "price": 3,
       "description": "Scramble and glitch effects.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=2.3.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.2.0",
-        "sha256": "3e99641d20030082d7ca977eb62628d54ea0e7fe81c3178bd0e39bc2ec6f0694",
-        "sizeBytes": 3494037
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.3.0",
+        "sha256": "c2648e341bcfdb8ca9d7a79d1bf2001d7e1ef57512074d46d81faff895d5beaa",
+        "sizeBytes": 3497305
       },
       "macos": {
         "formats": {
@@ -1029,10 +1029,11 @@
       "id": "tb_limiter",
       "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.0.0",
-        "date": "2026-07-28",
+        "version": "1.1.0",
+        "date": "2026-07-30",
         "notesKo": [
-          "Initial limiter release."
+          "간단한 리미팅, 일반 마스터링, RMS 중심 스무딩을 위한 세 가지 팩토리 프리셋을 추가했습니다.",
+          "True Peak ceiling, Attack/lookahead, Enhance, RMS Assist/Balance와 선택형 TPDF Dither를 한 화면에서 사용할 수 있습니다."
         ]
       },
       "portfolio": {
@@ -1047,16 +1048,16 @@
         "visible": true
       },
       "name": "TB Limiter",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Dynamics",
       "price": 3,
       "description": "True peak mastering limiter.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_limiter.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_limiter.png?v=1.1.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Limiter.zip?v=1.0.0",
-        "sha256": "8ef932af9019e923e548c3d83688dc01322abc261136ad95ce92330361d7d425",
-        "sizeBytes": 3220192
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Limiter.zip?v=1.1.0",
+        "sha256": "6863b71c2f442de2fbe2389e2b1598f9a1f6180e423e1d099cd4b1a04bfbf9a4",
+        "sizeBytes": 3238366
       },
       "macos": {
         "formats": {
@@ -1081,11 +1082,11 @@
       "id": "tb_sublow",
       "updatedAt": "2026-07-30",
       "latestUpdate": {
-        "version": "1.1.0",
+        "version": "1.2.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "우상단 effect-fish의 표시 크기와 안전 여백을 조정했습니다.",
+          "effect-fish를 알파 경계 기준으로 정규화하고 축소 렌더링의 선명도를 개선했습니다."
         ]
       },
       "portfolio": {
@@ -1100,16 +1101,16 @@
         "visible": true
       },
       "name": "TB SubLow",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Creative",
       "price": 3,
       "description": "Sub-bass generator.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_sublow.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_sublow.png?v=1.2.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.1.0",
-        "sha256": "f0321e40ec2df033e97588d322c5f46ae013342480f6d53a0502e89197be4292",
-        "sizeBytes": 2433215
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.2.0",
+        "sha256": "e46c7e0494766a33d033906c7089a95e6bb3c65b2196d23bf1dd3399399780e1",
+        "sizeBytes": 2440012
       },
       "macos": {
         "formats": {
