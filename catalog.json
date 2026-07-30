@@ -1,15 +1,15 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-30T01:05:27+09:00",
-  "hubVersion": "1.3.8",
+  "updatedAt": "2026-07-30T13:29:13+09:00",
+  "hubVersion": "1.3.9",
   "hub": {
-    "version": "1.3.8",
-    "notes": "Makes plug-in artwork larger on library cards for easier recognition.",
+    "version": "1.3.9",
+    "notes": "Adds optional anonymous usage analytics consent, per-plug-in likes and rankings, immediate install sync, and uninstall data deletion.",
     "windows": {
-      "version": "1.3.8",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.8/TBHub-Setup-1.3.8.exe",
-      "sha256": "090e8b9b14ae12ef4bf5131438b635b06c098c2db6ee456ed7c647bd5f07c546",
-      "sizeBytes": 59498125
+      "version": "1.3.9",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.9/TBHub-Setup-1.3.9.exe",
+      "sha256": "deeab1b26a710b6cbb7323c1871c0735a6a51c2fc4d6c35ed9047995db9e6346",
+      "sizeBytes": 59501245
     },
     "macos": {
       "version": "1.3.7",
