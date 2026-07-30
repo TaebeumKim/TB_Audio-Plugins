@@ -1,15 +1,15 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-30T17:06:49+09:00",
-  "hubVersion": "1.3.12",
+  "updatedAt": "2026-07-30T17:24:14+09:00",
+  "hubVersion": "1.3.13",
   "hub": {
-    "version": "1.3.12",
-    "notes": "Fixes direct updates from legacy Hub versions by showing required analytics consent when older launchers start Setup silently.",
+    "version": "1.3.13",
+    "notes": "Displays the installed Hub version below Catalog v1 for quick reference.",
     "windows": {
-      "version": "1.3.12",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.12/TBHub-Setup-1.3.12.exe",
-      "sha256": "b89f1896fe05208d8a7f57366ecea3e96de54fbc084ddc794f995e270de7e3e1",
-      "sizeBytes": 59516223
+      "version": "1.3.13",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.13/TBHub-Setup-1.3.13.exe",
+      "sha256": "0bf008081253a4146bff329b17108ab827c8f2a9f2d483e0de7c16702edb3fa7",
+      "sizeBytes": 59515943
     },
     "macos": {
       "version": "1.3.7",
