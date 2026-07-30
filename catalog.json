@@ -1,15 +1,15 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-30T13:29:13+09:00",
-  "hubVersion": "1.3.9",
+  "updatedAt": "2026-07-30T13:55:23+09:00",
+  "hubVersion": "1.3.10",
   "hub": {
-    "version": "1.3.9",
-    "notes": "Adds optional anonymous usage analytics consent, per-plug-in likes and rankings, immediate install sync, and uninstall data deletion.",
+    "version": "1.3.10",
+    "notes": "Adds a settings window for update checks, Windows notifications, and analytics; requires analytics consent during setup; and lets revoked users re-enable likes from plug-in cards.",
     "windows": {
-      "version": "1.3.9",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.9/TBHub-Setup-1.3.9.exe",
-      "sha256": "deeab1b26a710b6cbb7323c1871c0735a6a51c2fc4d6c35ed9047995db9e6346",
-      "sizeBytes": 59501245
+      "version": "1.3.10",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.10/TBHub-Setup-1.3.10.exe",
+      "sha256": "8c2ab89dc87f331342573b11a5ea7763b584c8f33c574516ace71b74588e0705",
+      "sizeBytes": 59508936
     },
     "macos": {
       "version": "1.3.7",
