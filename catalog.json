@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-07-30T17:24:14+09:00",
+  "updatedAt": "2026-08-01T14:47:51.486Z",
   "hubVersion": "1.3.13",
   "hub": {
     "version": "1.3.13",
@@ -12,10 +12,11 @@
       "sizeBytes": 59515943
     },
     "macos": {
-      "version": "1.3.7",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-macos-v1.3.7/TBHub-1.3.7-macOS-AppleSilicon.dmg",
-      "sha256": "79e744da7637cb4c78a789d5de47991e01cd132c23d51392ca80f3fdce7313ff",
-      "sizeBytes": 53884948
+      "version": "1.3.8",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-macos-v1.3.8/TBHub-1.3.8-macOS-AppleSilicon.dmg",
+      "sha256": "ae5287799848adb91a309f9a11f4d3ae2ba4ea79711ea9556c618a733e82e725",
+      "sizeBytes": 53852097,
+      "notes": "System-wide VST3/AU install, separate Install/Update all actions, and one administrator-approved atomic transaction."
     }
   },
   "plugins": [
