@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-01T14:47:51.486Z",
+  "updatedAt": "2026-08-02T04:14:56+09:00",
   "hubVersion": "1.3.13",
   "hub": {
     "version": "1.3.13",
@@ -75,13 +75,13 @@
     },
     {
       "id": "tb_compressor",
-      "updatedAt": "2026-07-30",
+      "updatedAt": "2026-08-02",
       "latestUpdate": {
-        "version": "1.3.0",
-        "date": "2026-07-30",
+        "version": "1.4.0",
+        "date": "2026-08-02",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "외부 사이드체인 입력과 로우컷·하이컷 감지 필터를 추가했습니다.",
+          "새추레이션을 독립적으로 켜고 Drive, Mix와 회로 모델을 조절할 수 있도록 확장했습니다."
         ]
       },
       "portfolio": {
@@ -96,16 +96,16 @@
         "visible": true
       },
       "name": "TB Compressor",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "category": "Dynamics",
       "price": 3,
       "description": "Peak and RMS compression.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=1.4.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=1.3.0",
-        "sha256": "b2d205bda5b39dd8767e3a0390b2aaa78a663a4035df2bd7edbf5e381032933f",
-        "sizeBytes": 2809471
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=1.4.0",
+        "sha256": "6d52f7aebb628380729a3d9f1f9c8e5401cb6f5489243e0d39f32936286255aa",
+        "sizeBytes": 2815867
       },
       "macos": {
         "formats": {
@@ -234,12 +234,13 @@
     },
     {
       "id": "tb_eq",
-      "updatedAt": "2026-07-30",
+      "updatedAt": "2026-08-02",
       "latestUpdate": {
-        "version": "1.3.0",
-        "date": "2026-07-29",
+        "version": "1.4.0",
+        "date": "2026-08-02",
         "notesKo": [
-          "All Pass filter added."
+          "전체 화면형 애널라이저에서 밴드 생성·선택·드래그와 PRE/POST/FREEZE 조작 흐름을 개선했습니다.",
+          "올패스 슬로프 변경과 위상 곡선 렌더링의 반응성과 안정성을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -254,16 +255,16 @@
         "visible": true
       },
       "name": "TB EQ",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "category": "EQ",
       "price": 3,
       "description": "Parametric equalizer.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=1.4.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=1.3.0",
-        "sha256": "e75fdb26a5ebc059c529f24439d25ea1381bf867e6e139bd4865db51d138edea",
-        "sizeBytes": 6807119
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=1.4.0",
+        "sha256": "3c0c0477bb85aad0e86f5e156252f3315cd82d8a953d69a2da80318c3ac6d135",
+        "sizeBytes": 6807876
       },
       "macos": {
         "formats": {
@@ -286,13 +287,13 @@
     },
     {
       "id": "tb_colorizer",
-      "updatedAt": "2026-07-30",
+      "updatedAt": "2026-08-02",
       "latestUpdate": {
-        "version": "2.2.0",
-        "date": "2026-07-30",
+        "version": "2.3.0",
+        "date": "2026-08-02",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Green과 Yellow 컬러를 각각 중역 바디와 고역 에어를 강조하는 독립적인 음색으로 조정했습니다.",
+          "Violet 모드를 제거하되 기존 세션의 컬러 인덱스 호환성을 유지했습니다."
         ]
       },
       "portfolio": {
@@ -307,16 +308,16 @@
         "visible": true
       },
       "name": "TB Colorizer",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "category": "Voice",
       "price": 3,
       "description": "Voice color shaping.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=2.3.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.2.0",
-        "sha256": "bc3a7d78eb2fb5c6496e321f07b95bc3fbee817b90bfed85604713ba3181a2f3",
-        "sizeBytes": 2972461
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.3.0",
+        "sha256": "c062d06fe4c502ba25fef7431dc002f5445edac9a363a4e6957f79b9ae204f2e",
+        "sizeBytes": 2988284
       },
       "macos": {
         "formats": {
@@ -657,12 +658,13 @@
     },
     {
       "id": "tb_transient_shaper",
-      "updatedAt": "2026-07-30",
+      "updatedAt": "2026-08-02",
       "latestUpdate": {
-        "version": "1.3.0",
-        "date": "2026-07-29",
+        "version": "1.4.0",
+        "date": "2026-08-02",
         "notesKo": [
-          "Controls and Delta improved."
+          "EQ 모드 애널라이저와 DSP가 같은 감도 곡선과 기준선을 사용하도록 정렬했습니다.",
+          "모니터 소스별 Delta 동작과 레이턴시를 통일하고 애널라이저 렌더링 할당을 줄였습니다."
         ]
       },
       "portfolio": {
@@ -677,16 +679,16 @@
         "visible": true
       },
       "name": "TB Spectral Transient Shaper",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "category": "Dynamics",
       "price": 3,
       "description": "Spectral transient shaping.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=1.4.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.3.0",
-        "sha256": "5d37db11bf081254a0840baac826a73da3e69f72fc400a5e45d2021691e06ff7",
-        "sizeBytes": 2862050
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.4.0",
+        "sha256": "e8049a54d5c605bf481f0d83ba7daa7e1b9ed0b4a0440e8eea5e0c45c0bbe224",
+        "sizeBytes": 2860737
       },
       "macos": {
         "formats": {
@@ -974,13 +976,13 @@
     },
     {
       "id": "tb_limiter",
-      "updatedAt": "2026-07-30",
+      "updatedAt": "2026-08-02",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-07-30",
+        "version": "1.2.0",
+        "date": "2026-08-02",
         "notesKo": [
-          "간단한 리미팅, 일반 마스터링, RMS 중심 스무딩을 위한 세 가지 팩토리 프리셋을 추가했습니다.",
-          "True Peak ceiling, Attack/lookahead, Enhance, RMS Assist/Balance와 선택형 TPDF Dither를 한 화면에서 사용할 수 있습니다."
+          "Enhance 50–100% 구간에 더 빠른 매핑과 최대 3 dB의 프리 리미터 드라이브를 적용했습니다.",
+          "상단 Enhance의 True Peak 가드를 조정하면서 기존 파라미터와 상태 호환성을 유지했습니다."
         ]
       },
       "portfolio": {
@@ -995,16 +997,16 @@
         "visible": true
       },
       "name": "TB Limiter",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Dynamics",
       "price": 3,
       "description": "True peak mastering limiter.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_limiter.png?v=1.1.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_limiter.png?v=1.2.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Limiter.zip?v=1.1.0",
-        "sha256": "6863b71c2f442de2fbe2389e2b1598f9a1f6180e423e1d099cd4b1a04bfbf9a4",
-        "sizeBytes": 3238366
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Limiter.zip?v=1.2.0",
+        "sha256": "610cbc5eb92813cb019bc4eac4dc4cebec0c2b72150330dd03bf25c9b7d1adf4",
+        "sizeBytes": 3239153
       },
       "macos": {
         "formats": {
@@ -1128,6 +1130,111 @@
             "sizeBytes": 2996337
           }
         }
+      }
+    },
+    {
+      "id": "tb_pitch_shifter",
+      "updatedAt": "2026-08-02",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-08-02",
+        "notesKo": [
+          "Pitch ±24 st와 Formant ±12 st를 독립적으로 조절할 수 있습니다.",
+          "다섯 개의 Factory 프리셋과 사용자 프리셋 저장·불러오기를 제공합니다."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_pitch_shifter.png",
+        "descriptionKo": "피치와 포먼트를 두 노브로 분리해 음정과 음색의 크기를 독립적으로 이동합니다.",
+        "tags": [
+          "Pitch",
+          "Formant",
+          "Voice"
+        ],
+        "order": 22,
+        "visible": true
+      },
+      "name": "TB Pitch Shifter",
+      "version": "1.0.0",
+      "category": "Pitch",
+      "price": 3,
+      "description": "Independent pitch and formant shifting.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_pitch_shifter.png?v=1.0.0",
+      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_PitchShifter.zip?v=1.0.0",
+        "sha256": "ffe202aced80d1c49eb4184cf535b7a1ca4d7d8f125b42c8c5086febce877edb",
+        "sizeBytes": 2372705
+      }
+    },
+    {
+      "id": "tb_resonator",
+      "updatedAt": "2026-08-02",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-08-02",
+        "notesKo": [
+          "Tune, Body, Memory, Touch, Mix로 입력에 조율된 공명과 물성을 더합니다.",
+          "12개 Factory 프리셋과 사용자 프리셋 저장·불러오기를 제공합니다."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_resonator.png",
+        "descriptionKo": "입력이 남길 음정·물성·시간을 골라 하나의 연주 가능한 공명체로 만듭니다.",
+        "tags": [
+          "Resonator",
+          "Modal",
+          "Creative"
+        ],
+        "order": 23,
+        "visible": true
+      },
+      "name": "TB Resonator",
+      "version": "1.0.0",
+      "category": "Creative",
+      "price": 3,
+      "description": "Tunable modal resonator for pitched, playable textures.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_resonator.png?v=1.0.0",
+      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Resonator.zip?v=1.0.0",
+        "sha256": "d50607a2844d38993c1bce8b7cb2e099b6797449c2ae2f49e91d2afb8c6aa6a4",
+        "sizeBytes": 5684818
+      }
+    },
+    {
+      "id": "tb_ring_modulation",
+      "updatedAt": "2026-08-02",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-08-02",
+        "notesKo": [
+          "0.1 Hz–5 kHz 내부 캐리어로 트레몰로부터 금속성 사이드밴드까지 만들 수 있습니다.",
+          "Sine–Triangle–Square 파형 모핑과 Wet Tone, 여섯 개 Factory 프리셋을 제공합니다."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_ring_modulation.png",
+        "descriptionKo": "내부 캐리어로 트레몰로부터 금속성 사이드밴드까지 만드는 링 모듈레이터입니다.",
+        "tags": [
+          "Ring Mod",
+          "Modulation",
+          "Metallic"
+        ],
+        "order": 24,
+        "visible": true
+      },
+      "name": "TB Ring Modulation",
+      "version": "1.0.0",
+      "category": "Modulation",
+      "price": 3,
+      "description": "Internal-carrier ring modulation from tremolo to metallic sidebands.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_ring_modulation.png?v=1.0.0",
+      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_RingModulation.zip?v=1.0.0",
+        "sha256": "c976bd5ab292e45f4e8045a21c20d397a777a853b68ae784223f5db0d5de354c",
+        "sizeBytes": 5323238
       }
     }
   ],
