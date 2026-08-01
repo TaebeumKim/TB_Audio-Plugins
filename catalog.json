@@ -552,7 +552,7 @@
     },
     {
       "id": "tb_parallel_reverb",
-      "updatedAt": "2026-07-30",
+      "updatedAt": "2026-08-02",
       "latestUpdate": {
         "version": "1.3.0",
         "date": "2026-07-30",
@@ -587,18 +587,18 @@
       "macos": {
         "formats": {
           "vst3": {
-            "version": "1.0.1",
+            "version": "1.0.2",
             "bundleName": "TB-ParallelReverb.vst3",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-ParallelReverb-VST3-macOS-arm64.zip",
-            "sha256": "1f5d76cccd4115e967bb56113e034620c6d279d30a4375f28e4739ba22ff04b0",
-            "sizeBytes": 3692344
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r29-parallel-reverb-2026-08-02/TB-ParallelReverb-VST3-macOS-arm64.zip",
+            "sha256": "13ff5905d67d6c467e896ab674f5835a32d172e9bae8af6dc091f103aff269c2",
+            "sizeBytes": 3715969
           },
           "au": {
-            "version": "1.0.1",
+            "version": "1.0.2",
             "bundleName": "TB-ParallelReverb.component",
-            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-ParallelReverb-AU-macOS-arm64.zip",
-            "sha256": "7d7cef0ea415584f1c7462b8d9a05ee67d0ed4117a992274be34a71c55f7cf77",
-            "sizeBytes": 3584249
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r29-parallel-reverb-2026-08-02/TB-ParallelReverb-AU-macOS-arm64.zip",
+            "sha256": "ba9e1c6e3d55f7aa5c18003c93785f241e23caac8e2737d6f87a394e1a3f124d",
+            "sizeBytes": 3606966
           }
         }
       }
