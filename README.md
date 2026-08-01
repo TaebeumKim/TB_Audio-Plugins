@@ -16,7 +16,7 @@
     
 * **2026/07/12**
   - new plugins : TB_StepShifer, TB_InvertedPhaser
-  - new OS update : for MacOS VST3, AAX, AU(component)
+  - new OS update : for MacOS VST3, AU(component)
   - update GUI designe concept(all plugins)
 
 # Buy me a coffee?
@@ -42,7 +42,7 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 * **Professional Audio Quality:** High-resolution DSP tailored for professional studio environments.
 * **Optimized Performance:** Lightweight and highly optimized for low CPU consumption.
 * **Cross-Platform Support:** Fully compatible with Windows, macOS, and Linux.
-* **Industry-Standard Formats:** Available in VST3, Audio Unit (AU), and AAX formats.
+* **Industry-Standard Formats:** Available in VST3 and Audio Unit (AU) formats.
 * **100% Free:** Completely free for both personal and commercial audio production.
 
 ## 📦 Included Plug-ins
@@ -101,7 +101,6 @@ Extract the downloaded zip/archive file and move the plug-in files to your syste
 #### **macOS:**
 * **VST3:** `/Library/Audio/Plug-Ins/VST3`
 * **AU (Audio Unit):** `/Library/Audio/Plug-Ins/Components`
-* **AAX:** `/Library/Application Support/Avid/Audio/Plug-Ins`
 
 ## 📄 License
 The pre-compiled binaries distributed in this repository are licensed under the terms of the **MIT License**. You are free to use these plug-ins in any commercial or non-commercial musical works. For more detailed information, please refer to the [LICENSE](LICENSE) file.

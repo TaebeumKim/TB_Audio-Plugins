@@ -122,12 +122,6 @@
             "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-Compressor-AU-macOS-arm64.zip",
             "sha256": "4ab364ad94549e269f4cd78a4c0bdce901e511237bdab51d53a1f5318ca6d238",
             "sizeBytes": 3549947
-          },
-          "aax": {
-            "version": "1.1",
-            "bundleName": "TB-Compressor.aaxplugin",
-            "repoPath": "MacOS/AAX/TB-Compressor.aaxplugin",
-            "installMode": "elevated-copy"
           }
         }
       }
@@ -286,12 +280,6 @@
             "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-EQ-AU-macOS-arm64.zip",
             "sha256": "0742059a37433603b04ea145a9a3fd7d2720fe6009b681bc4d16096563fa2288",
             "sizeBytes": 7606238
-          },
-          "aax": {
-            "version": "1.0.0",
-            "bundleName": "TB-EQ.aaxplugin",
-            "repoPath": "MacOS/AAX/TB-EQ.aaxplugin",
-            "installMode": "elevated-copy"
           }
         }
       }
@@ -398,12 +386,6 @@
             "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-InvertedFlanger-AU-macOS-arm64.zip",
             "sha256": "b84e9d461ff124685f6d7853bb9931324b01e1e69af507a62840eac7b4d5950c",
             "sizeBytes": 2921574
-          },
-          "aax": {
-            "version": "1.0.0",
-            "bundleName": "TB-InvertedFlanger.aaxplugin",
-            "repoPath": "MacOS/AAX/TB-InvertedFlanger.aaxplugin",
-            "installMode": "elevated-copy"
           }
         }
       }
@@ -457,12 +439,6 @@
             "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-InvertedPhaser-AU-macOS-arm64.zip",
             "sha256": "4108744faa5b8219d8ff8fcf147cbe67f073fca0a0488059fe77468402a734b3",
             "sizeBytes": 2939388
-          },
-          "aax": {
-            "version": "1.0.0",
-            "bundleName": "TB-InvertedPhaser.aaxplugin",
-            "repoPath": "MacOS/AAX/TB-InvertedPhaser.aaxplugin",
-            "installMode": "elevated-copy"
           }
         }
       }
@@ -516,12 +492,6 @@
             "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-JewelDiggerAndFinder-AU-macOS-arm64.zip",
             "sha256": "076beda24e5d2c7dd5ec61ceaf0bbb96a11cb20515a7615a1350abcbe78cba4f",
             "sizeBytes": 2977611
-          },
-          "aax": {
-            "version": "1.0.0",
-            "bundleName": "TB-JewelDiggerAndFinder.aaxplugin",
-            "repoPath": "MacOS/AAX/TB-JewelDiggerAndFinder.aaxplugin",
-            "installMode": "elevated-copy"
           }
         }
       }
@@ -628,12 +598,6 @@
             "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-ParallelReverb-AU-macOS-arm64.zip",
             "sha256": "7d7cef0ea415584f1c7462b8d9a05ee67d0ed4117a992274be34a71c55f7cf77",
             "sizeBytes": 3584249
-          },
-          "aax": {
-            "version": "1.0.0",
-            "bundleName": "TB-ParallelReverb.aaxplugin",
-            "repoPath": "MacOS/AAX/TB-ParallelReverb.aaxplugin",
-            "installMode": "elevated-copy"
           }
         }
       }
@@ -739,12 +703,6 @@
             "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-SpectralTransientShaper-AU-macOS-arm64.zip",
             "sha256": "978843bea80e96fe03386a775e270f6de5ae6008f10d5b74161efd4c34006b23",
             "sizeBytes": 3608190
-          },
-          "aax": {
-            "version": "1.0.0",
-            "bundleName": "TB-TransientShaper.aaxplugin",
-            "repoPath": "MacOS/AAX/TB-TransientShaper.aaxplugin",
-            "installMode": "elevated-copy"
           }
         }
       }
@@ -798,12 +756,6 @@
             "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-StepShifter-AU-macOS-arm64.zip",
             "sha256": "95ad2bd737aeb584d6fc3f73162abd843b774ab2eb4ee22080cd953f18bea741",
             "sizeBytes": 3548243
-          },
-          "aax": {
-            "version": "1.0.0",
-            "bundleName": "TB-StepShifter.aaxplugin",
-            "repoPath": "MacOS/AAX/TB-StepShifter.aaxplugin",
-            "installMode": "elevated-copy"
           }
         }
       }
@@ -1016,12 +968,6 @@
             "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r17-corrected-2026-07-30/TB-XYZPanner-AU-macOS-arm64.zip",
             "sha256": "3ef687e204a42a41fac507b65f5522ffb72c2a1b117c758dcff58cfcbae10ce4",
             "sizeBytes": 3754141
-          },
-          "aax": {
-            "version": "1.0.0",
-            "bundleName": "TB-XYZPanner.aaxplugin",
-            "repoPath": "MacOS/AAX/TB-XYZPanner.aaxplugin",
-            "installMode": "elevated-copy"
           }
         }
       }
