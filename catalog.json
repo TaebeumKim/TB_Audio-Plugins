@@ -1165,6 +1165,24 @@
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_PitchShifter.zip?v=1.0.0",
         "sha256": "ffe202aced80d1c49eb4184cf535b7a1ca4d7d8f125b42c8c5086febce877edb",
         "sizeBytes": 2372705
+      },
+      "macos": {
+        "formats": {
+          "vst3": {
+            "version": "1.0.0",
+            "bundleName": "TB-PitchShifter.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r28-new-2026-08-02/TB-PitchShifter-VST3-macOS-arm64.zip",
+            "sha256": "0c4a1a5224d7d0d828a5c3a111738e24899220b9d3f76de02924658759e4f890",
+            "sizeBytes": 3063396
+          },
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-PitchShifter.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r28-new-2026-08-02/TB-PitchShifter-AU-macOS-arm64.zip",
+            "sha256": "0069808a09eddec974e73eea42b01d4de60dae9487b887229e0cdbfe32db17f1",
+            "sizeBytes": 2958768
+          }
+        }
       }
     },
     {
@@ -1200,6 +1218,24 @@
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Resonator.zip?v=1.0.0",
         "sha256": "d50607a2844d38993c1bce8b7cb2e099b6797449c2ae2f49e91d2afb8c6aa6a4",
         "sizeBytes": 5684818
+      },
+      "macos": {
+        "formats": {
+          "vst3": {
+            "version": "1.0.0",
+            "bundleName": "TB-Resonator.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r28-new-2026-08-02/TB-Resonator-VST3-macOS-arm64.zip",
+            "sha256": "391fd15c44da9b7c9fd6d5db4be02257cb650728e17741fed2e27762bb796aa3",
+            "sizeBytes": 6400674
+          },
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-Resonator.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r28-new-2026-08-02/TB-Resonator-AU-macOS-arm64.zip",
+            "sha256": "b504287a76cd061fc7383e1cf0c3296216731a2cfb8f653cc4dd3a74bf183820",
+            "sizeBytes": 6295038
+          }
+        }
       }
     },
     {
@@ -1235,6 +1271,72 @@
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_RingModulation.zip?v=1.0.0",
         "sha256": "c976bd5ab292e45f4e8045a21c20d397a777a853b68ae784223f5db0d5de354c",
         "sizeBytes": 5323238
+      },
+      "macos": {
+        "formats": {
+          "vst3": {
+            "version": "1.0.0",
+            "bundleName": "TB-RingModulation.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r28-new-2026-08-02/TB-RingModulation-VST3-macOS-arm64.zip",
+            "sha256": "061077ead67c7f16ff3a33f06edc0c545d3119e3f4cb05f04b921bbd9aed714e",
+            "sizeBytes": 6012091
+          },
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-RingModulation.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r28-new-2026-08-02/TB-RingModulation-AU-macOS-arm64.zip",
+            "sha256": "13e4203a42e9559377de4d0406e790aa7604585a5b47c9754841d225f1ca1201",
+            "sizeBytes": 5906683
+          }
+        }
+      }
+    },
+    {
+      "id": "tb_recorder",
+      "updatedAt": "2026-08-02",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-08-02",
+        "notesKo": [
+          "DAW 인서트 지점의 Mono/Stereo 신호를 원음 그대로 안전하게 기록합니다.",
+          "WAV·FLAC·AIFF·MP3·AAC·OGG 변환과 시간 단위 자동 분할을 제공합니다."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_recorder.png",
+        "descriptionKo": "DAW 인서트 신호를 기록하고 선택한 포맷과 시간 길이로 자동 변환·분할하는 레코더입니다.",
+        "tags": [
+          "Recorder",
+          "Utility",
+          "Capture"
+        ],
+        "order": 25,
+        "visible": true
+      },
+      "name": "TB Recorder",
+      "version": "1.0.0",
+      "category": "Utility",
+      "price": 3,
+      "description": "Insert-point recorder with automatic format conversion and splitting.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_recorder.png?v=1.0.0",
+      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "macos": {
+        "formats": {
+          "vst3": {
+            "version": "1.0.0",
+            "bundleName": "TB-Recorder.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r28-new-2026-08-02/TB-Recorder-VST3-macOS-arm64.zip",
+            "sha256": "4a15311d841b313982c17184f4aa913a4aa4745af10ea95438c61a020ff613ca",
+            "sizeBytes": 3505609
+          },
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-Recorder.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r28-new-2026-08-02/TB-Recorder-AU-macOS-arm64.zip",
+            "sha256": "77d595b76d1bd5c59ee861e12e3466207820b999384e0c4770898b286e53e554",
+            "sizeBytes": 3394326
+          }
+        }
       }
     }
   ],
