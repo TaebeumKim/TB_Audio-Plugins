@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-02T11:22:48+09:00",
+  "updatedAt": "2026-08-02T11:26:01+09:00",
   "hubVersion": "1.3.13",
   "hub": {
     "version": "1.3.13",
@@ -27,8 +27,8 @@
         "version": "1.3.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Unified each product's effect logo and product name into a single shared rack header.",
+          "Improved previous/next navigation and save/load workflows for the central preset control."
         ]
       },
       "portfolio": {
@@ -80,8 +80,8 @@
         "version": "2.0.0",
         "date": "2026-08-02",
         "notesKo": [
-          "사이드체인과 새추레이션까지 한 화면에서 읽히도록 전체 UI와 컨트롤 위계를 대규모로 재설계했습니다.",
-          "큰 디자인 변화의 규모를 반영해 메이저 버전을 2.0.0으로 올렸습니다."
+          "Redesigned the entire UI and control hierarchy so sidechain and saturation controls read clearly on a single screen.",
+          "Raised the major version to 2.0.0 to reflect the scale of the visual redesign."
         ]
       },
       "portfolio": {
@@ -133,8 +133,8 @@
         "version": "1.3.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Unified each product's effect logo and product name into a single shared rack header.",
+          "Improved previous/next navigation and save/load workflows for the central preset control."
         ]
       },
       "portfolio": {
@@ -186,8 +186,8 @@
         "version": "1.3.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Unified each product's effect logo and product name into a single shared rack header.",
+          "Improved previous/next navigation and save/load workflows for the central preset control."
         ]
       },
       "portfolio": {
@@ -239,8 +239,8 @@
         "version": "2.0.0",
         "date": "2026-08-02",
         "notesKo": [
-          "애널라이저 중심의 전체 화면 구조와 밴드 조작 위계, 노브·레이아웃을 대규모로 재설계했습니다.",
-          "큰 디자인 변화의 규모를 반영해 메이저 버전을 2.0.0으로 올렸습니다."
+          "Redesigned the analyzer-focused full-screen layout, band-control hierarchy, knobs, and overall arrangement.",
+          "Raised the major version to 2.0.0 to reflect the scale of the visual redesign."
         ]
       },
       "portfolio": {
@@ -292,8 +292,8 @@
         "version": "2.3.0",
         "date": "2026-08-02",
         "notesKo": [
-          "Green과 Yellow 컬러를 각각 중역 바디와 고역 에어를 강조하는 독립적인 음색으로 조정했습니다.",
-          "Violet 모드를 제거하되 기존 세션의 컬러 인덱스 호환성을 유지했습니다."
+          "Retuned Green and Yellow as distinct colors that emphasize midrange body and high-frequency air, respectively.",
+          "Removed Violet mode while preserving color-index compatibility with existing sessions."
         ]
       },
       "portfolio": {
@@ -345,8 +345,8 @@
         "version": "1.3.0",
         "date": "2026-07-30",
         "notesKo": [
-          "우상단 컨트롤과 effect-fish 사이 간격을 확보해 헤더 요소가 겹치지 않도록 조정했습니다.",
-          "effect-fish 표시 크기를 정규화하고 축소 렌더링의 선명도를 개선했습니다."
+          "Added spacing between the upper-right controls and the effect-fish to prevent header elements from overlapping.",
+          "Normalized the effect-fish display size and improved clarity at reduced render sizes."
         ]
       },
       "portfolio": {
@@ -398,8 +398,8 @@
         "version": "2.2.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Unified each product's effect logo and product name into a single shared rack header.",
+          "Improved previous/next navigation and save/load workflows for the central preset control."
         ]
       },
       "portfolio": {
@@ -451,8 +451,8 @@
         "version": "1.3.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Unified each product's effect logo and product name into a single shared rack header.",
+          "Improved previous/next navigation and save/load workflows for the central preset control."
         ]
       },
       "portfolio": {
@@ -504,8 +504,8 @@
         "version": "2.2.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Unified each product's effect logo and product name into a single shared rack header.",
+          "Improved previous/next navigation and save/load workflows for the central preset control."
         ]
       },
       "portfolio": {
@@ -557,8 +557,8 @@
         "version": "2.0.0",
         "date": "2026-08-02",
         "notesKo": [
-          "Glue, Bright, Space 세 엔진과 Room/Chamber, Plate/Spring, Hall/IR 모드를 병렬로 조합할 수 있습니다.",
-          "100개 Factory 프리셋과 엔진별 Solo, 톤·공간 세부 제어를 추가했습니다."
+          "The Glue, Bright, and Space engines can be combined in parallel with Room/Chamber, Plate/Spring, and Hall/IR modes.",
+          "Added 100 Factory presets, per-engine Solo, and detailed tone and space controls."
         ]
       },
       "portfolio": {
@@ -610,8 +610,8 @@
         "version": "2.3.0",
         "date": "2026-07-30",
         "notesKo": [
-          "우상단 컨트롤과 effect-fish 사이 간격을 확보해 헤더 요소가 겹치지 않도록 조정했습니다.",
-          "effect-fish 표시 크기를 정규화하고 축소 렌더링의 선명도를 개선했습니다."
+          "Added spacing between the upper-right controls and the effect-fish to prevent header elements from overlapping.",
+          "Normalized the effect-fish display size and improved clarity at reduced render sizes."
         ]
       },
       "portfolio": {
@@ -663,8 +663,8 @@
         "version": "1.4.0",
         "date": "2026-08-02",
         "notesKo": [
-          "EQ 모드 애널라이저와 DSP가 같은 감도 곡선과 기준선을 사용하도록 정렬했습니다.",
-          "모니터 소스별 Delta 동작과 레이턴시를 통일하고 애널라이저 렌더링 할당을 줄였습니다."
+          "Aligned the EQ-mode analyzer and DSP to use the same sensitivity curve and reference line.",
+          "Standardized Delta behavior and latency across monitor sources, and reduced analyzer rendering allocations."
         ]
       },
       "portfolio": {
@@ -716,8 +716,8 @@
         "version": "2.2.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Unified each product's effect logo and product name into a single shared rack header.",
+          "Improved previous/next navigation and save/load workflows for the central preset control."
         ]
       },
       "portfolio": {
@@ -769,8 +769,8 @@
         "version": "1.2.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Unified each product's effect logo and product name into a single shared rack header.",
+          "Improved previous/next navigation and save/load workflows for the central preset control."
         ]
       },
       "portfolio": {
@@ -822,8 +822,8 @@
         "version": "1.2.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Unified each product's effect logo and product name into a single shared rack header.",
+          "Improved previous/next navigation and save/load workflows for the central preset control."
         ]
       },
       "portfolio": {
@@ -875,8 +875,8 @@
         "version": "1.2.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Unified each product's effect logo and product name into a single shared rack header.",
+          "Improved previous/next navigation and save/load workflows for the central preset control."
         ]
       },
       "portfolio": {
@@ -928,8 +928,8 @@
         "version": "1.2.0",
         "date": "2026-07-30",
         "notesKo": [
-          "각 제품의 효과를 보여주는 로고와 제품명을 한 줄의 공통 랙 헤더로 정리했습니다.",
-          "중앙 프리셋의 이전·다음 탐색과 저장·불러오기 흐름을 개선했습니다."
+          "Unified each product's effect logo and product name into a single shared rack header.",
+          "Improved previous/next navigation and save/load workflows for the central preset control."
         ]
       },
       "portfolio": {
@@ -981,8 +981,8 @@
         "version": "1.2.0",
         "date": "2026-08-02",
         "notesKo": [
-          "Enhance 50–100% 구간에 더 빠른 매핑과 최대 3 dB의 프리 리미터 드라이브를 적용했습니다.",
-          "상단 Enhance의 True Peak 가드를 조정하면서 기존 파라미터와 상태 호환성을 유지했습니다."
+          "Applied a faster mapping across the 50–100% Enhance range and up to 3 dB of pre-limiter drive.",
+          "Adjusted the True Peak guard at high Enhance settings while preserving existing parameter and state compatibility."
         ]
       },
       "portfolio": {
@@ -1034,8 +1034,8 @@
         "version": "1.2.0",
         "date": "2026-07-30",
         "notesKo": [
-          "우상단 effect-fish의 표시 크기와 안전 여백을 조정했습니다.",
-          "effect-fish를 알파 경계 기준으로 정규화하고 축소 렌더링의 선명도를 개선했습니다."
+          "Adjusted the upper-right effect-fish display size and safe margins.",
+          "Normalized the effect-fish to its alpha bounds and improved clarity at reduced render sizes."
         ]
       },
       "portfolio": {
@@ -1139,8 +1139,8 @@
         "version": "1.0.0",
         "date": "2026-08-02",
         "notesKo": [
-          "Pitch ±24 st와 Formant ±12 st를 독립적으로 조절할 수 있습니다.",
-          "다섯 개의 Factory 프리셋과 사용자 프리셋 저장·불러오기를 제공합니다."
+          "Pitch ±24 st and Formant ±12 st can be adjusted independently.",
+          "Provides five Factory presets plus user preset save/load."
         ]
       },
       "portfolio": {
@@ -1192,8 +1192,8 @@
         "version": "1.0.0",
         "date": "2026-08-02",
         "notesKo": [
-          "Tune, Body, Memory, Touch, Mix로 입력에 조율된 공명과 물성을 더합니다.",
-          "12개 Factory 프리셋과 사용자 프리셋 저장·불러오기를 제공합니다."
+          "Tune, Body, Memory, Touch, and Mix add input-tuned resonance and physical character.",
+          "Provides 12 Factory presets plus user preset save/load."
         ]
       },
       "portfolio": {
@@ -1245,8 +1245,8 @@
         "version": "1.0.0",
         "date": "2026-08-02",
         "notesKo": [
-          "0.1 Hz–5 kHz 내부 캐리어로 트레몰로부터 금속성 사이드밴드까지 만들 수 있습니다.",
-          "Sine–Triangle–Square 파형 모핑과 Wet Tone, 여섯 개 Factory 프리셋을 제공합니다."
+          "A 0.1 Hz–5 kHz internal carrier covers everything from tremolo to metallic sidebands.",
+          "Includes Sine–Triangle–Square waveform morphing, Wet Tone, and six Factory presets."
         ]
       },
       "portfolio": {
@@ -1298,8 +1298,8 @@
         "version": "1.0.0",
         "date": "2026-08-02",
         "notesKo": [
-          "DAW 인서트 지점의 Mono/Stereo 신호를 원음 그대로 안전하게 기록합니다.",
-          "WAV·FLAC·AIFF·MP3·AAC·OGG 변환과 시간 단위 자동 분할을 제공합니다."
+          "Safely records the unaltered Mono/Stereo signal at the DAW insert point.",
+          "Supports WAV, FLAC, AIFF, MP3, AAC, and OGG conversion plus automatic time-based splitting."
         ]
       },
       "portfolio": {
