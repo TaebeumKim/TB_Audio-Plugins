@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-02T12:00:41+09:00",
+  "updatedAt": "2026-08-03T00:45:12+09:00",
   "hubVersion": "1.3.14",
   "hub": {
     "version": "1.3.14",
@@ -552,13 +552,13 @@
     },
     {
       "id": "tb_parallel_reverb",
-      "updatedAt": "2026-08-02",
+      "updatedAt": "2026-08-03",
       "latestUpdate": {
-        "version": "2.0.0",
-        "date": "2026-08-02",
+        "version": "3.0.0",
+        "date": "2026-08-03",
         "notesKo": [
-          "The Glue, Bright, and Space engines can be combined in parallel with Room/Chamber, Plate/Spring, and Hall/IR modes.",
-          "Added 100 Factory presets, per-engine Solo, and detailed tone and space controls."
+          "리버브의 최신 Release 빌드를 반영하고 메이저 버전을 3.0.0으로 올렸습니다.",
+          "Glue, Bright, Space의 세 병렬 엔진과 100개 Factory 프리셋을 제공합니다."
         ]
       },
       "portfolio": {
@@ -573,16 +573,16 @@
         "visible": true
       },
       "name": "TB Parallel Reverb",
-      "version": "2.0.0",
+      "version": "3.0.0",
       "category": "Reverb",
       "price": 3,
       "description": "Three-engine parallel reverb.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=2.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=3.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=2.0.0",
-        "sha256": "21d4e1493ef9453d48fb85dd19270d452053a64aaa888ee166a7a154585b2f1c",
-        "sizeBytes": 2880401
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=3.0.0",
+        "sha256": "3483d0dd52525b1ecb580209fac1ed82fffe3de3e65c12ade80257267f21de49",
+        "sizeBytes": 2886349
       },
       "macos": {
         "formats": {
