@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-02T04:49:14+09:00",
+  "updatedAt": "2026-08-02T11:22:48+09:00",
   "hubVersion": "1.3.13",
   "hub": {
     "version": "1.3.13",
@@ -77,11 +77,11 @@
       "id": "tb_compressor",
       "updatedAt": "2026-08-02",
       "latestUpdate": {
-        "version": "1.4.0",
+        "version": "2.0.0",
         "date": "2026-08-02",
         "notesKo": [
-          "외부 사이드체인 입력과 로우컷·하이컷 감지 필터를 추가했습니다.",
-          "새추레이션을 독립적으로 켜고 Drive, Mix와 회로 모델을 조절할 수 있도록 확장했습니다."
+          "사이드체인과 새추레이션까지 한 화면에서 읽히도록 전체 UI와 컨트롤 위계를 대규모로 재설계했습니다.",
+          "큰 디자인 변화의 규모를 반영해 메이저 버전을 2.0.0으로 올렸습니다."
         ]
       },
       "portfolio": {
@@ -96,14 +96,14 @@
         "visible": true
       },
       "name": "TB Compressor",
-      "version": "1.4.0",
+      "version": "2.0.0",
       "category": "Dynamics",
       "price": 3,
       "description": "Peak and RMS compression.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=1.4.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=1.4.0",
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=2.0.0",
         "sha256": "6d52f7aebb628380729a3d9f1f9c8e5401cb6f5489243e0d39f32936286255aa",
         "sizeBytes": 2815867
       },
@@ -236,11 +236,11 @@
       "id": "tb_eq",
       "updatedAt": "2026-08-02",
       "latestUpdate": {
-        "version": "1.4.0",
+        "version": "2.0.0",
         "date": "2026-08-02",
         "notesKo": [
-          "전체 화면형 애널라이저에서 밴드 생성·선택·드래그와 PRE/POST/FREEZE 조작 흐름을 개선했습니다.",
-          "올패스 슬로프 변경과 위상 곡선 렌더링의 반응성과 안정성을 개선했습니다."
+          "애널라이저 중심의 전체 화면 구조와 밴드 조작 위계, 노브·레이아웃을 대규모로 재설계했습니다.",
+          "큰 디자인 변화의 규모를 반영해 메이저 버전을 2.0.0으로 올렸습니다."
         ]
       },
       "portfolio": {
@@ -255,14 +255,14 @@
         "visible": true
       },
       "name": "TB EQ",
-      "version": "1.4.0",
+      "version": "2.0.0",
       "category": "EQ",
       "price": 3,
       "description": "Parametric equalizer.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=1.4.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=1.4.0",
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=2.0.0",
         "sha256": "3c0c0477bb85aad0e86f5e156252f3315cd82d8a953d69a2da80318c3ac6d135",
         "sizeBytes": 6807876
       },
