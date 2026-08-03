@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-04T03:22:51+09:00",
+  "updatedAt": "2026-08-03T19:09:23.710Z",
   "hubVersion": "1.3.15",
   "languages": [
     {
@@ -114,11 +114,11 @@
       "sizeBytes": 59581916
     },
     "macos": {
-      "version": "1.3.8",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-macos-v1.3.8/TBHub-1.3.8-macOS-AppleSilicon.dmg",
-      "sha256": "ae5287799848adb91a309f9a11f4d3ae2ba4ea79711ea9556c618a733e82e725",
-      "sizeBytes": 53852097,
-      "notes": "System-wide VST3/AU install, separate Install/Update all actions, and one administrator-approved atomic transaction."
+      "version": "1.3.9",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-macos-v1.3.9/TBHub-1.3.9-macOS-AppleSilicon.dmg",
+      "sha256": "1892732881d3dadda27b55287ac1f1ce15667c80af8cd84ca43305aea47aaad1",
+      "sizeBytes": 53802517,
+      "notes": "Ports Windows 1.3.15 features, separates Install all VST3/AU, and keeps system-wide plug-in paths."
     }
   },
   "plugins": [
