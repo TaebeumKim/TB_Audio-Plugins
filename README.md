@@ -8,7 +8,7 @@
 
 ## 2026-08-04
 
-- Added exhaustive user manuals for all 26 catalog plug-ins in 10 languages, organized into separate download folders.
+- Added exhaustive user manuals for all 26 catalog plug-ins in 20 languages, organized into separate download folders.
 - Added portfolio mockups for all 25 catalog plug-ins and three installed plug-ins awaiting catalog registration.
 - Added three concise English feature callouts to every mockup.
 - Blurred and darkened the DAW background while keeping each real plug-in UI crisp.
@@ -59,7 +59,7 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 The catalog currently contains 26 plug-ins. Two additional installed projects have portfolio mockups prepared for later catalog registration.
 
-Detailed manuals for every catalog plug-in are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, and Italian. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
+Detailed manuals for every catalog plug-in are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
 
 ### Catalog plug-ins
 
