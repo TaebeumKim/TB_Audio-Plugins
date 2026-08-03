@@ -11,6 +11,7 @@
 - Added portfolio mockups for all 25 catalog plug-ins and four installed plug-ins awaiting catalog registration.
 - Added three concise English feature callouts to every mockup.
 - Blurred and darkened the DAW background while keeping each real plug-in UI crisp.
+- Rebuilt the Included Plug-ins section with current descriptions and mockups for all 29 documented plug-ins.
 
 ## 2026-08-03
 
@@ -53,47 +54,187 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 ## 📦 Included Plug-ins
 
-*Currently available plug-ins in this collection:*
-* **TB_Shimmer** - A granular shimmer and crystalline feedback effect with early diffusion, an evolving late FDN wash, three independent random controls, and 100 factory presets.
-* **TB_AudioPlayer** - A compact one-shot sample player with user file browsing, automatable 0/1 triggering, immediate retrigger, and click-safe 50 ms fades.
-* **(new!)TB_Center** - This is a professional-grade plugin that centers the signal.
-<img width="900" height="610" alt="image" src="https://github.com/user-attachments/assets/1a82becf-dd4d-451b-8cff-18fcb0be6499" />
+The catalog currently contains 25 plug-ins. Four additional installed projects have portfolio mockups prepared for later catalog registration.
 
+### Catalog plug-ins
 
+#### TB Center
 
-* **(new!)TB_Distortion** - A distortion plugin that allows you to specify the frequency range, in addition to offering unique distortion characteristics.
-<img width="722" height="360" alt="디스토션" src="https://github.com/user-attachments/assets/cc3f1006-501c-42e5-83a3-8b81da02b9b5" />
+A multiband stereo-centering utility that brings energy toward the middle while preserving useful width and phase coherence.
 
+<img width="900" alt="TB Center feature mockup" src="Portfolio/Mockups/tb_center.jpg" />
 
-* **TB_EQ** - A professional-grade 24-band EQ featuring dynamic and spectral processing, complete with delta monitoring capabilities.
-<img width="1122" height="860" alt="이큐" src="https://github.com/user-attachments/assets/7205236a-b04b-4819-b371-9c1d651998f8" />
+#### TB Compressor
 
-* **TB_Compressor** - A high-performance compressor equipped with integrated oversampling and saturation features.
-<img width="1202" height="680" alt="컴프 사이드체인" src="https://github.com/user-attachments/assets/5afc44be-16f1-45cf-adf7-b9553730ad09" />
+A Peak/RMS dynamics processor with attack and release shaping, clear gain-reduction metering, and precise level control.
 
-* **TB_Inverted Phaser**
-<img width="762" height="820" alt="스크린샷 2026-07-12 201651" src="https://github.com/user-attachments/assets/926c11db-2a58-4d28-bfa2-681804e5e65f" />
+<img width="900" alt="TB Compressor feature mockup" src="Portfolio/Mockups/tb_compressor.jpg" />
 
+#### TB Distortion
 
-* **TB_Step Shifter**
-<img width="642" height="310" alt="스크린샷 2026-07-12 201658" src="https://github.com/user-attachments/assets/1c0d3b57-ee73-475d-8f2c-e41642648e81" />
+A multi-stage distortion effect for building richer harmonics with tone shaping and a controllable wet/dry blend.
 
-* **TB_Inverted Flanger** - A sci-fi inverted-phase flanger that carves hollow, sweeping motion by blending dry signal with phase-inverted modulated delay voices. Features a focused one-concept control set, strong LFO-driven flanging, feedback-enhanced metallic motion, and a Color control that removes the extra dry source for deeper empty-space cancellation tones.
-<img width="562" height="640" alt="플렌저" src="https://github.com/user-attachments/assets/4fc7a976-1578-453a-be8b-e58e0969c9f0" />
+<img width="900" alt="TB Distortion feature mockup" src="Portfolio/Mockups/tb_distortion.jpg" />
 
-* **TB_Jewel Digger & Finder** - A harmonic motion filter and crystal-grain effect that transforms audio through scale-aware Dig/Find filtering. Features musical notch and band-style harmonic sweeping, tempo-syncable motion, controlled randomization, base-note low-cut shaping, and a parallel crystallizing engine for pitch-shifted granular textures.
-<img width="982" height="820" alt="디거" src="https://github.com/user-attachments/assets/5e9ef2d9-158e-481c-8d73-a14ff0d42845" />
+#### TB Disperser
 
-* **TB_Parallel Reverb** - A multi-engine parallel reverb designed to create rich, spacious, and highly dimensional ambience while preserving the clarity of the dry signal. It combines independent Glue, Bright, and Space reverb engines with dedicated send control, stereo width shaping, tonal color, solo monitoring, and a final wet/dry blend for precise spatial design.
-<img width="1182" height="820" alt="리버브" src="https://github.com/user-attachments/assets/6bc458a3-96d7-45f9-aa37-fa5c3d9f8557" />
+An all-pass phase-dispersion effect that reshapes transients, focuses processing by frequency, and adds animated modulation.
 
+<img width="900" alt="TB Disperser feature mockup" src="Portfolio/Mockups/tb_disperser.jpg" />
 
+#### TB EQ
 
-* **TB_Transient Shaper** - A spectral-based transient shaper that separates attack and sustain components. Features transient boost/cut capabilities and an EQ mode for transient sensitivity.
-<img width="1102" height="820" alt="스펙트럴" src="https://github.com/user-attachments/assets/4e1fd5e5-527b-48ea-9d26-e81ec89cb28b" />
+A parametric, dynamic, and spectral equalizer for precise cuts, automatic resonance control, and visual frequency shaping.
 
-* **TB_XYZ Panner** - A spatial panner providing control over depth and height for both headphones and speakers, featuring advanced binaural support.
-<img width="1082" height="780" alt="스크린샷 2026-07-12 201712" src="https://github.com/user-attachments/assets/3184dd28-33af-4035-8014-69492fa35013" />
+<img width="900" alt="TB EQ feature mockup" src="Portfolio/Mockups/tb_eq.jpg" />
+
+#### TB Colorizer
+
+A voice-color processor for reshaping vocal character and perceived size with formant control and effect blending.
+
+<img width="900" alt="TB Colorizer feature mockup" src="Portfolio/Mockups/tb_colorizer.jpg" />
+
+#### TB Inverted Flanger
+
+A phase-inverted flanger for hollow subtractive sweeps, with rate, depth, feedback, and mix controls for metallic motion.
+
+<img width="900" alt="TB Inverted Flanger feature mockup" src="Portfolio/Mockups/tb_inverted_flanger.jpg" />
+
+#### TB Inverted Phaser
+
+A subtractive phaser that carves animated notches into the signal with adjustable stages and tempo-aware movement.
+
+<img width="900" alt="TB Inverted Phaser feature mockup" src="Portfolio/Mockups/tb_inverted_phaser.jpg" />
+
+#### TB Jewel Digger & Finder
+
+A harmonic enhancement and crystal-grain effect for revealing sparkle, adding resonant shimmer, and blending detailed textures.
+
+<img width="900" alt="TB Jewel Digger and Finder feature mockup" src="Portfolio/Mockups/tb_jewel_digger.jpg" />
+
+#### TB Noise Remover
+
+A restoration tool that suppresses steady noise and ambience while preserving voice detail and showing real-time reduction.
+
+<img width="900" alt="TB Noise Remover feature mockup" src="Portfolio/Mockups/tb_noise_remover.jpg" />
+
+#### TB Parallel Reverb
+
+A three-engine parallel reverb that layers independent spaces and builds depth without washing out the dry signal.
+
+<img width="900" alt="TB Parallel Reverb feature mockup" src="Portfolio/Mockups/tb_parallel_reverb.jpg" />
+
+#### TB Scrambler
+
+A tempo-aware glitch engine that rearranges audio into rhythmic fragments, from subtle edits to heavily scrambled motion.
+
+<img width="900" alt="TB Scrambler feature mockup" src="Portfolio/Mockups/tb_scrambler.jpg" />
+
+#### TB Spectral Transient Shaper
+
+A frequency-dependent transient processor for shaping attack, controlling sustain, and focusing impact on selected bands.
+
+<img width="900" alt="TB Spectral Transient Shaper feature mockup" src="Portfolio/Mockups/tb_transient_shaper.jpg" />
+
+#### TB Step Shifter (Beta)
+
+A harmonic pitch-shifting effect that creates stepped, sequenced motion and blends the animated result with the dry signal.
+
+<img width="900" alt="TB Step Shifter feature mockup" src="Portfolio/Mockups/tb_step_shifter.jpg" />
+
+#### TB Tune
+
+A vocal pitch-correction tool with key and scale guidance plus adjustable response speed for natural or hard-tuned results.
+
+<img width="900" alt="TB Tune feature mockup" src="Portfolio/Mockups/tb_tune.jpg" />
+
+#### TB Volume
+
+A simple gain tool for clean, precise, and repeatable output-level adjustment without added coloration.
+
+<img width="900" alt="TB Volume feature mockup" src="Portfolio/Mockups/tb_volume.jpg" />
+
+#### TB Vocoder (Beta)
+
+A vocoder that combines carrier and voice signals, shapes the coded spectrum by band, and balances clarity with robotic texture.
+
+<img width="900" alt="TB Vocoder feature mockup" src="Portfolio/Mockups/tb_vocoder.jpg" />
+
+#### TB XYZ Panner
+
+A three-axis spatial panner for positioning sound across X, Y, and Z, shaping distance, and automating motion paths.
+
+<img width="900" alt="TB XYZ Panner feature mockup" src="Portfolio/Mockups/tb_xyz_panner.jpg" />
+
+#### TB Limiter
+
+A true-peak mastering limiter for increasing loudness, catching inter-sample overloads, and monitoring gain reduction clearly.
+
+<img width="900" alt="TB Limiter feature mockup" src="Portfolio/Mockups/tb_limiter.jpg" />
+
+#### TB SubLow
+
+A tunable sub-bass generator for adding controlled low-end weight and blending it beneath the original bass content.
+
+<img width="900" alt="TB SubLow feature mockup" src="Portfolio/Mockups/tb_sublow.jpg" />
+
+#### TB Delay
+
+A creative stereo delay with independent echoes, a visual delay map, feedback control, and filtered repeats that fit the mix.
+
+<img width="900" alt="TB Delay feature mockup" src="Portfolio/Mockups/tb_delay.jpg" />
+
+#### TB Pitch Shifter
+
+An independent pitch and formant processor for transposing audio, changing perceived size, or linking both transformations.
+
+<img width="900" alt="TB Pitch Shifter feature mockup" src="Portfolio/Mockups/tb_pitch_shifter.jpg" />
+
+#### TB Resonator
+
+A tunable modal resonator that turns incoming audio into pitched, playable, and musically aligned textures.
+
+<img width="900" alt="TB Resonator feature mockup" src="Portfolio/Mockups/tb_resonator.jpg" />
+
+#### TB Ring Modulation
+
+An internal-carrier ring modulator that moves from tremolo pulses to metallic sidebands with controllable tone and mix.
+
+<img width="900" alt="TB Ring Modulation feature mockup" src="Portfolio/Mockups/tb_ring_modulation.jpg" />
+
+#### TB Recorder
+
+An insert-point recorder with automatic output-format conversion and file splitting for long recording sessions.
+
+<img width="900" alt="TB Recorder feature mockup" src="Portfolio/Mockups/tb_recorder.jpg" />
+
+### Additional portfolio plug-ins
+
+These projects have completed mockups but are not yet registered in `catalog.json`.
+
+#### TB AudioPlayer
+
+A compact one-shot sample player with file browsing, immediate play and stop controls, and visible sample-format information.
+
+<img width="900" alt="TB AudioPlayer feature mockup" src="Portfolio/Mockups/tb.audio-player.jpg" />
+
+#### TB Board
+
+A visual signal-routing workspace and VST3 host for building insert chains and animating parameters with live modulation.
+
+<img width="900" alt="TB Board feature mockup" src="Portfolio/Mockups/tb_board.jpg" />
+
+#### TB Gender Changer
+
+A bidirectional voice transformer that morphs perceived vocal identity with formant movement and an adjustable transform amount.
+
+<img width="900" alt="TB Gender Changer feature mockup" src="Portfolio/Mockups/tb_gender_changer.jpg" />
+
+#### TB Shimmer
+
+A granular shimmer effect that creates floating grain clouds, octave-up reflections, and spacious feedback tails with tone and width control.
+
+<img width="900" alt="TB Shimmer feature mockup" src="Portfolio/Mockups/tb_shimmer.jpg" />
 
 ## 🚀 Installation Guide
 
