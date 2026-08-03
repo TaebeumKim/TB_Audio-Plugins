@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-03T13:24:04+09:00",
+  "updatedAt": "2026-08-03T16:22:40+09:00",
   "hubVersion": "1.3.14",
   "hub": {
     "version": "1.3.14",
@@ -658,13 +658,13 @@
     },
     {
       "id": "tb_transient_shaper",
-      "updatedAt": "2026-08-02",
+      "updatedAt": "2026-08-03",
       "latestUpdate": {
-        "version": "1.4.0",
-        "date": "2026-08-02",
+        "version": "1.5.0",
+        "date": "2026-08-03",
         "notesKo": [
-          "Aligned the EQ-mode analyzer and DSP to use the same sensitivity curve and reference line.",
-          "Standardized Delta behavior and latency across monitor sources, and reduced analyzer rendering allocations."
+          "Renewed the analyzer, gain, and global modules as a consistent rack interface based on the updated design reference.",
+          "Added final-output peak metering and clearer states for mode, monitoring, bypass, and Delta controls."
         ]
       },
       "portfolio": {
@@ -679,16 +679,16 @@
         "visible": true
       },
       "name": "TB Spectral Transient Shaper",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "category": "Dynamics",
       "price": 3,
       "description": "Spectral transient shaping.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=1.4.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=1.5.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.4.0",
-        "sha256": "e8049a54d5c605bf481f0d83ba7daa7e1b9ed0b4a0440e8eea5e0c45c0bbe224",
-        "sizeBytes": 2860737
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.5.0",
+        "sha256": "3b6126e86962d30d5b70f513eb313e2b32c678eb287fb4da4861f04f125fad8b",
+        "sizeBytes": 2862180
       },
       "macos": {
         "formats": {
