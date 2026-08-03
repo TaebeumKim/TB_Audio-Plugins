@@ -13,6 +13,7 @@
 - Blurred and darkened the DAW background while keeping each real plug-in UI crisp.
 - Rebuilt the Included Plug-ins section with current descriptions and mockups for all 28 documented plug-ins.
 - Permanently retired TB Gender Changer, removed its distribution and portfolio assets, and designated TB Colorizer as its replacement.
+- Synchronized all 25 catalog prices with the `카탈로그` tab in the catalog management Google Sheet.
 
 ## 2026-08-03
 
