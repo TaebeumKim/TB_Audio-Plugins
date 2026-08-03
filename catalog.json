@@ -1343,6 +1343,59 @@
           }
         }
       }
+    },
+    {
+      "id": "tb_shimmer",
+      "updatedAt": "2026-08-04",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-08-04",
+        "notesKo": [
+          "Combines octave-up granular voices with an early diffuser and eight-line FDN tail for crystalline spatial effects.",
+          "Adds Level Var, Position Rand, Pitch Spray, 100 Factory presets, and versioned preset/state migration."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_shimmer.png",
+        "descriptionKo": "옥타브 업 그레인과 확산형 잔향을 겹쳐 반짝이는 쉬머·크리스털 공간감을 만듭니다.",
+        "tags": [
+          "Granular",
+          "Shimmer",
+          "Reverb"
+        ],
+        "order": 26,
+        "visible": true
+      },
+      "name": "TB Shimmer",
+      "version": "1.0.0",
+      "category": "Creative",
+      "price": 2,
+      "description": "Granular shimmer with crystalline pitch feedback and diffuse swarm tails.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_shimmer.png?v=1.0.0",
+      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Shimmer.zip?v=1.0.0",
+        "sha256": "c99f80fa43ba6e06c955ebce0254baf4484e4a0be2d8d64c215b09369f4e1253",
+        "sizeBytes": 5643911
+      },
+      "macos": {
+        "formats": {
+          "vst3": {
+            "version": "1.0.0",
+            "bundleName": "TB-Shimmer.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r33-shimmer-2026-08-04/TB-Shimmer-VST3-macOS-arm64.zip",
+            "sha256": "c8d24e205e8903c26a1e6008a0d573023b5c16acf3ec495802c6bddfe7d0623d",
+            "sizeBytes": 3253281
+          },
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-Shimmer.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r33-shimmer-2026-08-04/TB-Shimmer-AU-macOS-arm64.zip",
+            "sha256": "8cc4776c91ae9f89276937f45dd1c1f318642e52bb7d6a38224f67e6ceb2fbb1",
+            "sizeBytes": 3147875
+          }
+        }
+      }
     }
   ],
   "github": {

@@ -56,7 +56,7 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 ## 📦 Included Plug-ins
 
-The catalog currently contains 25 plug-ins. Three additional installed projects have portfolio mockups prepared for later catalog registration.
+The catalog currently contains 26 plug-ins. Two additional installed projects have portfolio mockups prepared for later catalog registration.
 
 ### Catalog plug-ins
 
@@ -210,6 +210,12 @@ An insert-point recorder with automatic output-format conversion and file splitt
 
 <img width="900" alt="TB Recorder feature mockup" src="Portfolio/Mockups/tb_recorder.jpg" />
 
+#### TB Shimmer
+
+A granular shimmer effect that creates floating grain clouds, octave-up reflections, and spacious feedback tails with tone and width control.
+
+<img width="900" alt="TB Shimmer feature mockup" src="Portfolio/Mockups/tb_shimmer.jpg" />
+
 ### Additional portfolio plug-ins
 
 These projects have completed mockups but are not yet registered in `catalog.json`.
@@ -225,12 +231,6 @@ A compact one-shot sample player with file browsing, immediate play and stop con
 A visual signal-routing workspace and VST3 host for building insert chains and animating parameters with live modulation.
 
 <img width="900" alt="TB Board feature mockup" src="Portfolio/Mockups/tb_board.jpg" />
-
-#### TB Shimmer
-
-A granular shimmer effect that creates floating grain clouds, octave-up reflections, and spacious feedback tails with tone and width control.
-
-<img width="900" alt="TB Shimmer feature mockup" src="Portfolio/Mockups/tb_shimmer.jpg" />
 
 ## 🚀 Installation Guide
 
