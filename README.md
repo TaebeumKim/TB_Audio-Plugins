@@ -8,7 +8,7 @@
 
 ## 2026-08-04
 
-- Added exhaustive user manuals for all 26 catalog plug-ins in 20 languages, organized into separate download folders.
+- Added user-focused manuals for all 26 catalog plug-ins in 20 languages, organized into separate download folders.
 - Added portfolio mockups for all 25 catalog plug-ins and three installed plug-ins awaiting catalog registration.
 - Added three concise English feature callouts to every mockup.
 - Blurred and darkened the DAW background while keeping each real plug-in UI crisp.

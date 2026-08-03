@@ -1,6 +1,6 @@
-# Detailed Multilingual User Manuals
+# Multilingual User Manuals
 
-This directory contains exhaustive PDF user manuals for all 26 plug-ins in the TB Audio Plug-ins catalog in 20 languages. Each language has its own folder, and every plug-in PDF is stored directly inside it.
+This directory contains user-focused PDF manuals for all 26 plug-ins in the TB Audio Plug-ins catalog in 20 languages. Each language has its own folder, and every plug-in PDF is stored directly inside it.
 
 | Language | Code | Manuals |
 | --- | --- | --- |
@@ -25,6 +25,6 @@ This directory contains exhaustive PDF user manuals for all 26 plug-ins in the T
 | Vietnamese / Tiếng Việt | VIE | [Browse 26 PDFs](VIE/) |
 | Czech / Čeština | CES | [Browse 26 PDFs](CES/) |
 
-Every manual explains the plug-in's purpose, the production problem it solves, expected results, signal flow, all functions, practical workflows, automation, gain staging, troubleshooting, and a complete host-visible parameter appendix. Parameter and option labels remain in English in every translation so they match the plug-in interface exactly.
+Every manual opens with a concise purpose statement and the MIT License notice, then lists every controllable property with its panel name, range or choices, default value, and a plain-language explanation for music creators and sound designers. Control and option labels remain in English in every translation so they match the plug-in interface exactly.
 
-On GitHub, open a language folder, select the required PDF, and use the download button for an individual file. Use **Code → Download ZIP** from the repository page when the entire collection is required.
+On GitHub, open a language folder, select the required PDF, and use the download button for an individual file. Use **Code > Download ZIP** from the repository page when the entire collection is required.
