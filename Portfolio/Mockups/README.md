@@ -25,8 +25,10 @@ The portfolio reads this folder dynamically. A matching image overrides the cata
 - Canvas: `1536 x 1024`
 - JPEG quality: `92`
 - Composition: the real plug-in UI capture placed over a shared DAW session backdrop
+- Background: blurred and darkened so the feature copy remains readable
+- Callouts: three concise English feature explanations with leader lines pointing into the UI
 
-The plug-in UI itself is kept from the project QA or Standalone capture. The shared backdrop is used only to present each plug-in in an active music-production context.
+The plug-in UI itself is kept crisp from the project QA or Standalone capture. The shared backdrop is used only to present each plug-in in an active music-production context. Callout copy should be based on the plug-in brief or release notes, use a short uppercase title plus one plain-English sentence, and avoid covering important controls.
 
 The installed plug-ins currently staged ahead of catalog registration are:
 
