@@ -4,20 +4,26 @@
 
 # Update Note
 
-* **2026/07/24**
-  - update TB_Center : new realese plug in. 
-  - update TB_Distortion : new realese plug in. 
+<!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-08-04
 
-* **2026/07/13**
-  - update TB_EQ : upgrade function that control mid / side
-  - update TB_Comp : upgrade sidechain function.
- 
-    
-* **2026/07/12**
-  - new plugins : TB_StepShifer, TB_InvertedPhaser
-  - new OS update : for MacOS VST3, AU(component)
-  - update GUI designe concept(all plugins)
+- Added portfolio mockups for all 25 catalog plug-ins and four installed plug-ins awaiting catalog registration.
+- Added three concise English feature callouts to every mockup.
+- Blurred and darkened the DAW background while keeping each real plug-in UI crisp.
+
+## 2026-08-03
+
+- Released TB Shimmer 1.0.0.
+- Added the `Portfolio/Mockups` image folder.
+- Released TB Parallel Reverb 3.0.0 and the 3.0.1 follow-up update.
+
+## 2026-08-02
+
+- Released TB Hub for Windows 1.3.14 and translated its recent update notes into English.
+- Promoted TB EQ and TB Compressor to version 2.0.0.
+- Released TB Recorder 1.0.0 and TB AudioPlayer 1.0.0.
+- Refreshed multiple Windows and macOS plug-in packages, DISPLAY icons, and removed AAX distribution.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
