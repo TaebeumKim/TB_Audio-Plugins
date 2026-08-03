@@ -39,5 +39,6 @@ excluded until it becomes a built release target.
 
 Commit `0b2a38f` is the verified 21-product DISPLAY baseline. The fish-mark
 generator and its derived assets were introduced by the later incorrect icon
-upload and were removed during the DISPLAY content rollback. The four additional
-repository assets are Board, Gender Changer, Resonator and Ring Modulation.
+upload and were removed during the DISPLAY content rollback. The three additional
+repository assets are Board, Resonator and Ring Modulation. Gender Changer is
+permanently retired and replaced by Colorizer.

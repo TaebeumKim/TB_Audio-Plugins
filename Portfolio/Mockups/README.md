@@ -20,7 +20,7 @@ The portfolio reads this folder dynamically. A matching image overrides the cata
 ## Current mockup set
 
 - Coverage: all 25 plug-ins in `catalog.json`
-- Additional coverage: 4 installed plug-ins that are not yet in `catalog.json`
+- Additional coverage: 3 installed plug-ins that are not yet in `catalog.json`
 - Filename: `<catalog-id>.jpg`
 - Canvas: `1536 x 1024`
 - JPEG quality: `92`
@@ -34,7 +34,8 @@ The installed plug-ins currently staged ahead of catalog registration are:
 
 - `tb.audio-player.jpg` — TB AudioPlayer
 - `tb_board.jpg` — TB Board
-- `tb_gender_changer.jpg` — TB Gender Changer
 - `tb_shimmer.jpg` — TB Shimmer
 
-These four files become active portfolio images only after a matching `id` is added to `catalog.json`. When a plug-in is added to or removed from the catalog, update this folder in the same commit so every catalog ID continues to have a matching image.
+These three files become active portfolio images only after a matching `id` is added to `catalog.json`. When a plug-in is added to or removed from the catalog, update this folder in the same commit so every catalog ID continues to have a matching image.
+
+TB Gender Changer is permanently retired and must not be regenerated or added back to the catalog. TB Colorizer is its replacement.

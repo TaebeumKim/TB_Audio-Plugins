@@ -8,10 +8,11 @@
 
 ## 2026-08-04
 
-- Added portfolio mockups for all 25 catalog plug-ins and four installed plug-ins awaiting catalog registration.
+- Added portfolio mockups for all 25 catalog plug-ins and three installed plug-ins awaiting catalog registration.
 - Added three concise English feature callouts to every mockup.
 - Blurred and darkened the DAW background while keeping each real plug-in UI crisp.
-- Rebuilt the Included Plug-ins section with current descriptions and mockups for all 29 documented plug-ins.
+- Rebuilt the Included Plug-ins section with current descriptions and mockups for all 28 documented plug-ins.
+- Permanently retired TB Gender Changer, removed its distribution and portfolio assets, and designated TB Colorizer as its replacement.
 
 ## 2026-08-03
 
@@ -54,7 +55,7 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 ## 📦 Included Plug-ins
 
-The catalog currently contains 25 plug-ins. Four additional installed projects have portfolio mockups prepared for later catalog registration.
+The catalog currently contains 25 plug-ins. Three additional installed projects have portfolio mockups prepared for later catalog registration.
 
 ### Catalog plug-ins
 
@@ -223,12 +224,6 @@ A compact one-shot sample player with file browsing, immediate play and stop con
 A visual signal-routing workspace and VST3 host for building insert chains and animating parameters with live modulation.
 
 <img width="900" alt="TB Board feature mockup" src="Portfolio/Mockups/tb_board.jpg" />
-
-#### TB Gender Changer
-
-A bidirectional voice transformer that morphs perceived vocal identity with formant movement and an adjustable transform amount.
-
-<img width="900" alt="TB Gender Changer feature mockup" src="Portfolio/Mockups/tb_gender_changer.jpg" />
 
 #### TB Shimmer
 
