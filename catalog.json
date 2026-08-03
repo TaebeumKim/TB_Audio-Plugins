@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-03T16:22:40+09:00",
+  "updatedAt": "2026-08-03T20:08:31+09:00",
   "hubVersion": "1.3.14",
   "hub": {
     "version": "1.3.14",
@@ -687,8 +687,8 @@
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.5.0",
-        "sha256": "3b6126e86962d30d5b70f513eb313e2b32c678eb287fb4da4861f04f125fad8b",
-        "sizeBytes": 2862180
+        "sha256": "a187426ddca0fd4f9c3aa4167907c90033632332f25e0bb857d6a821bc0217b4",
+        "sizeBytes": 2862463
       },
       "macos": {
         "formats": {
