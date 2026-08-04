@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-04T17:32:59+09:00",
+  "updatedAt": "2026-08-04T23:31:36+09:00",
   "hubVersion": "1.3.15",
   "languages": [
     {
@@ -124,7 +124,7 @@
   "plugins": [
     {
       "id": "tb_center",
-      "updatedAt": "2026-07-30",
+      "updatedAt": "2026-08-04",
       "latestUpdate": {
         "version": "1.3.0",
         "date": "2026-07-30",
@@ -150,7 +150,7 @@
       "price": 7,
       "description": "Stereo centering.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_center.png?v=display-restore-20260729",
-      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "youtubeUrl": "https://www.youtube.com/shorts/r3sLUpHpYHM",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Center.zip?v=1.3.0",
         "sha256": "2e6bc2139d31f3bb18cc84806710d4ba89d9603eec57c243406d3db330e4fc21",
