@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-03T19:09:23.710Z",
+  "updatedAt": "2026-08-04T17:32:59+09:00",
   "hubVersion": "1.3.15",
   "languages": [
     {
@@ -442,13 +442,13 @@
     },
     {
       "id": "tb_inverted_flanger",
-      "updatedAt": "2026-07-30",
+      "updatedAt": "2026-08-04",
       "latestUpdate": {
-        "version": "1.3.0",
-        "date": "2026-07-30",
+        "version": "2.0.0",
+        "date": "2026-08-04",
         "notesKo": [
-          "Added spacing between the upper-right controls and the effect-fish to prevent header elements from overlapping.",
-          "Normalized the effect-fish display size and improved clarity at reduced render sizes."
+          "Rebuilt the interface as a warm hardware-style rack with a dedicated output waveform display.",
+          "Reorganized depth, rate, feedback, color, and mix into a clearer vertical control flow."
         ]
       },
       "portfolio": {
@@ -463,16 +463,16 @@
         "visible": true
       },
       "name": "TB Inverted Flanger",
-      "version": "1.3.0",
+      "version": "2.0.0",
       "category": "Modulation",
       "price": 1,
       "description": "Inverted flanging.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=1.3.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=1.3.0",
-        "sha256": "eae7497ef8324a70b562f7b3b0d1e4ad01203c6eab5152275b5ecd056f38ef5c",
-        "sizeBytes": 2373527
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=2.0.0",
+        "sha256": "30dc2b34084961a9e894760caac34226d55fd708e0037c2133cb9e44a57fd916",
+        "sizeBytes": 2370405
       },
       "macos": {
         "formats": {
@@ -495,13 +495,13 @@
     },
     {
       "id": "tb_inverted_phaser",
-      "updatedAt": "2026-07-30",
+      "updatedAt": "2026-08-04",
       "latestUpdate": {
-        "version": "2.2.0",
-        "date": "2026-07-30",
+        "version": "3.0.0",
+        "date": "2026-08-04",
         "notesKo": [
-          "Unified each product's effect logo and product name into a single shared rack header.",
-          "Improved previous/next navigation and save/load workflows for the central preset control."
+          "Rebuilt the interface as a warm hardware-style rack with the phase-response display integrated into the main panel.",
+          "Reorganized movement, colour, and mix controls into a compact console layout for faster scanning."
         ]
       },
       "portfolio": {
@@ -516,16 +516,16 @@
         "visible": true
       },
       "name": "TB Inverted Phaser",
-      "version": "2.2.0",
+      "version": "3.0.0",
       "category": "Modulation",
       "price": 1,
       "description": "Subtractive phasing.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=3.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip?v=2.2.0",
-        "sha256": "824579ed7e87e653f43324a6a5f3593d0e0f3a22ad3626c463d51e536de496a2",
-        "sizeBytes": 2388253
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip?v=3.0.0",
+        "sha256": "b46517ddfe78f49df080116ba6397f8cf2564810c2c67e636bc9589877386f24",
+        "sizeBytes": 2397826
       },
       "macos": {
         "formats": {

@@ -15,6 +15,7 @@
 - Rebuilt the Included Plug-ins section with current descriptions and mockups for all 28 documented plug-ins.
 - Permanently retired TB Gender Changer, removed its distribution and portfolio assets, and designated TB Colorizer as its replacement.
 - Synchronized all 25 catalog prices with the `카탈로그` tab in the catalog management Google Sheet.
+- Released TB Inverted Flanger 2.0.0 and TB Inverted Phaser 3.0.0 with complete hardware-style interface redesigns and refreshed feature mockups.
 
 ## 2026-08-03
 
