@@ -25,6 +25,6 @@ This directory contains user-focused PDF manuals for all 26 plug-ins in the TB A
 | Vietnamese / Tiếng Việt | VIE | [Browse 26 PDFs](VIE/) |
 | Czech / Čeština | CES | [Browse 26 PDFs](CES/) |
 
-Every manual opens with a concise purpose statement and the MIT License notice, then lists every controllable property with its panel name, range or choices, default value, and a plain-language explanation for music creators and sound designers. Control and option labels remain in English in every translation so they match the plug-in interface exactly.
+Each language folder contains one current manual per plug-in. Every manual begins immediately with the product overview and operating principle, followed by a quick start, key interface sections, expanded control explanations, practical use cases, and common pitfalls. The interface section includes a direct capture of the current plug-in UI; promotional mockups are not used. Numeric control ranges, default-value tables, separate cover mockups, and license text are intentionally omitted so the documents stay focused on audible results and real production decisions. Panel control names remain in English in every translation so they match the plug-in interface exactly.
 
 On GitHub, open a language folder, select the required PDF, and use the download button for an individual file. Use **Code > Download ZIP** from the repository page when the entire collection is required.
