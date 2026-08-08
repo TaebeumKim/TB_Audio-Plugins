@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-04T23:31:36+09:00",
+  "updatedAt": "2026-08-09T03:30:37+09:00",
   "hubVersion": "1.3.15",
   "languages": [
     {
@@ -177,13 +177,13 @@
     },
     {
       "id": "tb_compressor",
-      "updatedAt": "2026-08-04",
+      "updatedAt": "2026-08-09",
       "latestUpdate": {
-        "version": "2.0.0",
-        "date": "2026-08-02",
+        "version": "2.1.0",
+        "date": "2026-08-09",
         "notesKo": [
-          "Redesigned the entire UI and control hierarchy so sidechain and saturation controls read clearly on a single screen.",
-          "Raised the major version to 2.0.0 to reflect the scale of the visual redesign."
+          "Added clearer input and gain-reduction readouts to the main dynamics display.",
+          "Refined sidechain state feedback and meter visibility without changing the established 2.0 control layout."
         ]
       },
       "portfolio": {
@@ -198,16 +198,16 @@
         "visible": true
       },
       "name": "TB Compressor",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "category": "Dynamics",
       "price": 5,
       "description": "Peak and RMS compression.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=2.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=2.1.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=2.0.0",
-        "sha256": "6d52f7aebb628380729a3d9f1f9c8e5401cb6f5489243e0d39f32936286255aa",
-        "sizeBytes": 2815867
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=2.1.0",
+        "sha256": "ad04a386209870a7dd84b18bed970f4cb98e4fe14da9136cf9a6750d58648321",
+        "sizeBytes": 5631083
       },
       "macos": {
         "formats": {
@@ -866,13 +866,13 @@
     },
     {
       "id": "tb_tune",
-      "updatedAt": "2026-08-05",
+      "updatedAt": "2026-08-09",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-30",
+        "version": "2.0.0",
+        "date": "2026-08-09",
         "notesKo": [
-          "Unified each product's effect logo and product name into a single shared rack header.",
-          "Improved previous/next navigation and save/load workflows for the central preset control."
+          "Redesigned the interface around direct key-note and scale selection with a dedicated pitch-status panel.",
+          "Expanded musical scale choices and made Auto Musical and Formant controls easier to scan."
         ]
       },
       "portfolio": {
@@ -887,16 +887,16 @@
         "visible": true
       },
       "name": "TB Tune",
-      "version": "1.2.0",
+      "version": "2.0.0",
       "category": "Voice",
       "price": 1,
       "description": "Vocal pitch correction.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=1.2.0",
-        "sha256": "298d7b4b525efe2bb6ebf4d767ae13b706eb39c11264ff33550138bbe899b60d",
-        "sizeBytes": 2412296
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=2.0.0",
+        "sha256": "cb78704e5537fc43ce28b62b8545b2edbd86bd6cc520a9033f2b41b2213b187b",
+        "sizeBytes": 2425752
       },
       "macos": {
         "formats": {
@@ -972,13 +972,13 @@
     },
     {
       "id": "tb_vocoder",
-      "updatedAt": "2026-08-04",
+      "updatedAt": "2026-08-09",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-30",
+        "version": "2.0.0",
+        "date": "2026-08-09",
         "notesKo": [
-          "Unified each product's effect logo and product name into a single shared rack header.",
-          "Improved previous/next navigation and save/load workflows for the central preset control."
+          "Rebuilt the vocoder around a configurable multi-band filterbank with Low/High range, attack, release, width, and resynthesis controls.",
+          "Redesigned the interface into four focused panels and introduced a new state schema for the expanded 23-control engine."
         ]
       },
       "portfolio": {
@@ -993,16 +993,16 @@
         "visible": true
       },
       "name": "TB Vocoder (Beta)",
-      "version": "1.2.0",
+      "version": "2.0.0",
       "category": "Creative",
       "price": 2,
       "description": "Vocoder.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_vocoder.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_vocoder.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Vocoder.zip?v=1.2.0",
-        "sha256": "4ad3e5e9080e271ba0a7d1dcbf75536483830e0fc2d8683361ced1f08d7d941b",
-        "sizeBytes": 2802442
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Vocoder.zip?v=2.0.0",
+        "sha256": "f05335504e0785436f708b5b5e313e83a6dff54aa4ec30ecb7161e7e1efb423e",
+        "sizeBytes": 2828035
       },
       "macos": {
         "formats": {
@@ -1497,6 +1497,41 @@
             "sizeBytes": 3147875
           }
         }
+      }
+    },
+    {
+      "id": "tb_exciter",
+      "updatedAt": "2026-08-09",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-08-09",
+        "notesKo": [
+          "Introduced a harmonic enhancement engine that adds controlled brightness while preserving the aligned dry signal.",
+          "Added Bright, Clarity, Focus, Width, and Level controls with a real-time sparkle-field display."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_exciter.png",
+        "descriptionKo": "고역의 선명도와 배음을 더해 믹스의 밝기와 존재감을 자연스럽게 강화합니다.",
+        "tags": [
+          "Exciter",
+          "Harmonics",
+          "Enhancer"
+        ],
+        "order": 27,
+        "visible": true
+      },
+      "name": "TB Exciter",
+      "version": "1.0.0",
+      "category": "Creative",
+      "price": 3,
+      "description": "Harmonic exciter and enhancer.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.0.0",
+      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.0.0",
+        "sha256": "5077a6ef51190647e1c69121947498621a50ad7896eb0b317a8c1cba86d82889",
+        "sizeBytes": 2865274
       }
     }
   ],

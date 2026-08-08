@@ -6,6 +6,18 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-08-09
+
+- Released TB Exciter 1.0.0 with a harmonic enhancement engine, a new DISPLAY icon, and a feature-annotated portfolio mockup.
+- Updated TB Compressor to 2.1.0 with clearer input and gain-reduction feedback.
+- Promoted the redesigned TB Tune and TB Vocoder (Beta) to 2.0.0.
+- Rebuilt the Windows VST3 packages and synchronized catalog versions, download hashes, sizes, latest-update metadata, and README descriptions.
+
+## 2026-08-05
+
+- Linked the TB Center feature video from the catalog.
+- Completed a full macOS arm64 VST3/AU audit and refreshed the affected distribution packages.
+
 ## 2026-08-04
 
 - Added user-focused manuals for all 26 catalog plug-ins in 20 languages, organized into separate download folders.
@@ -16,19 +28,6 @@
 - Permanently retired TB Gender Changer, removed its distribution and portfolio assets, and designated TB Colorizer as its replacement.
 - Synchronized all 25 catalog prices with the `카탈로그` tab in the catalog management Google Sheet.
 - Released TB Inverted Flanger 2.0.0 and TB Inverted Phaser 3.0.0 with complete hardware-style interface redesigns and refreshed feature mockups.
-
-## 2026-08-03
-
-- Released TB Shimmer 1.0.0.
-- Added the `Portfolio/Mockups` image folder.
-- Released TB Parallel Reverb 3.0.0 and the 3.0.1 follow-up update.
-
-## 2026-08-02
-
-- Released TB Hub for Windows 1.3.14 and translated its recent update notes into English.
-- Promoted TB EQ and TB Compressor to version 2.0.0.
-- Released TB Recorder 1.0.0 and TB AudioPlayer 1.0.0.
-- Refreshed multiple Windows and macOS plug-in packages, DISPLAY icons, and removed AAX distribution.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
@@ -58,9 +57,9 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 ## 📦 Included Plug-ins
 
-The catalog currently contains 26 plug-ins. Two additional installed projects have portfolio mockups prepared for later catalog registration.
+The catalog currently contains 27 plug-ins. Two additional installed projects have portfolio mockups prepared for later catalog registration.
 
-Detailed manuals for every catalog plug-in are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
+Detailed manuals for the established catalog set are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
 
 ### Catalog plug-ins
 
@@ -150,7 +149,7 @@ A harmonic pitch-shifting effect that creates stepped, sequenced motion and blen
 
 #### TB Tune
 
-A vocal pitch-correction tool with key and scale guidance plus adjustable response speed for natural or hard-tuned results.
+A redesigned vocal pitch-correction tool with direct key and scale selection, pitch-status feedback, Auto Musical response control, and formant shifting.
 
 <img width="900" alt="TB Tune feature mockup" src="Portfolio/Mockups/tb_tune.jpg" />
 
@@ -162,7 +161,7 @@ A simple gain tool for clean, precise, and repeatable output-level adjustment wi
 
 #### TB Vocoder (Beta)
 
-A vocoder that combines carrier and voice signals, shapes the coded spectrum by band, and balances clarity with robotic texture.
+A multi-band vocoder that combines carrier and voice signals with configurable filter ranges, envelope response, width, and resynthesis controls.
 
 <img width="900" alt="TB Vocoder feature mockup" src="Portfolio/Mockups/tb_vocoder.jpg" />
 
@@ -219,6 +218,12 @@ An insert-point recorder with automatic output-format conversion and file splitt
 A granular shimmer effect that creates floating grain clouds, octave-up reflections, and spacious feedback tails with tone and width control.
 
 <img width="900" alt="TB Shimmer feature mockup" src="Portfolio/Mockups/tb_shimmer.jpg" />
+
+#### TB Exciter
+
+A harmonic exciter and enhancer that adds controlled brightness, clarity, focus, stereo width, and level while preserving the aligned dry signal.
+
+<img width="900" alt="TB Exciter feature mockup" src="Portfolio/Mockups/tb_exciter.jpg" />
 
 ### Additional portfolio plug-ins
 
