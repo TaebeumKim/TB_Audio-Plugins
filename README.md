@@ -9,6 +9,7 @@
 ## 2026-08-09
 
 - Released TB Exciter 1.0.0 with a harmonic enhancement engine, a new DISPLAY icon, and a feature-annotated portfolio mockup.
+- Refreshed the TB Exciter DISPLAY logo mirrors and bumped the catalog cache key to force artwork reloading.
 - Updated TB Compressor to 2.1.0 with clearer input and gain-reduction feedback.
 - Promoted the redesigned TB Tune and TB Vocoder (Beta) to 2.0.0.
 - Rebuilt the Windows VST3 packages and synchronized catalog versions, download hashes, sizes, latest-update metadata, and README descriptions.

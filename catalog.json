@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-09T03:30:37+09:00",
+  "updatedAt": "2026-08-09T03:58:30+09:00",
   "hubVersion": "1.3.15",
   "languages": [
     {
@@ -1507,7 +1507,8 @@
         "date": "2026-08-09",
         "notesKo": [
           "Introduced a harmonic enhancement engine that adds controlled brightness while preserving the aligned dry signal.",
-          "Added Bright, Clarity, Focus, Width, and Level controls with a real-time sparkle-field display."
+          "Added Bright, Clarity, Focus, Width, and Level controls with a real-time sparkle-field display.",
+          "Refreshed the DISPLAY icon and bumped its catalog cache key so clients fetch the current artwork."
         ]
       },
       "portfolio": {
@@ -1526,7 +1527,7 @@
       "category": "Creative",
       "price": 3,
       "description": "Harmonic exciter and enhancer.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.0.0-logo-20260809",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.0.0",
