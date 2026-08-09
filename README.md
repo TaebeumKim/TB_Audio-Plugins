@@ -6,6 +6,14 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-08-10
+
+- Redesigned all 27 catalog mockups and the additional portfolio set around a blurred black gradient, a soft floating glow, and three short English feature guides.
+- Re-mapped every guide to a visible analyzer, meter, graph, knob, or control; overlap areas now use compact glass panels and collision-aware leader placement.
+- Replaced stale UI sources with current captures, including fresh installed-VST3 snapshots for TB EQ and TB Colorizer.
+- Added a TB Tape Preview mockup while keeping it out of the catalog and release packages until manual QA is complete.
+- Kept TB Board out of the catalog and release packages, and continued the permanent exclusion of TB Gender Changer.
+
 ## 2026-08-09
 
 - Released TB Exciter 1.0.0 with a harmonic enhancement engine, a new DISPLAY icon, and a feature-annotated portfolio mockup.
@@ -19,17 +27,6 @@
 
 - Linked the TB Center feature video from the catalog.
 - Completed a full macOS arm64 VST3/AU audit and refreshed the affected distribution packages.
-
-## 2026-08-04
-
-- Added user-focused manuals for all 26 catalog plug-ins in 20 languages, organized into separate download folders.
-- Added portfolio mockups for all 25 catalog plug-ins and three installed plug-ins awaiting catalog registration.
-- Added three concise English feature callouts to every mockup.
-- Blurred and darkened the DAW background while keeping each real plug-in UI crisp.
-- Rebuilt the Included Plug-ins section with current descriptions and mockups for all 28 documented plug-ins.
-- Permanently retired TB Gender Changer, removed its distribution and portfolio assets, and designated TB Colorizer as its replacement.
-- Synchronized all 25 catalog prices with the `카탈로그` tab in the catalog management Google Sheet.
-- Released TB Inverted Flanger 2.0.0 and TB Inverted Phaser 3.0.0 with complete hardware-style interface redesigns and refreshed feature mockups.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
@@ -59,7 +56,7 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 ## 📦 Included Plug-ins
 
-The catalog currently contains 27 plug-ins. Two additional installed projects have portfolio mockups prepared for later catalog registration.
+The catalog currently contains 27 plug-ins. Three additional projects have portfolio mockups: TB AudioPlayer, the intentionally unreleased TB Board, and TB Tape Preview pending manual QA.
 
 Detailed manuals for the established catalog set are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
 
@@ -97,7 +94,7 @@ A parametric, dynamic, and spectral equalizer for precise cuts, automatic resona
 
 #### TB Colorizer
 
-A voice-color processor for reshaping vocal character and perceived size with formant control and effect blending.
+A tonal color processor with seven color profiles, a single Transform amount, and preset recall.
 
 <img width="900" alt="TB Colorizer feature mockup" src="Portfolio/Mockups/tb_colorizer.jpg" />
 
@@ -133,7 +130,7 @@ A three-engine parallel reverb that layers independent spaces and builds depth w
 
 #### TB Scrambler
 
-A tempo-aware glitch engine that rearranges audio into rhythmic fragments, from subtle edits to heavily scrambled motion.
+A formant-scramble effect with adjustable Low and High limits, Scramble Amount, and preset recall.
 
 <img width="900" alt="TB Scrambler feature mockup" src="Portfolio/Mockups/tb_scrambler.jpg" />
 
@@ -145,7 +142,7 @@ A frequency-dependent transient processor for shaping attack, controlling sustai
 
 #### TB Step Shifter (Beta)
 
-A harmonic pitch-shifting effect that creates stepped, sequenced motion and blends the animated result with the dry signal.
+A beta harmonic pitch shifter with direct Pitch, Step, and Mix controls plus a Colorize mode.
 
 <img width="900" alt="TB Step Shifter feature mockup" src="Portfolio/Mockups/tb_step_shifter.jpg" />
 
@@ -157,19 +154,19 @@ A redesigned vocal pitch-correction tool with direct key and scale selection, pi
 
 #### TB Volume
 
-A simple gain tool for clean, precise, and repeatable output-level adjustment without added coloration.
+A simple gain tool with decibel and percentage modes plus an exact level readout.
 
 <img width="900" alt="TB Volume feature mockup" src="Portfolio/Mockups/tb_volume.jpg" />
 
 #### TB Vocoder (Beta)
 
-A multi-band vocoder that combines carrier and voice signals with configurable filter ranges, envelope response, width, and resynthesis controls.
+A 32-band vocoder with a resynthesis spectrum, configurable filterbank, and Imprint controls for tonal shaping.
 
 <img width="900" alt="TB Vocoder feature mockup" src="Portfolio/Mockups/tb_vocoder.jpg" />
 
 #### TB XYZ Panner
 
-A three-axis spatial panner for positioning sound across X, Y, and Z, shaping distance, and automating motion paths.
+A three-axis spatial panner with pan/depth and height/distance maps plus adjustable room ambience.
 
 <img width="900" alt="TB XYZ Panner feature mockup" src="Portfolio/Mockups/tb_xyz_panner.jpg" />
 
@@ -187,13 +184,13 @@ A tunable sub-bass generator for adding controlled low-end weight and blending i
 
 #### TB Delay
 
-A creative stereo delay with independent echoes, a visual delay map, feedback control, and filtered repeats that fit the mix.
+A creative stereo delay with a visual delay map, rhythm controls, and grain-transform tools for repeat processing.
 
 <img width="900" alt="TB Delay feature mockup" src="Portfolio/Mockups/tb_delay.jpg" />
 
 #### TB Pitch Shifter
 
-An independent pitch and formant processor for transposing audio, changing perceived size, or linking both transformations.
+An independent pitch and formant processor for transposing audio and changing perceived size with two direct controls.
 
 <img width="900" alt="TB Pitch Shifter feature mockup" src="Portfolio/Mockups/tb_pitch_shifter.jpg" />
 
@@ -229,7 +226,7 @@ A harmonic exciter and enhancer with 30 Factory presets for controlled brightnes
 
 ### Additional portfolio plug-ins
 
-These projects have completed mockups but are not yet registered in `catalog.json`.
+These projects have completed mockups but are not catalog releases. TB Board remains intentionally excluded, and TB Tape remains a preview until manual DAW and listening QA is complete.
 
 #### TB AudioPlayer
 
@@ -242,6 +239,12 @@ A compact one-shot sample player with file browsing, immediate play and stop con
 A visual signal-routing workspace and VST3 host for building insert chains and animating parameters with live modulation.
 
 <img width="900" alt="TB Board feature mockup" src="Portfolio/Mockups/tb_board.jpg" />
+
+#### TB Tape (Preview)
+
+A varispeed motor effect for tape-like stops and starts, drawable transition curves, and independent spin-up and brake timing.
+
+<img width="900" alt="TB Tape Preview feature mockup" src="Portfolio/Mockups/tb_tape.jpg" />
 
 ## 🚀 Installation Guide
 
