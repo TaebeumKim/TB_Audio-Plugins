@@ -19,8 +19,8 @@ The portfolio reads this folder dynamically. A matching image overrides the cata
 
 ## Current mockup set
 
-- Coverage: all 27 plug-ins in `catalog.json`
-- Additional coverage: 3 projects that are not in `catalog.json`
+- Coverage: all 28 plug-ins in `catalog.json`
+- Additional coverage: 2 projects that are not in `catalog.json`
 - Filename: `<catalog-id>.jpg`
 - Canvas: `1536 x 1024`
 - JPEG quality: `92`
@@ -37,7 +37,6 @@ The additional portfolio projects are:
 
 - `tb.audio-player.jpg` — TB AudioPlayer, prepared ahead of catalog registration
 - `tb_board.jpg` — TB Board, visual coverage only; catalog and release remain intentionally excluded
-- `tb_tape.jpg` — TB Tape Preview, held from catalog and release until manual DAW and listening QA is complete
 
 These files become active portfolio images only after a matching `id` is added to `catalog.json`. When a plug-in is added to or removed from the catalog, update this folder in the same commit so every catalog ID continues to have a matching image.
 

@@ -8,10 +8,11 @@
 
 ## 2026-08-10
 
-- Redesigned all 27 catalog mockups and the additional portfolio set around a blurred black gradient, a soft floating glow, and three short English feature guides.
+- Redesigned the complete catalog mockup set and the additional portfolio set around a blurred black gradient, a soft floating glow, and three short English feature guides.
 - Re-mapped every guide to a visible analyzer, meter, graph, knob, or control; overlap areas now use compact glass panels and collision-aware leader placement.
 - Replaced stale UI sources with current captures, including fresh installed-VST3 snapshots for TB EQ and TB Colorizer.
-- Added a TB Tape Preview mockup while keeping it out of the catalog and release packages until manual QA is complete.
+- Released TB Tape 1.0.0 for Windows VST3 with independent stop/start timing, drawable motor curves, a new DISPLAY logo, and its portfolio mockup.
+- Recorded the remaining manual DAW and listening checks as deferred; all automated build, DSP, host-contract, UI, and Standalone smoke gates passed.
 - Kept TB Board out of the catalog and release packages, and continued the permanent exclusion of TB Gender Changer.
 
 ## 2026-08-09
@@ -56,7 +57,7 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 ## 📦 Included Plug-ins
 
-The catalog currently contains 27 plug-ins. Three additional projects have portfolio mockups: TB AudioPlayer, the intentionally unreleased TB Board, and TB Tape Preview pending manual QA.
+The catalog currently contains 28 plug-ins. Two additional projects have portfolio mockups: TB AudioPlayer and the intentionally unreleased TB Board.
 
 Detailed manuals for the established catalog set are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
 
@@ -224,9 +225,15 @@ A harmonic exciter and enhancer with 30 Factory presets for controlled brightnes
 
 <img width="900" alt="TB Exciter feature mockup" src="Portfolio/Mockups/tb_exciter.jpg" />
 
+#### TB Tape
+
+A custom-curve tape-motor effect that slows audio to silence and accelerates it back to speed with independent brake and spin-up timing.
+
+<img width="900" alt="TB Tape feature mockup" src="Portfolio/Mockups/tb_tape.jpg" />
+
 ### Additional portfolio plug-ins
 
-These projects have completed mockups but are not catalog releases. TB Board remains intentionally excluded, and TB Tape remains a preview until manual DAW and listening QA is complete.
+These projects have completed mockups but are not catalog releases. TB Board remains intentionally excluded.
 
 #### TB AudioPlayer
 
@@ -239,12 +246,6 @@ A compact one-shot sample player with file browsing, immediate play and stop con
 A visual signal-routing workspace and VST3 host for building insert chains and animating parameters with live modulation.
 
 <img width="900" alt="TB Board feature mockup" src="Portfolio/Mockups/tb_board.jpg" />
-
-#### TB Tape (Preview)
-
-A varispeed motor effect for tape-like stops and starts, drawable transition curves, and independent spin-up and brake timing.
-
-<img width="900" alt="TB Tape Preview feature mockup" src="Portfolio/Mockups/tb_tape.jpg" />
 
 ## 🚀 Installation Guide
 
