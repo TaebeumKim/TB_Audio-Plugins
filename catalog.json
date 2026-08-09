@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-09T14:09:59+09:00",
+  "updatedAt": "2026-08-09T14:55:32.898+09:00",
   "hubVersion": "1.3.15",
   "languages": [
     {
@@ -173,6 +173,17 @@
             "sizeBytes": 2943809
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.3.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Center-1.3.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "c0076d6a38aa54edabb18ce5bbda7e6e9f915f4eed4642d18f709e8016873fe0",
+          "sizeBytes": 3820965
+        }
       }
     },
     {
@@ -225,6 +236,17 @@
             "sha256": "a19477f9244a9971178f918b9af449a4f15855a8b1ae5c26ee783fb1f2e56838",
             "sizeBytes": 3555515
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "2.1.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Compressor-2.1.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "375601859105f41f36f24cd1809edde82786c1586392c627012832dd1cbf161f",
+          "sizeBytes": 4125880
         }
       }
     },
@@ -279,6 +301,17 @@
             "sizeBytes": 3537753
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.3.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Distortion-1.3.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "4b85547e7659c5d974f4fa1bfc33e4c05d18de0226386e4b293961f52b53312d",
+          "sizeBytes": 4122013
+        }
       }
     },
     {
@@ -331,6 +364,17 @@
             "sha256": "dcea2513192e7ee0ec0674a43def872d17f101507f61bd1d9e4d410693d84e3b",
             "sizeBytes": 2970486
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.3.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Disperser-1.3.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "5f8e04142d499cc066bdf4ea22359e1f3bedaf1cfe9fd37c93250cce2700b1f9",
+          "sizeBytes": 3834127
         }
       }
     },
@@ -385,6 +429,17 @@
             "sizeBytes": 7611238
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "2.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-EQ-2.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "c22c8a56fa5b08b2605345c4170bb7d405a922dcf784e746e9e7d8b80c29210d",
+          "sizeBytes": 7691150
+        }
       }
     },
     {
@@ -437,6 +492,17 @@
             "sha256": "f72386d966dbae635852f7acb84118c2205f7e56d79991885e7b5172d3297b51",
             "sizeBytes": 2953675
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "2.3.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Colorizer-2.3.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "b34702f1e3c7195d3f3ee0771a61433e4fde45692264c30fa57e79c5f1a6b1a4",
+          "sizeBytes": 4252620
         }
       }
     },
@@ -491,6 +557,17 @@
             "sizeBytes": 2914039
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "2.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Inverted-Flanger-2.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "d13c9f39691230e0b8fc030fc101ff629d2cae7367e499bd4254efb0c68d64d4",
+          "sizeBytes": 3812427
+        }
       }
     },
     {
@@ -543,6 +620,17 @@
             "sha256": "4ee4107bf14490c7d2dd5610864477d4b38ba5fbb9d1f9c50fb169d1a2fa656b",
             "sizeBytes": 2937574
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "3.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Inverted-Phaser-3.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "6b96d706e8180fd07971594c66563b46a9239e14458ca3316177aaac4b2dd056",
+          "sizeBytes": 3831585
         }
       }
     },
@@ -597,6 +685,17 @@
             "sizeBytes": 2973245
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.3.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Jewel-Digger-and-Finder-1.3.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "7890c445c1960547177afc849457cc2359471a502d7adf7091d8f97cb78cb591",
+          "sizeBytes": 3841123
+        }
       }
     },
     {
@@ -649,6 +748,17 @@
             "sha256": "ec6c81c573847093ad7872a1d38d8040fe8eeecdfa97e16f08d35bcfb3e3ed4f",
             "sizeBytes": 3566146
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "2.2.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Noise-Remover-2.2.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "72a0f97fd02966058883ca6324e2527d5d9604ec7101bece3f40cbad96c7a3cc",
+          "sizeBytes": 11138723
         }
       }
     },
@@ -703,6 +813,17 @@
             "sizeBytes": 3617612
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "3.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Parallel-Reverb-3.0.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "fe5709215ad823620bbab9e984cfc46dcd95b63a120bf4c10d25034cf0fdc85c",
+          "sizeBytes": 4187979
+        }
       }
     },
     {
@@ -755,6 +876,17 @@
             "sha256": "cb3e80b6071ad9ec29f07bc922531f6306aa8e3eaf1a19cdb9e6477506c9b63e",
             "sizeBytes": 4241557
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "2.3.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Scrambler-2.3.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "7b27db7e23381972d46afdfca2816ab9d572f2835b8b36a8482a31596f41ce49",
+          "sizeBytes": 4822254
         }
       }
     },
@@ -809,6 +941,17 @@
             "sizeBytes": 3610119
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.4.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Spectral-Transient-Shaper-1.4.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "91a3df39cac85421df4dfd3a2319d21b7028abce0dfed80b796f9f08b3774e5e",
+          "sizeBytes": 4159270
+        }
       }
     },
     {
@@ -861,6 +1004,17 @@
             "sha256": "e0f0f63f1aa35e046f0a91c0641024e58de627421ba7aa47907a19fdc9e789a6",
             "sizeBytes": 3542309
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "2.2.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Step-Shifter-2.2.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "5d554b14c207ff152ce8cc9fc1c1de383a63f16267a75f67770d427bdc3a00aa",
+          "sizeBytes": 4114573
         }
       }
     },
@@ -915,6 +1069,17 @@
             "sizeBytes": 2954643
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "2.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Tune-2.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "42135d36954cd44e379c2db488cc471d8255e723a9f8fde4725b1a78c70670b4",
+          "sizeBytes": 3852690
+        }
       }
     },
     {
@@ -967,6 +1132,17 @@
             "sha256": "616ad559b517115fa9e0b6cad688a41ff31db42b37f6cd70b2e164d7dc24ea2b",
             "sizeBytes": 2906149
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.2.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Volume-1.2.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "b8412ef53c4ed293cc6dc2a25e68223b5ffe3960aa5011b284ccefb2df6157fb",
+          "sizeBytes": 3789989
         }
       }
     },
@@ -1021,6 +1197,17 @@
             "sizeBytes": 3573081
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "2.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Vocoder-2.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "4d1b44b9a42043c7342bbdab1e3f7b1bf85f03078cb853f48d55e85de4baeec7",
+          "sizeBytes": 4141061
+        }
       }
     },
     {
@@ -1073,6 +1260,17 @@
             "sha256": "ddce92792cd8fa6d7b05828b47bb73fa37b5e6f19117285921ed9a2c0292565b",
             "sizeBytes": 3768087
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.2.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-XYZ-Panner-1.2.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "32d3cbb7518eec67d2f1ceba084f6ba543bc86f0abd93f780220b2c26d0ba103",
+          "sizeBytes": 4311468
         }
       }
     },
@@ -1127,6 +1325,17 @@
             "sizeBytes": 3979209
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.2.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Limiter-1.2.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "edf3c01cc0b452bbf8392584b74d2eb77cfa51bbc2198458ab75fc947a6fe4cc",
+          "sizeBytes": 4557839
+        }
       }
     },
     {
@@ -1180,6 +1389,17 @@
             "sizeBytes": 2983920
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.2.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-SubLow-1.2.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "cb639fb6547973ed7175ebc1a55dbdc7d94d5a7114d9494cb710274f7aabc631",
+          "sizeBytes": 3864679
+        }
       }
     },
     {
@@ -1231,6 +1451,17 @@
             "sha256": "714a4097e013794c48ec22dfa4b3ebfeea9106bc7a08cb93373b44ae28c1f89e",
             "sizeBytes": 2996332
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Delay-1.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "0b08022febb668b62c288d612605f9b99f39307065bbf716603785f4a37044b3",
+          "sizeBytes": 3859901
         }
       }
     },
@@ -1285,6 +1516,17 @@
             "sizeBytes": 2958766
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Pitch-Shifter-1.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "fe7f4bc6da874a80d7295ddd2ab4d86bd16f080c4d1510f0ca7d8d370af784f5",
+          "sizeBytes": 3810902
+        }
       }
     },
     {
@@ -1337,6 +1579,17 @@
             "sha256": "737249d5c1c4a192e26e9f6e0dfacc2f9bd1666ad9a0c480cd37deea15e0bc32",
             "sizeBytes": 6295041
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Resonator-1.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "cc237ff49ea20cf2aa4f89ff5f1a8811e18e22db33b912dcedd874c192f3aec4",
+          "sizeBytes": 6680797
         }
       }
     },
@@ -1391,6 +1644,17 @@
             "sizeBytes": 5906683
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Ring-Modulation-1.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "6bf73883e6f4e1af929a270737d9b62ca47268d1b78b114167a8278fb03f8c57",
+          "sizeBytes": 6703606
+        }
       }
     },
     {
@@ -1443,6 +1707,17 @@
             "sha256": "612165349b5d3ab917d5ad0c2bb85517b7c8ac677367709868fa388f9fe3ae3a",
             "sizeBytes": 3395318
           }
+        }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Recorder-1.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "a554a8487b07e2bef0c5bb4a8debb629eecf8969fd6e4adf275a480ca231359f",
+          "sizeBytes": 4212300
         }
       }
     },
@@ -1497,6 +1772,17 @@
             "sizeBytes": 3147875
           }
         }
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Shimmer-1.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "69319683bbf2edfff7f2151e81f6af554cd0b4f196c294db42ccf363960e955a",
+          "sizeBytes": 3998081
+        }
       }
     },
     {
@@ -1533,6 +1819,17 @@
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.1.0",
         "sha256": "782bcf9a83682f2c6bf435682557affdadd55911e4e5a1ecf0753679fedfce40",
         "sizeBytes": 2871294
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.1.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Exciter-1.1.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "fe90203e845382ea263cc9b4a90dcc35b04aec476ad70fa5907ab3cb8dbf38f3",
+          "sizeBytes": 4177684
+        }
       }
     }
   ],
