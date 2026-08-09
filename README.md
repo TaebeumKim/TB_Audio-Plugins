@@ -9,6 +9,7 @@
 ## 2026-08-09
 
 - Released TB Exciter 1.0.0 with a harmonic enhancement engine, a new DISPLAY icon, and a feature-annotated portfolio mockup.
+- Updated TB Exciter to 1.1.0 with a compact 590x450 interface, an accessible selector, and 30 categorized Factory presets.
 - Refreshed the TB Exciter DISPLAY logo mirrors and bumped the catalog cache key to force artwork reloading.
 - Updated TB Compressor to 2.1.0 with clearer input and gain-reduction feedback.
 - Promoted the redesigned TB Tune and TB Vocoder (Beta) to 2.0.0.
@@ -222,7 +223,7 @@ A granular shimmer effect that creates floating grain clouds, octave-up reflecti
 
 #### TB Exciter
 
-A harmonic exciter and enhancer that adds controlled brightness, clarity, focus, stereo width, and level while preserving the aligned dry signal.
+A harmonic exciter and enhancer with 30 Factory presets for controlled brightness, clarity, focus, stereo width, and level.
 
 <img width="900" alt="TB Exciter feature mockup" src="Portfolio/Mockups/tb_exciter.jpg" />
 

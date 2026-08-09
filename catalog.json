@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-09T03:58:30+09:00",
+  "updatedAt": "2026-08-09T14:09:59+09:00",
   "hubVersion": "1.3.15",
   "languages": [
     {
@@ -1503,12 +1503,12 @@
       "id": "tb_exciter",
       "updatedAt": "2026-08-09",
       "latestUpdate": {
-        "version": "1.0.0",
+        "version": "1.1.0",
         "date": "2026-08-09",
         "notesKo": [
-          "Introduced a harmonic enhancement engine that adds controlled brightness while preserving the aligned dry signal.",
-          "Added Bright, Clarity, Focus, Width, and Level controls with a real-time sparkle-field display.",
-          "Refreshed the DISPLAY icon and bumped its catalog cache key so clients fetch the current artwork."
+          "Added a compact 590x450 interface with an accessible Factory preset selector.",
+          "Introduced 30 categorized Factory presets with host-notified parameter changes, edited-state tracking, and recall.",
+          "Kept all five public parameters and the host program count unchanged for project compatibility."
         ]
       },
       "portfolio": {
@@ -1523,16 +1523,16 @@
         "visible": true
       },
       "name": "TB Exciter",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Creative",
       "price": 3,
-      "description": "Harmonic exciter and enhancer.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.0.0-logo-20260809",
+      "description": "Harmonic exciter and enhancer with 30 Factory presets.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.1.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.0.0",
-        "sha256": "5077a6ef51190647e1c69121947498621a50ad7896eb0b317a8c1cba86d82889",
-        "sizeBytes": 2865274
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.1.0",
+        "sha256": "782bcf9a83682f2c6bf435682557affdadd55911e4e5a1ecf0753679fedfce40",
+        "sizeBytes": 2871294
       }
     }
   ],
