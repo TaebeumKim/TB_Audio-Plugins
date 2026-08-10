@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-10T05:10:55+09:00",
+  "updatedAt": "2026-08-11T01:08:17+09:00",
   "hubVersion": "1.3.15",
   "languages": [
     {
@@ -1852,7 +1852,7 @@
     },
     {
       "id": "tb_tape",
-      "updatedAt": "2026-08-10",
+      "updatedAt": "2026-08-11",
       "latestUpdate": {
         "version": "1.0.0",
         "date": "2026-08-10",
@@ -1884,6 +1884,24 @@
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tape.zip?v=1.0.0",
         "sha256": "3d77457b9df062ce630bf0e2c341221b095f13dcdd3d25741fd83c574dba8212",
         "sizeBytes": 2368149
+      },
+      "macos": {
+        "formats": {
+          "vst3": {
+            "version": "1.0.0",
+            "bundleName": "TB-Tape.vst3",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r40-2026-08-11/TB-Tape-VST3-macOS-arm64.zip",
+            "sha256": "078422b265b457d3f98a8e64a31374a97e87386c51cd97fd75ce1e3e574f6d10",
+            "sizeBytes": 3041532
+          },
+          "au": {
+            "version": "1.0.0",
+            "bundleName": "TB-Tape.component",
+            "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugins-macos-arm64-svn-r40-2026-08-11/TB-Tape-AU-macOS-arm64.zip",
+            "sha256": "0eea5edc0200c4793ac1d7a0938ac6a505acb4e0c7fdbd078b7d5273b01e8e92",
+            "sizeBytes": 2936521
+          }
+        }
       }
     }
   ],
