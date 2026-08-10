@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-11T01:08:17+09:00",
+  "updatedAt": "2026-08-11T01:13:58+09:00",
   "hubVersion": "1.3.15",
   "languages": [
     {
@@ -183,6 +183,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Center-1.3.0-Windows-x64-VST3-Setup.exe",
           "sha256": "c0076d6a38aa54edabb18ce5bbda7e6e9f915f4eed4642d18f709e8016873fe0",
           "sizeBytes": 3820965
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "0.3.4",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Center-VST3-macOS-arm64.pkg",
+          "sha256": "72569693472c2a81810b5c82c971f8fcc876c1b9d801f77f52e198e32729e7d1",
+          "sizeBytes": 3048292
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "0.3.4",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Center-AU-macOS-arm64.pkg",
+          "sha256": "a1a051a67e811830e5dd203ea626937f1e24a36dc94711a7fd20e60e15c25aa0",
+          "sizeBytes": 2942827
         }
       }
     },
@@ -247,6 +265,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Compressor-2.1.0-Windows-x64-VST3-Setup.exe",
           "sha256": "375601859105f41f36f24cd1809edde82786c1586392c627012832dd1cbf161f",
           "sizeBytes": 4125880
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.1.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Compressor-VST3-macOS-arm64.pkg",
+          "sha256": "0a2e23dfadbd4894d3a225e043f8ea8d80f6b9e38ee4117245ea6497e71badd5",
+          "sizeBytes": 3664357
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.1.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Compressor-AU-macOS-arm64.pkg",
+          "sha256": "103af1cdbdaa5cc626ff1c6e9af357b335fb33a83e2cc7bd4044ce4ef28c8b02",
+          "sizeBytes": 3555084
         }
       }
     },
@@ -311,6 +347,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Distortion-1.3.0-Windows-x64-VST3-Setup.exe",
           "sha256": "4b85547e7659c5d974f4fa1bfc33e4c05d18de0226386e4b293961f52b53312d",
           "sizeBytes": 4122013
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Distortion-VST3-macOS-arm64.pkg",
+          "sha256": "0d7682f8c8b1aeca9b8e9fbee52a60b4a085189614b77b4e271ff0a86a80096b",
+          "sizeBytes": 3647231
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Distortion-AU-macOS-arm64.pkg",
+          "sha256": "9a2017302dce6d04c23c4f2559f33b992b3859cc8c4ac8c7d0d336cf009e42f4",
+          "sizeBytes": 3540007
         }
       }
     },
@@ -375,6 +429,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Disperser-1.3.0-Windows-x64-VST3-Setup.exe",
           "sha256": "5f8e04142d499cc066bdf4ea22359e1f3bedaf1cfe9fd37c93250cce2700b1f9",
           "sizeBytes": 3834127
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "0.1.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Disperser-VST3-macOS-arm64.pkg",
+          "sha256": "97ba0fa7e539e7b38ef822bed3750c1857368d7026cba07f2858d91441842a0a",
+          "sizeBytes": 3072695
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "0.1.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Disperser-AU-macOS-arm64.pkg",
+          "sha256": "cc7c112f07f5fb566819e9f7957ef985746c23b3fbe05391485d6feed0c64ab8",
+          "sizeBytes": 2969860
         }
       }
     },
@@ -439,6 +511,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-EQ-2.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "c22c8a56fa5b08b2605345c4170bb7d405a922dcf784e746e9e7d8b80c29210d",
           "sizeBytes": 7691150
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-EQ-VST3-macOS-arm64.pkg",
+          "sha256": "0402228330709a2734315784b23190704ab21090cfe158ccb5c4fe766d94fd3c",
+          "sizeBytes": 7717603
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-EQ-AU-macOS-arm64.pkg",
+          "sha256": "25341b811ac13434efbaca9b219a9c203cd86f4fe98cd9442feb1d70427a275d",
+          "sizeBytes": 7611063
         }
       }
     },
@@ -503,6 +593,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Colorizer-2.3.0-Windows-x64-VST3-Setup.exe",
           "sha256": "b34702f1e3c7195d3f3ee0771a61433e4fde45692264c30fa57e79c5f1a6b1a4",
           "sizeBytes": 4252620
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Colorizer-VST3-macOS-arm64.pkg",
+          "sha256": "2f560115b94aaf8b326f7eab9da21a33ecb54c1b5189dfef723f9d840f7024bf",
+          "sizeBytes": 3227122
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Colorizer-AU-macOS-arm64.pkg",
+          "sha256": "4e8b37bb019d106e3080d5110d274cae356fc6ec2989df33116005f0b049768b",
+          "sizeBytes": 3122770
         }
       }
     },
@@ -567,6 +675,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Inverted-Flanger-2.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "d13c9f39691230e0b8fc030fc101ff629d2cae7367e499bd4254efb0c68d64d4",
           "sizeBytes": 3812427
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-InvertedFlanger-VST3-macOS-arm64.pkg",
+          "sha256": "896f346bf82fdb7ea325c88ba64be4f46ab8315737dd5a5850554f057a05c9ef",
+          "sizeBytes": 3017234
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-InvertedFlanger-AU-macOS-arm64.pkg",
+          "sha256": "d2a5b5f460c841eab5d920f063cde8046856855cf9ab6fb58cecf006e7bfdb3e",
+          "sizeBytes": 2913615
         }
       }
     },
@@ -631,6 +757,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Inverted-Phaser-3.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "6b96d706e8180fd07971594c66563b46a9239e14458ca3316177aaac4b2dd056",
           "sizeBytes": 3831585
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-InvertedPhaser-VST3-macOS-arm64.pkg",
+          "sha256": "291b68db8ecfd0a2fccc2f9352963ec06dcab6ffdcf824dba59dd613e35e86ba",
+          "sizeBytes": 3040165
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-InvertedPhaser-AU-macOS-arm64.pkg",
+          "sha256": "3787c3c1138410619710482817152fbc70e8ca27751478e978018b4ab1968683",
+          "sizeBytes": 2936822
         }
       }
     },
@@ -695,6 +839,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Jewel-Digger-and-Finder-1.3.0-Windows-x64-VST3-Setup.exe",
           "sha256": "7890c445c1960547177afc849457cc2359471a502d7adf7091d8f97cb78cb591",
           "sizeBytes": 3841123
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-JewelDiggerAndFinder-VST3-macOS-arm64.pkg",
+          "sha256": "105043662dbbf216057dc035bcffa2aca6d359637fe4a7ff8c97d32f5c3f7b01",
+          "sizeBytes": 3076543
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-JewelDiggerAndFinder-AU-macOS-arm64.pkg",
+          "sha256": "cd25dc523c02711329c1f606cca8cd26383523435d2e07dd2eb4be75c2cf058a",
+          "sizeBytes": 2972148
         }
       }
     },
@@ -759,6 +921,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Noise-Remover-2.2.0-Windows-x64-VST3-Setup.exe",
           "sha256": "72a0f97fd02966058883ca6324e2527d5d9604ec7101bece3f40cbad96c7a3cc",
           "sizeBytes": 11138723
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.1.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-NoiseRemover-VST3-macOS-arm64.pkg",
+          "sha256": "71bca799207d17f9644e25cb8bdecf3b82a56ac0295e2a138b87965ba461da40",
+          "sizeBytes": 3909983
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.1.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-NoiseRemover-AU-macOS-arm64.pkg",
+          "sha256": "67fe9d1b207f073d06083b5fb68c384b75d053f2dea4ed6691d713a8488884e2",
+          "sizeBytes": 3798617
         }
       }
     },
@@ -823,6 +1003,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Parallel-Reverb-3.0.1-Windows-x64-VST3-Setup.exe",
           "sha256": "fe5709215ad823620bbab9e984cfc46dcd95b63a120bf4c10d25034cf0fdc85c",
           "sizeBytes": 4187979
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-ParallelReverb-VST3-macOS-arm64.pkg",
+          "sha256": "3b6ba396dacbd02873696a60e81e84c745958c8d96a7183817d51adec12f16a9",
+          "sizeBytes": 3726179
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-ParallelReverb-AU-macOS-arm64.pkg",
+          "sha256": "4a1beb51571648f4a776f3ec61a022aa62a16a5a4c51fa34346a25ca40c503ff",
+          "sizeBytes": 3617443
         }
       }
     },
@@ -887,6 +1085,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Scrambler-2.3.0-Windows-x64-VST3-Setup.exe",
           "sha256": "7b27db7e23381972d46afdfca2816ab9d572f2835b8b36a8482a31596f41ce49",
           "sizeBytes": 4822254
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.1.4",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Scrambler-VST3-macOS-arm64.pkg",
+          "sha256": "2ed77d2e5a13db33fb38704c3bbb69098c08a67ee788203244dd5afbeb96aa81",
+          "sizeBytes": 4232871
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.1.4",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Scrambler-AU-macOS-arm64.pkg",
+          "sha256": "f0b9c79f58316cfa13591c34a59a17e1b7083be23aeb46b8b2fd1fee2eaf71bf",
+          "sizeBytes": 4121835
         }
       }
     },
@@ -951,6 +1167,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Spectral-Transient-Shaper-1.4.0-Windows-x64-VST3-Setup.exe",
           "sha256": "91a3df39cac85421df4dfd3a2319d21b7028abce0dfed80b796f9f08b3774e5e",
           "sizeBytes": 4159270
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-SpectralTransientShaper-VST3-macOS-arm64.pkg",
+          "sha256": "8f7e34a18b7c11eca5be31736392db95316fe4028fe5e72af8fafc159da36ec4",
+          "sizeBytes": 3718339
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-SpectralTransientShaper-AU-macOS-arm64.pkg",
+          "sha256": "252f32dfc340878159a699b522898844aaa92e66ad0b7a220aa0721d7b00b9e7",
+          "sizeBytes": 3609033
         }
       }
     },
@@ -1015,6 +1249,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Step-Shifter-2.2.0-Windows-x64-VST3-Setup.exe",
           "sha256": "5d554b14c207ff152ce8cc9fc1c1de383a63f16267a75f67770d427bdc3a00aa",
           "sizeBytes": 4114573
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-StepShifter-VST3-macOS-arm64.pkg",
+          "sha256": "acb26edb387f8d482f9cffbb62701df666d781007f3d6a5deb99a0e2afe86586",
+          "sizeBytes": 3648579
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-StepShifter-AU-macOS-arm64.pkg",
+          "sha256": "d216b4b238626e57bb9d02b2e891c7c6e924ed901d92f8d2ea5c348adfdc8714",
+          "sizeBytes": 3541462
         }
       }
     },
@@ -1079,6 +1331,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Tune-2.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "42135d36954cd44e379c2db488cc471d8255e723a9f8fde4725b1a78c70670b4",
           "sizeBytes": 3852690
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Tune-VST3-macOS-arm64.pkg",
+          "sha256": "545a4bfcfa8bd1368b80d100b9bcd01f19f8e3cc5cc3b779d649491774936457",
+          "sizeBytes": 3069066
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Tune-AU-macOS-arm64.pkg",
+          "sha256": "ae503cffd6e1ec28ff88900c5275c7d4f9c348382136265cdf46e9a70e0b3bf8",
+          "sizeBytes": 2964623
         }
       }
     },
@@ -1143,6 +1413,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Volume-1.2.0-Windows-x64-VST3-Setup.exe",
           "sha256": "b8412ef53c4ed293cc6dc2a25e68223b5ffe3960aa5011b284ccefb2df6157fb",
           "sizeBytes": 3789989
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.7",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Volume-VST3-macOS-arm64.pkg",
+          "sha256": "97b961a352016567d27928e86341d16aec861f8be18dfe9330954569a2068051",
+          "sizeBytes": 3010848
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.7",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Volume-AU-macOS-arm64.pkg",
+          "sha256": "6cd2ae433631bf70b43c92e13e913aaaaac4768d95bbe53aaf0a79587af3f6f3",
+          "sizeBytes": 2905369
         }
       }
     },
@@ -1207,6 +1495,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Vocoder-2.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "4d1b44b9a42043c7342bbdab1e3f7b1bf85f03078cb853f48d55e85de4baeec7",
           "sizeBytes": 4141061
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Vocoder-VST3-macOS-arm64.pkg",
+          "sha256": "b64fcc3de3bc7d0b09e6d1d1217930f7ce4328e527b19ce412ccebd3c574fe06",
+          "sizeBytes": 3683892
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Vocoder-AU-macOS-arm64.pkg",
+          "sha256": "05c0565caa5a6599cf2b8ab51ba9517b0a26be6afebfc4161c31b9ef1def4a4f",
+          "sizeBytes": 3572034
         }
       }
     },
@@ -1271,6 +1577,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-XYZ-Panner-1.2.0-Windows-x64-VST3-Setup.exe",
           "sha256": "32d3cbb7518eec67d2f1ceba084f6ba543bc86f0abd93f780220b2c26d0ba103",
           "sizeBytes": 4311468
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-XYZPanner-VST3-macOS-arm64.pkg",
+          "sha256": "d7330895a4f0ef3bf3d84ef7d529918707f8f8ad3d596c932ffb13342334a232",
+          "sizeBytes": 3876554
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-XYZPanner-AU-macOS-arm64.pkg",
+          "sha256": "5cb28f9da6b1dd7fc620c4f0559ddd41dfcf9239c86ba1a5b8406911363ac20f",
+          "sizeBytes": 3767492
         }
       }
     },
@@ -1335,6 +1659,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Limiter-1.2.0-Windows-x64-VST3-Setup.exe",
           "sha256": "edf3c01cc0b452bbf8392584b74d2eb77cfa51bbc2198458ab75fc947a6fe4cc",
           "sizeBytes": 4557839
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "0.4.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Limiter-VST3-macOS-arm64.pkg",
+          "sha256": "86a8eb377575032793bbb17370b269a8ba287c86479c4d04e279b5f8b21d643b",
+          "sizeBytes": 4090052
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "0.4.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Limiter-AU-macOS-arm64.pkg",
+          "sha256": "009a8aa5235bf96dd298c705c1c240a47009b6954a4ea807adc9bfe79288b124",
+          "sizeBytes": 3978394
         }
       }
     },
@@ -1399,6 +1741,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-SubLow-1.2.0-Windows-x64-VST3-Setup.exe",
           "sha256": "cb639fb6547973ed7175ebc1a55dbdc7d94d5a7114d9494cb710274f7aabc631",
           "sizeBytes": 3864679
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "0.1.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-SubLow-VST3-macOS-arm64.pkg",
+          "sha256": "6f25161f018242488dfc6c97c2a76924559d218b11a9e6b77fc099c8c17980ed",
+          "sizeBytes": 3063832
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "0.1.3",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-SubLow-AU-macOS-arm64.pkg",
+          "sha256": "5039d62413e09d309bd5c4b387ac986d2588e9487dcc6ffcfc541e06fe3968e7",
+          "sizeBytes": 2959727
         }
       }
     },
@@ -1462,6 +1822,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Delay-1.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "0b08022febb668b62c288d612605f9b99f39307065bbf716603785f4a37044b3",
           "sizeBytes": 3859901
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Delay-VST3-macOS-arm64.pkg",
+          "sha256": "63e16f41f289efd27fbe832a08f9d9ce304f8af82bbe554df798e71fd60b5490",
+          "sizeBytes": 3100107
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Delay-AU-macOS-arm64.pkg",
+          "sha256": "bc57780c13485c489348c16d1e5813bc437cb60cb8541ec4153a20e5bcc60198",
+          "sizeBytes": 2995703
         }
       }
     },
@@ -1526,6 +1904,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Pitch-Shifter-1.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "fe7f4bc6da874a80d7295ddd2ab4d86bd16f080c4d1510f0ca7d8d370af784f5",
           "sizeBytes": 3810902
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-PitchShifter-VST3-macOS-arm64.pkg",
+          "sha256": "d6c5efcbb28985cebd5aec251f95469240a109f7a5ca5c2d19f1899ff1633e5a",
+          "sizeBytes": 3062349
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-PitchShifter-AU-macOS-arm64.pkg",
+          "sha256": "1e4997cf3f4b6d29b30c0ae151f637f772114e84f36993f81b1d692decd91ee6",
+          "sizeBytes": 2958183
         }
       }
     },
@@ -1590,6 +1986,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Resonator-1.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "cc237ff49ea20cf2aa4f89ff5f1a8811e18e22db33b912dcedd874c192f3aec4",
           "sizeBytes": 6680797
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Resonator-VST3-macOS-arm64.pkg",
+          "sha256": "08f8e34450bedc3aebcdd889122eef7d0ae324f14ea4bd5398b45daa46ccc2c0",
+          "sizeBytes": 6399321
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Resonator-AU-macOS-arm64.pkg",
+          "sha256": "bca7f8c4cd65216aff1a818ff9378e9baabd022f6a8ccdb126afe10b6af1b1ae",
+          "sizeBytes": 6294151
         }
       }
     },
@@ -1654,6 +2068,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Ring-Modulation-1.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "6bf73883e6f4e1af929a270737d9b62ca47268d1b78b114167a8278fb03f8c57",
           "sizeBytes": 6703606
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-RingModulation-VST3-macOS-arm64.pkg",
+          "sha256": "090aca876d2cbbd72c002a41e0e9f0a76939329a50b477463839ebaa84ed5be0",
+          "sizeBytes": 6010289
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-RingModulation-AU-macOS-arm64.pkg",
+          "sha256": "48c241030128e1024f53a9c4f50bdf27b8c75874bd433859b5a79857ebe600ca",
+          "sizeBytes": 5905785
         }
       }
     },
@@ -1718,6 +2150,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Recorder-1.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "a554a8487b07e2bef0c5bb4a8debb629eecf8969fd6e4adf275a480ca231359f",
           "sizeBytes": 4212300
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Recorder-VST3-macOS-arm64.pkg",
+          "sha256": "0fbe299e96821ce26854399e860335002fd2cdb5803e02268f28c53b94393a6e",
+          "sizeBytes": 3505653
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Recorder-AU-macOS-arm64.pkg",
+          "sha256": "3a7a004f13d4abc16515294ffd8dc8d481b1d20591c07b7ea6aae9d8d1145eea",
+          "sizeBytes": 3394343
         }
       }
     },
@@ -1782,6 +2232,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Shimmer-1.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "69319683bbf2edfff7f2151e81f6af554cd0b4f196c294db42ccf363960e955a",
           "sizeBytes": 3998081
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Shimmer-VST3-macOS-arm64.pkg",
+          "sha256": "1f98f955fd19fe9461581fd1648005503a1ecbf8f4df43c1fd624c9e8bb5580b",
+          "sizeBytes": 3251806
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Shimmer-AU-macOS-arm64.pkg",
+          "sha256": "3b4deaea4abfd50e7abb0549b95e23bda31d3cde942ee95fb3f482d41b22cbdd",
+          "sizeBytes": 3147478
         }
       }
     },
@@ -1829,6 +2297,24 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Exciter-1.1.0-Windows-x64-VST3-Setup.exe",
           "sha256": "fe90203e845382ea263cc9b4a90dcc35b04aec476ad70fa5907ab3cb8dbf38f3",
           "sizeBytes": 4177684
+        },
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Exciter-VST3-macOS-arm64.pkg",
+          "sha256": "08c89ec157f63f3f163108688b3ca7ef4e3428c92af2f77f5f93c640000781af",
+          "sizeBytes": 3722332
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Exciter-AU-macOS-arm64.pkg",
+          "sha256": "baf61fbe3c57fd3f01a6fe7beb99e4cb19704d5c785499a4c10e618538aa596d",
+          "sizeBytes": 3615489
         }
       },
       "macos": {
@@ -1901,6 +2387,26 @@
             "sha256": "0eea5edc0200c4793ac1d7a0938ac6a505acb4e0c7fdbd078b7d5273b01e8e92",
             "sizeBytes": 2936521
           }
+        }
+      },
+      "webDownloads": {
+        "macosVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "arm64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Tape-VST3-macOS-arm64.pkg",
+          "sha256": "20c21defb69a8669c108c2c894ab3db2c0b6ef8a193a0b51c72b0b1096f4bd0f",
+          "sizeBytes": 3040736
+        },
+        "macosAu": {
+          "kind": "installer",
+          "format": "AU",
+          "architecture": "arm64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-macos-installers-2026-08-11/TB-Tape-AU-macOS-arm64.pkg",
+          "sha256": "4bbabdadcbf60b3cb60698811f0dc9840418ebc42b447f4149c52047af8c0cbc",
+          "sizeBytes": 2936210
         }
       }
     }
