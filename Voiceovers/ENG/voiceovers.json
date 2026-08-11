@@ -1,0 +1,151 @@
+{
+  "language": "en-US",
+  "direction": "Professional, energetic product narration with selective emphasis and a controlled high-tension delivery.",
+  "items": [
+    {
+      "source_folder": "TB_AudioPlayer",
+      "display_name": "TB Audio Player",
+      "script": "Meet TB Audio Player—a focused, professional one-shot playback tool built for speed and control. Load a WAV, AIFF, FLAC, or Ogg sample, then fire it instantly from the interface or through an automatable zero-to-one trigger. Retriggering stays clean: the new sound starts from the beginning while the previous voice fades safely over fifty milliseconds. A dedicated Stop control closes every active voice just as smoothly. With sample-rate-correct playback, mono or stereo output, and dependable session recall, TB Audio Player turns effects, voice clips, and drum hits into a precise, production-ready trigger workflow."
+    },
+    {
+      "source_folder": "TB_AutoTune",
+      "display_name": "TB Tune",
+      "script": "Meet TB Tune—a real-time monophonic vocal pitch corrector with a more musical sense of direction. It keeps the performance inside your chosen key and scale, but when a note lands on the edge, Auto Musical considers the previous stable note and the melodic movement before choosing the next target. That means upward lines can keep rising, downward lines can keep falling, and each decision stays stable for the entire note. With sixteen scales, independent formant control, and fast, repeatable behavior, TB Tune gives producers professional pitch correction that feels intentional, energetic, and far less mechanical."
+    },
+    {
+      "source_folder": "TB_Board",
+      "display_name": "TB Board",
+      "script": "Meet TB Board—the professional modular environment for building, controlling, and recalling complex plug-in chains. Load compatible VST3 effects as nodes, connect them in serial, parallel, sidechain, or MIDI-aware flows, and see the entire signal path in one clear workspace. TB Board keeps routing, plug-in states, latency alignment, automation macros, and session recall under one roof, so powerful sound-design chains stop disappearing across tracks, buses, and floating windows. Whether you are designing mechanical voices, cinematic effects, or repeatable mixing systems, TB Board turns complicated routing into a precise, reusable, studio-ready workflow."
+    },
+    {
+      "source_folder": "TB_Center",
+      "display_name": "TB Center",
+      "script": "Meet TB Center—a precision stereo positioning tool designed to bring drifting or off-center recordings back into focus. It tracks the dominant left-right direction, corrects inter-channel timing, and recenters the image while protecting phase and spatial character. Intensity defines how strongly the detected angle is corrected; Response controls tracking speed; Lookahead improves analysis; Time Center aligns timing differences; and M/S Width preserves or reshapes the finished image. Optional multiband processing lets low, low-mid, high-mid, and high regions respond independently. For unstable stereo captures, TB Center delivers a controlled, professional center without collapsing the life of the recording."
+    },
+    {
+      "source_folder": "TB_Delay",
+      "display_name": "TB Delay",
+      "script": "Meet TB Delay—a creative stereo feedback instrument where every repeat can evolve. Start with clean echo, dual delay, ping-pong, tuned timing, or tight comb textures, then drive the feedback through tape, BBD, or digital character, modulation, diffusion, frequency shifting, and granular motion. Shape taps, swing, bandwidth, drive, age, stereo movement, and ducking from one powerful system, while built-in safeguards keep feedback musical and controlled. From polished vocal throws to spiraling pitch echoes and dense grain clouds, TB Delay transforms static repeats into bold, professional sound design that moves, blooms, and intensifies with every cycle."
+    },
+    {
+      "source_folder": "TB_Disperser",
+      "display_name": "TB Disperser",
+      "script": "Meet TB Disperser—a precision all-pass phase-dispersion tool that stretches a sharp transient into a heavier, frequency-dependent sweep. Amount controls the total phase rotation. Frequency and Pinch focus the effect. Speed changes the time scale of the dispersion, independently from the dedicated Frequency LFO. Choose from five LFO shapes, then set Range and Rate to create controlled motion without extra automation. Because the process reshapes arrival time rather than overall magnitude, drums, bass, and synth attacks gain length, weight, and movement without conventional saturation. TB Disperser delivers a focused, professional way to make transients hit harder, feel deeper, and move with purpose."
+    },
+    {
+      "source_folder": "TB_Distotion",
+      "display_name": "TB Distortion",
+      "script": "Meet TB Distortion—a high-impact multi-mode distortion built around two independent layers of character. Choose from six drive curves—Soft, Hard, Fuzz, Tube, Tape, and Fold—then use Dynamics to make the harmonic response react to input level without simply chasing loudness. Add the parallel TB character layer for Level, Sample, Time, or Bias textures that can sit beside the main drive instead of being locked to it. Steep low and high focus filters, four-times oversampling, mix control, and output trim keep the result precise. From polished saturation to aggressive, unstable color, TB Distortion delivers serious production power with deliberate control."
+    },
+    {
+      "source_folder": "TB_GenderChanger",
+      "display_name": "TB Colorizer",
+      "script": "Meet TB Colorizer—a fast, professional voice-color tool that turns pitch, formant, spectral balance, and texture into eight repeatable tonal identities. Instead of building a complicated chain of EQ, pitch shifting, formant processing, and distortion, choose a color and shape the result with just two focused controls. Pink and Blue preserve familiar higher and lower voice transformations, while six additional colors offer distinct creative directions for dialogue, singing, streaming, and sound design. TB Colorizer is not voice cloning and it does not claim to recreate a person. It is a decisive production tool for transforming vocal character quickly, consistently, and with bold, mix-ready intent."
+    },
+    {
+      "source_folder": "TB_InvertedPhaser",
+      "display_name": "TB Inverted Phaser",
+      "script": "Meet TB Inverted Phaser—a sharper, more forceful take on phase modulation. Instead of adding an all-pass-shifted copy to the dry signal, it subtracts that copy, producing deep cancellation notches with hard, defined edges. Control up to twelve stages, shape the spacing and density of the comb-like pattern, and drive the motion with five LFO forms plus random jitter. Independent Amount and Mix levels can move from structured dry-wet motion to exposed, highly colored residual textures. An integrated analyzer shows the incoming spectrum and the filter response together. For pads, sustained chords, and harmonic material, TB Inverted Phaser creates focused movement with a distinctly aggressive signature."
+    },
+    {
+      "source_folder": "TB_JewelDiggerAndFinder",
+      "display_name": "TB Jewel Digger and Finder",
+      "script": "Meet TB Jewel Digger and Finder—a pitch-aware resonant shimmer processor that discovers the hidden harmonic jewels inside a sound. Its scale-aligned filter bank uses Base Note, Scale, and Density to select musical resonances, then sends only those chosen components into an octave-up shimmer loop. The result is not a generic reverb washing over everything. It is a focused crystalline layer that grows above pads, guitars, piano, vocal tails, field recordings, and ambience while respecting the harmonic center. For ambient and cinematic production, TB Jewel Digger and Finder delivers luminous space, controlled motion, and a powerful sense of harmony without sacrificing the original source."
+    },
+    {
+      "source_folder": "TB_Limiter",
+      "display_name": "TB Limiter",
+      "script": "Meet TB Limiter—a professional, stereo-linked true-peak mastering limiter built around eight decisive controls. Drive density with Input, set an independent final Ceiling, shape micro-peaks with Enhance, and control recovery through Release and program-aware RMS Assist. RMS Balance can gently correct persistent left-right energy drift, while Attack determines how the fixed two-millisecond lookahead shapes each future peak. Fixed high-quality oversampling, latency-aligned bypass, and independent true-peak verification keep performance predictable from forty-four point one to one hundred ninety-two kilohertz. Optional sixteen- or twenty-four-bit TPDF dither completes the final delivery stage. TB Limiter delivers loud, controlled masters with precision—not hidden processing."
+    },
+    {
+      "source_folder": "TB_NoiseRemover",
+      "display_name": "TB Noise Remover",
+      "script": "Meet TB Noise Remover—a professional restoration tool designed to remove room tone, air conditioning, fans, street noise, and other environmental contamination while protecting the voice. Its hybrid engine combines streaming neural speech enhancement, spectral restoration, and phase-safe guarding, avoiding the watery pumping and musical noise common to aggressive spectral gates. Use Reduction to move continuously from natural cleanup to decisive suppression, while latency reporting and aligned bypass keep the workflow dependable. For dialogue, podcasts, home-recorded vocals, interviews, and field recordings, TB Noise Remover turns low signal-to-noise material into a cleaner, clearer, mix-ready result without turning restoration into a complicated science project."
+    },
+    {
+      "source_folder": "TB_PitchShifter",
+      "display_name": "TB Pitch Shifter",
+      "script": "Meet TB Pitch Shifter—a focused, professional tool for moving pitch and formant independently. Pitch shifts the harmonic spacing across four octaves, from minus twenty-four to plus twenty-four semitones. Formant moves the perceived vocal or instrumental size across a separate two-octave range, without forcing the musical note to follow. With only two primary controls, you can create clean octave changes, larger or smaller characters, transformed effects, or tonal reshaping that conventional speed-based playback cannot achieve. Real-time FFT processing, smooth automation, mono and stereo operation, fixed reported latency, and aligned bypass make TB Pitch Shifter fast, precise, and ready for serious production."
+    },
+    {
+      "source_folder": "TB_Recorder",
+      "display_name": "TB Recorder",
+      "script": "Meet TB Recorder—a professional capture utility for recording exactly what reaches a DAW insert point or a standalone audio input. Choose a destination folder and file name, press Record, and preserve mono or stereo audio without changing the sound passing through. Pause and resume without closing the temporary file; metering and passthrough continue, while paused time is excluded from the final duration and split logic. After recording, TB Recorder can automatically convert and divide the result into WAV, FLAC, AIFF, MP3, AAC, or Ogg formats. From long sessions and rehearsals to fast idea capture, it creates dependable files with a clean, production-ready workflow."
+    },
+    {
+      "source_folder": "TB_Resonator",
+      "display_name": "TB Resonator",
+      "script": "Meet TB Resonator—a playable modal instrument for turning any input into a tuned physical body. Eight stable resonant modes give clicks, drums, noise, guitars, pads, or vocals a defined pitch, material, and memory. Tune sets the musical center. Body moves between harmonic and inharmonic structures. Touch changes how transients and sustained energy excite the object. Memory controls the actual decay of the resonant modes, while Mix balances the transformation. With zero-sample latency, mono or stereo operation, and tails up to thirty seconds, TB Resonator goes far beyond EQ or ordinary reverb—delivering powerful, production-ready resonance that can be struck, sustained, and shaped like an instrument."
+    },
+    {
+      "source_folder": "TB_RingModulation",
+      "display_name": "TB Ring Modulation",
+      "script": "Meet TB Ring Modulation—a streamlined four-control ring modulator built for immediate, professional results. Set the internal carrier anywhere from zero point one hertz to five kilohertz, then move smoothly from slow tremolo and pulsing amplitude movement into complex, metallic sidebands. Shape changes the carrier waveform, Tone focuses the spectral edge, and Mix places the transformation exactly where it belongs. Parameter and bypass smoothing keep automation clean across mono or stereo sources, while factory presets provide fast starting points for rhythmic motion, robotic voices, percussion, and aggressive sound design. No external routing, no unnecessary pages—just direct, high-energy modulation with precision."
+    },
+    {
+      "source_folder": "TB_Scrambler",
+      "display_name": "TB Scrambler",
+      "script": "Meet TB Scrambler—a professional thirty-one-band spectral transformation tool built to destroy recognition without destroying the whole mix. Place Low and High around the region you want to process. Frequencies outside that range pass through unchanged, while the selected bands have their formant envelope and fine spectral structure rearranged through a repeatable permutation. The result can turn vocals, drum loops, and effects into metallic, encrypted, radio-like textures while preserving low-end weight, rhythm, and overall energy. Scramble Amount moves continuously from perfect reconstruction to full displacement. For controlled alienation and high-impact sound design, TB Scrambler delivers radical color exactly where you choose."
+    },
+    {
+      "source_folder": "TB_Shimmer",
+      "display_name": "TB Shimmer",
+      "script": "Meet TB Shimmer—a professional granular shimmer environment where fragments of sound become a rising, evolving prism. Real-time grains can shift in pitch, reverse, scatter across stereo space, and vary independently in level, position, and tuning. Each generation can climb through pitch-shifted feedback, then pass through early all-pass diffusion into a spacious eight-line late reverb network. The result moves from smooth bloom to bright sparks, from raw particles to a wide, floating cloud, without building a risky multi-plug-in feedback chain. On pads, guitars, vocals, keys, and rhythmic loops, TB Shimmer creates luminous motion, powerful depth, and a polished cinematic tail."
+    },
+    {
+      "source_folder": "TB_StepShifter",
+      "display_name": "TB Step Shifter",
+      "script": "Meet TB Step Shifter—a spectral harmonic shifter that transforms pitch without simply resampling the entire spectrum. It tracks the input’s fundamental frequency, isolates the harmonic series, and moves selected harmonics to new positions while preserving the source’s timing. In Pitch Shift mode, the detected series is relocated. In Colorize mode, the fundamental can remain grounded while upper harmonics are retuned for a new tonal identity. Step defines how much of the harmonic structure moves, and Dry/Wet Mix controls the final impact. On vocals, acoustic guitar, pads, and other clearly pitched material, TB Step Shifter creates precise, unusual color with a professional edge that conventional pitch shifting cannot match."
+    },
+    {
+      "source_folder": "TB_SubLow",
+      "display_name": "TB SubLow",
+      "script": "Meet TB SubLow—a professional additive low-frequency engine that creates new bass at the frequency you choose, independent of the input pitch. Set Target anywhere from thirty-two to two hundred fifty hertz. Core generates the focused, periodic center. Bloom adds resonant body, short diffusion, subtle harmonics, and air around the low end. Punch reinforces the onset, while Response follows the natural body and release movement extracted from the source. Unlike a fixed rumble generator or a simple octave-down effect, TB SubLow reacts to full-band mono or stereo material and builds controlled new energy beneath it. The result is deeper, tighter, production-ready impact on virtually any source."
+    },
+    {
+      "source_folder": "TB_Vocoder",
+      "display_name": "TB Vocoder",
+      "script": "Meet TB Vocoder—a professional real-time channel vocoder that stamps the spectral movement of a recorded source onto an internal synth carrier. In Self mode, no second carrier track is required: load it on a vocal or rhythmic source and start shaping immediately. Choose from eight to sixty-four analysis bands, define the active frequency range, tune the built-in synth, morph its color from saw to pulse, and control resonance, response, whitening, width, and sibilance. The rhythm and articulation of the source remain recognizable while the timbre becomes unmistakably synthetic. TB Vocoder delivers classic clarity, modern control, and powerful results without complicated routing."
+    },
+    {
+      "source_folder": "TB_Compressor",
+      "display_name": "TB Compressor",
+      "script": "Meet TB Compressor—a professional dynamics processor that combines precise peak or RMS detection with powerful tone shaping. Dial in Threshold, Ratio, Knee, Attack, Release, Lookahead, Makeup, and stereo linking for anything from transparent leveling to fast, decisive punch. An external sidechain bus includes low-cut and high-cut filtering, so the detector reacts only where you want it to. Then add character through six saturation modes, five circuit-inspired models, independent Drive and Mix, and up to eight-times oversampling. For vocals, drums, bass, buses, and full mixes, TB Compressor delivers controlled dynamics, confident impact, and polished analog-style color from one focused production surface."
+    },
+    {
+      "source_folder": "TB_EQ",
+      "display_name": "TB EQ",
+      "script": "Meet TB EQ—a professional twenty-four-band spectral dynamic equalizer that brings basic EQ, dynamic control, and resonance reduction into one precise workflow. Build curves with Bell, Shelf, Cut, Notch, Band Pass, and All Pass filters, then turn any band into a level-responsive Dynamic EQ with Threshold, Range, Attack, and Release. For harsh, narrow resonances, Spectral mode uses STFT analysis to detect and reduce components that rise above neighboring frequencies. A live analyzer displays the source spectrum, static response, expected movement, and real-time gain change, while hold-to-audition lets you hear exactly what each band is targeting. TB EQ turns detailed correction into fast, confident, studio-grade control."
+    },
+    {
+      "source_folder": "TB_InvertedFlanger",
+      "display_name": "TB Inverted Flanger",
+      "script": "Meet TB Inverted Flanger—a professional sci-fi modulation effect that takes classic flanging into deeper, more experimental territory. Instead of blending a normal delayed copy with the source, it uses phase-inverted modulated delay voices to create hollow cancellation, empty-space motion, and dramatic metallic sweeps. Depth controls the range of movement, Rate drives the LFO speed, Feedback adds resonance and jet-like intensity, and Color removes extra dry body to push the inverted character forward. Mix places the effect with precision. On guitars, synths, vocals, and drum loops, TB Inverted Flanger delivers focused whoosh, hard-edged phase movement, and bold futuristic energy without an overloaded control surface."
+    },
+    {
+      "source_folder": "TB_ParallelReverb",
+      "display_name": "TB Parallel Reverb",
+      "script": "Meet TB Parallel Reverb—a professional three-engine space designer built to keep the dry source clear while the wet field becomes rich, wide, and dimensional. Glue provides room or chamber body. Bright adds plate or spring character. Space delivers long hall depth or user-loaded impulse responses. Each engine runs independently with its own Send, Pre-delay, Width, Decay, filtering, Color, and focused Solo audition, then all three returns meet at one final Wet/Dry control. Build tight vocal proximity, powerful drum rooms, shimmering guitar tails, or cinematic ambience without stacking multiple plug-ins. TB Parallel Reverb turns complex spatial layering into a fast, polished, production-ready workflow."
+    },
+    {
+      "source_folder": "TB_SpectralTransientShaper",
+      "display_name": "TB Spectral Transient Shaper",
+      "script": "Meet TB Spectral Transient Shaper—a professional dynamics tool that reshapes attack and sustain at frequency-bin resolution, without crossover bands. Instead of moving the entire signal at once, it analyzes each of one thousand twenty-five FFT bins and decides where transient energy should rise, where sustain should tighten, and where the source should remain untouched. Simple mode gives fast full-spectrum sensitivity; EQ mode lets Low, Mid, and High regions respond independently. Dual analyzers reveal the exact attack and sustain targets, while optional saturation, clipping, oversampling, and output limiting finish the result safely. From harder drums to cleaner room tails, it delivers focused impact with surgical spectral control."
+    },
+    {
+      "source_folder": "TB_Volume",
+      "display_name": "TB Volume",
+      "script": "Meet TB Volume—a professional one-control gain utility built for speed, clarity, and absolute focus. Drag the large numeric value to set level, then choose dB mode for a precise minus twenty-four to plus twenty-four decibel range, or Percent mode for an equal-loudness-inspired scale from silence to three hundred percent. Switching modes never changes the underlying level, so the sound remains completely stable while the display matches the way you want to work. A stereo-linked sample-peak limiter with one millisecond of lookahead protects the output at minus zero point one dBFS. No presets, no meters, no clutter—just immediate, dependable level control."
+    },
+    {
+      "source_folder": "TB_XYZPanner",
+      "display_name": "TB XYZ Panner",
+      "script": "Meet TB XYZ Panner—a professional spatial positioning tool that keeps reliable stereo panning at its core, then adds procedural cues for height, distance, and front-to-back perspective. Use the Top View to place left, right, front, or back without disturbing distance. Use the Side View to shape elevation and depth through level, tone, and early-reflection behavior. Stereo mode delivers solid conventional placement, while Headphones mode engages KEMAR HRTF rendering for a more immersive binaural image. Room and Output controls finish the space, and surround outputs remap non-LFE channels by speaker azimuth. TB XYZ Panner turns flat positioning into fast, controlled, multidimensional movement."
+    },
+    {
+      "source_folder": "TB_DeEsser",
+      "display_name": "TB DeEsser",
+      "script": "Meet TB DeEsser—a focused, professional de-essing tool built to push harsh sibilance back without flattening the life of the voice. Its language-neutral detector looks for the broad, noisy signature of S and SH sounds instead of relying on a fixed threshold, so loud and quiet phrases need far less constant adjustment. FOCUS moves detection toward the problem area. TAME sets the maximum reduction. WIDE lowers the full signal only when sibilance appears, while SPLIT targets the harsh band with greater precision. Use LISTEN to hear exactly what the detector is catching, then watch real gain reduction and confidence on the ESS meter. For vocals, narration, guitar pick, or sharp cymbal edges, TB DeEsser delivers controlled brightness, clear diction, and decisive post-production cleanup."
+    }
+  ]
+}
