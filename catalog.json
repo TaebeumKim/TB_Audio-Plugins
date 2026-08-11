@@ -481,7 +481,7 @@
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=2.0.1",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=2.0.1",
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/7ba6ce3672d878277ecfe181bc044104e384926c/Hub/TB_EQ.zip",
         "sha256": "504d3f2d31534e1c225f70f80e7b6be19bd85f1bd40f5cc55273a60c7be0ac7b",
         "sizeBytes": 6808567
       },
