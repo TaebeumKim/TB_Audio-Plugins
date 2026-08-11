@@ -6,6 +6,11 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-08-12
+
+- Added the English description-voiceover package and a new 43.61-second TB DeEsser narration.
+- Published the matching scripts, MP3 files, delivery settings, durations, and coverage notes under `Voiceovers/ENG`.
+
 ## 2026-08-11
 
 - Released TB EQ 2.0.1 for Windows VST3, fixing spectrum-analyzer startup when the host editor first becomes visible.
@@ -20,15 +25,6 @@
 - Released TB Tape 1.0.0 for Windows VST3 with independent stop/start timing, drawable motor curves, a new DISPLAY logo, and its portfolio mockup.
 - Recorded the remaining manual DAW and listening checks as deferred; all automated build, DSP, host-contract, UI, and Standalone smoke gates passed.
 - Kept TB Board out of the catalog and release packages, and continued the permanent exclusion of TB Gender Changer.
-
-## 2026-08-09
-
-- Released TB Exciter 1.0.0 with a harmonic enhancement engine, a new DISPLAY icon, and a feature-annotated portfolio mockup.
-- Updated TB Exciter to 1.1.0 with a compact 590x450 interface, an accessible selector, and 30 categorized Factory presets.
-- Refreshed the TB Exciter DISPLAY logo mirrors and bumped the catalog cache key to force artwork reloading.
-- Updated TB Compressor to 2.1.0 with clearer input and gain-reduction feedback.
-- Promoted the redesigned TB Tune and TB Vocoder (Beta) to 2.0.0.
-- Rebuilt the Windows VST3 packages and synchronized catalog versions, download hashes, sizes, latest-update metadata, and README descriptions.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
@@ -55,6 +51,10 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 * **Cross-Platform Support:** Fully compatible with Windows, macOS, and Linux.
 * **Industry-Standard Formats:** Available in VST3 and Audio Unit (AU) formats.
 * **100% Free:** Completely free for both personal and commercial audio production.
+
+## 🎙️ English Description Voiceovers
+
+Professional English scripts and rendered 25–50 second MP3 voiceovers are available in [`Voiceovers/ENG`](Voiceovers/ENG/README.md). The package currently contains 29 narrations, including TB DeEsser, with a consistent professional, energetic delivery. Voiceover documentation does not publish or change a plug-in binary.
 
 ## 📦 Included Plug-ins
 
