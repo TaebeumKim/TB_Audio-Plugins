@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-11T04:06:47.132Z",
+  "updatedAt": "2026-08-11T17:12:20+09:00",
   "hubVersion": "1.3.15",
   "languages": [
     {
@@ -452,13 +452,14 @@
     },
     {
       "id": "tb_eq",
-      "updatedAt": "2026-08-05",
+      "updatedAt": "2026-08-11",
       "latestUpdate": {
-        "version": "2.0.0",
-        "date": "2026-08-02",
+        "version": "2.0.1",
+        "date": "2026-08-11",
         "notesKo": [
-          "Redesigned the analyzer-focused full-screen layout, band-control hierarchy, knobs, and overall arrangement.",
-          "Raised the major version to 2.0.0 to reflect the scale of the visual redesign."
+          "Fixed analyzer startup so spectrum updates begin as soon as the host editor becomes visible.",
+          "Added a visibility regression gate so the analyzer no longer waits for the SPEED control to be clicked.",
+          "Normalized Windows VST3 version and vendor metadata to 2.0.1 and Team Impulse Impact."
         ]
       },
       "portfolio": {
@@ -473,16 +474,16 @@
         "visible": true
       },
       "name": "TB EQ",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "category": "EQ",
       "price": 6,
       "description": "Parametric equalizer.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=2.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_eq.png?v=2.0.1",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=2.0.0",
-        "sha256": "3c0c0477bb85aad0e86f5e156252f3315cd82d8a953d69a2da80318c3ac6d135",
-        "sizeBytes": 6807876
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_EQ.zip?v=2.0.1",
+        "sha256": "504d3f2d31534e1c225f70f80e7b6be19bd85f1bd40f5cc55273a60c7be0ac7b",
+        "sizeBytes": 6808567
       },
       "macos": {
         "formats": {
@@ -507,10 +508,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "2.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-EQ-2.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "c22c8a56fa5b08b2605345c4170bb7d405a922dcf784e746e9e7d8b80c29210d",
-          "sizeBytes": 7691150
+          "version": "2.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-eq-windows-v2.0.1/TB-EQ-2.0.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "54789283cf4b3e544fbff7f0d5a29b48231c4da16f5054ffe7bada6dbd752ae8",
+          "sizeBytes": 7691144
         },
         "macosVst3": {
           "kind": "installer",

@@ -6,6 +6,12 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-08-11
+
+- Released TB EQ 2.0.1 for Windows VST3, fixing spectrum-analyzer startup when the host editor first becomes visible.
+- Added a regression gate proving the analyzer updates before the SPEED control is clicked, and preserved the existing host contract.
+- Normalized the Windows VST3 version and vendor metadata, refreshed the Hub package and catalog, and kept the manual DAW/listening checks marked as deferred.
+
 ## 2026-08-10
 
 - Redesigned the complete catalog mockup set and the additional portfolio set around a blurred black gradient, a soft floating glow, and three short English feature guides.
@@ -23,11 +29,6 @@
 - Updated TB Compressor to 2.1.0 with clearer input and gain-reduction feedback.
 - Promoted the redesigned TB Tune and TB Vocoder (Beta) to 2.0.0.
 - Rebuilt the Windows VST3 packages and synchronized catalog versions, download hashes, sizes, latest-update metadata, and README descriptions.
-
-## 2026-08-05
-
-- Linked the TB Center feature video from the catalog.
-- Completed a full macOS arm64 VST3/AU audit and refreshed the affected distribution packages.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
