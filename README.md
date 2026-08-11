@@ -8,8 +8,8 @@
 
 ## 2026-08-12
 
-- Added the English description-voiceover package and a new 43.61-second TB DeEsser narration.
-- Published the matching scripts, MP3 files, delivery settings, durations, and coverage notes under `Voiceovers/ENG`.
+- Added the detailed TB De-Esser user manual to all 20 language folders in `Documents`.
+- Published 28 English description voiceovers with their scripts, MP3 files, delivery settings, durations, and coverage notes under `Voiceovers/ENG`.
 - Replaced the legacy TB Gender Changer voiceover identifier and audio path with TB Colorizer, and updated its narration for the current seven color modes.
 - Released TB De-Esser 1.0.0 for Windows x64 VST3 with level-independent, language-neutral detection and stereo-linked spectral reduction.
 - Added its DISPLAY logo, downloadable ZIP and installer, catalog entry, and three-feature portfolio mockup.
@@ -58,7 +58,7 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 
 ## 🎙️ English Description Voiceovers
 
-Professional English scripts and rendered 25–50 second MP3 voiceovers are available in [`Voiceovers/ENG`](Voiceovers/ENG/README.md). The package currently contains 29 narrations, including TB DeEsser, with a consistent professional, energetic delivery. Voiceover documentation does not publish or change a plug-in binary.
+Professional English scripts and rendered 25–50 second MP3 voiceovers are available in [`Voiceovers/ENG`](Voiceovers/ENG/README.md). The package currently contains 28 narrations with a consistent professional, energetic delivery. Voiceover documentation does not publish or change a plug-in binary.
 
 ## 📦 Included Plug-ins
 

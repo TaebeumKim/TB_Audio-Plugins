@@ -141,11 +141,6 @@
       "source_folder": "TB_XYZPanner",
       "display_name": "TB XYZ Panner",
       "script": "Meet TB XYZ Panner—a professional spatial positioning tool that keeps reliable stereo panning at its core, then adds procedural cues for height, distance, and front-to-back perspective. Use the Top View to place left, right, front, or back without disturbing distance. Use the Side View to shape elevation and depth through level, tone, and early-reflection behavior. Stereo mode delivers solid conventional placement, while Headphones mode engages KEMAR HRTF rendering for a more immersive binaural image. Room and Output controls finish the space, and surround outputs remap non-LFE channels by speaker azimuth. TB XYZ Panner turns flat positioning into fast, controlled, multidimensional movement."
-    },
-    {
-      "source_folder": "TB_DeEsser",
-      "display_name": "TB DeEsser",
-      "script": "Meet TB DeEsser—a focused, professional de-essing tool built to push harsh sibilance back without flattening the life of the voice. Its language-neutral detector looks for the broad, noisy signature of S and SH sounds instead of relying on a fixed threshold, so loud and quiet phrases need far less constant adjustment. FOCUS moves detection toward the problem area. TAME sets the maximum reduction. WIDE lowers the full signal only when sibilance appears, while SPLIT targets the harsh band with greater precision. Use LISTEN to hear exactly what the detector is catching, then watch real gain reduction and confidence on the ESS meter. For vocals, narration, guitar pick, or sharp cymbal edges, TB DeEsser delivers controlled brightness, clear diction, and decisive post-production cleanup."
     }
   ]
 }
