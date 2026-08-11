@@ -38,9 +38,9 @@
       "script": "Meet TB Distortion—a high-impact multi-mode distortion built around two independent layers of character. Choose from six drive curves—Soft, Hard, Fuzz, Tube, Tape, and Fold—then use Dynamics to make the harmonic response react to input level without simply chasing loudness. Add the parallel TB character layer for Level, Sample, Time, or Bias textures that can sit beside the main drive instead of being locked to it. Steep low and high focus filters, four-times oversampling, mix control, and output trim keep the result precise. From polished saturation to aggressive, unstable color, TB Distortion delivers serious production power with deliberate control."
     },
     {
-      "source_folder": "TB_GenderChanger",
+      "source_folder": "TB_Colorizer",
       "display_name": "TB Colorizer",
-      "script": "Meet TB Colorizer—a fast, professional voice-color tool that turns pitch, formant, spectral balance, and texture into eight repeatable tonal identities. Instead of building a complicated chain of EQ, pitch shifting, formant processing, and distortion, choose a color and shape the result with just two focused controls. Pink and Blue preserve familiar higher and lower voice transformations, while six additional colors offer distinct creative directions for dialogue, singing, streaming, and sound design. TB Colorizer is not voice cloning and it does not claim to recreate a person. It is a decisive production tool for transforming vocal character quickly, consistently, and with bold, mix-ready intent."
+      "script": "Meet TB Colorizer—a fast, professional voice-color tool that turns pitch, formant, spectral balance, and texture into seven repeatable tonal identities. Instead of building a complicated chain of EQ, pitch shifting, formant processing, and distortion, choose a color and shape the result with just two focused controls. Pink and Blue preserve familiar higher and lower voice transformations, while five additional colors offer distinct creative directions for dialogue, singing, streaming, and sound design. TB Colorizer is not voice cloning and it does not claim to recreate a person. It is a decisive production tool for transforming vocal character quickly, consistently, and with bold, mix-ready intent."
     },
     {
       "source_folder": "TB_InvertedPhaser",

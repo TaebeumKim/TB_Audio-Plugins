@@ -10,6 +10,7 @@
 
 - Added the English description-voiceover package and a new 43.61-second TB DeEsser narration.
 - Published the matching scripts, MP3 files, delivery settings, durations, and coverage notes under `Voiceovers/ENG`.
+- Replaced the legacy TB Gender Changer voiceover identifier and audio path with TB Colorizer, and updated its narration for the current seven color modes.
 - Released TB De-Esser 1.0.0 for Windows x64 VST3 with level-independent, language-neutral detection and stereo-linked spectral reduction.
 - Added its DISPLAY logo, downloadable ZIP and installer, catalog entry, and three-feature portfolio mockup.
 - Passed the automated 55/55 DSP harness, FFT, A/B, UI, Standalone smoke, and repeatable host-contract checks; manual DAW, listening, performance, packaging, and rights checks remain deferred.
