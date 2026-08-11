@@ -1450,14 +1450,13 @@
         "image": "assets/plugins/tb_vocoder.png",
         "descriptionKo": "캐리어와 모듈레이터의 스펙트럼을 결합하는 베타 보코더입니다.",
         "tags": [
-          "Beta",
           "Vocoder",
           "Voice"
         ],
         "order": 17,
         "visible": true
       },
-      "name": "TB Vocoder (Beta)",
+      "name": "TB Vocoder",
       "version": "2.0.0",
       "category": "Creative",
       "price": 2,
