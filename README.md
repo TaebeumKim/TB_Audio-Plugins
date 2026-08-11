@@ -10,6 +10,9 @@
 
 - Added the English description-voiceover package and a new 43.61-second TB DeEsser narration.
 - Published the matching scripts, MP3 files, delivery settings, durations, and coverage notes under `Voiceovers/ENG`.
+- Released TB De-Esser 1.0.0 for Windows x64 VST3 with level-independent, language-neutral detection and stereo-linked spectral reduction.
+- Added its DISPLAY logo, downloadable ZIP and installer, catalog entry, and three-feature portfolio mockup.
+- Passed the automated 55/55 DSP harness, FFT, A/B, UI, Standalone smoke, and repeatable host-contract checks; manual DAW, listening, performance, packaging, and rights checks remain deferred.
 
 ## 2026-08-11
 
@@ -58,7 +61,7 @@ Professional English scripts and rendered 25–50 second MP3 voiceovers are avai
 
 ## 📦 Included Plug-ins
 
-The catalog currently contains 28 plug-ins. Two additional projects have portfolio mockups: TB AudioPlayer and the intentionally unreleased TB Board.
+The catalog currently contains 29 plug-ins. Two additional projects have portfolio mockups: TB AudioPlayer and the intentionally unreleased TB Board.
 
 Detailed manuals for the established catalog set are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
 
@@ -231,6 +234,12 @@ A harmonic exciter and enhancer with 30 Factory presets for controlled brightnes
 A custom-curve tape-motor effect that slows audio to silence and accelerates it back to speed with independent brake and spin-up timing.
 
 <img width="900" alt="TB Tape feature mockup" src="Portfolio/Mockups/tb_tape.jpg" />
+
+#### TB De-Esser
+
+A level-independent, language-neutral de-esser that uses stereo-linked spectral reduction to tame harsh sibilance while preserving vocal air and diction.
+
+<img width="900" alt="TB De-Esser feature mockup" src="Portfolio/Mockups/tb_deesser.jpg" />
 
 ### Additional portfolio plug-ins
 
