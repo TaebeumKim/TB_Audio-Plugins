@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-13T03:02:12+09:00",
+  "updatedAt": "2026-08-13T03:53:52+09:00",
   "hubVersion": "1.3.16",
   "languages": [
     {
@@ -2663,12 +2663,12 @@
       "id": "tb_multiband_compressor",
       "updatedAt": "2026-08-13",
       "latestUpdate": {
-        "version": "1.0.0",
+        "version": "1.0.1",
         "date": "2026-08-13",
         "notesKo": [
-          "Introduced four independently placed dynamics bands with per-band compression or expansion.",
-          "Added signed Range, external sidechain, stereo and Mid/Side targeting, Dynamic or Linear modes, oversampling, and lookahead.",
-          "Passed all 58 DSP checks, all 11 processor-integration checks, UI, and repeatable host-contract gates; manual DAW, listening, signing, and rights checks remain deferred."
+          "Reversed the response graph hierarchy so Range now reads as the shaded base envelope and the live gain reduction rides on top as the overlay.",
+          "Tinted the live overlay with the selected band colour and thinned the Range contour to a single-pixel lid over a filled area.",
+          "Stopped both contours from drawing where they sit at 0 dB, so the shared datum line is no longer painted over."
         ]
       },
       "portfolio": {
@@ -2683,16 +2683,16 @@
         "visible": true
       },
       "name": "TB Multiband Compressor",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "Dynamics",
       "price": 7,
       "description": "A four-band free-placement dynamics processor with per-band compression or expansion, sidechain, stereo/Mid/Side targeting, signed Range, and Dynamic or Linear modes.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_multiband_compressor.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_multiband_compressor.png?v=1.0.1",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_MultiBandCompressor.zip?v=1.0.0",
-        "sha256": "6e1ffa5eeafafc6ca69a09e896af3a51cc21d56657b3bea0753936c8dd6b241c",
-        "sizeBytes": 3224903
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_MultiBandCompressor.zip?v=1.0.1",
+        "sha256": "d9ecbdbc52e3212360b21c13cc23db66992afe4c48a414761d0014393667ac75",
+        "sizeBytes": 3225431
       },
       "webDownloads": {
         "windowsVst3": {
