@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-12T01:21:02+09:00",
+  "updatedAt": "2026-08-13T02:31:25+09:00",
   "hubVersion": "1.3.16",
   "languages": [
     {
@@ -2454,6 +2454,147 @@
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-deesser-windows-v1.0.0/TB-De-Esser-1.0.0-Windows-x64-VST3-Setup.exe",
           "sha256": "da0a230bee2d8daffb70d275ccef997919a1c86668718afd09475972bf543f93",
           "sizeBytes": 4202891
+        }
+      }
+    },
+    {
+      "id": "tb_filter_table",
+      "updatedAt": "2026-08-13",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-08-13",
+        "notesKo": [
+          "Introduced 120 factory tables with 2–256 keyframes for morphable spectral filtering.",
+          "Added four phase modes, bounded spectral contours, nonlinear drive, and a Frame LFO.",
+          "Passed automated DSP, audio, UI, host-contract, and isolated benchmark gates; manual DAW, listening, signing, and rights checks remain deferred."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_filter_table.png",
+        "descriptionKo": "최대 256프레임 웨이브테이블의 배음 윤곽을 필터 응답으로 바꾸고 Frame LFO와 네 가지 위상 모드로 움직이는 스펙트럴 필터입니다.",
+        "tags": [
+          "Spectral Filter",
+          "Wavetable",
+          "Morphing"
+        ],
+        "order": 30,
+        "visible": true
+      },
+      "name": "TB Filter Table",
+      "version": "1.0.0",
+      "category": "Filter",
+      "price": 3,
+      "description": "A wavetable-derived spectral filter that morphs up to 256 frames into moving response contours with four phase modes, nonlinear drive, and a frame LFO.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_filter_table.png?v=1.0.0",
+      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_FilterTable.zip?v=1.0.0",
+        "sha256": "1891557745946d565f21067e7bac8e74fe08d05601821cd80e65fbf981b211ff",
+        "sizeBytes": 2552537
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/three-new-plugins-windows-v1.0.0-2026-08-13/TB-Filter-Table-1.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "5b6b43a45d440e4ab3b693b3136bda4f176943dfdceffa284be8e95f1bceff7b",
+          "sizeBytes": 3956848
+        }
+      }
+    },
+    {
+      "id": "tb_grain_phaser",
+      "updatedAt": "2026-08-13",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-08-13",
+        "notesKo": [
+          "Introduced a 2048-point STFT grain field that moves a dense spectral notch grid with controlled stereo orbit.",
+          "Added Grain, Move, Width, Amount, and Mix controls with 11 factory presets.",
+          "Passed all 123 DSP checks, 12-pair A/B rendering, UI, and repeatable host-contract gates; manual DAW, listening, signing, and rights checks remain deferred."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_grain_phaser.png",
+        "descriptionKo": "촘촘한 FFT 노치 그리드와 스테레오 모션으로 패드·기타·드럼을 입자처럼 잘게 조각하는 스펙트럴 페이저입니다.",
+        "tags": [
+          "Spectral",
+          "Phaser",
+          "Modulation"
+        ],
+        "order": 31,
+        "visible": true
+      },
+      "name": "TB Grain Phaser",
+      "version": "1.0.0",
+      "category": "Modulation",
+      "price": 3,
+      "description": "A spectral phaser that moves a dense FFT notch grid with controlled stereo orbit to carve pads, guitars, and drums into grain-like texture.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_grain_phaser.png?v=1.0.0",
+      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_GrainPhaser.zip?v=1.0.0",
+        "sha256": "a6d51c13855abd54b3ad2e819233662b19c51d7d97ff19952d78cb0ce49eb7d3",
+        "sizeBytes": 2876863
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/three-new-plugins-windows-v1.0.0-2026-08-13/TB-Grain-Phaser-1.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "10998f70bc1974d54b8ea17939772b72172ba6337727eb56ec814a9821627b08",
+          "sizeBytes": 4191905
+        }
+      }
+    },
+    {
+      "id": "tb_multiband_compressor",
+      "updatedAt": "2026-08-13",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-08-13",
+        "notesKo": [
+          "Introduced four independently placed dynamics bands with per-band compression or expansion.",
+          "Added signed Range, external sidechain, stereo and Mid/Side targeting, Dynamic or Linear modes, oversampling, and lookahead.",
+          "Passed all 58 DSP checks, all 11 processor-integration checks, UI, and repeatable host-contract gates; manual DAW, listening, signing, and rights checks remain deferred."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_multiband_compressor.png",
+        "descriptionKo": "필요한 주파수에 최대 네 개 자유 밴드를 배치해 밴드별 압축·확장, 사이드체인, M/S 처리와 signed Range를 제어하는 멀티밴드 다이내믹스입니다.",
+        "tags": [
+          "Multiband",
+          "Dynamics",
+          "Sidechain"
+        ],
+        "order": 32,
+        "visible": true
+      },
+      "name": "TB Multiband Compressor",
+      "version": "1.0.0",
+      "category": "Dynamics",
+      "price": 3,
+      "description": "A four-band free-placement dynamics processor with per-band compression or expansion, sidechain, stereo/Mid/Side targeting, signed Range, and Dynamic or Linear modes.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_multiband_compressor.png?v=1.0.0",
+      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_MultiBandCompressor.zip?v=1.0.0",
+        "sha256": "6e1ffa5eeafafc6ca69a09e896af3a51cc21d56657b3bea0753936c8dd6b241c",
+        "sizeBytes": 3224903
+      },
+      "webDownloads": {
+        "windowsVst3": {
+          "kind": "installer",
+          "format": "VST3",
+          "architecture": "x64",
+          "version": "1.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/three-new-plugins-windows-v1.0.0-2026-08-13/TB-Multiband-Compressor-1.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "6a848b8fe3dd16d05e25d12cebbd635095cff4fc7a22f50e75025ddbaa628b4f",
+          "sizeBytes": 4521461
         }
       }
     }

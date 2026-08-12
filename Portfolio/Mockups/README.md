@@ -19,7 +19,7 @@ The portfolio reads this folder dynamically. A matching image overrides the cata
 
 ## Current mockup set
 
-- Coverage: all 29 plug-ins in `catalog.json`
+- Coverage: all 32 plug-ins in `catalog.json`
 - Additional coverage: 2 projects that are not in `catalog.json`
 - Filename: `<catalog-id>.jpg`
 - Canvas: `1536 x 1024`

@@ -6,6 +6,12 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-08-13
+
+- Released TB Filter Table, TB Grain Phaser, and TB Multiband Compressor 1.0.0 for Windows x64 VST3.
+- Added each plug-in's DISPLAY logo, downloadable ZIP and installer, catalog metadata, and three-feature portfolio mockup.
+- Passed the automated DSP, audio, UI, integration, isolated-performance, Standalone process-smoke, and repeatable host-contract gates applicable to each plug-in; manual DAW, listening, graceful-close, signing, and rights checks remain deferred.
+
 ## 2026-08-12
 
 - Added the detailed TB De-Esser user manual to all 20 language folders in `Documents`.
@@ -20,15 +26,6 @@
 - Released TB EQ 2.0.1 for Windows VST3, fixing spectrum-analyzer startup when the host editor first becomes visible.
 - Added a regression gate proving the analyzer updates before the SPEED control is clicked, and preserved the existing host contract.
 - Normalized the Windows VST3 version and vendor metadata, refreshed the Hub package and catalog, and kept the manual DAW/listening checks marked as deferred.
-
-## 2026-08-10
-
-- Redesigned the complete catalog mockup set and the additional portfolio set around a blurred black gradient, a soft floating glow, and three short English feature guides.
-- Re-mapped every guide to a visible analyzer, meter, graph, knob, or control; overlap areas now use compact glass panels and collision-aware leader placement.
-- Replaced stale UI sources with current captures, including fresh installed-VST3 snapshots for TB EQ and TB Colorizer.
-- Released TB Tape 1.0.0 for Windows VST3 with independent stop/start timing, drawable motor curves, a new DISPLAY logo, and its portfolio mockup.
-- Recorded the remaining manual DAW and listening checks as deferred; all automated build, DSP, host-contract, UI, and Standalone smoke gates passed.
-- Kept TB Board out of the catalog and release packages, and continued the permanent exclusion of TB Gender Changer.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
@@ -62,7 +59,7 @@ Professional English scripts and rendered 25–50 second MP3 voiceovers are avai
 
 ## 📦 Included Plug-ins
 
-The catalog currently contains 29 plug-ins. Two additional projects have portfolio mockups: TB AudioPlayer and the intentionally unreleased TB Board.
+The catalog currently contains 32 plug-ins. Two additional projects have portfolio mockups: TB AudioPlayer and the intentionally unreleased TB Board.
 
 Detailed manuals for the established catalog set are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
 
@@ -241,6 +238,24 @@ A custom-curve tape-motor effect that slows audio to silence and accelerates it 
 A level-independent, language-neutral de-esser that uses stereo-linked spectral reduction to tame harsh sibilance while preserving vocal air and diction.
 
 <img width="900" alt="TB De-Esser feature mockup" src="Portfolio/Mockups/tb_deesser.jpg" />
+
+#### TB Filter Table
+
+A wavetable-derived spectral filter that morphs up to 256 frames into moving response contours with four phase modes, nonlinear drive, and a frame LFO.
+
+<img width="900" alt="TB Filter Table feature mockup" src="Portfolio/Mockups/tb_filter_table.jpg" />
+
+#### TB Grain Phaser
+
+A spectral phaser that moves a dense FFT notch grid with controlled stereo orbit to carve pads, guitars, and drums into grain-like texture.
+
+<img width="900" alt="TB Grain Phaser feature mockup" src="Portfolio/Mockups/tb_grain_phaser.jpg" />
+
+#### TB Multiband Compressor
+
+A four-band free-placement dynamics processor with per-band compression or expansion, sidechain, stereo/Mid/Side targeting, signed Range, and Dynamic or Linear modes.
+
+<img width="900" alt="TB Multiband Compressor feature mockup" src="Portfolio/Mockups/tb_multiband_compressor.jpg" />
 
 ### Additional portfolio plug-ins
 
