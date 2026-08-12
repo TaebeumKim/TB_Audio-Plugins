@@ -2699,10 +2699,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/three-new-plugins-windows-v1.0.0-2026-08-13/TB-Multiband-Compressor-1.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "6a848b8fe3dd16d05e25d12cebbd635095cff4fc7a22f50e75025ddbaa628b4f",
-          "sizeBytes": 4521461
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/three-new-plugins-windows-v1.0.0-2026-08-13/TB-Multiband-Compressor-1.0.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "f9f8b5df5fed787dad9e685dd509ebbcab6fc41d6b7d31dfbf3b22af4acfa10f",
+          "sizeBytes": 4518404
         },
         "macosVst3": {
           "kind": "installer",
