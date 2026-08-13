@@ -1764,10 +1764,10 @@
     },
     {
       "id": "tb_delay",
-      "updatedAt": "2026-08-05",
+      "updatedAt": "2026-08-13",
       "latestUpdate": {
-        "version": "1.0.0",
-        "date": "2026-07-29",
+        "version": "1.0.1",
+        "date": "2026-08-13",
         "notesKo": [
           "Initial delay release."
         ]
@@ -1784,16 +1784,16 @@
         "visible": true
       },
       "name": "TB Delay",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "Delay",
       "price": 3,
       "description": "Creative stereo delay.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_delay.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.0.0",
-        "sha256": "a123984b79abaebfb596e93da529120157e4356a78237af00b0080772f0b5800",
-        "sizeBytes": 2442333
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.0.1",
+        "sha256": "6b9f887ca1ae9ed2d83851ed612e2acd262f7c9c25042321cafb4f5f2c48569a",
+        "sizeBytes": 2539168
       },
       "macos": {
         "formats": {
@@ -1818,10 +1818,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Delay-1.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "0b08022febb668b62c288d612605f9b99f39307065bbf716603785f4a37044b3",
-          "sizeBytes": 3859901
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-13/TB-Delay-1.0.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "FBDEA0F503728BE4EE04C686609E57FFC7E70C40CB093360D2B0AABC5BCC6B68",
+          "sizeBytes": 3856042
         },
         "macosVst3": {
           "kind": "installer",
