@@ -14,7 +14,8 @@
 
 ## 2026-08-13
 
-- Released TB Filter Table, TB Grain Phaser, and TB Multiband Compressor 1.0.0 for Windows x64 VST3.
+- Released TB Filter Table and TB Grain Phaser 1.0.0, then advanced TB Multiband Compressor to 1.0.1 with corrected ZIP and installer SHA-256 metadata.
+- Released TB Delay 1.0.1 with its current Windows build, Hub ZIP, installer link, and catalog metadata.
 - Added each plug-in's DISPLAY logo, downloadable ZIP and installer, catalog metadata, and three-feature portfolio mockup.
 - Passed the automated DSP, audio, UI, integration, isolated-performance, Standalone process-smoke, and repeatable host-contract gates applicable to each plug-in; manual DAW, listening, graceful-close, signing, and rights checks remain deferred.
 
