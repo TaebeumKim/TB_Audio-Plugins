@@ -8,7 +8,7 @@
 
 ## 2026-08-14
 
-- Released updated Windows x64 VST3 builds for TB Tune 2.1.0, TB Volume 1.2.1, TB SubLow 1.3.0, and TB Pitch Shifter 1.0.0.
+- Released updated Windows x64 VST3 builds for TB Tune 2.1.0, TB Volume 1.2.1, TB SubLow 1.3.0, and TB Pitch Shifter 2.0.0.
 - Refreshed the Hub ZIPs, Windows installer links, SHA-256 checksums, sizes, versions, and latest-update metadata in `catalog.json`.
 - Passed the available Tune, Volume, SubLow, and Pitch Shifter DSP, processor, mapping, limiter, and UI harnesses; manual DAW and listening validation remains deferred.
 

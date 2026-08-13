@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-14T00:47:46+09:00",
+  "updatedAt": "2026-08-14T00:58:59+09:00",
   "hubVersion": "1.3.16",
   "languages": [
     {
@@ -1847,7 +1847,7 @@
       "id": "tb_pitch_shifter",
       "updatedAt": "2026-08-14",
       "latestUpdate": {
-        "version": "1.0.0",
+        "version": "2.0.0",
         "date": "2026-08-14",
         "notesKo": [
           "Updated the Windows build with lower-hop STFT processing, smoother formant automation, and exact-dry neutral return.",
@@ -1866,16 +1866,16 @@
         "visible": true
       },
       "name": "TB Pitch Shifter",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "category": "Pitch",
       "price": 1,
       "description": "Independent pitch and formant shifting.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_pitch_shifter.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_pitch_shifter.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_PitchShifter.zip?v=1.0.0",
-        "sha256": "111fbdb76e56308b2d85fe1326de94dd80fe31e5fe662cb2cf88853f0ea124e4",
-        "sizeBytes": 2390608
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_PitchShifter.zip?v=2.0.0",
+        "sha256": "af8a5abfb0dfd5707dcd23e6365a17ccfe6a8c4ed76a29675bc3ac98c4d22d8c",
+        "sizeBytes": 2390604
       },
       "macos": {
         "formats": {
@@ -1900,10 +1900,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-14/TB-Pitch-Shifter-1.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "9497925ab8d92a24fcb448b179eba5581da1d6209798a6ed069407fa9c32fb9b",
-          "sizeBytes": 3823406
+          "version": "2.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-14/TB-Pitch-Shifter-2.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "ae28eefd00760c5cffa0208f67804666f90dd729baeeca6f74e0a4c9801109c5",
+          "sizeBytes": 3823354
         },
         "macosVst3": {
           "kind": "installer",
