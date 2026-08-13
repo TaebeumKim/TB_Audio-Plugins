@@ -6,6 +6,12 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-08-14
+
+- Released updated Windows x64 VST3 builds for TB Tune 2.1.0, TB Volume 1.2.1, TB SubLow 1.3.0, and TB Pitch Shifter 1.0.0.
+- Refreshed the Hub ZIPs, Windows installer links, SHA-256 checksums, sizes, versions, and latest-update metadata in `catalog.json`.
+- Passed the available Tune, Volume, SubLow, and Pitch Shifter DSP, processor, mapping, limiter, and UI harnesses; manual DAW and listening validation remains deferred.
+
 ## 2026-08-13
 
 - Released TB Filter Table, TB Grain Phaser, and TB Multiband Compressor 1.0.0 for Windows x64 VST3.
@@ -20,12 +26,6 @@
 - Released TB De-Esser 1.0.0 for Windows x64 VST3 with level-independent, language-neutral detection and stereo-linked spectral reduction.
 - Added its DISPLAY logo, downloadable ZIP and installer, catalog entry, and three-feature portfolio mockup.
 - Passed the automated 55/55 DSP harness, FFT, A/B, UI, Standalone smoke, and repeatable host-contract checks; manual DAW, listening, performance, packaging, and rights checks remain deferred.
-
-## 2026-08-11
-
-- Released TB EQ 2.0.1 for Windows VST3, fixing spectrum-analyzer startup when the host editor first becomes visible.
-- Added a regression gate proving the analyzer updates before the SPEED control is clicked, and preserved the existing host contract.
-- Normalized the Windows VST3 version and vendor metadata, refreshed the Hub package and catalog, and kept the manual DAW/listening checks marked as deferred.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact

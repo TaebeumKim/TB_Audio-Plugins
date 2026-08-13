@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-13T03:53:52+09:00",
+  "updatedAt": "2026-08-14T00:47:46+09:00",
   "hubVersion": "1.3.16",
   "languages": [
     {
@@ -1273,13 +1273,13 @@
     },
     {
       "id": "tb_tune",
-      "updatedAt": "2026-08-09",
+      "updatedAt": "2026-08-14",
       "latestUpdate": {
-        "version": "2.0.0",
-        "date": "2026-08-09",
+        "version": "2.1.0",
+        "date": "2026-08-14",
         "notesKo": [
-          "Redesigned the interface around direct key-note and scale selection with a dedicated pitch-status panel.",
-          "Expanded musical scale choices and made Auto Musical and Formant controls easier to scan."
+          "Redesigned the editor with a brighter key-and-scale workflow, a dedicated pitch-status panel, and higher-resolution controls.",
+          "Preserved the pitch engine, parameter IDs, and state compatibility while refreshing the Windows build."
         ]
       },
       "portfolio": {
@@ -1294,16 +1294,16 @@
         "visible": true
       },
       "name": "TB Tune",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "category": "Voice",
       "price": 1,
       "description": "Vocal pitch correction.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=2.0.0",
-        "sha256": "cb78704e5537fc43ce28b62b8545b2edbd86bd6cc520a9033f2b41b2213b187b",
-        "sizeBytes": 2425752
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=2.1.0",
+        "sha256": "437cda22e864f512c262007254f4292113e5d7f69d9a32fbaa3ab7d88ae28d32",
+        "sizeBytes": 3004299
       },
       "macos": {
         "formats": {
@@ -1328,10 +1328,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "2.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Tune-2.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "42135d36954cd44e379c2db488cc471d8255e723a9f8fde4725b1a78c70670b4",
-          "sizeBytes": 3852690
+          "version": "2.1.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-14/TB-Tune-2.1.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "55d41f961ed89043d741faa9f28e850d3cc69ba004a342e75a56b5f72b960c04",
+          "sizeBytes": 4428033
         },
         "macosVst3": {
           "kind": "installer",
@@ -1355,13 +1355,13 @@
     },
     {
       "id": "tb_volume",
-      "updatedAt": "2026-08-05",
+      "updatedAt": "2026-08-14",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-30",
+        "version": "1.2.1",
+        "date": "2026-08-14",
         "notesKo": [
-          "Unified each product's effect logo and product name into a single shared rack header.",
-          "Improved previous/next navigation and save/load workflows for the central preset control."
+          "Restyled the compact gain utility with a brighter die-cast interface and clearer numeric readouts.",
+          "Kept gain mapping, state compatibility, and brickwall limiter behavior unchanged."
         ]
       },
       "portfolio": {
@@ -1376,16 +1376,16 @@
         "visible": true
       },
       "name": "TB Volume",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "category": "Utility",
       "price": 1,
       "description": "Simple gain control.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_volume.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.2.0",
-        "sha256": "d55bb757564556bbcd503395b10433dd3c47d31f85caa1fc5df48bfa85a612a5",
-        "sizeBytes": 2347831
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.2.1",
+        "sha256": "1eba0a6040c45d4f055f6d8a486271e576f2b81dc384964fb075fd61701622bf",
+        "sizeBytes": 2550543
       },
       "macos": {
         "formats": {
@@ -1410,10 +1410,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.2.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Volume-1.2.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "b8412ef53c4ed293cc6dc2a25e68223b5ffe3960aa5011b284ccefb2df6157fb",
-          "sizeBytes": 3789989
+          "version": "1.2.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-14/TB-Volume-1.2.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "3a3f1e2cc97b6190ebc025ff0b8d7a531133e985501689cd9e6b06c8c8cb779e",
+          "sizeBytes": 3921297
         },
         "macosVst3": {
           "kind": "installer",
@@ -1682,13 +1682,13 @@
     },
     {
       "id": "tb_sublow",
-      "updatedAt": "2026-08-09",
+      "updatedAt": "2026-08-14",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-30",
+        "version": "1.3.0",
+        "date": "2026-08-14",
         "notesKo": [
-          "Adjusted the upper-right effect-fish display size and safe margins.",
-          "Normalized the effect-fish to its alpha bounds and improved clarity at reduced render sizes."
+          "Rebuilt the editor around a blue-cyan Sub Pressure Chamber with real stereo input and output meters.",
+          "Added live wavefront feedback for Body, Bloom, Punch, and generated sub energy while preserving the existing parameter and preset contracts."
         ]
       },
       "portfolio": {
@@ -1703,16 +1703,16 @@
         "visible": true
       },
       "name": "TB SubLow",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Creative",
       "price": 3,
       "description": "Sub-bass generator.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_sublow.png?v=1.2.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.2.0",
-        "sha256": "e46c7e0494766a33d033906c7089a95e6bb3c65b2196d23bf1dd3399399780e1",
-        "sizeBytes": 2440012
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.3.0",
+        "sha256": "0f57b1369ee4d1e42d01b4fd6038ad6e8aad77af8d42aaba305b7630bd04418f",
+        "sizeBytes": 2400534
       },
       "macos": {
         "formats": {
@@ -1737,10 +1737,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.2.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-SubLow-1.2.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "cb639fb6547973ed7175ebc1a55dbdc7d94d5a7114d9494cb710274f7aabc631",
-          "sizeBytes": 3864679
+          "version": "1.3.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-14/TB-SubLow-1.3.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "6c7903b534f2a8fdd3f7d4dfca6f28724b7633fc812c0935b9e1dcddb16fdd7e",
+          "sizeBytes": 3823523
         },
         "macosVst3": {
           "kind": "installer",
@@ -1845,13 +1845,13 @@
     },
     {
       "id": "tb_pitch_shifter",
-      "updatedAt": "2026-08-05",
+      "updatedAt": "2026-08-14",
       "latestUpdate": {
         "version": "1.0.0",
-        "date": "2026-08-02",
+        "date": "2026-08-14",
         "notesKo": [
-          "Pitch ±24 st and Formant ±12 st can be adjusted independently.",
-          "Provides five Factory presets plus user preset save/load."
+          "Updated the Windows build with lower-hop STFT processing, smoother formant automation, and exact-dry neutral return.",
+          "Redesigned the editor as a bright dual-instrument panel while keeping Pitch and Formant independently controllable."
         ]
       },
       "portfolio": {
@@ -1874,8 +1874,8 @@
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_PitchShifter.zip?v=1.0.0",
-        "sha256": "ffe202aced80d1c49eb4184cf535b7a1ca4d7d8f125b42c8c5086febce877edb",
-        "sizeBytes": 2372705
+        "sha256": "111fbdb76e56308b2d85fe1326de94dd80fe31e5fe662cb2cf88853f0ea124e4",
+        "sizeBytes": 2390608
       },
       "macos": {
         "formats": {
@@ -1901,9 +1901,9 @@
           "format": "VST3",
           "architecture": "x64",
           "version": "1.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Pitch-Shifter-1.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "fe7f4bc6da874a80d7295ddd2ab4d86bd16f080c4d1510f0ca7d8d370af784f5",
-          "sizeBytes": 3810902
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-14/TB-Pitch-Shifter-1.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "9497925ab8d92a24fcb448b179eba5581da1d6209798a6ed069407fa9c32fb9b",
+          "sizeBytes": 3823406
         },
         "macosVst3": {
           "kind": "installer",
