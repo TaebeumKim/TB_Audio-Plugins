@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-14T01:52:13+09:00",
+  "updatedAt": "2026-08-14T19:05:08+09:00",
   "hubVersion": "1.3.16",
   "languages": [
     {
@@ -2578,14 +2578,14 @@
     },
     {
       "id": "tb_grain_phaser",
-      "updatedAt": "2026-08-13",
+      "updatedAt": "2026-08-14",
       "latestUpdate": {
-        "version": "1.0.0",
-        "date": "2026-08-13",
+        "version": "2.0.0",
+        "date": "2026-08-14",
         "notesKo": [
-          "Introduced a 2048-point STFT grain field that moves a dense spectral notch grid with controlled stereo orbit.",
-          "Added Grain, Move, Width, Amount, and Mix controls with 11 factory presets.",
-          "Passed all 123 DSP checks, 12-pair A/B rendering, UI, and repeatable host-contract gates; manual DAW, listening, signing, and rights checks remain deferred."
+          "Redesigned the analyzer as a black-green phosphor display with full-field vertical motion driven only by the existing 48-band telemetry.",
+          "Replaced the rectangular cells with deterministic multilingual grain glyphs drawn from Korean, Chinese, Japanese, and English character pools.",
+          "Linked analyzer glyph density and reveal directly to the GRAIN control and live energy, scaling the display from sparse to dense without free-running motion."
         ]
       },
       "portfolio": {
@@ -2600,26 +2600,26 @@
         "visible": true
       },
       "name": "TB Grain Phaser",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "category": "Modulation",
       "price": 5,
       "description": "A spectral phaser that moves a dense FFT notch grid with controlled stereo orbit to carve pads, guitars, and drums into grain-like texture.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_grain_phaser.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_grain_phaser.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_GrainPhaser.zip?v=1.0.0",
-        "sha256": "a6d51c13855abd54b3ad2e819233662b19c51d7d97ff19952d78cb0ce49eb7d3",
-        "sizeBytes": 2876863
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_GrainPhaser.zip?v=2.0.0",
+        "sha256": "ae11513985fa7dc1f86092e2668b6ee5cc40d3148674adc1782845b69d9959d5",
+        "sizeBytes": 2861178
       },
       "webDownloads": {
         "windowsVst3": {
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/three-new-plugins-windows-v1.0.0-2026-08-13/TB-Grain-Phaser-1.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "10998f70bc1974d54b8ea17939772b72172ba6337727eb56ec814a9821627b08",
-          "sizeBytes": 4191905
+          "version": "2.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-14/TB-Grain-Phaser-2.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "216d2ed519966b1fa1295a534b4786805c0122f26b67667c8d634b2021eb3f13",
+          "sizeBytes": 4190532
         },
         "macosVst3": {
           "kind": "installer",

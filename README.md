@@ -8,6 +8,8 @@
 
 ## 2026-08-14
 
+- Updated TB Grain Phaser to 2.0.0 with a black-green phosphor interface, deterministic multilingual analyzer glyphs, and GRAIN-linked live density.
+- Rebuilt its Windows x64 VST3 and installer, refreshed the Hub ZIP and catalog hashes, and passed the 125/125 DSP/UI harness plus repeatable host-contract checks; manual DAW, listening, and signing validation remains deferred.
 - Released updated Windows x64 VST3 builds for TB Tune 2.1.0, TB Volume 1.2.1, TB SubLow 1.3.0, and TB Pitch Shifter 2.0.0.
 - Refreshed the Hub ZIPs, Windows installer links, SHA-256 checksums, sizes, versions, and latest-update metadata in `catalog.json`.
 - Passed the available Tune, Volume, SubLow, and Pitch Shifter DSP, processor, mapping, limiter, and UI harnesses; manual DAW and listening validation remains deferred.
@@ -248,7 +250,7 @@ A wavetable-derived spectral filter that morphs up to 256 frames into moving res
 
 #### TB Grain Phaser
 
-A spectral phaser that moves a dense FFT notch grid with controlled stereo orbit to carve pads, guitars, and drums into grain-like texture.
+A spectral phaser that moves a dense FFT notch grid with controlled stereo orbit, visualized by a black-green phosphor analyzer whose multilingual grain-glyph density follows the GRAIN control and live spectral energy.
 
 <img width="900" alt="TB Grain Phaser feature mockup" src="Portfolio/Mockups/tb_grain_phaser.jpg" />
 
