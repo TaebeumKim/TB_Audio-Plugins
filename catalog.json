@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-14T19:05:08+09:00",
+  "updatedAt": "2026-08-17T08:06:49+09:00",
   "hubVersion": "1.3.16",
   "languages": [
     {
@@ -1355,13 +1355,14 @@
     },
     {
       "id": "tb_volume",
-      "updatedAt": "2026-08-14",
+      "updatedAt": "2026-08-17",
       "latestUpdate": {
-        "version": "1.2.1",
-        "date": "2026-08-14",
+        "version": "1.2.2",
+        "date": "2026-08-17",
         "notesKo": [
-          "Restyled the compact gain utility with a brighter die-cast interface and clearer numeric readouts.",
-          "Kept gain mapping, state compatibility, and brickwall limiter behavior unchanged."
+          "Reduced the product-title font so TB VOLUME is fully visible in actual VST3 hosts instead of clipping to TB VOLUM.",
+          "Kept all three public parameters, gain mapping, state compatibility, and brickwall limiter behavior unchanged.",
+          "Passed fresh mapping, limiter, state-recall, UI Automation, headless VST3, and installed-host capture checks; manual DAW and signing validation remains deferred."
         ]
       },
       "portfolio": {
@@ -1376,16 +1377,16 @@
         "visible": true
       },
       "name": "TB Volume",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "category": "Utility",
       "price": 1,
       "description": "Simple gain control.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_volume.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_volume.png?v=1.2.2",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.2.1",
-        "sha256": "1eba0a6040c45d4f055f6d8a486271e576f2b81dc384964fb075fd61701622bf",
-        "sizeBytes": 2550543
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.2.2",
+        "sha256": "c462c13985345f8035fa5e9e5fb34047512827dbfea1858cc9b207f43a863157",
+        "sizeBytes": 2540817
       },
       "macos": {
         "formats": {
@@ -1410,10 +1411,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.2.1",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-14/TB-Volume-1.2.1-Windows-x64-VST3-Setup.exe",
-          "sha256": "3a3f1e2cc97b6190ebc025ff0b8d7a531133e985501689cd9e6b06c8c8cb779e",
-          "sizeBytes": 3921297
+          "version": "1.2.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-17/TB-Volume-1.2.2-Windows-x64-VST3-Setup.exe",
+          "sha256": "9393e2d551cf73b2e53a2d07684f235ef518f945e3e871ccb5de479991c7172b",
+          "sizeBytes": 3921066
         },
         "macosVst3": {
           "kind": "installer",
@@ -1456,7 +1457,7 @@
         "order": 17,
         "visible": true
       },
-      "name": "TB Vocoder",
+      "name": "TB Vocoder (Beta)",
       "version": "2.0.0",
       "category": "Creative",
       "price": 2,
@@ -2281,7 +2282,7 @@
       "category": "Creative",
       "price": 5,
       "description": "Harmonic exciter and enhancer with 30 Factory presets.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.1.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.1.0-logo-20260817",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.1.0",
@@ -2495,14 +2496,14 @@
     },
     {
       "id": "tb_filter_table",
-      "updatedAt": "2026-08-14",
+      "updatedAt": "2026-08-17",
       "latestUpdate": {
-        "version": "1.0.0",
-        "date": "2026-08-13",
+        "version": "1.1.0",
+        "date": "2026-08-17",
         "notesKo": [
-          "Introduced 120 factory tables with 2–256 keyframes for morphable spectral filtering.",
-          "Added four phase modes, bounded spectral contours, nonlinear drive, and a Frame LFO.",
-          "Passed automated DSP, audio, UI, host-contract, and isolated benchmark gates; manual DAW, listening, signing, and rights checks remain deferred."
+          "Restored the published 20 Hz–20 kHz Cutoff automation mapping while retaining the 200 Hz effective UI, DSP, and schema-5 floor.",
+          "Kept every public parameter ID and state schema unchanged, with the host contract showing only the intended Cutoff normalization correction.",
+          "Passed 185/185 full-harness checks, two quiet performance runs, 174 host-contract cases, and a Standalone smoke test; manual DAW, listening, DPI, signing, and rights checks remain deferred."
         ]
       },
       "portfolio": {
@@ -2517,26 +2518,26 @@
         "visible": true
       },
       "name": "TB Filter Table",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Filter",
       "price": 4,
       "description": "A wavetable-derived spectral filter that morphs up to 256 frames into moving response contours with four phase modes, nonlinear drive, and a frame LFO.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_filter_table.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_filter_table.png?v=1.1.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_FilterTable.zip?v=1.0.0",
-        "sha256": "1891557745946d565f21067e7bac8e74fe08d05601821cd80e65fbf981b211ff",
-        "sizeBytes": 2552537
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_FilterTable.zip?v=1.1.0",
+        "sha256": "e1d57589cdb52ae5dce97fd0206b4fdc1cec55137a9b0c2d894f43786108ce6f",
+        "sizeBytes": 2956234
       },
       "webDownloads": {
         "windowsVst3": {
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/three-new-plugins-windows-v1.0.0-2026-08-13/TB-Filter-Table-1.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "5b6b43a45d440e4ab3b693b3136bda4f176943dfdceffa284be8e95f1bceff7b",
-          "sizeBytes": 3956848
+          "version": "1.1.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-17/TB-Filter-Table-1.1.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "26615eda34fb8beff744521288fea7830ec694b427cf5b6bc22420a99316c0f2",
+          "sizeBytes": 4262006
         },
         "macosVst3": {
           "kind": "installer",
@@ -2661,14 +2662,14 @@
     },
     {
       "id": "tb_multiband_compressor",
-      "updatedAt": "2026-08-14",
+      "updatedAt": "2026-08-17",
       "latestUpdate": {
-        "version": "1.0.1",
-        "date": "2026-08-13",
+        "version": "1.0.2",
+        "date": "2026-08-17",
         "notesKo": [
-          "Reversed the response graph hierarchy so Range now reads as the shaded base envelope and the live gain reduction rides on top as the overlay.",
-          "Tinted the live overlay with the selected band colour and thinned the Range contour to a single-pixel lid over a filled area.",
-          "Stopped both contours from drawing where they sit at 0 dB, so the shared datum line is no longer painted over."
+          "Replaced numeric state parsing with JUCE UTF cursor parsing while preserving strict finite-value and full-consumption rules.",
+          "Kept all 78 parameter IDs, state schema 4, preset format 4, and audio behaviour unchanged; the host contract differs only by version.",
+          "Passed the 58/58 DSP and 11/11 processor-integration suites plus repeatable host-contract checks; manual DAW, listening, signing, and rights checks remain deferred."
         ]
       },
       "portfolio": {
@@ -2683,26 +2684,26 @@
         "visible": true
       },
       "name": "TB Multiband Compressor",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "category": "Dynamics",
       "price": 7,
       "description": "A four-band free-placement dynamics processor with per-band compression or expansion, sidechain, stereo/Mid/Side targeting, signed Range, and Dynamic or Linear modes.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_multiband_compressor.png?v=1.0.1",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_multiband_compressor.png?v=1.0.2",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_MultiBandCompressor.zip?v=1.0.1",
-        "sha256": "d9ecbdbc52e3212360b21c13cc23db66992afe4c48a414761d0014393667ac75",
-        "sizeBytes": 3225431
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_MultiBandCompressor.zip?v=1.0.2",
+        "sha256": "e78c898b26b1d1422be4e0a7acefd319b9163a1884328b33d5eb0a66afc7235f",
+        "sizeBytes": 3199368
       },
       "webDownloads": {
         "windowsVst3": {
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.0.1",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/three-new-plugins-windows-v1.0.0-2026-08-13/TB-Multiband-Compressor-1.0.1-Windows-x64-VST3-Setup.exe",
-          "sha256": "f9f8b5df5fed787dad9e685dd509ebbcab6fc41d6b7d31dfbf3b22af4acfa10f",
-          "sizeBytes": 4518404
+          "version": "1.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-17/TB-Multiband-Compressor-1.0.2-Windows-x64-VST3-Setup.exe",
+          "sha256": "3f69afd2e1237c9f7ff830970a863f0580865aefcc6f565b793eb0cac281f1b4",
+          "sizeBytes": 4510847
         },
         "macosVst3": {
           "kind": "installer",
@@ -2740,6 +2741,42 @@
             "sizeBytes": 3968379
           }
         }
+      }
+    },
+    {
+      "id": "tb_audio_player",
+      "updatedAt": "2026-08-17",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-08-02",
+        "notesKo": [
+          "Released a compact one-shot sample player for WAV, AIFF, FLAC, and Ogg files with browser loading and immediate playback.",
+          "Added an automatable rising-edge Trigger, click-free 50 ms retrigger and Stop fades, sample-rate conversion, state recall, presets, and Undo/Redo.",
+          "Passed the 17/17 Release Harness, VST3 host-contract checks, and Standalone launch smoke test."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_audio_player.png",
+        "descriptionKo": "WAV·AIFF·FLAC·Ogg 샘플을 불러와 버튼이나 자동화 가능한 상승 에지로 즉시 재생하고, 재트리거와 정지를 50ms 페이드로 매끄럽게 처리하는 원샷 플레이어입니다.",
+        "tags": [
+          "Sampler",
+          "One-shot",
+          "Trigger"
+        ],
+        "order": 33,
+        "visible": true
+      },
+      "name": "TB AudioPlayer",
+      "version": "1.0.0",
+      "category": "Instrument",
+      "price": 3,
+      "description": "A compact one-shot sample player with browser loading, automatable triggering, sample-rate conversion, and click-free retrigger and stop fades.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_audio_player.png?v=1.0.0",
+      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_AudioPlayer.zip?v=1.0.0",
+        "sha256": "de643800781155b3c776b4f844b5cefcc4c6e27606e42ac063fdfee4bdc970cc",
+        "sizeBytes": 11284141
       }
     }
   ],
