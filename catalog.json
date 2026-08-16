@@ -1298,7 +1298,7 @@
       "category": "Voice",
       "price": 1,
       "description": "Vocal pitch correction.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=2.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=display-20260817",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=2.1.0",
@@ -1788,7 +1788,7 @@
       "category": "Delay",
       "price": 3,
       "description": "Creative stereo delay.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_delay.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_delay.png?v=display-20260817",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.0.1",
@@ -1870,7 +1870,7 @@
       "category": "Pitch",
       "price": 1,
       "description": "Independent pitch and formant shifting.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_pitch_shifter.png?v=2.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_pitch_shifter.png?v=display-20260817",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_PitchShifter.zip?v=2.0.0",
@@ -2281,7 +2281,7 @@
       "category": "Creative",
       "price": 5,
       "description": "Harmonic exciter and enhancer with 30 Factory presets.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.1.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=display-20260817",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.1.0",
@@ -2604,7 +2604,7 @@
       "category": "Modulation",
       "price": 5,
       "description": "A spectral phaser that moves a dense FFT notch grid with controlled stereo orbit to carve pads, guitars, and drums into grain-like texture.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_grain_phaser.png?v=2.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_grain_phaser.png?v=display-20260817",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_GrainPhaser.zip?v=2.0.0",
@@ -2687,7 +2687,7 @@
       "category": "Dynamics",
       "price": 7,
       "description": "A four-band free-placement dynamics processor with per-band compression or expansion, sidechain, stereo/Mid/Side targeting, signed Range, and Dynamic or Linear modes.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_multiband_compressor.png?v=1.0.1",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_multiband_compressor.png?v=display-20260817",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_MultiBandCompressor.zip?v=1.0.1",

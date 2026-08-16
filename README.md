@@ -1,5 +1,5 @@
 <div align="center">
-<img width="1280" height="640" alt="TB Audio Plug-ins — 25-product 1e DISPLAY icon family" src="assets/social/tb_audio_plugins_social_preview.png" />
+<img width="1280" height="640" alt="TB Audio Plug-ins — 37-product 1e DISPLAY icon family" src="assets/social/tb_audio_plugins_social_preview.png" />
 </div>
 
 # Update Note
