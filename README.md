@@ -1,10 +1,19 @@
 <div align="center">
-<img width="1280" height="640" alt="TB Audio Plug-ins — 25-product 1e DISPLAY icon family" src="assets/social/tb_audio_plugins_social_preview.png" />
+<img width="1280" height="640" alt="TB Audio Plug-ins — 1e DISPLAY icon family" src="assets/social/tb_audio_plugins_social_preview.png" />
 </div>
 
 # Update Note
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
+
+## 2026-08-17
+
+- Released TB Filter Table 1.1.0, TB Volume 1.2.2, and TB Multiband Compressor 1.0.2 for Windows x64 VST3 with rebuilt binaries, deterministic Hub ZIPs, installers, and matching catalog checksums.
+- Added TB AudioPlayer 1.0.0 to the catalog at $3 using its existing verified Windows package, DISPLAY logo, and normalized `tb_audio_player` portfolio ID.
+- Refreshed the current feature mockups for TB EQ, TB Tune, TB Volume, TB Delay, TB Pitch Shifter, TB Filter Table, and TB AudioPlayer, and replaced the stale TB Exciter DISPLAY logo.
+- Passed the applicable DSP, processor, mapping, UI, Standalone, performance, and repeatable host-contract checks; manual DAW, listening, DPI, signing, and rights validation remains deferred where recorded by each project.
+- Kept the TB Vocoder 3.0.0 candidate out of the Hub after its host state-roundtrip gate failed on JUCE MIDI-CC proxy parameters; the published 2.0.0 remains unchanged.
+- Audited the new TB Ambient, TB Doppler, and TB Geometry Reverb projects and kept all three out of the catalog because their project QA documents still mark public release as HOLD.
 
 ## 2026-08-14
 
@@ -20,15 +29,6 @@
 - Released TB Delay 1.0.1 with its current Windows build, Hub ZIP, installer link, and catalog metadata.
 - Added each plug-in's DISPLAY logo, downloadable ZIP and installer, catalog metadata, and three-feature portfolio mockup.
 - Passed the automated DSP, audio, UI, integration, isolated-performance, Standalone process-smoke, and repeatable host-contract gates applicable to each plug-in; manual DAW, listening, graceful-close, signing, and rights checks remain deferred.
-
-## 2026-08-12
-
-- Added the detailed TB De-Esser user manual to all 20 language folders in `Documents`.
-- Published 28 English description voiceovers with their scripts, MP3 files, delivery settings, durations, and coverage notes under `Voiceovers/ENG`.
-- Replaced the legacy TB Gender Changer voiceover identifier and audio path with TB Colorizer, and updated its narration for the current seven color modes.
-- Released TB De-Esser 1.0.0 for Windows x64 VST3 with level-independent, language-neutral detection and stereo-linked spectral reduction.
-- Added its DISPLAY logo, downloadable ZIP and installer, catalog entry, and three-feature portfolio mockup.
-- Passed the automated 55/55 DSP harness, FFT, A/B, UI, Standalone smoke, and repeatable host-contract checks; manual DAW, listening, performance, packaging, and rights checks remain deferred.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
@@ -62,7 +62,7 @@ Professional English scripts and rendered 25–50 second MP3 voiceovers are avai
 
 ## 📦 Included Plug-ins
 
-The catalog currently contains 32 plug-ins. Two additional projects have portfolio mockups: TB AudioPlayer and the intentionally unreleased TB Board.
+The catalog currently contains 33 plug-ins. One additional project has a portfolio mockup: the intentionally unreleased TB Board.
 
 Detailed manuals for the established catalog set are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
 
@@ -260,15 +260,15 @@ A four-band free-placement dynamics processor with per-band compression or expan
 
 <img width="900" alt="TB Multiband Compressor feature mockup" src="Portfolio/Mockups/tb_multiband_compressor.jpg" />
 
-### Additional portfolio plug-ins
-
-These projects have completed mockups but are not catalog releases. TB Board remains intentionally excluded.
-
 #### TB AudioPlayer
 
-A compact one-shot sample player with file browsing, immediate play and stop controls, and visible sample-format information.
+A compact one-shot sample player with file browsing, automatable triggering, sample-rate conversion, and click-free retrigger and stop fades.
 
-<img width="900" alt="TB AudioPlayer feature mockup" src="Portfolio/Mockups/tb.audio-player.jpg" />
+<img width="900" alt="TB AudioPlayer feature mockup" src="Portfolio/Mockups/tb_audio_player.jpg" />
+
+### Additional portfolio plug-ins
+
+This project has a completed mockup but is not a catalog release. TB Board remains intentionally excluded.
 
 #### TB Board
 

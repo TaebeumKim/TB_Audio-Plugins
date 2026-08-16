@@ -19,8 +19,8 @@ The portfolio reads this folder dynamically. A matching image overrides the cata
 
 ## Current mockup set
 
-- Coverage: all 32 plug-ins in `catalog.json`
-- Additional coverage: 2 projects that are not in `catalog.json`
+- Coverage: all 33 plug-ins in `catalog.json`
+- Additional coverage: 1 project that is not in `catalog.json`
 - Filename: `<catalog-id>.jpg`
 - Canvas: `1536 x 1024`
 - JPEG quality: `92`
@@ -33,11 +33,8 @@ The portfolio reads this folder dynamically. A matching image overrides the cata
 
 The plug-in UI itself is kept crisp from the latest project QA capture or a fresh snapshot of the installed VST3. Callout copy is based on the plug-in brief or release notes and uses a short uppercase title plus one plain-English sentence. Every target must exist in the captured UI; never invent a control or feature to fill a callout. Labels stay close to their target and may overlay non-critical parts of the UI only when the local glass panel keeps the copy readable.
 
-The additional portfolio projects are:
+The additional portfolio project is:
 
-- `tb.audio-player.jpg` — TB AudioPlayer, prepared ahead of catalog registration
 - `tb_board.jpg` — TB Board, visual coverage only; catalog and release remain intentionally excluded
 
 These files become active portfolio images only after a matching `id` is added to `catalog.json`. When a plug-in is added to or removed from the catalog, update this folder in the same commit so every catalog ID continues to have a matching image.
-
-TB Gender Changer is permanently retired and must not be regenerated or added back to the catalog. TB Colorizer is its replacement.
