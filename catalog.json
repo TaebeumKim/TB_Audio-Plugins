@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-17T14:41:19+09:00",
+  "updatedAt": "2026-08-18T00:40:56+09:00",
   "hubVersion": "1.3.16",
   "languages": [
     {
@@ -2813,6 +2813,44 @@
         "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_AudioPlayer.zip?v=1.0.0",
         "sha256": "de643800781155b3c776b4f844b5cefcc4c6e27606e42ac063fdfee4bdc970cc",
         "sizeBytes": 11284141
+      }
+    },
+    {
+      "id": "tb_ambient",
+      "updatedAt": "2026-08-18",
+      "latestUpdate": {
+        "version": "1.0.0",
+        "date": "2026-08-18",
+        "notesKo": [
+          "야외 거리감과 지면 재질 톤을 잔향 없이 만드는 첫 공개 버전입니다.",
+          "평원, 숲, 마른 아스팔트, 축축한 흙, 암반 지대, 해안 공기, 설원, 콘크리트 외부 8가지 야외 프로필을 제공합니다.",
+          "거리와 높이에 따라 레벨, 공기 흡수, 지면 색이 함께 바뀝니다.",
+          "레이턴시 0 샘플로 동작하며 Mix 0 %는 원음을 그대로 반환합니다.",
+          "프로필마다 배경이 달라지는 8비트 픽셀아트 화면을 제공합니다."
+        ]
+      },
+      "portfolio": {
+        "image": "assets/plugins/tb_ambient.png",
+        "descriptionKo": "근접 녹음된 드라이 소스를 잔향이나 분리된 반사 없이 야외 거리와 지면 재질에 맞추는 인서트 프로세서입니다. 8가지 야외 프로필에서 거리, 공기 흡수, 지면 톤을 한 경로로 처리합니다.",
+        "tags": [
+          "Spatial",
+          "Outdoor",
+          "Distance"
+        ],
+        "order": 35,
+        "visible": true
+      },
+      "name": "TB Ambient",
+      "version": "1.0.0",
+      "category": "Utility",
+      "price": 4,
+      "description": "Outdoor distance and ground-material tone for dry sources, with no reverb tail.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_ambient.png?v=1.0.0",
+      "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
+      "windows": {
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Ambient.zip?v=1.0.0",
+        "sha256": "1add5e20a9632bea98371fe1770ef66829b2e71dcda7a8e8d29dd39ef3f55132",
+        "sizeBytes": 2537070
       }
     }
   ],
