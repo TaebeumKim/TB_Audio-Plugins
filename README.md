@@ -14,6 +14,11 @@
 - Passed the applicable DSP, processor, mapping, UI, Standalone, performance, and repeatable host-contract checks; manual DAW, listening, DPI, signing, and rights validation remains deferred where recorded by each project.
 - Kept the TB Vocoder 3.0.0 candidate out of the Hub after its host state-roundtrip gate failed on JUCE MIDI-CC proxy parameters; the published 2.0.0 remains unchanged.
 - Audited the new TB Ambient, TB Doppler, and TB Geometry Reverb projects and kept all three out of the catalog because their project QA documents still mark public release as HOLD.
+- Added detailed TB Multiband Compressor 1.0.2, TB Grain Phaser 2.0.0, TB Filter Table 1.1.0, and TB AudioPlayer 1.0.0 user manuals to all 20 language folders in `Documents`.
+- Updated the TB Grain Phaser manuals for 2.0.0 with the current black-green phosphor interface, multilingual analyzer glyphs, and GRAIN-linked live display density.
+- Used current native interface captures, including both the main and TABLE TOOLS views for TB Filter Table, and documented every visible control, preset workflow, practical use, and common limitation without numeric range tables or license text.
+- Documented TB AudioPlayer's supported file types, rising-edge Trigger contract, fixed 50 ms retrigger and STOP fades, path-based recall, and memory limit.
+- Expanded the manual index from 29 to 33 PDFs per language. This documentation-only update does not change plug-in binaries or catalog entries.
 
 ## 2026-08-14
 
@@ -64,7 +69,7 @@ Professional English scripts and rendered 25–50 second MP3 voiceovers are avai
 
 The catalog currently contains 33 plug-ins. One additional project has a portfolio mockup: the intentionally unreleased TB Board.
 
-Detailed manuals for the established catalog set are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
+Detailed manuals for all 33 catalog plug-ins are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
 
 ### Catalog plug-ins
 
