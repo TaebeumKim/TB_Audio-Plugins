@@ -1,7 +1,7 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-18T00:40:56+09:00",
-  "hubVersion": "1.3.16",
+  "updatedAt": "2026-08-18T01:09:24+09:00",
+  "hubVersion": "1.3.17",
   "languages": [
     {
       "code": "ENG",
@@ -105,20 +105,13 @@
     }
   ],
   "hub": {
-    "version": "1.3.16",
-    "notes": "Refreshes the bundled catalog to 28 plug-ins and 20 document languages, and accompanies the server-side fix for likes on newly added plug-ins.",
+    "version": "1.3.17",
+    "notes": "Keeps the last catalogue it fetched so a rate-limited or offline start no longer drops back to the much older list bundled in the installer, caches tile logos on disk instead of re-downloading them every launch, and bounds the catalogue request to 15 seconds.",
     "windows": {
-      "version": "1.3.16",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.16/TBHub-Setup-1.3.16.exe",
-      "sha256": "942870fd60fd49d8c6745ae15029531053c8c21a659adf0f56e4c3d27f26ddbe",
-      "sizeBytes": 59596494
-    },
-    "macos": {
-      "version": "1.3.10",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-macos-v1.3.10/TBHub-1.3.10-macOS-AppleSilicon.dmg",
-      "sha256": "ea045fa437f36889c5924dc050bf6dc64fc4d0ac0e995dfbfc59cb4578682eec",
-      "sizeBytes": 53848506,
-      "notes": "Fixes feature-video links on macOS and refreshes the bundled 28-plug-in catalog."
+      "version": "1.3.17",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.17/TBHub-Setup-1.3.17.exe",
+      "sha256": "9b6a36d0abb5a775b0babcbc176336df9383e37323d5de0cd73cf2bcea68f598",
+      "sizeBytes": 60794882
     }
   },
   "plugins": [
