@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-18T01:09:24+09:00",
+  "updatedAt": "2026-08-19T17:15:14+09:00",
   "hubVersion": "1.3.17",
   "languages": [
     {
@@ -1758,12 +1758,14 @@
     },
     {
       "id": "tb_delay",
-      "updatedAt": "2026-08-14",
+      "updatedAt": "2026-08-19",
       "latestUpdate": {
-        "version": "1.0.1",
-        "date": "2026-08-13",
+        "version": "1.0.2",
+        "date": "2026-08-19",
         "notesKo": [
-          "Initial delay release."
+          "무입력 상태에서 FEEDBACK 100% 초과 구간이 스스로 발진을 유지하던 문제를 수정했습니다.",
+          "화면을 물결치는 바다 팔레트로 바꾸고 Delay Map을 원형 물결 필드로 재설계했습니다.",
+          "노브와 패널 제목을 키우고 TIME MODE와 BUILD/ONCE를 드롭다운으로 정리했습니다."
         ]
       },
       "portfolio": {
@@ -1778,16 +1780,16 @@
         "visible": true
       },
       "name": "TB Delay",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "category": "Delay",
       "price": 3,
       "description": "Creative stereo delay.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_delay.png?v=display-restore-20260729",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.0.1",
-        "sha256": "6b9f887ca1ae9ed2d83851ed612e2acd262f7c9c25042321cafb4f5f2c48569a",
-        "sizeBytes": 2539168
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.0.2",
+        "sha256": "891b654bd53ba21d703dfa3d1072bcc152cec50f341b6e15c8f06e0eefe82a00",
+        "sizeBytes": 2427015
       },
       "macos": {
         "formats": {
