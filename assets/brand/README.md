@@ -32,7 +32,7 @@ The two 256px copies for a product must be byte-identical.
 | TB Jewel Digger & Finder | `tb_jewel_digger` |
 | TB Spectral Transient Shaper | `tb_transient_shaper` |
 
-The repository currently carries 34 product icons. `TB_UnityLUFSMeter` remains
+The repository currently carries 36 product icons. `TB_UnityLUFSMeter` remains
 excluded until it becomes a built release target.
 
 ## Rollback note

@@ -6,30 +6,21 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
-## 2026-08-17
+## 2026-08-21
 
-- Released TB Filter Table 1.1.0, TB Volume 1.2.2, and TB Multiband Compressor 1.0.2 for Windows x64 VST3 with rebuilt binaries, deterministic Hub ZIPs, installers, and matching catalog checksums.
-- Added TB AudioPlayer 1.0.0 to the catalog at $3 using its existing verified Windows package, DISPLAY logo, and normalized `tb_audio_player` portfolio ID.
-- Refreshed the current feature mockups for TB EQ, TB Tune, TB Volume, TB Delay, TB Pitch Shifter, TB Filter Table, and TB AudioPlayer, and replaced the stale TB Exciter DISPLAY logo.
-- Passed the applicable DSP, processor, mapping, UI, Standalone, performance, and repeatable host-contract checks; manual DAW, listening, DPI, signing, and rights validation remains deferred where recorded by each project.
-- Kept the TB Vocoder 3.0.0 candidate out of the Hub after its host state-roundtrip gate failed on JUCE MIDI-CC proxy parameters; the published 2.0.0 remains unchanged.
-- Audited the new TB Ambient and TB Doppler projects and kept both out of the catalog because their project QA documents still mark public release as HOLD.
-- Released TB Geometry Reverb 1.0.0 to the catalog with rebuilt binaries, catalog metadata, and matching Hub ZIP manifest/version checks.
+- Completed the missing TB Ambient feature mockup and the Ambient and Geometry Reverb DISPLAY brand masters.
+- Corrected the repository overview and portfolio coverage to match the 35 live catalog plug-ins.
+- Reverified TB Ambient 1.0.0 against the live catalog, Hub ZIP, project Release bundle, installed VST3, and cached TB Hub catalog; all published hashes and versions match.
 
-## 2026-08-14
+## 2026-08-19
 
-- Updated TB Grain Phaser to 2.0.0 with a black-green phosphor interface, deterministic multilingual analyzer glyphs, and GRAIN-linked live density.
-- Rebuilt its Windows x64 VST3 and installer, refreshed the Hub ZIP and catalog hashes, and passed the 125/125 DSP/UI harness plus repeatable host-contract checks; manual DAW, listening, and signing validation remains deferred.
-- Released updated Windows x64 VST3 builds for TB Tune 2.1.0, TB Volume 1.2.1, TB SubLow 1.3.0, and TB Pitch Shifter 2.0.0.
-- Refreshed the Hub ZIPs, Windows installer links, SHA-256 checksums, sizes, versions, and latest-update metadata in `catalog.json`.
-- Passed the available Tune, Volume, SubLow, and Pitch Shifter DSP, processor, mapping, limiter, and UI harnesses; manual DAW and listening validation remains deferred.
+- Released TB Delay 1.0.2 with its current Windows VST3 bundle and matching catalog checksum.
+- Added 20-language manuals for TB Ambient, TB AudioPlayer, TB Filter Table, TB Geometry Reverb, TB Grain Phaser, and TB Multiband Compressor.
 
-## 2026-08-13
+## 2026-08-18
 
-- Released TB Filter Table and TB Grain Phaser 1.0.0, then advanced TB Multiband Compressor to 1.0.1 with corrected ZIP and installer SHA-256 metadata.
-- Released TB Delay 1.0.1 with its current Windows build, Hub ZIP, installer link, and catalog metadata.
-- Added each plug-in's DISPLAY logo, downloadable ZIP and installer, catalog metadata, and three-feature portfolio mockup.
-- Passed the automated DSP, audio, UI, integration, isolated-performance, Standalone process-smoke, and repeatable host-contract gates applicable to each plug-in; manual DAW, listening, graceful-close, signing, and rights checks remain deferred.
+- Released TB Ambient 1.0.0 with its verified Windows x64 VST3 bundle, DISPLAY logo, and catalog metadata.
+- Published TB Hub 1.3.17 with persistent last-known catalog and logo caches plus a bounded remote-catalog request.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
@@ -63,7 +54,7 @@ Professional English scripts and rendered 25–50 second MP3 voiceovers are avai
 
 ## 📦 Included Plug-ins
 
-The catalog currently contains 34 plug-ins. One additional project has a portfolio mockup: the intentionally unreleased TB Board.
+The catalog currently contains 35 plug-ins. One additional project has a portfolio mockup: the intentionally unreleased TB Board.
 
 Detailed manuals for the established catalog set are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
 
@@ -272,6 +263,12 @@ A geometry-aware reverb that converts closed meshes into playable early reflecti
 A compact one-shot sample player with file browsing, automatable triggering, sample-rate conversion, and click-free retrigger and stop fades.
 
 <img width="900" alt="TB AudioPlayer feature mockup" src="Portfolio/Mockups/tb_audio_player.jpg" />
+
+#### TB Ambient
+
+A delayless outdoor-placement processor that shapes distance, air absorption, ground colour, height, and far-field stereo focus across eight environmental profiles.
+
+<img width="900" alt="TB Ambient feature mockup" src="Portfolio/Mockups/tb_ambient.jpg" />
 
 ### Additional portfolio plug-ins
 
