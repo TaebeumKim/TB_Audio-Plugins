@@ -8,6 +8,7 @@
 
 ## 2026-08-21
 
+- Released current Windows VST3 builds for TB Colorizer 2.3.1, TB Parallel Reverb 3.0.2, TB Scrambler 2.3.1, TB Spectral Transient Shaper 1.4.1, TB Resonator 1.0.1, and TB Recorder 1.0.1, with matching catalog, archive, installer, and internal plug-in versions.
 - Completed the missing TB Ambient feature mockup and the Ambient and Geometry Reverb DISPLAY brand masters.
 - Corrected the repository overview and portfolio coverage to match the 35 live catalog plug-ins.
 - Reverified TB Ambient 1.0.0 against the live catalog, Hub ZIP, project Release bundle, installed VST3, and cached TB Hub catalog; all published hashes and versions match.

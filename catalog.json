@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-21T02:08:57+09:00",
+  "updatedAt": "2026-08-21T02:34:25+09:00",
   "hubVersion": "1.3.17",
   "languages": [
     {
@@ -528,18 +528,18 @@
     },
     {
       "id": "tb_colorizer",
-      "updatedAt": "2026-08-09",
+      "updatedAt": "2026-08-21",
       "latestUpdate": {
-        "version": "2.3.0",
-        "date": "2026-08-02",
+        "version": "2.3.1",
+        "date": "2026-08-21",
         "notesKo": [
-          "Retuned Green and Yellow as distinct colors that emphasize midrange body and high-frequency air, respectively.",
-          "Removed Violet mode while preserving color-index compatibility with existing sessions."
+          "최신 7개 컬러 모드 디자인과 현재 소스 자산을 Windows VST3 빌드에 반영했습니다.",
+          "카탈로그, VST3 moduleinfo, 설치본 버전을 2.3.1로 정렬했습니다."
         ]
       },
       "portfolio": {
         "image": "assets/plugins/tb_colorizer.png",
-        "descriptionKo": "여덟 가지 컬러 모드로 보이스와 스펙트럼 캐릭터를 변형합니다.",
+        "descriptionKo": "일곱 가지 컬러 모드로 보이스와 스펙트럼 캐릭터를 변형합니다.",
         "tags": [
           "Voice",
           "Spectral",
@@ -549,16 +549,16 @@
         "visible": true
       },
       "name": "TB Colorizer",
-      "version": "2.3.0",
+      "version": "2.3.1",
       "category": "Voice",
       "price": 2,
       "description": "Voice color shaping.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=2.3.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=2.3.1",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.3.0",
-        "sha256": "c062d06fe4c502ba25fef7431dc002f5445edac9a363a4e6957f79b9ae204f2e",
-        "sizeBytes": 2988284
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.3.1",
+        "sha256": "697541a08bb029a2f29350808b0ca1719a1d68231dbd7dc31f6acd5825adb6b9",
+        "sizeBytes": 3141713
       },
       "macos": {
         "formats": {
@@ -583,10 +583,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "2.3.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Colorizer-2.3.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "b34702f1e3c7195d3f3ee0771a61433e4fde45692264c30fa57e79c5f1a6b1a4",
-          "sizeBytes": 4252620
+          "version": "2.3.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-21/TB-Colorizer-2.3.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "b7bf91bc92c06c9f2512413eee88e5146f57b1b2c5d8ea2931bafd001be469de",
+          "sizeBytes": 4383609
         },
         "macosVst3": {
           "kind": "installer",
@@ -938,13 +938,13 @@
     },
     {
       "id": "tb_parallel_reverb",
-      "updatedAt": "2026-08-04",
+      "updatedAt": "2026-08-21",
       "latestUpdate": {
-        "version": "3.0.1",
-        "date": "2026-08-03",
+        "version": "3.0.2",
+        "date": "2026-08-21",
         "notesKo": [
-          "Glue, Bright, Space 페달을 그린·오렌지·크림슨 에나멜 팔레트와 HTML 기준 대각 그라데이션으로 새로 디자인했습니다.",
-          "기존 병렬 라우팅, 엔진 바이패스·솔로, 프리셋 및 DSP 호환성을 유지합니다."
+          "최신 Glue, Bright, Space 페달 디자인과 현재 병렬 리버브 엔진을 Windows VST3에 반영했습니다.",
+          "카탈로그, VST3 moduleinfo, 설치본 버전을 3.0.2로 정렬했습니다."
         ]
       },
       "portfolio": {
@@ -959,16 +959,16 @@
         "visible": true
       },
       "name": "TB Parallel Reverb",
-      "version": "3.0.1",
+      "version": "3.0.2",
       "category": "Reverb",
       "price": 4,
       "description": "Three-engine parallel reverb.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=3.0.1",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=3.0.2",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=3.0.1",
-        "sha256": "d14b26d74fe59de6d9a00cc888d38ea4277965a7559a4bcb20cf1eadb1fc2c69",
-        "sizeBytes": 2886881
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=3.0.2",
+        "sha256": "9f6f4dde6f1d059b04218295895460b99fb824034695793257ec2696d1cdbc8a",
+        "sizeBytes": 5582409
       },
       "macos": {
         "formats": {
@@ -993,10 +993,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "3.0.1",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Parallel-Reverb-3.0.1-Windows-x64-VST3-Setup.exe",
-          "sha256": "fe5709215ad823620bbab9e984cfc46dcd95b63a120bf4c10d25034cf0fdc85c",
-          "sizeBytes": 4187979
+          "version": "3.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-21/TB-Parallel-Reverb-3.0.2-Windows-x64-VST3-Setup.exe",
+          "sha256": "5f1ea7c0f51a1b55cfecd7ae613aa949f85cc4a490bb8682c09118d793e28d74",
+          "sizeBytes": 6865641
         },
         "macosVst3": {
           "kind": "installer",
@@ -1020,13 +1020,13 @@
     },
     {
       "id": "tb_scrambler",
-      "updatedAt": "2026-08-09",
+      "updatedAt": "2026-08-21",
       "latestUpdate": {
-        "version": "2.3.0",
-        "date": "2026-07-30",
+        "version": "2.3.1",
+        "date": "2026-08-21",
         "notesKo": [
-          "Added spacing between the upper-right controls and the effect-fish to prevent header elements from overlapping.",
-          "Normalized the effect-fish display size and improved clarity at reduced render sizes."
+          "현재 LOW, HIGH, AMOUNT 기반 스크램블러 디자인과 최신 처리 빌드를 Windows VST3에 반영했습니다.",
+          "카탈로그, VST3 moduleinfo, 설치본 버전을 2.3.1로 정렬했습니다."
         ]
       },
       "portfolio": {
@@ -1041,16 +1041,16 @@
         "visible": true
       },
       "name": "TB Scrambler",
-      "version": "2.3.0",
+      "version": "2.3.1",
       "category": "Creative",
       "price": 3,
       "description": "Scramble and glitch effects.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=2.3.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=2.3.1",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.3.0",
-        "sha256": "c2648e341bcfdb8ca9d7a79d1bf2001d7e1ef57512074d46d81faff895d5beaa",
-        "sizeBytes": 3497305
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.3.1",
+        "sha256": "f2d68c591022d6704226d33456a4544f672de6b3a9a044274c6c355b88f55873",
+        "sizeBytes": 3368595
       },
       "macos": {
         "formats": {
@@ -1075,10 +1075,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "2.3.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Scrambler-2.3.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "7b27db7e23381972d46afdfca2816ab9d572f2835b8b36a8482a31596f41ce49",
-          "sizeBytes": 4822254
+          "version": "2.3.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-21/TB-Scrambler-2.3.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "91b1fd05556f2b107296f5774b74af7095c2a8239d3c61827ac433f8d41f3dac",
+          "sizeBytes": 4703461
         },
         "macosVst3": {
           "kind": "installer",
@@ -1102,13 +1102,13 @@
     },
     {
       "id": "tb_transient_shaper",
-      "updatedAt": "2026-08-04",
+      "updatedAt": "2026-08-21",
       "latestUpdate": {
-        "version": "1.4.0",
-        "date": "2026-08-02",
+        "version": "1.4.1",
+        "date": "2026-08-21",
         "notesKo": [
-          "Aligned the EQ-mode analyzer and DSP to use the same sensitivity curve and reference line.",
-          "Standardized Delta behavior and latency across monitor sources, and reduced analyzer rendering allocations."
+          "최신 어택·서스테인 그래프와 현재 스펙트럴 처리 빌드를 Windows VST3에 반영했습니다.",
+          "카탈로그, VST3 moduleinfo, 설치본 버전을 1.4.1로 정렬했습니다."
         ]
       },
       "portfolio": {
@@ -1123,16 +1123,16 @@
         "visible": true
       },
       "name": "TB Spectral Transient Shaper",
-      "version": "1.4.0",
+      "version": "1.4.1",
       "category": "Dynamics",
       "price": 8,
       "description": "Spectral transient shaping.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=1.4.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=1.4.1",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.4.0",
-        "sha256": "e8049a54d5c605bf481f0d83ba7daa7e1b9ed0b4a0440e8eea5e0c45c0bbe224",
-        "sizeBytes": 2860737
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.4.1",
+        "sha256": "0add0969582a32b7991bf44b3d0b0072df829bc3eed7dd60ebabf78a0f7016e2",
+        "sizeBytes": 2843161
       },
       "macos": {
         "formats": {
@@ -1157,10 +1157,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.4.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Spectral-Transient-Shaper-1.4.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "91a3df39cac85421df4dfd3a2319d21b7028abce0dfed80b796f9f08b3774e5e",
-          "sizeBytes": 4159270
+          "version": "1.4.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-21/TB-Spectral-Transient-Shaper-1.4.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "b33d843776e2058e9f80b185ebd3f681cd2e97f8d788ceaa68bb9bde26b39a3e",
+          "sizeBytes": 4156300
         },
         "macosVst3": {
           "kind": "installer",
@@ -1923,13 +1923,13 @@
     },
     {
       "id": "tb_resonator",
-      "updatedAt": "2026-08-05",
+      "updatedAt": "2026-08-21",
       "latestUpdate": {
-        "version": "1.0.0",
-        "date": "2026-08-02",
+        "version": "1.0.1",
+        "date": "2026-08-21",
         "notesKo": [
-          "Tune, Body, Memory, Touch, and Mix add input-tuned resonance and physical character.",
-          "Provides 12 Factory presets plus user preset save/load."
+          "현재 Tune, Body, Memory, Touch, Mix 디자인과 최신 공명 처리 빌드를 Windows VST3에 반영했습니다.",
+          "카탈로그, VST3 moduleinfo, 설치본 버전을 1.0.1로 정렬했습니다."
         ]
       },
       "portfolio": {
@@ -1944,16 +1944,16 @@
         "visible": true
       },
       "name": "TB Resonator",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "Creative",
       "price": 2,
       "description": "Tunable modal resonator for pitched, playable textures.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_resonator.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_resonator.png?v=1.0.1",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Resonator.zip?v=1.0.0",
-        "sha256": "d50607a2844d38993c1bce8b7cb2e099b6797449c2ae2f49e91d2afb8c6aa6a4",
-        "sizeBytes": 5684818
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Resonator.zip?v=1.0.1",
+        "sha256": "2f0377be4e7b7b4734fad252d3ab401e23f91a997df896813b37c3066488e29f",
+        "sizeBytes": 5525570
       },
       "macos": {
         "formats": {
@@ -1978,10 +1978,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Resonator-1.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "cc237ff49ea20cf2aa4f89ff5f1a8811e18e22db33b912dcedd874c192f3aec4",
-          "sizeBytes": 6680797
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-21/TB-Resonator-1.0.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "d2b69b60adf067cd963acba5543d9742f55c0c16e0977c25ee28b18a3664a8f9",
+          "sizeBytes": 6681332
         },
         "macosVst3": {
           "kind": "installer",
@@ -2087,13 +2087,13 @@
     },
     {
       "id": "tb_recorder",
-      "updatedAt": "2026-08-04",
+      "updatedAt": "2026-08-21",
       "latestUpdate": {
-        "version": "1.0.0",
-        "date": "2026-08-02",
+        "version": "1.0.1",
+        "date": "2026-08-21",
         "notesKo": [
-          "Safely records the unaltered Mono/Stereo signal at the DAW insert point.",
-          "Supports WAV, FLAC, AIFF, MP3, AAC, and OGG conversion plus automatic time-based splitting."
+          "현재 녹음 상태 표시와 일시정지·재개 동작을 포함한 최신 Recorder 빌드를 Windows VST3에 반영했습니다.",
+          "카탈로그, VST3 moduleinfo, 설치본 버전을 1.0.1로 정렬했습니다."
         ]
       },
       "portfolio": {
@@ -2108,16 +2108,16 @@
         "visible": true
       },
       "name": "TB Recorder",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "Utility",
       "price": 1,
       "description": "Insert-point recorder with automatic format conversion and splitting.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_recorder.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_recorder.png?v=1.0.1",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Recorder.zip?v=1.0.0",
-        "sha256": "e338941b45c29d184eceb5dc8c097b0ba3914e83a4c6ec9bd9e1f52eeee0e0e7",
-        "sizeBytes": 2943508
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Recorder.zip?v=1.0.1",
+        "sha256": "494cb96194b8df6a700335553591a5d77d66aabbe10f2459b0778b9aaf52c31f",
+        "sizeBytes": 2928667
       },
       "macos": {
         "formats": {
@@ -2142,10 +2142,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Recorder-1.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "a554a8487b07e2bef0c5bb4a8debb629eecf8969fd6e4adf275a480ca231359f",
-          "sizeBytes": 4212300
+          "version": "1.0.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-21/TB-Recorder-1.0.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "f4741063cfceffaf8698a213a1b12333bc42c1ab27e9611aaefd2953e5aad2a0",
+          "sizeBytes": 4209580
         },
         "macosVst3": {
           "kind": "installer",
