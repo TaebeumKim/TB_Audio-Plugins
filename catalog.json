@@ -128,7 +128,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_center.png",
-        "descriptionKo": "스테레오 이미지를 위상 안정성을 유지하며 중앙으로 정돈하고 멀티밴드로 제어합니다.",
+        "descriptionKo": "좌우로 퍼진 소리를 가운데로 모아 더 또렷하게 합니다.",
         "tags": [
           "Stereo",
           "Phase",
@@ -210,7 +210,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_compressor.png",
-        "descriptionKo": "피크와 RMS 감지를 결합해 투명하게 다이내믹을 제어하는 컴프레서입니다.",
+        "descriptionKo": "큰 소리는 눌러 주고 작은 소리는 따라오게 해 음량을 고르게 합니다.",
         "tags": [
           "Dynamics",
           "Peak",
@@ -292,7 +292,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_distortion.png",
-        "descriptionKo": "여러 단계의 새추레이션과 디스토션으로 음색과 밀도를 조절합니다.",
+        "descriptionKo": "소리를 거칠게 만들어 기타, 드럼, 신스에 존재감과 캐릭터를 더합니다.",
         "tags": [
           "Saturation",
           "Distortion",
@@ -374,7 +374,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_disperser.png",
-        "descriptionKo": "시간과 주파수 변조를 조절해 위상 분산과 트랜지언트 질감을 만듭니다.",
+        "descriptionKo": "소리의 시작을 살짝 퍼뜨려 킥과 스네어를 더 묵직하게 느끼게 합니다.",
         "tags": [
           "Phase",
           "Dispersion",
@@ -457,7 +457,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_eq.png",
-        "descriptionKo": "정밀한 주파수 조정을 위한 파라메트릭 이퀄라이저입니다.",
+        "descriptionKo": "원하는 주파수만 올리거나 내려 음색을 다듬습니다.",
         "tags": [
           "EQ",
           "Parametric",
@@ -539,7 +539,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_colorizer.png",
-        "descriptionKo": "일곱 가지 컬러 모드로 보이스와 스펙트럼 캐릭터를 변형합니다.",
+        "descriptionKo": "소리의 색깔과 질감을 바꿔 보컬과 신스에 개성을 더합니다.",
         "tags": [
           "Voice",
           "Spectral",
@@ -621,7 +621,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_inverted_flanger.png",
-        "descriptionKo": "반전된 플랜징 움직임으로 독특한 위상감과 공간감을 만듭니다.",
+        "descriptionKo": "반복되는 스윕으로 기타, 패드, 효과음에 넓은 움직임을 더합니다.",
         "tags": [
           "Flanger",
           "Phase",
@@ -703,7 +703,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_inverted_phaser.png",
-        "descriptionKo": "깊고 선명하게 움직이는 노치를 만드는 감산형 페이저입니다.",
+        "descriptionKo": "움직이는 빈틈을 만들어 패드와 기타에 회전하는 듯한 위상감을 더합니다.",
         "tags": [
           "Phaser",
           "Notch",
@@ -785,7 +785,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_jewel_digger.png",
-        "descriptionKo": "피치가 쌓인 쉬머와 스펙트럴 강조로 숨은 하모닉을 드러냅니다.",
+        "descriptionKo": "높은 배음과 반짝이는 잔향을 더해 숨은 디테일을 드러냅니다.",
         "tags": [
           "Harmonics",
           "Shimmer",
@@ -867,7 +867,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_noise_remover.png",
-        "descriptionKo": "뉴럴·스펙트럴 복원과 Noise Print 학습으로 특정 노이즈와 환경 앰비언스를 줄이는 도구입니다.",
+        "descriptionKo": "잡음만 있는 구간을 학습해 히스, 험, 팬 소리 같은 일정한 배경 소음을 줄입니다.",
         "tags": [
           "Restoration",
           "Noise",
@@ -949,7 +949,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_parallel_reverb.png",
-        "descriptionKo": "Glue, Bright, Space 세 엔진을 병렬로 조합하는 멀티 엔진 리버브입니다.",
+        "descriptionKo": "짧은 잔향, 밝은 잔향, 넓은 잔향을 섞어 공간을 만듭니다.",
         "tags": [
           "Reverb",
           "Parallel",
@@ -1031,7 +1031,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_scrambler.png",
-        "descriptionKo": "오디오를 재배열해 글리치와 예측 불가능한 리듬 질감을 만듭니다.",
+        "descriptionKo": "소리 조각의 순서를 섞어 글리치와 새로운 리듬을 만듭니다.",
         "tags": [
           "Glitch",
           "Scramble",
@@ -1113,7 +1113,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_transient_shaper.png",
-        "descriptionKo": "주파수 영역별로 어택과 서스테인을 다듬는 스펙트럴 트랜지언트 셰이퍼입니다.",
+        "descriptionKo": "소리의 앞부분과 몸통을 나눠 타격감과 길이를 조절합니다.",
         "tags": [
           "Transient",
           "Spectral",
@@ -1195,7 +1195,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_step_shifter.png",
-        "descriptionKo": "선택한 오버톤을 피치 사이로 단계적으로 이동시키는 베타 스펙트럴 이펙트입니다.",
+        "descriptionKo": "배음을 계단처럼 이동시켜 반복적이고 디지털한 피치 움직임을 만듭니다.",
         "tags": [
           "Beta",
           "Harmonics",
@@ -1277,7 +1277,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_tune.png",
-        "descriptionKo": "음정 이동 방향을 고려해 모노 보컬 피치를 보정합니다.",
+        "descriptionKo": "모노 보컬의 음정을 선택한 키와 음계에 맞게 보정합니다.",
         "tags": [
           "Voice",
           "Pitch",
@@ -1360,7 +1360,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_volume.png",
-        "descriptionKo": "간단하고 빠르게 레벨을 조절하는 게인 도구입니다.",
+        "descriptionKo": "음색을 바꾸지 않고 트랙의 음량만 빠르게 조절합니다.",
         "tags": [
           "Gain",
           "Utility",
@@ -1442,7 +1442,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_vocoder.png",
-        "descriptionKo": "캐리어와 모듈레이터의 스펙트럼을 결합하는 베타 보코더입니다.",
+        "descriptionKo": "말소리의 리듬을 신스 음색에 입혀 로봇 같은 목소리를 만듭니다.",
         "tags": [
           "Vocoder",
           "Voice"
@@ -1523,7 +1523,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_xyz_panner.png",
-        "descriptionKo": "여러 축을 이용해 사운드의 공간 위치를 조절하는 패너입니다.",
+        "descriptionKo": "소리를 좌우, 앞뒤, 위아래로 움직여 공간 위치를 만듭니다.",
         "tags": [
           "Panner",
           "Spatial",
@@ -1605,7 +1605,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_limiter.png",
-        "descriptionKo": "스테레오 링크와 트루 피크 측정을 제공하는 마스터링 리미터입니다.",
+        "descriptionKo": "최대 음량을 정해 갑작스러운 피크와 클리핑을 막습니다.",
         "tags": [
           "Limiter",
           "True Peak",
@@ -1687,7 +1687,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_sublow.png",
-        "descriptionKo": "Core, Bloom, Punch를 조절해 입력에 서브베이스 에너지를 더합니다.",
+        "descriptionKo": "깊은 저역과 단단한 타격감을 더해 킥과 베이스를 무겁게 만듭니다.",
         "tags": [
           "Sub Bass",
           "Generator",
@@ -1770,7 +1770,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_delay.png",
-        "descriptionKo": "테이프, 주파수 이동, 디퓨전과 그레인 변형을 한 스테레오 피드백 안에서 조합하는 크리에이티브 딜레이입니다.",
+        "descriptionKo": "반복, 테이프 흔들림, 피치 이동과 퍼짐을 한 번에 만드는 딜레이입니다.",
         "tags": [
           "Delay",
           "Stereo",
@@ -1852,7 +1852,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_pitch_shifter.png",
-        "descriptionKo": "피치와 포먼트를 두 노브로 분리해 음정과 음색의 크기를 독립적으로 이동합니다.",
+        "descriptionKo": "음정과 목소리의 굵기를 따로 움직여 자연스러운 더블과 특수 효과를 만듭니다.",
         "tags": [
           "Pitch",
           "Formant",
@@ -1934,7 +1934,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_resonator.png",
-        "descriptionKo": "입력이 남길 음정·물성·시간을 골라 하나의 연주 가능한 공명체로 만듭니다.",
+        "descriptionKo": "짧은 소리를 선택한 음정과 재질로 울리는 악기처럼 바꿉니다.",
         "tags": [
           "Resonator",
           "Modal",
@@ -2016,7 +2016,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_ring_modulation.png",
-        "descriptionKo": "내부 캐리어로 트레몰로부터 금속성 사이드밴드까지 만드는 링 모듈레이터입니다.",
+        "descriptionKo": "트레몰로부터 금속성 로봇 음색까지 만드는 링 모듈레이터입니다.",
         "tags": [
           "Ring Mod",
           "Modulation",
@@ -2098,7 +2098,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_recorder.png",
-        "descriptionKo": "DAW 인서트 신호를 기록하고 선택한 포맷과 시간 길이로 자동 변환·분할하는 레코더입니다.",
+        "descriptionKo": "DAW 안의 소리를 파일로 기록하고 필요한 길이로 나눕니다.",
         "tags": [
           "Recorder",
           "Utility",
@@ -2180,7 +2180,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_shimmer.png",
-        "descriptionKo": "옥타브 업 그레인과 확산형 잔향을 겹쳐 반짝이는 쉬머·크리스털 공간감을 만듭니다.",
+        "descriptionKo": "높은 음의 입자와 넓은 잔향을 겹쳐 몽환적인 공간을 만듭니다.",
         "tags": [
           "Granular",
           "Shimmer",
@@ -2263,7 +2263,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_exciter.png",
-        "descriptionKo": "고역의 선명도와 배음을 더해 믹스의 밝기와 존재감을 자연스럽게 강화합니다.",
+        "descriptionKo": "고역의 선명도와 배음을 더해 보컬과 믹스의 존재감을 높입니다.",
         "tags": [
           "Exciter",
           "Harmonics",
@@ -2346,7 +2346,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_tape.png",
-        "descriptionKo": "자유 드로잉 모터 커브와 독립적인 정지·시작 시간으로 오디오를 테이프처럼 감속해 완전히 멈추고 다시 정상 속도로 재가속합니다.",
+        "descriptionKo": "테이프 모터처럼 소리를 느리게 멈췄다가 다시 정상 속도로 올립니다.",
         "tags": [
           "Tape Stop",
           "Varispeed",
@@ -2420,7 +2420,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_deesser.png",
-        "descriptionKo": "입력 레벨과 언어에 덜 의존하는 검출과 스테레오 연동 스펙트럴 감쇄로, 보컬의 공기감과 딕션은 유지하면서 거친 치찰음을 줄이는 디에서입니다.",
+        "descriptionKo": "보컬의 거친 치찰음을 줄이면서 발음과 공기감은 남깁니다.",
         "tags": [
           "De-Esser",
           "Sibilance",
@@ -2503,7 +2503,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_filter_table.png",
-        "descriptionKo": "최대 256프레임 웨이브테이블의 배음 윤곽을 필터 응답으로 바꾸고 Frame LFO와 네 가지 위상 모드로 움직이는 스펙트럴 필터입니다.",
+        "descriptionKo": "움직이는 필터 음색으로 패드와 신스의 배음 색을 시간에 따라 바꿉니다.",
         "tags": [
           "Spectral Filter",
           "Wavetable",
@@ -2586,7 +2586,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_grain_phaser.png",
-        "descriptionKo": "촘촘한 FFT 노치 그리드와 스테레오 모션으로 패드·기타·드럼을 입자처럼 잘게 조각하는 스펙트럴 페이저입니다.",
+        "descriptionKo": "움직이는 틈과 입자 질감으로 패드, 기타, 드럼을 새롭게 만듭니다.",
         "tags": [
           "Spectral",
           "Phaser",
@@ -2669,7 +2669,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_multiband_compressor.png",
-        "descriptionKo": "필요한 주파수에 최대 네 개 자유 밴드를 배치해 밴드별 압축·확장, 사이드체인, M/S 처리와 signed Range를 제어하는 멀티밴드 다이내믹스입니다.",
+        "descriptionKo": "저음, 중음, 고음을 따로 눌러 특정 대역만 안정적으로 정리합니다.",
         "tags": [
           "Multiband",
           "Dynamics",
@@ -2752,7 +2752,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_geometry_reverb.png",
-        "descriptionKo": "닫힌 메쉬 모델의 스케일, 소재, 방사 패턴, 소스/리스너 배치를 바탕으로 초기 반사와 잔향을 계산해 공간적 리버브 질감을 만듭니다.",
+        "descriptionKo": "공간의 모양과 재질을 바탕으로 실제 방처럼 느껴지는 잔향을 만듭니다.",
         "tags": [
           "Reverb",
           "Geometry",
@@ -2788,7 +2788,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_audio_player.png",
-        "descriptionKo": "WAV·AIFF·FLAC·Ogg 샘플을 불러와 버튼이나 자동화 가능한 상승 에지로 즉시 재생하고, 재트리거와 정지를 50ms 페이드로 매끄럽게 처리하는 원샷 플레이어입니다.",
+        "descriptionKo": "WAV, AIFF, FLAC, Ogg 샘플을 불러와 버튼이나 트리거로 재생합니다.",
         "tags": [
           "Sampler",
           "One-shot",
@@ -2826,7 +2826,7 @@
       },
       "portfolio": {
         "image": "assets/plugins/tb_ambient.png",
-        "descriptionKo": "근접 녹음된 드라이 소스를 잔향이나 분리된 반사 없이 야외 거리와 지면 재질에 맞추는 인서트 프로세서입니다. 8가지 야외 프로필에서 거리, 공기 흡수, 지면 톤을 한 경로로 처리합니다.",
+        "descriptionKo": "드라이한 녹음을 야외 장면의 거리, 공기, 지면 느낌에 맞춥니다.",
         "tags": [
           "Spatial",
           "Outdoor",
