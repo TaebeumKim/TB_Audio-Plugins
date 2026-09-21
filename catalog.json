@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-08-22T00:09:32+09:00",
+  "updatedAt": "2026-09-21T13:18:31+09:00",
   "hubVersion": "1.3.17",
   "languages": [
     {
@@ -856,18 +856,18 @@
     },
     {
       "id": "tb_noise_remover",
-      "updatedAt": "2026-08-09",
+      "updatedAt": "2026-09-21",
       "latestUpdate": {
-        "version": "2.2.0",
-        "date": "2026-07-30",
+        "version": "2.3.0",
+        "date": "2026-09-21",
         "notesKo": [
-          "Unified each product's effect logo and product name into a single shared rack header.",
-          "Improved previous/next navigation and save/load workflows for the central preset control."
+          "노이즈 전용 구간을 버튼으로 학습하는 Noise Print 캡처와 적용·삭제 흐름을 추가했습니다.",
+          "BASIC이 꺼진 상태의 불필요한 뉴럴 추론을 막고, 실패 시 안전한 스펙트럴 폴백으로 전환합니다."
         ]
       },
       "portfolio": {
         "image": "assets/plugins/tb_noise_remover.png",
-        "descriptionKo": "특정 노이즈와 환경 앰비언스를 선택적으로 줄이는 복원 도구입니다.",
+        "descriptionKo": "뉴럴·스펙트럴 복원과 Noise Print 학습으로 특정 노이즈와 환경 앰비언스를 줄이는 도구입니다.",
         "tags": [
           "Restoration",
           "Noise",
@@ -877,16 +877,16 @@
         "visible": true
       },
       "name": "TB Noise Remover",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "category": "Restoration",
       "price": 5,
-      "description": "Noise and ambience removal.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=display-restore-20260729",
+      "description": "Neural and spectral noise removal with learnable noise-print capture.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=2.3.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.2.0",
-        "sha256": "a53a7666561860585f4f0155c09d3dd659e775471ec260e16e27e1da61e2fa70",
-        "sizeBytes": 13217109
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.3.0",
+        "sha256": "b0f50d1baa8ac2a3c2447246a5a14c564fefbe8043e5822b6e2b7739dcc9e8fe",
+        "sizeBytes": 13763439
       },
       "macos": {
         "formats": {
