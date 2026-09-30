@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-09-21T13:18:31+09:00",
+  "updatedAt": "2026-09-30T22:12:16+09:00",
   "hubVersion": "1.3.17",
   "languages": [
     {
@@ -549,7 +549,7 @@
         "visible": true
       },
       "name": "TB Colorizer",
-      "version": "2.3.1",
+      "version": "2.4.0",
       "category": "Voice",
       "price": 2,
       "description": "Voice color shaping.",
@@ -856,13 +856,14 @@
     },
     {
       "id": "tb_noise_remover",
-      "updatedAt": "2026-09-21",
+      "updatedAt": "2026-09-30",
       "latestUpdate": {
-        "version": "2.3.0",
-        "date": "2026-09-21",
+        "version": "2.4.0",
+        "date": "2026-09-30",
         "notesKo": [
           "노이즈 전용 구간을 버튼으로 학습하는 Noise Print 캡처와 적용·삭제 흐름을 추가했습니다.",
-          "BASIC이 꺼진 상태의 불필요한 뉴럴 추론을 막고, 실패 시 안전한 스펙트럴 폴백으로 전환합니다."
+          "BASIC이 꺼진 상태의 불필요한 뉴럴 추론을 막고, 실패 시 안전한 스펙트럴 폴백으로 전환합니다.",
+          "애널라이저에서 선택한 주파수 대역의 노이즈를 집중적으로 줄이는 Focus Band를 추가했습니다."
         ]
       },
       "portfolio": {
@@ -877,16 +878,16 @@
         "visible": true
       },
       "name": "TB Noise Remover",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "category": "Restoration",
       "price": 5,
       "description": "Neural and spectral noise removal with learnable noise-print capture.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=2.3.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=2.4.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.3.0",
-        "sha256": "b0f50d1baa8ac2a3c2447246a5a14c564fefbe8043e5822b6e2b7739dcc9e8fe",
-        "sizeBytes": 13763439
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.4.0",
+        "sha256": "5678e58ae2fe84365aeb3db1b539a2678ca6c0ddd281226fe095903eeec0de93",
+        "sizeBytes": 13765604
       },
       "macos": {
         "formats": {
@@ -938,13 +939,13 @@
     },
     {
       "id": "tb_parallel_reverb",
-      "updatedAt": "2026-08-22",
+      "updatedAt": "2026-09-30",
       "latestUpdate": {
-        "version": "3.0.2",
-        "date": "2026-08-21",
+        "version": "3.1.0",
+        "date": "2026-09-30",
         "notesKo": [
           "최신 Glue, Bright, Space 페달 디자인과 현재 병렬 리버브 엔진을 Windows VST3에 반영했습니다.",
-          "카탈로그, VST3 moduleinfo, 설치본 버전을 3.0.2로 정렬했습니다."
+          "기본 화면을 600×520으로 줄이고 창 크기 조절에 따라 엔진 카드와 컨트롤이 함께 맞춰집니다."
         ]
       },
       "portfolio": {
@@ -959,16 +960,16 @@
         "visible": true
       },
       "name": "TB Parallel Reverb",
-      "version": "3.0.2",
+      "version": "3.1.0",
       "category": "Reverb",
       "price": 4,
       "description": "Three-engine parallel reverb.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=3.0.2",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=3.1.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=3.0.2",
-        "sha256": "9f6f4dde6f1d059b04218295895460b99fb824034695793257ec2696d1cdbc8a",
-        "sizeBytes": 5582409
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=3.1.0",
+        "sha256": "757aac878ae6e17e3844aeefe216ec920cd25e35fedf3c50cb440843da2eb612",
+        "sizeBytes": 5714072
       },
       "macos": {
         "formats": {
@@ -1512,13 +1513,14 @@
     },
     {
       "id": "tb_xyz_panner",
-      "updatedAt": "2026-08-05",
+      "updatedAt": "2026-09-30",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-07-30",
+        "version": "1.3.0",
+        "date": "2026-09-30",
         "notesKo": [
           "Unified each product's effect logo and product name into a single shared rack header.",
-          "Improved previous/next navigation and save/load workflows for the central preset control."
+          "Improved previous/next navigation and save/load workflows for the central preset control.",
+          "Added Physical, Near Field, and Linear distance attenuation curves while keeping Physical as the default."
         ]
       },
       "portfolio": {
@@ -1533,16 +1535,16 @@
         "visible": true
       },
       "name": "TB XYZ Panner",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Utility",
       "price": 2,
       "description": "Multi-axis panning.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=1.3.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.2.0",
-        "sha256": "e476c436e03f6c23dbb4824b67c0fa41530097166eb4f92eda7376c0f2435d3c",
-        "sizeBytes": 2999033
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.3.0",
+        "sha256": "4500e1710634ee57c54d5b3ca90669cd658e58b7a97b0fe2ed625ef7a3483db1",
+        "sizeBytes": 2888085
       },
       "macos": {
         "formats": {
