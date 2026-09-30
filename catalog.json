@@ -501,10 +501,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "2.0.1",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-eq-windows-v2.0.1/TB-EQ-2.0.1-Windows-x64-VST3-Setup.exe",
-          "sha256": "54789283cf4b3e544fbff7f0d5a29b48231c4da16f5054ffe7bada6dbd752ae8",
-          "sizeBytes": 7691144
+          "version": "2.0.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-eq-windows-v2.0.2/TB-EQ-2.0.2-Windows-x64-VST3-Setup.exe",
+          "sha256": "b12f5d4c982cd837756a280ad1094649794bd772fad36aaa9af77dd5ea31cc28",
+          "sizeBytes": 7690060
         },
         "macosVst3": {
           "kind": "installer",
