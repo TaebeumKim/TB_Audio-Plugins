@@ -2280,9 +2280,9 @@
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.1.0-logo-20260817",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.1.0",
-        "sha256": "782bcf9a83682f2c6bf435682557affdadd55911e4e5a1ecf0753679fedfce40",
-        "sizeBytes": 2871294
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.1.0-20260930",
+        "sha256": "2719ac9e9efbbfbd6c509dfc87211283efc3f4f14880cfb5e0250eef0e57d9e6",
+        "sizeBytes": 2978654
       },
       "webDownloads": {
         "windowsVst3": {
