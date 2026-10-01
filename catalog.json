@@ -110,7 +110,7 @@
     "windows": {
       "version": "1.3.18",
       "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.18/TBHub-Setup-1.3.18.exe",
-      "sha256": "bb7104bde94f9669b141eb55a82511cf9fe40c8b433876671f5097d4fbcd4c1ee",
+      "sha256": "bb7104bde94f9669b141eb55a82511cf9fe40c8b43387671f5097d4fbcd4c1ee",
       "sizeBytes": 60766688
     }
   },
