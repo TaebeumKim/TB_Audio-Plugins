@@ -1,7 +1,7 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-10-01T02:28:37+09:00",
-  "hubVersion": "1.3.17",
+  "updatedAt": "2026-10-02T00:37:49+09:00",
+  "hubVersion": "1.3.18",
   "languages": [
     {
       "code": "ENG",
@@ -105,13 +105,13 @@
     }
   ],
   "hub": {
-    "version": "1.3.17",
-    "notes": "Keeps the last catalogue it fetched so a rate-limited or offline start no longer drops back to the much older list bundled in the installer, caches tile logos on disk instead of re-downloading them every launch, and bounds the catalogue request to 15 seconds.",
+    "version": "1.3.18",
+    "notes": "Sorts updates by latest date, keeps long descriptions inside a scrollable Info panel, and shows concise English descriptions only.",
     "windows": {
-      "version": "1.3.17",
-      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.17/TBHub-Setup-1.3.17.exe",
-      "sha256": "9b6a36d0abb5a775b0babcbc176336df9383e37323d5de0cd73cf2bcea68f598",
-      "sizeBytes": 60794882
+      "version": "1.3.18",
+      "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/hub-windows-v1.3.18/TBHub-Setup-1.3.18.exe",
+      "sha256": "bb7104bde94f9669b141eb55a82511cf9fe40c8b433876671f5097d4fbcd4c1ee",
+      "sizeBytes": 60766688
     }
   },
   "plugins": [
@@ -881,7 +881,7 @@
       "version": "2.4.0",
       "category": "Restoration",
       "price": 5,
-      "description": "Neural and spectral noise removal with learnable noise-print capture.",
+      "description": "Learnable neural and spectral noise removal.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=2.4.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
@@ -2031,7 +2031,7 @@
       "version": "1.0.0",
       "category": "Modulation",
       "price": 2,
-      "description": "Internal-carrier ring modulation from tremolo to metallic sidebands.",
+      "description": "Ring modulation from tremolo to metallic sidebands.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_ring_modulation.png?v=1.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
@@ -2113,7 +2113,7 @@
       "version": "1.0.1",
       "category": "Utility",
       "price": 1,
-      "description": "Insert-point recorder with automatic format conversion and splitting.",
+      "description": "Insert-point recording with format conversion and splitting.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_recorder.png?v=1.0.1",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
@@ -2195,7 +2195,7 @@
       "version": "1.0.0",
       "category": "Creative",
       "price": 2,
-      "description": "Granular shimmer with crystalline pitch feedback and diffuse swarm tails.",
+      "description": "Granular shimmer with pitch feedback and diffuse tails.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_shimmer.png?v=1.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
@@ -2361,7 +2361,7 @@
       "version": "1.0.0",
       "category": "Creative",
       "price": 2,
-      "description": "A custom-curve tape-motor effect that slows audio to silence and accelerates it back to speed.",
+      "description": "Custom-curve tape stop and start effects.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tape.png?v=1.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
@@ -2435,7 +2435,7 @@
       "version": "1.0.0",
       "category": "Dynamics",
       "price": 2,
-      "description": "A level-independent, language-neutral de-esser that uses stereo-linked spectral reduction to tame harsh sibilance while preserving vocal air and diction.",
+      "description": "Level-independent de-essing that preserves vocal air and diction.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_deesser.png?v=1.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
@@ -2518,7 +2518,7 @@
       "version": "1.1.0",
       "category": "Filter",
       "price": 4,
-      "description": "A wavetable-derived spectral filter that morphs up to 256 frames into moving response contours with four phase modes, nonlinear drive, and a frame LFO.",
+      "description": "Wavetable spectral filtering with morphing frames and phase modes.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_filter_table.png?v=1.1.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
@@ -2601,7 +2601,7 @@
       "version": "2.0.0",
       "category": "Modulation",
       "price": 5,
-      "description": "A spectral phaser that moves a dense FFT notch grid with controlled stereo orbit to carve pads, guitars, and drums into grain-like texture.",
+      "description": "Spectral phasing with dense notches and stereo motion.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_grain_phaser.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
@@ -2684,7 +2684,7 @@
       "version": "1.0.2",
       "category": "Dynamics",
       "price": 7,
-      "description": "A four-band free-placement dynamics processor with per-band compression or expansion, sidechain, stereo/Mid/Side targeting, signed Range, and Dynamic or Linear modes.",
+      "description": "Four-band dynamics with free placement, sidechain, and M/S control.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_multiband_compressor.png?v=1.0.2",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
@@ -2767,7 +2767,7 @@
       "version": "1.0.0",
       "category": "Reverb",
       "price": 5,
-      "description": "A geometry-aware reverb that generates playable early reflections and tails from closed meshes with controllable scale, materials, emitter/listener placement, and radiation pattern.",
+      "description": "Mesh-based reverb with controllable scale, materials, and placement.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_geometry_reverb.png?v=1.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
@@ -2803,7 +2803,7 @@
       "version": "1.0.0",
       "category": "Instrument",
       "price": 3,
-      "description": "A compact one-shot sample player with browser loading, automatable triggering, sample-rate conversion, and click-free retrigger and stop fades.",
+      "description": "One-shot sample playback with automatable triggering.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_audio_player.png?v=1.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
@@ -2841,7 +2841,7 @@
       "version": "1.0.0",
       "category": "Utility",
       "price": 4,
-      "description": "Outdoor distance and ground-material tone for dry sources, with no reverb tail.",
+      "description": "Outdoor distance and ground tone without a reverb tail.",
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_ambient.png?v=display-20260821",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
