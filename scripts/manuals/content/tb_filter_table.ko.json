@@ -1,0 +1,242 @@
+{
+  "file": "TB_FilterTable",
+  "version": "1.1.0",
+  "date": "2026-10-02",
+  "subtitle": "Wavetable Spectral Filter",
+  "tagline": "웨이브테이블 프레임을 필터 응답으로 바꿉니다. 팩토리 테이블 120종에서 고르거나 직접 그리고, 256개 프레임을 모핑하며, 위상과 윤곽, 움직임을 정합니다.",
+  "facts": ["팩토리 테이블 120종", "256 프레임 모핑", "위상 모드 4종", "팩토리 프리셋 20종"],
+  "ui": "tb_filter_table.jpg",
+  "body": [
+    { "h2": "개요" },
+    { "lead": "TB Filter Table은 웨이브테이블을 필터로 씁니다. 각 테이블은 256칸 레일 위에 놓인 단일 사이클 프레임의 연속이며, 현재 프레임이 FIR 필터 응답으로 바뀌어 소리를 다듬습니다. 프레임을 옮기면 필터가 모핑되어 부드러운 윤곽부터 포먼트, 노치, 콤, 날카로운 펄스 모양까지 바뀝니다." },
+    { "p": "`CUTOFF (H24)`는 프레임을 주파수 축에 배치하고, `RESONANCE`는 윤곽의 깊이를, `FRAME`과 MORPH LFO는 테이블 안의 위치를, `PHASE`는 위상 응답을 정하며, `MIX`는 지연 보정된 원음과 섞습니다. EDIT 화면에는 `DRIVE`, 플러그인 프리셋, 사용자 테이블을 그리고 캡처하는 도구가 더 있습니다." },
+    { "h3": "주요 기능" },
+    { "ul": [
+      "10개 계열의 팩토리 테이블 120종과 편집할 수 있는 CUSTOM 테이블",
+      "256칸 프레임 레일. 테이블은 2 ~ 256개 키프레임 사이를 매끄럽게 또는 계단식으로 모핑",
+      "20 Hz ~ 20 kHz의 CUTOFF (H24), 실제 하한은 200 Hz",
+      "평평함(−100%)부터 제곱(+100%)까지의 RESONANCE 윤곽 깊이",
+      "MINIMUM, LINEAR, ORIGINAL, RAW 위상 모드 4종",
+      "최대 24 dB의 필터 뒤 DRIVE",
+      "모양 6종, ±100% 범위, 0.01 ~ 10 Hz 속도의 MORPH LFO",
+      "사용자 테이블 그리기, 프레임 캡처, .tbft 테이블 파일",
+      "팩토리 프리셋 20종, 사용자 프리셋, 실행 취소와 다시 실행"
+    ] },
+    { "h3": "신호 흐름" },
+    { "flow": { "steps": ["입력", "TABLE, FRAME, MORPH LFO로 정한 프레임", "FIR 필터(CUTOFF, RESONANCE, PHASE)", "DRIVE", "원음과 MIX", "출력"] } },
+    { "note": { "title": "이 설명서에 대해", "text": [
+      "이 설명서는 Windows용 TB Filter Table 1.1.0(VST3)을 기준으로 합니다. 현재 macOS 빌드(AU, VST3)는 1.0.1 버전이며 다를 수 있습니다."
+    ] } },
+
+    { "h2": "빠른 시작" },
+    { "ol": [
+      "신스, 패드, 드럼, 보컬, 버스 트랙에 TB Filter Table을 넣습니다. Init 프리셋은 Moving Formant 테이블, `FRAME` 129, `CUTOFF` 4 kHz, `RESONANCE` +15%, `MIX` 75%입니다.",
+      "테이블 선택 상자 {{4}}에서 테이블을 고르거나 옆의 화살표로 모든 테이블을 넘깁니다.",
+      "`FRAME` {{6}}을 움직여 테이블을 모핑하고, `CUTOFF` {{7}}로 응답의 위치를 정합니다.",
+      "`RESONANCE` {{8}}로 깊이를, `MIX` {{9}}로 비율을 정합니다.",
+      "움직임을 원하면 MORPH LFO 줄 {{10}}에서 `TYPE`을 고르고 `RANGE`와 `RATE`를 정합니다."
+    ] },
+
+    { "h2": "화면 구성" },
+    { "p": "기본 화면에는 자주 쓰는 조절부가 있습니다. `EDIT` {{5}}를 누르면 보조 도구가 열리고, `DONE` {{13}}을 누르면 기본 화면으로 돌아갑니다." },
+    { "ui": {
+      "image": "tb_filter_table.jpg",
+      "caption": "TB Filter Table 1.1: Init 프리셋을 불러온 기본 화면(왼쪽)과 TABLE TOOLS 탭을 연 보조 도구 화면(오른쪽).",
+      "callouts": [
+        { "n": 1, "x": 26.0, "y": 4.7 },
+        { "n": 2, "x": 5.4, "y": 15.3 },
+        { "n": 3, "x": 16.0, "y": 42.5 },
+        { "n": 4, "x": 20.9, "y": 60.6 },
+        { "n": 5, "x": 43.3, "y": 60.6 },
+        { "n": 6, "x": 9.8, "y": 70.8 },
+        { "n": 7, "x": 23.0, "y": 70.8 },
+        { "n": 8, "x": 35.6, "y": 70.8 },
+        { "n": 9, "x": 45.0, "y": 70.8 },
+        { "n": 10, "x": 10.8, "y": 92.8 },
+        { "n": 11, "x": 59.8, "y": 18.8 },
+        { "n": 12, "x": 63.2, "y": 33.8 },
+        { "n": 13, "x": 94.3, "y": 60.6 },
+        { "n": 14, "x": 78.0, "y": 72.2 },
+        { "n": 15, "x": 74.6, "y": 75.6 },
+        { "n": 16, "x": 51.4, "y": 87.9 },
+        { "n": 17, "x": 93.6, "y": 74.5 },
+        { "n": 18, "x": 68.5, "y": 90.7 }
+      ],
+      "legend": [
+        [1, "PHASE", "MINIMUM, LINEAR, ORIGINAL, RAW."],
+        [2, "테이블 보기", "현재 테이블의 프레임들과 강조된 현재 프레임."],
+        [3, "TABLE FIR RESPONSE", "실제 필터 응답. 표시선은 CUTOFF입니다."],
+        [4, "테이블 선택 상자", "CUSTOM과 계열별로 묶인 팩토리 테이블 120종. 화살표로 모두 넘길 수 있습니다."],
+        [5, "EDIT", "보조 도구를 엽니다."],
+        [6, "Frame", "256칸 레일 위의 위치."],
+        [7, "Cutoff", "하모닉 24에 배정되는 주파수."],
+        [8, "Resonance", "윤곽 깊이."],
+        [9, "Mix", "드라이/웻 비율."],
+        [10, "MORPH LFO", "프레임 LFO의 TYPE, RANGE, RATE."],
+        [11, "TABLE", "테이블의 프레임들. 위의 레일은 256칸, 키프레임, 현재 프레임을 보여 줍니다."],
+        [12, "DRAW FRAME", "현재 프레임. 안에서 드래그하면 사용자 테이블을 그리고, 손을 떼면 반영됩니다."],
+        [13, "DONE", "기본 화면으로 돌아갑니다."],
+        [14, "TABLE TOOLS / FRAME LFO", "테이블 도구와 Frame LFO 조절부를 전환합니다."],
+        [15, "FRAME, DRIVE", "프레임 위치와 필터 뒤 드라이브."],
+        [16, "키프레임 상태", "키프레임 수와 모핑 방식(SMOOTH 또는 STEPPED)."],
+        [17, "CUSTOM TABLE", "NEW, CAPTURE, CLEAR, TABLE FILE."],
+        [18, "PRESET / HISTORY", "플러그인 프리셋, 저장, UNDO, REDO."]
+      ]
+    } },
+
+    { "h2": "조절부" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [18, 22, 60],
+      "rows": [
+        ["테이블 선택 상자", "CUSTOM 또는 팩토리 테이블 120종 · Moving Formant", "필터가 모핑할 프레임 묶음을 고릅니다. 테이블을 바꾸면 음색과 각 프레임 위치의 의미가 함께 바뀝니다."],
+        ["`FRAME`", "1 ~ 256 · 129", "테이블의 256칸 레일 위 기준 위치입니다. 움직이면 필터가 연속으로 모핑됩니다. RANGE가 양수면 여기서 위로, 음수면 아래에서 여기까지 움직입니다."],
+        ["`CUTOFF (H24)`", "20 Hz ~ 20 kHz · 4 kHz", "프레임의 하모닉 24에 배정되는 주파수입니다. 4 kHz에서 프레임은 20 Hz ~ 20.48 kHz의 10옥타브에 걸칩니다. 실제 컷오프는 200 Hz 아래로 내려가지 않으며, 그보다 낮은 설정은 200 Hz로 동작합니다."],
+        ["`RESONANCE`", "−100 ~ +100% · +15%", "윤곽 깊이입니다. −100%는 평평하고, 0%는 테이블을 따르며, +100%는 이를 제곱합니다. RAW 모드에서는 커널이 중립에서 얼마나 벗어날지 정합니다. 높은 값은 강한 피크와 울림을 만듭니다."],
+        ["`PHASE`", "MINIMUM, LINEAR, ORIGINAL, RAW · MINIMUM", "필터의 위상 응답입니다. ORIGINAL은 원래 프레임의 위상을 유지하고, RAW는 프레임 파형 자체를 필터 커널로 씁니다."],
+        ["`DRIVE`(EDIT 화면)", "0 ~ 24 dB · 2 dB", "필터 뒤의 비선형 색채입니다. 0 dB에서는 고정 감쇄 없이 정확히 우회됩니다. 드라이브는 레벨을 올릴 수 있습니다."],
+        ["`MIX`", "0 ~ 100% · 75%", "필터를 거친 신호와 지연 보정된 원음을 섞습니다."]
+      ]
+    } },
+    { "h3": "Morph LFO" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [18, 22, 60],
+      "rows": [
+        ["`TYPE`", "OFF, SINE, TRI, SAW, SQR, RND · OFF", "프레임 LFO의 모양입니다. RND는 무작위 샘플 앤 홀드입니다."],
+        ["`RANGE`", "−100 ~ +100% · +25%", "방향이 있는 모핑 폭입니다. +100%는 FRAME에서 위로 최대 256칸, −100%는 아래로 최대 256칸 움직이며, 0%에서는 프레임이 움직이지 않습니다."],
+        ["`RATE`", "0.01 ~ 10 Hz · 0.25 Hz", "템포와 무관하게 도는 LFO 속도입니다. 호스트 템포를 따르지 않습니다."]
+      ]
+    } },
+    { "p": "EDIT 화면의 FRAME LFO 탭에도 같은 TYPE, RANGE, RATE가 있습니다. TB Filter Table에는 호스트용 Bypass 파라미터도 있으며, 모든 위상 모드에서 128샘플(48 kHz에서 약 2.7 ms)의 고정 지연을 보고합니다." },
+    { "tip": {"text": "위상 모드에 따라 트랜지언트와 스테레오 성분의 동작이 달라집니다. 드럼에서 비교해 보고 모노로도 확인하세요."} },
+
+    { "h2": "사용자 테이블" },
+    { "p": "테이블 목록 맨 앞의 CUSTOM은 직접 편집하는 테이블입니다. EDIT 화면의 TABLE TOOLS 탭에서 만듭니다." },
+    { "table": {
+      "cols": ["도구", "동작"],
+      "widths": [22, 78],
+      "rows": [
+        ["`NEW`", "사용자 테이블을 키프레임 두 개짜리 새 시작 테이블로 초기화합니다."],
+        ["`CAPTURE`", "지금 만들어진 프레임을 사용자 테이블의 같은 칸에 복사합니다."],
+        ["`CLEAR`", "선택한 키프레임을 사용자 테이블에서 지웁니다."],
+        ["DRAW FRAME", "현재 파형 패널 안에서 드래그하고, 손을 떼면 그린 프레임이 반영됩니다."],
+        ["`TABLE FILE`", "IMPORT TABLE FILE...과 EXPORT CUSTOM TABLE...로 .tbft 테이블 파일을 읽고 씁니다. 테이블 파일은 플러그인 프리셋과 별개입니다."],
+        ["SMOOTH / STEPPED", "SMOOTH는 이웃 키프레임 사이를 연속으로 보간하고, STEPPED는 보간 없이 바꿉니다. 키프레임 상태에 어느 쪽인지 표시됩니다."]
+      ]
+    } },
+
+    { "h2": "프리셋" },
+    { "p": "플러그인 프리셋은 모든 설정을 저장합니다. EDIT 화면의 PRESET / HISTORY 줄에서 고르거나 화살표로 넘깁니다. 저장은 이름을 물은 뒤 Documents/TB Filter Table/Presets/User에 사용자 프리셋을 저장합니다. UNDO와 REDO로 편집 동작을 오갈 수 있습니다." },
+    { "table": {
+      "compact": true,
+      "cols": ["프리셋", "테이블", "FRAME", "CUTOFF", "RESONANCE", "DRIVE", "MIX", "PHASE", "MORPH LFO"],
+      "widths": [17, 15, 7, 8, 10, 7, 6, 10, 20],
+      "rows": [
+        {"group": "Essentials"},
+        ["Init", "Moving Formant", "129", "4 kHz", "+15%", "2 dB", "75%", "MINIMUM", "OFF"],
+        ["Gentle Pad Motion", "Reed Breath", "73", "1.8 kHz", "−18%", "0 dB", "82%", "MINIMUM", "OFF"],
+        ["Hollow Drum Focus", "Open Notch", "117", "2.6 kHz", "+24%", "2.5 dB", "72%", "MINIMUM", "OFF"],
+        ["Vocal Formant Lift", "Moving Formant", "145", "3.4 kHz", "+36%", "1.5 dB", "68%", "ORIGINAL", "OFF"],
+        ["Subtle Bus Contour", "Pink Horizon", "49", "5.2 kHz", "−32%", "0 dB", "28%", "LINEAR", "OFF"],
+        {"group": "Motion"},
+        ["Slow Vowel Bloom", "Vowel Bloom", "1", "2.1 kHz", "+22%", "0 dB", "88%", "ORIGINAL", "SINE 14.1% 0.07 Hz"],
+        ["Liquid Reed", "Liquid Reed", "117", "1.5 kHz", "+10%", "1 dB", "76%", "MINIMUM", "TRI 37.5% 0.18 Hz"],
+        ["Golden Sweep", "Golden Pulse", "1", "2.4 kHz", "+18%", "0 dB", "92%", "LINEAR", "SAW 75% 0.1 Hz"],
+        ["Phase Weave", "Phase Weave", "141", "3.1 kHz", "+28%", "0 dB", "84%", "ORIGINAL", "SQR 37.5% 0.35 Hz"],
+        ["Comb Garden", "Comb Garden", "65", "4.2 kHz", "+54%", "3 dB", "74%", "LINEAR", "RND 50% 0.75 Hz"],
+        {"group": "Character"},
+        ["Warm Ladder", "Warm Ladder", "83", "1.3 kHz", "+16%", "4 dB", "80%", "MINIMUM", "OFF"],
+        ["Prime Choir", "Prime Choir", "177", "2.8 kHz", "+40%", "1 dB", "86%", "LINEAR", "OFF"],
+        ["Glass Tide", "Glass Tide", "133", "4.6 kHz", "+34%", "2 dB", "78%", "ORIGINAL", "OFF"],
+        ["Dense Fold", "Single Fold", "153", "1.9 kHz", "+46%", "8 dB", "70%", "MINIMUM", "OFF"],
+        ["Pulse Steps", "Triangle Terrace", "109", "3.6 kHz", "+58%", "4 dB", "66%", "RAW", "OFF"],
+        {"group": "Showcase"},
+        ["Raw Barcode", "Barcode", "207", "5.1 kHz", "+72%", "10 dB", "78%", "RAW", "OFF"],
+        ["Mobius Kernel", "Mobius Wave", "215", "3.3 kHz", "+62%", "12 dB", "74%", "RAW", "OFF"],
+        ["Prism Bloom", "T10 Prism", "193", "6.4 kHz", "+66%", "5 dB", "82%", "LINEAR", "OFF"],
+        ["Nested Fold", "Nested Fold", "229", "2.7 kHz", "+74%", "16 dB", "62%", "MINIMUM", "OFF"],
+        ["Broken Speaker", "Double Pulse", "185", "1.7 kHz", "+86%", "20 dB", "56%", "RAW", "OFF"]
+      ]
+    } },
+    { "h3": "팩토리 테이블" },
+    { "table": {
+      "compact": true,
+      "cols": ["계열", "테이블"],
+      "widths": [20, 80],
+      "rows": [
+        ["Fundamentals", "Pure Sine, Velvet Triangle, Rounded Saw, Hollow Square, Soft Ramp, Twin Sine, Golden Pulse, Arc Triangle, Bell Cycle, Tapered Saw, Balanced Steps, Clear Octave"],
+        ["Harmonic Ladders", "Warm Ladder, Odd Lantern, Even Glass, Prime Choir, Fibonacci Air, Triple Bloom, Quarter Stack, Alternating Brass, Inverse Bells, Crescent Partials, Hollow Ladder, Full Spectrum"],
+        ["Spectral Contours", "Amber Roll-Off, Silver Rise, Pink Horizon, Violet Edge, Moving Formant, Open Notch, Comb Garden, Phase Stair, Odd Tilt, Twin Formants, Soft Ceiling, Cascade Slope"],
+        ["Geometry", "Power Petal, Ellipse Arc, Superellipse, Cubic Bow, Sigmoid Silk, Arcsine Halo, Arctangent Lens, Rational Curve, Circle Fold, Diamond Drift, Parabolic Wing, Catenary Loop"],
+        ["Polynomial Orbits", "T2 Mirror, T3 Trident, T4 Compass, T5 Star, T6 Rosette, T7 Crown, T8 Lattice, T9 Orbit, T10 Prism, T11 Wheel, T12 Aurora, T13 Helix"],
+        ["Phase Symmetry", "Forward Bend, Reverse Bend, Split Phase, Phase Pinch, Skewed Cycle, Dual Axis, Mirror Delay, Quadrature Bloom, Center Pull, Edge Push, Symmetry Break, Phase Weave"],
+        ["Pulse Architecture", "Soft Pulse, Three Level, Fine Ladder, Notch Gate, Double Pulse, Stepped Ramp, Sine Stair, Window Gate, Barcode, Triangle Terrace, Sync Pulse, Rounded Square"],
+        ["Fold and Warp", "Single Fold, Double Fold, Ribbon Fold, Sine Within, Cubic Fold, Atan Warp, Triangle Cage, Soft Mirror, Nested Fold, Offset Fold, Wave Knot, Fold Cascade"],
+        ["Organic Motion", "Reed Breath, Cello Grain, Vowel Bloom, Woodwind Curl, Glass Tide, Copper Drift, Petal Motion, Liquid Reed, Warm Current, Slow Orbit, Bamboo Arc, Living Chord"],
+        ["Experimental Curves", "Linear Chirp, Nested FM, Ring Orbit, Spiral Phase, Rectified Bloom, Wave Packet, Spectral Mirror, Phase Lattice, Logistic Arc, Rational Orbit, Cusp Motion, Mobius Wave"]
+      ]
+    } },
+
+    { "h2": "작업 예시" },
+    { "p": "자주 하는 작업의 출발점입니다. 귀로 조정하세요." },
+    { "recipes": [
+      { "title": "모음 패드", "use": "패드와 드론에 느리게 말하는 듯한 움직임.",
+        "settings": [["프리셋", "Slow Vowel Bloom"], ["RATE", "0.05 ~ 0.2 Hz"]],
+        "steps": ["모음 움직임이 너무 강하면 MIX를 낮춥니다."] },
+      { "title": "드럼 윤곽", "use": "드럼 어택은 또렷하게 두고 움직이는 노치.",
+        "settings": [["프리셋", "Hollow Drum Focus"], ["MIX", "50 ~ 75%"]],
+        "steps": ["PHASE 모드를 비교해 어택이 가장 깨끗한 것을 고릅니다."] },
+      { "title": "버스 색채", "use": "그룹이나 믹스 버스에 은은한 스펙트럼 모양.",
+        "settings": [["프리셋", "Subtle Bus Contour"], ["MIX", "20 ~ 35%"]],
+        "steps": ["FRAME을 천천히 움직여 가장 잘 어울리는 윤곽을 찾습니다."] },
+      { "title": "의도된 손상", "use": "고장 난 스피커 같은 사운드 디자인.",
+        "settings": [["프리셋", "Broken Speaker"], ["DRIVE", "12 ~ 20 dB"]],
+        "steps": ["DRIVE가 레벨을 올리므로 출력 레벨을 지켜봅니다."] }
+    ] },
+
+    { "h2": "팁과 문제 해결" },
+    { "table": {
+      "cols": ["증상", "확인할 점"],
+      "widths": [36, 64],
+      "rows": [
+        ["200 Hz 아래에서 CUTOFF가 듣지 않는다.", "실제 컷오프는 200 Hz에서 멈춥니다. 20 ~ 200 Hz 설정은 200 Hz로 동작합니다."],
+        ["소리가 울리거나 휘파람 소리가 난다.", "RESONANCE를 낮추거나 더 매끄러운 테이블이나 프레임을 고르세요."],
+        ["빠른 모핑이 거칠게 들린다.", "RATE나 RANGE를 낮추세요. 빠른 프레임 이동은 변조 아티팩트를 만들 수 있습니다."],
+        ["트랜지언트가 무르거나 번진다.", "PHASE 모드를 비교해 어택이 가장 깨끗한 것을 고르세요."],
+        ["바이패스보다 크게 들린다.", "DRIVE나 MIX를 낮추고, 비교 전에 레벨을 맞추세요."],
+        ["LFO가 템포를 따르지 않는다.", "RATE는 템포와 무관하게 동작합니다. 귀로 맞추세요."]
+      ]
+    } },
+
+    { "h2": "파라미터 참고표" },
+    { "table": {
+      "compact": true,
+      "cols": ["패널 표기", "호스트 파라미터", "범위", "기본값"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["테이블 선택 상자", "Table", "CUSTOM, 팩토리 테이블 120종", "Moving Formant"],
+        ["`FRAME`", "Frame", "0 ~ 255(1 ~ 256으로 표시)", "128(129로 표시)"],
+        ["`CUTOFF (H24)`", "Cutoff (H24)", "20 ~ 20000 Hz(실제로는 200 Hz부터)", "4000 Hz"],
+        ["`RESONANCE`", "Resonance", "−100 ~ +100%", "+15%"],
+        ["`DRIVE`", "Drive", "0 ~ 24 dB", "2 dB"],
+        ["`MIX`", "Mix", "0 ~ 100%", "75%"],
+        ["`PHASE`", "Phase", "MINIMUM, LINEAR, ORIGINAL, RAW", "MINIMUM"],
+        ["—", "Bypass", "Off, On", "Off"],
+        ["`TYPE`", "Frame LFO Type", "OFF, SINE, TRI, SAW, SQR, RND", "OFF"],
+        ["`RANGE`", "Frame LFO Range", "−100 ~ +100%", "+25%"],
+        ["`RATE`", "Frame LFO Rate", "0.01 ~ 10 Hz", "0.25 Hz"]
+      ]
+    } },
+
+    { "h2": "버전 기록" },
+    { "table": {
+      "cols": ["버전", "변경 내용"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.1.0 · 2026-08-17", "200 Hz의 실제 하한을 유지하면서 공개된 20 Hz ~ 20 kHz Cutoff 오토메이션 매핑을 복원했습니다. 공개 파라미터 ID와 상태 스키마는 모두 그대로입니다."],
+        ["1.0.0 · 2026-08-13", "첫 릴리스. 2 ~ 256개 키프레임으로 모핑하는 팩토리 테이블 120종의 스펙트럼 필터, 위상 모드 4종, 제한된 스펙트럼 윤곽, 비선형 드라이브, Frame LFO."]
+      ]
+    } }
+  ]
+}
