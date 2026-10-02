@@ -10,7 +10,7 @@ EQ, dynamics, reverb, delay, pitch, vocal, restoration, spatial, and creative ef
 ![Formats](https://img.shields.io/badge/formats-VST3%20%7C%20AU-blueviolet)
 ![Platforms](https://img.shields.io/badge/platforms-Windows%20x64%20%7C%20macOS%20arm64-lightgrey)
 ![Manuals](https://img.shields.io/badge/manuals-20%20languages-orange)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![License: Freeware](https://img.shields.io/badge/license-freeware-green)](LICENSE)
 
 **[⬇️ Download TB Hub for Windows](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/hub-windows-v1.3.18)** · **[All installers (Windows & macOS)](https://github.com/TaebeumKim/TB_Audio-Plugins/releases)** · **[Manuals](Documents/README.md)** · **[YouTube](https://www.youtube.com/@TeamImpulseImpact)** · **[☕ Ko-fi](https://ko-fi.com/teamimpulseimpact)**
 
@@ -28,6 +28,7 @@ EQ, dynamics, reverb, delay, pitch, vocal, restoration, spatial, and creative ef
 - Removed a stray backup binary from the TB Compressor 2.1.0 Hub archive, halving its download from 5.6 MB to 2.8 MB. The installed plug-in is unchanged.
 - Removed a duplicate legacy `TB-TransientShaper` macOS bundle that shared its plug-in IDs with `TB-SpectralTransientShaper`, and a stray `NewProject.vst3` binary from the legacy Windows TB XYZ Panner bundle.
 - Corrected the platform list (Windows x64 and macOS on Apple Silicon; no Linux builds) and added a plug-in overview table and current download links.
+- Replaced the MIT License with the TB Audio Plug-ins Freeware License: the plug-ins stay free for personal and commercial work, commercial works must credit them, and resale is not allowed.
 
 ## 2026-09-30
 
@@ -65,7 +66,7 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 * **Optimized Performance:** Lightweight and highly optimized for low CPU consumption.
 * **Cross-Platform Support:** Windows 10/11 (x64) and macOS on Apple Silicon (arm64). Linux and Intel Macs are not supported, and TB Geometry Reverb, TB AudioPlayer, and TB Ambient are currently Windows-only.
 * **Industry-Standard Formats:** VST3 on Windows and macOS, plus Audio Unit (AU) on macOS.
-* **100% Free:** Completely free for both personal and commercial audio production.
+* **100% Free:** Free for personal and commercial audio production. Commercial works need a short credit, and the plug-ins may not be resold (see [License](#-license)).
 
 ## 🎙️ English Description Voiceovers
 
@@ -364,7 +365,13 @@ Extract the downloaded zip/archive file and move the plug-in files to your syste
 * **AU (Audio Unit):** `/Library/Audio/Plug-Ins/Components`
 
 ## 📄 License
-The pre-compiled binaries distributed in this repository are licensed under the terms of the **MIT License**. You are free to use these plug-ins in any commercial or non-commercial musical works. For more detailed information, please refer to the [LICENSE](LICENSE) file.
+The plug-ins are free to use for personal and commercial audio work under the **TB Audio Plug-ins Freeware License**. In short:
+
+* **Commercial use requires credit.** If a work or service is sold or monetized, credit the plug-ins where credits are normally shown, for example: *Made with TB Audio Plug-ins by Team Impulse Impact*.
+* **No resale.** The plug-ins may not be sold, rented, or included in paid bundles, subscriptions, or download services.
+* **Free sharing is allowed.** Complete, unmodified copies may be shared free of charge with the license included.
+
+See the [LICENSE](LICENSE) file for the full terms.
 
 ## P.S.
 

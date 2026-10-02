@@ -1,21 +1,64 @@
-MIT License
+TB Audio Plug-ins Freeware License
 
-Copyright (c) 2026 TaebeumKim
+Copyright (c) 2026 TaebeumKim (Team Impulse Impact). All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This license covers the TB Audio plug-ins, TB Hub, their installers and
+archives, and the manuals, images, and audio files published with them in
+this repository and its releases (together, the "Software"). The Software is
+licensed, not sold.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Free use
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+   You may download, install, and use the Software free of charge on any
+   number of computers, for personal and commercial audio work.
+
+2. Credit for commercial use
+
+   If you use the Software to create a commercial work or to provide a
+   commercial service, you must credit the Software. "Commercial" means
+   anything that is sold, licensed, monetized (including streaming royalties
+   and advertising revenue), produced for payment, or used to promote a
+   business.
+
+   Place the following credit, or an equivalent credit that names
+   TB Audio Plug-ins (or the specific TB plug-in) and Team Impulse Impact,
+   wherever credits for the work are normally shown, such as release
+   credits, liner notes, a video description, or a product page:
+
+       Made with TB Audio Plug-ins by Team Impulse Impact
+
+   One credit per release, project, or service is sufficient.
+
+3. No resale
+
+   You may not sell, rent, lease, or sublicense the Software, charge for
+   access to it, or include it in any paid product, bundle, subscription, or
+   download service, whether the Software is modified or not.
+
+4. Free redistribution
+
+   You may share complete, unmodified copies of the Software free of charge,
+   provided that this license and all copyright notices are included. You
+   may not rebrand the Software or present it as your own work.
+
+5. Your audio
+
+   You own the audio you create with the Software. Section 2 only requires
+   credit; it gives the copyright holder no rights in your work.
+
+6. Termination
+
+   Your rights under this license end automatically if you fail to comply
+   with it.
+
+7. No warranty and limitation of liability
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+
+Support development: https://ko-fi.com/teamimpulseimpact
