@@ -1,0 +1,123 @@
+{
+  "file": "TB_AudioPlayer",
+  "version": "1.0.0",
+  "date": "2026-10-02",
+  "subtitle": "One-Shot Sample Player",
+  "tagline": "Loads a WAV, AIFF, FLAC, or Ogg sample and fires it from the panel or from an automatable trigger, with click-free retriggering and a soft stop.",
+  "facts": ["WAV, AIFF, FLAC, Ogg", "Automatable Trigger", "50 ms retrigger and stop fades", "VST3 and standalone"],
+  "ui": "tb_audio_player.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB AudioPlayer is a one-shot sample player. Load a sample, then fire it with the PLAY button or with the host's Trigger parameter. Each shot starts the sample from the beginning; a new shot starts at once while the previous one fades out over 50 ms, so retriggering stays click-free." },
+    { "p": "It converts the sample to the session's sample rate, plays it back in mono or stereo, and recalls the selected sample with your session. There are no volume, pitch, loop, or speed controls: it does one job, precisely." },
+    { "h3": "Key features" },
+    { "ul": [
+      "One-shot playback of WAV, AIFF, FLAC, and Ogg files",
+      "Automatable Trigger parameter that fires on a rising edge from 0 to 1",
+      "Click-free 50 ms fades on retrigger and STOP",
+      "Sample-rate conversion for correct pitch at any session rate",
+      "Display of the file name, sample rate, channels, and length",
+      "Session recall, presets, and undo and redo of the sample selection",
+      "VST3 instrument and standalone application for Windows"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["BROWSE: load the sample", "PLAY or Trigger 0 → 1", "Playback from the beginning", "Previous shot fades over 50 ms", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB AudioPlayer 1.0.0 for Windows (VST3 and standalone). There is no macOS build at the time of writing."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB AudioPlayer on an instrument track, or start the standalone application.",
+      "Click `BROWSE` {{6}} and choose a WAV, AIFF, FLAC, or Ogg file. The display {{3}} shows its name, sample rate, channels, and length, and the status {{7}} reads Ready.",
+      "Click `PLAY` {{4}} to hear the sample from the beginning, and `STOP` {{5}} to fade all playback out over 50 ms.",
+      "To fire the sample from your DAW, automate the Trigger parameter: each change from 0 to 1 starts it. Return Trigger to 0 before the next shot."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_audio_player.jpg",
+      "caption": "TB AudioPlayer 1.0 with a sample loaded.",
+      "callouts": [
+        { "n": 1, "x": 29.4, "y": 8.4 },
+        { "n": 2, "x": 79.0, "y": 9.6 },
+        { "n": 3, "x": 90.9, "y": 36.4 },
+        { "n": 4, "x": 16.7, "y": 50.0 },
+        { "n": 5, "x": 61.4, "y": 68.8 },
+        { "n": 6, "x": 71.2, "y": 50.0 },
+        { "n": 7, "x": 86.4, "y": 78.4 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset, the preset list, Save, and Undo and Redo of the sample selection."],
+        [2, "TRIGGER", "indicator for the host's 0/1 Trigger parameter."],
+        [3, "Sample display", "file name, sample rate, channels, and length."],
+        [4, "PLAY", "starts the sample from the beginning."],
+        [5, "STOP", "fades all playback out over 50 ms."],
+        [6, "BROWSE", "chooses a WAV, AIFF, FLAC, or Ogg sample."],
+        [7, "Status", "Ready, Loading..., or Select sample."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 22, 60],
+      "rows": [
+        ["`PLAY`", "Button", "Starts the selected sample from the beginning. If it is already playing, the new shot starts at once and the previous one fades out over 50 ms."],
+        ["`STOP`", "Button", "Fades all active playback to silence over 50 ms."],
+        ["`BROWSE`", "WAV, AIFF, FLAC, Ogg", "Chooses the sample. MP3 is not supported, and a decoded sample can use up to 256 MiB of memory."],
+        ["Trigger (host parameter)", "0, 1 · 0", "Fires on a rising edge from 0 to 1. Return it to 0 before the next shot. Trigger is saved as 0 with the state."]
+      ]
+    } },
+    { "note": {"text": "The sample is referenced by its file path; it is not embedded in the session or in presets. If you move or rename the file, select it again with BROWSE."} },
+
+    { "h2": "Presets" },
+    { "p": "The preset list holds Init and your user presets. Save stores the current state, including the sample path, as a .tbap file. Undo and Redo step through sample selections." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs." },
+    { "recipes": [
+      { "title": "Spot effects on cue", "use": "Hits, risers, or voice clips at exact song positions.",
+        "settings": [["Trigger", "0 → 1 at each cue, back to 0 after"]],
+        "steps": ["Draw short automation pulses so Trigger returns to 0 before the next cue."] },
+      { "title": "Live playback", "use": "Firing jingles or clips by hand, for example in a stream.",
+        "settings": [["Application", "Standalone"], ["Controls", "PLAY and STOP"]],
+        "steps": ["STOP ends the clip with a 50 ms fade instead of a hard cut."] },
+      { "title": "Layered hit", "use": "A sub drop or impact layered with a drum hit.",
+        "settings": [["Track", "A separate instrument track"], ["Trigger", "Pulse on the drum hit"]],
+        "steps": ["Balance the layer with the track fader; TB AudioPlayer has no volume control."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["Automation does not retrigger.", "Trigger fires only when it rises from 0 to 1. Return it to 0 between shots."],
+        ["A file cannot be loaded.", "Use WAV, AIFF, FLAC, or Ogg; MP3 is not supported. Very long files may exceed the 256 MiB decoded limit."],
+        ["The sample is missing after reopening.", "The file was moved or renamed. Select it again with BROWSE."],
+        ["Nothing plays.", "The status must read Ready. Check that a sample is selected and the track output is routed."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`TRIGGER` indicator", "Trigger", "0, 1 (fires on 0 → 1)", "0"]
+      ]
+    } },
+    { "p": "PLAY, STOP, BROWSE, and the preset functions are panel controls, not host parameters. The sample path is stored in the plug-in state." },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.0 · 2026-08-02", "First release: a compact one-shot sample player for WAV, AIFF, FLAC, and Ogg files with browser loading and immediate playback; an automatable rising-edge Trigger; click-free 50 ms retrigger and Stop fades; sample-rate conversion; state recall; presets; Undo and Redo."]
+      ]
+    } }
+  ]
+}
