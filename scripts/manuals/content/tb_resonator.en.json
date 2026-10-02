@@ -1,0 +1,152 @@
+{
+  "file": "TB_Resonator",
+  "version": "1.0.1",
+  "date": "2026-10-02",
+  "subtitle": "Tunable Modal Resonator",
+  "tagline": "A playable modal instrument that turns any input into a tuned physical body, with eight resonant modes, zero latency, and tails up to 30 seconds.",
+  "facts": ["8 resonant modes", "Tune C1 to C7", "Memory up to 30 s", "Zero latency"],
+  "ui": "tb_resonator.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Resonator turns any input into a tuned physical object. Eight stable resonant modes give clicks, drums, noise, guitars, pads, or vocals a defined pitch, material, and memory." },
+    { "p": "`TUNE` sets the musical centre. `BODY` moves the material between harmonic and inharmonic structures. `TOUCH` changes how transients and sustained energy excite the object. `MEMORY` controls how long the modes ring, and `MIX` balances the transformation with the original. TB Resonator adds no latency, works in mono or stereo, and its tails can last up to 30 seconds." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Eight resonant modes tuned from C1 to C7",
+      "BODY from SOFT through WOOD, STRING, and GLASS to METAL",
+      "TOUCH from STRIKE through PLUCK, NATURAL, and OPEN to DRIVE",
+      "MEMORY from 0.04 to 30 seconds",
+      "Equal-power MIX",
+      "Zero latency, mono or stereo",
+      "12 factory presets in three groups, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Excitation (TOUCH)", "Eight modes at TUNE (BODY)", "Decay (MEMORY)", "Equal-power MIX", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Resonator 1.0.1 for Windows (VST3). The current macOS build is also version 1.0.1; small differences between platforms are possible."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Resonator on drums, a guitar, a pad, or a vocal. The defaults are `TUNE` C3, `TOUCH` 50%, `BODY` 50%, `MEMORY` 1.10 s, and `MIX` 35%.",
+      "Set `TUNE` {{2}} to the key of the song, or to a note that fits the chord.",
+      "Choose the material with `BODY` {{4}}: soft and woody to the left, glassy and metallic to the right.",
+      "Set how the input strikes the object with `TOUCH` {{3}}.",
+      "Set the ring length with `MEMORY` {{5}} and the blend with `MIX` {{6}}."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_resonator.jpg",
+      "caption": "TB Resonator 1.0 interface.",
+      "callouts": [
+        { "n": 1, "x": 31.7, "y": 11.9 },
+        { "n": 2, "x": 19.4, "y": 32.2 },
+        { "n": 3, "x": 30.0, "y": 40.6 },
+        { "n": 4, "x": 46.7, "y": 40.6 },
+        { "n": 5, "x": 61.3, "y": 40.6 },
+        { "n": 6, "x": 79.1, "y": 40.6 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next factory preset (hold to browse), the preset list shown as group / name, Save, Undo, and Redo."],
+        [2, "TUNE", "the resonant note with its frequency, from C1 to C7."],
+        [3, "TOUCH", "excitation, from STRIKE to DRIVE."],
+        [4, "BODY", "material, from SOFT to METAL."],
+        [5, "MEMORY", "ring time, from SHORT to LONG."],
+        [6, "MIX", "from DRY to WET."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`TUNE`", "C1 to C7 (MIDI 24 to 96) · C3 (130.8 Hz)", "Chooses the fundamental note remembered by the resonator. The display shows the note and its frequency."],
+        ["`TOUCH`", "0 to 100% · 50% (NATURAL)", "Moves from transient-only excitation to open, driven excitation. The readout names the range: STRIKE, PLUCK, NATURAL, OPEN, DRIVE."],
+        ["`BODY`", "0 to 100% · 50% (STRING)", "Morphs spacing, brightness, and high-mode decay as one material, from harmonic to inharmonic. The readout names the range: SOFT, WOOD, STRING, GLASS, METAL."],
+        ["`MEMORY`", "0.04 to 30 s · 1.10 s", "Sets how long the resonant object remembers each excitation."],
+        ["`MIX`", "0 to 100% · 35%", "Blends the resonant object with the original signal at equal power."]
+      ]
+    } },
+    { "p": "TB Resonator also has a host Bypass parameter for comparing the dry and processed sound." },
+    { "warn": { "text": "Long MEMORY settings and strong low notes can build up level and low-frequency energy. Watch the output level and low end when you lengthen the ring." } },
+
+    { "h2": "Presets" },
+    { "p": "Step through factory presets with the arrows; hold an arrow to browse continuously. Open the list to choose a factory preset or load a user preset. Save stores the current settings as a user preset. Undo and Redo step through recent parameter changes." },
+    { "table": {
+      "compact": true,
+      "cols": ["Group", "Preset", "TUNE", "TOUCH", "BODY", "MEMORY", "MIX"],
+      "widths": [12, 26, 10, 12, 12, 14, 14],
+      "rows": [
+        ["Start", "Init", "C3", "50%", "50%", "1.10 s", "35%"],
+        ["Start", "Soft Chamber", "G3", "38%", "18%", "0.85 s", "28%"],
+        ["Start", "Open String", "A2", "55%", "50%", "2.4 s", "42%"],
+        ["Start", "Short Body", "G2", "20%", "28%", "0.14 s", "45%"],
+        ["Source", "Tuned Drum", "C2", "16%", "12%", "0.65 s", "55%"],
+        ["Source", "Sympathetic Guitar", "E2", "42%", "42%", "3.8 s", "48%"],
+        ["Source", "Vocal Glass", "C4", "62%", "76%", "1.65 s", "52%"],
+        ["Source", "Bass Wood", "E1", "58%", "8%", "1.25 s", "50%"],
+        ["Texture", "Harmonic Bloom", "G3", "68%", "50%", "8 s", "70%"],
+        ["Texture", "Metallic Bloom", "C4", "72%", "90%", "10.5 s", "75%"],
+        ["Texture", "Struck Chime", "C5", "8%", "94%", "5.2 s", "62%"],
+        ["Texture", "Driven Drone", "A1", "96%", "66%", "24 s", "85%"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Tuned drums", "use": "Give a kick, tom, or percussion loop a pitch.",
+        "settings": [["Preset", "Tuned Drum"], ["TUNE", "The song's root"], ["MEMORY", "0.3 to 1 s"]],
+        "steps": ["Keep TOUCH low so only the hits excite the body."] },
+      { "title": "Sympathetic strings", "use": "A ringing halo around guitar or piano.",
+        "settings": [["Preset", "Sympathetic Guitar"], ["BODY", "STRING"], ["MIX", "25 to 45%"]],
+        "steps": ["Tune to a note that sits in every chord of the section."] },
+      { "title": "Glass voice", "use": "A tuned, glassy layer on vocals.",
+        "settings": [["Preset", "Vocal Glass"], ["BODY", "GLASS"]],
+        "steps": ["Lower MIX if the words lose clarity."] },
+      { "title": "Drone bed", "use": "A sustained, driven texture from any input.",
+        "settings": [["Preset", "Driven Drone"], ["TOUCH", "DRIVE"], ["MEMORY", "15 to 30 s"]],
+        "steps": ["Watch the level as the tail builds up."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The resonance clashes with the music.", "Retune TUNE to the key, or to a note shared by the chords."],
+        ["The sound gets boomy or too loud.", "Shorten MEMORY, raise TUNE, or lower MIX."],
+        ["Only hits ring, sustained parts do not.", "Raise TOUCH toward OPEN or DRIVE."],
+        ["It sounds too metallic.", "Move BODY toward WOOD or STRING."],
+        ["Nothing changes.", "MIX is at 0%, or the host Bypass parameter is on."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`TUNE`", "Tune", "MIDI note 24 to 96 (C1 to C7)", "48 (C3)"],
+        ["`TOUCH`", "Touch", "0 to 1 (0 to 100%)", "0.5"],
+        ["`BODY`", "Body", "0 to 1 (0 to 100%)", "0.5"],
+        ["`MEMORY`", "Memory", "0.04 to 30 s", "1.10 s"],
+        ["`MIX`", "Mix", "0 to 1 (0 to 100%)", "0.35"],
+        ["—", "Bypass", "Off, On", "Off"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.1 · 2026-08-21", "Brought the current Tune, Body, Memory, Touch, and Mix design and the latest resonance processing build to Windows VST3, and aligned the catalog, VST3, and installer versions at 1.0.1."],
+        ["1.0.0 · 2026-08-02", "First release: Tune, Body, Memory, Touch, and Mix, with 12 factory presets and user presets."]
+      ]
+    } }
+  ]
+}
