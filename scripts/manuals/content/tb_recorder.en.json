@@ -1,0 +1,149 @@
+{
+  "file": "TB_Recorder",
+  "version": "1.0.1",
+  "date": "2026-10-02",
+  "subtitle": "Insert and Input Recorder",
+  "tagline": "Records exactly what reaches a DAW insert or a standalone input, without changing the sound, then converts and splits the result into WAV, FLAC, AIFF, MP3, AAC, or Ogg files.",
+  "facts": ["Mono or stereo capture", "6 output formats", "Automatic splitting", "Pause and resume"],
+  "ui": "tb_recorder.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Recorder captures exactly what reaches its insert point in your DAW, or a standalone audio input. Choose a folder and a file name, press RECORD, and mono or stereo audio is saved while the sound passing through stays unchanged." },
+    { "p": "You can pause and resume without closing the recording; metering and passthrough continue, and the paused time is left out of the final duration and the split points. When you stop, TB Recorder finishes the recording and converts and divides it into the format and lengths you chose." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Records mono or stereo audio at the insert point without altering it",
+      "Six formats: WAV 32-bit float, FLAC 24-bit, AIFF 24-bit, MP3 320 kbps, AAC-LC 192 kbps, Ogg Vorbis 320 kbps",
+      "Splitting into 1, 5, 10, or 30-minute parts, a custom length, or unlimited",
+      "PAUSE and RESUME without closing the recording",
+      "Level meters, status, and elapsed time",
+      "Standalone mode with audio device and input settings",
+      "Recorder settings presets"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input (passes through unchanged)", "Temporary recording", "STOP", "Convert to FORMAT", "Split by SPLIT length", "Files in OUTPUT FOLDER"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Recorder 1.0.1 for Windows (VST3 and standalone). The current macOS build is version 1.0.2, where MP3 and AAC are not available; other details may also differ."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Recorder on the track or bus you want to capture, at the point in the chain you want to record.",
+      "Click `CHOOSE...` {{5}} and pick the folder for finished recordings, then type a `FILE NAME` {{6}}.",
+      "Choose `FORMAT` and `SPLIT` {{7}}. The defaults are `WAV FLOAT` (32-bit float WAV) and `UNLIMITED`.",
+      "Start playback and press `RECORD` {{9}}. Press `PAUSE` to pause and `RESUME` to continue.",
+      "Press `STOP`. Wait until CONVERTING finishes and the status returns to READY before you close the session."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_recorder.jpg",
+      "caption": "TB Recorder 1.0 interface while recording.",
+      "callouts": [
+        { "n": 1, "x": 32.6, "y": 6.1 },
+        { "n": 2, "x": 90.0, "y": 6.1 },
+        { "n": 3, "x": 61.8, "y": 29.5 },
+        { "n": 4, "x": 88.2, "y": 20.5 },
+        { "n": 5, "x": 2.9, "y": 49.8 },
+        { "n": 6, "x": 2.9, "y": 57.5 },
+        { "n": 7, "x": 2.9, "y": 65.2 },
+        { "n": 8, "x": 85.3, "y": 65.2 },
+        { "n": 9, "x": 25.3, "y": 88.2 }
+      ],
+      "legend": [
+        [1, "Preset bar", "the recorder settings presets (Init and user), Save, Undo, and Redo."],
+        [2, "Record lamp", "shows the recording state."],
+        [3, "Level meters", "left and right input levels."],
+        [4, "Status and time", "READY, RECORDING, PAUSED, CONVERTING, and the elapsed time."],
+        [5, "OUTPUT FOLDER", "where finished files are saved; CHOOSE... selects the folder."],
+        [6, "FILE NAME", "the base name of the files."],
+        [7, "FORMAT, SPLIT, CUSTOM", "file format, split length, and custom length in minutes."],
+        [8, "Input", "VST INSERT INPUT in a DAW; INPUT DEVICE... opens the audio settings in standalone mode."],
+        [9, "RECORD / STOP and PAUSE / RESUME", "transport buttons, with a status message underneath."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "h3": "Recording settings" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 30, 52],
+      "rows": [
+        ["`FORMAT`", "WAV FLOAT, FLAC 24, AIFF 24, MP3 320, AAC 192, OGG 320 · WAV FLOAT", "The format of the finished files: WAV 32-bit float, FLAC 24-bit, AIFF 24-bit, MP3 320 kbps, AAC-LC 192 kbps, or Ogg Vorbis 320 kbps."],
+        ["`SPLIT`", "1, 5, 10, 30 MIN, UNLIMITED, CUSTOM · UNLIMITED", "Divides the recording into parts of this length. Paused time does not count."],
+        ["`CUSTOM`", "1 to 1440 min · 5 min", "The part length used when SPLIT is set to CUSTOM."],
+        ["`OUTPUT FOLDER`", "Any folder", "Where finished recordings are saved. CHOOSE... opens a folder browser."],
+        ["`FILE NAME`", "Text", "Base name for the recorded file; the selected format adds its extension. It cannot be changed while recording."]
+      ]
+    } },
+    { "h3": "Transport and status" },
+    { "table": {
+      "cols": ["Control", "What it does"],
+      "widths": [24, 76],
+      "rows": [
+        ["`RECORD` / `STOP`", "Starts or stops recording the current input."],
+        ["`PAUSE` / `RESUME`", "Pauses or resumes writing audio to the current recording. Metering and passthrough continue while paused."],
+        ["Status", "READY (idle), RECORDING, PAUSED, CONVERTING (finishing and converting after STOP), WAIT, or ATTENTION (a message needs your attention)."],
+        ["`VST INSERT INPUT` / `INPUT DEVICE...`", "In a DAW, the plug-in records its insert input. In standalone mode, INPUT DEVICE... opens the audio device and input settings."]
+      ]
+    } },
+    { "note": { "text": "The settings are not host-automatable. FILE NAME and OUTPUT FOLDER are stored with the plug-in state. MP3 and AAC use the Windows Media Foundation encoders; if your system lacks them, those formats fail." } },
+
+    { "h2": "Presets" },
+    { "p": "The preset list holds Init and your saved recorder settings. Save stores the current recorder settings as a user preset. Presets cannot be saved or loaded while the recorder is busy." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs." },
+    { "recipes": [
+      { "title": "Capture a full session", "use": "Archive a long take at full quality.",
+        "settings": [["FORMAT", "WAV FLOAT"], ["SPLIT", "UNLIMITED"]],
+        "steps": ["Place TB Recorder on the master bus to capture the whole mix."] },
+      { "title": "Rehearsal in parts", "use": "Long rehearsals that are easier to browse in pieces.",
+        "settings": [["FORMAT", "FLAC 24"], ["SPLIT", "30 MIN"]],
+        "steps": ["Use PAUSE between songs; paused time is not counted in the parts."] },
+      { "title": "Quick idea to share", "use": "A small file to send right away.",
+        "settings": [["FORMAT", "MP3 320 or AAC 192"], ["SPLIT", "UNLIMITED"]],
+        "steps": ["Wait for CONVERTING to finish before opening the file."] },
+      { "title": "Hourly logs", "use": "Broadcast or stream recording in fixed lengths.",
+        "settings": [["SPLIT", "CUSTOM"], ["CUSTOM", "60 min"]],
+        "steps": ["Check free disk space before long recordings."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["No audio blocks were received.", "The host did not send audio while recording, for example because playback was stopped. The temporary file is kept; record again with playback running."],
+        ["Disk writer could not keep up.", "The disk is too slow or full. Choose a faster drive or free up space; the recording stops safely."],
+        ["TB Recorder supports mono or stereo input.", "The track has more than two channels. Record from a mono or stereo track."],
+        ["MP3 or AAC fails.", "The Windows Media Foundation encoder is missing or rejected the format. Use WAV, FLAC, AIFF, or Ogg."],
+        ["The file name cannot be changed.", "Recording is in progress. Stop first."],
+        ["Files are missing right after STOP.", "Wait for CONVERTING to finish."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [20, 22, 40, 18],
+      "rows": [
+        ["`FORMAT`", "Output Format", "WAV 32-bit float, FLAC 24-bit, AIFF 24-bit, MP3 320 kbps, AAC-LC 192 kbps, OGG Vorbis 320 kbps", "WAV 32-bit float"],
+        ["`SPLIT`", "Split Length", "1 min, 5 min, 10 min, 30 min, Unlimited, Custom", "Unlimited"],
+        ["`CUSTOM`", "Custom Minutes", "1 to 1440 min", "5 min"]
+      ]
+    } },
+    { "p": "These parameters are not automatable. OUTPUT FOLDER and FILE NAME are stored in the plug-in state, not as parameters." },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.1 · 2026-08-21", "Brought the latest Recorder build to Windows VST3, including the current recording status display and pause and resume, and aligned the catalog, VST3, and installer versions at 1.0.1."],
+        ["1.0.0 · 2026-08-02", "First release: records the unaltered mono or stereo signal at the insert point, with WAV, FLAC, AIFF, MP3, AAC, and Ogg conversion and automatic time-based splitting."]
+      ]
+    } }
+  ]
+}
