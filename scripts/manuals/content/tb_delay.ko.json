@@ -1,0 +1,232 @@
+{
+  "file": "TB_Delay",
+  "version": "1.0.3",
+  "date": "2026-10-02",
+  "subtitle": "Creative Stereo Delay",
+  "tagline": "반복마다 소리가 변할 수 있는 스테레오 피드백 악기입니다. 에코, 멀티탭, 핑퐁, 튠드 콤 타이밍을 테이프·BBD·디지털 성격, 확산, 주파수 이동, 그레인으로 몰아갑니다.",
+  "facts": ["Free·Sync·Tune 타이밍", "최대 8탭", "그레인·주파수 이동 변환", "팩토리 프리셋 99종"],
+  "ui": "tb_delay.jpg",
+  "coverImage": false,
+  "body": [
+    { "h2": "개요" },
+    { "lead": "TB Delay는 반복마다 소리가 바뀔 수 있는 창작용 스테레오 딜레이입니다. 깨끗한 에코, 듀얼 딜레이, 핑퐁, 튠드 타이밍, 촘촘한 콤 질감에서 시작해 피드백을 테이프·BBD·디지털 성격, 모듈레이션, 확산, 주파수 이동, 그레인 움직임으로 몰아갑니다." },
+    { "p": "탭, 스윙, 대역폭, 드라이브, 마모감, 스테레오 움직임, 더킹을 한 시스템에서 다루며, 내장 안전장치가 높은 피드백도 음악적으로 통제합니다. COLOR와 SPACE 매크로는 여러 설정을 한꺼번에 움직여, 노브 하나로 프리셋을 더 어둡게 하거나 더 넓게 만들 수 있습니다." },
+    { "h3": "주요 기능" },
+    { "ul": [
+      "TIME MODE: Free(10 ms ~ 8초), Sync(셋잇단·점음표를 포함한 1/32 ~ 1/1), Tune(튠드 콤)",
+      "SPACING과 SWING이 있는 1, 2, 4, 8탭",
+      "Single, Dual, Ping Pong, Ratio 스테레오 방식",
+      "드라이브, 마모감, 필터, 모듈레이션, 블러를 갖춘 Clean, Tape, BBD, Digital 성격",
+      "반복마다(BUILD) 또는 한 번만(ONCE) 적용되는 주파수 이동, 그레인 레이어, 피치, 역재생, 밀도, 스프레이 변환",
+      "현재 꼬리를 붙잡는 FREEZE, 원음을 또렷하게 지키는 DUCK",
+      "COLOR, SPACE 매크로",
+      "10개 뱅크의 팩토리 프리셋 99종, Init과 사용자 프리셋"
+    ] },
+    { "h3": "신호 흐름" },
+    { "flow": { "steps": ["입력(DUCK, FREEZE)", "딜레이 시간과 탭", "스테레오 방식, 오프셋, 폭", "성격, 필터, 모듈레이션, 확산", "그레인·주파수 변환", "피드백", "MIX, OUTPUT"] } },
+    { "note": { "title": "이 설명서에 대해", "text": [
+      "이 설명서는 Windows용 TB Delay 1.0.3(VST3)을 기준으로 합니다. 현재 macOS 빌드도 1.0.3 버전이지만 플랫폼 간에 작은 차이가 있을 수 있습니다."
+    ] } },
+
+    { "h2": "빠른 시작" },
+    { "ol": [
+      "보컬, 기타, 신스, 센드 트랙에 TB Delay를 넣습니다. 기본값은 Sync 1/8, Ping Pong, `FEEDBACK` 48%, `MIX` 30%, `WIDTH` 130%, `DUCK` 25%입니다.",
+      "`TIME MODE`를 고릅니다. 밀리초는 Free, 호스트 템포는 Sync, 튠드 콤 효과는 Tune입니다.",
+      "`DELAY TIME`을 정하고, 반복을 늘리려면 `FEEDBACK`을 올립니다.",
+      "`TYPE`(Clean, Tape, BBD, Digital)을 고르고 `LOW CUT`, `HIGH CUT`으로 반복음을 다듬습니다.",
+      "반복음이 원음을 덮지 않고 받쳐 주도록 `MIX`와 `DUCK`을 맞춥니다.",
+      "COLOR와 SPACE 매크로로 프리셋을 더 어둡게, 깨끗하게, 단단하게, 넓게 바꿔 봅니다."
+    ] },
+
+    { "h2": "화면 구성" },
+    { "ui": {
+      "image": "tb_delay.jpg",
+      "caption": "1.0.1 버전에서 캡처한 화면입니다. 1.0.2부터는 바다 색조와 원형 Delay Map, 더 큰 노브를 쓰고, 1.0.3부터는 Delay Map이 더 높아지고 창 크기를 70 ~ 180%로 바꿀 수 있습니다. 현재 패널에는 DENSITY, SPRAY, BUILD / ONCE 경로, COLOR·SPACE 매크로도 있습니다."
+    } },
+    { "table": {
+      "cols": ["영역", "동작"],
+      "widths": [24, 76],
+      "rows": [
+        ["프리셋 바", "이전/다음 프리셋, PRESETS 목록(FACTORY, USER), 저장, 실행 취소, 다시 실행."],
+        ["Delay Map", "좌우 채널의 반복음이 시간에 따라 어떻게 이어지는지 보여 줍니다."],
+        ["반복 조절부", "TIME MODE, DELAY TIME, TIME CHANGE, FEEDBACK, TAPS, SPACING, SWING, DUCK."],
+        ["`STEREO`", "STYLE, R OFFSET, WIDTH와 BYP 스위치."],
+        ["`CHARACTER / SPACE`", "TYPE, DISTORT, WEAR, LOW CUT, HIGH CUT, SPEED, WOBBLE, BLUR, SPACE와 BYP 스위치."],
+        ["`TRANSFORM`", "BUILD / ONCE, FREQ SHIFT, GRAIN MIX, GRAIN SIZE, DENSITY, SPRAY, PITCH, REVERSE와 BYP 스위치."],
+        ["출력", "MIX, OUTPUT, COLOR·SPACE 매크로, FREEZE."]
+      ]
+    } },
+
+    { "h2": "조절부" },
+    { "h3": "반복" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`TIME MODE`", "Free, Sync, Tune · Sync", "Free는 밀리초로, Sync는 호스트 템포의 음표로 시간을 정하고, Tune은 딜레이를 튠드 콤으로 바꿉니다."],
+        ["`DELAY TIME`", "Free: 10 ~ 8000 ms · 375 ms, Sync: 1/32 ~ 1/1 · 1/8", "기본 딜레이 시간입니다. Free에서는 밀리초, Sync에서는 음표(일반, T는 셋잇단, D는 점음표), Tune에서는 공진 주파수로 조절합니다."],
+        ["`TIME CHANGE`", "Crossfade, Glide · Glide", "딜레이 시간을 바꿀 때 Crossfade는 깨끗하게 전환하고, Glide는 테이프처럼 피치를 미끄러뜨립니다."],
+        ["`FEEDBACK`", "0 ~ 110% · 48%", "반복 감쇠와 자체 발진에 다가가는 정도입니다. 100%를 넘으면 반복이 쌓이며, 안전장치가 이를 통제합니다."],
+        ["`TAPS`", "1, 2, 4, 8 · 1", "활성 리듬 탭 수."],
+        ["`SPACING`", "25 ~ 200% · 100%", "탭 사이의 간격."],
+        ["`SWING`", "−50 ~ +50% · 0%", "짝수 탭의 그루브 이동."],
+        ["`DUCK`", "0 ~ 100% · 25%", "원음이 들어올 때 반복음을 낮춰 소리를 또렷하게 유지합니다."],
+        ["`FREEZE`", "Off, On · Off", "입력을 부드럽게 막고 현재 꼬리를 붙잡아 둡니다."]
+      ]
+    } },
+    { "h3": "스테레오" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`STYLE`", "Single, Dual, Ping Pong, Ratio · Ping Pong", "반복음의 스테레오 구조."],
+        ["`R OFFSET`", "−100 ~ +100% · 0%", "오른쪽 채널의 시간 비율과 콤 방향."],
+        ["`WIDTH`", "0 ~ 200% · 130%", "웻 신호의 스테레오 폭."]
+      ]
+    } },
+    { "h3": "성격과 공간" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`TYPE`", "Clean, Tape, BBD, Digital · Tape", "반복음의 재질."],
+        ["`DISTORT`", "0 ~ 100% · 18%", "올릴수록 반복음이 더 눌리고 거칠어집니다."],
+        ["`WEAR`", "0 ~ 100% · 28%", "올릴수록 오래된 장비처럼 어둡고 불안정해집니다."],
+        ["`LOW CUT`", "20 ~ 2000 Hz · 120 Hz", "반복마다 이 주파수 아래의 저음을 줄입니다."],
+        ["`HIGH CUT`", "500 Hz ~ 20 kHz · 9 kHz", "반복마다 이 주파수 위의 고음을 줄입니다."],
+        ["`SPEED`", "0.02 ~ 10 Hz · 0.25 Hz", "반복음이 흔들리는 속도."],
+        ["`WOBBLE`", "0 ~ 20 ms · 0.8 ms", "반복음이 시간적으로 흔들리는 폭."],
+        ["`BLUR`", "0 ~ 100% · 12%", "올릴수록 또렷한 반복이 퍼진 잔향처럼 흐려집니다."],
+        ["`SPACE`", "2 ~ 120 ms · 32 ms", "퍼지는 잔향의 길이와 공간감."]
+      ]
+    } },
+    { "h3": "변환" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`BUILD` / `ONCE`", "BUILD, ONCE · BUILD", "BUILD는 반복마다 변형을 누적하고, ONCE는 출력에서 한 번만 적용합니다."],
+        ["`FREQ SHIFT`", "−2000 ~ +2000 Hz · 0 Hz", "반복마다 누적되는 부호 있는 주파수 이동으로, 올라가거나 내려가는 나선을 만듭니다."],
+        ["`L/R SHIFT`", "0 ~ 100% · 0%", "좌우의 주파수 이동이 반대 방향으로 움직이는 비율."],
+        ["`GRAIN MIX`", "0 ~ 100% · 0%", "일반 에코와 그레인 레이어의 비율."],
+        ["`GRAIN SIZE`", "10 ~ 500 ms · 90 ms", "그레인 창의 길이."],
+        ["`DENSITY`", "1 ~ 8 · 4", "동시에 겹치는 그레인 수."],
+        ["`SPRAY`", "0 ~ 100% · 15%", "그레인 시작 위치의 시간 분산."],
+        ["`PITCH`", "−24 ~ +24 st · 0 st", "그레인 재생 피치."],
+        ["`REVERSE`", "0 ~ 100% · 0%", "그레인마다 역재생될 확률."]
+      ]
+    } },
+    { "h3": "출력과 매크로" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`MIX`", "0 ~ 100% · 30%", "일정 파워 방식의 드라이/웻 비율."],
+        ["`OUTPUT`", "−18 ~ +6 dB · 0 dB", "최종 출력 보정."],
+        ["`COLOR`", "−100 ~ +100% · 0%", "왼쪽은 더 깨끗하고 열린 반복, 가운데는 프리셋 원형, 오른쪽은 더 낡고 어두운 반복입니다."],
+        ["`SPACE`", "−100 ~ +100% · 0%", "왼쪽은 단단하고 정적인 반복, 가운데는 프리셋 원형, 오른쪽은 더 움직이고 넓게 퍼지는 반복입니다."],
+        ["`BYP`(섹션별)", "Off, On · Off", "STEREO 바이패스는 구조·오프셋·폭을 중립으로, CHARACTER / SPACE 바이패스는 성격·필터·모듈레이션·확산을, TRANSFORM 바이패스는 그레인과 주파수 변환을 건너뜁니다."]
+      ]
+    } },
+    { "tip": { "text": "매크로는 여러 파라미터를 함께 움직이므로 돌리는 동안 개별 노브도 바뀝니다. 매크로로 방향을 찾고 노브로 세밀하게 다듬으세요." } },
+
+    { "h2": "프리셋" },
+    { "p": "화살표로 프리셋을 넘기거나 PRESETS 목록을 열어 팩토리 프리셋이나 사용자 프리셋을 고릅니다. 저장은 이름을 물은 뒤 User 폴더에 .tbdelay 파일로 저장합니다. 설정을 바꾸면 이름이 Custom으로 표시됩니다. 실행 취소와 다시 실행으로 최근 변경을 오갈 수 있습니다." },
+    { "p": "팩토리 프리셋 99종은 10개 뱅크로 나뉩니다: Essential Echo, Grain & Freeze, Slap & Double, Rhythm & Multitap, Ping Pong & Stereo, Tape & Analog, Digital & Lo-Fi, Comb & Resonance, Spiral & Shift, Space & Diffusion. 예를 들어 **Clean Utility**, **Dub Throw**, **Studio Slap 80**, **Dotted Pulse Train**, **Warm Reel Echo**, **12-Bit Repeat**, **Plucked Wire**, **Gentle Lift**, **Grain Cloud**, **Wide Ambient Wash**가 있습니다." },
+
+    { "h2": "작업 예시" },
+    { "p": "자주 하는 작업의 출발점입니다. 귀로 조정하세요." },
+    { "recipes": [
+      { "title": "보컬 스로우", "use": "보컬을 덮지 않고 대답하는 반복음.",
+        "settings": [["TIME MODE", "Sync, 1/4 또는 1/8 D"], ["FEEDBACK", "30 ~ 50%"], ["DUCK", "40 ~ 70%"]],
+        "steps": ["반복음이 목소리 뒤에 머물도록 HIGH CUT을 약 5 ~ 7 kHz로 낮춥니다."] },
+      { "title": "슬랩백", "use": "보컬이나 기타에 짧은 한 번의 반복.",
+        "settings": [["프리셋", "Studio Slap 80 또는 Vintage Slap 120"], ["FEEDBACK", "0 ~ 15%"]],
+        "steps": ["Free 모드에서 DELAY TIME을 80 ~ 140 ms로 둡니다."] },
+      { "title": "테이프 에코", "use": "따뜻하고 흔들리는 반복음.",
+        "settings": [["TYPE", "Tape"], ["WEAR", "30 ~ 60%"], ["WOBBLE", "0.5 ~ 2 ms"]],
+        "steps": ["WEAR를 올릴수록 HIGH CUT을 낮춰 반복음을 어둡게 유지합니다."] },
+      { "title": "나선형 시머", "use": "음높이가 올라가는 반복음.",
+        "settings": [["FREQ SHIFT", "양수"], ["BUILD / ONCE", "BUILD"], ["FEEDBACK", "50 ~ 80%"]],
+        "steps": ["FREQ SHIFT를 음수로 두면 나선이 내려갑니다."] }
+    ] },
+
+    { "h2": "팁과 문제 해결" },
+    { "table": {
+      "cols": ["증상", "확인할 점"],
+      "widths": [36, 64],
+      "rows": [
+        ["반복이 계속 쌓인다.", "FEEDBACK이 100%를 넘습니다. 낮추거나, 꼬리를 붙잡고 싶을 때만 FREEZE를 쓰세요."],
+        ["딜레이가 원음을 흐린다.", "DUCK을 올리거나 MIX를 낮추거나, HIGH CUT을 낮추고 LOW CUT을 올리세요."],
+        ["DELAY TIME을 바꾸면 피치가 휘어진다.", "TIME CHANGE가 Glide입니다. 깨끗하게 바꾸려면 Crossfade를 고르세요."],
+        ["Sync 타이밍이 곡과 맞지 않는다.", "호스트 템포를 확인하세요. Sync는 호스트의 템포를 따릅니다."],
+        ["소리가 모노이거나 좁다.", "STYLE과 WIDTH, 그리고 STEREO 섹션이 바이패스되지 않았는지 확인하세요."],
+        ["그레인 설정이 효과가 없다.", "GRAIN MIX를 올리고 TRANSFORM 섹션이 바이패스되지 않았는지 확인하세요."]
+      ]
+    } },
+
+    { "h2": "파라미터 참고표" },
+    { "table": {
+      "compact": true,
+      "cols": ["패널 표기", "호스트 파라미터", "범위", "기본값"],
+      "widths": [22, 24, 36, 18],
+      "rows": [
+        { "group": "반복" },
+        ["`TIME MODE`", "Time Mode", "Free, Sync, Tune", "Sync"],
+        ["`DELAY TIME`", "Delay Time", "10 ~ 8000 ms", "375 ms"],
+        ["`DELAY TIME`(Sync)", "Division", "1/32 ~ 1/1, T·D 포함", "1/8"],
+        ["`TIME CHANGE`", "Time Change", "Crossfade, Glide", "Glide"],
+        ["`FEEDBACK`", "Feedback", "0 ~ 110%", "48%"],
+        ["`TAPS`", "Taps", "1, 2, 4, 8", "1"],
+        ["`SPACING`", "Spacing", "25 ~ 200%", "100%"],
+        ["`SWING`", "Swing", "−50 ~ +50%", "0%"],
+        ["`DUCK`", "Duck", "0 ~ 100%", "25%"],
+        ["`FREEZE`", "Freeze", "Off, On", "Off"],
+        { "group": "스테레오" },
+        ["`STYLE`", "Style", "Single, Dual, Ping Pong, Ratio", "Ping Pong"],
+        ["`R OFFSET`", "Offset", "−100 ~ +100%", "0%"],
+        ["`WIDTH`", "Width", "0 ~ 200%", "130%"],
+        ["`BYP`", "Stereo Bypass", "Off, On", "Off"],
+        { "group": "성격과 공간" },
+        ["`TYPE`", "Character", "Clean, Tape, BBD, Digital", "Tape"],
+        ["`DISTORT`", "Drive", "0 ~ 100%", "18%"],
+        ["`WEAR`", "Age", "0 ~ 100%", "28%"],
+        ["`LOW CUT`", "Low Cut", "20 ~ 2000 Hz", "120 Hz"],
+        ["`HIGH CUT`", "High Cut", "500 Hz ~ 20 kHz", "9 kHz"],
+        ["`SPEED`", "Mod Rate", "0.02 ~ 10 Hz", "0.25 Hz"],
+        ["`WOBBLE`", "Mod Depth", "0 ~ 20 ms", "0.8 ms"],
+        ["`BLUR`", "Smear", "0 ~ 100%", "12%"],
+        ["`SPACE`", "Size", "2 ~ 120 ms", "32 ms"],
+        ["`BYP`", "Color Space Bypass", "Off, On", "Off"],
+        { "group": "변환" },
+        ["`BUILD` / `ONCE`", "Transform Route", "Loop(BUILD), Post(ONCE)", "Loop"],
+        ["`FREQ SHIFT`", "Shift", "−2000 ~ +2000 Hz", "0 Hz"],
+        ["`L/R SHIFT`", "Diverge", "0 ~ 100%", "0%"],
+        ["`GRAIN MIX`", "Grain", "0 ~ 100%", "0%"],
+        ["`GRAIN SIZE`", "Grain Size", "10 ~ 500 ms", "90 ms"],
+        ["`DENSITY`", "Density", "1 ~ 8", "4"],
+        ["`SPRAY`", "Spray", "0 ~ 100%", "15%"],
+        ["`PITCH`", "Pitch", "−24 ~ +24 st", "0 st"],
+        ["`REVERSE`", "Reverse", "0 ~ 100%", "0%"],
+        ["`BYP`", "Grain Transform Bypass", "Off, On", "Off"],
+        { "group": "출력과 매크로" },
+        ["`MIX`", "Mix", "0 ~ 100%", "30%"],
+        ["`OUTPUT`", "Output", "−18 ~ +6 dB", "0 dB"],
+        ["`COLOR`", "Color", "−100 ~ +100%", "0%"],
+        ["`SPACE`(매크로)", "Space", "−100 ~ +100%", "0%"]
+      ]
+    } },
+
+    { "h2": "버전 기록" },
+    { "table": {
+      "cols": ["버전", "변경 내용"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.3 · 2026-08-21", "노브 툴팁의 한글이 깨져 보이던 문제를 고쳤습니다. Delay Map을 세로로 키우고 조절 패널을 줄였으며, 창 크기를 70 ~ 180%로 바꿀 수 있고 마지막 크기를 기억합니다."],
+        ["1.0.2 · 2026-08-19", "입력이 없을 때 100%를 넘는 FEEDBACK이 자체 발진을 유지하던 문제를 고쳤습니다. 화면을 바다 색조와 원형 Delay Map으로 바꾸고, 노브와 패널 제목을 키우고, TIME MODE와 BUILD / ONCE를 정리했습니다."],
+        ["1.0.1 · 2026-08-13", "Windows 설치본 릴리스."],
+        ["1.0.0 · 2026-07-29", "첫 릴리스."]
+      ]
+    } }
+  ]
+}
