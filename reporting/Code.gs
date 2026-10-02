@@ -36,6 +36,13 @@ const TELEMETRY_PLUGIN_IDS = [
   'tb_shimmer',
   'tb_exciter',
   'tb_tape',
+  'tb_deesser',
+  'tb_filter_table',
+  'tb_grain_phaser',
+  'tb_multiband_compressor',
+  'tb_geometry_reverb',
+  'tb_audio_player',
+  'tb_ambient',
 ];
 
 function doGet(event) {
