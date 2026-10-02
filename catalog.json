@@ -227,9 +227,9 @@
       "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_compressor.png?v=2.1.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=2.1.0",
-        "sha256": "ad04a386209870a7dd84b18bed970f4cb98e4fe14da9136cf9a6750d58648321",
-        "sizeBytes": 5631083
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Compressor.zip?v=2.1.0-20261002",
+        "sha256": "8d5aa82717a820d8afe14e62403a5d4612375c81c9af1bface273b2a0a4513e9",
+        "sizeBytes": 2815857
       },
       "macos": {
         "formats": {
@@ -1818,7 +1818,7 @@
           "architecture": "x64",
           "version": "1.0.1",
           "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-13/TB-Delay-1.0.1-Windows-x64-VST3-Setup.exe",
-          "sha256": "FBDEA0F503728BE4EE04C686609E57FFC7E70C40CB093360D2B0AABC5BCC6B68",
+          "sha256": "fbdea0f503728be4ee04c686609e57ffc7e70c40cb093360d2b0aabc5bcc6b68",
           "sizeBytes": 3856042
         },
         "macosVst3": {
