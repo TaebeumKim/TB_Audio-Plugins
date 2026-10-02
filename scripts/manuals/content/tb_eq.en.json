@@ -1,0 +1,237 @@
+{
+  "file": "TB_EQ",
+  "version": "2.0.2",
+  "date": "2026-10-02",
+  "subtitle": "Spectral / Dynamic Equalizer",
+  "tagline": "Twenty-four bands that combine static filtering, Dynamic EQ, and spectral resonance control, so every correction happens exactly where the problem is.",
+  "facts": ["24 bands", "Static · Dynamic · Spectral", "Stereo / Mid / Side", "Windows VST3 · macOS VST3/AU"],
+  "ui": "tb_eq.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB EQ is a 24-band equalizer that offers three kinds of processing in every band: standard filters for static tone shaping, Dynamic EQ that moves only when a frequency area gets louder than a threshold, and Spectral processing that finds and reduces narrow resonances inside the band." },
+    { "p": "Because all three live in the same band, you can fix a problem exactly where it happens. A cut that would dull a vocal all the time can become a cut that appears only on harsh syllables, and a whistling resonance can be removed without carving a permanent notch into the sound." },
+    { "h3": "Key features" },
+    { "ul": [
+      "24 bands with eight filter types: Bell, Low Shelf, High Shelf, Low Cut, High Cut, Notch, Band Pass, and All Pass",
+      "Stereo, Mid, or Side processing for each band",
+      "Dynamic EQ on any band with `THRESHOLD`, `RANGE`, `ATTACK`, and `RELEASE`",
+      "Spectral resonance control on any band with `SENSITIVITY`, `DEPTH`, `RANGE`, and `FOCUS`",
+      "Delta listening that plays only what the EQ adds or removes",
+      "Live analyzer with input and output spectra, freeze, three display ranges, and a pink-noise tilt",
+      "Factory and User presets, with undo and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input Gain", "Filter bank (24 bands)", "Dynamic EQ (per band)", "Spectral (per band)", "Output Gain", "Delta monitor"] } },
+    { "new": { "title": "What's new in 2.0.2", "list": [
+      "`SENSITIVITY` and `DEPTH` now work independently. SENSITIVITY decides which resonances are detected; DEPTH sets the maximum reduction.",
+      "The spectral detail control is now labelled `FOCUS` (formerly Niddle). Parameter IDs did not change, so existing sessions, presets, and automation keep working."
+    ] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB EQ 2.0.2 for Windows (VST3). The current macOS build is version 1.0.3 and may not include every feature described here.",
+      "The interface image was captured from version 2.0.0. Labels that changed in 2.0.2 are described in the text."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB EQ on a track. Band 1 is switched on; bands 2 to 24 start switched off.",
+      "Choose a band in the `BAND` list {{3}}, then pick its filter type {{4}} and whether it processes `Stereo`, `Mid`, or `Side` {{5}}.",
+      "Drag the band's node in the display {{2}}: left and right changes `FREQ`, up and down changes `GAIN`. Turn the mouse wheel over the node to change `Q`.",
+      "If the problem appears only when that area gets loud, switch on `Dynamic` {{6}} and lower `THRESHOLD` until the band reacts only to the loud moments.",
+      "If the problem is a narrow ringing or whistling tone, switch on `Spectral` instead and raise `SENSITIVITY` until the resonance is caught.",
+      "Listen to what you are changing with Delta listening (see Listening and analysis).",
+      "Match the level with `OUTPUT GAIN` {{9}} and compare with the bypassed signal before you judge the result."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_eq.jpg",
+      "caption": "TB EQ interface, captured from version 2.0.0. In 2.0.2, a band with Spectral switched on shows SENSITIVITY, DEPTH, RANGE, and FOCUS in the mode controls.",
+      "callouts": [
+        { "n": 1, "x": 63.4, "y": 3.0 },
+        { "n": 2, "x": 37.6, "y": 43.2 },
+        { "n": 3, "x": 7.9, "y": 76.8 },
+        { "n": 4, "x": 19.1, "y": 76.8 },
+        { "n": 5, "x": 30.6, "y": 76.8 },
+        { "n": 6, "x": 41.1, "y": 76.8 },
+        { "n": 7, "x": 5.0, "y": 87.3 },
+        { "n": 8, "x": 44.6, "y": 87.3 },
+        { "n": 9, "x": 45.6, "y": 95.9 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset (hold to browse), the Factory and User preset list, Save, Undo, and Redo."],
+        [2, "EQ display", "the combined curve, band nodes, each band's dynamic range, and the live analyzer."],
+        [3, "BAND", "chooses which of the 24 bands the controls below edit."],
+        [4, "Filter type", "Bell, Low Shelf, High Shelf, Low Cut, High Cut, Notch, Band Pass, or All Pass."],
+        [5, "Channel", "Stereo, Mid, or Side processing for the band."],
+        [6, "Band switches", "`Enabled` turns the band on. `Dynamic` and `Spectral` add level-dependent or resonance processing."],
+        [7, "Band controls", "`FREQ`, `GAIN`, and `Q`. Depending on the filter type, the second knob may read GAIN, ATTEN, or SLOPE."],
+        [8, "Mode controls", "with Dynamic on: `THRESHOLD`, `RANGE`, `ATTACK`, `RELEASE`. With Spectral on: `SENSITIVITY`, `DEPTH`, `RANGE`, `FOCUS`."],
+        [9, "Input and output", "`INPUT GAIN` and `OUTPUT GAIN` for the whole plug-in."]
+      ]
+    } },
+
+    { "h2": "Working with bands" },
+    { "p": "Every band has the same controls, so once you know one band you know all 24. Switch a band on with `Enabled`. A band that is switched off keeps its settings but does not affect the sound." },
+    { "p": "In the display, drag a node to change frequency and gain, and turn the mouse wheel over it to change Q. Hints such as `GRAB` and `HOLD R: SOLO` appear in the display to show what the mouse will do. The curve's vertical scale can be switched between ±24 dB and ±48 dB for fine or large moves." },
+    { "h3": "Filter types" },
+    { "table": {
+      "cols": ["Type", "What it does", "Typical use"],
+      "widths": [17, 45, 38],
+      "rows": [
+        ["Bell", "Boosts or cuts a region around FREQ. Q sets the width.", "General tone shaping and cutting resonances"],
+        ["Low Shelf", "Raises or lowers everything below FREQ.", "Warmth and low-end balance"],
+        ["High Shelf", "Raises or lowers everything above FREQ.", "Air and brightness"],
+        ["Low Cut", "Removes content below FREQ.", "Rumble, handling noise, room for the bass"],
+        ["High Cut", "Removes content above FREQ.", "Hiss, harsh top end, lo-fi effects"],
+        ["Notch", "A very narrow, deep cut at FREQ.", "Hum, whistles, a single ringing frequency"],
+        ["Band Pass", "Keeps only the region around FREQ.", "Telephone and radio effects, finding problem areas"],
+        ["All Pass", "Shifts phase around FREQ without changing the level.", "Phase alignment between related tracks"]
+      ]
+    } },
+    { "h3": "Stereo, Mid, and Side" },
+    { "p": "`Stereo` processes both channels. `Mid` processes only what both channels share (the center), and `Side` processes only the difference between them (the width). Mid and Side bands let you brighten the edges of a mix without making the lead vocal harsher, or clean the low end of the sides while the centered bass stays intact." },
+    { "warn": { "text": "Side content cancels when a mix is played in mono. After large Side changes, check the result in mono." } },
+
+    { "h2": "Dynamic EQ" },
+    { "p": "With `Dynamic` switched on, a band changes its gain according to the level of its own frequency area. When that area rises above `THRESHOLD`, the band moves away from its `GAIN` setting by up to `RANGE`. Negative RANGE values cut, and positive values boost." },
+    { "p": "The shaded area in the display shows how far each band can move. In the interface image, GAIN is −4.2 dB and RANGE is −7.8 dB, so the band can travel from −4.2 dB down to about −12 dB, which is the dashed line." },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [22, 22, 56],
+      "rows": [
+        ["`THRESHOLD`", "−60 to 0 dB · −24 dB", "The level at which the band starts to move. Lower values react to quieter signals."],
+        ["`RANGE` (+BOOST / −CUT)", "−24 to +24 dB · −6 dB", "The maximum movement away from GAIN. Negative values cut, positive values boost."],
+        ["`ATTACK`", "0.1 to 200 ms · 15 ms", "How quickly the band reacts. Fast settings catch peaks but can soften the start of notes."],
+        ["`RELEASE`", "1 to 2000 ms · 150 ms", "How quickly the band returns. Short settings can pump; long settings can hold down the next note."],
+        ["Ratio (host parameter)", "1:1 to 20:1 · 2:1", "How strongly the band reacts above the threshold. It is not on the panel; find it as Dynamic Ratio in your DAW's automation or parameter list."]
+      ]
+    } },
+    { "tip": { "text": "Start with RANGE between −3 and −6 dB, then lower THRESHOLD until the band moves only on the moments you want to control." } },
+
+    { "h2": "Spectral resonance control" },
+    { "p": "Spectral mode analyzes the band's area in short FFT frames and looks for narrow components that rise above their neighboring frequencies, such as ringing, whistles, or harsh peaks. It reduces only those components, so the rest of the band keeps its natural tone." },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [22, 22, 56],
+      "rows": [
+        ["`SENSITIVITY`", "0 to 1 · 0.5", "How easily a resonance is detected. Higher values catch smaller peaks but can also react to tone you want to keep."],
+        ["`DEPTH`", "0 to 24 dB · 24 dB", "The maximum reduction applied to a detected resonance. Since 2.0.2 it works independently of SENSITIVITY."],
+        ["`RANGE`", "0.05 to 8 · 1.0", "How wide an area around FREQ is analyzed. Wide settings can also move neighboring frequencies."],
+        ["`FOCUS`", "0 to 100 · 0", "Concentrates the reduction on narrower, more prominent peaks. Host automation still lists it as Spectral Niddle."]
+      ]
+    } },
+    { "tip": { "text": "For a natural result, lower DEPTH to 6 to 12 dB first, then raise SENSITIVITY until the ringing is caught. Set Delta Mode to Selected band to hear exactly what is being removed." } },
+    { "note": { "text": "Spectral processing uses more CPU than the standard filters and can behave differently on fast transients. Switch it on only for the bands that need it." } },
+
+    { "h2": "Listening and analysis" },
+    { "h3": "Delta listening" },
+    { "p": "Delta listening plays only the difference TB EQ makes, which tells you whether you are removing the problem or useful tone. Delta Mode and Delta Band are host parameters: set them from an automation lane or the plug-in's parameter list in your DAW." },
+    { "table": {
+      "cols": ["Parameter", "Values · default", "What you hear"],
+      "widths": [18, 30, 52],
+      "rows": [
+        ["Delta Mode", "Off, All bands, Selected band · Off", "Off plays the normal output. All bands plays everything TB EQ changes. Selected band plays only the change made by the band chosen in Delta Band."],
+        ["Delta Band", "Band 1 to 24 · Band 1", "The band you hear when Delta Mode is set to Selected band."]
+      ]
+    } },
+    { "h3": "Band audition" },
+    { "p": "The display can also audition the band you are working on. Its labels show what you are hearing: `SOLO`, `BAND-PASS AUDITION` (the band's frequency area), `PHASE DELTA (AP - DRY)` for All Pass bands, and `DELTA RESONANCE` for the resonances that Spectral processing removes." },
+    { "h3": "Analyzer" },
+    { "table": {
+      "cols": ["Control", "Function"],
+      "widths": [22, 78],
+      "rows": [
+        ["`PRE`", "Shows or hides the input spectrum."],
+        ["`POST`", "Shows or hides the processed spectrum."],
+        ["`FREEZE`", "Freezes the analyzer display so you can study a moment."],
+        ["`RANGE`", "Cycles the analyzer range between 60, 90, and 120 dB."],
+        ["`SPEED`", "Cycles the response speed between FAST, MED, and SLOW."],
+        ["`TILT`", "RAW shows the measured spectrum. HUMAN tilts it by 4.5 dB per octave so that pink-noise-like material reads flat."],
+        ["Curve scale", "Switches the EQ curve's vertical scale between ±24 dB and ±48 dB."]
+      ]
+    } },
+
+    { "h2": "Presets" },
+    { "p": "Use the arrows in the preset bar {{1}} to step through presets, and hold an arrow to browse quickly. The list contains the Factory presets and your own User presets. Save stores the current settings as a User preset, a .tbeq file in the User folder. Undo and Redo step back and forward through your recent edits." },
+    { "p": "Factory presets: **Init / Flat**, **Mix Bus Polish**, **Vocal Resonance Guard**, **Master De-Harsh**, **Drum Punch & Bite**, and **M/S Clarity**." },
+    { "tip": { "text": "Treat a preset as a starting point. Check each band's frequency and threshold against your own material." } },
+
+    { "h2": "Recipes" },
+    { "p": "These settings are starting points for common jobs, not fixed answers. Adjust them by ear on your own material." },
+    { "recipes": [
+      { "title": "Tame harsh vocals", "use": "Harshness that appears only on loud or bright syllables.",
+        "settings": [["Type", "Bell"], ["FREQ", "2.5 to 5 kHz"], ["Q", "2 to 4"], ["Mode", "Dynamic"], ["RANGE", "−3 to −6 dB"], ["ATTACK / RELEASE", "5 to 15 ms / 80 to 150 ms"]],
+        "steps": ["Find the harsh area with a temporary boost, then set GAIN back to 0 dB.", "Lower THRESHOLD until the band moves only on harsh syllables."] },
+      { "title": "Remove ringing resonances", "use": "Whistles, ringing drum shells, or room resonances.",
+        "settings": [["Type", "Bell"], ["FREQ", "At the ringing area"], ["Mode", "Spectral"], ["DEPTH", "6 to 12 dB"], ["SENSITIVITY", "Start at 0.5"], ["FOCUS", "Raise for very narrow peaks"]],
+        "steps": ["Set Delta Mode to Selected band and raise SENSITIVITY until you hear only the ringing.", "Set Delta Mode back to Off and compare with bypass."] },
+      { "title": "Clean the low end", "use": "Rumble and handling noise on vocals and instruments without deep bass.",
+        "settings": [["Type", "Low Cut"], ["FREQ", "40 to 100 Hz"], ["Channel", "Stereo"]],
+        "steps": ["Raise FREQ until the sound gets thin, then back off slightly."] },
+      { "title": "Brighten the width, not the center", "use": "Adding air to a mix without making the lead vocal harsh.",
+        "settings": [["Type", "High Shelf"], ["FREQ", "8 to 12 kHz"], ["GAIN", "+1 to +2 dB"], ["Channel", "Side"]],
+        "steps": ["Check the result in mono, where Side changes disappear."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["It sounds better, but only because it is louder.", "Match the level with OUTPUT GAIN and compare with bypass at the same loudness."],
+        ["A narrow boost rings or whistles.", "Lower Q or the boost. Cutting a neighboring area often sounds cleaner than boosting."],
+        ["A band has no effect.", "Make sure the band is Enabled. A Dynamic band also stays still until its area crosses THRESHOLD."],
+        ["Width changes disappear in mono.", "Side processing cancels in mono. Reduce Side changes or use Stereo instead."],
+        ["CPU load is high.", "Switch Spectral off on bands that do not need it."],
+        ["Ratio and Delta Mode are not on the panel.", "They are host parameters. Open the plug-in's parameter list or an automation lane in your DAW."],
+        ["My DAW lists FOCUS as Spectral Niddle.", "That is the original parameter name, kept so existing sessions still load."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "p": "These are the plug-in's actual ranges and defaults. Band parameters exist for each of the 24 bands and appear in your DAW with the band number." },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [19, 25, 38, 18],
+      "rows": [
+        { "group": "Global" },
+        ["`INPUT GAIN`", "Input Gain", "−24 to +24 dB", "0 dB"],
+        ["`OUTPUT GAIN`", "Output Gain", "−24 to +24 dB", "0 dB"],
+        ["Host only", "Delta Mode", "Off, All bands, Selected band", "Off"],
+        ["Host only", "Delta Band", "Band 1 to 24", "Band 1"],
+        { "group": "Each band (1 to 24)" },
+        ["`Enabled`", "Enabled", "Off, On", "Band 1 on, others off"],
+        ["Filter type", "Type", "Bell, Low Shelf, High Shelf, Low Cut, High Cut, Notch, Band Pass, All Pass", "Bell"],
+        ["Channel", "Channel Mode", "Stereo, Mid, Side", "Stereo"],
+        ["`FREQ`", "Frequency", "20 Hz to 20 kHz", "1 kHz"],
+        ["`GAIN`", "Gain", "−24 to +24 dB", "0 dB"],
+        ["`ATTEN`", "Attenuation", "−96 to −3 dB", "−96 dB"],
+        ["`Q`", "Q", "0.1 to 30", "1.0"],
+        { "group": "Dynamic" },
+        ["`Dynamic`", "Dynamic", "Off, On", "Off"],
+        ["`THRESHOLD`", "Dynamic Threshold", "−60 to 0 dB", "−24 dB"],
+        ["`RANGE`", "Dynamic Range", "−24 to +24 dB", "−6 dB"],
+        ["`ATTACK`", "Dynamic Attack", "0.1 to 200 ms", "15 ms"],
+        ["`RELEASE`", "Dynamic Release", "1 to 2000 ms", "150 ms"],
+        ["Host only", "Dynamic Ratio", "1:1 to 20:1", "2:1"],
+        { "group": "Spectral" },
+        ["`Spectral`", "Spectral", "Off, On", "Off"],
+        ["`SENSITIVITY`", "Spectral Sensitivity", "0 to 1", "0.5"],
+        ["`DEPTH`", "Spectral Depth", "0 to 24 dB", "24 dB"],
+        ["`RANGE`", "Spectral Range", "0.05 to 8", "1.0"],
+        ["`FOCUS`", "Spectral Niddle", "0 to 100", "0"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["2.0.2 · 2026-09-30", "SENSITIVITY and DEPTH now work independently. The Niddle control is shown as FOCUS. Parameter IDs and the VST3 class ID are unchanged."],
+        ["2.0.1 · 2026-08-11", "The spectrum analyzer now starts as soon as the editor opens, without clicking SPEED. Version and vendor information corrected."]
+      ]
+    } }
+  ]
+}
