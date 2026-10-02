@@ -1,0 +1,140 @@
+{
+  "file": "TB_Scrambler",
+  "version": "2.3.1",
+  "date": "2026-10-02",
+  "subtitle": "Formant Scramble",
+  "tagline": "Rearranges the formant envelope and fine spectral structure inside a frequency range you choose, turning voices, drums, and effects into metallic, encrypted, radio-like textures.",
+  "facts": ["31 spectral bands", "LOW and HIGH range", "One AMOUNT control", "12 factory presets"],
+  "ui": "tb_scrambler.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Scrambler breaks the recognisable shape of a sound inside a frequency range you choose. Between LOW and HIGH, the formant envelope and fine spectral structure are rearranged; outside that range, the sound passes through unchanged." },
+    { "p": "Because the low end, rhythm, and overall energy are preserved, vocals, drum loops, and effects can turn metallic, encrypted, or radio-like and still sit in a mix. `SCRAMBLE AMOUNT` moves continuously from the untouched sound to full displacement." },
+    { "h3": "Key features" },
+    { "ul": [
+      "`LOW` and `HIGH` set the scrambled range anywhere from 20 Hz to 20 kHz",
+      "Crossed points are reordered, so LOW and HIGH can be set in either order",
+      "Frequencies outside the range pass through unchanged",
+      "`SCRAMBLE AMOUNT` blends from dry (0%) to fully scrambled (100%)",
+      "A repeatable permutation: the same settings always scramble the same way",
+      "12 factory presets in three groups, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Range between LOW and HIGH", "Formant scramble across 31 bands", "SCRAMBLE AMOUNT blend", "Output"], "caption": "Frequencies outside the range bypass the scramble." } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Scrambler 2.3.1 for Windows (VST3). The current macOS build is version 1.1.4 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Scrambler on a vocal, drum loop, or effect. The defaults are `LOW` 300 Hz, `HIGH` 4.5 kHz, and `SCRAMBLE AMOUNT` 50%.",
+      "Set `LOW` and `HIGH` around the part of the spectrum you want to change. Everything outside that range stays as it is.",
+      "Raise `SCRAMBLE AMOUNT` until the sound is as unrecognisable as you want.",
+      "Try the factory presets: GENTLE OFFSET for subtle colour, BROKEN SPEECH for garbled voices, and TOTAL DISLOCATION for complete transformation."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_scrambler.jpg",
+      "caption": "TB Scrambler 2.3 interface (portfolio image)."
+    } },
+    { "table": {
+      "cols": ["Area", "What it does"],
+      "widths": [24, 76],
+      "rows": [
+        ["Preset bar", "Previous and next preset, the preset list (factory preset groups and LOAD USER PRESET...; CUSTOM appears after a change), Save, Undo, and Redo."],
+        ["`LOW`, `HIGH`", "The two edges of the scrambled range."],
+        ["`SCRAMBLE AMOUNT`", "How strongly the range is scrambled."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [20, 22, 58],
+      "rows": [
+        ["`LOW`", "20 Hz to 20 kHz · 300 Hz", "First scramble point. Frequencies below the range pass through unchanged."],
+        ["`HIGH`", "20 Hz to 20 kHz · 4.5 kHz", "Second scramble point. Frequencies above the range pass through unchanged."],
+        ["`SCRAMBLE AMOUNT`", "0 to 100% · 50%", "Dry/wet blend. 0% leaves the sound dry; 100% is fully formant-scrambled."]
+      ]
+    } },
+    { "note": { "text": "If LOW is set above HIGH, the two points are reordered, so the range always runs from the lower value to the higher one." } },
+    { "h3": "How the scramble works" },
+    { "p": "TB Scrambler divides the spectrum into 31 bands. In the bands between LOW and HIGH, the formant envelope and fine spectral structure are moved around with a fixed permutation, so the same settings always give the same result. The low end, rhythm, and overall energy are kept, which is why the result stays usable in a mix." },
+    { "tip": { "text": "Wider ranges destroy recognition faster but also blur the original rhythm and tone. For a subtle effect, keep the range narrow and the amount low." } },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows, or open the list to choose a factory or user preset. LOAD USER PRESET... opens a .tbscrambler file, and Save stores the current settings as one. The name shows CUSTOM after you change a setting. Undo and Redo step through recent changes." },
+    { "table": {
+      "compact": true,
+      "cols": ["Group", "Preset", "LOW", "HIGH", "AMOUNT"],
+      "widths": [26, 26, 16, 16, 16],
+      "rows": [
+        ["Gentle Offset", "Init", "300 Hz", "4.5 kHz", "50%"],
+        ["Gentle Offset", "Vocal Haze", "600 Hz", "3 kHz", "22%"],
+        ["Gentle Offset", "Drum Grit", "400 Hz", "6 kHz", "18%"],
+        ["Gentle Offset", "Bass Wobble", "120 Hz", "1.8 kHz", "26%"],
+        ["Broken Speech", "Mid Fracture", "420 Hz", "4.2 kHz", "55%"],
+        ["Broken Speech", "Radio Scramble", "720 Hz", "3.2 kHz", "68%"],
+        ["Broken Speech", "Yolk Crumble", "180 Hz", "6.5 kHz", "44%"],
+        ["Broken Speech", "Formant Flip", "500 Hz", "3.6 kHz", "82%"],
+        ["Total Dislocation", "Wide Disorder", "90 Hz", "11 kHz", "78%"],
+        ["Total Dislocation", "Alien Broadcast", "250 Hz", "8 kHz", "92%"],
+        ["Total Dislocation", "Glass Shatter", "1.2 kHz", "12 kHz", "100%"],
+        ["Total Dislocation", "Total Dislocation", "20 Hz", "20 kHz", "100%"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Disguised voice", "use": "A voice that keeps its rhythm but loses its identity.",
+        "settings": [["Preset", "Radio Scramble"], ["Range", "About 700 Hz to 3.2 kHz"], ["AMOUNT", "60 to 70%"]],
+        "steps": ["Keep the range inside the speech band so the timing stays readable."] },
+      { "title": "Drum loop grit", "use": "Metallic colour on a loop without losing the groove.",
+        "settings": [["Preset", "Drum Grit"], ["Range", "400 Hz to 6 kHz"], ["AMOUNT", "15 to 30%"]],
+        "steps": ["Raise AMOUNT slowly; small values already change the colour."] },
+      { "title": "Alien transmission", "use": "A completely transformed, broadcast-like voice.",
+        "settings": [["Preset", "Alien Broadcast"], ["Range", "250 Hz to 8 kHz"], ["AMOUNT", "90 to 100%"]],
+        "steps": ["Follow with a band-pass EQ for an even narrower radio sound."] },
+      { "title": "Bass that keeps its weight", "use": "Movement in the upper harmonics of a bass.",
+        "settings": [["Preset", "Bass Wobble"], ["Range", "120 Hz to 1.8 kHz"], ["AMOUNT", "20 to 30%"]],
+        "steps": ["Raise LOW above the fundamental if the bass loses weight."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["Nothing changes.", "SCRAMBLE AMOUNT is at 0%, or the range covers a part of the spectrum with little energy. Move LOW and HIGH."],
+        ["The low end changed or disappeared.", "Raise LOW above the bass so it stays outside the range."],
+        ["The effect is too strong.", "Lower SCRAMBLE AMOUNT or narrow the range."],
+        ["The words are no longer understandable.", "Use a Gentle Offset preset or keep AMOUNT below about 30%."],
+        ["A saved preset does not load.", "The file must be a TB Scrambler .tbscrambler preset."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [24, 24, 32, 20],
+      "rows": [
+        ["`LOW`", "Low", "20 Hz to 20 kHz", "300 Hz"],
+        ["`HIGH`", "High", "20 Hz to 20 kHz", "4.5 kHz"],
+        ["`SCRAMBLE AMOUNT`", "Scramble Amount", "0 to 100%", "50%"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["2.3.1 · 2026-08-21", "Brought the current LOW, HIGH, and AMOUNT scrambler design and the latest processing build to Windows VST3, and aligned the catalog, VST3, and installer versions at 2.3.1."],
+        ["2.3.0 · 2026-07-30", "Added spacing between the upper-right controls and the effect logo so header elements no longer overlap, and normalised the logo size for small window sizes."]
+      ]
+    } }
+  ]
+}
