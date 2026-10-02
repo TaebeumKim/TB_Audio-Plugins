@@ -25,6 +25,12 @@ This directory contains user-focused PDF manuals for 35 documented plug-ins in 2
 | Vietnamese / Tiếng Việt | VIE | [Browse 35 PDFs](VIE/) |
 | Czech / Čeština | CES | [Browse 35 PDFs](CES/) |
 
-Each language folder contains one current manual per documented plug-in. Every manual begins immediately with the product overview and operating principle, followed by a quick start, key interface sections, expanded control explanations, practical use cases, and common pitfalls. The interface section includes a direct capture of the current plug-in UI; promotional mockups are not used. Numeric control ranges, default-value tables, separate cover mockups, and license text are intentionally omitted so the documents stay focused on audible results and real production decisions. Panel control names remain in English in every translation so they match the plug-in interface exactly.
+Each language folder contains one current manual per documented plug-in.
+
+The English and Korean manuals are generated from [`scripts/manuals`](../scripts/manuals/) and share one layout: a cover and contents, an overview, a quick start, an annotated interface image, control explanations with ranges and defaults, presets and recipes, troubleshooting, a parameter reference with the host automation names, version history, and support and license notes.
+
+The other 18 language editions still use the earlier format. Each of those manuals begins immediately with the product overview and operating principle, followed by a quick start, key interface sections, expanded control explanations, practical use cases, and common pitfalls. The interface section includes a direct capture of the current plug-in UI; promotional mockups are not used. Numeric control ranges, default-value tables, separate cover mockups, and license text are intentionally omitted so the documents stay focused on audible results and real production decisions.
+
+Panel control names remain in English in every language so they match the plug-in interface exactly.
 
 On GitHub, open a language folder, select the required PDF, and use the download button for an individual file. Use **Code > Download ZIP** from the repository page when the entire collection is required.
