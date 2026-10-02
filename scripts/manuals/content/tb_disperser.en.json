@@ -1,0 +1,165 @@
+{
+  "file": "TB_Disperser",
+  "version": "1.3.0",
+  "date": "2026-10-02",
+  "subtitle": "Phase Dispersion",
+  "tagline": "All-pass phase dispersion that stretches a sharp transient into a heavier, frequency-dependent sweep, with a built-in frequency LFO for motion.",
+  "facts": ["All-pass dispersion", "Live group-delay display", "Frequency LFO", "10 factory presets"],
+  "ui": "tb_disperser.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Disperser delays different frequencies by different amounts. A drum hit or synth attack, which normally arrives all at once, is spread into a short sweep, the familiar laser-like zap of phase dispersion." },
+    { "p": "Because it changes when frequencies arrive rather than how loud they are, TB Disperser can make drums, bass, and synth attacks feel longer, heavier, and more animated without adding distortion. A dedicated LFO moves the dispersion frequency for motion without automation." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Chain of all-pass sections whose group delay is concentrated around a chosen frequency",
+      "AMOUNT, FREQUENCY, PINCH, and SPEED to shape the length and focus of the sweep",
+      "Frequency LFO with five shapes, a range of up to ±4 octaves, and a free-running rate",
+      "Live display of the group delay across the spectrum, with a readout at the current LFO frequency",
+      "Ten factory presets with descriptions, plus user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "All-pass sections (per channel)", "Centre and delay from FREQUENCY, PINCH, SPEED", "Section count from AMOUNT", "Optional LFO on frequency", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Disperser 1.3.0 for Windows (VST3). The current macOS build is version 0.1.2 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Disperser on a drum, bass, or synth track. The defaults are `AMOUNT` 70%, `FREQUENCY` 200 Hz, `PINCH` 0%, `+ SPEED` 2.0x, with the LFO off.",
+      "Play the material and move `FREQUENCY` {{5}} to the area where you want the sweep: low values for weight, higher values for a brighter zap.",
+      "Raise `AMOUNT` {{4}} for a stronger, longer dispersion.",
+      "Lower `+ SPEED` {{7}} to stretch the zap into a longer, slower sweep.",
+      "Raise `PINCH` {{6}} to concentrate the ringing around FREQUENCY.",
+      "For motion, choose an LFO `TYPE` {{8}} and set `RANGE` and `RATE`."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_disperser.jpg",
+      "callouts": [
+        { "n": 1, "x": 52.0, "y": 6.7 },
+        { "n": 2, "x": 33.3, "y": 40.0 },
+        { "n": 3, "x": 73.3, "y": 24.7 },
+        { "n": 4, "x": 6.4, "y": 71.7 },
+        { "n": 5, "x": 21.8, "y": 71.7 },
+        { "n": 6, "x": 40.6, "y": 71.7 },
+        { "n": 7, "x": 56.4, "y": 71.7 },
+        { "n": 8, "x": 69.4, "y": 68.6 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset (hold to browse), the Factory and User preset list, Save User Preset, Undo, and Redo."],
+        [2, "LIVE GROUP DELAY", "how much each frequency is delayed, on a log-frequency scale."],
+        [3, "Live readout", "the group delay at the frequency currently produced by the LFO."],
+        [4, "AMOUNT", "how much phase dispersion accumulates."],
+        [5, "FREQUENCY", "where the group delay is concentrated."],
+        [6, "PINCH", "how tightly the ringing gathers around FREQUENCY."],
+        [7, "+ SPEED", "the speed of the dispersion; lower values give a longer zap."],
+        [8, "FREQUENCY LFO", "`TYPE`, `RANGE`, and `RATE` of the frequency modulation."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "h3": "Phase dispersion" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`AMOUNT`", "0 to 100% · 70%", "Sets the amount of accumulated phase dispersion by setting how many all-pass sections are active. Higher values give a stronger, longer sweep."],
+        ["`FREQUENCY`", "20 Hz to 20 kHz · 200 Hz", "Sets the frequency where group delay is concentrated. Low settings add weight; high settings give a bright, metallic zap."],
+        ["`PINCH`", "0 to 100% · 0%", "Concentrates ringing around the selected frequency. At 0% the sections spread over up to ±2 octaves; at 100% they converge into a narrow, ringing focus."],
+        ["`+ SPEED`", "0.25 to 2.0x · 2.0x", "Sets the dispersion speed. Lower values create a longer, slower zap."]
+      ]
+    } },
+    { "h3": "Frequency LFO" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`TYPE`", "Off, Sine, Tri, Saw, Sqr, Rnd · Off", "Turns the LFO off or selects one of five shapes. It is a stepped rotary control."],
+        ["`RANGE`", "0 to 4 oct (shown as ±) · ±1 oct", "Frequency sweep depth in octaves around FREQUENCY. Zero turns modulation off."],
+        ["`RATE`", "0.01 to 10 Hz · 0.25 Hz", "The free-running LFO rate in hertz. It does not follow the host tempo."]
+      ]
+    } },
+    { "note": { "text": "TB Disperser has no dry/wet control. All-pass dispersion changes timing, not level, but if you blend its output with the dry signal on a parallel bus, phase differences can cancel parts of the sound. Check the result in mono." } },
+
+    { "h2": "Reading the display" },
+    { "p": "LIVE GROUP DELAY plots how long each frequency is delayed (vertical axis, from 0 up to seconds) across the spectrum (horizontal axis, 20 Hz to 20 kHz). The peak of the curve sits around FREQUENCY; AMOUNT raises it, PINCH narrows it, and lower SPEED values stretch it." },
+    { "p": "With the LFO running, the marker moves with the modulated frequency, and the readout at the top right shows the group delay at that frequency, for example 3.6 ms @ 898.5 Hz." },
+
+    { "h2": "Presets" },
+    { "p": "Use the arrows {{1}} to step through presets (hold to browse quickly), or open the list to choose a Factory or User preset; Space also opens it. Save User Preset stores the current settings under a name of your choice. Undo and Redo step through parameter and preset changes." },
+    { "table": {
+      "cols": ["Preset", "Group", "Description"],
+      "widths": [24, 15, 61],
+      "rows": [
+        ["Init", "Essentials", "A safe, already audible starting point for phase dispersion."],
+        ["Tight Phase Shape", "Essentials", "Adds a short, light upper-mid phase shape to percussion and synth attacks."],
+        ["Drum Bloom", "Essentials", "Opens drum transients with a practical medium-length bloom."],
+        ["Slow Drum Zap", "Essentials", "Stretches drum attacks into a slow zap."],
+        ["Slow Metallic Bloom", "Essentials", "Uses focused ringing and the slowest dispersion for a metallic showcase."],
+        ["Bass Bloom", "Motion", "Breathes slowly around the bass fundamental without a wide sweep."],
+        ["Synth Drift", "Motion", "Moves a sustained synth smoothly through a broad ten-second triangle cycle."],
+        ["Rising Zap", "Motion", "Creates a directional rising zap that resets for drums and synths."],
+        ["Two Point Pulse", "Motion", "Alternates clearly between two phase centres for a stepped rhythmic pulse."],
+        ["Random Scatter", "Motion", "Holds unpredictable phase centres long enough to make each scatter intentional."]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Laser snare or clap", "use": "A bright, obvious zap on short percussion.",
+        "settings": [["Preset", "Slow Drum Zap"], ["FREQUENCY", "1 to 3 kHz"], ["+ SPEED", "Lower for a longer zap"]],
+        "steps": ["Raise AMOUNT until the zap is clear, then back off so the hit stays tight."] },
+      { "title": "Heavier kick or bass attack", "use": "More weight and length without distortion.",
+        "settings": [["Preset", "Bass Bloom"], ["FREQUENCY", "50 to 150 Hz"], ["AMOUNT", "Start below 70%"]],
+        "steps": ["Low FREQUENCY settings can sound like a wide phase shift; keep AMOUNT moderate."] },
+      { "title": "Moving synth pad", "use": "Slow, evolving phase motion on sustained sounds.",
+        "settings": [["Preset", "Synth Drift"], ["TYPE", "Tri or Sine"], ["RATE", "0.05 to 0.2 Hz"], ["RANGE", "±1 to ±2 oct"]],
+        "steps": ["Start with a small RANGE and slow RATE, then widen."] },
+      { "title": "Rhythmic phase pulse", "use": "A stepped, rhythmic change of colour.",
+        "settings": [["Preset", "Two Point Pulse"], ["TYPE", "Sqr"], ["RATE", "Set by ear against the groove"]],
+        "steps": ["RATE is free-running; adjust it until the steps sit with the music."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The low end sounds smeared or hollow.", "Lower AMOUNT or raise FREQUENCY. Low frequencies are delayed the most."],
+        ["The effect is too subtle.", "Raise AMOUNT, lower + SPEED, or raise PINCH for a more focused ring."],
+        ["The sound rings too much.", "Lower PINCH so the dispersion spreads over a wider range."],
+        ["The LFO does nothing.", "Choose a TYPE other than Off and set RANGE above zero."],
+        ["The LFO is not in time with the song.", "RATE is free-running in hertz; adjust it by ear or automate it."],
+        ["Parts of the sound cancel in mono.", "This happens when the dispersed signal is blended with the dry one. Reduce AMOUNT or avoid parallel blending."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [20, 22, 38, 20],
+      "rows": [
+        ["`AMOUNT`", "Amount", "0 to 100%", "70%"],
+        ["`FREQUENCY`", "Frequency", "20 Hz to 20 kHz", "200 Hz"],
+        ["`PINCH`", "Pinch", "0 to 100%", "0%"],
+        ["`+ SPEED`", "Speed", "0.25 to 2.0x", "2.0x"],
+        ["LFO `TYPE`", "LFO Type", "Off, Sine, Tri, Saw, Sqr, Rnd", "Off"],
+        ["LFO `RANGE`", "LFO Range", "0 to 4 oct", "1 oct"],
+        ["LFO `RATE`", "LFO Rate", "0.01 to 10 Hz", "0.25 Hz"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.3.0 · 2026-07-30", "The plug-in logo and name share one rack header. Previous/next navigation and save/load in the preset control were improved."]
+      ]
+    } }
+  ]
+}

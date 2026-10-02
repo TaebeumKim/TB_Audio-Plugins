@@ -1,0 +1,128 @@
+{
+  "file": "TB_InvertedFlanger",
+  "version": "2.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Inverted Flanger",
+  "tagline": "Phase-inverted modulated delay voices carve hollow, moving notches into the sound, from slow empty-space sweeps to hard metallic motion.",
+  "facts": ["3 inverted delay voices", "Zero latency", "Output waveform display", "6 factory presets"],
+  "ui": "tb_inverted_flanger.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "A classic flanger mixes a slowly moving delayed copy with the original. TB Inverted Flanger flips the copies upside down before mixing, so instead of a bright whoosh you get hollow cancellation: deep notches that sweep through the sound." },
+    { "p": "Three short delay voices, each with its own depth and phase, move together under one LFO. The result ranges from subtle empty-space motion to dramatic sci-fi sweeps on guitars, synths, vocals, and drum loops." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Three phase-inverted delay voices with different base delays, depths, and phases",
+      "DEPTH sweeps the delay between roughly 0.1 and 8.4 ms",
+      "FEEDBACK adds resonance, limited internally to keep it under control",
+      "COLOR sets how deep the inverted notches cut, without changing the dry signal",
+      "MIX blends the inverted comb signal with the dry sound",
+      "No added latency; mono input is processed as stereo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input + feedback", "3 modulated delay voices", "6.8 kHz damping", "Phase-inverted sum, COLOR gain", "MIX with dry", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Inverted Flanger 2.0.0 for Windows (VST3). The current macOS build is version 1.0.2 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Inverted Flanger on a track. The defaults are `MIX` 52%, `DEPTH` 72%, `RATE` 0.34 Hz, `FEEDBACK` 32%, `COLOR` 68%.",
+      "Play the material and set the speed of the sweep with `RATE`.",
+      "Set how far the notches travel with `DEPTH`.",
+      "Raise `FEEDBACK` for a more resonant, jet-like sweep.",
+      "Raise `COLOR` for deeper, more hollow notches.",
+      "Blend the effect with `MIX`."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_inverted_flanger.jpg",
+      "caption": "TB Inverted Flanger 2.0 interface (portfolio image)."
+    } },
+    { "table": {
+      "cols": ["Area", "What it does"],
+      "widths": [24, 76],
+      "rows": [
+        ["Preset bar", "Previous and next factory preset, the PRESET list (CUSTOM after an edit, LOAD USER PRESET... for your files), Save, Undo, and Redo."],
+        ["`OUTPUT WAVEFORM`", "Shows the shape of the inverted modulation. RUNNING appears while the modulation runs."],
+        ["`DEPTH`, `RATE`", "Range and speed of the sweep."],
+        ["`FEEDBACK`, `COLOR`", "Resonance and notch depth."],
+        ["`MIX`", "Balance between the dry sound and the inverted comb signal."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`DEPTH`", "0 to 100% · 72%", "How far the delay is modulated, roughly 0.1 to 8.4 ms. More depth moves the notches across a wider frequency range."],
+        ["`RATE`", "0.03 to 10 Hz · 0.34 Hz", "Speed of the LFO that moves all three delay voices together. Low values give slow sweeps; high values give fast, warbling motion."],
+        ["`FEEDBACK`", "0 to 100% · 32%", "Feeds the output back into the delays for resonance and a stronger jet effect. The engine scales it by 0.9 so it cannot run away."],
+        ["`COLOR`", "0 to 100% · 68%", "Level of the phase-inverted copies, from 0.4 to 1.0 of full gain. Higher values cut deeper notches. The dry signal is not affected."],
+        ["`MIX`", "0 to 100% · 52%", "Blend between the dry sound and the inverted comb signal."]
+      ]
+    } },
+    { "h3": "How the inverted voices work" },
+    { "p": "Each of the three voices starts from a different short base delay (0.24, 0.42, and 0.64 ms) and moves with its own depth and phase. Their outputs are damped above about 6.8 kHz and summed upside down, so wherever a voice lines up with the dry signal, that frequency cancels. As the delays move, the cancellation notches sweep through the spectrum." },
+    { "note": { "text": "TB Inverted Flanger has no output knob and adds no latency. Because it works by cancellation, it can make a sound quieter; match levels before comparing with bypass." } },
+
+    { "h2": "Presets" },
+    { "p": "Step through the factory presets with the arrows beside the preset name, or open the PRESET list. LOAD USER PRESET... opens a .tbifpreset file, and Save stores the current settings as one. The name shows CUSTOM after you change a preset. The second pair of arrows undoes and redoes changes." },
+    { "p": "Factory presets: **Empty Orbit**, **Null Corridor**, **Neon Comb**, **Signal Rift**, **Slow Eclipse**, and **10Hz Scanner**." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Hollow guitar sweep", "use": "Slow, deep motion on sustained guitar or pads.",
+        "settings": [["Preset", "Slow Eclipse"], ["RATE", "0.1 to 0.3 Hz"], ["DEPTH", "70 to 100%"], ["MIX", "50 to 70%"]],
+        "steps": ["Raise COLOR until the hollow character is clear."] },
+      { "title": "Jet sweep on drums", "use": "A dramatic, resonant whoosh on a drum loop.",
+        "settings": [["FEEDBACK", "60 to 90%"], ["RATE", "0.1 to 0.5 Hz"], ["MIX", "40 to 60%"]],
+        "steps": ["Check that the transients still cut through; lower FEEDBACK if they smear."] },
+      { "title": "Fast scanning texture", "use": "Metallic, fast motion for sound design.",
+        "settings": [["Preset", "10Hz Scanner"], ["RATE", "5 to 10 Hz"], ["DEPTH", "Low to medium"]],
+        "steps": ["Lower DEPTH if the pitch wobble becomes distracting."] },
+      { "title": "Subtle space on vocals", "use": "A light sense of movement without obvious flanging.",
+        "settings": [["Preset", "Empty Orbit"], ["MIX", "20 to 35%"], ["FEEDBACK", "Low"]],
+        "steps": ["Compare with bypass at matched level."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The sound got thin or quiet.", "That is the cancellation at work. Lower COLOR or MIX, then match levels in your mixer."],
+        ["The bass disappears.", "Use lower DEPTH on bass-heavy sources and raise RATE slowly."],
+        ["The resonance is too sharp.", "Lower FEEDBACK."],
+        ["The effect is barely audible.", "Raise MIX and COLOR, or raise DEPTH."],
+        ["The mono sum sounds different.", "With high FEEDBACK and COLOR, check the result in mono and on the transients."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 34, 22],
+      "rows": [
+        ["`DEPTH`", "Depth", "0 to 100%", "72%"],
+        ["`RATE`", "Rate", "0.03 to 10 Hz", "0.34 Hz"],
+        ["`FEEDBACK`", "Feedback", "0 to 100%", "32%"],
+        ["`COLOR`", "Color", "0 to 100%", "68%"],
+        ["`MIX`", "Mix", "0 to 100%", "52%"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["2.0.0 · 2026-08-04", "The interface was rebuilt as a warm hardware-style rack with a dedicated output waveform display, and DEPTH, RATE, FEEDBACK, COLOR, and MIX were reorganized into a clearer vertical flow."]
+      ]
+    } }
+  ]
+}

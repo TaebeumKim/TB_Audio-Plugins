@@ -1,0 +1,106 @@
+{
+  "file": "TB_Colorizer",
+  "version": "2.3.1",
+  "date": "2026-10-02",
+  "subtitle": "Tonal Color Transform",
+  "tagline": "Seven repeatable voice colours, each combining pitch, formant, spectral balance, and texture, shaped with one TRANSFORM control.",
+  "facts": ["7 colours", "One TRANSFORM control", "Voice and sound design", "Preset recall"],
+  "ui": "tb_colorizer.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Colorizer changes the character of a voice in one step. Each colour combines pitch, formant, spectral balance, and texture processing into a fixed tonal identity, so you do not have to build a chain of EQ, pitch shifting, formant processing, and distortion." },
+    { "p": "Pick a colour, then set how far the voice moves toward it with `TRANSFORM`. Pink and Blue give familiar higher and lower voice transformations; the other five colours are creative directions for dialogue, singing, streaming, and sound design." },
+    { "note": { "text": "TB Colorizer is a sound-design tool. It is not voice cloning and does not recreate a specific person's voice." } },
+    { "h3": "Key features" },
+    { "ul": [
+      "Seven colours: Pink, Blue, Green, Yellow, Red, Black, and White",
+      "TRANSFORM blends from the source (0%) to the full colour (100%)",
+      "Factory and user presets, with undo and redo",
+      "Works on dialogue, singing, streaming, and sound effects"
+    ] },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Colorizer 2.3.1 for Windows (VST3). The current macOS build is version 1.0.3 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Colorizer on a vocal or dialogue track.",
+      "Click a colour button. Start with `PINK` for a higher voice or `BLUE` for a lower one.",
+      "Turn `TRANSFORM` to set the amount: 0% is the original source, 100% is the full colour.",
+      "Try the other colours on the same passage and keep the one that fits the part.",
+      "Save the result as a user preset if you want to reuse it."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_colorizer.jpg",
+      "caption": "TB Colorizer 2.3 interface (portfolio image)."
+    } },
+    { "table": {
+      "cols": ["Area", "What it does"],
+      "widths": [24, 76],
+      "rows": [
+        ["Preset bar", "Previous and next preset, the preset list (CUSTOM appears after you edit a preset), Save, Undo, and Redo."],
+        ["`COLOR`", "Seven buttons that select the colour. The active colour is marked."],
+        ["`TRANSFORM`", "How strongly the chosen colour reshapes the signal."],
+        ["Footer", "0% SOURCE / 100% COLOR shows how TRANSFORM blends between the original voice and the colour."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range", "What it does"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`COLOR`", "Pink, Blue, Green, Yellow, Red, Black, White", "Chooses the tonal identity. Each colour combines its own pitch, formant, spectral, and texture settings."],
+        ["`TRANSFORM`", "0 to 100%", "Amount of transformation. 0% keeps the source; 100% applies the full colour."]
+      ]
+    } },
+    { "h3": "The colours" },
+    { "table": {
+      "cols": ["Colour", "Direction"],
+      "widths": [18, 82],
+      "rows": [
+        ["Pink", "A familiar higher voice transformation."],
+        ["Blue", "A familiar lower voice transformation."],
+        ["Green, Yellow, Red, Black, White", "Five creative directions for dialogue, singing, streaming, and sound design. Audition each on your own material; their character depends strongly on the source."]
+      ]
+    } },
+    { "tip": { "text": "Lower TRANSFORM to keep more of the original voice; raise it toward 100% for the strongest character." } },
+
+    { "h2": "Presets" },
+    { "p": "Use the arrows to step through presets, or open the list to choose a factory or user preset. Init loads the starting state. Save stores the current colour and TRANSFORM setting as a .tbcolorizerpreset file in the User folder. Undo and Redo step through recent changes." },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The voice sounds artificial.", "Lower TRANSFORM, or try a different colour. Clean, dry recordings give the most natural results."],
+        ["The change is too subtle.", "Raise TRANSFORM toward 100%."],
+        ["The level changed after choosing a colour.", "Some colours change the spectral balance; match the level with your DAW's fader before comparing."],
+        ["A colour I used before is missing.", "Version 2.3 has seven colours; an earlier colour was removed from the current build."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range"],
+      "widths": [22, 26, 52],
+      "rows": [
+        ["`COLOR`", "Color", "Pink, Green, Blue, Yellow, Black, Red, White"],
+        ["`TRANSFORM`", "Transform", "0 to 100%"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["2.3.1 · 2026-08-21", "The latest seven-colour design and current source assets in the Windows VST3 build. Catalog, VST3 module information, and installer versions aligned to 2.3.1."]
+      ]
+    } }
+  ]
+}
