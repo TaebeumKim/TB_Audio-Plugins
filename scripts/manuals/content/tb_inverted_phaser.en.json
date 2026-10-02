@@ -1,0 +1,171 @@
+{
+  "file": "TB_InvertedPhaser",
+  "version": "3.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Inverted Phaser",
+  "tagline": "Subtracts an all-pass-shifted copy from the dry signal for deep, hard-edged cancellation notches that move, park, or break apart.",
+  "facts": ["Up to 12 stages", "5 LFO shapes + jitter", "Phase-response display", "13 factory presets"],
+  "ui": "tb_inverted_phaser.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "A classic phaser adds a phase-shifted copy to the dry signal. TB Inverted Phaser subtracts that copy instead, producing deep cancellation notches with hard, defined edges." },
+    { "p": "You choose how many notches are cut, where they sit, how far apart they are, and how they move. Amount and Mix are independent, so the sound can range from structured motion to an exposed, strongly coloured residue. It works especially well on pads, sustained chords, and harmonic material." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Cascade of up to 12 all-pass stages, subtracted from the dry signal",
+      "CENTER, STAGE COUNT, and SPACING define the notch pattern",
+      "Five LFO shapes plus JITTER for random drift",
+      "RANGE 0% parks the notches as a fixed comb",
+      "Independent AMOUNT and MIX, plus OUTPUT trim",
+      "Display of the input spectrum and the phase response together",
+      "Thirteen factory presets in three banks, with undo and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["LFO moves CENTER", "All-pass cascade (1–12 stages)", "SPACING and FEEDBACK", "Subtract (AMOUNT) from dry (MIX)", "OUTPUT"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Inverted Phaser 3.0.0 for Windows (VST3). The current macOS build is version 1.0.2 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Inverted Phaser on a pad, chord, or other sustained sound. The defaults are `CENTER` 720 Hz, `RATE` 0.35 Hz, `RANGE` 70%, `STAGE COUNT` 6, `SPACING` 35%, `FEEDBACK` 28%, `AMOUNT` 65%, `MIX` 100%.",
+      "Move `CENTER` {{3}} to the part of the sound you want to hollow out.",
+      "Set the speed with `RATE` and the travel with `RANGE` {{7}}.",
+      "Choose how many notches with `STAGE COUNT` {{6}} and how far apart they are with `SPACING` {{8}}.",
+      "Raise `FEEDBACK` {{9}} for sharper, more resonant notch edges.",
+      "Balance `AMOUNT` {{10}} and `MIX` {{11}}, then match the level with `OUTPUT` {{12}}."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_inverted_phaser.jpg",
+      "caption": "Captured from an earlier visual design. Version 3.0 uses a warm hardware-style skin with the same controls in the same places; its preset bar has previous/next arrows, the preset list, Save, Undo, and Redo.",
+      "callouts": [
+        { "n": 1, "x": 51.0, "y": 5.9 },
+        { "n": 2, "x": 50.0, "y": 25.0 },
+        { "n": 3, "x": 4.9, "y": 47.6 },
+        { "n": 4, "x": 4.6, "y": 68.4 },
+        { "n": 5, "x": 11.5, "y": 73.4 },
+        { "n": 6, "x": 34.0, "y": 47.6 },
+        { "n": 7, "x": 52.2, "y": 47.6 },
+        { "n": 8, "x": 37.4, "y": 72.6 },
+        { "n": 9, "x": 49.6, "y": 72.6 },
+        { "n": 10, "x": 76.4, "y": 47.6 },
+        { "n": 11, "x": 70.8, "y": 72.6 },
+        { "n": 12, "x": 83.2, "y": 72.6 }
+      ],
+      "legend": [
+        [1, "Preset bar", "factory presets grouped by bank, your saved presets, Save, and preset navigation."],
+        [2, "INPUT / PHASE RESPONSE", "the input spectrum and the notch pattern on a log 20 Hz–20 kHz scale. Small ticks under the curve show the notch positions."],
+        [3, "CENTER and RATE", "where the pattern is built and how fast it moves."],
+        [4, "TYPE", "the shape of the movement."],
+        [5, "JITTER", "random drift on top of the movement."],
+        [6, "STAGE COUNT", "how many notches are cut."],
+        [7, "RANGE", "how far the notches travel from CENTER."],
+        [8, "SPACING", "the distance between notches."],
+        [9, "FEEDBACK", "resonance and notch sharpness."],
+        [10, "AMOUNT", "depth of the cancellation."],
+        [11, "MIX", "level of the dry signal the copy is subtracted from."],
+        [12, "OUTPUT", "final level trim."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "h3": "Movement" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`CENTER`", "120 Hz to 4 kHz · 720 Hz", "The frequency the notch pattern is built around. Move it to choose which part of the sound is hollowed out."],
+        ["`RATE`", "0.02 to 8 Hz · 0.35 Hz", "How fast the notches travel. Low values drift; high values warble."],
+        ["`TYPE`", "Sine, Triangle, Ramp Up, Ramp Down, Square · Sine", "The shape of the movement. Sine and Triangle glide, Ramp restarts, and Square jumps between two positions."],
+        ["`JITTER`", "0 to 100% · 0%", "Random drift added on top of the movement. Small amounts loosen the motion; large amounts break it up."]
+      ]
+    } },
+    { "h3": "Colour" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`STAGE COUNT`", "1 to 12 · 6", "How many notches are cut. More stages give a denser, more metallic cancellation."],
+        ["`RANGE`", "0 to 100% · 70%", "How far the notches travel from CENTER. At 0% they stay parked and act as a fixed comb."],
+        ["`SPACING`", "0 to 100% · 35%", "The distance between notches in octaves. Narrow is tight and resonant; wide spreads across the spectrum."],
+        ["`FEEDBACK`", "0 to 85% · 28%", "Returns the shifted copy into the cascade. Raises resonance and sharpens the notch edges."]
+      ]
+    } },
+    { "h3": "Mix" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`AMOUNT`", "0 to 100% · 65%", "How much of the phase-shifted copy is subtracted from the dry signal. This is the depth of the cancellation."],
+        ["`MIX`", "0 to 100% · 100%", "Level of the untouched dry signal that AMOUNT is subtracted from. Lower it to leave mostly the cancelled residue."],
+        ["`OUTPUT`", "−12 to +6 dB · 0 dB", "Final level trim, for matching loudness against bypass."]
+      ]
+    } },
+    { "warn": { "text": "Because the effect works by cancellation, it can remove parts of the sound and change the level. Large FEEDBACK and RANGE settings are worth checking in mono." } },
+
+    { "h2": "Presets" },
+    { "p": "Factory presets are grouped in three banks: Moving Notch, Fixed Comb, and Broken. Selecting a preset replaces every value in a single undo step. Save writes every current value to a .tbipreset file in your Documents folder. Undo steps back through parameter and preset changes; Redo steps forward again." },
+    { "p": "Factory presets: **Init**, **Pad Drift**, **Slow Orbit**, **Wide Vortex**, **Fast Warble**, **Ramp Sweeper**, **Thin Air**, **Hollow Glass**, **Static Teeth**, **Metal Rail**, **Square Jolt**, **Broken Motion**, and **Ghost Cancel**." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Slow pad motion", "use": "Gentle, evolving movement on sustained chords.",
+        "settings": [["Preset", "Pad Drift"], ["TYPE", "Sine or Triangle"], ["RATE", "0.05 to 0.3 Hz"], ["STAGE COUNT", "4 to 8"]],
+        "steps": ["Place CENTER in the busiest part of the pad.", "Lower MIX slightly if the result is too hollow."] },
+      { "title": "Fixed metallic comb", "use": "A static, resonant colour instead of movement.",
+        "settings": [["Preset", "Static Teeth or Metal Rail"], ["RANGE", "0%"], ["FEEDBACK", "50 to 80%"], ["SPACING", "Narrow"]],
+        "steps": ["Sweep CENTER by hand to tune the comb to the sound."] },
+      { "title": "Stepped rhythmic jumps", "use": "Movement that switches between two positions.",
+        "settings": [["Preset", "Square Jolt"], ["TYPE", "Square"], ["RATE", "Set by ear against the groove"]],
+        "steps": ["RATE is in hertz; adjust it until the jumps sit with the music."] },
+      { "title": "Exposed residue", "use": "An extreme, filtered texture made from what is cancelled.",
+        "settings": [["Preset", "Ghost Cancel"], ["MIX", "0 to 30%"], ["AMOUNT", "High"]],
+        "steps": ["Raise OUTPUT to make up the level."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The sound became thin or quiet.", "That is the cancellation. Lower AMOUNT, or raise OUTPUT to match the bypassed level."],
+        ["The notches do not move.", "RANGE is at 0%, which parks them as a fixed comb. Raise RANGE."],
+        ["The movement sounds too regular.", "Add a little JITTER."],
+        ["The effect is too harsh or resonant.", "Lower FEEDBACK or widen SPACING."],
+        ["The effect is too subtle.", "Raise AMOUNT, add stages, or move CENTER to a busier part of the sound."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [20, 20, 40, 20],
+      "rows": [
+        ["`CENTER`", "Centre", "120 Hz to 4 kHz", "720 Hz"],
+        ["`RATE`", "Rate", "0.02 to 8 Hz", "0.35 Hz"],
+        ["`TYPE`", "LFO Shape", "Sine, Triangle, Ramp Up, Ramp Down, Square", "Sine"],
+        ["`JITTER`", "Jitter", "0 to 100%", "0%"],
+        ["`STAGE COUNT`", "Stages", "1 to 12", "6"],
+        ["`RANGE`", "Depth", "0 to 100%", "70%"],
+        ["`SPACING`", "Spacing", "0 to 100%", "35%"],
+        ["`FEEDBACK`", "Feedback", "0 to 85%", "28%"],
+        ["`AMOUNT`", "Amount", "0 to 100%", "65%"],
+        ["`MIX`", "Mix", "0 to 100%", "100%"],
+        ["`OUTPUT`", "Output", "−12 to +6 dB", "0 dB"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["3.0.0 · 2026-08-04", "The interface was rebuilt as a warm hardware-style rack with the phase-response display in the main panel, and the movement, colour, and mix controls were reorganized into a compact console layout."]
+      ]
+    } }
+  ]
+}

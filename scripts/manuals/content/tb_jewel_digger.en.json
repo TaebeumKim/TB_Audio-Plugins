@@ -1,0 +1,217 @@
+{
+  "file": "TB_JewelDiggerAndFinder",
+  "version": "1.3.0",
+  "date": "2026-10-02",
+  "subtitle": "Pitch-Aware Resonant Shimmer",
+  "tagline": "A scale-aligned filter bank finds the musical resonances inside a sound and feeds only those into an octave-up crystal grain loop.",
+  "facts": ["10 scales", "Find / Dig filter", "Crystal grain shimmer", "Tempo sync", "9 factory presets"],
+  "ui": "tb_jewel_digger.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Jewel Digger & Finder picks out the harmonic \"jewels\" in a sound. A filter bank tuned to a base note and scale isolates musical resonances, a motion engine moves them in time, and a crystal grain loop turns them into a shimmering layer, an octave up by default." },
+    { "p": "Unlike a reverb that washes over everything, the shimmer grows only from the notes you select, so it stays in key with the music. Use it on pads, guitars, piano, vocal tails, field recordings, and ambience." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Scale-aligned band-pass filters: base note C0–C8, ten scales, density up to 24 bands",
+      "Two filter modes: FIND lifts the chosen bands, DIG carves into them",
+      "Six Shovel materials that change the resonant character",
+      "Ten motion types, free rate or tempo-synced divisions, motion depth, and randomness",
+      "Crystal grain loop with size, pitch, envelope, delay, feedback, damping, spread, and reverse chance",
+      "Crystal Only mode, low cut, mix, and output",
+      "Display of the filter response on a note scale"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Scale, Motion, Base Note → target pitches", "FIND or DIG band-pass filters (Q, density)", "Crystal grain delay", "Feedback, damping, stereo spread", "Mix and output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Jewel Digger & Finder 1.3.0 for Windows (VST3). The current macOS build is version 1.0.2 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert the plug-in on a pad, guitar, piano, or ambience track.",
+      "Set `Base Note` {{3}} and `Scale` {{4}} to the key of the music.",
+      "Keep `Amount` and `Q` {{6}} low at first, then raise them until the chosen notes stand out.",
+      "Choose a `Motion` type and set `Rate` {{7}}; start slow.",
+      "Raise `Crystal Mix` and `Crystal Send` in CRYSTALLIZING {{9}} to grow the shimmer layer.",
+      "Balance the result with `Mix` and `Output` {{11}}."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_jewel_digger.jpg",
+      "callouts": [
+        { "n": 1, "x": 45.0, "y": 5.2 },
+        { "n": 2, "x": 18.3, "y": 16.4 },
+        { "n": 3, "x": 3.0, "y": 32.2 },
+        { "n": 4, "x": 2.0, "y": 39.5 },
+        { "n": 5, "x": 35.2, "y": 49.5 },
+        { "n": 6, "x": 3.4, "y": 57.4 },
+        { "n": 7, "x": 3.2, "y": 73.6 },
+        { "n": 8, "x": 2.0, "y": 93.7 },
+        { "n": 9, "x": 50.5, "y": 29.1 },
+        { "n": 10, "x": 64.5, "y": 84.5 },
+        { "n": 11, "x": 95.3, "y": 29.1 }
+      ],
+      "legend": [
+        [1, "Preset bar", "the preset list, Save, Load, the current filter mode, Undo, and Redo."],
+        [2, "Response display", "the filter response on a note scale (C0–C8), the base note, and the current motion offset (Move)."],
+        [3, "Base Note", "the root of the filter bank."],
+        [4, "Scale, Shovel, Motion", "which notes are used, the material character, and how the target moves."],
+        [5, "MODE", "Find or Dig."],
+        [6, "Amount, Q, Density", "filter strength, resonance, and number of bands."],
+        [7, "Rate, Sync, Motion Depth, Random", "speed and range of the motion."],
+        [8, "Low Cut", "keeps the low end out of the processed signal."],
+        [9, "CRYSTALLIZING", "the crystal grain loop."],
+        [10, "Crystal Only", "hear only the crystal layer, without the filter path."],
+        [11, "MIX / OUTPUT", "final blend and level."]
+      ]
+    } },
+
+    { "h2": "Filtering" },
+    { "p": "The filter bank places band-pass filters on the notes of the chosen scale, starting from Base Note. FIND lifts those bands so the chosen notes ring out; DIG cuts into them for a carved, inverted character." },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [20, 26, 54],
+      "rows": [
+        ["`Base Note`", "C0 to C8 (MIDI 12–108) · A3", "The root note of the filter bank."],
+        ["`Scale`", "Chromatic, Minor, Major, Minor 7, Major 7, Augmented, Diminished, Pentatonic Minor, Pentatonic Major, Mixolydian · Chromatic", "Which notes receive a filter band."],
+        ["`Shovel`", "Crystal, Hollow, Bow, Hammer, Metal, Dirt · Crystal", "The material character of the resonance."],
+        ["MODE `Find` / `Dig`", "Find, Dig · Find", "Find emphasizes the selected bands; Dig cuts into them."],
+        ["`Amount`", "0 to 100% · 35%", "Strength of the Find or Dig filtering."],
+        ["`Q`", "0.35 to 24 · 6", "Resonance of each band. High values ring like tuned strings."],
+        ["`Density`", "1 to 24 · 12", "Number of filter bands."]
+      ]
+    } },
+    { "h3": "Motion" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [20, 26, 54],
+      "rows": [
+        ["`Motion`", "Still, Arp Up, Arp Down, Ramp Up, Ramp Down, Sine, Square, Triangle, Musical Random, Chaos · Arp Up", "How the target pitches move: not at all, stepping through the scale, sweeping, or randomly."],
+        ["`Rate`", "0.02 to 64 Hz · 0.5 Hz", "Motion speed when Sync is off."],
+        ["`Sync`", "Off, On · Off", "Locks the motion to the host tempo using Division."],
+        ["Division", "1/64 to 1/1 · 1/4", "Note value for synced motion."],
+        ["`Motion Depth`", "0 to 24 st · 7 st", "How far the targets move, in semitones."],
+        ["`Random`", "0 to 100% · 50%", "Amount of randomness. It appears dimmed when the selected Motion does not use it."]
+      ]
+    } },
+    { "note": { "text": "Synced motion follows the host tempo between 20 and 320 BPM." } },
+
+    { "h2": "Crystallizing" },
+    { "p": "The crystal stage is a grain delay loop that receives the filtered notes, pitches them (an octave up by default), and feeds them back to build a shimmering layer above the source." },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [20, 26, 54],
+      "rows": [
+        ["`Crystal Send`", "0 to 100% · 80%", "How much of the filtered signal enters the crystal loop."],
+        ["`Crystal Mix`", "0 to 100% · 35%", "Level of the crystal layer in the output."],
+        ["`Pitch`", "−24 to +24 st · +12 st", "Pitch of the grains. +12 st is one octave up."],
+        ["`Size`", "15 to 400 ms · 120 ms", "Grain length."],
+        ["`Attack`", "1 to 75% of Size · 35%", "Grain fade-in, shown in milliseconds (42 ms at the default Size)."],
+        ["`Decay`", "1 to 95% of Size · 65%", "Grain fade-out, shown in milliseconds (78 ms at the default Size)."],
+        ["`Delay`", "0 to 1000 ms · 140 ms", "Delay before the grains repeat."],
+        ["`Feedback`", "0 to 100% · 45%", "How much of the crystal output is fed back. High values build long, growing tails; the loop is soft-clipped to stay controlled."],
+        ["`Damp`", "0 to 100% · 45%", "High-frequency damping in the loop. Higher values give darker, softer tails."],
+        ["`Spread`", "0 to 100% · 60%", "Stereo spread of the crystal layer."],
+        ["`Reverse Chance`", "0 to 100% · 0%", "Probability that a grain plays backwards."],
+        ["`Crystal Only`", "Off, On · Off", "Turns off the filter path so only the crystal layer is heard."]
+      ]
+    } },
+    { "h2": "Mix and output" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [20, 26, 54],
+      "rows": [
+        ["`Mix`", "0 to 100% · 100%", "Balance between the dry signal and the processed signal."],
+        ["`Low Cut`", "Off, On · Off", "Keeps the low end out of the processed signal."],
+        ["`Output`", "−18 to +6 dB · 0 dB", "Final output level."]
+      ]
+    } },
+    { "warn": { "text": "High Feedback with long Delay and Size can build up a lot of energy and raise peaks and CPU load. The crystal loop has a fixed buffer of about ten seconds." } },
+
+    { "h2": "Presets" },
+    { "p": "Choose a preset from the PRESET list, step through factory presets, or use LOAD USER PRESET... to open a .tbjewel file. Save stores the current settings. The list shows CUSTOM after you edit a preset; Undo and Redo step through changes." },
+    { "p": "Factory presets: **Initialize**, **Harmonic Lantern**, **Amber Drill**, **Frozen Constellation**, **Phase Dust**, **Reverse Shards**, **Octave Rain**, **Cathedral Shimmer**, and **Fifth Halo**." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "In-key shimmer on a pad", "use": "A glowing octave layer that follows the harmony.",
+        "settings": [["Preset", "Cathedral Shimmer"], ["Scale / Base Note", "Match the song key"], ["Pitch", "+12 st"], ["Crystal Mix", "30 to 50%"]],
+        "steps": ["Raise Feedback slowly until the tail sustains between chords."] },
+      { "title": "Arpeggiated resonances", "use": "Rhythmic, pitched sparkle from a sustained sound.",
+        "settings": [["Motion", "Arp Up or Arp Down"], ["Sync", "On, Division 1/8 or 1/16"], ["Q", "8 to 16"]],
+        "steps": ["Lower Density for clearer, more separate notes."] },
+      { "title": "Fifth-interval halo", "use": "An open, harmonically rich layer above guitars or piano.",
+        "settings": [["Preset", "Fifth Halo"], ["Pitch", "+7 st"], ["Spread", "60 to 80%"]],
+        "steps": ["Check that the layer stays in key with the chords."] },
+      { "title": "Reverse crystal texture", "use": "Backwards, glassy grains for ambience and transitions.",
+        "settings": [["Preset", "Reverse Shards"], ["Reverse Chance", "40 to 80%"], ["Crystal Only", "On"]],
+        "steps": ["Blend back with Mix if the texture should sit under the source."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The shimmer clashes with the music.", "Set Base Note and Scale to the key of the song, or use Still motion."],
+        ["The low end gets muddy.", "Switch on Low Cut, or raise the Base Note."],
+        ["The tail keeps growing.", "Lower Feedback, shorten Delay, or raise Damp."],
+        ["The filter sounds too thin or whistling.", "Lower Q or Amount, or switch from Dig to Find."],
+        ["Random has no effect.", "It is used only by Motion types that include randomness."],
+        ["Synced motion does not follow the song.", "Make sure Sync is on and the host is playing; tempos outside 20–320 BPM are clamped."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [20, 20, 42, 18],
+      "rows": [
+        { "group": "Filtering" },
+        ["`Base Note`", "Base Note", "MIDI 12 to 108 (C0–C8)", "57 (A3)"],
+        ["`Scale`", "Scale", "10 scales", "Chromatic"],
+        ["`Shovel`", "Shovel", "Crystal, Hollow, Bow, Hammer, Metal, Dirt", "Crystal"],
+        ["MODE", "Filter", "Find, Dig", "Find"],
+        ["`Amount`", "Amount", "0 to 1", "0.35"],
+        ["`Q`", "Q", "0.35 to 24", "6"],
+        ["`Density`", "Density", "1 to 24", "12"],
+        { "group": "Motion" },
+        ["`Motion`", "Motion", "10 types", "Arp Up"],
+        ["`Rate`", "Rate", "0.02 to 64 Hz", "0.5 Hz"],
+        ["`Sync`", "Rate Sync", "Off, On", "Off"],
+        ["Division", "Division", "1/64 to 1/1", "1/4"],
+        ["`Motion Depth`", "Motion Depth", "0 to 24 st", "7 st"],
+        ["`Random`", "Random", "0 to 1", "0.5"],
+        { "group": "Crystallizing" },
+        ["`Crystal Send`", "Crystal Send", "0 to 1", "0.8"],
+        ["`Crystal Mix`", "Crystal Mix", "0 to 1", "0.35"],
+        ["`Pitch`", "Pitch", "−24 to +24 st", "+12 st"],
+        ["`Size`", "Grain Size", "15 to 400 ms", "120 ms"],
+        ["`Attack`", "Grain Attack", "0.01 to 0.75", "0.35"],
+        ["`Decay`", "Grain Decay", "0.01 to 0.95", "0.65"],
+        ["`Delay`", "Grain Delay", "0 to 1000 ms", "140 ms"],
+        ["`Feedback`", "Grain Feedback", "0 to 100%", "45%"],
+        ["`Damp`", "Crystal Damp", "0 to 1", "0.45"],
+        ["`Spread`", "Crystal Spread", "0 to 1", "0.6"],
+        ["`Reverse Chance`", "Reverse Chance", "0 to 100%", "0%"],
+        ["`Crystal Only`", "Crystal Only", "Off, On", "Off"],
+        { "group": "Mix and output" },
+        ["`Mix`", "Mix", "0 to 1", "1"],
+        ["`Low Cut`", "Base Low Cut", "Off, On", "Off"],
+        ["`Output`", "Output", "−18 to +6 dB", "0 dB"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.3.0 · 2026-07-30", "The plug-in logo and name share one rack header. Previous/next navigation and save/load in the preset control were improved."]
+      ]
+    } }
+  ]
+}
