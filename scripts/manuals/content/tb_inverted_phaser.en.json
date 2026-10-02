@@ -120,7 +120,7 @@
         "steps": ["Sweep CENTER by hand to tune the comb to the sound."] },
       { "title": "Stepped rhythmic jumps", "use": "Movement that switches between two positions.",
         "settings": [["Preset", "Square Jolt"], ["TYPE", "Square"], ["RATE", "Set by ear against the groove"]],
-        "steps": ["RATE is in hertz; adjust it until the jumps sit with the music."] },
+        "steps": ["RATE is in hertz; adjust it to match the music."] },
       { "title": "Exposed residue", "use": "An extreme, filtered texture made from what is cancelled.",
         "settings": [["Preset", "Ghost Cancel"], ["MIX", "0 to 30%"], ["AMOUNT", "High"]],
         "steps": ["Raise OUTPUT to make up the level."] }
