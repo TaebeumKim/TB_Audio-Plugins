@@ -1,0 +1,249 @@
+{
+  "file": "TB_MultiBandCompressor",
+  "version": "1.0.2",
+  "date": "2026-10-02",
+  "subtitle": "Four-Band Dynamics",
+  "tagline": "자유롭게 배치하는 네 개의 밴드가 필요한 곳만 압축하거나 확장합니다. 외부 사이드체인, Mid/Side 처리, 지연 없는 처리나 선형 위상 처리를 고를 수 있습니다.",
+  "facts": ["자유 배치 다이내믹 밴드 4개", "압축 또는 확장", "Stereo, Mid, Side", "팩토리 프리셋 20종"],
+  "ui": "tb_multiband_compressor.jpg",
+  "body": [
+    { "h2": "개요" },
+    { "lead": "TB Multiband Compressor는 스펙트럼 어디에나 놓을 수 있는 다이내믹 밴드 네 개를 제공합니다. 크로스오버로 신호 전체를 나누는 방식과 달리, 각 밴드는 자기 범위에서만 동작하고 나머지 스펙트럼은 그대로 지나갑니다. 밴드 사이의 빈틈과 겹침도 허용됩니다." },
+    { "p": "각 밴드는 압축하거나 확장하며, 부호가 있는 `RANGE`가 방향과 최대 변화량을 정합니다. 밴드는 자기 범위, 별도의 디텍터 범위, 외부 사이드체인 중 하나를 듣고, 스테레오 신호, Mid, Side 중 하나를 처리할 수 있습니다. `PROCESSING`은 지연 없는 Dynamic 구조와 선형 위상 마스터링 구조를 전환합니다." },
+    { "h3": "주요 기능" },
+    { "ul": [
+      "30 Hz ~ 18 kHz에 자유롭게 놓고 폭을 0.25 ~ 4옥타브로 정하는 밴드 4개",
+      "밴드별 압축 또는 확장. RANGE의 부호가 아래쪽·위쪽 동작을 정함",
+      "밴드별 스레숄드, 레이쇼, 니, 어택, 릴리스, 밴드 출력",
+      "내부 또는 공유 외부 사이드체인, 밴드를 따르거나 따로 정하는 디텍터 범위",
+      "밴드별 Stereo, Mid, Side 처리와 스테레오 링크 조절",
+      "DYNAMIC(지연 없음) 또는 LINEAR 위상, 2x ~ 8x 오버샘플링, 0 ~ 20 ms 룩어헤드",
+      "입력 스펙트럼과 Delta Listen을 갖춘 대화형 밴드 그래프",
+      "팩토리 프리셋 20종, 사용자 프리셋, 실행 취소와 다시 실행"
+    ] },
+    { "h3": "신호 흐름" },
+    { "flow": { "steps": ["입력", "밴드 디텍터(내부 또는 사이드체인)", "밴드별 게인(THRESHOLD, RANGE, RATIO, KNEE)", "ATTACK, RELEASE, 스테레오 링크, 채널 모드", "밴드 출력과 MIX", "출력"] } },
+    { "note": { "title": "이 설명서에 대해", "text": [
+      "이 설명서는 Windows용 TB Multiband Compressor 1.0.2(VST3)를 기준으로 합니다. 현재 macOS 빌드(AU, VST3)는 1.0.1 버전이며 다를 수 있습니다."
+    ] } },
+
+    { "h2": "빠른 시작" },
+    { "ol": [
+      "트랙, 버스, 마스터에 TB Multiband Compressor를 넣습니다. Init은 120 Hz, 1.2 kHz, 7 kHz의 밴드 1 ~ 3을 가벼운 압축으로 켜고, 밴드 4는 꺼 둡니다.",
+      "BAND 버튼 {{4}}이나 그래프 {{3}}에서 밴드를 눌러 고릅니다. 노드를 드래그해 주파수와 범위를, 색이 있는 가장자리를 드래그해 폭을 정합니다.",
+      "`THRESHOLD`, `RANGE`, `RATIO` {{9}}를 정한 뒤 `ATTACK`과 `RELEASE`를 정합니다.",
+      "`DELTA` {{7}}를 켜서 밴드가 바꾸는 소리만 들어 보고 다시 끕니다.",
+      "`MIX` {{14}}를 정하고 `BYPASS` {{10}}와 비교합니다."
+    ] },
+
+    { "h2": "화면 구성" },
+    { "ui": {
+      "image": "tb_multiband_compressor.jpg",
+      "caption": "Broad Control 프리셋에서 밴드 1을 고른 TB Multiband Compressor 1.0 화면.",
+      "callouts": [
+        { "n": 1, "x": 35.6, "y": 3.4 },
+        { "n": 2, "x": 88.0, "y": 11.6 },
+        { "n": 3, "x": 42.0, "y": 24.2 },
+        { "n": 4, "x": 6.0, "y": 67.3 },
+        { "n": 5, "x": 38.8, "y": 63.4 },
+        { "n": 6, "x": 52.3, "y": 63.4 },
+        { "n": 7, "x": 65.2, "y": 63.4 },
+        { "n": 8, "x": 80.7, "y": 63.4 },
+        { "n": 9, "x": 6.0, "y": 77.0 },
+        { "n": 10, "x": 6.0, "y": 88.4 },
+        { "n": 11, "x": 18.7, "y": 88.4 },
+        { "n": 12, "x": 37.2, "y": 88.4 },
+        { "n": 13, "x": 58.3, "y": 88.4 },
+        { "n": 14, "x": 83.3, "y": 88.4 }
+      ],
+      "legend": [
+        [1, "프리셋 바", "이전/다음 프리셋(누르고 있으면 계속 넘김), 프리셋 목록, 저장, 실행 취소, 다시 실행."],
+        [2, "ANALYZER", "입력 스펙트럼을 보이거나 숨깁니다."],
+        [3, "밴드 그래프", "입력 스펙트럼, 밴드 노드, 색이 있는 밴드 가장자리, 응답 곡선."],
+        [4, "BAND 1–4, BAND ON", "밴드를 고르고 켜거나 끕니다."],
+        [5, "COMP / EXPAND", "밴드의 다이내믹 모드."],
+        [6, "SIDECHAIN", "내부 또는 외부 디텍터 소스."],
+        [7, "DELTA", "밴드의 웻 빼기 드라이 모니터를 켜 둡니다."],
+        [8, "채널 모드", "Stereo, Mid, Side."],
+        [9, "밴드 조절부", "FREQUENCY, WIDTH, THRESHOLD, RANGE, RATIO, KNEE, ATTACK, RELEASE."],
+        [10, "BYPASS", "전체 바이패스."],
+        [11, "PROCESSING", "DYNAMIC 또는 LINEAR."],
+        [12, "OVERSAMPLING", "OFF, 2X, 4X, 8X."],
+        [13, "LOOKAHEAD / LAT", "룩어헤드 시간. 표시는 전체 지연을 샘플로 보여 줍니다."],
+        [14, "MIX", "전체 드라이/웻."]
+      ]
+    } },
+    { "h3": "밴드 그래프 다루기" },
+    { "ul": [
+      "밴드를 눌러 고르고, 빈 곳을 더블클릭하면 그 자리에 밴드를 켭니다.",
+      "노드를 드래그해 밴드의 주파수와 범위를 정합니다.",
+      "색이 있는 밴드 가장자리를 드래그하거나 노드 위에서 마우스 휠을 굴려 폭을 정합니다.",
+      "밴드 노드에서 마우스 오른쪽 버튼을 누르고 있으면 그동안 Delta Listen이 켜집니다. 누른 채 옆으로 드래그하면 들으면서 밴드를 옮기고, 놓으면 멈춥니다.",
+      "값 상자를 더블클릭하면 정확한 값을 입력할 수 있습니다."
+    ] },
+
+    { "h2": "조절부" },
+    { "h3": "밴드" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [17, 25, 58],
+      "rows": [
+        ["`BAND ON`", "Off, On · 밴드 1 ~ 3 켜짐, 밴드 4 꺼짐", "다른 밴드는 그대로 두고 고른 밴드를 켭니다."],
+        ["`FREQUENCY`", "30 Hz ~ 18 kHz · 120 Hz, 1.2 kHz, 7 kHz, 12 kHz", "밴드의 중심 주파수입니다."],
+        ["`WIDTH`", "0.25 ~ 4 oct · 1.5 oct", "밴드의 폭(옥타브)입니다."],
+        ["`THRESHOLD`", "−60 ~ 0 dB · −18 dB", "디텍터 스레숄드입니다."],
+        ["`RANGE`", "−48 ~ +12 dB · −3 dB", "부호가 있는 최대 게인 변화입니다. 부호가 방향을 정해, 음수는 아래쪽, 양수는 위쪽으로 동작합니다."],
+        ["`RATIO`", "1:1 ~ 20:1 · 2:1", "압축 또는 확장 비율입니다."],
+        ["`KNEE`", "0 ~ 18 dB · 6 dB", "소프트 니의 폭입니다."],
+        ["`ATTACK`", "0.5 ~ 200 ms · 15 ms", "디텍터 어택 시간입니다."],
+        ["`RELEASE`", "20 ~ 2000 ms · 180 ms", "디텍터 릴리스 시간입니다."],
+        ["`COMP` / `EXPAND`", "Compress, Expand · Compress", "밴드의 압축 또는 확장을 고릅니다."],
+        ["`SIDECHAIN`", "Off, On · Off", "Off는 메인 입력을 밴드의 디텍터로 씁니다. On은 호스트의 공유 보조 사이드체인 입력을 씁니다. 연결된 입력이 없으면 패널에 NO SC INPUT이 표시됩니다."],
+        ["채널 모드", "Stereo, Mid, Side · Stereo", "스테레오 신호, Mid, Side 중 하나를 처리합니다. 모노 호스트에서는 Stereo로 동작합니다."],
+        ["`DELTA`", "Off, On · Off", "밴드의 웻 빼기 드라이 모니터를 켜 두어 밴드가 바꾸는 소리만 듣게 합니다. 저장되거나 오토메이션되지 않습니다."]
+      ]
+    } },
+    { "p": "각 밴드에는 다음 호스트 파라미터도 있습니다. 프리셋과 프로젝트에 저장되지만 위의 패널에는 나타나지 않습니다." },
+    { "table": {
+      "cols": ["호스트 파라미터", "범위 · 기본값", "동작"],
+      "widths": [22, 25, 53],
+      "rows": [
+        ["Band Output", "−18 ~ +18 dB · 0 dB", "밴드의 고정 출력 게인입니다."],
+        ["Detect", "BAND, FREE · BAND", "BAND는 디텍터가 밴드 자신의 범위를 따르고, FREE는 Detector Frequency와 Detector Bandwidth를 씁니다."],
+        ["Detector Frequency", "30 Hz ~ 18 kHz · 밴드와 같음", "FREE 모드의 디텍터 중심 주파수입니다."],
+        ["Detector Bandwidth", "0.25 ~ 4 oct · 1.5 oct", "FREE 모드의 디텍터 폭입니다."],
+        ["Stereo Link", "0 ~ 100% · 100%", "두 채널이 하나의 디텍터를 얼마나 함께 쓰는지 정합니다."],
+        ["Audition", "Off, On · Off", "모니터링을 위한 밴드 오디션입니다."]
+      ]
+    } },
+    { "h3": "전체" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [17, 25, 58],
+      "rows": [
+        ["`PROCESSING`", "DYNAMIC, LINEAR · DYNAMIC", "DYNAMIC은 지연 없는 밴드 구조입니다. LINEAR는 FIR 지연이 더해지고 프리링잉이 생길 수 있는 선형 위상 마스터링 구조입니다."],
+        ["`OVERSAMPLING`", "OFF, 2X, 4X, 8X · OFF", "다이내믹 경로를 오버샘플링합니다. 높을수록 지연과 CPU 사용이 늘어납니다."],
+        ["`LOOKAHEAD`", "0 ~ 20 ms · 0 ms", "게인 동작을 늦춰 디텍터가 소리보다 먼저 반응하게 합니다. 보고하는 지연이 바뀝니다."],
+        ["`MIX`", "0 ~ 100% · 100%", "처리된 신호와 원래 입력을 그대로 섞습니다."],
+        ["Output(호스트 파라미터)", "−18 ~ +18 dB · 0 dB", "최종 출력 게인입니다."],
+        ["`BYPASS`", "Off, On · Off", "호스트가 인식하는 전체 바이패스입니다."]
+      ]
+    } },
+    { "note": {"title": "지연", "text": "OVERSAMPLING OFF, LOOKAHEAD 0 ms인 DYNAMIC만 지연이 없습니다. LOOKAHEAD / LAT 표시는 현재 전체 지연을 샘플로 보여 줍니다. PROCESSING, OVERSAMPLING, LOOKAHEAD는 바꾸면 보고하는 지연이 바뀌므로 오토메이션되지 않습니다."} },
+    { "pagebreak": true },
+
+    { "h2": "프리셋" },
+    { "p": "화살표로 프리셋을 넘기거나(누르고 있으면 계속 넘어감), 목록을 열어 팩토리 프리셋이나 사용자 프리셋을 고릅니다. 저장은 현재 설정을 .tbmbc 사용자 프리셋으로 저장합니다. 실행 취소와 다시 실행으로 최근 편집을 오갈 수 있습니다. 표의 밴드 목록은 켜진 밴드를, PROCESSING은 위상 모드, 오버샘플링, 룩어헤드를 보여 줍니다." },
+    { "table": {
+      "compact": true,
+      "cols": ["프리셋", "켜진 밴드", "PROCESSING", "MIX", "참고"],
+      "widths": [19, 27, 19, 8, 27],
+      "rows": [
+        {"group": "START"},
+        ["Init", "120 Hz, 1.2 kHz, 7 kHz", "DYNAMIC · OFF · 0 ms", "100%", "—"],
+        ["Gentle Balance", "150 Hz, 1.2 kHz, 6.5 kHz", "DYNAMIC · OFF · 0 ms", "80%", "—"],
+        ["Broad Control", "90 Hz, 550 Hz, 2.8 kHz, 10.5 kHz", "DYNAMIC · OFF · 0 ms", "100%", "—"],
+        {"group": "SOURCE"},
+        ["Vocal Focus", "140 Hz, 1.8 kHz, 6.8 kHz", "DYNAMIC · 2X · 2 ms", "100%", "양수 RANGE: 2; Mid: 1–3"],
+        ["Bass Foundation", "70 Hz, 700 Hz", "DYNAMIC · OFF · 0 ms", "100%", "양수 RANGE: 2; Mid: 1–2"],
+        ["Drum Tamer", "80 Hz, 350 Hz, 3.2 kHz, 10 kHz", "DYNAMIC · 4X · 3 ms", "100%", "—"],
+        ["Guitar Smooth", "120 Hz, 2.5 kHz, 5.5 kHz, 10 kHz", "DYNAMIC · 2X · 2 ms", "100%", "Mid: 1–2; Side: 4"],
+        ["Keys Space", "90 Hz, 700 Hz, 3.5 kHz, 11 kHz", "DYNAMIC · 4X · 1 ms", "100%", "Expand: 3–4; 양수 RANGE: 3–4; Mid: 1, 3; Side: 4"],
+        {"group": "BUS"},
+        ["Mix Bus Balance", "100 Hz, 700 Hz, 3.2 kHz, 11 kHz", "DYNAMIC · 2X · 1 ms", "90%", "Mid: 1–2; Side: 4"],
+        ["Drum Bus Glue", "90 Hz, 500 Hz, 3.5 kHz, 10.5 kHz", "DYNAMIC · OFF · 0 ms", "90%", "—"],
+        ["Mastering Touch", "90 Hz, 600 Hz, 3.5 kHz, 12 kHz", "LINEAR · 2X · 5 ms", "100%", "Mid: 1; Side: 4"],
+        ["Parallel Drum Punch", "75 Hz, 250 Hz, 3.2 kHz, 9.5 kHz", "DYNAMIC · 8X · 1.5 ms", "65%", "양수 RANGE: 1, 3, 4; Mid: 1; Side: 4"],
+        {"group": "MOTION"},
+        ["Kick Duck", "90 Hz", "DYNAMIC · OFF · 3 ms", "100%", "사이드체인: 1"],
+        ["Rhythmic Pump", "100 Hz, 800 Hz, 5 kHz", "DYNAMIC · OFF · 0 ms", "100%", "사이드체인: 1–3"],
+        ["Transient Lift", "100 Hz, 2.2 kHz, 8 kHz", "DYNAMIC · 4X · 1 ms", "100%", "양수 RANGE: 1–3; Mid: 1–2; Side: 3"],
+        {"group": "MASTER"},
+        ["Transparent Master", "70 Hz, 450 Hz, 3 kHz, 11 kHz", "LINEAR · 4X · 5 ms", "100%", "Mid: 1–2; Side: 4"],
+        ["Loudness Guard", "70 Hz, 350 Hz, 2.8 kHz, 8.5 kHz", "DYNAMIC · 8X · 10 ms", "100%", "Mid: 1–2"],
+        ["De-Harsh Master", "2.2 kHz, 4.2 kHz, 7.2 kHz, 12 kHz", "LINEAR · 8X · 8 ms", "100%", "Mid: 1–2; Side: 3–4"],
+        ["Low End Anchor", "48 Hz, 105 Hz, 250 Hz", "LINEAR · 4X · 6 ms", "100%", "Mid: 1–2"],
+        ["Stereo Focus", "90 Hz, 650 Hz, 3.5 kHz, 10.5 kHz", "LINEAR · 4X · 5 ms", "100%", "Mid: 2; Side: 1, 4"]
+      ]
+    } },
+    { "p": "Kick Duck과 Rhythmic Pump는 외부 사이드체인을 쓰므로, 킥 드럼 같은 키 신호를 플러그인의 사이드체인 입력으로 보내세요." },
+
+    { "h2": "작업 예시" },
+    { "p": "자주 하는 작업의 출발점입니다. 귀로 조정하세요." },
+    { "recipes": [
+      { "title": "보컬 정리", "use": "보컬의 열린 느낌은 두고 웅웅거림과 거친 소리를 줄임.",
+        "settings": [["프리셋", "Vocal Focus"], ["THRESHOLD", "−26 ~ −20 dB"]],
+        "steps": ["문제 대역에 놓인 밴드를 고르고 WIDTH를 좁힌 뒤, DELTA로 무엇이 빠지는지 들어 봅니다."] },
+      { "title": "킥과 베이스", "use": "킥이 칠 때마다 베이스의 저역을 덕킹.",
+        "settings": [["프리셋", "Kick Duck"], ["SIDECHAIN", "On"]],
+        "steps": ["베이스에 넣고 킥을 사이드체인 입력으로 보냅니다."] },
+      { "title": "부드러운 마스터링", "use": "전체 믹스를 투명하게, 선형 위상으로 제어.",
+        "settings": [["프리셋", "Transparent Master"], ["PROCESSING", "LINEAR"]],
+        "steps": ["RANGE를 작게 유지합니다. 밴드마다 1 dB 이하면 충분할 때가 많습니다."] },
+      { "title": "단단한 스테레오 저역", "use": "믹스의 저역 Side 성분 줄이기.",
+        "settings": [["프리셋", "Stereo Focus"], ["채널 모드(밴드 1)", "Side"]],
+        "steps": ["밴드 1의 RANGE를 정하면서 모노와 스테레오로 들어 봅니다."] }
+    ] },
+
+    { "h2": "팁과 문제 해결" },
+    { "table": {
+      "cols": ["증상", "확인할 점"],
+      "widths": [36, 64],
+      "rows": [
+        ["사이드체인 프리셋이 아무 일도 하지 않는다.", "플러그인에 키 신호가 들어오지 않습니다. 사이드체인 입력으로 보내세요. 그렇지 않으면 패널에 NO SC INPUT이 표시됩니다."],
+        ["밴드가 줄이지 않고 키운다.", "RANGE가 양수입니다. 아래쪽으로 동작하게 하려면 음수로 바꾸세요."],
+        ["트랙이 다른 트랙보다 늦다.", "LINEAR, OVERSAMPLING, LOOKAHEAD는 지연을 더합니다. LOOKAHEAD / LAT를 확인하고 지연 보정을 켜세요."],
+        ["트랜지언트 앞에 부드러운 프리에코가 생긴다.", "LINEAR 위상은 프리링잉이 생길 수 있습니다. 드럼에는 DYNAMIC을 쓰세요."],
+        ["밴드가 무엇을 하는지 듣기 어렵다.", "DELTA를 켜거나 밴드 노드에서 마우스 오른쪽 버튼을 누르고 있으세요."],
+        ["아무 변화가 없다.", "밴드가 꺼져 있거나(BAND ON), 신호가 THRESHOLD보다 낮거나, RANGE가 0 dB이거나, BYPASS가 켜져 있습니다."]
+      ]
+    } },
+
+    { "h2": "파라미터 참고표" },
+    { "p": "TB Multiband Compressor에는 전체 파라미터 6개와 밴드마다 18개, 모두 78개의 호스트 파라미터가 있습니다. 밴드 파라미터 이름에는 Band 1 ~ Band 4가 붙습니다." },
+    { "table": {
+      "compact": true,
+      "cols": ["호스트 파라미터", "범위", "기본값"],
+      "widths": [34, 40, 26],
+      "rows": [
+        {"group": "전체"},
+        ["Mix", "0 ~ 100%", "100%"],
+        ["Output", "−18 ~ +18 dB", "0 dB"],
+        ["Bypass", "Off, On", "Off"],
+        ["Phase Mode", "Dynamic, Linear", "Dynamic"],
+        ["Oversampling", "OFF, 2x, 4x, 8x", "OFF"],
+        ["Lookahead", "0 ~ 20 ms", "0 ms"],
+        {"group": "각 밴드(Band 1 ~ Band 4)"},
+        ["Enabled", "Off, On", "밴드 1 ~ 3 켜짐, 밴드 4 꺼짐"],
+        ["Frequency", "30 ~ 18000 Hz", "120, 1200, 7000, 12000 Hz"],
+        ["Bandwidth", "0.25 ~ 4 oct", "1.5 oct"],
+        ["Threshold", "−60 ~ 0 dB", "−18 dB"],
+        ["Range", "−48 ~ +12 dB", "−3 dB"],
+        ["Ratio", "1 ~ 20", "2"],
+        ["Attack", "0.5 ~ 200 ms", "15 ms"],
+        ["Release", "20 ~ 2000 ms", "180 ms"],
+        ["Knee", "0 ~ 18 dB", "6 dB"],
+        ["Output", "−18 ~ +18 dB", "0 dB"],
+        ["Dynamics", "Compress, Expand", "Compress"],
+        ["Source", "INT, EXT", "INT"],
+        ["Detect", "BAND, FREE", "BAND"],
+        ["Detector Frequency", "30 ~ 18000 Hz", "밴드와 같음"],
+        ["Detector Bandwidth", "0.25 ~ 4 oct", "1.5 oct"],
+        ["Stereo Link", "0 ~ 100%", "100%"],
+        ["Audition", "Off, On", "Off"],
+        ["Channel Mode", "Stereo, Mid, Side", "Stereo"]
+      ]
+    } },
+
+    { "h2": "버전 기록" },
+    { "table": {
+      "cols": ["버전", "변경 내용"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.2 · 2026-08-17", "더 엄격하고 이식성 있는 숫자 상태 파싱. 78개 파라미터 ID, 상태·프리셋 형식, 오디오 동작은 그대로입니다."],
+        ["1.0.1 · 2026-08-13", "응답 그래프 개선. RANGE는 음영으로 칠한 기본 엔벌로프로, 실시간 게인 리덕션은 밴드 색의 오버레이로 표시하고, 0 dB 선 위에는 곡선을 그리지 않습니다."],
+        ["1.0.0 · 2026-08-13", "첫 릴리스. 압축·확장을 고르는 독립 배치 밴드 4개, 부호 있는 Range, 외부 사이드체인, 스테레오·Mid/Side 처리, Dynamic·Linear 모드, 오버샘플링, 룩어헤드."]
+      ]
+    } }
+  ]
+}

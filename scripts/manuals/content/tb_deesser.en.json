@@ -1,0 +1,152 @@
+{
+  "file": "TB_DeEsser",
+  "version": "1.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Level-Independent De-Esser",
+  "tagline": "Finds sibilance by its sound rather than its level, and reduces it with a whole-signal dip or stereo-linked spectral cuts, keeping vocal air and diction intact.",
+  "facts": ["Focus 2.5 to 8 kHz", "Up to 20 dB reduction", "WIDE and SPLIT modes", "10 factory presets"],
+  "ui": "tb_deesser.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB De-Esser detects sibilance by its character instead of a level threshold, so it reacts the same way in quiet and loud passages and needs no threshold setting. You tell it where to listen with FOCUS and how far to reduce with TAME." },
+    { "p": "The detector is a bank of six resonators weighted around `FOCUS`. The reduction is a separate spectral process, so the detector's filters do not color the output. `PROCESS` chooses whether the whole signal dips (WIDE) or only the detected sibilance band is cut (SPLIT). Both channels share one sibilance mask, so the stereo image stays stable." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Level-independent, language-neutral sibilance detection with no threshold to set",
+      "FOCUS from 2.5 to 8 kHz moves the detector's sensitivity centre",
+      "TAME sets the maximum reduction, up to 20 dB",
+      "WIDE lowers the whole signal; SPLIT cuts only inside the detected sibilance band",
+      "Stereo-linked reduction for a stable image",
+      "LISTEN to hear the detector signal",
+      "ESS METER with gain reduction and detector confidence",
+      "10 factory presets, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Resonator-bank detector (FOCUS)", "Stereo-linked sibilance mask", "Spectral reduction (TAME)", "WIDE or SPLIT", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB De-Esser 1.0.0 for Windows (VST3). The current macOS build (AU and VST3) is also version 1.0.0; small differences between platforms are possible."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB De-Esser on a vocal or dialogue track. The defaults are `FOCUS` 2.50 kHz, `TAME` 6.0 dB, and `PROCESS` WIDE.",
+      "Play a passage with clear \"s\" and \"sh\" sounds and turn on `LISTEN` {{6}}. Move `FOCUS` {{2}} until you hear mostly the sibilant sounds.",
+      "Turn `LISTEN` off and raise `TAME` {{4}} until the sibilance sits right, watching the ESS METER {{3}}.",
+      "Compare WIDE and SPLIT with `PROCESS` {{5}}, and check the result against `BYPASS` {{7}}."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_deesser.jpg",
+      "caption": "TB De-Esser 1.0 interface with the default settings.",
+      "callouts": [
+        { "n": 1, "x": 31.0, "y": 9.7 },
+        { "n": 2, "x": 21.0, "y": 30.0 },
+        { "n": 3, "x": 42.3, "y": 35.0 },
+        { "n": 4, "x": 89.0, "y": 30.0 },
+        { "n": 5, "x": 38.1, "y": 74.0 },
+        { "n": 6, "x": 63.2, "y": 74.0 },
+        { "n": 7, "x": 87.9, "y": 83.0 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset (hold to continue), the preset list, Save, Undo, and Redo."],
+        [2, "FOCUS", "the detector's sensitivity centre; double-click to reset."],
+        [3, "ESS METER", "gain reduction and detector activity."],
+        [4, "TAME", "the maximum gain reduction."],
+        [5, "PROCESS", "WIDE or SPLIT."],
+        [6, "LISTEN", "monitors the detector signal."],
+        [7, "BYPASS", "compares processed and unprocessed audio."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [16, 22, 62],
+      "rows": [
+        ["`FOCUS`", "2.5 to 8 kHz · 2.50 kHz", "Moves the resonator bank's sibilance sensitivity centre. It is not an EQ frequency for the output. Double-click to reset."],
+        ["`TAME`", "0 to 20 dB · 6.0 dB", "Sets the maximum gain reduction applied to detected sibilance. High values can over-reduce or smear the sound, so use only as much as you need."],
+        ["`PROCESS`", "WIDE, SPLIT · WIDE", "WIDE lowers the whole signal while sibilance is detected. SPLIT applies stereo-linked spectral cuts only inside the detected sibilance band, so the lows and mids of the voice are left alone."],
+        ["`LISTEN`", "Off, On · Off", "Monitors the Focus-weighted resonator-bank signal instead of the processed output. Use it to set FOCUS, then turn it off."],
+        ["`BYPASS`", "Off, On · Off", "Compares processed and unprocessed audio. The bypassed signal is delayed by the same latency, so the comparison stays in time."]
+      ]
+    } },
+    { "p": "The ESS METER shows the current gain reduction in dB and how confidently the detector hears sibilance; its status line reads DETECT READY in the picture." },
+    { "note": {"title": "Latency", "text": "TB De-Esser has a fixed latency of 2048 samples (about 43 ms at 48 kHz), which it reports to the host for delay compensation. BYPASS and TAME 0 dB stay aligned with it, so A/B comparisons line up. Because of the latency it suits mixing and post-production rather than live monitoring."} },
+    { "tip": {"text": "There is no threshold. Detection does not depend on level, so quiet and loud sibilants are treated alike; TAME sets how much they are reduced."} },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows (hold to continue), or open the list to choose a factory or saved user preset. Save stores the current state as a .tbdeesser file in the TB_DeEsser user preset folder. Undo and Redo step through parameter and preset changes." },
+    { "table": {
+      "compact": true,
+      "cols": ["Group", "Preset", "FOCUS", "TAME", "PROCESS"],
+      "widths": [18, 30, 18, 16, 18],
+      "rows": [
+        ["VOCAL", "Init", "2.50 kHz", "6.0 dB", "WIDE"],
+        ["VOCAL", "Gentle Vocal", "3.20 kHz", "3.0 dB", "WIDE"],
+        ["VOCAL", "Bright Vocal", "4.20 kHz", "5.0 dB", "WIDE"],
+        ["VOCAL", "Low Sibilance", "3.20 kHz", "5.5 dB", "WIDE"],
+        ["VOCAL", "Close Mic", "2.80 kHz", "8.0 dB", "WIDE"],
+        ["VOCAL", "Whisper Control", "5.00 kHz", "6.5 dB", "SPLIT"],
+        ["VOCAL", "Strong Sibilance", "2.50 kHz", "11.0 dB", "WIDE"],
+        ["CONTROL", "Split Precision", "3.60 kHz", "6.0 dB", "SPLIT"],
+        ["CONTROL", "Guitar Pick", "3.00 kHz", "7.0 dB", "SPLIT"],
+        ["CONTROL", "Cymbal Edge", "5.20 kHz", "4.0 dB", "SPLIT"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Lead vocal", "use": "Natural control of \"s\" sounds in a pop vocal.",
+        "settings": [["Preset", "Gentle Vocal"], ["TAME", "3 to 6 dB"]],
+        "steps": ["Raise TAME only until the sibilants stop jumping out."] },
+      { "title": "Whisper and dialogue", "use": "Breathy, close speech with sharp sibilants.",
+        "settings": [["Preset", "Whisper Control"], ["PROCESS", "SPLIT"]],
+        "steps": ["Use LISTEN to place FOCUS on the hiss of the consonants."] },
+      { "title": "Acoustic guitar pick", "use": "Softer pick clicks without dulling the strings.",
+        "settings": [["Preset", "Guitar Pick"], ["FOCUS", "around 3 kHz"]],
+        "steps": ["Keep SPLIT so the body of the guitar is untouched."] },
+      { "title": "Cymbal edge", "use": "Less splash in overheads or a drum bus.",
+        "settings": [["Preset", "Cymbal Edge"], ["TAME", "3 to 5 dB"]],
+        "steps": ["Move FOCUS higher if the cymbals still sound harsh."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The voice sounds lispy or dull.", "Lower TAME, or switch PROCESS to SPLIT so only the sibilance band is cut."],
+        ["The whole vocal ducks on each \"s\".", "That is how WIDE works. Use SPLIT for a more local cut."],
+        ["Sibilance is not reduced enough.", "Raise TAME, and check FOCUS with LISTEN."],
+        ["The detector reacts to the wrong sounds.", "Turn on LISTEN and move FOCUS until you hear mostly the sibilants."],
+        ["The sound is thin and strange.", "LISTEN is on. Turn it off to hear the processed output."],
+        ["The track is late against others.", "TB De-Esser has 2048 samples of latency. Turn on delay compensation in your host; do not use it for live monitoring."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`FOCUS`", "Focus", "2500 to 8000 Hz", "2500 Hz"],
+        ["`TAME`", "Tame", "0 to 20 dB", "6.0 dB"],
+        ["`PROCESS`", "Mode", "Wide, Split", "Wide"],
+        ["`LISTEN`", "Listen", "Off, On", "Off"],
+        ["`BYPASS`", "Bypass", "Off, On", "Off"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.0 · 2026-08-12", "First release: level-independent, language-neutral sibilance detection with stereo-linked spectral reduction; Focus and Tame controls; Wide and Split processing; Listen; bypass; gain-reduction and detector-confidence metering."]
+      ]
+    } }
+  ]
+}

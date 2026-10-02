@@ -1,32 +1,51 @@
 <div align="center">
 <img width="1280" height="640" alt="TB Audio Plug-ins — 1e DISPLAY icon family" src="assets/social/tb_audio_plugins_social_preview.png" />
+
+**35 free VST3 and AU audio plug-ins for Windows and macOS (Apple Silicon)**<br />
+EQ, dynamics, reverb, delay, pitch, vocal, restoration, spatial, and creative effects, with user manuals in 20 languages.
+
+[![Downloads](https://img.shields.io/github/downloads/TaebeumKim/TB_Audio-Plugins/total?label=downloads&color=2ea44f)](https://github.com/TaebeumKim/TB_Audio-Plugins/releases)
+[![GitHub stars](https://img.shields.io/github/stars/TaebeumKim/TB_Audio-Plugins?label=stars&color=yellow)](https://github.com/TaebeumKim/TB_Audio-Plugins/stargazers)
+![Plug-ins](https://img.shields.io/badge/plug--ins-35-blue)
+![Formats](https://img.shields.io/badge/formats-VST3%20%7C%20AU-blueviolet)
+![Platforms](https://img.shields.io/badge/platforms-Windows%20x64%20%7C%20macOS%20arm64-lightgrey)
+![Manuals](https://img.shields.io/badge/manuals-20%20languages-orange)
+[![License: Freeware](https://img.shields.io/badge/license-freeware-green)](LICENSE)
+
+**[⬇️ Download TB Hub for Windows](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/hub-windows-v1.3.18)** · **[All installers (Windows & macOS)](https://github.com/TaebeumKim/TB_Audio-Plugins/releases)** · **[Manuals](Documents/README.md)** · **[YouTube](https://www.youtube.com/@TeamImpulseImpact)** · **[☕ Ko-fi](https://ko-fi.com/teamimpulseimpact)**
+
+⭐ If these plug-ins help your music, please star this repository so other producers can find them.
+
 </div>
 
 # Update Note
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
-## 2026-08-21
+## 2026-10-02
 
-- Released current Windows VST3 builds for TB Colorizer 2.3.1, TB Parallel Reverb 3.0.2, TB Scrambler 2.3.1, TB Spectral Transient Shaper 1.4.1, TB Resonator 1.0.1, and TB Recorder 1.0.1, with matching catalog, archive, installer, and internal plug-in versions.
-- Completed the missing TB Ambient feature mockup and the Ambient and Geometry Reverb DISPLAY brand masters.
-- Corrected the repository overview and portfolio coverage to match the 35 live catalog plug-ins.
-- Reverified TB Ambient 1.0.0 against the live catalog, Hub ZIP, project Release bundle, installed VST3, and cached TB Hub catalog; all published hashes and versions match.
+- Published TB Hub 1.3.18 for Windows: Sort by Update now lists plug-ins with an available update first, long descriptions scroll inside the Info face, and Info descriptions use concise English copy.
+- Removed a stray backup binary from the TB Compressor 2.1.0 Hub archive, halving its download from 5.6 MB to 2.8 MB. The installed plug-in is unchanged.
+- Removed a duplicate legacy `TB-TransientShaper` macOS bundle that shared its plug-in IDs with `TB-SpectralTransientShaper`, and a stray `NewProject.vst3` binary from the legacy Windows TB XYZ Panner bundle.
+- Corrected the platform list (Windows x64 and macOS on Apple Silicon; no Linux builds) and added a plug-in overview table and current download links.
+- Replaced the MIT License with the TB Audio Plug-ins Freeware License: the plug-ins stay free for personal and commercial work, commercial works must credit them, and resale is not allowed.
 
-## 2026-08-19
+## 2026-09-30
 
-- Released TB Delay 1.0.2 with its current Windows VST3 bundle and matching catalog checksum.
-- Added 20-language manuals for TB Ambient, TB AudioPlayer, TB Filter Table, TB Geometry Reverb, TB Grain Phaser, and TB Multiband Compressor.
+- Released TB EQ 2.0.2: spectral SENSITIVITY and maximum attenuation DEPTH now work independently, and the NIDDLE label is corrected to FOCUS while host parameter IDs and VST3 class IDs are preserved.
+- Released TB Noise Remover 2.4.0 with Noise Print capture from noise-only passages, a Focus Band for targeted reduction, and a safe spectral fallback.
+- Released TB Parallel Reverb 3.1.0 with the updated Glue, Bright, and Space pedal design and a resizable 600×520 default window.
+- Released TB XYZ Panner 1.3.0 with Physical, Near Field, and Linear distance attenuation curves.
+- Refined the TB Exciter 1.1.0 DSP for a cleaner, more open upper-air character.
 
-## 2026-08-18
+## 2026-09-22
 
-- Released TB Ambient 1.0.0 with its verified Windows x64 VST3 bundle, DISPLAY logo, and catalog metadata.
-- Published TB Hub 1.3.17 with persistent last-known catalog and logo caches plus a bounded remote-catalog request.
+- Rewrote the Korean manuals from the verified plug-in controls, with beginner-friendly theory and knob-by-knob explanations.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
 
-# contect me
+# Contact me
 e-mail : ktb7056@gmail.com
 
 homepage : https://ktb-portfolio.netlify.app/
@@ -45,9 +64,9 @@ Welcome to **TB_Audio-Plugins**, a collection of professional-grade, free audio 
 ## ✨ Key Features
 * **Professional Audio Quality:** High-resolution DSP tailored for professional studio environments.
 * **Optimized Performance:** Lightweight and highly optimized for low CPU consumption.
-* **Cross-Platform Support:** Fully compatible with Windows, macOS, and Linux.
-* **Industry-Standard Formats:** Available in VST3 and Audio Unit (AU) formats.
-* **100% Free:** Completely free for both personal and commercial audio production.
+* **Cross-Platform Support:** Windows 10/11 (x64) and macOS on Apple Silicon (arm64). Linux and Intel Macs are not supported, and TB Geometry Reverb, TB AudioPlayer, and TB Ambient are currently Windows-only.
+* **Industry-Standard Formats:** VST3 on Windows and macOS, plus Audio Unit (AU) on macOS.
+* **100% Free:** Free for personal and commercial audio production. Commercial works need a short credit, and the plug-ins may not be resold (see [License](#-license)).
 
 ## 🎙️ English Description Voiceovers
 
@@ -58,6 +77,48 @@ Professional English scripts and rendered 25–50 second MP3 voiceovers are avai
 The catalog currently contains 35 plug-ins. One additional project has a portfolio mockup: the intentionally unreleased TB Board.
 
 Detailed manuals for the established catalog set are available in English, Korean, Simplified Chinese, Japanese, Spanish, Russian, German, French, Brazilian Portuguese, Italian, Dutch, Swedish, Polish, Turkish, Arabic, Hindi, Indonesian, Thai, Vietnamese, and Czech. Browse the [multilingual manual index](Documents/README.md) to download PDFs by language.
+
+### At a glance
+
+| Plug-in | Category | What it does | Windows | macOS | Manual |
+| --- | --- | --- | :---: | :---: | :---: |
+| [TB Center](#tb-center) | Utility | Stereo centering. | ✓ | ✓ | [PDF](Documents/ENG/TB_Center_Detailed_User_Manual_EN.pdf) |
+| [TB Compressor](#tb-compressor) | Dynamics | Peak and RMS compression. | ✓ | ✓ | [PDF](Documents/ENG/TB_Compressor_Detailed_User_Manual_EN.pdf) |
+| [TB Distortion](#tb-distortion) | Distortion | Multi-stage distortion. | ✓ | ✓ | [PDF](Documents/ENG/TB_Distortion_Detailed_User_Manual_EN.pdf) |
+| [TB Disperser](#tb-disperser) | Creative | Phase dispersion. | ✓ | ✓ | [PDF](Documents/ENG/TB_Disperser_Detailed_User_Manual_EN.pdf) |
+| [TB EQ](#tb-eq) | EQ | Parametric equalizer. | ✓ | ✓ | [PDF](Documents/ENG/TB_EQ_Detailed_User_Manual_EN.pdf) |
+| [TB Colorizer](#tb-colorizer) | Voice | Voice color shaping. | ✓ | ✓ | [PDF](Documents/ENG/TB_Colorizer_Detailed_User_Manual_EN.pdf) |
+| [TB Inverted Flanger](#tb-inverted-flanger) | Modulation | Inverted flanging. | ✓ | ✓ | [PDF](Documents/ENG/TB_InvertedFlanger_Detailed_User_Manual_EN.pdf) |
+| [TB Inverted Phaser](#tb-inverted-phaser) | Modulation | Subtractive phasing. | ✓ | ✓ | [PDF](Documents/ENG/TB_InvertedPhaser_Detailed_User_Manual_EN.pdf) |
+| [TB Jewel Digger & Finder](#tb-jewel-digger--finder) | Creative | Harmonic enhancement. | ✓ | ✓ | [PDF](Documents/ENG/TB_JewelDiggerAndFinder_Detailed_User_Manual_EN.pdf) |
+| [TB Noise Remover](#tb-noise-remover) | Restoration | Learnable neural and spectral noise removal. | ✓ | ✓ | [PDF](Documents/ENG/TB_NoiseRemover_Detailed_User_Manual_EN.pdf) |
+| [TB Parallel Reverb](#tb-parallel-reverb) | Reverb | Three-engine parallel reverb. | ✓ | ✓ | [PDF](Documents/ENG/TB_ParallelReverb_Detailed_User_Manual_EN.pdf) |
+| [TB Scrambler](#tb-scrambler) | Creative | Scramble and glitch effects. | ✓ | ✓ | [PDF](Documents/ENG/TB_Scrambler_Detailed_User_Manual_EN.pdf) |
+| [TB Spectral Transient Shaper](#tb-spectral-transient-shaper) | Dynamics | Spectral transient shaping. | ✓ | ✓ | [PDF](Documents/ENG/TB_SpectralTransientShaper_Detailed_User_Manual_EN.pdf) |
+| [TB Step Shifter (Beta)](#tb-step-shifter-beta) | Creative | Harmonic pitch shifting. | ✓ | ✓ | [PDF](Documents/ENG/TB_StepShifter_Detailed_User_Manual_EN.pdf) |
+| [TB Tune](#tb-tune) | Voice | Vocal pitch correction. | ✓ | ✓ | [PDF](Documents/ENG/TB_Tune_Detailed_User_Manual_EN.pdf) |
+| [TB Volume](#tb-volume) | Utility | Simple gain control. | ✓ | ✓ | [PDF](Documents/ENG/TB_Volume_Detailed_User_Manual_EN.pdf) |
+| [TB Vocoder (Beta)](#tb-vocoder-beta) | Creative | Vocoder. | ✓ | ✓ | [PDF](Documents/ENG/TB_Vocoder_Detailed_User_Manual_EN.pdf) |
+| [TB XYZ Panner](#tb-xyz-panner) | Utility | Multi-axis panning. | ✓ | ✓ | [PDF](Documents/ENG/TB_XYZPanner_Detailed_User_Manual_EN.pdf) |
+| [TB Limiter](#tb-limiter) | Dynamics | True peak mastering limiter. | ✓ | ✓ | [PDF](Documents/ENG/TB_Limiter_Detailed_User_Manual_EN.pdf) |
+| [TB SubLow](#tb-sublow) | Creative | Sub-bass generator. | ✓ | ✓ | [PDF](Documents/ENG/TB_SubLow_Detailed_User_Manual_EN.pdf) |
+| [TB Delay](#tb-delay) | Delay | Creative stereo delay. | ✓ | ✓ | [PDF](Documents/ENG/TB_Delay_Detailed_User_Manual_EN.pdf) |
+| [TB Pitch Shifter](#tb-pitch-shifter) | Pitch | Independent pitch and formant shifting. | ✓ | ✓ | [PDF](Documents/ENG/TB_PitchShifter_Detailed_User_Manual_EN.pdf) |
+| [TB Resonator](#tb-resonator) | Creative | Tunable modal resonator for pitched, playable textures. | ✓ | ✓ | [PDF](Documents/ENG/TB_Resonator_Detailed_User_Manual_EN.pdf) |
+| [TB Ring Modulation](#tb-ring-modulation) | Modulation | Ring modulation from tremolo to metallic sidebands. | ✓ | ✓ | [PDF](Documents/ENG/TB_RingModulation_Detailed_User_Manual_EN.pdf) |
+| [TB Recorder](#tb-recorder) | Utility | Insert-point recording with format conversion and splitting. | ✓ | ✓ | [PDF](Documents/ENG/TB_Recorder_Detailed_User_Manual_EN.pdf) |
+| [TB Shimmer](#tb-shimmer) | Creative | Granular shimmer with pitch feedback and diffuse tails. | ✓ | ✓ | [PDF](Documents/ENG/TB_Shimmer_Detailed_User_Manual_EN.pdf) |
+| [TB Exciter](#tb-exciter) | Creative | Harmonic exciter and enhancer with 30 Factory presets. | ✓ | ✓ | [PDF](Documents/ENG/TB_Exciter_Detailed_User_Manual_EN.pdf) |
+| [TB Tape](#tb-tape) | Creative | Custom-curve tape stop and start effects. | ✓ | ✓ | [PDF](Documents/ENG/TB_Tape_Detailed_User_Manual_EN.pdf) |
+| [TB De-Esser](#tb-de-esser) | Dynamics | Level-independent de-essing that preserves vocal air and diction. | ✓ | ✓ | [PDF](Documents/ENG/TB_DeEsser_Detailed_User_Manual_EN.pdf) |
+| [TB Filter Table](#tb-filter-table) | Filter | Wavetable spectral filtering with morphing frames and phase modes. | ✓ | ✓ | [PDF](Documents/ENG/TB_FilterTable_Detailed_User_Manual_EN.pdf) |
+| [TB Grain Phaser](#tb-grain-phaser) | Modulation | Spectral phasing with dense notches and stereo motion. | ✓ | ✓ | [PDF](Documents/ENG/TB_GrainPhaser_Detailed_User_Manual_EN.pdf) |
+| [TB Multiband Compressor](#tb-multiband-compressor) | Dynamics | Four-band dynamics with free placement, sidechain, and M/S control. | ✓ | ✓ | [PDF](Documents/ENG/TB_MultiBandCompressor_Detailed_User_Manual_EN.pdf) |
+| [TB Geometry Reverb](#tb-geometry-reverb) | Reverb | Mesh-based reverb with controllable scale, materials, and placement. | ✓ | — | [PDF](Documents/ENG/TB_GeometryReverb_Detailed_User_Manual_EN.pdf) |
+| [TB AudioPlayer](#tb-audioplayer) | Instrument | One-shot sample playback with automatable triggering. | ✓ | — | [PDF](Documents/ENG/TB_AudioPlayer_Detailed_User_Manual_EN.pdf) |
+| [TB Ambient](#tb-ambient) | Utility | Outdoor distance and ground tone without a reverb tail. | ✓ | — | [PDF](Documents/ENG/TB_Ambient_Detailed_User_Manual_EN.pdf) |
+
+Windows builds of every plug-in are available through TB Hub; per-plug-in installers are listed on the [Releases](https://github.com/TaebeumKim/TB_Audio-Plugins/releases) page.
 
 ### Catalog plug-ins
 
@@ -284,9 +345,16 @@ A visual signal-routing workspace and VST3 host for building insert chains and a
 ## 🚀 Installation Guide
 
 ### 1. Download
-Go to the page of this repository and download the latest version compatible with your Operating System.
+* **Windows (recommended):** install [TB Hub](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/hub-windows-v1.3.18), which installs and updates the plug-ins in the catalog.
+* **Per-plug-in installers:** Windows x64 VST3 setup files and macOS Apple Silicon VST3/AU `.pkg` installers are published on the [Releases](https://github.com/TaebeumKim/TB_Audio-Plugins/releases) page.
+* The `Window/` and `MacOS/` folders in this repository hold older builds. Use TB Hub or the Releases page for current versions.
 
-### 2. Manual Installation
+### 2. Opening the installers
+The installers are not code-signed yet, so the operating system may warn you the first time:
+* **Windows:** if SmartScreen shows "Windows protected your PC", select **More info**, then **Run anyway**.
+* **macOS:** if the `.pkg` is blocked, open **System Settings > Privacy & Security** and select **Open Anyway**.
+
+### 3. Manual Installation
 Extract the downloaded zip/archive file and move the plug-in files to your system's designated audio plug-in folders:
 
 #### **Windows:**
@@ -297,16 +365,26 @@ Extract the downloaded zip/archive file and move the plug-in files to your syste
 * **AU (Audio Unit):** `/Library/Audio/Plug-Ins/Components`
 
 ## 📄 License
-The pre-compiled binaries distributed in this repository are licensed under the terms of the **MIT License**. You are free to use these plug-ins in any commercial or non-commercial musical works. For more detailed information, please refer to the [LICENSE](LICENSE) file.
+The plug-ins are free to use for personal and commercial audio work under the **TB Audio Plug-ins Freeware License**. In short:
 
-#P.S
----
+* **Commercial use requires credit.** If a work or service is sold or monetized, credit the plug-ins where credits are normally shown, for example: *Made with TB Audio Plug-ins by Team Impulse Impact*.
+* **No resale.** The plug-ins may not be sold, rented, or included in paid bundles, subscriptions, or download services.
+* **Free sharing is allowed.** Complete, unmodified copies may be shared free of charge with the license included.
+
+See the [LICENSE](LICENSE) file for the full terms.
+
+## P.S.
+
 I am an independent developer who doesn't currently earn any income from my work. In Korea, you can buy a coffee for $1 (really!). Would you be willing to buy me a cup of coffee?
 
 https://ko-fi.com/teamimpulseimpact
+
 ---
+
 Fab is offering free audio sources. Please search for "TII" on Fab!
 
 https://www.fab.com/search?q=tii
+
 ---
+
 *Built with passion for the audio community. Enjoy creating!* 🎧

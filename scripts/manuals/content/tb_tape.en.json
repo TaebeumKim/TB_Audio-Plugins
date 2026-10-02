@@ -1,0 +1,162 @@
+{
+  "file": "TB_Tape",
+  "version": "1.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Tape Stop and Start",
+  "tagline": "A tape-style varispeed motor: press PAUSE and the sound slows down and drops in pitch to a stop, press PLAY and it spins back up, along a curve you can draw.",
+  "facts": ["Stop and start 0 to 2 s", "6 curve shapes + drawing", "Automatable PLAY", "8 factory presets"],
+  "ui": "tb_tape.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Tape recreates the sound of a tape machine whose motor is switched off and on. When you pause it, speed and pitch fall together until the tape stops; when you play it again, the tape spins back up to normal speed." },
+    { "p": "`STOP TIME` and `START TIME` set how long each transition takes, from instant to two seconds. `MOTOR CURVE` sets how the speed changes along the way, from a straight line to slow, sudden, or stepped changes, or a curve you draw yourself. Because `PLAY` is a host parameter, you can automate tape stops at exact positions in your song." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Varispeed tape stop and spin-up: speed and pitch change together",
+      "Independent STOP TIME and START TIME, each from 0 to 2 seconds",
+      "MOTOR CURVE with six shapes, freehand drawing, and editable points",
+      "Automatable PLAY parameter for exact stops and starts",
+      "Reels that show the tape motion live",
+      "Bypass that stays aligned with the plug-in's processing latency",
+      "8 factory presets, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input buffer", "PLAY on or off", "Transition over STOP TIME or START TIME", "Speed follows MOTOR CURVE", "Varispeed playback", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Tape 1.0.0 for Windows (VST3). The current macOS build (AU and VST3) is also version 1.0.0; small differences between platforms are possible."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Tape on a track, bus, or the master. The defaults are `STOP TIME` 200 ms, `START TIME` 200 ms, and a LINEAR curve.",
+      "Start playback and click `PLAY` / `PAUSE` {{9}}. The tape slows to a stop over STOP TIME; click again and it spins back up over START TIME.",
+      "Set `STOP TIME` {{4}} and `START TIME` {{5}} for shorter or longer transitions.",
+      "Choose a shape from the curve shape box {{7}}, or draw your own curve {{6}}.",
+      "To place stops exactly, automate the Play parameter in your host."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_tape.jpg",
+      "caption": "TB Tape 1.0 interface with the default settings.",
+      "callouts": [
+        { "n": 1, "x": 31.0, "y": 9.0 },
+        { "n": 2, "x": 63.3, "y": 8.5 },
+        { "n": 3, "x": 67.9, "y": 33.8 },
+        { "n": 4, "x": 15.5, "y": 91.5 },
+        { "n": 5, "x": 32.1, "y": 91.5 },
+        { "n": 6, "x": 43.0, "y": 62.0 },
+        { "n": 7, "x": 49.0, "y": 51.5 },
+        { "n": 8, "x": 69.4, "y": 94.2 },
+        { "n": 9, "x": 73.3, "y": 55.8 }
+      ],
+      "legend": [
+        [1, "Reels", "show the tape motion live."],
+        [2, "BYPASS", "bypasses the complete tape-stop effect."],
+        [3, "TB TAPE menu", "click the title for factory and user presets, Save, Undo, and Redo."],
+        [4, "STOP TIME (BRAKE)", "how long the tape takes to stop."],
+        [5, "START TIME (SPIN-UP)", "how long the tape takes to return to speed."],
+        [6, "MOTOR CURVE", "the speed curve used for the transitions."],
+        [7, "Curve shape box", "LINEAR, S-CURVE, SLOW IN, FAST IN, STEPPED, or MOTOR DRAG; shows CUSTOM after you edit the curve."],
+        [8, "DRAW / POINTS", "the two ways to edit the curve."],
+        [9, "PLAY / PAUSE", "plays or pauses the tape motor."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`PLAY` / `PAUSE`", "Play, Pause · Play", "Plays or pauses the tape motor. Pausing slows the tape to a stop over STOP TIME; playing spins it back up over START TIME. Automate the Play parameter to trigger stops at exact song positions."],
+        ["`STOP TIME`", "0 to 2000 ms · 200 ms", "How long the tape takes to stop (BRAKE). At 0 ms it stops instantly. The knob has an exponential scale, so short times are easier to set."],
+        ["`START TIME`", "0 to 2000 ms · 200 ms", "How long the tape takes to spin back up to normal speed (SPIN-UP)."],
+        ["`BYPASS`", "Off, On · Off", "Bypasses the complete tape-stop effect. TB Tape reports its processing latency to the host, and the bypassed signal stays aligned with it."]
+      ]
+    } },
+    { "h3": "Motor curve" },
+    { "p": "The curve shows how far the speed change has progressed (bottom to top) during a transition (left to right). Its shape decides whether the speed changes evenly, early, late, or in steps." },
+    { "table": {
+      "cols": ["Shape or mode", "What it does"],
+      "widths": [24, 76],
+      "rows": [
+        ["`LINEAR`", "An even change from start to finish."],
+        ["`S-CURVE`, `SLOW IN`, `FAST IN`, `STEPPED`, `MOTOR DRAG`", "Ready-made shapes; choose them from the curve shape box and compare by ear."],
+        ["`DRAW`", "Drag across the graph to sketch a curve."],
+        ["`POINTS`", "Drag nodes to move them. Double-click empty space to add a node, or double-click a node to delete it."],
+        ["`CUSTOM`", "Shown in the shape box after you edit the curve."]
+      ]
+    } },
+    { "note": {"text": "The curve is not a host parameter. It is saved with the plug-in state and in presets. Curve edits can be undone and redone from the TB TAPE menu."} },
+
+    { "h2": "Presets" },
+    { "p": "Click the TB TAPE title to open the preset menu. It lists the factory presets in the STARTING POINTS and FX groups and your user presets, and offers PREVIOUS PRESET, NEXT PRESET, SAVE USER PRESET..., UNDO, and REDO. Saved presets use the .tbtape extension and include the curve. In the table, a curve exponent of 1.0 is linear; lower values change the speed early, higher values late." },
+    { "table": {
+      "compact": true,
+      "cols": ["Group", "Preset", "STOP TIME", "START TIME", "Curve (exponent)"],
+      "widths": [22, 22, 16, 16, 24],
+      "rows": [
+        ["STARTING POINTS", "Init", "200 ms", "200 ms", "Linear (1.0)"],
+        ["STARTING POINTS", "Quick Brake", "80 ms", "120 ms", "Linear (1.0)"],
+        ["STARTING POINTS", "Soft Brake", "600 ms", "350 ms", "Early change (0.5)"],
+        ["STARTING POINTS", "Slow Spin-Up", "180 ms", "1000 ms", "Linear (1.0)"],
+        ["FX", "Instant Motor", "0 ms", "0 ms", "Linear (1.0)"],
+        ["FX", "Long Coast", "2000 ms", "450 ms", "Linear (1.0)"],
+        ["FX", "Late Drop", "1000 ms", "350 ms", "Late change (4.0)"],
+        ["FX", "Early Brake", "1000 ms", "800 ms", "Early change (0.25)"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Classic tape stop", "use": "The whole mix winds down at the end of a section.",
+        "settings": [["Preset", "Init or Soft Brake"], ["STOP TIME", "400 to 800 ms"]],
+        "steps": ["Automate Play to switch off on the last beat before the drop, and on again at the downbeat."] },
+      { "title": "Quick brake", "use": "A short, sharp stop on drums or a vocal phrase.",
+        "settings": [["Preset", "Quick Brake"], ["STOP TIME", "50 to 120 ms"]],
+        "steps": ["Use it on one track or bus so the rest of the mix keeps playing."] },
+      { "title": "Slow spin-up", "use": "A record-like start that rises into pitch.",
+        "settings": [["Preset", "Slow Spin-Up"], ["START TIME", "800 to 1500 ms"]],
+        "steps": ["Switch Play on slightly before the downbeat so the music is up to speed in time."] },
+      { "title": "Late drop", "use": "Speed that holds, then falls away at the end.",
+        "settings": [["Preset", "Late Drop"], ["STOP TIME", "around 1000 ms"]],
+        "steps": ["Edit the curve in POINTS mode to move where the drop begins."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["Nothing happens when I press PAUSE.", "BYPASS is on, or the host is not playing audio through the track."],
+        ["The stop is too abrupt.", "Raise STOP TIME, or choose a curve that changes early, such as Early Brake."],
+        ["The music comes back late.", "Shorten START TIME, or switch Play on earlier."],
+        ["The curve shows CUSTOM.", "The curve was edited. Choose a shape from the shape box to replace it."],
+        ["I cannot automate the curve.", "The curve is not a host parameter. Save different curves as presets, or automate Play, STOP TIME, and START TIME."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`PLAY` / `PAUSE`", "Play", "Play, Pause", "Play"],
+        ["`STOP TIME`", "Stop Time", "0 to 2000 ms", "200 ms"],
+        ["`START TIME`", "Start Time", "0 to 2000 ms", "200 ms"],
+        ["`BYPASS`", "Bypass", "Off, On", "Off"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.0 · 2026-08-10", "First release: a tape-style varispeed motor with independent 0 to 2 second stop and start times; freehand and point-based motor curves with six curve shortcuts; eight factory presets; latency-aligned bypass; a compact 498 × 260 reel-deck interface with live tape-motion feedback."]
+      ]
+    } }
+  ]
+}

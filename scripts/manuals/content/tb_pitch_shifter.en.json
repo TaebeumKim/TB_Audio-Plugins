@@ -1,0 +1,129 @@
+{
+  "file": "TB_PitchShifter",
+  "version": "2.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Pitch and Formant Shifter",
+  "tagline": "Moves pitch across four octaves and the formant across two, independently, with real-time FFT processing and a fixed, reported latency.",
+  "facts": ["Pitch ±24 semitones", "Formant ±12 semitones", "Two main controls", "5 factory presets"],
+  "ui": "tb_pitch_shifter.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Pitch Shifter is a focused tool for moving pitch and formant separately. `PITCH` shifts the harmonic spacing from −24 to +24 semitones. `FORMANT` moves the perceived size of a voice or instrument across its own range of −12 to +12 semitones, without forcing the note to follow." },
+    { "p": "With only two main controls you can make clean octave changes, bigger or smaller characters, transformed effects, or tonal reshaping that speed-based playback cannot achieve. Processing runs in real time in mono or stereo, with smooth automation, a fixed reported latency, and an aligned bypass. With both controls at 0 st, the output returns exactly to the dry signal." },
+    { "h3": "Key features" },
+    { "ul": [
+      "`PITCH` from −24 to +24 semitones in 0.01-semitone steps",
+      "`FORMANT` from −12 to +12 semitones, independent of the note",
+      "Real-time FFT processing for mono and stereo",
+      "Fixed reported latency and latency-aligned bypass",
+      "Exact dry output at 0 st on both controls",
+      "5 factory presets, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "FFT analysis", "PITCH transposition", "FORMANT envelope offset", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Pitch Shifter 2.0.0 for Windows (VST3). The current macOS build is version 1.0.2 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Pitch Shifter on a vocal or instrument track. Both controls start at 0 st, which leaves the sound unchanged.",
+      "Turn `PITCH` to transpose: +12 st is an octave up, −12 st an octave down.",
+      "Turn `FORMANT` to change the apparent size: negative values sound larger and darker, positive values smaller and brighter.",
+      "Use the Female to Male or Male to Female presets as starting points for voice changes."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_pitch_shifter.jpg",
+      "caption": "TB Pitch Shifter 2.0 interface (portfolio image)."
+    } },
+    { "table": {
+      "cols": ["Area", "What it does"],
+      "widths": [24, 76],
+      "rows": [
+        ["Preset bar", "Previous and next preset, the preset browser (factory and saved user presets; Custom after a change), Save, Undo, and Redo."],
+        ["`PITCH` dial", "Transposition, ±24 semitones."],
+        ["`FORMANT` dial", "Formant offset, ±12 semitones."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`PITCH`", "−24 to +24 st · 0 st", "Moves the pitch with natural spectral and formant movement. Large shifts make processing artifacts more audible."],
+        ["`FORMANT`", "−12 to +12 st · 0 st", "Offsets the spectral envelope relative to the transposed signal. Negative values sound larger and darker; positive values smaller and brighter. Extreme values sound unnatural."]
+      ]
+    } },
+    { "p": "TB Pitch Shifter also has a host Bypass parameter. The plug-in reports a fixed latency to the host, and the bypassed signal stays time-aligned with the processed one." },
+    { "tip": { "text": "To change a voice's character without changing the note, leave PITCH at 0 st and move only FORMANT." } },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows, or open the preset browser to choose a factory or saved user preset. Save stores the current settings as a .tbps file. Undo and Redo step through recent parameter and preset changes." },
+    { "table": {
+      "compact": true,
+      "cols": ["Group", "Preset", "PITCH", "FORMANT"],
+      "widths": [22, 34, 22, 22],
+      "rows": [
+        ["Start", "Init", "0 st", "0 st"],
+        ["Pitch", "Octave Up", "+12 st", "0 st"],
+        ["Pitch", "Octave Down", "−12 st", "0 st"],
+        ["Voice", "Female to Male", "−4 st", "−1.5 st"],
+        ["Voice", "Male to Female", "+4 st", "+1.5 st"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Octave layer", "use": "A doubled octave under or over a lead.",
+        "settings": [["Preset", "Octave Up or Octave Down"], ["Use", "On a duplicate track"]],
+        "steps": ["Blend the shifted track under the original with the mixer fader."] },
+      { "title": "Voice change", "use": "A different-sounding speaker or singer.",
+        "settings": [["Preset", "Female to Male or Male to Female"], ["FORMANT", "Fine-tune by ear"]],
+        "steps": ["Small formant changes are often more convincing than large pitch changes."] },
+      { "title": "Bigger or smaller character", "use": "A creature, robot, or cartoon voice.",
+        "settings": [["PITCH", "0 st or a small shift"], ["FORMANT", "−6 to −12 st (big) or +6 to +12 st (small)"]],
+        "steps": ["Keep PITCH near 0 so the words stay on the original notes."] },
+      { "title": "Instrument tone reshaping", "use": "Darker or brighter body on guitar or synth.",
+        "settings": [["PITCH", "0 st"], ["FORMANT", "−3 to +3 st"]],
+        "steps": ["Compare with bypass at matched loudness."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The shifted sound is smeared or phasey.", "Large shifts make FFT artifacts more audible. Use smaller shifts, or blend the result on a parallel track."],
+        ["The voice sounds like a chipmunk or a giant.", "Adjust FORMANT to bring the apparent size back toward natural."],
+        ["The track is late against others.", "Make sure the host's latency compensation is on; the plug-in reports its fixed latency."],
+        ["Nothing changes.", "Both controls are at 0 st, or the host Bypass parameter is on."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [24, 24, 32, 20],
+      "rows": [
+        ["`PITCH`", "Pitch", "−24 to +24 st", "0 st"],
+        ["`FORMANT`", "Formant", "−12 to +12 st", "0 st"],
+        ["—", "Bypass", "Off, On", "Off"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["2.0.0 · 2026-08-14", "Lower-hop STFT processing, smoother formant automation, and an exact dry signal at the neutral setting. The editor was redesigned as a bright dual-instrument panel; Pitch and Formant stay independent."],
+        ["1.0.0 · 2026-08-02", "Independent Pitch (±24 st) and Formant (±12 st), five factory presets, and user preset saving and loading."]
+      ]
+    } }
+  ]
+}

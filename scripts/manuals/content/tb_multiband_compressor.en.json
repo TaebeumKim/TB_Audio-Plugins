@@ -1,0 +1,249 @@
+{
+  "file": "TB_MultiBandCompressor",
+  "version": "1.0.2",
+  "date": "2026-10-02",
+  "subtitle": "Four-Band Dynamics",
+  "tagline": "Four freely placed bands that compress or expand only where you need it, with an external sidechain, Mid/Side targeting, and zero-latency or linear-phase processing.",
+  "facts": ["4 free dynamic bands", "Compress or expand", "Stereo, Mid, or Side", "20 factory presets"],
+  "ui": "tb_multiband_compressor.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Multiband Compressor gives you four dynamic bands that you place anywhere in the spectrum. Unlike a crossover-based multiband, the bands do not split the whole signal: each band works only on its own range, and the rest of the spectrum passes untouched. Gaps and overlaps between bands are allowed." },
+    { "p": "Each band compresses or expands, and its signed `RANGE` sets the direction and the maximum change. A band can listen to its own range, to a separate detector range, or to an external sidechain, and it can work on the stereo signal, the Mid, or the Side. `PROCESSING` switches between a zero-latency Dynamic topology and a Linear-phase mastering topology." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Four bands placed freely from 30 Hz to 18 kHz, 0.25 to 4 octaves wide",
+      "Compression or expansion per band; the sign of RANGE selects downward or upward action",
+      "Threshold, ratio, knee, attack, release, and band output per band",
+      "Internal or shared external sidechain, with a band-linked or free detector range",
+      "Stereo, Mid, or Side processing per band, with adjustable stereo link",
+      "DYNAMIC (zero latency) or LINEAR phase, 2x to 8x oversampling, and 0 to 20 ms lookahead",
+      "Interactive band graph with the input spectrum and Delta Listen",
+      "20 factory presets, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Band detectors (internal or sidechain)", "Gain per band (THRESHOLD, RANGE, RATIO, KNEE)", "ATTACK, RELEASE, stereo link, channel mode", "Band output and MIX", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Multiband Compressor 1.0.2 for Windows (VST3). The current macOS build (AU and VST3) is version 1.0.1 and may differ."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Multiband Compressor on a track, bus, or the master. Init enables bands 1 to 3 at 120 Hz, 1.2 kHz, and 7 kHz with gentle compression; band 4 is off.",
+      "Select a band with the BAND buttons {{4}} or by clicking it in the graph {{3}}. Drag its node to set frequency and range, and drag a coloured edge to set the width.",
+      "Set `THRESHOLD`, `RANGE`, and `RATIO` {{9}}, then `ATTACK` and `RELEASE`.",
+      "Turn on `DELTA` {{7}} to hear only what the band changes, then turn it off again.",
+      "Set `MIX` {{14}} and compare with `BYPASS` {{10}}."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_multiband_compressor.jpg",
+      "caption": "TB Multiband Compressor 1.0 interface with the Broad Control preset; band 1 is selected.",
+      "callouts": [
+        { "n": 1, "x": 35.6, "y": 3.4 },
+        { "n": 2, "x": 88.0, "y": 11.6 },
+        { "n": 3, "x": 42.0, "y": 24.2 },
+        { "n": 4, "x": 6.0, "y": 67.3 },
+        { "n": 5, "x": 38.8, "y": 63.4 },
+        { "n": 6, "x": 52.3, "y": 63.4 },
+        { "n": 7, "x": 65.2, "y": 63.4 },
+        { "n": 8, "x": 80.7, "y": 63.4 },
+        { "n": 9, "x": 6.0, "y": 77.0 },
+        { "n": 10, "x": 6.0, "y": 88.4 },
+        { "n": 11, "x": 18.7, "y": 88.4 },
+        { "n": 12, "x": 37.2, "y": 88.4 },
+        { "n": 13, "x": 58.3, "y": 88.4 },
+        { "n": 14, "x": 83.3, "y": 88.4 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset (hold to browse), the preset list, Save, Undo, and Redo."],
+        [2, "ANALYZER", "shows or hides the input spectrum."],
+        [3, "Band graph", "input spectrum, band nodes, coloured band edges, and the response."],
+        [4, "BAND 1–4, BAND ON", "selects a band and switches it on or off."],
+        [5, "COMP / EXPAND", "the band's dynamics mode."],
+        [6, "SIDECHAIN", "internal or external detector source."],
+        [7, "DELTA", "latches the band's wet-minus-dry monitor."],
+        [8, "Channel mode", "Stereo, Mid, or Side."],
+        [9, "Band controls", "FREQUENCY, WIDTH, THRESHOLD, RANGE, RATIO, KNEE, ATTACK, RELEASE."],
+        [10, "BYPASS", "global bypass."],
+        [11, "PROCESSING", "DYNAMIC or LINEAR."],
+        [12, "OVERSAMPLING", "OFF, 2X, 4X, or 8X."],
+        [13, "LOOKAHEAD / LAT", "lookahead time; the label shows the total latency in samples."],
+        [14, "MIX", "global dry/wet."]
+      ]
+    } },
+    { "h3": "Working in the band graph" },
+    { "ul": [
+      "Click a band to select it; double-click empty space to enable a band there.",
+      "Drag a node to set the band's frequency and range.",
+      "Drag either coloured band edge, or use the mouse wheel over a node, to set the width.",
+      "Hold the right mouse button on a band node for momentary Delta Listen; drag sideways to move the band while listening, and release to stop.",
+      "Double-click a value box to type an exact setting."
+    ] },
+
+    { "h2": "Controls" },
+    { "h3": "Band" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [17, 25, 58],
+      "rows": [
+        ["`BAND ON`", "Off, On · bands 1–3 on, band 4 off", "Enables the selected band without changing the others."],
+        ["`FREQUENCY`", "30 Hz to 18 kHz · 120 Hz, 1.2 kHz, 7 kHz, 12 kHz", "Centre frequency of the band."],
+        ["`WIDTH`", "0.25 to 4 oct · 1.5 oct", "Width of the band in octaves."],
+        ["`THRESHOLD`", "−60 to 0 dB · −18 dB", "Detector threshold."],
+        ["`RANGE`", "−48 to +12 dB · −3 dB", "Signed maximum gain change. The sign selects the direction: negative values act downward, positive values upward."],
+        ["`RATIO`", "1:1 to 20:1 · 2:1", "Compression or expansion ratio."],
+        ["`KNEE`", "0 to 18 dB · 6 dB", "Soft-knee width."],
+        ["`ATTACK`", "0.5 to 200 ms · 15 ms", "Detector attack time."],
+        ["`RELEASE`", "20 to 2000 ms · 180 ms", "Detector release time."],
+        ["`COMP` / `EXPAND`", "Compress, Expand · Compress", "Chooses compression or expansion for the band."],
+        ["`SIDECHAIN`", "Off, On · Off", "Off uses the main input as the band's detector. On uses the host's shared auxiliary sidechain input; the panel shows NO SC INPUT when none is connected."],
+        ["Channel mode", "Stereo, Mid, Side · Stereo", "Processes the stereo signal, the Mid, or the Side. Mono hosts fall back to Stereo."],
+        ["`DELTA`", "Off, On · Off", "Latches the band's wet-minus-dry monitor, so you hear only what the band changes. It is not saved or automated."]
+      ]
+    } },
+    { "p": "Each band also has the following host parameters. They are stored in presets and the project, but they do not appear on the panel shown above." },
+    { "table": {
+      "cols": ["Host parameter", "Range · default", "What it does"],
+      "widths": [22, 25, 53],
+      "rows": [
+        ["Band Output", "−18 to +18 dB · 0 dB", "Static output gain for the band."],
+        ["Detect", "BAND, FREE · BAND", "BAND makes the detector follow the band's own range; FREE uses Detector Frequency and Detector Bandwidth."],
+        ["Detector Frequency", "30 Hz to 18 kHz · same as the band", "Detector centre frequency in FREE mode."],
+        ["Detector Bandwidth", "0.25 to 4 oct · 1.5 oct", "Detector width in FREE mode."],
+        ["Stereo Link", "0 to 100% · 100%", "How strongly the two channels share one detector."],
+        ["Audition", "Off, On · Off", "Band audition for monitoring."]
+      ]
+    } },
+    { "h3": "Global" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [17, 25, 58],
+      "rows": [
+        ["`PROCESSING`", "DYNAMIC, LINEAR · DYNAMIC", "DYNAMIC is a zero-latency band topology. LINEAR is a linear-phase mastering topology that adds FIR delay and can pre-ring."],
+        ["`OVERSAMPLING`", "OFF, 2X, 4X, 8X · OFF", "Oversamples the dynamics path. Higher settings add latency and CPU use."],
+        ["`LOOKAHEAD`", "0 to 20 ms · 0 ms", "Delays the gain action so the detector reacts ahead of the audio. It changes the reported latency."],
+        ["`MIX`", "0 to 100% · 100%", "Blends the processed signal with the exact dry input."],
+        ["Output (host parameter)", "−18 to +18 dB · 0 dB", "Final output gain."],
+        ["`BYPASS`", "Off, On · Off", "Global bypass recognised by the host."]
+      ]
+    } },
+    { "note": {"title": "Latency", "text": "Only DYNAMIC with OVERSAMPLING OFF and LOOKAHEAD 0 ms has zero latency. The LOOKAHEAD / LAT label shows the current total latency in samples. PROCESSING, OVERSAMPLING, and LOOKAHEAD are not automatable, because changing them changes the reported latency."} },
+    { "pagebreak": true },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows (hold to browse), or open the list to choose a factory or user preset. Save stores the current settings as a .tbmbc user preset. Undo and Redo step through recent edits. In the table, the band list shows the active bands; PROCESSING gives the phase mode, oversampling, and lookahead." },
+    { "table": {
+      "compact": true,
+      "cols": ["Preset", "Active bands", "PROCESSING", "MIX", "Notes"],
+      "widths": [19, 27, 19, 8, 27],
+      "rows": [
+        {"group": "START"},
+        ["Init", "120 Hz, 1.2 kHz, 7 kHz", "DYNAMIC · OFF · 0 ms", "100%", "—"],
+        ["Gentle Balance", "150 Hz, 1.2 kHz, 6.5 kHz", "DYNAMIC · OFF · 0 ms", "80%", "—"],
+        ["Broad Control", "90 Hz, 550 Hz, 2.8 kHz, 10.5 kHz", "DYNAMIC · OFF · 0 ms", "100%", "—"],
+        {"group": "SOURCE"},
+        ["Vocal Focus", "140 Hz, 1.8 kHz, 6.8 kHz", "DYNAMIC · 2X · 2 ms", "100%", "Upward RANGE: 2; Mid: 1–3"],
+        ["Bass Foundation", "70 Hz, 700 Hz", "DYNAMIC · OFF · 0 ms", "100%", "Upward RANGE: 2; Mid: 1–2"],
+        ["Drum Tamer", "80 Hz, 350 Hz, 3.2 kHz, 10 kHz", "DYNAMIC · 4X · 3 ms", "100%", "—"],
+        ["Guitar Smooth", "120 Hz, 2.5 kHz, 5.5 kHz, 10 kHz", "DYNAMIC · 2X · 2 ms", "100%", "Mid: 1–2; Side: 4"],
+        ["Keys Space", "90 Hz, 700 Hz, 3.5 kHz, 11 kHz", "DYNAMIC · 4X · 1 ms", "100%", "Expand: 3–4; Upward RANGE: 3–4; Mid: 1, 3; Side: 4"],
+        {"group": "BUS"},
+        ["Mix Bus Balance", "100 Hz, 700 Hz, 3.2 kHz, 11 kHz", "DYNAMIC · 2X · 1 ms", "90%", "Mid: 1–2; Side: 4"],
+        ["Drum Bus Glue", "90 Hz, 500 Hz, 3.5 kHz, 10.5 kHz", "DYNAMIC · OFF · 0 ms", "90%", "—"],
+        ["Mastering Touch", "90 Hz, 600 Hz, 3.5 kHz, 12 kHz", "LINEAR · 2X · 5 ms", "100%", "Mid: 1; Side: 4"],
+        ["Parallel Drum Punch", "75 Hz, 250 Hz, 3.2 kHz, 9.5 kHz", "DYNAMIC · 8X · 1.5 ms", "65%", "Upward RANGE: 1, 3, 4; Mid: 1; Side: 4"],
+        {"group": "MOTION"},
+        ["Kick Duck", "90 Hz", "DYNAMIC · OFF · 3 ms", "100%", "Sidechain: 1"],
+        ["Rhythmic Pump", "100 Hz, 800 Hz, 5 kHz", "DYNAMIC · OFF · 0 ms", "100%", "Sidechain: 1–3"],
+        ["Transient Lift", "100 Hz, 2.2 kHz, 8 kHz", "DYNAMIC · 4X · 1 ms", "100%", "Upward RANGE: 1–3; Mid: 1–2; Side: 3"],
+        {"group": "MASTER"},
+        ["Transparent Master", "70 Hz, 450 Hz, 3 kHz, 11 kHz", "LINEAR · 4X · 5 ms", "100%", "Mid: 1–2; Side: 4"],
+        ["Loudness Guard", "70 Hz, 350 Hz, 2.8 kHz, 8.5 kHz", "DYNAMIC · 8X · 10 ms", "100%", "Mid: 1–2"],
+        ["De-Harsh Master", "2.2 kHz, 4.2 kHz, 7.2 kHz, 12 kHz", "LINEAR · 8X · 8 ms", "100%", "Mid: 1–2; Side: 3–4"],
+        ["Low End Anchor", "48 Hz, 105 Hz, 250 Hz", "LINEAR · 4X · 6 ms", "100%", "Mid: 1–2"],
+        ["Stereo Focus", "90 Hz, 650 Hz, 3.5 kHz, 10.5 kHz", "LINEAR · 4X · 5 ms", "100%", "Mid: 2; Side: 1, 4"]
+      ]
+    } },
+    { "p": "Kick Duck and Rhythmic Pump use the external sidechain, so route a key signal, such as a kick drum, to the plug-in's sidechain input." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Vocal control", "use": "Tame boom and harshness while keeping the vocal open.",
+        "settings": [["Preset", "Vocal Focus"], ["THRESHOLD", "−26 to −20 dB"]],
+        "steps": ["Select the band over the problem range, narrow WIDTH, and use DELTA to hear what it removes."] },
+      { "title": "Kick and bass", "use": "Duck the low end of a bass every time the kick hits.",
+        "settings": [["Preset", "Kick Duck"], ["SIDECHAIN", "On"]],
+        "steps": ["Insert on the bass and route the kick to the sidechain input."] },
+      { "title": "Gentle mastering", "use": "Transparent, linear-phase control of a full mix.",
+        "settings": [["Preset", "Transparent Master"], ["PROCESSING", "LINEAR"]],
+        "steps": ["Keep RANGE small; a decibel or less per band is often enough."] },
+      { "title": "Tighter stereo low end", "use": "Less low-frequency Side content on a mix.",
+        "settings": [["Preset", "Stereo Focus"], ["Channel mode (band 1)", "Side"]],
+        "steps": ["Listen in mono and in stereo as you set band 1's RANGE."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["A sidechain preset does nothing.", "No key signal reaches the plug-in. Route one to its sidechain input; the panel shows NO SC INPUT otherwise."],
+        ["The band boosts instead of reducing.", "RANGE is positive. Make it negative for downward action."],
+        ["The track is late against others.", "LINEAR, OVERSAMPLING, or LOOKAHEAD add latency. Check LOOKAHEAD / LAT and turn on delay compensation."],
+        ["Transients get a soft pre-echo.", "LINEAR phase can pre-ring. Use DYNAMIC on drums."],
+        ["It is hard to hear what a band does.", "Turn on DELTA, or hold the right mouse button on the band node."],
+        ["Nothing changes.", "The band is off (BAND ON), the signal stays below THRESHOLD, RANGE is 0 dB, or BYPASS is on."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "p": "TB Multiband Compressor has 78 host parameters: six global ones and eighteen for each band. Band parameters are named Band 1 to Band 4." },
+    { "table": {
+      "compact": true,
+      "cols": ["Host parameter", "Range", "Default"],
+      "widths": [34, 40, 26],
+      "rows": [
+        {"group": "Global"},
+        ["Mix", "0 to 100%", "100%"],
+        ["Output", "−18 to +18 dB", "0 dB"],
+        ["Bypass", "Off, On", "Off"],
+        ["Phase Mode", "Dynamic, Linear", "Dynamic"],
+        ["Oversampling", "OFF, 2x, 4x, 8x", "OFF"],
+        ["Lookahead", "0 to 20 ms", "0 ms"],
+        {"group": "Each band (Band 1 to Band 4)"},
+        ["Enabled", "Off, On", "On for bands 1–3, off for band 4"],
+        ["Frequency", "30 to 18000 Hz", "120, 1200, 7000, 12000 Hz"],
+        ["Bandwidth", "0.25 to 4 oct", "1.5 oct"],
+        ["Threshold", "−60 to 0 dB", "−18 dB"],
+        ["Range", "−48 to +12 dB", "−3 dB"],
+        ["Ratio", "1 to 20", "2"],
+        ["Attack", "0.5 to 200 ms", "15 ms"],
+        ["Release", "20 to 2000 ms", "180 ms"],
+        ["Knee", "0 to 18 dB", "6 dB"],
+        ["Output", "−18 to +18 dB", "0 dB"],
+        ["Dynamics", "Compress, Expand", "Compress"],
+        ["Source", "INT, EXT", "INT"],
+        ["Detect", "BAND, FREE", "BAND"],
+        ["Detector Frequency", "30 to 18000 Hz", "Same as the band"],
+        ["Detector Bandwidth", "0.25 to 4 oct", "1.5 oct"],
+        ["Stereo Link", "0 to 100%", "100%"],
+        ["Audition", "Off, On", "Off"],
+        ["Channel Mode", "Stereo, Mid, Side", "Stereo"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.2 · 2026-08-17", "Stricter, portable numeric state parsing. All 78 parameter IDs, the state and preset formats, and the audio behaviour are unchanged."],
+        ["1.0.1 · 2026-08-13", "Response graph rework: RANGE now reads as the shaded base envelope, with the live gain reduction as an overlay tinted in the band colour; contours no longer draw over the 0 dB line."],
+        ["1.0.0 · 2026-08-13", "First release: four independently placed bands with compression or expansion, signed Range, external sidechain, stereo and Mid/Side targeting, Dynamic or Linear modes, oversampling, and lookahead."]
+      ]
+    } }
+  ]
+}

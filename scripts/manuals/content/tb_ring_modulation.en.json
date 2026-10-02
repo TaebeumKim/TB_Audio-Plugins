@@ -1,0 +1,145 @@
+{
+  "file": "TB_RingModulation",
+  "version": "1.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Ring Modulator",
+  "tagline": "A four-control ring modulator with an internal carrier from 0.1 Hz to 5 kHz, moving from slow tremolo to metallic sidebands.",
+  "facts": ["Carrier 0.1 Hz to 5 kHz", "Sine-to-square shape", "Wet tone filter", "6 factory presets"],
+  "ui": "tb_ring_modulation.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Ring Modulation multiplies the input by an internal carrier. At low carrier frequencies this sounds like tremolo and pulsing amplitude; at higher frequencies it creates new, often metallic sidebands above and below the original sound." },
+    { "p": "Four controls cover it: `FREQUENCY` sets the carrier, `SHAPE` morphs its waveform, `TONE` focuses the top end of the modulated signal, and `MIX` places the effect. Parameter and bypass smoothing keep automation clean on mono or stereo sources, and no external routing is needed." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Internal carrier from 0.1 Hz to 5 kHz",
+      "SHAPE morphs from sine through triangle to square",
+      "TONE low-pass on the modulated signal",
+      "MIX blends the dry and ring-modulated signals",
+      "Carrier field display with frequency, shape, and waveform",
+      "Smoothed parameters and bypass",
+      "6 factory presets, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "× carrier (FREQUENCY, SHAPE)", "TONE low-pass", "MIX with the dry signal", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Ring Modulation 1.0.0 for Windows (VST3). The current macOS build is also version 1.0.0; small differences between platforms are possible."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Ring Modulation on a vocal, drum, synth, or guitar track. The defaults are `FREQUENCY` 120 Hz, `SHAPE` sine, `TONE` 12 kHz, and `MIX` 50%.",
+      "For tremolo, set `FREQUENCY` {{3}} below about 20 Hz.",
+      "For metallic or robotic tones, raise `FREQUENCY` into the hundreds or thousands of hertz.",
+      "Make the carrier harsher with `SHAPE` {{4}}, and tame the top end with `TONE` {{5}}.",
+      "Blend the result with `MIX` {{6}}."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_ring_modulation.jpg",
+      "caption": "TB Ring Modulation 1.0 interface, showing the Robot Voice preset.",
+      "callouts": [
+        { "n": 1, "x": 38.4, "y": 14.5 },
+        { "n": 2, "x": 19.6, "y": 22.7 },
+        { "n": 3, "x": 8.6, "y": 63.3 },
+        { "n": 4, "x": 28.6, "y": 63.3 },
+        { "n": 5, "x": 58.6, "y": 63.3 },
+        { "n": 6, "x": 77.1, "y": 63.3 },
+        { "n": 7, "x": 90.2, "y": 57.0 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset (hold to browse), the preset list, Save, Undo, and Redo."],
+        [2, "CARRIER FIELD", "the carrier frequency, its shape, and the waveform."],
+        [3, "FREQUENCY", "the carrier frequency."],
+        [4, "SHAPE", "sine, triangle, or square, and the morphs between them."],
+        [5, "TONE", "low-pass on the modulated signal."],
+        [6, "MIX", "dry/wet blend."],
+        [7, "Bypass", "bypasses the complete effect."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`FREQUENCY`", "0.1 Hz to 5 kHz · 120 Hz", "The internal carrier frequency. Low values give tremolo and pulsing; high values give inharmonic, metallic sidebands."],
+        ["`SHAPE`", "0 to 100% · 0% (sine)", "Morphs the carrier from sine (0%) through triangle (50%) to square (100%). Toward square there are more harmonics, so check the high end."],
+        ["`TONE`", "500 Hz to 20 kHz · 12 kHz", "Low-pass cutoff on the ring-modulated signal. It does not change the carrier frequency."],
+        ["`MIX`", "0 to 100% · 50%", "Blends the dry and ring-modulated signals. At 100% the original pitch cues change strongly."],
+        ["Bypass", "Off, On · Off", "Bypasses the complete effect, with smoothing."]
+      ]
+    } },
+    { "tip": { "text": "Ring modulation sounds most musical when the carrier is related to the key, for example the root or the fifth. Unrelated frequencies give clangorous, bell-like or robotic results." } },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows; hold an arrow to browse continuously. Open the list to choose a factory or user preset. Save stores the current settings as a .tbring file. Undo and Redo step through recent changes. The factory presets can also be selected from the host through a program parameter." },
+    { "table": {
+      "compact": true,
+      "cols": ["Group", "Preset", "FREQUENCY", "SHAPE", "TONE", "MIX"],
+      "widths": [14, 24, 16, 16, 14, 16],
+      "rows": [
+        ["Start", "Init", "120 Hz", "0% (sine)", "12 kHz", "50%"],
+        ["Start", "Subtle Tremolo", "5 Hz", "0% (sine)", "16 kHz", "30%"],
+        ["Metal", "Bell Alloy", "437 Hz", "15%", "18 kHz", "70%"],
+        ["Metal", "Robot Voice", "82 Hz", "100% (square)", "8 kHz", "75%"],
+        ["Texture", "Radio Sidebands", "1250 Hz", "50% (triangle)", "4.5 kHz", "65%"],
+        ["Texture", "Digital Insect", "2800 Hz", "100% (square)", "9 kHz", "60%"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Tremolo", "use": "A gentle amplitude pulse on guitar or keys.",
+        "settings": [["Preset", "Subtle Tremolo"], ["FREQUENCY", "2 to 8 Hz"], ["MIX", "20 to 40%"]],
+        "steps": ["Set FREQUENCY to taste; it is free-running, not tempo-synced."] },
+      { "title": "Robot voice", "use": "A buzzing, robotic vocal.",
+        "settings": [["Preset", "Robot Voice"], ["FREQUENCY", "60 to 120 Hz"], ["SHAPE", "Square"]],
+        "steps": ["Lower TONE if the buzz is too harsh."] },
+      { "title": "Bell and metal textures", "use": "Clangorous tones on percussion or synths.",
+        "settings": [["Preset", "Bell Alloy"], ["FREQUENCY", "300 to 1000 Hz"]],
+        "steps": ["Sweep FREQUENCY slowly to find pleasing sidebands."] },
+      { "title": "Lo-fi radio", "use": "A narrow, broken-radio effect.",
+        "settings": [["Preset", "Radio Sidebands"], ["TONE", "3 to 5 kHz"]],
+        "steps": ["Combine with a high-pass EQ for a smaller sound."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The effect is too harsh.", "Lower TONE, move SHAPE toward sine, or lower MIX."],
+        ["The pitch of the source disappears.", "That is normal at high MIX and FREQUENCY. Lower MIX to keep the original pitch audible."],
+        ["Low frequencies sound like a pulse, not a tone.", "Below about 20 Hz the carrier works like tremolo. Raise FREQUENCY for sidebands."],
+        ["Nothing changes.", "MIX is at 0% or the effect is bypassed."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`FREQUENCY`", "Frequency", "0.1 to 5000 Hz", "120 Hz"],
+        ["`SHAPE`", "Shape", "0 to 100% (sine to square)", "0%"],
+        ["`TONE`", "Tone", "500 to 20000 Hz", "12000 Hz"],
+        ["`MIX`", "Mix", "0 to 100%", "50%"],
+        ["Bypass", "Bypass", "Off, On", "Off"],
+        ["Preset list", "Program", "6 factory presets", "Init"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.0 · 2026-08-02", "First release: an internal carrier from 0.1 Hz to 5 kHz, sine-triangle-square shape morphing, a wet tone filter, and six factory presets."]
+      ]
+    } }
+  ]
+}

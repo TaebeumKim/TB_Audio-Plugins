@@ -1,0 +1,146 @@
+{
+  "file": "TB_StepShifter",
+  "version": "2.2.0",
+  "date": "2026-10-02",
+  "subtitle": "Spectral Harmonic Shifter",
+  "tagline": "Tracks the fundamental, isolates the harmonic series, and moves it, or only the harmonics above the fundamental, to a new pitch while the timing stays intact.",
+  "facts": ["Pitch Shift and Colorize modes", "±24 semitones", "Fast or Fine analysis", "7 factory presets"],
+  "ui": "tb_step_shifter.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Step Shifter is a spectral harmonic shifter. Instead of resampling the whole spectrum, it tracks the input's fundamental frequency, isolates the harmonic series, and moves selected harmonics to new positions while the timing of the source stays the same." },
+    { "p": "In PITCH SHIFT mode the detected harmonic series moves to the new pitch. In COLORIZE mode the fundamental stays in place and the harmonics above it are retuned, which changes the tonal identity without changing the note. `STEP` sets how much of the series moves, and `MIX` blends the latency-aligned dry signal with the result. It works best on clearly pitched material such as vocals, acoustic guitar, and pads." },
+    { "h3": "Key features" },
+    { "ul": [
+      "PITCH SHIFT mode moves the detected harmonic series",
+      "COLORIZE mode keeps the fundamental and retunes the harmonics above it",
+      "`PITCH` from −24 to +24 semitones in 0.01-semitone steps",
+      "`STEP` chooses how much of the series moves, from the lowest harmonics to the whole series",
+      "`RESOLUTION`: Fast for transients, Fine for low fundamentals, with the same reported latency",
+      "`MIX` blends the latency-aligned dry signal with the result",
+      "7 factory presets, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Fundamental tracking (Fast or Fine)", "Harmonic series", "Shift or retune, scaled by STEP", "MIX with the aligned dry signal", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Step Shifter 2.2.0 for Windows (VST3), which is published as a beta. The current macOS build is version 1.0.2 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Step Shifter on a clearly pitched source such as a vocal, acoustic guitar, or pad. The defaults are PITCH SHIFT mode, `PITCH` +12 st, `STEP` 50%, `RESOLUTION` Fast, and `MIX` 100%.",
+      "Choose PITCH SHIFT {{2}} to move the note, or COLORIZE to keep the note and change its colour.",
+      "Set `PITCH` {{3}} in semitones.",
+      "Set `STEP` {{4}}. Low values move only the lowest harmonics; high values move the whole series.",
+      "If low notes track poorly, switch `RESOLUTION` {{5}} to Fine.",
+      "Blend the result with `MIX` {{6}}."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_step_shifter.jpg",
+      "caption": "Captured from an earlier 2.x build. Version 2.2.0 shows the shared TB_STEP SHIFTER header with previous and next preset arrows, the preset list, Save, Undo, and Redo; the controls are the same.",
+      "callouts": [
+        { "n": 1, "x": 35.5, "y": 8.8 },
+        { "n": 2, "x": 17.9, "y": 28.0 },
+        { "n": 3, "x": 41.7, "y": 38.0 },
+        { "n": 4, "x": 58.4, "y": 38.0 },
+        { "n": 5, "x": 69.6, "y": 82.0 },
+        { "n": 6, "x": 93.5, "y": 38.0 }
+      ],
+      "legend": [
+        [1, "Preset bar", "the preset list, Save, Undo, and Redo."],
+        [2, "MODE", "PITCH SHIFT or COLORIZE."],
+        [3, "PITCH", "how far the harmonics move, in semitones."],
+        [4, "STEP", "how much of the harmonic series moves."],
+        [5, "RESOLUTION", "Fast or Fine analysis."],
+        [6, "MIX", "dry/wet blend."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [20, 22, 58],
+      "rows": [
+        ["`PITCH SHIFT` / `COLORIZE`", "Pitch Shift, Colorize · Pitch Shift", "Pitch Shift moves the detected harmonic series to the new pitch. Colorize keeps the fundamental in place and retunes the harmonics above it."],
+        ["`PITCH`", "−24 to +24 st · +12 st", "How far the harmonics are moved, in semitones. 0 st leaves the signal untouched."],
+        ["`STEP`", "0 to 100% · 50%", "How much of the detected harmonic series is shifted. Low values move only the lowest harmonics; high values move the whole series."],
+        ["`RESOLUTION`", "Fast, Fine · Fast", "Analysis window length. Fast reacts more quickly to transients; Fine resolves low fundamentals more accurately. The reported latency is the same for both."],
+        ["`MIX`", "0 to 100% · 100%", "Blend between the latency-aligned dry signal and the shifted result. 100% is fully wet."]
+      ]
+    } },
+    { "tip": { "text": "Large shifts make processing artifacts more audible. For natural results, keep PITCH moderate or lower MIX; for effects, push both." } },
+
+    { "h2": "Presets" },
+    { "p": "Use the arrows to step through presets, or open the list to choose a FACTORY or USER preset. Save stores the current settings as a .tbstepshifter file. The name shows CUSTOM after you change a setting. Undo and Redo step through recent changes." },
+    { "table": {
+      "compact": true,
+      "cols": ["Preset", "Mode", "PITCH", "STEP", "RESOLUTION", "MIX"],
+      "widths": [24, 16, 14, 14, 16, 16],
+      "rows": [
+        ["Init", "Pitch Shift", "+12 st", "50%", "Fast", "100%"],
+        ["Clean Octave Up", "Pitch Shift", "+12 st", "100%", "Fine", "100%"],
+        ["Airy Fifth", "Pitch Shift", "+7 st", "55%", "Fine", "80%"],
+        ["Deep Octave", "Pitch Shift", "−12 st", "100%", "Fine", "100%"],
+        ["Sub Weight", "Pitch Shift", "−7 st", "100%", "Fine", "60%"],
+        ["Harmonic Glass", "Colorize", "+12 st", "55%", "Fine", "45%"],
+        ["Warm Patina", "Colorize", "−5 st", "35%", "Fine", "40%"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Octave double", "use": "A clean octave layer above a vocal or lead.",
+        "settings": [["Preset", "Clean Octave Up"], ["MIX", "30 to 50%"]],
+        "steps": ["Lower MIX until the octave supports the line instead of competing with it."] },
+      { "title": "Weight under a synth", "use": "A lower harmonic layer under a pad or lead.",
+        "settings": [["Preset", "Sub Weight or Deep Octave"], ["MIX", "40 to 60%"]],
+        "steps": ["Check the low end in mono and on small speakers."] },
+      { "title": "Glassy vocal colour", "use": "A new tone without changing the melody.",
+        "settings": [["Preset", "Harmonic Glass"], ["Mode", "Colorize"], ["MIX", "30 to 50%"]],
+        "steps": ["Colorize keeps the note, so the melody stays in tune."] },
+      { "title": "Warm patina", "use": "A darker, softer colour on guitar or keys.",
+        "settings": [["Preset", "Warm Patina"], ["STEP", "25 to 45%"]],
+        "steps": ["Raise STEP slowly; more harmonics move as it rises."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["Nothing changes.", "PITCH is 0 st or MIX is 0%."],
+        ["Low notes warble or track poorly.", "Switch RESOLUTION to Fine."],
+        ["Transients smear.", "Switch RESOLUTION to Fast."],
+        ["The note does not change in Colorize mode.", "That is expected: Colorize keeps the fundamental. Use Pitch Shift to move the note."],
+        ["The result sounds unstable.", "Material without a clear pitch, such as noise or drums, tracks less predictably. Use clearly pitched sources."],
+        ["A saved preset does not load.", "The file must be a .tbstepshifter preset of a supported version."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [28, 22, 30, 20],
+      "rows": [
+        ["`PITCH SHIFT` / `COLORIZE`", "Colorize", "Off (Pitch Shift), On (Colorize)", "Off"],
+        ["`PITCH`", "Pitch", "−24 to +24 st", "+12 st"],
+        ["`STEP`", "Step", "0 to 100%", "50%"],
+        ["`RESOLUTION`", "Resolution", "Fast, Fine", "Fast"],
+        ["`MIX`", "Mix", "0 to 100%", "100%"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["2.2.0 · 2026-07-30", "Moved the effect logo and product name into a shared rack header, and improved previous/next navigation and preset saving and loading."]
+      ]
+    } }
+  ]
+}

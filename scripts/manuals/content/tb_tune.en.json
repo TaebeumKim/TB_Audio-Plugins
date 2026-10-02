@@ -1,0 +1,149 @@
+{
+  "file": "TB_Tune",
+  "version": "2.1.0",
+  "date": "2026-10-02",
+  "subtitle": "Musical Pitch Correction",
+  "tagline": "Real-time monophonic pitch correction that keeps a vocal in your key and scale, and lets ambiguous notes follow the direction of the melody.",
+  "facts": ["16 scales", "Auto Musical note choice", "Formant ±6 semitones", "Real-time, monophonic"],
+  "ui": "tb_tune.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Tune is a real-time pitch corrector for a single voice. It keeps the performance inside the key and scale you choose, with a more musical sense of direction than simply snapping to the nearest note." },
+    { "p": "When a sung note lands between two scale notes, `AUTO MUSICAL` considers the previous stable note and the direction of the melody before it chooses the target, so rising lines can keep rising and falling lines can keep falling. Each decision stays fixed for the whole note. `FORMANT` changes the vocal character without moving the corrected note." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Key wheel for the 12 keys, and 16 scales from Major to Diminished",
+      "`AUTO MUSICAL` sets how often ambiguous notes follow the melodic direction",
+      "`FORMANT` from −6 to +6 semitones, independent of the corrected pitch",
+      "Pitch-status display with the input note, target note, cents offset, and voicing",
+      "Init and user presets"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Pitch detection", "Target note from KEY, SCALE, and AUTO MUSICAL", "Pitch correction", "FORMANT", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Tune 2.1.0 for Windows (VST3). The current macOS build is version 1.0.4 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Tune on a solo vocal or another monophonic, pitched track.",
+      "Click the song's key on the `KEY` wheel. The default is C.",
+      "Choose a scale group (MODES, MINOR, PENTA, or SYM), then the scale. The default is Major (Ionian).",
+      "Play the track and watch the display: INPUT shows the detected note, TARGET the note it is corrected to.",
+      "Raise `AUTO MUSICAL` if the correction picks the wrong neighbour on fast or sliding lines.",
+      "Adjust `FORMANT` only if you want a darker or brighter character."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_tune.jpg",
+      "caption": "TB Tune 2.x interface (portfolio image)."
+    } },
+    { "table": {
+      "cols": ["Area", "What it does"],
+      "widths": [24, 76],
+      "rows": [
+        ["`KEY` wheel", "The 12 keys. Click a note to set the song key."],
+        ["`AUTO MUSICAL`", "How often an ambiguous note follows the melodic direction. Double-click to type a percentage."],
+        ["Scale groups", "MODES, MINOR, PENTA, and SYM tabs show the scales in each group."],
+        ["Pitch display", "TARGET shows the note being corrected to and its cents offset; INPUT shows the detected note."],
+        ["`FORMANT`", "Vocal character shift. Double-click to type a value in semitones."],
+        ["`SCALE`", "The selected scale and the scale buttons of the current group."],
+        ["`VOICED`", "Lights when a voiced, pitched input is detected."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`KEY`", "C, C#, D, D#, E, F, F#, G, G#, A, A#, B · C", "The song key: the root of the scale that correction targets. A wrong key pulls correct notes to other pitches."],
+        ["`SCALE`", "16 scales · Major (Ionian)", "The set of notes that correction can target. Check which scale the melody and harmony actually use."],
+        ["`AUTO MUSICAL`", "0 to 100% · 0%", "The chance that an ambiguous new note follows the detected melodic direction instead of the nearest scale note. High values can flatten intended drift and vibrato."],
+        ["`FORMANT`", "−6 to +6 st · 0 st", "Shifts vocal character without moving the corrected note. 0 st preserves the character; negative is darker, positive is brighter."]
+      ]
+    } },
+    { "h3": "Scales" },
+    { "table": {
+      "compact": true,
+      "cols": ["Type", "Scales"],
+      "widths": [22, 78],
+      "rows": [
+        ["Major and minor", "Major (Ionian), Natural Minor (Aeolian), Harmonic Minor, Melodic Minor Ascending"],
+        ["Pentatonic", "Major Pentatonic, Minor Pentatonic, Blues"],
+        ["Modes", "Dorian, Phrygian, Lydian, Mixolydian, Locrian"],
+        ["Symmetric", "Chromatic, Whole Tone, Diminished Half-Whole, Diminished Whole-Half"]
+      ]
+    } },
+    { "h3": "Reading the pitch display" },
+    { "table": {
+      "cols": ["Display", "Meaning"],
+      "widths": [32, 68],
+      "rows": [
+        ["`INPUT`", "The detected note of the incoming voice."],
+        ["`TARGET` and cents", "The note being corrected to, and how far the input is from it in cents."],
+        ["`NEAREST SCALE NOTE`", "The target was chosen as the nearest note of the scale."],
+        ["`AUTO MUSICAL CHOICE`", "Auto Musical chose the target from the melodic direction."],
+        ["`WAITING FOR VOICED INPUT`", "No pitched voice is detected, for example during silence, breaths, or noise."]
+      ]
+    } },
+    { "note": { "text": "TB Tune follows one voice at a time. Chords, doubled vocals, and heavy reverb confuse pitch detection, so use it on a dry, solo track." } },
+
+    { "h2": "Presets" },
+    { "p": "Use the preset controls to step through presets, or open the list to choose Init or one of your user presets. Save stores the current settings as a .tbautotunepreset file. The name shows CUSTOM after you change a setting." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Natural correction", "use": "A pop or rock lead vocal that should still sound human.",
+        "settings": [["KEY / SCALE", "The song's key and scale"], ["AUTO MUSICAL", "0 to 30%"], ["FORMANT", "0 st"]],
+        "steps": ["Check that the target notes match the melody before raising Auto Musical."] },
+      { "title": "Fast, melismatic lines", "use": "Runs and slides where notes pass between scale steps.",
+        "settings": [["AUTO MUSICAL", "50 to 80%"]],
+        "steps": ["Watch for AUTO MUSICAL CHOICE on the display while the run plays."] },
+      { "title": "Minor-key song", "use": "A song in a minor key with raised leading tones.",
+        "settings": [["SCALE", "Harmonic Minor or Melodic Minor Ascending"]],
+        "steps": ["Natural Minor has no raised seventh, so a raised seventh is corrected to a neighbouring note. Choose Harmonic Minor if the melody uses it."] },
+      { "title": "Character shift", "use": "A darker or brighter voice for a double or a character.",
+        "settings": [["FORMANT", "−3 to +3 st"]],
+        "steps": ["Small values change character; large values sound processed."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["Correct notes are pulled to wrong pitches.", "KEY or SCALE does not match the song. Check both."],
+        ["The display shows WAITING FOR VOICED INPUT.", "The input is silent, unpitched, or too noisy. Use a dry, solo vocal."],
+        ["Vibrato and expressive slides are flattened.", "Lower AUTO MUSICAL, or check whether the scale has too few notes."],
+        ["The voice sounds unnatural after correction.", "Set FORMANT to 0 st and use a scale that fits the melody."],
+        ["It does not work on a choir or chords.", "TB Tune is monophonic. Use it on single-voice tracks."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 38, 18],
+      "rows": [
+        ["`KEY`", "Key", "C to B (12 keys)", "C"],
+        ["`SCALE`", "Scale", "16 scales", "Major (Ionian)"],
+        ["`AUTO MUSICAL`", "Auto Musical", "0 to 100%", "0%"],
+        ["`FORMANT`", "Formant Shift", "−6 to +6 st", "0 st"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["2.1.0 · 2026-08-14", "Redesigned the editor with a brighter key-and-scale workflow, a dedicated pitch-status panel, and higher-resolution controls. The pitch engine, parameter IDs, and saved-state compatibility are unchanged."],
+        ["2.0.0 · 2026-08-09", "Rebuilt the interface around direct key-note and scale selection with a dedicated pitch-status panel, expanded the scale choices, and made the Auto Musical and Formant controls easier to read."]
+      ]
+    } }
+  ]
+}

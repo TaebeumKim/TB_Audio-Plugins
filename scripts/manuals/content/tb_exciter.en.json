@@ -1,0 +1,174 @@
+{
+  "file": "TB_Exciter",
+  "version": "1.1.0",
+  "date": "2026-10-02",
+  "subtitle": "Harmonic Exciter and Enhancer",
+  "tagline": "Adds a clean, open high-frequency layer that begins at a chosen focus frequency, with control over its amount, its warm-to-clear character, and its stereo width.",
+  "facts": ["Focus 500 Hz to 6 kHz", "Warm-to-clear CLARITY", "Width of the added layer", "30 factory presets"],
+  "ui": "tb_exciter.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Exciter generates new high-frequency detail from the sound you feed it and adds it on top of the original. It brightens and clarifies vocals, mixes, drums, and instruments by creating upper harmonics, not only by boosting what is already there." },
+    { "p": "Five controls cover it: `FOCUS` sets where the enhancement begins, `BRIGHT` sets how much is added, `CLARITY` moves its character from warm to clear, `WIDTH` sets the stereo width of the added layer, and `LEVEL` sets the output. The original signal always passes through underneath, so there is no separate mix control." },
+    { "h3": "Key features" },
+    { "ul": [
+      "FOCUS from 500 Hz to 6 kHz selects where the enhancement begins",
+      "BRIGHT sets the amount of added high-frequency content",
+      "CLARITY moves its character from warm (0%) to clear (100%)",
+      "WIDTH from mono (0%) through the original width (100%) to wide (200%), for the added layer only",
+      "LEVEL from −12 to +12 dB",
+      "SPARKLE FIELD display",
+      "30 factory presets in five groups, recalled with your project"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Band from FOCUS", "Harmonic generation (BRIGHT)", "Character (CLARITY)", "Width of the added layer (WIDTH)", "Added to the dry signal", "LEVEL"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Exciter 1.1.0 for Windows (VST3), including the DSP refinement released on 2026-09-30. The current macOS build (AU and VST3) is version 1.0.1 and may differ."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Exciter on a vocal, bus, drum, or instrument track. The Factory Default preset uses `FOCUS` 3 kHz, `BRIGHT` 40%, `CLARITY` 45%, `WIDTH` 130%, and `LEVEL` 0 dB.",
+      "Pick a starting point from the preset selector {{1}}.",
+      "Set `FOCUS` {{3}} to where the enhancement should begin: lower settings reach into presence, higher settings add only air.",
+      "Raise `BRIGHT` {{4}} until the detail comes forward, then choose the character with `CLARITY` {{5}}.",
+      "Adjust `WIDTH` {{6}} if the added layer should be narrower or wider, and match the bypassed level with `LEVEL` {{7}}."
+    ] },
+    { "p": "Drag a knob to set it, as the DRAG TO SET hint at the lower right reminds you." },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_exciter.jpg",
+      "caption": "TB Exciter 1.1 interface with the Factory Default preset.",
+      "callouts": [
+        { "n": 1, "x": 32.2, "y": 15.1 },
+        { "n": 2, "x": 50.2, "y": 33.3 },
+        { "n": 3, "x": 75.6, "y": 85.1 },
+        { "n": 4, "x": 57.6, "y": 10.0 },
+        { "n": 5, "x": 86.8, "y": 39.6 },
+        { "n": 6, "x": 24.6, "y": 85.1 },
+        { "n": 7, "x": 13.6, "y": 39.6 }
+      ],
+      "legend": [
+        [1, "Preset selector", "the 30 factory presets by group; shows Custom after you change a control."],
+        [2, "SPARKLE FIELD", "a visual of the added high-frequency layer, with a control name and its value underneath."],
+        [3, "FOCUS", "where the enhancement begins."],
+        [4, "BRIGHT", "the amount of enhancement."],
+        [5, "CLARITY", "warm to clear character."],
+        [6, "WIDTH", "stereo width of the added layer."],
+        [7, "LEVEL", "output level."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [16, 24, 60],
+      "rows": [
+        ["`FOCUS`", "500 Hz to 6 kHz · 3 kHz", "Selects where the high-frequency enhancement begins. It is not an EQ cutoff for the whole signal. The range stops at 6 kHz because harmonics generated above that would fall outside the audible range."],
+        ["`BRIGHT`", "0 to 100% · 40%", "Controls the amount of high-frequency enhancement. High settings can sound harsh and also raise the level."],
+        ["`CLARITY`", "0 to 100% · 45%", "Moves the added high-frequency character from warm (0%) to clear (100%). It is a character control, not an EQ tilt."],
+        ["`WIDTH`", "0 to 200% · 130%", "Controls the stereo width of the added high-frequency layer: 0% is mono, 100% the original width, and 200% wide. It does not widen the dry signal."],
+        ["`LEVEL`", "−12 to +12 dB · 0 dB", "Adjusts the plug-in's output level. It is not a limiter or an automatic loudness match."]
+      ]
+    } },
+    { "p": "TB Exciter reports 61 samples of latency (about 1.3 ms at 48 kHz). Hosts with delay compensation keep it in time with other tracks." },
+    { "tip": {"text": "An exciter makes a sound louder as well as brighter. Match the level with LEVEL before you compare with bypass, so you judge the tone and not the loudness. Most factory presets lower LEVEL slightly for this reason."} },
+
+    { "h2": "Presets" },
+    { "p": "Choose a factory preset from the selector at the top left. The presets are grouped into ESSENTIAL, MIX / MASTER, VOCAL, DRUMS, and INSTRUMENTS. After you change a control, the selector shows Custom. The chosen preset is recalled with your project. TB Exciter has no user preset files; use your host's preset function to store your own settings." },
+    { "table": {
+      "compact": true,
+      "cols": ["Group", "Preset", "FOCUS", "BRIGHT", "CLARITY", "WIDTH", "LEVEL"],
+      "widths": [17, 27, 11, 11, 11, 11, 12],
+      "rows": [
+        ["ESSENTIAL", "Factory Default", "3 kHz", "40%", "45%", "130%", "0 dB"],
+        ["ESSENTIAL", "Barely There", "4.2 kHz", "18%", "55%", "105%", "0 dB"],
+        ["ESSENTIAL", "Soft Gold", "3.2 kHz", "30%", "15%", "110%", "−0.2 dB"],
+        ["ESSENTIAL", "Mono Sparkle", "3 kHz", "42%", "55%", "0%", "−0.5 dB"],
+        ["ESSENTIAL", "Open Air", "4.6 kHz", "48%", "68%", "135%", "−0.5 dB"],
+        ["ESSENTIAL", "Dark Track Rescue", "1.8 kHz", "62%", "58%", "120%", "−1 dB"],
+        ["MIX / MASTER", "Mix Bus Polish", "3.6 kHz", "34%", "42%", "110%", "−0.3 dB"],
+        ["MIX / MASTER", "Mix Bus Clarity", "3.4 kHz", "44%", "78%", "115%", "−0.4 dB"],
+        ["MIX / MASTER", "Warm Master Silk", "4.8 kHz", "28%", "18%", "100%", "−0.2 dB"],
+        ["MIX / MASTER", "Clear Master Air", "5.2 kHz", "30%", "88%", "100%", "−0.2 dB"],
+        ["MIX / MASTER", "Dense Mix Unveil", "2.4 kHz", "52%", "72%", "125%", "−0.7 dB"],
+        ["MIX / MASTER", "Vintage Top Glue", "2.6 kHz", "46%", "8%", "105%", "−0.5 dB"],
+        ["VOCAL", "Lead Vocal Air", "3.8 kHz", "54%", "76%", "105%", "−0.7 dB"],
+        ["VOCAL", "Intimate Vocal Glow", "2.2 kHz", "36%", "25%", "95%", "−0.3 dB"],
+        ["VOCAL", "Female Vocal Shine", "3.2 kHz", "46%", "62%", "120%", "−0.5 dB"],
+        ["VOCAL", "Male Vocal Presence", "1.7 kHz", "42%", "55%", "100%", "−0.5 dB"],
+        ["VOCAL", "Background Vocal Wide", "4.2 kHz", "56%", "66%", "175%", "−0.8 dB"],
+        ["VOCAL", "Breath & Whisper", "5.5 kHz", "68%", "90%", "145%", "−1.2 dB"],
+        ["DRUMS", "Drum Bus Snap", "2 kHz", "48%", "74%", "100%", "−0.7 dB"],
+        ["DRUMS", "Snare Crack", "1.4 kHz", "60%", "82%", "105%", "−1.1 dB"],
+        ["DRUMS", "Cymbal Silk", "4.4 kHz", "38%", "20%", "120%", "−0.4 dB"],
+        ["DRUMS", "Cymbal Detail", "4.8 kHz", "50%", "86%", "140%", "−0.7 dB"],
+        ["DRUMS", "Percussion Wide", "3 kHz", "58%", "58%", "180%", "−0.9 dB"],
+        ["DRUMS", "Lo-Fi Hats Restore", "2.6 kHz", "74%", "72%", "150%", "−1.5 dB"],
+        ["INSTRUMENTS", "Acoustic String Detail", "2.7 kHz", "44%", "45%", "115%", "−0.5 dB"],
+        ["INSTRUMENTS", "Electric Guitar Edge", "1.6 kHz", "38%", "38%", "100%", "−0.4 dB"],
+        ["INSTRUMENTS", "Piano Hammer Air", "3.9 kHz", "42%", "72%", "160%", "−0.4 dB"],
+        ["INSTRUMENTS", "Synth Halo", "4.8 kHz", "78%", "88%", "200%", "−1.8 dB"],
+        ["INSTRUMENTS", "Bass Definition", "900 Hz", "34%", "65%", "100%", "−0.5 dB"],
+        ["INSTRUMENTS", "Orchestral Sheen", "4 kHz", "46%", "30%", "130%", "−0.5 dB"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Vocal air", "use": "Open, breathy top end on a lead vocal.",
+        "settings": [["Preset", "Lead Vocal Air"], ["FOCUS", "3.5 to 4.5 kHz"], ["BRIGHT", "40 to 55%"]],
+        "steps": ["If sibilance gets sharper, lower BRIGHT or place a de-esser before TB Exciter."] },
+      { "title": "Mix bus polish", "use": "Gentle sheen on a full mix.",
+        "settings": [["Preset", "Mix Bus Polish"], ["BRIGHT", "25 to 35%"], ["WIDTH", "100 to 110%"]],
+        "steps": ["Compare at matched level; small amounts go a long way on a mix."] },
+      { "title": "Snare crack", "use": "More bite on a dull snare.",
+        "settings": [["Preset", "Snare Crack"], ["FOCUS", "1.2 to 2 kHz"], ["CLARITY", "70 to 85%"]],
+        "steps": ["Use LEVEL to offset the extra level; the preset uses −1.1 dB."] },
+      { "title": "Bass definition", "use": "A bass line that reads on small speakers.",
+        "settings": [["Preset", "Bass Definition"], ["FOCUS", "around 900 Hz"], ["WIDTH", "100%"]],
+        "steps": ["Keep WIDTH at 100% or lower so the low end stays centered."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The highs sound harsh or brittle.", "Lower BRIGHT, or move CLARITY toward warm."],
+        ["Sibilance gets louder.", "Lower BRIGHT, or place a de-esser before TB Exciter."],
+        ["It sounds louder but not better.", "Match the level with LEVEL before comparing with bypass."],
+        ["The added layer is too wide or weak in mono.", "Lower WIDTH to 100% or below; 0% makes the added layer mono."],
+        ["The effect is hard to hear.", "Raise BRIGHT or lower FOCUS. The source may have little content near the FOCUS frequency."],
+        ["The track is slightly late against others.", "TB Exciter reports 61 samples of latency; turn on delay compensation in your host."],
+        ["The selector shows Custom.", "A control was changed after the preset was loaded. Choose the preset again to restore it."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`FOCUS`", "Focus", "500 to 6000 Hz", "3000 Hz"],
+        ["`BRIGHT`", "Bright", "0 to 100%", "40%"],
+        ["`CLARITY`", "Clarity", "0 to 100%", "45%"],
+        ["`WIDTH`", "Width", "0 to 200%", "130%"],
+        ["`LEVEL`", "Level", "−12 to +12 dB", "0 dB"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.1.0 · 2026-09-30", "DSP refinement for a clean, open upper-air sound, with a resonance-safe detector edge at 16.97 kHz and a re-validated 30-preset VST3 bundle. Reports 61 samples of latency."],
+        ["1.1.0 · 2026-08-09", "Compact 590 × 450 interface with an accessible factory preset selector; 30 categorized factory presets with host-notified parameter changes, edited-state tracking, and recall; the five public parameters and the host program count unchanged for project compatibility."]
+      ]
+    } }
+  ]
+}

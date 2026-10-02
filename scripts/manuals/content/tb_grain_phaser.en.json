@@ -1,0 +1,156 @@
+{
+  "file": "TB_GrainPhaser",
+  "version": "2.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Spectral Grain Phaser",
+  "tagline": "A spectral phaser that moves a dense grid of notches through the sound, with stereo grain motion, Doppler-like width, and a phosphor-style analyzer.",
+  "facts": ["Dense spectral notch field", "Stereo orbit and Doppler width", "5 controls", "11 factory presets"],
+  "ui": "tb_grain_phaser.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Grain Phaser works in the spectrum: it analyses the sound in 2048-point frames and cuts a dense, repeating grid of notches, its spectral grains, into it. The grains travel through the spectrum and orbit across the stereo field, giving a phasing motion that is denser and more textured than a classic phaser." },
+    { "p": "Five controls cover it: `GRAIN` sets how densely the grains are spaced, `MOVE` how they travel, `WIDTH` how far they spread across the stereo field, `AMOUNT` how deep and textured they are, and `MIX` the latency-aligned dry/wet balance. The SPECTRAL GRAIN FIELD shows the result as glowing glyphs." },
+    { "h3": "Key features" },
+    { "ul": [
+      "2048-point spectral grain field with a dense, moving notch grid",
+      "GRAIN from coarse to fine grain spacing",
+      "MOVE for grain travel; at 0% the field stands still",
+      "WIDTH for stereo orbit and Doppler-like side motion",
+      "AMOUNT for grain depth, edge texture, and motion intensity",
+      "Latency-aligned MIX and BYPASS",
+      "Phosphor-style analyzer with multilingual glyphs that follow GRAIN and the live signal",
+      "11 factory presets, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "2048-point spectral analysis", "Notch grid (GRAIN, AMOUNT)", "Motion and stereo orbit (MOVE, WIDTH)", "Latency-aligned MIX", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Grain Phaser 2.0.0 for Windows (VST3). The current macOS build (AU and VST3) is version 1.0.1, which also has the phosphor analyzer; other details may differ."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Grain Phaser on a guitar, pad, drum, or synth track. Init uses `GRAIN` 55%, `MOVE` 50%, `WIDTH` 50%, `AMOUNT` 55%, and `MIX` 100%.",
+      "Set the texture with `GRAIN` {{3}}: lower values give coarse grains, higher values fine grains.",
+      "Raise `AMOUNT` {{6}} for deeper, more textured notches.",
+      "Set the motion with `MOVE` {{4}} and the stereo spread with `WIDTH` {{5}}.",
+      "Blend with `MIX` {{7}} and compare with `BYPASS` {{8}}."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_grain_phaser.jpg",
+      "caption": "TB Grain Phaser 2.0 interface after a change to the Init preset (MOVE 100), so the selector shows MODIFIED.",
+      "callouts": [
+        { "n": 1, "x": 33.4, "y": 6.9 },
+        { "n": 2, "x": 5.0, "y": 21.0 },
+        { "n": 3, "x": 19.7, "y": 70.0 },
+        { "n": 4, "x": 33.2, "y": 70.0 },
+        { "n": 5, "x": 47.4, "y": 70.0 },
+        { "n": 6, "x": 61.6, "y": 70.0 },
+        { "n": 7, "x": 73.7, "y": 70.0 },
+        { "n": 8, "x": 92.5, "y": 80.5 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset, the preset list, Save, Undo, and Redo; the selector shows MODIFIED after a change."],
+        [2, "SPECTRAL GRAIN FIELD", "analyzer from LOW to HIGH; glyph density follows GRAIN and the live signal."],
+        [3, "GRAIN", "spectral grain density."],
+        [4, "MOVE", "grain travel and motion."],
+        [5, "WIDTH", "stereo spread and Doppler reach."],
+        [6, "AMOUNT", "grain contrast and motion intensity."],
+        [7, "MIX", "latency-aligned dry/wet."],
+        [8, "BYPASS", "latency-aligned bypass."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [16, 20, 64],
+      "rows": [
+        ["`GRAIN`", "0 to 100% · 55%", "Spacing and density of the repeating spectral grains. Low values give coarse grains; high values give fine, dense grains. High values can sound rougher and use more CPU."],
+        ["`MOVE`", "0 to 100% · 50%", "Grain position, stereo travel, and motion. At 0% the grain field stands still. Fast movement can be heard as unstable pitch rather than as position."],
+        ["`WIDTH`", "0 to 100% · 50%", "Stereo grain spread and the Doppler-like reach of the side signal. At high values, check the mono sum."],
+        ["`AMOUNT`", "0 to 100% · 55%", "Grain contrast, depth, edge texture, and motion intensity. High values can mask the centre of the source."],
+        ["`MIX`", "0 to 100% · 100%", "Latency-aligned dry/wet blend. At 100% only the processed signal is heard."],
+        ["`BYPASS`", "Off, On · Off", "Latency-aligned bypass for A/B comparisons."]
+      ]
+    } },
+    { "p": "The analyzer is driven by 48 frequency bands of the live signal. Its glyphs, drawn from Korean, Chinese, Japanese, and English characters, become denser as GRAIN rises and react to the signal's energy; nothing moves on its own. TB Grain Phaser reports its processing latency to the host, and MIX and BYPASS stay aligned with it." },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows, or open the list to choose a factory or user preset. After you change a control, the selector shows MODIFIED. Save stores the current settings as a .tbgp file. Undo and Redo step through parameter changes." },
+    { "table": {
+      "compact": true,
+      "cols": ["Preset", "GRAIN", "MOVE", "WIDTH", "AMOUNT", "MIX"],
+      "widths": [30, 14, 14, 14, 14, 14],
+      "rows": [
+        ["Init", "55%", "50%", "50%", "55%", "100%"],
+        ["Soft Motion", "48%", "28%", "30%", "30%", "55%"],
+        ["Guitar Drift", "62%", "38%", "35%", "44%", "62%"],
+        ["Drum Scatter", "32%", "82%", "45%", "58%", "48%"],
+        ["Coarse Dust", "25%", "72%", "50%", "52%", "100%"],
+        ["Fine Grain", "82%", "32%", "50%", "68%", "100%"],
+        ["Static Etch", "58%", "0%", "0%", "72%", "72%"],
+        ["Pad Orbit", "70%", "68%", "75%", "66%", "78%"],
+        ["Focused Travel", "68%", "100%", "0%", "86%", "100%"],
+        ["Full Travel", "68%", "100%", "50%", "86%", "100%"],
+        ["Doppler Rift", "68%", "100%", "100%", "86%", "100%"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Guitar drift", "use": "A moving, textured phase on clean or crunchy guitar.",
+        "settings": [["Preset", "Guitar Drift"], ["MIX", "50 to 70%"]],
+        "steps": ["Lower MIX for a subtler shimmer."] },
+      { "title": "Pad orbit", "use": "Wide, circling motion on pads and keys.",
+        "settings": [["Preset", "Pad Orbit"], ["WIDTH", "60 to 80%"]],
+        "steps": ["Check the mono sum and lower WIDTH if the pad thins out."] },
+      { "title": "Drum scatter", "use": "Restless grain motion on drum loops.",
+        "settings": [["Preset", "Drum Scatter"], ["MIX", "40 to 55%"]],
+        "steps": ["Keep MIX below 100% so the transients stay intact."] },
+      { "title": "Static etch", "use": "A fixed notch pattern that colors without moving.",
+        "settings": [["Preset", "Static Etch"], ["MOVE", "0%"]],
+        "steps": ["Sweep GRAIN to find the most flattering pattern."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The source loses focus.", "Lower AMOUNT or MIX."],
+        ["The sound wobbles in pitch.", "Lower MOVE."],
+        ["The effect is weak in mono.", "Lower WIDTH."],
+        ["The track is late against others.", "TB Grain Phaser reports its latency; turn on delay compensation in your host."],
+        ["The selector shows MODIFIED.", "A control was changed after the preset was loaded. Choose the preset again to restore it."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`GRAIN`", "GRAIN", "0 to 100%", "55%"],
+        ["`MOVE`", "MOVE", "0 to 100%", "50%"],
+        ["`WIDTH`", "WIDTH", "0 to 100%", "50%"],
+        ["`AMOUNT`", "AMOUNT", "0 to 100%", "55%"],
+        ["`MIX`", "MIX", "0 to 100%", "100%"],
+        ["`BYPASS`", "BYPASS", "Off, On", "Off"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["2.0.0 · 2026-08-14", "Redesigned the analyzer as a black-green phosphor display with full-field vertical motion driven by the 48-band telemetry; multilingual grain glyphs from Korean, Chinese, Japanese, and English character pools; glyph density and reveal linked to GRAIN and the live energy."],
+        ["1.0.0 · 2026-08-13", "First release: a 2048-point STFT grain field that moves a dense spectral notch grid with controlled stereo orbit; Grain, Move, Width, Amount, and Mix controls; 11 factory presets."]
+      ]
+    } }
+  ]
+}

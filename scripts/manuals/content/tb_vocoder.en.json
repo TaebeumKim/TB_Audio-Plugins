@@ -1,0 +1,204 @@
+{
+  "file": "TB_Vocoder",
+  "version": "2.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Channel Vocoder",
+  "tagline": "Stamps the spectral movement of a voice or rhythm onto a built-in synth or an external carrier, with 8 to 64 bands and five synthesis types.",
+  "facts": ["8 to 64 bands", "Internal synth or external carrier", "5 synthesis types", "119 factory presets"],
+  "ui": "tb_vocoder.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Vocoder is a real-time channel vocoder. It analyses the source in a bank of frequency bands and imprints the movement of each band onto a carrier, so the rhythm and articulation of the source stay recognisable while the tone becomes synthetic." },
+    { "p": "In SELF mode no second track is needed: the built-in synth is the carrier, so you can load TB Vocoder on a vocal or rhythmic source and start immediately. You can also feed an external carrier through the sidechain input. Choose 8 to 64 analysis bands, set the active frequency range, tune and colour the synth, and shape the response, whitening, width, and sibilance." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Filterbank of 8 to 64 bands with an adjustable LOW and HIGH range",
+      "Built-in SELF synth with up to 100 detuned voices, tuning, and a saw-to-pulse COLOR",
+      "External carrier through the sidechain input, with automatic fallback to SELF",
+      "Five synthesis types: VOCODE, WHISPER, MORPH, RING, and INVERT",
+      "SIBILANCE lets consonants read through the synth",
+      "Four-band PRESSURE compression and a TONE tilt after cross-synthesis",
+      "Resynthesis spectrum display with SOURCE, CARRIER, and OUTPUT meters",
+      "119 factory presets in 12 banks, plus Init and user presets"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Source", "Filterbank analysis (BANDS, LOW, HIGH)", "Imprint onto carrier (SELF or EXTERNAL)", "PRESSURE and TONE", "WIDTH and MIX", "OUTPUT"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Vocoder 2.0.0 for Windows (VST3), which is published as a beta. The current macOS build is version 1.0.3; it uses a different control set, including MIDI carrier input, and differs from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Vocoder on a vocal or another rhythmic source. The internal synth is the carrier (`SIDECHAIN` shows SELF).",
+      "Play the track. Choose a preset {{1}}, or start from Init and set `BANDS` {{4}}: fewer bands sound retro, more bands are more intelligible.",
+      "Set the synth pitch with `TUNE` and its colour with `COLOR` {{3}}.",
+      "Raise `SIBILANCE` if consonants disappear.",
+      "Shape the response with `ATTACK` and `RELEASE` {{4}}, and remove background noise with `FLOOR` {{5}}.",
+      "Blend with `MIX` and set the level with `OUTPUT` {{6}}."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_vocoder.jpg",
+      "caption": "TB Vocoder 2.0 interface.",
+      "callouts": [
+        { "n": 1, "x": 34.2, "y": 7.7 },
+        { "n": 2, "x": 26.5, "y": 17.5 },
+        { "n": 3, "x": 10.0, "y": 40.7 },
+        { "n": 4, "x": 36.5, "y": 40.7 },
+        { "n": 5, "x": 58.9, "y": 40.7 },
+        { "n": 6, "x": 82.9, "y": 40.7 },
+        { "n": 7, "x": 64.2, "y": 53.6 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset, the preset list, Save, Undo, and Redo."],
+        [2, "Display", "the signal path, band count, and resynthesis spectrum, with SOURCE, CARRIER, and OUTPUT meters."],
+        [3, "CARRIER", "SIDECHAIN, TUNE, COLOR, COUNT, RESO, and SIBILANCE."],
+        [4, "FILTERBANK", "BANDS, DETAIL, LOW, HIGH, ATTACK, and RELEASE."],
+        [5, "IMPRINT", "TYPE, IMPRINT, WHITEN, FLOOR, SHIFT, and WARP."],
+        [6, "OUTPUT", "PRESSURE, TONE, WIDTH, MIX, and OUTPUT."],
+        [7, "TYPE", "VOCODE, WHISPER, MORPH, RING, or INVERT."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "h3": "Carrier" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`SIDECHAIN`", "SELF, EXTERNAL · SELF", "SELF uses the internal synth as the carrier. EXTERNAL uses the plug-in's Carrier (sidechain) input while enabled, and falls back to SELF when that input is unavailable."],
+        ["`TUNE`", "−24 to +24 st · 0 st", "Transposes the internal synth carrier in semitones; 0 st is the original pitch, A. No effect on an external carrier."],
+        ["`COLOR`", "0 to 100% · 30%", "Morphs the internal synth from a full sawtooth to a narrowing pulse. No effect on an external carrier."],
+        ["`COUNT`", "2 to 100 · 3", "Number of detuned voices in the internal synth."],
+        ["`RESO`", "0 to 100% · 50%", "Width of the synthesis bands. Low is wide and blurred; high is narrow and singing."],
+        ["`SIBILANCE`", "0 to 100% · 50%", "Swaps the carrier for noise while the source is unvoiced, so consonants read through the synth."]
+      ]
+    } },
+    { "h3": "Filterbank" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`BANDS`", "8 to 64 · 32", "Filterbank resolution. Few bands are coarse and retro; many bands track formants closely and stay intelligible."],
+        ["`DETAIL`", "0 to 100% · 65%", "Smears the analysis envelopes across neighbouring bands. Low is broad and soft; high keeps fine spectral detail."],
+        ["`LOW`", "40 to 500 Hz · 90 Hz", "Lowest band centre. Raise it to keep the bank off a bass-heavy source; lower it to imprint the low end as well."],
+        ["`HIGH`", "2 to 18 kHz · 14 kHz", "Highest band centre. Above it, the source is not imprinted."],
+        ["`ATTACK`", "0.1 to 200 ms · 3 ms", "How fast each band envelope rises. Short is percussive and articulate; long softens consonant edges."],
+        ["`RELEASE`", "5 to 2000 ms · 50 ms", "How fast each band envelope falls. Short is tight and gated; long smears words into each other."]
+      ]
+    } },
+    { "h3": "Imprint" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`TYPE`", "VOCODE, WHISPER, MORPH, RING, INVERT · VOCODE", "Synthesis method: classic band vocoding, a noise-carrier whisper, a spectral morph, per-band ring modulation, or an inverted imprint."],
+        ["`IMPRINT`", "0 to 100% · 100%", "Morphs from a carrier gated by the source level to the full spectral imprint."],
+        ["`WHITEN`", "0 to 100% · 75%", "0% keeps the carrier's own spectral balance; 100% makes every output band match the source band exactly."],
+        ["`FLOOR`", "−90 to −30 dB · −70 dB", "Stops low-level source noise from opening the spectral imprint."],
+        ["`SHIFT`", "−24 to +24 st · 0 st", "Moves the spectral imprint without retuning the carrier."],
+        ["`WARP`", "−100 to +100% · 0%", "Stretches or compresses the imprint around 1 kHz without pitch detection."]
+      ]
+    } },
+    { "h3": "Output" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`PRESSURE`", "0 to 100% · 25%", "Four-band upward and downward compression after cross-synthesis."],
+        ["`TONE`", "−100 to +100% · 0%", "Tilts the compressed result between weight and brightness."],
+        ["`WIDTH`", "0 to 200% · 100%", "Stereo spread of the processed signal only. 0% is mono, 100% is unchanged."],
+        ["`MIX`", "0 to 100% · 100%", "Blends the recorded source with the transformed synth."],
+        ["`OUTPUT`", "−18 to +6 dB · 0 dB", "Final output level."]
+      ]
+    } },
+    { "h3": "Using an external carrier" },
+    { "ol": [
+      "In your DAW, route the carrier track (for example a synth pad) to TB Vocoder's sidechain input.",
+      "Set `SIDECHAIN` to EXTERNAL.",
+      "Play both tracks. The CARRIER meter shows the carrier level. TUNE, COLOR, and COUNT have no effect on an external carrier."
+    ] },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows, or open the list to choose a factory or user preset. Save stores the complete state as a .tbvocoderpreset file. The name shows CUSTOM after you change a setting. Undo and Redo step through recent changes." },
+    { "p": "The factory set has 119 presets in 12 banks: Essentials, Robots, Whispers, Morph & Formant, Ring & Metal, Invert & Hollow, Low & Chant, Rhythmic, Wide & Cloud, OTT & Squash, Vocoder Resynth, and Carrier Shapes. Examples include **Classic Talk Box**, **Robot Choir**, **Air Whisper**, **Crystal Formant**, **100 Voice Cloud**, **Final Boss Vocoder**, and the band-count series from **Vintage Eight** to **Surgical Sixty Four**." },
+    { "warn": { "text": "Presets saved before version 2.0 cannot be loaded, because they use a filterbank and TYPE list that no longer exist." } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Classic robot voice", "use": "Clear, intelligible vocoded vocals.",
+        "settings": [["Preset", "Classic Talk Box or Robot Choir"], ["BANDS", "24 to 32"], ["SIBILANCE", "50 to 70%"]],
+        "steps": ["Set TUNE to the song key so the carrier sits in tune.", "Raise SIBILANCE until consonants read clearly."] },
+      { "title": "Retro low-band vocoder", "use": "A grainy, vintage sound.",
+        "settings": [["Preset", "Vintage Eight or Analog Twelve"], ["BANDS", "8 to 12"]],
+        "steps": ["Fewer bands are less intelligible; keep the vocal part simple."] },
+      { "title": "Rhythmic synth from drums", "use": "Imprint a drum loop's rhythm onto a synth.",
+        "settings": [["Preset", "Percussive Print or Tight Gate"], ["ATTACK", "Short"], ["RELEASE", "Short"]],
+        "steps": ["Use a pad as an external carrier for chords."] },
+      { "title": "Whisper texture", "use": "An airy, breathy layer.",
+        "settings": [["TYPE", "WHISPER"], ["Preset", "Air Whisper or Ghost Air"], ["MIX", "40 to 70%"]],
+        "steps": ["Blend under the dry vocal for atmosphere."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["Words are hard to understand.", "Raise BANDS and SIBILANCE, raise DETAIL, or shorten ATTACK."],
+        ["Background noise opens the vocoder.", "Raise FLOOR so low-level noise does not open the imprint."],
+        ["The bass of the source muddies the result.", "Raise LOW to keep the bank off the low end."],
+        ["The external carrier is not heard.", "Check the sidechain routing in your DAW and set SIDECHAIN to EXTERNAL; without a carrier signal the plug-in falls back to SELF."],
+        ["The carrier is out of tune with the song.", "Adjust TUNE (internal synth only) or the external carrier's pitch."],
+        ["An older preset does not load.", "Presets made before version 2.0 are not compatible."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [20, 24, 36, 20],
+      "rows": [
+        { "group": "Carrier" },
+        ["`SIDECHAIN`", "Sidechain", "Off (SELF), On (EXTERNAL)", "Off"],
+        ["`TUNE`", "Carrier Tune", "−24 to +24 st", "0 st"],
+        ["`COLOR`", "Color", "0 to 100%", "30%"],
+        ["`COUNT`", "Carrier Count", "2 to 100", "3"],
+        ["`RESO`", "Carrier Resonance", "0 to 100%", "50%"],
+        ["`SIBILANCE`", "Sibilance", "0 to 100%", "50%"],
+        { "group": "Filterbank" },
+        ["`BANDS`", "Bands", "8 to 64", "32"],
+        ["`DETAIL`", "Detail", "0 to 100%", "65%"],
+        ["`LOW`", "Range Low", "40 to 500 Hz", "90 Hz"],
+        ["`HIGH`", "Range High", "2 to 18 kHz", "14 kHz"],
+        ["`ATTACK`", "Attack", "0.1 to 200 ms", "3 ms"],
+        ["`RELEASE`", "Release", "5 to 2000 ms", "50 ms"],
+        { "group": "Imprint" },
+        ["`TYPE`", "Type", "Vocoder, Whisper, Morph, Ring Mod, Invert", "Vocoder"],
+        ["`IMPRINT`", "Imprint", "0 to 100%", "100%"],
+        ["`WHITEN`", "Whiten", "0 to 100%", "75%"],
+        ["`FLOOR`", "Floor", "−90 to −30 dB", "−70 dB"],
+        ["`SHIFT`", "Shift", "−24 to +24 st", "0 st"],
+        ["`WARP`", "Warp", "−100 to +100%", "0%"],
+        { "group": "Output" },
+        ["`PRESSURE`", "Pressure", "0 to 100%", "25%"],
+        ["`TONE`", "Tone", "−100 to +100%", "0%"],
+        ["`WIDTH`", "Width", "0 to 200%", "100%"],
+        ["`MIX`", "Mix", "0 to 100%", "100%"],
+        ["`OUTPUT`", "Output", "−18 to +6 dB", "0 dB"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["2.0.0 · 2026-08-09", "Rebuilt the vocoder around a configurable multi-band filterbank with LOW and HIGH range, attack, release, width, and resynthesis controls. Redesigned the interface into four focused panels and introduced a new state format for the 23-control engine."]
+      ]
+    } }
+  ]
+}

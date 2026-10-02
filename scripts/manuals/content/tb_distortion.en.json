@@ -1,0 +1,185 @@
+{
+  "file": "TB_Distortion",
+  "version": "1.3.0",
+  "date": "2026-10-02",
+  "subtitle": "Level-Dependent Drive",
+  "tagline": "Six drive curves, a level-dependent response, an independent TB character layer, and a steep focus range, from polished heat to unstable, broken textures.",
+  "facts": ["6 drive curves", "TB character layer", "48 dB/oct focus range", "4x oversampling", "Parallel blend"],
+  "ui": "tb_distortion.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Distortion adds harmonics and grit with two independent layers: a main drive stage with six nonlinear curves, and a TB character layer that adds Level, Sample, Time, or Bias texture alongside it." },
+    { "p": "A steep focus range limits the distortion to the band you choose, so you can dirty up the midrange of a bass while its low end stays clean. The parallel blend and output trim let you mix the result back in at a matched level." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Six drive curves: Soft, Hard, Fuzz, Tube, Tape, and Fold",
+      "Dynamics: make the drive respond to level, pushing peaks harder or preserving transients",
+      "Independent TB character layer with four types and its own amount",
+      "Focus range with 48 dB/oct low and high limits",
+      "DC blocking at 10 Hz and 4x oversampling",
+      "Parallel blend and output trim",
+      "Eight factory distortion concepts plus user presets"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["DC block and focus range (48 dB/oct)", "Drive curve", "Dynamics and drive compensation", "TB character layer", "Parallel mix", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Distortion 1.3.0 for Windows (VST3). The current macOS build is version 1.0.3 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Distortion on a track. It starts with the Soft curve, `DRIVE` 6 dB, and `MIX` 100%.",
+      "Choose a curve in `TYPE` {{4}} and raise `DRIVE` {{5}} until you hear the amount of grit you want.",
+      "Move `DYNAMICS` {{6}}: positive values drive peaks harder; negative values keep transients clean.",
+      "Set `LOW` and `HIGH` {{9}} to distort only the part of the spectrum that needs it.",
+      "Add texture with `TB TYPE` {{7}} and `TB DRIVE` {{8}} if you want an extra, unstable character.",
+      "Lower `MIX` {{10}} for parallel distortion and match the level with `OUTPUT`."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_distortion.jpg",
+      "callouts": [
+        { "n": 1, "x": 30.0, "y": 13.7 },
+        { "n": 2, "x": 67.6, "y": 7.6 },
+        { "n": 3, "x": 88.6, "y": 7.0 },
+        { "n": 4, "x": 4.4, "y": 43.3 },
+        { "n": 5, "x": 4.4, "y": 52.3 },
+        { "n": 6, "x": 15.2, "y": 52.3 },
+        { "n": 7, "x": 29.0, "y": 43.3 },
+        { "n": 8, "x": 31.2, "y": 52.3 },
+        { "n": 9, "x": 46.4, "y": 28.0 },
+        { "n": 10, "x": 70.4, "y": 28.0 },
+        { "n": 11, "x": 65.4, "y": 91.7 }
+      ],
+      "legend": [
+        [1, "PRESET", "Init, the factory distortion concepts, and your user presets."],
+        [2, "LOAD and SAVE", "open or save a .tbpreset file."],
+        [3, "Previous and next", "step through the presets."],
+        [4, "TYPE", "the drive curve."],
+        [5, "DRIVE", "how hard the signal is driven into the curve."],
+        [6, "DYNAMICS", "how the drive reacts to level."],
+        [7, "TB TYPE", "the character of the TB layer."],
+        [8, "TB DRIVE", "the amount of the TB layer."],
+        [9, "FOCUS RANGE", "`LOW` and `HIGH` limits of the processed band."],
+        [10, "MIX & OUTPUT", "parallel blend and final level."],
+        [11, "Status line", "DC blocking at 10 Hz, 4x oversampling, and 48 dB/oct (LR8) range filters."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "h3": "Drive" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`TYPE`", "Soft, Hard, Fuzz, Tube, Tape, Fold · Soft", "The drive curve. Each curve has its own character and level, even at the same DRIVE setting."],
+        ["`DRIVE`", "0 to 36 dB · 6 dB", "Base drive into the selected curve. Higher values add more harmonics and compression."],
+        ["`DYNAMICS`", "−100 to +100% · 0%", "Level-dependent drive. Positive values drive peaks harder; negative values preserve transients. It shapes the drive's response and is not a compressor."]
+      ]
+    } },
+    { "table": {
+      "cols": ["Curve", "Character"],
+      "widths": [18, 82],
+      "rows": [
+        ["Soft", "Gentle, rounded saturation. A good starting point for warmth."],
+        ["Hard", "Firm clipping with a clear, aggressive edge."],
+        ["Fuzz", "Dense, buzzing distortion with heavy sustain."],
+        ["Tube", "Warm, asymmetric harmonics that bloom as you drive harder."],
+        ["Tape", "Smoothed saturation with a compressed, rounded top end."],
+        ["Fold", "Wavefolding: the waveform folds back on itself, creating bright, metallic overtones."]
+      ]
+    } },
+    { "h3": "TB character" },
+    { "p": "The TB layer is a separate stage that works on the raw input, next to the main drive. Its amount does not depend on the drive type or the DRIVE setting, so you can change the curve without losing a TB texture you like." },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`TB TYPE`", "Level, Sample, Time, Bias · Level", "Independent Level, Sample, Time, or Bias jitter on the raw-input layer."],
+        ["`TB DRIVE`", "0 to 100% · 0%", "Independent TB distortion amount, unaffected by the drive type or amount. High values add more harmonics."]
+      ]
+    } },
+    { "h3": "Focus range" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`LOW`", "20 Hz to 20 kHz · 20 Hz", "Start of the processed range, with a 48 dB/oct slope."],
+        ["`HIGH`", "20 Hz to 20 kHz · 20 kHz", "End of the processed range, with a 48 dB/oct slope."]
+      ]
+    } },
+    { "note": { "text": "LOW must stay below HIGH. Presets are rejected if LOW is not below HIGH." } },
+    { "h3": "Mix and output" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`MIX`", "0 to 100% · 100%", "Parallel blend between the processed and the dry signal."],
+        ["`OUTPUT`", "−24 to +12 dB · 0 dB", "Final level. It is a trim, not a limiter."]
+      ]
+    } },
+
+    { "h2": "Presets" },
+    { "p": "Choose a preset from the PRESET list {{1}} or step through them with the arrows {{3}}. SAVE stores the current settings as a .tbpreset file, and LOAD opens one." },
+    { "p": "Factory concepts: **Clean Heat**, **Tube Bloom**, **Diode Crack**, **Broken Cone**, **Worn Reel**, **Parallel Mid Dirt**, **Folded Motion**, and **Radio Breakdown**. **Init** resets to the default settings." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear and compare at matched loudness." },
+    { "recipes": [
+      { "title": "Warm up a vocal or bus", "use": "Subtle density and harmonics without obvious distortion.",
+        "settings": [["Preset", "Clean Heat"], ["TYPE", "Soft or Tube"], ["DRIVE", "3 to 9 dB"], ["MIX", "30 to 60%"]],
+        "steps": ["Raise DRIVE until the sound thickens, then lower MIX until it is just noticeable."] },
+      { "title": "Dirty bass that keeps its low end", "use": "Growl in the midrange with a clean, solid bottom.",
+        "settings": [["Preset", "Parallel Mid Dirt"], ["LOW", "150 to 300 Hz"], ["HIGH", "3 to 6 kHz"], ["TYPE", "Hard or Fuzz"]],
+        "steps": ["Set LOW above the fundamental so the low end stays undistorted.", "Blend with MIX and match OUTPUT."] },
+      { "title": "Lo-fi radio voice", "use": "A narrow, broken, radio-like character.",
+        "settings": [["Preset", "Radio Breakdown"], ["LOW", "around 300 Hz"], ["HIGH", "around 3 kHz"], ["TB DRIVE", "to taste"]],
+        "steps": ["Try each TB TYPE to change how unstable the voice sounds."] },
+      { "title": "Keep drums punchy", "use": "Saturate drums without losing the attack.",
+        "settings": [["TYPE", "Tape or Soft"], ["DYNAMICS", "−30 to −60%"], ["MIX", "50 to 80%"]],
+        "steps": ["Lower DYNAMICS until the transients come through clearly again."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["It only sounds better because it is louder.", "Match the level with OUTPUT and compare with bypass."],
+        ["The low end turned muddy.", "Raise LOW so the bass fundamental bypasses the distortion."],
+        ["The top end is harsh or fizzy.", "Lower HIGH, try Soft or Tape, or reduce DRIVE."],
+        ["Transients disappeared.", "Use negative DYNAMICS or lower MIX."],
+        ["Changing TYPE changed the level a lot.", "Each curve has its own gain; rebalance with OUTPUT."],
+        ["A saved preset does not load.", "LOW must be below HIGH, and the file must be a TB Distortion .tbpreset."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [20, 22, 38, 20],
+      "rows": [
+        ["`TYPE`", "Drive Type", "Soft, Hard, Fuzz, Tube, Tape, Fold", "Soft"],
+        ["`DRIVE`", "Drive", "0 to 36 dB", "6 dB"],
+        ["`DYNAMICS`", "Dynamics", "−100 to +100%", "0%"],
+        ["`TB TYPE`", "TB Type", "Level, Sample, Time, Bias", "Level"],
+        ["`TB DRIVE`", "TB Drive", "0 to 100%", "0%"],
+        ["`LOW`", "Low", "20 Hz to 20 kHz", "20 Hz"],
+        ["`HIGH`", "High", "20 Hz to 20 kHz", "20 kHz"],
+        ["`MIX`", "Mix", "0 to 100%", "100%"],
+        ["`OUTPUT`", "Output", "−24 to +12 dB", "0 dB"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.3.0 · 2026-07-30", "The plug-in logo and name share one rack header. Previous/next navigation and save/load in the preset control were improved."]
+      ]
+    } }
+  ]
+}

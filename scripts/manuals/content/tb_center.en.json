@@ -1,0 +1,156 @@
+{
+  "file": "TB_Center",
+  "version": "1.3.0",
+  "date": "2026-10-02",
+  "subtitle": "True Stereo Recentering",
+  "tagline": "Pulls a drifting or off-center stereo source back to the middle, aligns its left and right arrival times, and keeps the width you want.",
+  "facts": ["Direction tracking", "Time alignment", "M/S width", "4-band option", "Windows VST3 · macOS VST3/AU"],
+  "ui": "tb_center.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Center tracks where the dominant sound in a stereo signal sits between left and right, and rotates the stereo image so that sound returns to the center. It can also line up a source that reaches the two channels at slightly different times." },
+    { "p": "Use it on dialogue, vocals, or instruments that drift off-center, on stereo recordings where one source leans to one side, or on a stereo bus whose focus has moved. Unlike a simple balance or width control, TB Center follows the source as it moves and corrects only the direction it detects." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Continuous tracking of the dominant source direction, with adjustable speed",
+      "Time alignment that pulls left/right arrival differences back onto one point and reduces comb filtering in mono",
+      "Lookahead analysis for steadier positioning",
+      "Mid/Side width control after recentering, from mono to 200%",
+      "Optional four-band mode with separate amounts below 200 Hz, 200 Hz–1 kHz, 1–5 kHz, and above 5 kHz",
+      "Factory and user presets with undo and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Stereo input", "Direction and time-offset analysis", "Lookahead delay and time alignment", "M/S recentering and width", "Optional 4-band split", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Center 1.3.0 for Windows (VST3). The current macOS build is version 0.3.4 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Center on a stereo track. Start from the defaults: `INTENSITY` 100%, `RESPONSE` 75%, `LOOKAHEAD` 20 ms, `TIME CENTER` 100%, `M/S WIDTH` 100%.",
+      "Play the material and watch the direction display {{3}}. It shows where the dominant source sits between L and R.",
+      "Adjust `INTENSITY` {{6}} until the source holds the center without the rest of the image swinging with it.",
+      "Set `RESPONSE` {{7}}: higher values follow a moving source quickly; lower values give a calmer, steadier image.",
+      "If the source sounds smeared or phasey in mono, raise `TIME CENTER` {{9}}. If it sounds unnatural, lower it.",
+      "Set the final width with `M/S WIDTH` {{10}}, then compare with bypass at the same level."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_center.jpg",
+      "callouts": [
+        { "n": 1, "x": 56.0, "y": 5.9 },
+        { "n": 2, "x": 78.7, "y": 2.8 },
+        { "n": 3, "x": 30.0, "y": 31.0 },
+        { "n": 4, "x": 6.7, "y": 13.9 },
+        { "n": 5, "x": 79.6, "y": 19.8 },
+        { "n": 6, "x": 10.8, "y": 69.8 },
+        { "n": 7, "x": 23.4, "y": 69.8 },
+        { "n": 8, "x": 36.1, "y": 69.8 },
+        { "n": 9, "x": 48.8, "y": 69.8 },
+        { "n": 10, "x": 61.7, "y": 69.8 },
+        { "n": 11, "x": 70.2, "y": 73.6 }
+      ],
+      "legend": [
+        [1, "Preset list", "Factory presets and your own presets."],
+        [2, "Save, Load, Undo, Redo", "save or load a .tbcenter preset file and step through recent changes."],
+        [3, "Direction display", "the dominant source between L and R; the vertical line marks the center (MONO). NO SIGNAL appears when there is no input."],
+        [4, "SOURCE and WET", "readouts for the detected source and the processing state. WET shows BYPASSED when the plug-in is bypassed."],
+        [5, "LATENCY", "the delay TB Center currently adds, set by LOOKAHEAD."],
+        [6, "INTENSITY", "how strongly the image is turned toward the center."],
+        [7, "RESPONSE", "how quickly the detected direction is followed."],
+        [8, "LOOKAHEAD", "analysis time ahead of the audio, for steadier positioning."],
+        [9, "TIME CENTER", "how much left/right arrival-time difference is corrected."],
+        [10, "M/S WIDTH", "the width of the recentered image."],
+        [11, "MULTIBAND", "switches on four-band processing with LOW, MID-LOW, MID-HIGH, and HIGH amounts."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [20, 22, 58],
+      "rows": [
+        ["`INTENSITY`", "0 to 200% · 100%", "Correction strength toward the center. It is not a dry/wet mix: 0% leaves the direction unchanged, 100% centers the detected source, and values above 100% overcorrect."],
+        ["`RESPONSE`", "0 to 100% · 75%", "How quickly the detected source direction is followed. Raise it for sources that move; lower it if the image wobbles."],
+        ["`LOOKAHEAD`", "from 0 ms · 20 ms", "Lets the analysis see slightly ahead for steadier positioning. It adds the same amount of latency, and a new value takes effect when you release the knob. It cannot be automated."],
+        ["`TIME CENTER`", "0 to 100% · 100%", "Pulls a source that reaches L and R at different moments back onto one point, so a smeared image tightens and the mono sum stops comb filtering. 0% keeps the original arrival times."],
+        ["`M/S WIDTH`", "0 to 200% · 100%", "Width of the centered image. 100% keeps it as centered, 0% collapses it to mono, and values above 100% widen it."],
+        ["`MULTIBAND`", "Off, On · Off", "Off applies one correction to the whole signal. On splits the spectrum into four fixed bands and recenters each one independently."],
+        ["`LOW`", "0 to 100% · 100%", "Recentering amount below 200 Hz (with MULTIBAND on)."],
+        ["`MID-LOW`", "0 to 100% · 100%", "Recentering amount from 200 Hz to 1 kHz."],
+        ["`MID-HIGH`", "0 to 100% · 100%", "Recentering amount from 1 kHz to 5 kHz."],
+        ["`HIGH`", "0 to 100% · 100%", "Recentering amount above 5 kHz. 0% leaves wide highs untouched."]
+      ]
+    } },
+    { "tip": { "text": "With MULTIBAND on, keep LOW at 100% to hold the bass and kick in the middle, and lower HIGH to keep the natural width of cymbals, room, and reverb." } },
+
+    { "h2": "How it reacts" },
+    { "p": "TB Center decides how far to turn the image by analyzing the signal, not by a fixed pan setting. It works best when one dominant source, such as a voice or a lead instrument, is clearly louder than the rest." },
+    { "p": "Time alignment depends on how similar the two channels are. On a single source captured by two microphones it can tighten the image noticeably; on uncorrelated material, such as wide reverbs or stereo pads, it has little to work with and changes little." },
+    { "warn": { "text": "LOOKAHEAD adds latency, shown as LATENCY in the display. Keep it low when you monitor through the plug-in while recording." } },
+
+    { "h2": "Presets" },
+    { "p": "Choose a preset from the list {{1}}. Save writes the current settings to a .tbcenter file, and Load opens one. Undo and Redo step back and forward through parameter and preset changes." },
+    { "p": "Factory presets: **Init**, **Locked Dialogue**, **Natural Center**, **Fast Motion**, **Mix Recenter**, and **Wide Keep Air**." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Hold dialogue in the middle", "use": "A voice that drifts as the speaker moves or the boom swings.",
+        "settings": [["Preset", "Locked Dialogue"], ["RESPONSE", "Raise if the voice moves quickly"], ["M/S WIDTH", "Below 100% for a focused voice"]],
+        "steps": ["Watch the direction display and raise INTENSITY until the voice stays centered.", "Check that room tone does not swing with the voice."] },
+      { "title": "Re-center a stereo bus", "use": "A mix or stem whose focus leans to one side.",
+        "settings": [["Preset", "Mix Recenter"], ["MULTIBAND", "On"], ["LOW", "100%"], ["HIGH", "Lower to keep the air wide"]],
+        "steps": ["Use small INTENSITY values first; a bus has many sources.", "Compare in mono for comb filtering."] },
+      { "title": "Fix timing between two mics", "use": "A source recorded with two microphones at different distances.",
+        "settings": [["TIME CENTER", "100%"], ["LOOKAHEAD", "Default 20 ms"]],
+        "steps": ["Switch your monitoring to mono and listen for a fuller, less hollow sound."] },
+      { "title": "Center without losing width", "use": "Keeping the space of a wide recording while fixing its focus.",
+        "settings": [["Preset", "Wide Keep Air"], ["M/S WIDTH", "100% or more"]],
+        "steps": ["Lower INTENSITY if the ambience starts to collapse."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The whole image swings around.", "Lower RESPONSE, or lower INTENSITY. A busy mix may not have one clear dominant source."],
+        ["The source sounds hollow in mono.", "Raise TIME CENTER so left and right arrival times line up."],
+        ["The sound became narrow.", "Raise M/S WIDTH, or use MULTIBAND and lower HIGH to keep high-frequency width."],
+        ["LOOKAHEAD does not change while I turn it.", "It applies when you release the knob, and it cannot be automated."],
+        ["The plug-in adds delay.", "That is the LOOKAHEAD latency shown at the top right of the display."],
+        ["The display says NO SIGNAL.", "No audio is reaching the plug-in. Check the track routing and input."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 24, 32, 22],
+      "rows": [
+        ["`INTENSITY`", "Intensity", "0 to 200%", "100%"],
+        ["`RESPONSE`", "Response", "0 to 100%", "75%"],
+        ["`LOOKAHEAD`", "Not automatable", "from 0 ms", "20 ms"],
+        ["`TIME CENTER`", "Time Center", "0 to 100%", "100%"],
+        ["`M/S WIDTH`", "M/S Width", "0 to 200%", "100%"],
+        ["`MULTIBAND`", "Multiband", "Off, On", "Off"],
+        ["`LOW`", "Band Low", "0 to 100%", "100%"],
+        ["`MID-LOW`", "Band Mid-Low", "0 to 100%", "100%"],
+        ["`MID-HIGH`", "Band Mid-High", "0 to 100%", "100%"],
+        ["`HIGH`", "Band High", "0 to 100%", "100%"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.3.0 · 2026-07-30", "The plug-in logo and name share one rack header. Previous/next navigation and save/load in the preset control were improved."]
+      ]
+    } }
+  ]
+}

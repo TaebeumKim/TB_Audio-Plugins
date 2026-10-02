@@ -1,0 +1,232 @@
+{
+  "file": "TB_Delay",
+  "version": "1.0.3",
+  "date": "2026-10-02",
+  "subtitle": "Creative Stereo Delay",
+  "tagline": "A stereo feedback instrument where every repeat can evolve: echo, multitap, ping-pong, and tuned comb timing, driven through tape, BBD, or digital character, diffusion, frequency shifting, and grains.",
+  "facts": ["Free, Sync, and Tune timing", "Up to 8 taps", "Grain and frequency-shift transform", "99 factory presets"],
+  "ui": "tb_delay.jpg",
+  "coverImage": false,
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Delay is a creative stereo delay in which every repeat can change. Start with a clean echo, a dual delay, ping-pong, tuned timing, or tight comb textures, then drive the feedback through tape, BBD, or digital character, modulation, diffusion, frequency shifting, and granular motion." },
+    { "p": "Taps, swing, bandwidth, drive, wear, stereo movement, and ducking are shaped in one system, and built-in safeguards keep high feedback musical and controlled. COLOR and SPACE macros move many settings at once, so you can turn a preset darker or more spacious with one control." },
+    { "h3": "Key features" },
+    { "ul": [
+      "TIME MODE: Free (10 ms to 8 s), Sync (1/32 to 1/1 with triplets and dotted values), or Tune (tuned comb)",
+      "1, 2, 4, or 8 taps with SPACING and SWING",
+      "Single, Dual, Ping Pong, and Ratio stereo styles",
+      "Clean, Tape, BBD, and Digital character with drive, wear, filters, modulation, and blur",
+      "Transform stage: frequency shift, grain layer, pitch, reverse, density, and spray, applied per repeat (BUILD) or once (ONCE)",
+      "FREEZE holds the current tail; DUCK keeps the dry signal clear",
+      "COLOR and SPACE macros",
+      "99 factory presets in 10 banks, plus Init and user presets"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input (DUCK, FREEZE)", "Delay time and taps", "Stereo style, offset, width", "Character, filters, modulation, diffusion", "Grain and frequency transform", "Feedback", "MIX and OUTPUT"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Delay 1.0.3 for Windows (VST3). The current macOS build is also version 1.0.3; small differences between platforms are possible."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Delay on a vocal, guitar, synth, or send. The defaults are Sync at 1/8, Ping Pong, `FEEDBACK` 48%, `MIX` 30%, `WIDTH` 130%, and `DUCK` 25%.",
+      "Choose `TIME MODE`: Free for milliseconds, Sync to follow the host tempo, or Tune for tuned comb effects.",
+      "Set `DELAY TIME`, then raise `FEEDBACK` for more repeats.",
+      "Choose `TYPE` (Clean, Tape, BBD, Digital) and shape the repeats with `LOW CUT` and `HIGH CUT`.",
+      "Set `MIX` and `DUCK` so the repeats support the source instead of covering it.",
+      "Try the COLOR and SPACE macros to push a preset darker, cleaner, tighter, or wider."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_delay.jpg",
+      "caption": "Captured from version 1.0.1. Since 1.0.2 the interface uses an ocean palette with a circular Delay Map and larger knobs, and since 1.0.3 the Delay Map is taller and the window can be resized from 70% to 180%. The current panel also includes DENSITY, SPRAY, the BUILD / ONCE route, and the COLOR and SPACE macros."
+    } },
+    { "table": {
+      "cols": ["Area", "What it does"],
+      "widths": [24, 76],
+      "rows": [
+        ["Preset bar", "Previous and next preset, the PRESETS list (FACTORY and USER), Save, Undo, and Redo."],
+        ["Delay Map", "Shows how the repeats of the left and right channels develop over time."],
+        ["Repeat controls", "TIME MODE, DELAY TIME, TIME CHANGE, FEEDBACK, TAPS, SPACING, SWING, and DUCK."],
+        ["`STEREO`", "STYLE, R OFFSET, and WIDTH, with a BYP switch."],
+        ["`CHARACTER / SPACE`", "TYPE, DISTORT, WEAR, LOW CUT, HIGH CUT, SPEED, WOBBLE, BLUR, and SPACE, with a BYP switch."],
+        ["`TRANSFORM`", "BUILD / ONCE, FREQ SHIFT, GRAIN MIX, GRAIN SIZE, DENSITY, SPRAY, PITCH, and REVERSE, with a BYP switch."],
+        ["Output", "MIX and OUTPUT, plus the COLOR and SPACE macros and FREEZE."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "h3": "Repeat" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`TIME MODE`", "Free, Sync, Tune · Sync", "Free sets the time in milliseconds, Sync follows host-tempo note values, and Tune turns the delay into a tuned comb."],
+        ["`DELAY TIME`", "Free: 10 to 8000 ms · 375 ms; Sync: 1/32 to 1/1 · 1/8", "The base delay time: milliseconds in Free, a note value in Sync (straight, T for triplet, D for dotted), and a resonant frequency in Tune."],
+        ["`TIME CHANGE`", "Crossfade, Glide · Glide", "When the delay time changes, Crossfade switches cleanly and Glide slides the pitch like tape."],
+        ["`FEEDBACK`", "0 to 110% · 48%", "Repeat decay and how close the delay comes to self-oscillation. Above 100% the repeats build up; safeguards keep it controlled."],
+        ["`TAPS`", "1, 2, 4, 8 · 1", "Number of active rhythm taps."],
+        ["`SPACING`", "25 to 200% · 100%", "Spacing between the taps."],
+        ["`SWING`", "−50 to +50% · 0%", "Groove shift of the even taps."],
+        ["`DUCK`", "0 to 100% · 25%", "Lowers the repeats while the dry signal plays, keeping the sound clear."],
+        ["`FREEZE`", "Off, On · Off", "Smoothly blocks the input and holds the current tail."]
+      ]
+    } },
+    { "h3": "Stereo" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`STYLE`", "Single, Dual, Ping Pong, Ratio · Ping Pong", "Stereo topology of the repeats."],
+        ["`R OFFSET`", "−100 to +100% · 0%", "Right-channel time ratio and comb direction."],
+        ["`WIDTH`", "0 to 200% · 130%", "Stereo width of the wet signal."]
+      ]
+    } },
+    { "h3": "Character and space" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`TYPE`", "Clean, Tape, BBD, Digital · Tape", "The material of the repeats."],
+        ["`DISTORT`", "0 to 100% · 18%", "Higher values make the repeats more compressed and rough."],
+        ["`WEAR`", "0 to 100% · 28%", "Higher values make the repeats darker and less stable, like old equipment."],
+        ["`LOW CUT`", "20 to 2000 Hz · 120 Hz", "Reduces the lows below this frequency on every repeat."],
+        ["`HIGH CUT`", "500 Hz to 20 kHz · 9 kHz", "Reduces the highs above this frequency on every repeat."],
+        ["`SPEED`", "0.02 to 10 Hz · 0.25 Hz", "How fast the repeats wobble."],
+        ["`WOBBLE`", "0 to 20 ms · 0.8 ms", "How far the repeats wobble in time."],
+        ["`BLUR`", "0 to 100% · 12%", "Higher values blur clear repeats into a diffuse, reverb-like wash."],
+        ["`SPACE`", "2 to 120 ms · 32 ms", "Length and sense of space of the diffusion."]
+      ]
+    } },
+    { "h3": "Transform" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`BUILD` / `ONCE`", "BUILD, ONCE · BUILD", "BUILD accumulates the transformation on every repeat; ONCE applies it once at the output."],
+        ["`FREQ SHIFT`", "−2000 to +2000 Hz · 0 Hz", "A signed frequency shift that accumulates on every repeat, for rising or falling spirals."],
+        ["`L/R SHIFT`", "0 to 100% · 0%", "How much the left and right shifts move in opposite directions."],
+        ["`GRAIN MIX`", "0 to 100% · 0%", "Balance between the normal echo and the grain layer."],
+        ["`GRAIN SIZE`", "10 to 500 ms · 90 ms", "Length of each grain window."],
+        ["`DENSITY`", "1 to 8 · 4", "Number of overlapping grains."],
+        ["`SPRAY`", "0 to 100% · 15%", "Scatter of the grains' start positions in time."],
+        ["`PITCH`", "−24 to +24 st · 0 st", "Playback pitch of the grains."],
+        ["`REVERSE`", "0 to 100% · 0%", "Probability that each grain plays reversed."]
+      ]
+    } },
+    { "h3": "Output and macros" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`MIX`", "0 to 100% · 30%", "Constant-power dry/wet balance."],
+        ["`OUTPUT`", "−18 to +6 dB · 0 dB", "Final output trim."],
+        ["`COLOR`", "−100 to +100% · 0%", "Left gives cleaner, more open repeats; the centre is the preset as designed; right gives older, darker repeats."],
+        ["`SPACE`", "−100 to +100% · 0%", "Left gives tight, static repeats; the centre is the preset as designed; right gives repeats that move more and spread wider."],
+        ["`BYP` (per section)", "Off, On · Off", "STEREO bypass sets topology, offset, and width to neutral; CHARACTER / SPACE bypass skips character, filters, modulation, and diffusion; TRANSFORM bypass skips the grain and frequency transform."]
+      ]
+    } },
+    { "tip": { "text": "The macros move several parameters together, so the individual knobs change while you turn them. Use them to explore, then fine-tune the knobs." } },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows, or open the PRESETS list to choose a factory or user preset. Save asks for a name and stores a .tbdelay file in the User folder. The name shows Custom after you change a setting. Undo and Redo step through recent changes." },
+    { "p": "The 99 factory presets are grouped in 10 banks: Essential Echo, Grain & Freeze, Slap & Double, Rhythm & Multitap, Ping Pong & Stereo, Tape & Analog, Digital & Lo-Fi, Comb & Resonance, Spiral & Shift, and Space & Diffusion. Examples include **Clean Utility**, **Dub Throw**, **Studio Slap 80**, **Dotted Pulse Train**, **Warm Reel Echo**, **12-Bit Repeat**, **Plucked Wire**, **Gentle Lift**, **Grain Cloud**, and **Wide Ambient Wash**." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Vocal throw", "use": "Repeats that answer the vocal without covering it.",
+        "settings": [["TIME MODE", "Sync, 1/4 or 1/8 D"], ["FEEDBACK", "30 to 50%"], ["DUCK", "40 to 70%"]],
+        "steps": ["Lower HIGH CUT to about 5 to 7 kHz so the repeats sit behind the voice."] },
+      { "title": "Slapback", "use": "A short, single repeat for vocals or guitar.",
+        "settings": [["Preset", "Studio Slap 80 or Vintage Slap 120"], ["FEEDBACK", "0 to 15%"]],
+        "steps": ["Use Free mode and set DELAY TIME between 80 and 140 ms."] },
+      { "title": "Tape echo", "use": "Warm, wobbly repeats.",
+        "settings": [["TYPE", "Tape"], ["WEAR", "30 to 60%"], ["WOBBLE", "0.5 to 2 ms"]],
+        "steps": ["Lower HIGH CUT as WEAR rises to keep the repeats dark."] },
+      { "title": "Spiral shimmer", "use": "Repeats that rise in pitch.",
+        "settings": [["FREQ SHIFT", "Positive"], ["BUILD / ONCE", "BUILD"], ["FEEDBACK", "50 to 80%"]],
+        "steps": ["Negative FREQ SHIFT makes the spiral fall instead."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The repeats keep building up.", "FEEDBACK is above 100%. Lower it, or use FREEZE deliberately when you want a held tail."],
+        ["The delay clouds the source.", "Raise DUCK, lower MIX, or lower HIGH CUT and raise LOW CUT."],
+        ["Changing DELAY TIME makes pitch swoops.", "TIME CHANGE is on Glide. Choose Crossfade for clean changes."],
+        ["Sync timing does not follow the song.", "Check the host tempo; Sync uses the host's tempo."],
+        ["The sound is mono or narrow.", "Check STYLE and WIDTH, and whether the STEREO section is bypassed."],
+        ["Grain settings do nothing.", "Raise GRAIN MIX, and check that the TRANSFORM section is not bypassed."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 24, 36, 18],
+      "rows": [
+        { "group": "Repeat" },
+        ["`TIME MODE`", "Time Mode", "Free, Sync, Tune", "Sync"],
+        ["`DELAY TIME`", "Delay Time", "10 to 8000 ms", "375 ms"],
+        ["`DELAY TIME` (Sync)", "Division", "1/32 to 1/1, with T and D", "1/8"],
+        ["`TIME CHANGE`", "Time Change", "Crossfade, Glide", "Glide"],
+        ["`FEEDBACK`", "Feedback", "0 to 110%", "48%"],
+        ["`TAPS`", "Taps", "1, 2, 4, 8", "1"],
+        ["`SPACING`", "Spacing", "25 to 200%", "100%"],
+        ["`SWING`", "Swing", "−50 to +50%", "0%"],
+        ["`DUCK`", "Duck", "0 to 100%", "25%"],
+        ["`FREEZE`", "Freeze", "Off, On", "Off"],
+        { "group": "Stereo" },
+        ["`STYLE`", "Style", "Single, Dual, Ping Pong, Ratio", "Ping Pong"],
+        ["`R OFFSET`", "Offset", "−100 to +100%", "0%"],
+        ["`WIDTH`", "Width", "0 to 200%", "130%"],
+        ["`BYP`", "Stereo Bypass", "Off, On", "Off"],
+        { "group": "Character and space" },
+        ["`TYPE`", "Character", "Clean, Tape, BBD, Digital", "Tape"],
+        ["`DISTORT`", "Drive", "0 to 100%", "18%"],
+        ["`WEAR`", "Age", "0 to 100%", "28%"],
+        ["`LOW CUT`", "Low Cut", "20 to 2000 Hz", "120 Hz"],
+        ["`HIGH CUT`", "High Cut", "500 Hz to 20 kHz", "9 kHz"],
+        ["`SPEED`", "Mod Rate", "0.02 to 10 Hz", "0.25 Hz"],
+        ["`WOBBLE`", "Mod Depth", "0 to 20 ms", "0.8 ms"],
+        ["`BLUR`", "Smear", "0 to 100%", "12%"],
+        ["`SPACE`", "Size", "2 to 120 ms", "32 ms"],
+        ["`BYP`", "Color Space Bypass", "Off, On", "Off"],
+        { "group": "Transform" },
+        ["`BUILD` / `ONCE`", "Transform Route", "Loop (BUILD), Post (ONCE)", "Loop"],
+        ["`FREQ SHIFT`", "Shift", "−2000 to +2000 Hz", "0 Hz"],
+        ["`L/R SHIFT`", "Diverge", "0 to 100%", "0%"],
+        ["`GRAIN MIX`", "Grain", "0 to 100%", "0%"],
+        ["`GRAIN SIZE`", "Grain Size", "10 to 500 ms", "90 ms"],
+        ["`DENSITY`", "Density", "1 to 8", "4"],
+        ["`SPRAY`", "Spray", "0 to 100%", "15%"],
+        ["`PITCH`", "Pitch", "−24 to +24 st", "0 st"],
+        ["`REVERSE`", "Reverse", "0 to 100%", "0%"],
+        ["`BYP`", "Grain Transform Bypass", "Off, On", "Off"],
+        { "group": "Output and macros" },
+        ["`MIX`", "Mix", "0 to 100%", "30%"],
+        ["`OUTPUT`", "Output", "−18 to +6 dB", "0 dB"],
+        ["`COLOR`", "Color", "−100 to +100%", "0%"],
+        ["`SPACE` (macro)", "Space", "−100 to +100%", "0%"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.3 · 2026-08-21", "Fixed broken Korean text in knob tooltips. The Delay Map is taller and the control panel more compact, and the window can be resized from 70% to 180% and remembers its last size."],
+        ["1.0.2 · 2026-08-19", "Fixed FEEDBACK above 100% sustaining self-oscillation with no input. Changed the interface to an ocean palette with a circular Delay Map, enlarged knobs and panel titles, and tidied TIME MODE and BUILD / ONCE."],
+        ["1.0.1 · 2026-08-13", "Windows installer release."],
+        ["1.0.0 · 2026-07-29", "Initial release."]
+      ]
+    } }
+  ]
+}

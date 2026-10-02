@@ -1,0 +1,242 @@
+{
+  "file": "TB_FilterTable",
+  "version": "1.1.0",
+  "date": "2026-10-02",
+  "subtitle": "Wavetable Spectral Filter",
+  "tagline": "Turns wavetable frames into filter responses: choose from 120 factory tables or draw your own, morph through 256 frames, and set the phase, contour, and motion.",
+  "facts": ["120 factory tables", "256-frame morphing", "4 phase modes", "20 factory presets"],
+  "ui": "tb_filter_table.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Filter Table uses wavetables as filters. Each table is a sequence of single-cycle frames on a 256-slot rail, and the current frame is turned into an FIR filter response that shapes your audio. Moving through the frames morphs the filter, from gentle contours to formants, notches, combs, and hard pulse shapes." },
+    { "p": "`CUTOFF (H24)` places the frame on the frequency axis, `RESONANCE` sets the contour depth, `FRAME` and the MORPH LFO move through the table, `PHASE` sets the phase response, and `MIX` blends with the latency-compensated dry signal. The EDIT view adds `DRIVE`, the plugin presets, and tools for drawing and capturing your own custom table." },
+    { "h3": "Key features" },
+    { "ul": [
+      "120 factory tables in 10 families, plus an editable CUSTOM table",
+      "256-slot frame rail; tables morph smoothly or in steps between 2 to 256 keyframes",
+      "CUTOFF (H24) from 20 Hz to 20 kHz, with an effective floor of 200 Hz",
+      "RESONANCE contour depth from flat (−100%) to squared (+100%)",
+      "Four phase modes: MINIMUM, LINEAR, ORIGINAL, and RAW",
+      "Post-filter DRIVE up to 24 dB",
+      "MORPH LFO with six shapes, ±100% range, and a 0.01 to 10 Hz rate",
+      "Custom table drawing, frame capture, and .tbft table files",
+      "20 factory presets, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Frame from TABLE, FRAME, and MORPH LFO", "FIR filter (CUTOFF, RESONANCE, PHASE)", "DRIVE", "MIX with the dry signal", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Filter Table 1.1.0 for Windows (VST3). The current macOS build (AU and VST3) is version 1.0.1 and may differ."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Filter Table on a synth, pad, drum, vocal, or bus track. The Init preset uses the Moving Formant table, `FRAME` 129, `CUTOFF` 4 kHz, `RESONANCE` +15%, and `MIX` 75%.",
+      "Choose a table with the table selector {{4}}, or step through all tables with its arrows.",
+      "Sweep `FRAME` {{6}} to morph through the table, and move `CUTOFF` {{7}} to place the response.",
+      "Set the depth with `RESONANCE` {{8}} and the balance with `MIX` {{9}}.",
+      "For movement, choose a `TYPE` in the MORPH LFO row {{10}}, then set `RANGE` and `RATE`."
+    ] },
+
+    { "h2": "Interface" },
+    { "p": "The main view holds the everyday controls. `EDIT` {{5}} opens the secondary tools, and `DONE` {{13}} returns to the main view." },
+    { "ui": {
+      "image": "tb_filter_table.jpg",
+      "caption": "TB Filter Table 1.1: the main view with the Init preset (left) and the secondary tools with the TABLE TOOLS tab (right).",
+      "callouts": [
+        { "n": 1, "x": 26.0, "y": 4.7 },
+        { "n": 2, "x": 5.4, "y": 15.3 },
+        { "n": 3, "x": 16.0, "y": 42.5 },
+        { "n": 4, "x": 20.9, "y": 60.6 },
+        { "n": 5, "x": 43.3, "y": 60.6 },
+        { "n": 6, "x": 9.8, "y": 70.8 },
+        { "n": 7, "x": 23.0, "y": 70.8 },
+        { "n": 8, "x": 35.6, "y": 70.8 },
+        { "n": 9, "x": 45.0, "y": 70.8 },
+        { "n": 10, "x": 10.8, "y": 92.8 },
+        { "n": 11, "x": 59.8, "y": 18.8 },
+        { "n": 12, "x": 63.2, "y": 33.8 },
+        { "n": 13, "x": 94.3, "y": 60.6 },
+        { "n": 14, "x": 78.0, "y": 72.2 },
+        { "n": 15, "x": 74.6, "y": 75.6 },
+        { "n": 16, "x": 51.4, "y": 87.9 },
+        { "n": 17, "x": 93.6, "y": 74.5 },
+        { "n": 18, "x": 68.5, "y": 90.7 }
+      ],
+      "legend": [
+        [1, "PHASE", "MINIMUM, LINEAR, ORIGINAL, or RAW."],
+        [2, "Table view", "the frames of the current table, with the current frame highlighted."],
+        [3, "TABLE FIR RESPONSE", "the realised filter response; the marker shows CUTOFF."],
+        [4, "Table selector", "CUSTOM and the 120 factory tables, grouped by family; the arrows step through all of them."],
+        [5, "EDIT", "opens the secondary tools."],
+        [6, "Frame", "position on the 256-slot rail."],
+        [7, "Cutoff", "the frequency assigned to harmonic 24."],
+        [8, "Resonance", "contour depth."],
+        [9, "Mix", "dry/wet blend."],
+        [10, "MORPH LFO", "TYPE, RANGE, and RATE of the frame LFO."],
+        [11, "TABLE", "the table's frames; the rail above shows the 256 slots, the keyframes, and the current frame."],
+        [12, "DRAW FRAME", "the current frame; drag inside it to draw the custom table, then release to commit."],
+        [13, "DONE", "returns to the main view."],
+        [14, "TABLE TOOLS / FRAME LFO", "switches between the table tools and the Frame LFO controls."],
+        [15, "FRAME, DRIVE", "frame position and post-filter drive."],
+        [16, "Keyframe status", "the number of keyframes and the morph mode (SMOOTH or STEPPED)."],
+        [17, "CUSTOM TABLE", "NEW, CAPTURE, CLEAR, and TABLE FILE."],
+        [18, "PRESET / HISTORY", "plugin presets, Save, UNDO, and REDO."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 22, 60],
+      "rows": [
+        ["Table selector", "CUSTOM or 120 factory tables · Moving Formant", "Chooses the set of frames the filter morphs through. A new table changes both the tone and the meaning of every frame position."],
+        ["`FRAME`", "1 to 256 · 129", "Base position on the table's 256-slot rail; the filter morphs continuously as it moves. Positive RANGE moves upward from here; negative RANGE moves downward to here."],
+        ["`CUTOFF (H24)`", "20 Hz to 20 kHz · 4 kHz", "The frequency assigned to harmonic 24 of the frame. At 4 kHz the frame spans 20 Hz to 20.48 kHz across ten octaves. The effective cutoff does not go below 200 Hz; lower settings act as 200 Hz."],
+        ["`RESONANCE`", "−100 to +100% · +15%", "Contour depth: −100% is flat, 0% follows the table, and +100% squares it. In RAW mode it sets how far the kernel departs from a neutral one. High values create strong peaks and ringing."],
+        ["`PHASE`", "MINIMUM, LINEAR, ORIGINAL, RAW · MINIMUM", "The phase response of the filter. ORIGINAL keeps the phase of the source frame; RAW uses the frame waveform itself as the filter kernel."],
+        ["`DRIVE` (EDIT view)", "0 to 24 dB · 2 dB", "Post-filter nonlinear color. At 0 dB it is bypassed exactly, without adding a static cut. Drive can raise the level."],
+        ["`MIX`", "0 to 100% · 75%", "Blends the filtered signal with the latency-compensated dry signal."]
+      ]
+    } },
+    { "h3": "Morph LFO" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 22, 60],
+      "rows": [
+        ["`TYPE`", "OFF, SINE, TRI, SAW, SQR, RND · OFF", "The frame LFO shape. RND is a random sample-and-hold."],
+        ["`RANGE`", "−100 to +100% · +25%", "Directional morph span: +100% moves up to 256 slots above FRAME, −100% moves up to 256 slots below it, and 0% stops frame movement."],
+        ["`RATE`", "0.01 to 10 Hz · 0.25 Hz", "Free-running LFO rate. It does not follow the host tempo."]
+      ]
+    } },
+    { "p": "In the EDIT view, the FRAME LFO tab shows the same TYPE, RANGE, and RATE controls. TB Filter Table also has a host Bypass parameter, and it reports a fixed latency of 128 samples (about 2.7 ms at 48 kHz) in every phase mode." },
+    { "tip": {"text": "The phase modes change how transients and stereo content behave. Compare them on drums, and check the result in mono."} },
+
+    { "h2": "Custom tables" },
+    { "p": "The CUSTOM entry at the start of the table list is your own editable table. Build it in the EDIT view with the TABLE TOOLS tab." },
+    { "table": {
+      "cols": ["Tool", "What it does"],
+      "widths": [22, 78],
+      "rows": [
+        ["`NEW`", "Resets the custom table to a new two-keyframe starting table."],
+        ["`CAPTURE`", "Copies the currently rendered frame into the same slot of the custom table."],
+        ["`CLEAR`", "Removes the selected authored keyframe from the custom table."],
+        ["DRAW FRAME", "Drag inside the current waveform panel, then release to commit the drawn frame."],
+        ["`TABLE FILE`", "IMPORT TABLE FILE... and EXPORT CUSTOM TABLE... read and write .tbft table files. Table files are separate from plugin presets."],
+        ["SMOOTH / STEPPED", "SMOOTH interpolates continuously between adjacent keyframes; STEPPED switches between them without interpolation. The keyframe status shows which applies."]
+      ]
+    } },
+
+    { "h2": "Presets" },
+    { "p": "Plugin presets store all settings. Choose them in the PRESET / HISTORY row of the EDIT view, or step with its arrows. Save asks for a name and stores a user preset in Documents/TB Filter Table/Presets/User. UNDO and REDO step through editable actions." },
+    { "table": {
+      "compact": true,
+      "cols": ["Preset", "Table", "FRAME", "CUTOFF", "RESONANCE", "DRIVE", "MIX", "PHASE", "MORPH LFO"],
+      "widths": [17, 15, 7, 8, 10, 7, 6, 10, 20],
+      "rows": [
+        {"group": "Essentials"},
+        ["Init", "Moving Formant", "129", "4 kHz", "+15%", "2 dB", "75%", "MINIMUM", "OFF"],
+        ["Gentle Pad Motion", "Reed Breath", "73", "1.8 kHz", "−18%", "0 dB", "82%", "MINIMUM", "OFF"],
+        ["Hollow Drum Focus", "Open Notch", "117", "2.6 kHz", "+24%", "2.5 dB", "72%", "MINIMUM", "OFF"],
+        ["Vocal Formant Lift", "Moving Formant", "145", "3.4 kHz", "+36%", "1.5 dB", "68%", "ORIGINAL", "OFF"],
+        ["Subtle Bus Contour", "Pink Horizon", "49", "5.2 kHz", "−32%", "0 dB", "28%", "LINEAR", "OFF"],
+        {"group": "Motion"},
+        ["Slow Vowel Bloom", "Vowel Bloom", "1", "2.1 kHz", "+22%", "0 dB", "88%", "ORIGINAL", "SINE 14.1% 0.07 Hz"],
+        ["Liquid Reed", "Liquid Reed", "117", "1.5 kHz", "+10%", "1 dB", "76%", "MINIMUM", "TRI 37.5% 0.18 Hz"],
+        ["Golden Sweep", "Golden Pulse", "1", "2.4 kHz", "+18%", "0 dB", "92%", "LINEAR", "SAW 75% 0.1 Hz"],
+        ["Phase Weave", "Phase Weave", "141", "3.1 kHz", "+28%", "0 dB", "84%", "ORIGINAL", "SQR 37.5% 0.35 Hz"],
+        ["Comb Garden", "Comb Garden", "65", "4.2 kHz", "+54%", "3 dB", "74%", "LINEAR", "RND 50% 0.75 Hz"],
+        {"group": "Character"},
+        ["Warm Ladder", "Warm Ladder", "83", "1.3 kHz", "+16%", "4 dB", "80%", "MINIMUM", "OFF"],
+        ["Prime Choir", "Prime Choir", "177", "2.8 kHz", "+40%", "1 dB", "86%", "LINEAR", "OFF"],
+        ["Glass Tide", "Glass Tide", "133", "4.6 kHz", "+34%", "2 dB", "78%", "ORIGINAL", "OFF"],
+        ["Dense Fold", "Single Fold", "153", "1.9 kHz", "+46%", "8 dB", "70%", "MINIMUM", "OFF"],
+        ["Pulse Steps", "Triangle Terrace", "109", "3.6 kHz", "+58%", "4 dB", "66%", "RAW", "OFF"],
+        {"group": "Showcase"},
+        ["Raw Barcode", "Barcode", "207", "5.1 kHz", "+72%", "10 dB", "78%", "RAW", "OFF"],
+        ["Mobius Kernel", "Mobius Wave", "215", "3.3 kHz", "+62%", "12 dB", "74%", "RAW", "OFF"],
+        ["Prism Bloom", "T10 Prism", "193", "6.4 kHz", "+66%", "5 dB", "82%", "LINEAR", "OFF"],
+        ["Nested Fold", "Nested Fold", "229", "2.7 kHz", "+74%", "16 dB", "62%", "MINIMUM", "OFF"],
+        ["Broken Speaker", "Double Pulse", "185", "1.7 kHz", "+86%", "20 dB", "56%", "RAW", "OFF"]
+      ]
+    } },
+    { "h3": "Factory tables" },
+    { "table": {
+      "compact": true,
+      "cols": ["Family", "Tables"],
+      "widths": [20, 80],
+      "rows": [
+        ["Fundamentals", "Pure Sine, Velvet Triangle, Rounded Saw, Hollow Square, Soft Ramp, Twin Sine, Golden Pulse, Arc Triangle, Bell Cycle, Tapered Saw, Balanced Steps, Clear Octave"],
+        ["Harmonic Ladders", "Warm Ladder, Odd Lantern, Even Glass, Prime Choir, Fibonacci Air, Triple Bloom, Quarter Stack, Alternating Brass, Inverse Bells, Crescent Partials, Hollow Ladder, Full Spectrum"],
+        ["Spectral Contours", "Amber Roll-Off, Silver Rise, Pink Horizon, Violet Edge, Moving Formant, Open Notch, Comb Garden, Phase Stair, Odd Tilt, Twin Formants, Soft Ceiling, Cascade Slope"],
+        ["Geometry", "Power Petal, Ellipse Arc, Superellipse, Cubic Bow, Sigmoid Silk, Arcsine Halo, Arctangent Lens, Rational Curve, Circle Fold, Diamond Drift, Parabolic Wing, Catenary Loop"],
+        ["Polynomial Orbits", "T2 Mirror, T3 Trident, T4 Compass, T5 Star, T6 Rosette, T7 Crown, T8 Lattice, T9 Orbit, T10 Prism, T11 Wheel, T12 Aurora, T13 Helix"],
+        ["Phase Symmetry", "Forward Bend, Reverse Bend, Split Phase, Phase Pinch, Skewed Cycle, Dual Axis, Mirror Delay, Quadrature Bloom, Center Pull, Edge Push, Symmetry Break, Phase Weave"],
+        ["Pulse Architecture", "Soft Pulse, Three Level, Fine Ladder, Notch Gate, Double Pulse, Stepped Ramp, Sine Stair, Window Gate, Barcode, Triangle Terrace, Sync Pulse, Rounded Square"],
+        ["Fold and Warp", "Single Fold, Double Fold, Ribbon Fold, Sine Within, Cubic Fold, Atan Warp, Triangle Cage, Soft Mirror, Nested Fold, Offset Fold, Wave Knot, Fold Cascade"],
+        ["Organic Motion", "Reed Breath, Cello Grain, Vowel Bloom, Woodwind Curl, Glass Tide, Copper Drift, Petal Motion, Liquid Reed, Warm Current, Slow Orbit, Bamboo Arc, Living Chord"],
+        ["Experimental Curves", "Linear Chirp, Nested FM, Ring Orbit, Spiral Phase, Rectified Bloom, Wave Packet, Spectral Mirror, Phase Lattice, Logistic Arc, Rational Orbit, Cusp Motion, Mobius Wave"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Vowel pad", "use": "Slow, talking motion on pads and drones.",
+        "settings": [["Preset", "Slow Vowel Bloom"], ["RATE", "0.05 to 0.2 Hz"]],
+        "steps": ["Lower MIX if the vowel motion is too strong."] },
+      { "title": "Drum contour", "use": "A moving notch that keeps drum attacks clear.",
+        "settings": [["Preset", "Hollow Drum Focus"], ["MIX", "50 to 75%"]],
+        "steps": ["Compare the PHASE modes and keep the one with the cleanest attack."] },
+      { "title": "Bus color", "use": "A gentle spectral shape on a group or mix bus.",
+        "settings": [["Preset", "Subtle Bus Contour"], ["MIX", "20 to 35%"]],
+        "steps": ["Sweep FRAME slowly to find the most flattering contour."] },
+      { "title": "Deliberate damage", "use": "Broken, speaker-like sound design.",
+        "settings": [["Preset", "Broken Speaker"], ["DRIVE", "12 to 20 dB"]],
+        "steps": ["Watch the output level; DRIVE adds level."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["CUTOFF has no effect below 200 Hz.", "The effective cutoff stops at 200 Hz; settings from 20 to 200 Hz act as 200 Hz."],
+        ["The sound rings or whistles.", "Lower RESONANCE, or choose a smoother table or frame."],
+        ["Fast morphing sounds rough.", "Lower RATE or RANGE. Fast frame movement can create modulation artifacts."],
+        ["Transients sound soft or smeared.", "Compare the PHASE modes and keep the one with the cleanest attack."],
+        ["It is louder than bypass.", "Lower DRIVE or MIX, and match levels before comparing."],
+        ["The LFO does not follow the tempo.", "RATE is free-running. Set it by ear."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["Table selector", "Table", "CUSTOM, 120 factory tables", "Moving Formant"],
+        ["`FRAME`", "Frame", "0 to 255 (shown as 1 to 256)", "128 (shown as 129)"],
+        ["`CUTOFF (H24)`", "Cutoff (H24)", "20 to 20000 Hz (effective from 200 Hz)", "4000 Hz"],
+        ["`RESONANCE`", "Resonance", "−100 to +100%", "+15%"],
+        ["`DRIVE`", "Drive", "0 to 24 dB", "2 dB"],
+        ["`MIX`", "Mix", "0 to 100%", "75%"],
+        ["`PHASE`", "Phase", "MINIMUM, LINEAR, ORIGINAL, RAW", "MINIMUM"],
+        ["—", "Bypass", "Off, On", "Off"],
+        ["`TYPE`", "Frame LFO Type", "OFF, SINE, TRI, SAW, SQR, RND", "OFF"],
+        ["`RANGE`", "Frame LFO Range", "−100 to +100%", "+25%"],
+        ["`RATE`", "Frame LFO Rate", "0.01 to 10 Hz", "0.25 Hz"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.1.0 · 2026-08-17", "Restored the published 20 Hz to 20 kHz Cutoff automation mapping while keeping the 200 Hz effective floor; every public parameter ID and the state schema are unchanged."],
+        ["1.0.0 · 2026-08-13", "First release: 120 factory tables with 2 to 256 keyframes for morphable spectral filtering; four phase modes, bounded spectral contours, nonlinear drive, and a Frame LFO."]
+      ]
+    } }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "file": "TB_SpectralTransientShaper",
+  "version": "1.4.1",
+  "date": "2026-10-02",
+  "subtitle": "Spectral Transient Shaper",
+  "tagline": "Reshapes attack and sustain separately in every FFT bin, without crossover bands, then finishes the result with optional saturation, clipping, oversampling, and limiting.",
+  "facts": ["1025 spectral bins", "Simple or 3-band EQ detection", "Attack, Sustain, and Delta monitoring", "25 factory presets"],
+  "ui": "tb_transient_shaper.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "A conventional transient shaper moves the whole signal at once. TB Spectral Transient Shaper analyses the sound in 1025 frequency bins and decides, bin by bin, where transient energy should rise, where sustain should tighten, and where the sound should stay untouched." },
+    { "p": "`ATTACK GAIN` and `SUSTAIN GAIN` boost or cut the two branches, and each has its own release. SIMPLE mode uses one sensitivity across the spectrum; EQ mode gives the low, mid, and high regions their own sensitivity. Two analyzers show what is detected, the monitor lets you hear each branch or only the change, and an optional output chain adds saturation, a soft clipper, and a limiter." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Attack and sustain shaping per FFT bin (1024-point FFT, 4× overlap), with no crossover bands",
+      "`ATTACK GAIN` and `SUSTAIN GAIN` from −24 to +24 dB, each with its own `RELEASE`",
+      "SIMPLE or EQ detection; EQ uses a low shelf, a bell, and a high shelf per branch",
+      "ATTACK and SUSTAIN analyzers with the sensitivity curve and reference line",
+      "Monitor NORMAL, ATTACK, or SUSTAIN, each with an optional DELTA",
+      "Optional saturation (six characters), soft clipper, and lookahead limiter",
+      "1×, 2×, 4×, or 8× oversampling around saturation and clipping",
+      "25 factory presets in six groups, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["INPUT", "Spectral analysis", "Attack and sustain detection (SIMPLE or EQ)", "ATTACK GAIN and SUSTAIN GAIN", "SATURATION", "CLIPPER", "LIMITER", "OUTPUT"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Spectral Transient Shaper 1.4.1 for Windows (VST3). The current macOS build is version 1.0.2 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Spectral Transient Shaper on a drum, bass, guitar, vocal, or bus track. By default `ATTACK GAIN` is +4 dB, `SUSTAIN GAIN` is −2 dB, and both releases are 50 ms.",
+      "Leave `SHAPER` {{3}} on SIMPLE and play the track. Watch the ATTACK {{5}} and SUSTAIN {{6}} analyzers.",
+      "Raise `ATTACK GAIN` {{7}} for more punch, or lower it to soften hits. Shorter `RELEASE` {{8}} makes tighter, sharper transients.",
+      "Lower `SUSTAIN GAIN` {{9}} to dry up room tails and ring, or raise it for more body.",
+      "Switch on `DELTA` {{4}} to hear only what the processing changes, then switch it off again.",
+      "Match the level with `OUTPUT` {{15}} and compare with `BYPASS` {{2}}."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_transient_shaper.jpg",
+      "caption": "TB Spectral Transient Shaper 1.4 interface.",
+      "callouts": [
+        { "n": 1, "x": 30.3, "y": 3.6 },
+        { "n": 2, "x": 84.2, "y": 3.6 },
+        { "n": 3, "x": 38.6, "y": 12.1 },
+        { "n": 4, "x": 63.9, "y": 12.1 },
+        { "n": 5, "x": 8.2, "y": 18.1 },
+        { "n": 6, "x": 57.5, "y": 18.1 },
+        { "n": 7, "x": 10.8, "y": 56.8 },
+        { "n": 8, "x": 40.4, "y": 61.2 },
+        { "n": 9, "x": 60.1, "y": 56.8 },
+        { "n": 10, "x": 89.5, "y": 61.2 },
+        { "n": 11, "x": 4.4, "y": 72.5 },
+        { "n": 12, "x": 22.0, "y": 72.5 },
+        { "n": 13, "x": 43.0, "y": 72.5 },
+        { "n": 14, "x": 60.2, "y": 72.5 },
+        { "n": 15, "x": 83.0, "y": 72.5 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset (hold to keep stepping), the preset browser, Save, Undo, and Redo."],
+        [2, "BYPASS", "bypasses all processing and reports zero latency while active."],
+        [3, "SHAPER", "SIMPLE or EQ detection."],
+        [4, "MONITOR and DELTA", "what you hear: NORMAL, ATTACK, or SUSTAIN, and only the difference with DELTA."],
+        [5, "ATTACK analyzer", "the attack branch's spectrum, sensitivity curve, and reference line."],
+        [6, "SUSTAIN analyzer", "the same for the sustain branch."],
+        [7, "ATTACK GAIN", "boost or cut of the detected attack."],
+        [8, "RELEASE (attack)", "how quickly attack shaping returns to neutral."],
+        [9, "SUSTAIN GAIN", "boost or cut of the sustained part."],
+        [10, "RELEASE (sustain)", "how long sustain shaping stays active."],
+        [11, "QUALITY", "oversampling x1 to x8 and the limiter LOOKAHEAD."],
+        [12, "SATURATION", "on/off lamp, character, Shaper Link, and DRIVE."],
+        [13, "CLIPPER", "on/off lamp and THRESHOLD."],
+        [14, "LIMITER", "on/off lamp and CEILING."],
+        [15, "GAIN", "INPUT and OUTPUT with level meters."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "h3": "Shaper" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`ATTACK GAIN`", "−24 to +24 dB · +4 dB", "How much the detected attack of every spectral band is boosted or cut. 0 dB is no change."],
+        ["`RELEASE` (attack)", "1 to 2000 ms · 50 ms", "How quickly attack shaping returns to neutral. Short values make tighter, sharper transients."],
+        ["`SUSTAIN GAIN`", "−24 to +24 dB · −2 dB", "How much the sustained part of every spectral band is boosted or cut. 0 dB is no change."],
+        ["`RELEASE` (sustain)", "1 to 2000 ms · 50 ms", "How long sustain shaping remains active after detection falls away."],
+        ["`SHAPER`", "SIMPLE, EQ · SIMPLE", "SIMPLE uses one sensitivity value across the spectrum. EQ uses low shelf, bell, and high shelf sensitivity bands."],
+        ["Sensitivity", "0 to 1 · 0.5", "How readily each branch detects attack or sustain. Shown on the analyzers as the sensitivity curve and reference line."]
+      ]
+    } },
+    { "h3": "EQ detection bands" },
+    { "p": "In EQ mode, each branch has three detection bands: a low shelf, a bell, and a high shelf. Each band has a frequency, a sensitivity, and a Q, shown on the analyzer. Use them to detect, for example, kick attack in the lows and cymbal sustain in the highs separately." },
+    { "table": {
+      "cols": ["Band value", "Range · default", "What it does"],
+      "widths": [18, 34, 48],
+      "rows": [
+        ["Frequency", "20 Hz to 20 kHz · Low 100 Hz, Mid 1 kHz, High 8 kHz", "Where the band sits."],
+        ["Sensitivity", "0 to 1 · 0.5", "How readily the band detects."],
+        ["Q", "0.1 to 10 · 1", "Width of the band. Higher Q is narrower."]
+      ]
+    } },
+    { "h3": "Monitor" },
+    { "table": {
+      "cols": ["Control", "Options · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`MONITOR`", "NORMAL, ATTACK, SUSTAIN · NORMAL", "What you listen to. NORMAL is both shaper branches; ATTACK and SUSTAIN apply only that branch. All three run through the same output chain."],
+        ["`DELTA`", "Off, On · Off", "Hear only the difference against the latency-aligned input. ATTACK with DELTA is what the attack branch adds."]
+      ]
+    } },
+    { "warn": { "text": "MONITOR and DELTA are saved with the session. Return to NORMAL with DELTA off before you export." } },
+    { "h3": "Output chain" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        { "group": "Saturation" },
+        ["On/off lamp", "Off, On · Off", "Switches the saturation stage on or off."],
+        ["Character", "Soft, Punch, Warm, Digital, Fold, Hard · Soft", "Saturation character."],
+        ["`DRIVE`", "0 to 36 dB · 0 dB", "How hard the signal is pushed into the selected character."],
+        ["`Shaper Link`", "Off, On · Off", "Makes saturation intensity follow the attack and sustain detector activity."],
+        { "group": "Clipper" },
+        ["On/off lamp", "Off, On · Off", "Switches the soft clipper on or off."],
+        ["`THRESHOLD`", "−20 to 0 dB · −0.7 dB", "Level where the soft clipper starts rounding peaks off."],
+        { "group": "Limiter" },
+        ["On/off lamp", "Off, On · Off", "Switches the output limiter on or off."],
+        ["`CEILING`", "−24 to 0 dB · −0.1 dB", "The level the limiter does not let the output pass."],
+        ["`LOOKAHEAD`", "0 to 20 ms · 0 ms", "Limiter lookahead. It only has an effect while the LIMITER is on."],
+        { "group": "Quality and gain" },
+        ["`QUALITY`", "x1, x2, x4, x8 · x1", "Oversampling around saturation and clipping. x1 has the lowest CPU and latency; x8 the highest quality and CPU."],
+        ["`INPUT`", "−24 to +24 dB · 0 dB", "Level going into the detector. Raise it to make quiet material trigger more bands."],
+        ["`OUTPUT`", "−24 to +24 dB · 0 dB", "Final output level, after saturation, clipper, and limiter."],
+        ["`BYPASS`", "Off, On · Off", "Bypasses all processing and reports zero plug-in latency while active."]
+      ]
+    } },
+    { "note": { "text": "The spectral analysis adds latency, which the plug-in reports to the host. Oversampling and limiter lookahead add more. BYPASS reports zero latency while it is on." } },
+
+    { "h2": "Presets" },
+    { "p": "The preset browser holds factory and user presets. Selecting one replaces every parameter as a single undo step. The arrows step through the bank; hold one to keep stepping. Save stores the current settings as a user preset, and LOAD USER PRESET... opens a saved file. After a change, the name shows (Custom)." },
+    { "table": {
+      "cols": ["Group", "Presets"],
+      "widths": [22, 78],
+      "rows": [
+        ["—", "Init"],
+        ["Drums", "Snap Kick, Room Kill, Big Room, Top End Crack, Sub Punch, Parallel Slam"],
+        ["Bass", "Finger Definition, Sub Hold, Amp Grit"],
+        ["Guitar & Keys", "Pick Attack, Soft Strum, Piano Bloom, Metallic Edge"],
+        ["Vocal", "Consonant Control, Breath Forward, Vocal Presence"],
+        ["Bus & Master", "Glue Tighten, Mix Punch, Open The Mix, Master Safety"],
+        ["Spectral FX", "Reverse Swell, Gated Spikes, Frozen Tail, Broken Transients"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Punchier kick", "use": "More click and impact without more level.",
+        "settings": [["Preset", "Snap Kick"], ["ATTACK GAIN", "+3 to +8 dB"], ["Attack RELEASE", "20 to 60 ms"]],
+        "steps": ["Monitor ATTACK with DELTA to hear only what is added.", "Match OUTPUT before comparing with bypass."] },
+      { "title": "Drier drum room", "use": "Shorter room tails on overheads or a drum bus.",
+        "settings": [["Preset", "Room Kill"], ["SUSTAIN GAIN", "−3 to −9 dB"], ["Sustain RELEASE", "Longer for smoother results"]],
+        "steps": ["Check in NORMAL that the cymbals still ring naturally."] },
+      { "title": "Clearer consonants", "use": "Speech or vocals that need definition.",
+        "settings": [["Preset", "Consonant Control"], ["SHAPER", "EQ"], ["Bands", "Detect in the mid and high bands"]],
+        "steps": ["Use only the mid and high band sensitivity so the low end is not pumped."] },
+      { "title": "Safe bus punch", "use": "Transient emphasis on a bus with peak safety.",
+        "settings": [["Preset", "Mix Punch or Master Safety"], ["LIMITER", "On"], ["CEILING", "−0.1 to −1 dB"]],
+        "steps": ["Keep the shaping small; the limiter only catches peaks."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["I only hear clicks or a thin sound.", "MONITOR is on ATTACK or DELTA is on. Return to NORMAL with DELTA off."],
+        ["Quiet parts are not shaped.", "Raise INPUT so quiet material triggers more bands, or raise the sensitivity."],
+        ["The low end pumps.", "Use EQ mode and lower the low band sensitivity, or lengthen the releases."],
+        ["Transients sound harsh after saturation.", "Lower DRIVE, choose a softer character, or raise QUALITY to reduce aliasing."],
+        ["LOOKAHEAD does nothing.", "It only works while the LIMITER is on."],
+        ["The track is out of time with others.", "Make sure host latency compensation is on. Oversampling and lookahead add latency."],
+        ["A preset does not load.", "The file must be a TB Spectral Transient Shaper preset made for a compatible version."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 30, 30, 18],
+      "rows": [
+        { "group": "Shaper" },
+        ["`SHAPER`", "Mode", "Simple, EQ", "Simple"],
+        ["`ATTACK GAIN`", "Attack Gain", "−24 to +24 dB", "+4 dB"],
+        ["`SUSTAIN GAIN`", "Sustain Gain", "−24 to +24 dB", "−2 dB"],
+        ["Attack analyzer", "Attack Sensitivity", "0 to 1", "0.5"],
+        ["Sustain analyzer", "Sustain Sensitivity", "0 to 1", "0.5"],
+        ["`RELEASE`", "Attack Release", "1 to 2000 ms", "50 ms"],
+        ["`RELEASE`", "Sustain Release", "1 to 2000 ms", "50 ms"],
+        { "group": "EQ detection bands" },
+        ["Analyzer", "ATK_LOW / ATK_MID / ATK_HIGH Frequency", "20 Hz to 20 kHz", "100 Hz / 1 kHz / 8 kHz"],
+        ["Analyzer", "SUS_LOW / SUS_MID / SUS_HIGH Frequency", "20 Hz to 20 kHz", "100 Hz / 1 kHz / 8 kHz"],
+        ["Analyzer", "ATK_… and SUS_… Sensitivity (6)", "0 to 1", "0.5"],
+        ["Analyzer", "ATK_… and SUS_… Q (6)", "0.1 to 10", "1"],
+        { "group": "Monitor and gain" },
+        ["`MONITOR`, `DELTA`", "Monitor", "Normal, Normal Delta, Attack, Attack Delta, Sustain, Sustain Delta", "Normal"],
+        ["`INPUT`", "Input Gain", "−24 to +24 dB", "0 dB"],
+        ["`OUTPUT`", "Output Gain", "−24 to +24 dB", "0 dB"],
+        ["`BYPASS`", "Bypass", "Off, On", "Off"],
+        { "group": "Output chain" },
+        ["Saturation lamp", "Saturation", "Off, On", "Off"],
+        ["Character", "Saturation Mode", "Soft, Punch, Warm, Digital, Fold, Hard", "Soft"],
+        ["`DRIVE`", "Saturation Drive", "0 to 36 dB", "0 dB"],
+        ["`Shaper Link`", "Saturation Shaper Link", "Off, On", "Off"],
+        ["Clipper lamp", "Clipper", "Off, On", "Off"],
+        ["`THRESHOLD`", "Clipper Threshold", "−20 to 0 dB", "−0.7 dB"],
+        ["Limiter lamp", "Limiter", "Off, On", "Off"],
+        ["`CEILING`", "Limiter Threshold", "−24 to 0 dB", "−0.1 dB"],
+        ["`LOOKAHEAD`", "Lookahead", "0 to 20 ms", "0 ms"],
+        ["`QUALITY`", "Oversampling", "x1, x2, x4, x8", "x1"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.4.1 · 2026-08-21", "Brought the latest attack and sustain graphs and the current spectral processing build to Windows VST3, and aligned the catalog, VST3, and installer versions at 1.4.1."],
+        ["1.4.0 · 2026-08-02", "The EQ-mode analyzer and the processing now use the same sensitivity curve and reference line. Delta behaviour and latency are consistent across monitor sources, and the analyzer draws more efficiently."]
+      ]
+    } }
+  ]
+}

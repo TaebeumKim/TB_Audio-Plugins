@@ -1,0 +1,163 @@
+{
+  "file": "TB_Limiter",
+  "version": "1.2.0",
+  "date": "2026-10-02",
+  "subtitle": "True Peak Mastering Limiter",
+  "tagline": "A stereo-linked true-peak limiter with a fixed 2 ms lookahead, program-aware release, micro-peak Enhance, and optional TPDF dither.",
+  "facts": ["Ceiling −3 to 0 dBTP", "Fixed 2 ms lookahead", "8 controls", "9 factory presets"],
+  "ui": "tb_limiter.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Limiter is a stereo-linked true-peak mastering limiter built around eight decisive controls. It is not a sample clipper: CEILING is a true-peak bound, checked with fixed high-quality oversampling." },
+    { "p": "Drive density with `INPUT`, set an independent final `CEILING`, shape micro-peaks with `ENHANCE`, and control recovery with `RELEASE` and the program-aware `RMS ASSIST`. `RMS BALANCE` gently corrects persistent left-right energy drift, and `ATTACK` decides how the fixed 2 ms lookahead approaches each coming peak. Optional 16-bit or 24-bit TPDF dither completes the final delivery stage." },
+    { "h3": "Key features" },
+    { "ul": [
+      "True-peak ceiling from −3 to 0 dBTP",
+      "Stereo-linked limiting with a fixed 2 ms lookahead and fixed oversampling",
+      "Release with program-aware RMS Assist: faster for isolated peaks, slower for dense material",
+      "Enhance for extra density by softening and driving short peaks",
+      "RMS Balance for slow left-right correction",
+      "Optional 16-bit or 24-bit TPDF dither",
+      "Gain reduction, true-peak, and left-right balance displays",
+      "Works from 44.1 to 192 kHz with latency-aligned bypass"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["INPUT", "Oversampling", "RMS BALANCE", "ENHANCE", "Limiter (2 ms lookahead, ATTACK, RELEASE, RMS ASSIST)", "Downsampling to CEILING", "DITHER", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Limiter 1.2.0 for Windows (VST3). The current macOS build is version 0.4.2 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Limiter last on the master bus. The defaults are `INPUT` 4 dB, `CEILING` −1 dBTP, `RELEASE` 120 ms, `RMS ASSIST` 65%, and `ATTACK` 2 ms.",
+      "Set `CEILING` {{5}} to the true-peak limit of your delivery. −1 dBTP is a common choice for streaming.",
+      "Raise `INPUT` until the music is as loud and dense as you want, watching LIMIT GR {{2}}.",
+      "Adjust `RELEASE` and `ATTACK` {{7}}, and balance recovery with `RMS ASSIST` {{8}}.",
+      "Add `ENHANCE` {{6}} only if you need more density.",
+      "Turn on `DITHER` {{9}} only for the final 16-bit or 24-bit export, and only if your DAW does not dither."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_limiter.jpg",
+      "caption": "TB Limiter interface.",
+      "callouts": [
+        { "n": 1, "x": 34.2, "y": 6.5 },
+        { "n": 2, "x": 21.2, "y": 26.7 },
+        { "n": 3, "x": 45.9, "y": 26.7 },
+        { "n": 4, "x": 78.1, "y": 34.2 },
+        { "n": 5, "x": 3.4, "y": 65.8 },
+        { "n": 6, "x": 26.8, "y": 65.8 },
+        { "n": 7, "x": 39.7, "y": 65.8 },
+        { "n": 8, "x": 63.2, "y": 65.8 },
+        { "n": 9, "x": 97.0, "y": 78.0 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset, the preset list, Save, Undo, and Redo."],
+        [2, "PEAK GOVERNOR", "LIMIT GR shows the gain reduction on a 0 to 12 dB scale."],
+        [3, "TRUE PEAK", "the output true-peak level, with the CEILING marker."],
+        [4, "L/R BALANCE", "the current left-right balance correction."],
+        [5, "INPUT, CEILING", "drive and the true-peak limit."],
+        [6, "ENHANCE", "micro-peak shaping before the limiter."],
+        [7, "ATTACK, RELEASE", "how gain approaches peaks and recovers."],
+        [8, "RMS ASSIST, RMS BALANCE", "program-aware recovery and left-right correction."],
+        [9, "DITHER", "Off, 16 BIT, or 24 BIT."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 22, 60],
+      "rows": [
+        ["`INPUT`", "0 to 18 dB · 4 dB", "Sets how hard the signal drives the limiter. More input means more gain reduction and density; the ceiling stays the same, so compare at matched loudness."],
+        ["`CEILING`", "−3 to 0 dBTP · −1 dBTP", "Sets the maximum true-peak output level."],
+        ["`ENHANCE`", "0 to 100% · 0%", "Adds density by softening and driving short peaks before the limiter. The upper half is intentionally aggressive and can change colour."],
+        ["`ATTACK`", "0.1 to 2 ms · 2 ms", "Sets how quickly gain moves toward a predicted peak within the fixed 2 ms lookahead. It does not change the latency."],
+        ["`RELEASE`", "20 to 500 ms · 120 ms", "Sets how quickly limiting recovers. Very short values can pump."],
+        ["`RMS ASSIST`", "0 to 100% · 65%", "Adapts recovery: faster for isolated peaks and slower for dense material. It blends with RELEASE rather than replacing it."],
+        ["`RMS BALANCE`", "0 to 100% · 0%", "Gently corrects persistent left-right level imbalance. It reacts slowly and does not correct short stereo movement."],
+        ["`DITHER`", "Off, 16 BIT, 24 BIT · Off", "Adds final TPDF dither for 16-bit or 24-bit delivery. Leave it off when the DAW will dither."]
+      ]
+    } },
+    { "h3": "Latency and dither" },
+    { "p": "TB Limiter has a fixed latency: the 2 ms lookahead plus the oversampling filters. The plug-in reports it to the host and keeps bypass latency-aligned, so the track stays in time. TB Limiter has no compressor stage, no multiband or spectral processing, no separate clipper, and no automatic loudness target." },
+    { "warn": { "text": "Dither only adds TPDF noise; the host or exporter still converts to the final word length. Use it only on the very last export, after all gain changes and sample-rate conversion, and never on float files, stems, or when the DAW already dithers." } },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows, or open the list to choose a factory or user preset. Save stores the current settings as a user preset. Undo and Redo step through recent parameter changes. All factory presets use a −1 dBTP ceiling and a 2 ms attack, with dither off." },
+    { "table": {
+      "compact": true,
+      "cols": ["Preset", "INPUT", "RELEASE", "ENHANCE", "RMS ASSIST", "RMS BALANCE"],
+      "widths": [24, 14, 16, 15, 16, 15],
+      "rows": [
+        ["Init", "4 dB", "120 ms", "0%", "65%", "0%"],
+        ["Transparent", "2 dB", "180 ms", "0%", "40%", "0%"],
+        ["Punch", "5 dB", "70 ms", "0%", "80%", "0%"],
+        ["Dense Control", "6 dB", "250 ms", "0%", "75%", "0%"],
+        ["Balance Guard", "4 dB", "150 ms", "0%", "65%", "100%"],
+        ["Maximize", "8 dB", "180 ms", "55%", "75%", "0%"],
+        ["Simple Limiting", "0 dB", "120 ms", "0%", "0%", "0%"],
+        ["Mastering", "4 dB", "160 ms", "30%", "65%", "0%"],
+        ["RMS Smooth", "3 dB", "180 ms", "0%", "100%", "50%"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Streaming master", "use": "A clean, competitive master with true-peak headroom.",
+        "settings": [["Preset", "Mastering"], ["CEILING", "−1 dBTP"], ["INPUT", "Until LIMIT GR peaks at 2 to 4 dB"]],
+        "steps": ["Compare with bypass at matched loudness.", "Check the loudest section, not just the start."] },
+      { "title": "Transparent peak control", "use": "Catch peaks with as little colour as possible.",
+        "settings": [["Preset", "Transparent"], ["INPUT", "0 to 3 dB"], ["ENHANCE", "0%"]],
+        "steps": ["Lengthen RELEASE if you hear pumping."] },
+      { "title": "Dense, loud mix", "use": "Electronic or rock material that should feel powerful.",
+        "settings": [["Preset", "Dense Control or Maximize"], ["ENHANCE", "20 to 55%"]],
+        "steps": ["Above 50%, ENHANCE becomes aggressive; listen for harshness."] },
+      { "title": "Final 16-bit export", "use": "A CD-format or other 16-bit file.",
+        "settings": [["DITHER", "16 BIT"], ["DAW dither", "Off"]],
+        "steps": ["Turn dither on only for the final export."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The master pumps.", "Lengthen RELEASE or raise RMS ASSIST, and reduce INPUT."],
+        ["Transients sound dull.", "Use less INPUT, a slightly shorter ATTACK, or less ENHANCE."],
+        ["It distorts at high ENHANCE.", "The upper half of ENHANCE is intentionally aggressive. Lower it."],
+        ["True peaks exceed the ceiling after export.", "Later gain changes or sample-rate conversion can raise peaks. Put TB Limiter last and verify the exported file."],
+        ["Noise appears in quiet parts.", "DITHER is on. Turn it off unless this is the final 16-bit or 24-bit export."],
+        ["The left-right balance shifts slowly.", "RMS BALANCE is correcting a persistent imbalance. Lower it if that is not wanted."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`INPUT`", "Input Gain", "0 to 18 dB", "4 dB"],
+        ["`CEILING`", "Ceiling", "−3 to 0 dBTP", "−1 dBTP"],
+        ["`RELEASE`", "Release", "20 to 500 ms", "120 ms"],
+        ["`RMS ASSIST`", "RMS Assist", "0 to 100%", "65%"],
+        ["`RMS BALANCE`", "RMS Balance", "0 to 100%", "0%"],
+        ["`ENHANCE`", "Enhance", "0 to 100%", "0%"],
+        ["`ATTACK`", "Attack", "0.1 to 2 ms", "2 ms"],
+        ["`DITHER`", "Dither", "Off, 16-bit, 24-bit", "Off"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.2.0 · 2026-08-02", "Applied a faster mapping across the 50–100% ENHANCE range with up to 3 dB of pre-limiter drive, and adjusted the true-peak guard at high ENHANCE settings. Parameters and saved-state compatibility are unchanged."]
+      ]
+    } }
+  ]
+}

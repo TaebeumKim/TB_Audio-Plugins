@@ -1,0 +1,55 @@
+name: Bug report
+description: Report a crash, silence, wrong sound, or installation problem.
+labels: ["bug"]
+body:
+  - type: input
+    id: plugin
+    attributes:
+      label: Plug-in and version
+      description: The version is shown in TB Hub or in your DAW's plug-in manager.
+      placeholder: TB EQ 2.0.2
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform and format
+      options:
+        - Windows x64 / VST3
+        - macOS Apple Silicon / VST3
+        - macOS Apple Silicon / AU
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: DAW or host and version
+      placeholder: Cubase 14.0.20, Logic Pro 11.1, Ableton Live 12.1, REAPER 7.2
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: How was the plug-in installed?
+      options:
+        - TB Hub
+        - Installer from the Releases page
+        - Manual copy
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the steps to reproduce it and what you expected instead.
+      placeholder: |
+        1. Insert the plug-in on a stereo track
+        2. Turn MIX to 100%
+        3. Output becomes silent
+    validations:
+      required: true
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots, audio, or crash logs
+      description: Drag files here if they help explain the problem.
