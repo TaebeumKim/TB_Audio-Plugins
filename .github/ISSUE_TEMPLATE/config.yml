@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: User manuals in 20 languages
+    url: https://github.com/TaebeumKim/TB_Audio-Plugins/blob/main/Documents/README.md
+    about: Check the manual for your plug-in before reporting a problem.
+  - name: Support development on Ko-fi
+    url: https://ko-fi.com/teamimpulseimpact
+    about: Buy the developer a coffee to keep these plug-ins free.

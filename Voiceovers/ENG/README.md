@@ -1,6 +1,6 @@
 # English Plugin Description Voiceovers
 
-These 28 voiceovers cover 26 of the 29 products in the current public GitHub `catalog.json`, plus two additional local products: TB Audio Player and TB Board. Scripts use each product's `PRODUCT_BRIEF.md` when available, with local manuals, release notes, and implemented controls used for catalog products that do not have a dedicated brief.
+These 28 voiceovers cover 27 of the 35 products in the current public GitHub `catalog.json`, plus TB Board, which is not in the catalog. Scripts use each product's `PRODUCT_BRIEF.md` when available, with local manuals, release notes, and implemented controls used for catalog products that do not have a dedicated brief.
 
 - Direction: professional, energetic, selectively emphatic
 - Voice: `en-US-GuyNeural`
@@ -8,7 +8,7 @@ These 28 voiceovers cover 26 of the 29 products in the current public GitHub `ca
 - Format: mono MP3, 24 kHz, 48 kbps
 - Required duration: 25–50 seconds
 - Verified duration range: 32.81–43.27 seconds
-- Public catalog coverage: 26 of 29 products
+- Public catalog coverage: 27 of 35 products
 - Source scripts: `voiceovers.json`
 - Rendered audio: `audio/`
 

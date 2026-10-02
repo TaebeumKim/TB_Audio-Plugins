@@ -1,0 +1,19 @@
+name: Feature or plug-in request
+description: Suggest an improvement to a TB plug-in or an idea for a new one.
+labels: ["enhancement"]
+body:
+  - type: input
+    id: plugin
+    attributes:
+      label: Plug-in
+      description: Name an existing plug-in, or write "New plug-in".
+      placeholder: TB Delay
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like it to do?
+      description: Describe the sound or workflow you are trying to achieve.
+    validations:
+      required: true
