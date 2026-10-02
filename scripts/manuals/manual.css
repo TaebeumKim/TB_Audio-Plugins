@@ -124,6 +124,7 @@ tr { break-inside: avoid; }
 td.first { font-weight: 600; }
 tbody tr:nth-child(even):not(.group) td { background: #f8fafb; }
 tr.group td { background: var(--accent-soft); color: var(--accent-ink); font-weight: 800; font-size: 7.8pt; letter-spacing: 0.06em; text-transform: uppercase; padding: 1.4mm 2.4mm; }
+tr.group, tbody tr:first-child { break-after: avoid; }
 table.compact { font-size: 8.2pt; }
 table.compact td { padding: 1.3mm 2.2mm; }
 

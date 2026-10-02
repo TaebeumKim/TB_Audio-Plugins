@@ -1,0 +1,257 @@
+{
+  "file": "TB_ParallelReverb",
+  "version": "3.1.0",
+  "date": "2026-10-02",
+  "subtitle": "Three-Engine Parallel Reverb",
+  "tagline": "Three reverb engines, Glue, Bright, and Space, run side by side. Each has its own send, character, filters, and solo, and all three meet at one WET / DRY control.",
+  "facts": ["3 parallel engines", "Room, Chamber, Plate, Spring, Hall, IR", "99 factory presets", "Per-engine solo"],
+  "ui": "tb_parallel_reverb.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "A single reverb algorithm usually forces a compromise between closeness, colour, and long depth. TB Parallel Reverb runs three independent reverb engines in parallel, so each spatial role can be tuned and auditioned on its own before the final blend." },
+    { "p": "Glue adds short room or chamber body. Bright adds plate or spring character. Space adds a long hall or a loaded impulse response. Each engine has its own send, pre-delay, width, decay, filters, and colour, and you can solo any engine while you tune it. Because the engines are independent, one can change without forcing the others to follow the same decay or colour." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Three parallel engines: Glue (Room, Chamber), Bright (Plate, Spring), and Space (Hall, IR)",
+      "Per-engine SEND, PRE-DELAY, WIDE, DECAY, DIFFUSION, LOW CUT, HIGH CUT, and COLOR",
+      "Engine-specific controls: SIZE, DAMPING, EARLY / LATE, MOD RATE, MOD DEPTH, DISTANCE or TENSION, HF DAMPING, and SHIMMER",
+      "Four hall types and impulse response loading (WAV, AIFF, FLAC) in the Space engine",
+      "ON / OFF and SOLO footswitches on each pedal, with an ENGINE STATE overview",
+      "99 factory presets in ten banks, plus user presets",
+      "Resizable window that opens at 600 × 520"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input split", "Glue, Bright, and Space in parallel (each with its SEND)", "Sum of the three wet returns", "WET / DRY with the dry signal", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Parallel Reverb 3.1.0 for Windows (VST3). The current macOS build is version 1.0.4 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Parallel Reverb on an aux (send) track and leave `WET / DRY` {{12}} at its default of 100%, which outputs only the reverb. On an insert, lower `WET / DRY` to blend the reverb with the dry sound.",
+      "Choose a factory preset from the preset bar {{1}} that matches your source, or start from the defaults.",
+      "Press `SOLO` {{11}} on one pedal to hear that engine alone. Set its `SEND`, `DECAY`, and filters {{4}} {{6}}.",
+      "Repeat for the other engines. Switch off any engine you do not need with its `ON / OFF` footswitch {{10}}.",
+      "Turn solo off and balance the three `SEND` levels in the mix."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_parallel_reverb.jpg",
+      "caption": "Captured from an earlier 3.x build. Version 3.1.0 uses the latest pedal design with the same controls and labels, opens at 600 × 520, and scales the pedals and controls when you resize the window.",
+      "callouts": [
+        { "n": 1, "x": 59.9, "y": 4.8 },
+        { "n": 2, "x": 41.6, "y": 11.5 },
+        { "n": 3, "x": 8.3, "y": 21.9 },
+        { "n": 4, "x": 7.0, "y": 29.6 },
+        { "n": 5, "x": 7.0, "y": 40.8 },
+        { "n": 6, "x": 7.0, "y": 49.2 },
+        { "n": 7, "x": 62.4, "y": 37.4 },
+        { "n": 8, "x": 93.0, "y": 40.8 },
+        { "n": 9, "x": 69.1, "y": 57.0 },
+        { "n": 10, "x": 10.4, "y": 72.3 },
+        { "n": 11, "x": 29.5, "y": 72.3 },
+        { "n": 12, "x": 37.0, "y": 92.5 },
+        { "n": 13, "x": 54.9, "y": 90.0 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next factory preset, the PRESET list, Save, Undo, and Redo."],
+        [2, "INPUT SPLIT", "the same input feeds all three engines."],
+        [3, "Mode switch", "ROOM / CHAMBER, PLATE / SPRING, or HALL / IR."],
+        [4, "SEND, PRE-DELAY, WIDE, DECAY", "level, start time, width, and length of the engine."],
+        [5, "Glue character", "SIZE, DIFFUSION, DAMPING, and EARLY / LATE."],
+        [6, "LOW CUT, COLOR, HIGH CUT", "filtering and tone of the engine's return."],
+        [7, "Bright character", "DIFFUSION, MOD RATE, MOD DEPTH, and DISTANCE (TENSION in Spring mode)."],
+        [8, "Space character", "DIFFUSION, HF DAMPING, and SHIMMER."],
+        [9, "HALL TYPE", "the hall model. BROWSE IR... loads an impulse response for IR mode."],
+        [10, "ON / OFF", "switches the engine on or off."],
+        [11, "SOLO", "plays this engine alone."],
+        [12, "WET / DRY", "final blend of the dry signal and the three returns."],
+        [13, "ENGINE STATE", "shows each engine's state, such as ENGAGED, SOLO, or MUTED."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "h3": "Controls on every pedal" },
+    { "table": {
+      "cols": ["Control", "What it does"],
+      "widths": [22, 78],
+      "rows": [
+        ["Mode switch", "Chooses the engine's reverb type: Room or Chamber (Glue), Plate or Spring (Bright), Hall or IR (Space)."],
+        ["`SEND`", "How much of the input enters the engine, which sets the level of its return."],
+        ["`PRE-DELAY`", "Time before the reverb starts. Longer pre-delay separates the reverb from the source."],
+        ["`WIDE`", "Stereo width of this reverb layer, in degrees. Check wide settings in mono."],
+        ["`DECAY`", "How long the reverb lasts. In Space IR mode the label is `LENGTH`."],
+        ["`DIFFUSION`", "Turns separate echoes into a smoother wash."],
+        ["`LOW CUT`, `HIGH CUT`", "High-pass and low-pass filters on the engine's return. Remove low-frequency wash and harsh highs here."],
+        ["`COLOR`", "Moves the layer from darker and softer toward brighter and more present."],
+        ["`ON / OFF`", "Switches the engine on or off. All three engines are on by default."],
+        ["`SOLO`", "Plays one engine's return alone, without the dry signal, so you can tune it. Only one engine can be soloed at a time."]
+      ]
+    } },
+    { "h3": "Ranges and defaults" },
+    { "table": {
+      "compact": true,
+      "cols": ["Control", "Glue", "Bright", "Space"],
+      "widths": [19, 27, 27, 27],
+      "rows": [
+        ["Mode", "Room, Chamber · Room", "Plate, Spring · Plate", "Hall, IR · Hall"],
+        ["`SEND`", "−60 to +6 dB · −12 dB", "−60 to +6 dB · −15 dB", "−60 to +6 dB · −22 dB"],
+        ["`PRE-DELAY`", "0 to 60 ms · 8 ms", "0 to 100 ms · 18 ms", "0 to 200 ms · 60 ms"],
+        ["`WIDE`", "0 to 180° · 150°", "0 to 270° · 210°", "0 to 360° · 240°"],
+        ["`DECAY`", "0.5 to 1 s · 0.75 s", "1.5 to 2.5 s · 2 s", "0.25 to 10 s · 3.2 s"],
+        ["`DIFFUSION`", "0 to 100% · 65%", "0 to 100% · 70%", "0 to 100% · 72%"],
+        ["`LOW CUT`", "20 to 1500 Hz · 200 Hz", "20 to 1800 Hz · 450 Hz", "20 to 1500 Hz · 300 Hz"],
+        ["`HIGH CUT`", "1 to 20 kHz · 9 kHz", "1.2 to 20 kHz · 13.5 kHz", "1 to 20 kHz · 7.5 kHz"],
+        ["`COLOR`", "0 to 100% · 30%", "0 to 100% · 45%", "0 to 100% · 25%"]
+      ]
+    } },
+    { "h3": "Engine-specific controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [22, 22, 56],
+      "rows": [
+        { "group": "Glue: short ambience" },
+        ["`SIZE`", "0 to 100% · 50%", "Apparent room size."],
+        ["`DAMPING`", "0 to 100% · 60%", "Darkens the layer as it decays."],
+        ["`EARLY / LATE`", "0 to 100% · 45%", "Balances the first reflections against the later tail."],
+        { "group": "Bright: plate and spring" },
+        ["`MOD RATE`", "0.02 to 5 Hz · 0.35 Hz", "Speed of the gentle pitch movement in the tail."],
+        ["`MOD DEPTH`", "0 to 20 ms · 1.5 ms", "Amount of that movement."],
+        ["`DISTANCE` / `TENSION`", "0 to 100% · 35%", "Plate distance in Plate mode, spring tension in Spring mode."],
+        { "group": "Space: hall and convolution" },
+        ["`HALL TYPE`", "Church, Auditorium, Concert Hall, Studio Hall · Church", "The basic hall character in Hall mode."],
+        ["`HF DAMPING`", "0 to 100% · 45%", "Softens high frequencies as the reverb fades."],
+        ["`SHIMMER`", "0 to 100% · 15%", "Adds a bright rising tone to the long tail."],
+        ["`BROWSE IR...`", "WAV, AIF, AIFF, FLAC", "Loads an impulse response file for IR mode. NO IR SELECTED shows until a file is loaded."]
+      ]
+    } },
+    { "h3": "Master" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [22, 22, 56],
+      "rows": [
+        ["`WET / DRY`", "0 to 100% · 100%", "Blends the original sound with all enabled reverb returns. 100% outputs only the reverb, for aux use."],
+        ["`SOLO` (Reverb Solo)", "Off, Glue, Bright, Space · Off", "Which engine, if any, is soloed."]
+      ]
+    } },
+    { "tip": { "text": "Send Gain sets each engine's own return level; WET / DRY sets the overall relationship between the source and the summed reverb. Balance the sends first, then set WET / DRY." } },
+
+    { "h2": "Presets" },
+    { "p": "Step through the factory presets with the arrows in the preset bar {{1}}, or open the PRESET list. LOAD USER PRESET... opens a .tbprpreset file, and Save stores the current settings as one. The name shows CUSTOM after you change a preset. Undo and Redo step through recent changes." },
+    { "table": {
+      "cols": ["Bank", "Presets"],
+      "widths": [22, 78],
+      "rows": [
+        ["Essentials", "Three Engine Balance, Natural Space, Clean Bus Wash, Dark Bus Glue, Wide Open"],
+        ["Vocals", "Vocal Plate Halo, Intimate Vocal Room, Pop Vocal Sheen, Ballad Bloom, Lead Vocal Forward, Breathy Air, Dark Vocal Chamber, Wide Vocal Double, Tight Rap Slap, Gospel Hall, Whisper Cloud, Retro Vocal Spring"],
+        ["Drums", "Drum Room Snap, Tight Booth, Ambient Kit, Snare Plate, Gated Burst Room, Big Rock Room, Jazz Brush Room, Lo-Fi Drum Box, Trap Slap, Percussion Shine, Kick Weight Room, Tom Hall"],
+        ["Guitar", "Clean Amp Spring, Surf Splash, Crunch Room, Lead Guitar Hall, Acoustic Air, Shoegaze Wash, Slide Chamber, Funk Tight Room, Metal Rhythm Plate, Dream Swell"],
+        ["Keys", "Grand Piano Stage, Upright Room, Warm Rhodes, Wurli Spring, Church Organ, Tight Clav, Felt Piano Intimate, Cinematic Piano, Toy Piano Box, Electric Bloom"],
+        ["Synth & Pad", "Wide Pad Bed, Pluck Bounce, Arp Shimmer, Saw Stack Space, Glass Bell, Warm Analog Room, Ethereal Lead, Drone Bed, Retro Synth Chamber, Hyper Wide Stack, Soft Synth Keys, Motion Pad"],
+        ["Bass & Low End", "Subtle Bass Room, Upright Wood, Synth Bass Depth, Bass Amp Chamber, Clean Low Lift, Dub Cavern"],
+        ["Strings & Orchestra", "Concert Strings, Solo Violin Hall, Warm Cello Room, Full Score Hall, Chamber Quartet, Epic Trailer Space, Harp Air, Brass Stage"],
+        ["Ambient & Shimmer", "Shimmer Cloud, Octave Bloom, Infinite Drift, Glacier, Cathedral Light, Soft Focus, Deep Space, Slow Swell, Frozen Air, Spring Tape Dream, Night Sky, Underwater, Choir Of Ghosts, Endless Hall"],
+        ["Special FX", "Metal Tank, Broken Spring, Warped Tape Space, Tiny Speaker Box, Backwards Feel, Alien Transmission, Bit Cavern, Pitch Riser, Sonar Ping, Haunted Room"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Vocal depth without mud", "use": "A lead vocal that stays forward with space behind it.",
+        "settings": [["Preset", "Lead Vocal Forward or Vocal Plate Halo"], ["Bright PRE-DELAY", "20 to 40 ms"], ["LOW CUT", "Raise on every engine"]],
+        "steps": ["Solo each engine and cut the lows until the return stops clouding the voice.", "Keep Space low in the send so the tail sits behind the vocal."] },
+      { "title": "Drum room plus plate", "use": "Body from a room and snap from a plate.",
+        "settings": [["Glue", "Room, short DECAY"], ["Bright", "Plate, SEND lower"], ["Space", "OFF"]],
+        "steps": ["Switch Space off with ON / OFF.", "Raise Glue SEND until the kit sounds like one room."] },
+      { "title": "Ambient wash", "use": "Long, soft tails for pads and atmospheres.",
+        "settings": [["Preset", "Shimmer Cloud or Endless Hall"], ["Space DECAY", "6 to 10 s"], ["SHIMMER", "Taste"]],
+        "steps": ["Lower HIGH CUT on Space if the tail gets bright and busy."] },
+      { "title": "Real space with an IR", "use": "Place a source in a recorded room or hall.",
+        "settings": [["Space mode", "IR"], ["Impulse", "BROWSE IR..."], ["Glue / Bright", "Low or OFF"]],
+        "steps": ["Load a WAV, AIFF, or FLAC impulse response.", "Shape it with LENGTH, LOW CUT, and HIGH CUT."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["I only hear reverb.", "WET / DRY is at 100%, the default for aux use. Lower it on an insert."],
+        ["I cannot hear the dry sound or the other engines.", "An engine is soloed. Turn SOLO off before you export."],
+        ["The reverb is muddy.", "Raise LOW CUT on each engine, starting with Space."],
+        ["The reverb is harsh or splashy.", "Lower HIGH CUT or COLOR, or raise DAMPING (Glue) or HF DAMPING (Space)."],
+        ["IR mode makes no sound.", "No impulse response is loaded (NO IR SELECTED). Load one with BROWSE IR..."],
+        ["The mix collapses in mono.", "Lower WIDE on the engines and check again in mono."],
+        ["CPU use is high.", "Switch off engines you are not using."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 30, 30, 18],
+      "rows": [
+        { "group": "Glue" },
+        ["Mode switch", "Glue Mode", "Room, Chamber", "Room"],
+        ["`ON / OFF`", "Glue Enabled", "Off, On", "On"],
+        ["`SEND`", "Glue Send Gain", "−60 to +6 dB", "−12 dB"],
+        ["`PRE-DELAY`", "Glue Pre-Delay", "0 to 60 ms", "8 ms"],
+        ["`WIDE`", "Glue Wide", "0 to 180°", "150°"],
+        ["`DECAY`", "Glue Decay", "0.5 to 1 s", "0.75 s"],
+        ["`SIZE`", "Glue Size", "0 to 100%", "50%"],
+        ["`DIFFUSION`", "Glue Diffusion", "0 to 100%", "65%"],
+        ["`LOW CUT`", "Glue High Pass", "20 to 1500 Hz", "200 Hz"],
+        ["`HIGH CUT`", "Glue Low Pass", "1 to 20 kHz", "9 kHz"],
+        ["`EARLY / LATE`", "Glue Early Late Mix", "0 to 100%", "45%"],
+        ["`DAMPING`", "Glue Damping", "0 to 100%", "60%"],
+        ["`COLOR`", "Glue Color", "0 to 100%", "30%"],
+        { "group": "Bright" },
+        ["Mode switch", "Bright Mode", "Plate, Spring", "Plate"],
+        ["`ON / OFF`", "Bright Enabled", "Off, On", "On"],
+        ["`SEND`", "Bright Send Gain", "−60 to +6 dB", "−15 dB"],
+        ["`PRE-DELAY`", "Bright Pre-Delay", "0 to 100 ms", "18 ms"],
+        ["`WIDE`", "Bright Wide", "0 to 270°", "210°"],
+        ["`DECAY`", "Bright Decay", "1.5 to 2.5 s", "2 s"],
+        ["`DIFFUSION`", "Bright Diffusion", "0 to 100%", "70%"],
+        ["`MOD RATE`", "Bright Modulation Rate", "0.02 to 5 Hz", "0.35 Hz"],
+        ["`MOD DEPTH`", "Bright Modulation Depth", "0 to 20 ms", "1.5 ms"],
+        ["`DISTANCE` / `TENSION`", "Bright Plate Distance Spring Tension", "0 to 100%", "35%"],
+        ["`LOW CUT`", "Bright High Pass", "20 to 1800 Hz", "450 Hz"],
+        ["`HIGH CUT`", "Bright Low Pass", "1.2 to 20 kHz", "13.5 kHz"],
+        ["`COLOR`", "Bright Color", "0 to 100%", "45%"],
+        { "group": "Space" },
+        ["Mode switch", "Space Mode", "Hall, IR", "Hall"],
+        ["`ON / OFF`", "Space Enabled", "Off, On", "On"],
+        ["`SEND`", "Space Send Gain", "−60 to +6 dB", "−22 dB"],
+        ["`PRE-DELAY`", "Space Pre-Delay", "0 to 200 ms", "60 ms"],
+        ["`WIDE`", "Space Wide", "0 to 360°", "240°"],
+        ["`DECAY` / `LENGTH`", "Space Decay / Length", "0.25 to 10 s", "3.2 s"],
+        ["`HALL TYPE`", "Space Hall Type", "Church, Auditorium, Concert Hall, Studio Hall", "Church"],
+        ["`DIFFUSION`", "Space Diffusion", "0 to 100%", "72%"],
+        ["`HF DAMPING`", "Space HF Damping", "0 to 100%", "45%"],
+        ["`LOW CUT`", "Space High Pass", "20 to 1500 Hz", "300 Hz"],
+        ["`HIGH CUT`", "Space Low Pass", "1 to 20 kHz", "7.5 kHz"],
+        ["`COLOR`", "Space Color", "0 to 100%", "25%"],
+        ["`SHIMMER`", "Space Shimmer", "0 to 100%", "15%"],
+        { "group": "Master" },
+        ["`WET / DRY`", "Wet/Dry Mix", "0 to 100%", "100%"],
+        ["`SOLO`", "Reverb Solo", "Off, Glue, Bright, Space", "Off"]
+      ]
+    } },
+    { "p": "The path of the loaded impulse response is stored with the plug-in state rather than as a host parameter. If you move the file, load it again with BROWSE IR..." },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["3.1.0 · 2026-09-30", "Brought the latest Glue, Bright, and Space pedal design and the current parallel reverb engine to Windows VST3. The default window is now 600 × 520, and the engine pedals and controls scale when you resize it."],
+        ["3.0.2 · 2026-08-21", "Windows maintenance release."],
+        ["3.0.1 · 2026-08-03", "Redesigned the Glue, Bright, and Space pedals in green, orange, and crimson. Routing, engine bypass and solo, factory presets, parameter IDs, and sound were unchanged."]
+      ]
+    } }
+  ]
+}
