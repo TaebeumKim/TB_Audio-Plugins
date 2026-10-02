@@ -1,0 +1,240 @@
+{
+  "file": "TB_GeometryReverb",
+  "version": "1.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Ray-Traced Geometry Reverb",
+  "tagline": "Builds a reverb from a 3D shape: rays travel through a closed mesh from an emitter to a listener, and its scale, materials, radiation, and positions shape the space you hear.",
+  "facts": ["13 built-in models + OBJ/FBX import", "Surface materials per face", "Sphere or cone radiation", "30 factory presets"],
+  "ui": "tb_geometry_reverb.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Geometry Reverb turns a 3D shape into a room. It traces sound rays through a closed mesh from an emitter (E) to a listener (L); the paths that reach the listener, the surface materials, the scale of the mesh, and the air temperature form an acoustic snapshot of the space, and an eight-line feedback delay network adds the dense tail." },
+    { "p": "Choose a built-in model or import your own OBJ or FBX mesh, assign materials to its surfaces, and place the emitter and listener inside it. `SCALE` sets the size, `TEMP / HF` the air, `RADIATION` how the emitter radiates, and `MIX` the equal-power dry/wet balance. The view shows the mesh with the ray paths that contribute to the sound." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Ray-traced acoustic snapshot with 64 direction bins and three ray-quality levels",
+      "13 built-in models, from a cube to a trefoil knot and an auditorium, plus OBJ and FBX import",
+      "Closed-mesh validation with live status and an escaped-ray readout",
+      "Surface materials with absorption and scattering, per face or for all surfaces",
+      "Sphere or cone radiation with a 10 to 180° cone",
+      "Emitter and listener position and orientation in 3D",
+      "SCALE from 0.25 to 20×, air temperature from −271 to 100 °C",
+      "Calculated pre-delay, triangle count, and mid-frequency RT60",
+      "30 factory presets, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Emitter (RADIATION, ROTATE)", "Rays through the mesh (SCALE, SURFACE, TEMP / HF)", "Listener (LOCATE, ROTATE)", "Snapshot and eight-line tail", "Equal-power MIX"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Geometry Reverb 1.0.0 for Windows (VST3). There is no macOS build at the time of writing."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Geometry Reverb on a track or an effects return. The default is a 2 m cube at SCALE 1.00×, with the emitter at X −0.20 and the listener at X 0.20, TEMP 20 °C, and MIX 35%.",
+      "Choose a starting point from the preset bar {{1}}, or pick a model in GEOMETRY {{5}}.",
+      "Set the size with `SCALE` {{9}} and the balance with `MIX` {{12}}.",
+      "Choose a material in SURFACE {{7}} and press APPLY ALL.",
+      "Switch between EMITTER and LISTENER {{13}} and place them with `LOCATE` {{14}} and `ROTATE` {{15}}. Wait until the status line {{4}} reads READY."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_geometry_reverb.jpg",
+      "caption": "TB Geometry Reverb 1.0 interface with the default cube.",
+      "callouts": [
+        { "n": 1, "x": 29.0, "y": 5.0 },
+        { "n": 2, "x": 45.0, "y": 17.0 },
+        { "n": 3, "x": 23.5, "y": 16.5 },
+        { "n": 4, "x": 26.0, "y": 77.0 },
+        { "n": 5, "x": 82.1, "y": 14.6 },
+        { "n": 6, "x": 82.4, "y": 42.4 },
+        { "n": 7, "x": 81.0, "y": 55.7 },
+        { "n": 8, "x": 90.5, "y": 72.2 },
+        { "n": 9, "x": 14.0, "y": 80.7 },
+        { "n": 10, "x": 29.5, "y": 80.7 },
+        { "n": 11, "x": 42.3, "y": 80.7 },
+        { "n": 12, "x": 55.0, "y": 80.7 },
+        { "n": 13, "x": 64.3, "y": 80.4 },
+        { "n": 14, "x": 57.0, "y": 87.6 },
+        { "n": 15, "x": 57.0, "y": 95.4 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset, the preset name and list, SAVE, Undo, and Redo."],
+        [2, "3D view", "the mesh, the emitter (E), the listener (L), and the contributing ray paths in gold."],
+        [3, "Mesh and ray info", "closed-manifold check, direction bins, and ray count."],
+        [4, "Status line", "READY, SIMULATING, BLOCKED, or an error, with the ray count and the share of escaped rays."],
+        [5, "GEOMETRY", "IMPORT MESH, the built-in models, mesh information, PRE-DELAY, TRIANGLES, and RT60 MID."],
+        [6, "RADIATION", "SPHERE or CONE, ray quality, and CONE ANGLE."],
+        [7, "SURFACE", "material list, coefficients, APPLY FACE, and APPLY ALL."],
+        [8, "BYPASS", "bypasses the reverb."],
+        [9, "SCALE", "size of the mesh."],
+        [10, "TEMP / HF", "air temperature."],
+        [11, "STRESS", "additional effect amount."],
+        [12, "MIX", "equal-power dry/wet."],
+        [13, "EMITTER / LISTENER", "switches the six knobs below between the emitter and the listener."],
+        [14, "LOCATE", "X, Y, and Z position of the selected point."],
+        [15, "ROTATE", "orientation of the selected point."]
+      ]
+    } },
+    { "p": "In the view, the selected point shows coloured X, Y, and Z handles. The scale bar under the model shows its size, and the line under the side panel shows the speed of sound (343 m/s at 20 °C)." },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`SCALE`", "0.25 to 20× · 1.00×", "Scales the mesh coordinates before path timing. Larger values make a bigger space with longer paths."],
+        ["`TEMP / HF`", "−271 to 100 °C · 20 °C", "Air temperature. It sets the speed of sound and changes the high-frequency (HF) damping."],
+        ["`STRESS`", "0 to 100% · 0%", "An additional effect amount that pushes the space harder; the DRIVE presets use it. Raise it gradually."],
+        ["`MIX`", "0 to 100% · 35%", "Equal-power dry/wet mix."],
+        ["`RADIATION`", "SPHERE, CONE · SPHERE", "SPHERE emits through all 64 direction bins; CONE focuses them into a cone."],
+        ["`CONE ANGLE`", "10 to 180° · 90°", "Cone apex angle. Available only when RADIATION is CONE."],
+        ["Ray quality", "DRAFT, NORM, HIGH · NORM", "How many rays are traced (4096 at NORM in the picture). Higher quality is more detailed and takes longer to calculate."],
+        ["`LOCATE` X, Y, Z", "−0.95 to 0.95 · emitter −0.20, 0, 0; listener 0.20, 0, 0", "Position of the emitter or listener, relative to the mesh. Both must stay inside the closed mesh."],
+        ["`ROTATE`", "azimuth −180 to 180°, elevation −89 to 89°, roll −180 to 180° · 0°", "Orientation of the emitter or listener. Listener angles are measured from the direction of the emitter, so 0° faces the source. Roll does nothing for the emitter, because a cone is rotationally symmetric."],
+        ["`BYPASS`", "Off, On · Off", "Bypasses the reverb."]
+      ]
+    } },
+    { "p": "The following host parameters are stored in presets and the project but do not appear on the panel shown above." },
+    { "table": {
+      "cols": ["Host parameter", "Range · default", "What it does"],
+      "widths": [22, 24, 54],
+      "rows": [
+        ["Rotation", "−180 to 180° · 0°", "Rotates the mesh."],
+        ["Spin X, Spin Y, Spin Z", "−6 to 6 rpm · 0", "Rotation speed of the mesh around each axis."],
+        ["Output", "−18 to +12 dB · 0 dB", "Output trim."],
+        ["Super Grain", "0 to 100% · 0%", "An additional grain effect amount, used in several factory presets."]
+      ]
+    } },
+
+    { "h2": "Geometry and materials" },
+    { "h3": "Models and import" },
+    { "ul": [
+      "Built-in models: Tetrahedron, Cube, Sphere, Torus, Twisted Torus, Trefoil Knot, Superellipsoid, Harmonic Shell, Spiked Shell, Hyperboloid, Corrugated Drum, Capsule, and Auditorium.",
+      "IMPORT MESH loads a Wavefront OBJ or FBX file in the background. Files must be 1 byte to 64 MiB, with up to 250,000 vertices and 500,000 triangles.",
+      "Only a closed manifold mesh can produce a new acoustic snapshot. Open or non-manifold meshes are shown but not simulated, and self-intersections are not tested.",
+      "The emitter and the listener must both stay inside the rotated closed mesh; otherwise the status line shows BLOCKED.",
+      "PRE-DELAY, TRIANGLES, and RT60 MID are calculated from the current snapshot."
+    ] },
+    { "h3": "Materials" },
+    { "ul": [
+      "Factory materials include Concrete, Concrete Block (Painted), Wood, Glass, Metal, and Curtain.",
+      "The readout under the material shows A (absorption at low, mid, and high frequencies), R (reflection), and S (scattering).",
+      "APPLY FACE assigns the material to the selected face; APPLY ALL assigns it to every surface. A mesh can use up to 256 material snapshots.",
+      "The material menu also offers IMPORT JSON, LIBRARY, OPEN USER FOLDER, and RESCAN. User materials are .tbmaterial.json files with absorption and scattering coefficients from 0 to 1; up to 255 user material files are scanned."
+    ] },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows, or open the list to choose a factory or user preset. SAVE stores the current settings, including the mesh and its materials, as a .tbgeometry file. Undo and Redo step through recent changes. In the table, TEMP is the air temperature and Quality the ray quality." },
+    { "table": {
+      "compact": true,
+      "cols": ["Preset", "Model", "SCALE", "TEMP", "Quality", "MIX", "Notes"],
+      "widths": [19, 17, 9, 11, 10, 8, 26],
+      "rows": [
+        {"group": "START"},
+        ["Cube Studio", "Cube", "1×", "10 °C", "NORM", "35%", "—"],
+        ["Tetra Chamber", "Tetrahedron", "1.5×", "0 °C", "NORM", "40%", "—"],
+        ["Sphere Studio", "Sphere", "2×", "25 °C", "NORM", "42%", "—"],
+        {"group": "SPACE"},
+        ["Close Chamber", "Cube", "0.45×", "35 °C", "NORM", "30%", "—"],
+        ["Concrete Hall", "Cube", "8×", "−60 °C", "HIGH", "38%", "—"],
+        ["Warm Room", "Cube", "3×", "55 °C", "NORM", "34%", "—"],
+        ["Large Vault", "Sphere", "4×", "−120 °C", "HIGH", "48%", "—"],
+        {"group": "BEAM"},
+        ["Focused Cone", "Cube", "3.5×", "15 °C", "HIGH", "46%", "CONE 35°"],
+        ["Wide Cone", "Tetrahedron", "4×", "5 °C", "NORM", "45%", "CONE 125°"],
+        {"group": "MATH"},
+        ["Torus Ring", "Torus", "3×", "12 °C", "NORM", "44%", "—"],
+        ["Twisted Ring", "Twisted Torus", "3×", "30 °C", "HIGH", "44%", "—"],
+        ["Trefoil Knot", "Trefoil Knot", "2.5×", "−40 °C", "HIGH", "50%", "—"],
+        ["Squircle Room", "Superellipsoid", "6×", "8 °C", "NORM", "40%", "—"],
+        ["Harmonic Shell", "Harmonic Shell", "5×", "−20 °C", "HIGH", "45%", "—"],
+        ["Spiked Diffuser", "Spiked Shell", "4×", "25 °C", "HIGH", "46%", "—"],
+        ["Hyperboloid Waist", "Hyperboloid", "4.5×", "0 °C", "NORM", "40%", "—"],
+        ["Corrugated Drum", "Corrugated Drum", "3.5×", "40 °C", "HIGH", "42%", "—"],
+        ["Capsule Corridor", "Capsule", "4×", "20 °C", "NORM", "38%", "—"],
+        {"group": "HALL"},
+        ["Auditorium", "Auditorium", "1×", "−80 °C", "HIGH", "34%", "—"],
+        ["Auditorium Rear", "Auditorium", "1×", "−40 °C", "HIGH", "40%", "Super Grain 20%, Listener azimuth 155°"],
+        {"group": "COMB"},
+        ["Sphere Focus", "Sphere", "3×", "0 °C", "HIGH", "50%", "—"],
+        ["Golden Ratio", "Cube", "4×", "10 °C", "HIGH", "45%", "—"],
+        ["Axial Stack", "Cube", "3×", "25 °C", "NORM", "46%", "—"],
+        ["Corner Pair", "Cube", "5×", "−30 °C", "HIGH", "44%", "—"],
+        ["Squircle Null", "Superellipsoid", "4×", "5 °C", "HIGH", "44%", "—"],
+        ["Drum Ripple", "Corrugated Drum", "3.5×", "20 °C", "HIGH", "45%", "—"],
+        {"group": "DRIVE"},
+        ["Pushed Room", "Cube", "3×", "30 °C", "NORM", "48%", "STRESS 72%"],
+        ["Knot Grain", "Trefoil Knot", "2.5×", "−60 °C", "HIGH", "52%", "STRESS 35%, Super Grain 85%"],
+        ["Turned Away", "Harmonic Shell", "5×", "15 °C", "HIGH", "46%", "Super Grain 30%, Listener azimuth 95°, elevation 20°"],
+        ["Deep Freeze", "Hyperboloid", "6×", "−265 °C", "HIGH", "50%", "CONE 60°, STRESS 20%, Super Grain 45%"]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Small studio", "use": "A short, natural room for vocals and instruments.",
+        "settings": [["Preset", "Cube Studio"], ["MIX", "25 to 40%"]],
+        "steps": ["Raise SCALE slightly if the room feels too tight."] },
+      { "title": "Concrete hall", "use": "A large, hard space for drums or cinematic hits.",
+        "settings": [["Preset", "Concrete Hall"], ["SCALE", "6 to 10×"]],
+        "steps": ["Use an absorbent material such as Curtain if the tail gets too bright."] },
+      { "title": "Directed source", "use": "A beam of sound aimed into the space.",
+        "settings": [["Preset", "Focused Cone"], ["CONE ANGLE", "30 to 60°"]],
+        "steps": ["Turn the emitter with ROTATE to aim the beam."] },
+      { "title": "Abstract space", "use": "Unusual resonances from mathematical shapes.",
+        "settings": [["Preset", "Trefoil Knot or Spiked Diffuser"], ["Quality", "HIGH"]],
+        "steps": ["Use DRAFT while editing and HIGH for the final sound."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The status line shows BLOCKED.", "The emitter or listener is outside the closed mesh. Move LOCATE toward the centre, or check the mesh rotation."],
+        ["An imported mesh does not sound.", "It is not a closed manifold, is too large, or is not an OBJ or FBX file. Check the status line and the topology readout."],
+        ["The tail is too long.", "Lower SCALE, choose a more absorbent material, or lower MIX."],
+        ["The tail is too bright or dull.", "Change the surface material or TEMP / HF."],
+        ["Updates take a long time.", "Use DRAFT ray quality while editing."],
+        ["Nothing changes.", "MIX is at 0% or BYPASS is on."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 24, 34, 20],
+      "rows": [
+        ["`SCALE`", "Scale", "0.25 to 20×", "1.00×"],
+        ["`RADIATION`", "Radiation", "Sphere, Cone", "Sphere"],
+        ["`CONE ANGLE`", "Cone Angle", "10 to 180°", "90°"],
+        ["—", "Rotation", "−180 to 180°", "0°"],
+        ["—", "Spin Y", "−6 to 6 rpm", "0"],
+        ["`TEMP / HF`", "Temperature", "−271 to 100 °C", "20 °C"],
+        ["Ray quality", "Quality", "Draft, Normal, High", "Normal"],
+        ["`LOCATE` (emitter)", "Source X, Y, Z", "−0.95 to 0.95", "−0.20, 0, 0"],
+        ["`LOCATE` (listener)", "Receiver X, Y, Z", "−0.95 to 0.95", "0.20, 0, 0"],
+        ["`MIX`", "Mix", "0 to 100%", "35%"],
+        ["—", "Output", "−18 to +12 dB", "0 dB"],
+        ["`BYPASS`", "Bypass", "Off, On", "Off"],
+        ["—", "Spin X, Spin Z", "−6 to 6 rpm", "0"],
+        ["`ROTATE` (emitter)", "Emitter Azimuth, Emitter Elevation", "−180 to 180°, −89 to 89°", "0°"],
+        ["`STRESS`", "Stress", "0 to 100%", "0%"],
+        ["`ROTATE` (listener)", "Listener Azimuth, Elevation, Roll", "−180 to 180°, −89 to 89°, −180 to 180°", "0°"],
+        ["—", "Super Grain", "0 to 100%", "0%"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.0 · 2026-08-17", "First release: a geometry-based reverb with mesh import, closed-mesh validation, and emitter and listener position checks; a 64-direction snapshot ray model with three ray-quality levels and an eight-line FDN pass; material, scale, and radiation-pattern control; state, preset, and host-state handling for snapshot calculation."]
+      ]
+    } }
+  ]
+}
