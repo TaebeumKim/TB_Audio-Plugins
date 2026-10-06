@@ -1,0 +1,257 @@
+{
+  "file": "TB_ParallelReverb",
+  "version": "3.1.0",
+  "date": "2026-10-02",
+  "subtitle": "Three-Engine Parallel Reverb",
+  "tagline": "Glue, Bright, Space 세 리버브 엔진이 나란히 동작합니다. 엔진마다 센드, 성격, 필터, 솔로를 따로 다루고, 마지막에 WET / DRY 하나로 합칩니다.",
+  "facts": ["병렬 엔진 3개", "Room, Chamber, Plate, Spring, Hall, IR", "팩토리 프리셋 99종", "엔진별 솔로"],
+  "ui": "tb_parallel_reverb.jpg",
+  "body": [
+    { "h2": "개요" },
+    { "lead": "리버브 알고리즘 하나로는 가까움, 색채, 긴 깊이 사이에서 타협하게 됩니다. TB Parallel Reverb는 독립된 리버브 엔진 세 개를 병렬로 돌려서, 공간의 역할마다 따로 조정하고 들어 본 뒤 최종 블렌드로 합칠 수 있게 합니다." },
+    { "p": "Glue는 짧은 룸이나 챔버의 몸통을, Bright는 플레이트나 스프링의 성격을, Space는 긴 홀이나 불러온 임펄스 응답을 더합니다. 엔진마다 센드, 프리딜레이, 폭, 잔향 길이, 필터, 컬러가 따로 있고, 조정하는 동안 원하는 엔진만 솔로로 들을 수 있습니다. 엔진이 서로 독립되어 있어서 한 엔진을 바꿔도 다른 엔진의 잔향 길이나 색채가 따라 바뀌지 않습니다." },
+    { "h3": "주요 기능" },
+    { "ul": [
+      "병렬 엔진 세 개: Glue(Room, Chamber), Bright(Plate, Spring), Space(Hall, IR)",
+      "엔진별 SEND, PRE-DELAY, WIDE, DECAY, DIFFUSION, LOW CUT, HIGH CUT, COLOR",
+      "엔진 전용 조절부: SIZE, DAMPING, EARLY / LATE, MOD RATE, MOD DEPTH, DISTANCE 또는 TENSION, HF DAMPING, SHIMMER",
+      "Space 엔진의 홀 타입 4종과 임펄스 응답 불러오기(WAV, AIFF, FLAC)",
+      "페달마다 ON / OFF와 SOLO 풋스위치, 전체 상태를 보여 주는 ENGINE STATE",
+      "10개 뱅크의 팩토리 프리셋 99종과 사용자 프리셋",
+      "600 × 520으로 열리고 크기를 바꿀 수 있는 창"
+    ] },
+    { "h3": "신호 흐름" },
+    { "flow": { "steps": ["입력 분기", "Glue, Bright, Space 병렬 처리(각 SEND)", "세 웻 리턴 합산", "원음과 WET / DRY", "출력"] } },
+    { "note": { "title": "이 설명서에 대해", "text": [
+      "이 설명서는 Windows용 TB Parallel Reverb 3.1.0(VST3)을 기준으로 합니다. 현재 macOS 빌드는 1.0.4 버전이라 여기 설명과 다를 수 있습니다."
+    ] } },
+
+    { "h2": "빠른 시작" },
+    { "ol": [
+      "TB Parallel Reverb를 AUX(센드) 트랙에 넣고 `WET / DRY` {{12}}를 기본값 100%로 둡니다. 이때는 리버브만 출력됩니다. 인서트로 쓸 때는 `WET / DRY`를 낮춰 원음과 섞습니다.",
+      "프리셋 바 {{1}}에서 소스에 맞는 팩토리 프리셋을 고르거나 기본값에서 시작합니다.",
+      "한 페달의 `SOLO` {{11}}를 눌러 그 엔진만 듣습니다. `SEND`, `DECAY`, 필터 {{4}} {{6}}를 맞춥니다.",
+      "다른 엔진도 같은 방법으로 맞춥니다. 필요 없는 엔진은 `ON / OFF` 풋스위치 {{10}}로 끕니다.",
+      "솔로를 해제하고 믹스 안에서 세 `SEND`의 균형을 맞춥니다."
+    ] },
+
+    { "h2": "화면 구성" },
+    { "ui": {
+      "image": "tb_parallel_reverb.jpg",
+      "caption": "이전 3.x 빌드에서 캡처한 화면입니다. 3.1.0은 같은 조절부와 표기를 유지한 최신 페달 디자인을 쓰고, 600 × 520 크기로 열리며 창 크기를 바꾸면 페달과 조절부가 함께 맞춰집니다.",
+      "callouts": [
+        { "n": 1, "x": 59.9, "y": 4.8 },
+        { "n": 2, "x": 41.6, "y": 11.5 },
+        { "n": 3, "x": 8.3, "y": 21.9 },
+        { "n": 4, "x": 7.0, "y": 29.6 },
+        { "n": 5, "x": 7.0, "y": 40.8 },
+        { "n": 6, "x": 7.0, "y": 49.2 },
+        { "n": 7, "x": 62.4, "y": 37.4 },
+        { "n": 8, "x": 93.0, "y": 40.8 },
+        { "n": 9, "x": 69.1, "y": 57.0 },
+        { "n": 10, "x": 10.4, "y": 72.3 },
+        { "n": 11, "x": 29.5, "y": 72.3 },
+        { "n": 12, "x": 37.0, "y": 92.5 },
+        { "n": 13, "x": 54.9, "y": 90.0 }
+      ],
+      "legend": [
+        [1, "프리셋 바", "이전/다음 팩토리 프리셋, PRESET 목록, 저장, 실행 취소, 다시 실행."],
+        [2, "INPUT SPLIT", "같은 입력이 세 엔진에 모두 들어갑니다."],
+        [3, "모드 스위치", "ROOM / CHAMBER, PLATE / SPRING, HALL / IR."],
+        [4, "SEND, PRE-DELAY, WIDE, DECAY", "엔진의 양, 시작 시점, 폭, 길이."],
+        [5, "Glue 성격", "SIZE, DIFFUSION, DAMPING, EARLY / LATE."],
+        [6, "LOW CUT, COLOR, HIGH CUT", "엔진 리턴의 필터와 톤."],
+        [7, "Bright 성격", "DIFFUSION, MOD RATE, MOD DEPTH, DISTANCE(Spring 모드에서는 TENSION)."],
+        [8, "Space 성격", "DIFFUSION, HF DAMPING, SHIMMER."],
+        [9, "HALL TYPE", "홀 모델. BROWSE IR...는 IR 모드에서 쓸 임펄스 응답을 불러옵니다."],
+        [10, "ON / OFF", "엔진을 켜고 끕니다."],
+        [11, "SOLO", "이 엔진만 들려줍니다."],
+        [12, "WET / DRY", "원음과 세 리턴의 최종 비율."],
+        [13, "ENGINE STATE", "각 엔진의 상태(ENGAGED, SOLO, MUTED 등)를 보여 줍니다."]
+      ]
+    } },
+
+    { "h2": "조절부" },
+    { "h3": "모든 페달에 있는 조절부" },
+    { "table": {
+      "cols": ["조절부", "동작"],
+      "widths": [22, 78],
+      "rows": [
+        ["모드 스위치", "엔진의 리버브 종류를 고릅니다. Glue는 Room 또는 Chamber, Bright는 Plate 또는 Spring, Space는 Hall 또는 IR입니다."],
+        ["`SEND`", "입력이 엔진에 얼마나 들어갈지 정하며, 이것이 그 엔진 리턴의 레벨이 됩니다."],
+        ["`PRE-DELAY`", "리버브가 시작되기까지의 시간입니다. 길수록 리버브가 소스와 분리됩니다."],
+        ["`WIDE`", "이 리버브 레이어의 스테레오 폭(도 단위)입니다. 넓게 설정했다면 모노에서 확인하세요."],
+        ["`DECAY`", "리버브가 이어지는 길이입니다. Space의 IR 모드에서는 `LENGTH`로 표시됩니다."],
+        ["`DIFFUSION`", "따로 들리는 반사음을 부드러운 잔향으로 바꿉니다."],
+        ["`LOW CUT`, `HIGH CUT`", "엔진 리턴에 거는 하이패스와 로우패스 필터입니다. 저역의 탁함과 거친 고역을 여기서 정리합니다."],
+        ["`COLOR`", "레이어를 어둡고 부드러운 쪽에서 밝고 앞으로 나오는 쪽으로 옮깁니다."],
+        ["`ON / OFF`", "엔진을 켜고 끕니다. 기본값은 세 엔진 모두 켜짐입니다."],
+        ["`SOLO`", "한 엔진의 리턴만 원음 없이 들려줘서 따로 조정할 수 있게 합니다. 한 번에 한 엔진만 솔로로 들을 수 있습니다."]
+      ]
+    } },
+    { "h3": "범위와 기본값" },
+    { "table": {
+      "compact": true,
+      "cols": ["조절부", "Glue", "Bright", "Space"],
+      "widths": [19, 27, 27, 27],
+      "rows": [
+        ["모드", "Room, Chamber · Room", "Plate, Spring · Plate", "Hall, IR · Hall"],
+        ["`SEND`", "−60 ~ +6 dB · −12 dB", "−60 ~ +6 dB · −15 dB", "−60 ~ +6 dB · −22 dB"],
+        ["`PRE-DELAY`", "0 ~ 60 ms · 8 ms", "0 ~ 100 ms · 18 ms", "0 ~ 200 ms · 60 ms"],
+        ["`WIDE`", "0 ~ 180° · 150°", "0 ~ 270° · 210°", "0 ~ 360° · 240°"],
+        ["`DECAY`", "0.5 ~ 1 s · 0.75 s", "1.5 ~ 2.5 s · 2 s", "0.25 ~ 10 s · 3.2 s"],
+        ["`DIFFUSION`", "0 ~ 100% · 65%", "0 ~ 100% · 70%", "0 ~ 100% · 72%"],
+        ["`LOW CUT`", "20 ~ 1500 Hz · 200 Hz", "20 ~ 1800 Hz · 450 Hz", "20 ~ 1500 Hz · 300 Hz"],
+        ["`HIGH CUT`", "1 ~ 20 kHz · 9 kHz", "1.2 ~ 20 kHz · 13.5 kHz", "1 ~ 20 kHz · 7.5 kHz"],
+        ["`COLOR`", "0 ~ 100% · 30%", "0 ~ 100% · 45%", "0 ~ 100% · 25%"]
+      ]
+    } },
+    { "h3": "엔진 전용 조절부" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [22, 22, 56],
+      "rows": [
+        { "group": "Glue: 짧은 앰비언스" },
+        ["`SIZE`", "0 ~ 100% · 50%", "느껴지는 방의 크기."],
+        ["`DAMPING`", "0 ~ 100% · 60%", "잔향이 사라지면서 어두워지는 정도."],
+        ["`EARLY / LATE`", "0 ~ 100% · 45%", "초기 반사음과 뒤따르는 잔향의 균형."],
+        { "group": "Bright: 플레이트와 스프링" },
+        ["`MOD RATE`", "0.02 ~ 5 Hz · 0.35 Hz", "잔향 속 은은한 피치 움직임의 속도."],
+        ["`MOD DEPTH`", "0 ~ 20 ms · 1.5 ms", "그 움직임의 양."],
+        ["`DISTANCE` / `TENSION`", "0 ~ 100% · 35%", "Plate 모드에서는 플레이트 거리, Spring 모드에서는 스프링 장력."],
+        { "group": "Space: 홀과 컨볼루션" },
+        ["`HALL TYPE`", "Church, Auditorium, Concert Hall, Studio Hall · Church", "Hall 모드의 기본 홀 성격."],
+        ["`HF DAMPING`", "0 ~ 100% · 45%", "잔향이 사라지면서 고역을 부드럽게 줄입니다."],
+        ["`SHIMMER`", "0 ~ 100% · 15%", "긴 잔향에 위로 올라가는 밝은 톤을 더합니다."],
+        ["`BROWSE IR...`", "WAV, AIF, AIFF, FLAC", "IR 모드에서 쓸 임펄스 응답 파일을 불러옵니다. 파일을 불러오기 전에는 NO IR SELECTED가 표시됩니다."]
+      ]
+    } },
+    { "h3": "마스터" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [22, 22, 56],
+      "rows": [
+        ["`WET / DRY`", "0 ~ 100% · 100%", "원음과 켜져 있는 모든 리버브 리턴을 섞습니다. 100%는 리버브만 출력하므로 AUX 트랙에 맞습니다."],
+        ["`SOLO`(Reverb Solo)", "Off, Glue, Bright, Space · Off", "솔로로 듣는 엔진."]
+      ]
+    } },
+    { "tip": { "text": "Send Gain은 각 엔진 리턴의 레벨을, WET / DRY는 소스와 합산된 리버브의 전체 관계를 정합니다. 먼저 센드의 균형을 맞춘 다음 WET / DRY를 정하세요." } },
+
+    { "h2": "프리셋" },
+    { "p": "프리셋 바 {{1}}의 화살표로 팩토리 프리셋을 넘기거나 PRESET 목록을 엽니다. LOAD USER PRESET...은 .tbprpreset 파일을 열고, 저장은 현재 설정을 그 형식으로 저장합니다. 프리셋을 바꾸면 이름이 CUSTOM으로 표시됩니다. 실행 취소와 다시 실행으로 최근 변경을 오갈 수 있습니다." },
+    { "table": {
+      "cols": ["뱅크", "프리셋"],
+      "widths": [22, 78],
+      "rows": [
+        ["Essentials", "Three Engine Balance, Natural Space, Clean Bus Wash, Dark Bus Glue, Wide Open"],
+        ["Vocals", "Vocal Plate Halo, Intimate Vocal Room, Pop Vocal Sheen, Ballad Bloom, Lead Vocal Forward, Breathy Air, Dark Vocal Chamber, Wide Vocal Double, Tight Rap Slap, Gospel Hall, Whisper Cloud, Retro Vocal Spring"],
+        ["Drums", "Drum Room Snap, Tight Booth, Ambient Kit, Snare Plate, Gated Burst Room, Big Rock Room, Jazz Brush Room, Lo-Fi Drum Box, Trap Slap, Percussion Shine, Kick Weight Room, Tom Hall"],
+        ["Guitar", "Clean Amp Spring, Surf Splash, Crunch Room, Lead Guitar Hall, Acoustic Air, Shoegaze Wash, Slide Chamber, Funk Tight Room, Metal Rhythm Plate, Dream Swell"],
+        ["Keys", "Grand Piano Stage, Upright Room, Warm Rhodes, Wurli Spring, Church Organ, Tight Clav, Felt Piano Intimate, Cinematic Piano, Toy Piano Box, Electric Bloom"],
+        ["Synth & Pad", "Wide Pad Bed, Pluck Bounce, Arp Shimmer, Saw Stack Space, Glass Bell, Warm Analog Room, Ethereal Lead, Drone Bed, Retro Synth Chamber, Hyper Wide Stack, Soft Synth Keys, Motion Pad"],
+        ["Bass & Low End", "Subtle Bass Room, Upright Wood, Synth Bass Depth, Bass Amp Chamber, Clean Low Lift, Dub Cavern"],
+        ["Strings & Orchestra", "Concert Strings, Solo Violin Hall, Warm Cello Room, Full Score Hall, Chamber Quartet, Epic Trailer Space, Harp Air, Brass Stage"],
+        ["Ambient & Shimmer", "Shimmer Cloud, Octave Bloom, Infinite Drift, Glacier, Cathedral Light, Soft Focus, Deep Space, Slow Swell, Frozen Air, Spring Tape Dream, Night Sky, Underwater, Choir Of Ghosts, Endless Hall"],
+        ["Special FX", "Metal Tank, Broken Spring, Warped Tape Space, Tiny Speaker Box, Backwards Feel, Alien Transmission, Bit Cavern, Pitch Riser, Sonar Ping, Haunted Room"]
+      ]
+    } },
+
+    { "h2": "작업 예시" },
+    { "p": "자주 하는 작업의 출발점입니다. 귀로 조정하세요." },
+    { "recipes": [
+      { "title": "탁하지 않은 보컬 공간감", "use": "앞에 선 리드 보컬 뒤로 공간을 둘 때.",
+        "settings": [["프리셋", "Lead Vocal Forward 또는 Vocal Plate Halo"], ["Bright PRE-DELAY", "20 ~ 40 ms"], ["LOW CUT", "모든 엔진에서 올림"]],
+        "steps": ["엔진을 하나씩 솔로로 듣고 리턴이 목소리를 흐리지 않을 때까지 저역을 깎습니다.", "Space의 센드는 낮게 두어 잔향이 보컬 뒤에 머물게 합니다."] },
+      { "title": "드럼 룸과 플레이트", "use": "룸의 몸통과 플레이트의 탄력을 함께.",
+        "settings": [["Glue", "Room, 짧은 DECAY"], ["Bright", "Plate, SEND 낮게"], ["Space", "OFF"]],
+        "steps": ["Space는 ON / OFF로 끕니다.", "킷 전체가 한 공간에서 울리는 것처럼 들릴 때까지 Glue SEND를 올립니다."] },
+      { "title": "앰비언트 워시", "use": "패드와 분위기용 길고 부드러운 잔향.",
+        "settings": [["프리셋", "Shimmer Cloud 또는 Endless Hall"], ["Space DECAY", "6 ~ 10 s"], ["SHIMMER", "취향껏"]],
+        "steps": ["잔향이 밝고 복잡해지면 Space의 HIGH CUT을 낮춥니다."] },
+      { "title": "IR로 실제 공간 만들기", "use": "녹음된 방이나 홀에 소스를 놓을 때.",
+        "settings": [["Space 모드", "IR"], ["임펄스", "BROWSE IR..."], ["Glue / Bright", "낮게 또는 OFF"]],
+        "steps": ["WAV, AIFF, FLAC 임펄스 응답을 불러옵니다.", "LENGTH, LOW CUT, HIGH CUT으로 다듬습니다."] }
+    ] },
+
+    { "h2": "팁과 문제 해결" },
+    { "table": {
+      "cols": ["증상", "확인할 점"],
+      "widths": [36, 64],
+      "rows": [
+        ["리버브만 들린다.", "WET / DRY가 AUX용 기본값인 100%입니다. 인서트로 쓸 때는 낮추세요."],
+        ["원음이나 다른 엔진이 들리지 않는다.", "어떤 엔진이 솔로 상태입니다. 내보내기 전에 SOLO를 해제하세요."],
+        ["리버브가 탁하다.", "Space부터 시작해 엔진마다 LOW CUT을 올리세요."],
+        ["리버브가 거칠거나 시끄럽다.", "HIGH CUT이나 COLOR를 낮추거나, DAMPING(Glue)이나 HF DAMPING(Space)을 올리세요."],
+        ["IR 모드에서 소리가 나지 않는다.", "임펄스 응답이 불러와져 있지 않습니다(NO IR SELECTED). BROWSE IR...로 불러오세요."],
+        ["모노로 합치면 소리가 무너진다.", "엔진의 WIDE를 낮추고 다시 모노로 확인하세요."],
+        ["CPU 사용량이 높다.", "쓰지 않는 엔진을 끄세요."]
+      ]
+    } },
+
+    { "h2": "파라미터 참고표" },
+    { "table": {
+      "compact": true,
+      "cols": ["패널 표기", "호스트 파라미터", "범위", "기본값"],
+      "widths": [22, 30, 30, 18],
+      "rows": [
+        { "group": "Glue" },
+        ["모드 스위치", "Glue Mode", "Room, Chamber", "Room"],
+        ["`ON / OFF`", "Glue Enabled", "Off, On", "On"],
+        ["`SEND`", "Glue Send Gain", "−60 ~ +6 dB", "−12 dB"],
+        ["`PRE-DELAY`", "Glue Pre-Delay", "0 ~ 60 ms", "8 ms"],
+        ["`WIDE`", "Glue Wide", "0 ~ 180°", "150°"],
+        ["`DECAY`", "Glue Decay", "0.5 ~ 1 s", "0.75 s"],
+        ["`SIZE`", "Glue Size", "0 ~ 100%", "50%"],
+        ["`DIFFUSION`", "Glue Diffusion", "0 ~ 100%", "65%"],
+        ["`LOW CUT`", "Glue High Pass", "20 ~ 1500 Hz", "200 Hz"],
+        ["`HIGH CUT`", "Glue Low Pass", "1 ~ 20 kHz", "9 kHz"],
+        ["`EARLY / LATE`", "Glue Early Late Mix", "0 ~ 100%", "45%"],
+        ["`DAMPING`", "Glue Damping", "0 ~ 100%", "60%"],
+        ["`COLOR`", "Glue Color", "0 ~ 100%", "30%"],
+        { "group": "Bright" },
+        ["모드 스위치", "Bright Mode", "Plate, Spring", "Plate"],
+        ["`ON / OFF`", "Bright Enabled", "Off, On", "On"],
+        ["`SEND`", "Bright Send Gain", "−60 ~ +6 dB", "−15 dB"],
+        ["`PRE-DELAY`", "Bright Pre-Delay", "0 ~ 100 ms", "18 ms"],
+        ["`WIDE`", "Bright Wide", "0 ~ 270°", "210°"],
+        ["`DECAY`", "Bright Decay", "1.5 ~ 2.5 s", "2 s"],
+        ["`DIFFUSION`", "Bright Diffusion", "0 ~ 100%", "70%"],
+        ["`MOD RATE`", "Bright Modulation Rate", "0.02 ~ 5 Hz", "0.35 Hz"],
+        ["`MOD DEPTH`", "Bright Modulation Depth", "0 ~ 20 ms", "1.5 ms"],
+        ["`DISTANCE` / `TENSION`", "Bright Plate Distance Spring Tension", "0 ~ 100%", "35%"],
+        ["`LOW CUT`", "Bright High Pass", "20 ~ 1800 Hz", "450 Hz"],
+        ["`HIGH CUT`", "Bright Low Pass", "1.2 ~ 20 kHz", "13.5 kHz"],
+        ["`COLOR`", "Bright Color", "0 ~ 100%", "45%"],
+        { "group": "Space" },
+        ["모드 스위치", "Space Mode", "Hall, IR", "Hall"],
+        ["`ON / OFF`", "Space Enabled", "Off, On", "On"],
+        ["`SEND`", "Space Send Gain", "−60 ~ +6 dB", "−22 dB"],
+        ["`PRE-DELAY`", "Space Pre-Delay", "0 ~ 200 ms", "60 ms"],
+        ["`WIDE`", "Space Wide", "0 ~ 360°", "240°"],
+        ["`DECAY` / `LENGTH`", "Space Decay / Length", "0.25 ~ 10 s", "3.2 s"],
+        ["`HALL TYPE`", "Space Hall Type", "Church, Auditorium, Concert Hall, Studio Hall", "Church"],
+        ["`DIFFUSION`", "Space Diffusion", "0 ~ 100%", "72%"],
+        ["`HF DAMPING`", "Space HF Damping", "0 ~ 100%", "45%"],
+        ["`LOW CUT`", "Space High Pass", "20 ~ 1500 Hz", "300 Hz"],
+        ["`HIGH CUT`", "Space Low Pass", "1 ~ 20 kHz", "7.5 kHz"],
+        ["`COLOR`", "Space Color", "0 ~ 100%", "25%"],
+        ["`SHIMMER`", "Space Shimmer", "0 ~ 100%", "15%"],
+        { "group": "마스터" },
+        ["`WET / DRY`", "Wet/Dry Mix", "0 ~ 100%", "100%"],
+        ["`SOLO`", "Reverb Solo", "Off, Glue, Bright, Space", "Off"]
+      ]
+    } },
+    { "p": "불러온 임펄스 응답의 경로는 호스트 파라미터가 아니라 플러그인 상태에 저장됩니다. 파일을 옮겼다면 BROWSE IR...로 다시 불러오세요." },
+
+    { "h2": "버전 기록" },
+    { "table": {
+      "cols": ["버전", "변경 내용"],
+      "widths": [20, 80],
+      "rows": [
+        ["3.1.0 · 2026-09-30", "최신 Glue, Bright, Space 페달 디자인과 현재 병렬 리버브 엔진을 Windows VST3에 반영했습니다. 기본 창 크기를 600 × 520으로 줄였고, 창 크기를 바꾸면 엔진 페달과 조절부가 함께 맞춰집니다."],
+        ["3.0.2 · 2026-08-21", "Windows 유지보수 릴리스."],
+        ["3.0.1 · 2026-08-03", "Glue, Bright, Space 페달을 초록, 주황, 진홍색으로 새로 디자인했습니다. 라우팅, 엔진 바이패스와 솔로, 팩토리 프리셋, 파라미터 ID, 소리는 그대로입니다."]
+      ]
+    } }
+  ]
+}

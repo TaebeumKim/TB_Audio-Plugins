@@ -1,0 +1,119 @@
+{
+  "file": "TB_Volume",
+  "version": "1.2.2",
+  "date": "2026-10-02",
+  "subtitle": "Gain Utility",
+  "tagline": "One level control in decibels or perceived-loudness percent, with smoothed changes and a safety limiter at −0.1 dBFS.",
+  "facts": ["One level control", "dB or Sone-based %", "−0.1 dBFS safety limiter", "20 ms smoothing"],
+  "ui": "tb_volume.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Volume is a one-control gain utility. Drag the large numeric value to set the level, and choose whether it reads in decibels or in a perceived-loudness percentage." },
+    { "p": "dB mode covers −24 to +24 dB. Percent mode uses a Sone-based scale from silence (0%) to 300%, where 100% is unity and 200% aims to sound about twice as loud. Level changes are smoothed to avoid clicks, and a stereo-linked sample-peak limiter keeps the output at or below −0.1 dBFS." },
+    { "h3": "Key features" },
+    { "ul": [
+      "One `OUTPUT LEVEL` value: drag up to increase, down to decrease",
+      "dB mode (−24 to +24 dB) or Sone-based percent mode (0 to 300%)",
+      "Unity by default: 0 dB or 100%",
+      "20 ms gain smoothing for click-free changes and automation",
+      "Built-in stereo-linked limiter at −0.1 dBFS with 1 ms lookahead",
+      "Init and user presets"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Level (dB or % mapping)", "20 ms smoothing", "Limiter at −0.1 dBFS", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Volume 1.2.2 for Windows (VST3). The current macOS build is version 1.0.8 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Volume where you need a level change. It starts at unity: 0.0 dB.",
+      "Choose `dB` or `%` under MODE.",
+      "Drag the `OUTPUT LEVEL` value up to make the signal louder or down to make it quieter.",
+      "Automate the level if needed; changes are smoothed over 20 ms."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_volume.jpg",
+      "caption": "TB Volume 1.2 interface (portfolio image)."
+    } },
+    { "table": {
+      "cols": ["Area", "What it does"],
+      "widths": [24, 76],
+      "rows": [
+        ["Preset bar", "Previous and next preset, the preset list (Init or a saved user preset; CUSTOM after a change), and Save."],
+        ["`MODE`", "`dB` or `%` scale."],
+        ["`OUTPUT LEVEL`", "The level value. Drag vertically to change it."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`OUTPUT LEVEL`", "dB: −24 to +24 dB · 0 dB; %: 0 to 300% · 100%", "Sets the gain. Drag up to increase volume or down to decrease it. Changes are smoothed over 20 ms."],
+        ["`MODE`", "dB, % · dB", "dB uses the −24 to +24 dB scale. % uses the 0 to 300 percent Sone-based scale, where 100% is unity and 0% is silence."]
+      ]
+    } },
+    { "note": { "text": "Both modes drive the same Normalized Level parameter, and both read unity at the default value. Away from unity the two scales are mapped differently, so listen again after switching mode." } },
+    { "h3": "Safety limiter" },
+    { "p": "After the gain, a stereo-linked sample-peak limiter with 1 ms of lookahead keeps the output at or below −0.1 dBFS. It is always on and has no controls. Because of the lookahead, TB Volume always has about 1 ms of latency, which the host compensates." },
+    { "warn": { "text": "The limiter catches sample peaks, not true peaks. It is a safety net, not a mastering limiter. For deliveries with a true-peak limit, use a true-peak limiter at the end of the chain." } },
+
+    { "h2": "Presets" },
+    { "p": "Use the arrows to step through presets, or open the list to choose Init or a saved user preset. Save stores the current settings as a .tbvolumepreset file. The name shows CUSTOM after you change a setting." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs." },
+    { "recipes": [
+      { "title": "Gain staging", "use": "Bring a track into a healthy range before other plug-ins.",
+        "settings": [["MODE", "dB"], ["OUTPUT LEVEL", "As needed, usually −12 to +6 dB"]],
+        "steps": ["Insert TB Volume first in the chain and set the level before the next plug-in."] },
+      { "title": "Loudness-style rides", "use": "Moves that should feel proportional to the ear.",
+        "settings": [["MODE", "%"], ["OUTPUT LEVEL", "50% to 150%"]],
+        "steps": ["200% aims to sound about twice as loud as 100%; 50% about half as loud."] },
+      { "title": "Fade or mute automation", "use": "Smooth level automation without clicks.",
+        "settings": [["MODE", "%"], ["Automation", "Normalized Level"]],
+        "steps": ["0% in percent mode is silence."] },
+      { "title": "Output trim with safety", "use": "A final trim that cannot clip sample peaks.",
+        "settings": [["OUTPUT LEVEL", "As needed"], ["Limiter", "Always on at −0.1 dBFS"]],
+        "steps": ["If the limiter works constantly, lower the level instead."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The level changed after switching mode.", "Both modes share one parameter but use different scales away from unity. Set the level again."],
+        ["Loud material sounds squashed.", "The safety limiter is working. Lower OUTPUT LEVEL."],
+        ["There is no sound.", "In % mode, 0% is silence."],
+        ["Automation looks stepped in the host.", "Automate Normalized Level; the plug-in smooths changes over 20 ms."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [24, 24, 32, 20],
+      "rows": [
+        ["`OUTPUT LEVEL`", "Normalized Level", "0 to 1 (−24 to +24 dB, or 0 to 300%)", "0.5 (0 dB, 100%)"],
+        ["`MODE`", "Mode", "dB, %", "dB"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.2.2 · 2026-08-17", "Reduced the product-title font so TB VOLUME is fully visible in VST3 hosts. Parameters, gain mapping, state compatibility, and limiter behaviour are unchanged."],
+        ["1.2.1 · 2026-08-14", "Restyled the utility with a brighter die-cast interface and clearer numeric readouts."],
+        ["1.2.0 · 2026-07-30", "Moved the effect logo and product name into a shared rack header, and improved previous/next navigation and preset saving and loading."]
+      ]
+    } }
+  ]
+}

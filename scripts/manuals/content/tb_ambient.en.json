@@ -1,0 +1,141 @@
+{
+  "file": "TB_Ambient",
+  "version": "1.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Outdoor Distance and Ground Tone",
+  "tagline": "Places a sound outdoors without a reverb tail: eight outdoor profiles shape distance, air, and ground colour with zero latency.",
+  "facts": ["8 outdoor profiles", "Distance 1 to 100 m", "No delay or tail", "Zero latency"],
+  "ui": "tb_ambient.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Ambient makes a sound seem farther away and outdoors without adding a reverb tail. It shapes the direct sound the way distance, air, and the ground colour it in eight outdoor settings, from an open field and a forest to snow and concrete, and it works with zero latency." },
+    { "p": "Choose an outdoor `PROFILE`, set how far away the source is with `DISTANCE` and how high with `HEIGHT`, then shape the tone with `GROUND` and `CHARACTER`. `MIX` blends the processed tone with the dry input sample for sample; at 0% the dry signal comes back unchanged." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Eight outdoor profiles: Open Field, Forest, Dry Asphalt, Damp Earth, Rocky Open, Coastal Air, Snowfield, Concrete Exterior",
+      "DISTANCE from 1 to 100 m: farther settings reduce level and high frequencies",
+      "HEIGHT from 0.2 to 5 m for the broad ground colour",
+      "GROUND and CHARACTER for the strength of the ground colour and of the profile's character",
+      "No delay, reflections, or tail, and zero latency",
+      "Smooth 20 ms crossfades when settings or profiles change",
+      "Pixel-art display with a background for each profile and a source/listener placement view",
+      "8 factory presets, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "PROFILE", "DISTANCE and HEIGHT: level, air, ground colour", "GROUND and CHARACTER", "Same-sample MIX", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Ambient 1.0.0 for Windows (VST3). There is no macOS build at the time of writing."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Ambient on a dialogue, foley, instrument, or effects track. The defaults are the Forest profile, `DISTANCE` 15 m, `HEIGHT` 1.5 m, `GROUND` 50%, `CHARACTER` 60%, and `MIX` 100%.",
+      "Choose the outdoor setting with `PROFILE` {{5}}.",
+      "Set `DISTANCE` {{6}} and `HEIGHT` {{7}}; the placement view {{3}} shows where the source sits.",
+      "Shape the tone with `GROUND` {{8}} and `CHARACTER` {{9}}.",
+      "Blend with `MIX` {{10}}. Add a separate reverb after TB Ambient if the scene also needs a tail."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_ambient.jpg",
+      "caption": "TB Ambient 1.0 interface with the Forest profile.",
+      "callouts": [
+        { "n": 1, "x": 26.6, "y": 5.0 },
+        { "n": 2, "x": 27.1, "y": 16.6 },
+        { "n": 3, "x": 37.5, "y": 39.1 },
+        { "n": 4, "x": 10.4, "y": 52.2 },
+        { "n": 5, "x": 87.0, "y": 20.2 },
+        { "n": 6, "x": 87.3, "y": 32.0 },
+        { "n": 7, "x": 19.0, "y": 67.2 },
+        { "n": 8, "x": 41.6, "y": 67.2 },
+        { "n": 9, "x": 60.9, "y": 67.2 },
+        { "n": 10, "x": 86.7, "y": 67.2 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset, the preset list with LOAD USER PRESET, SAVE, Undo, and Redo."],
+        [2, "CURRENT PROFILE", "the active profile with the distance and height."],
+        [3, "Placement view", "the source position relative to the listener; tone only, no reflection."],
+        [4, "GROUND and CHARACTER bars", "the current values at a glance."],
+        [5, "PROFILE", "outdoor profile."],
+        [6, "DISTANCE", "source distance."],
+        [7, "HEIGHT", "source height."],
+        [8, "GROUND", "strength of the ground colour."],
+        [9, "CHARACTER", "amount of the profile's character."],
+        [10, "MIX", "dry/wet."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 22, 60],
+      "rows": [
+        ["`PROFILE`", "8 profiles · Forest", "Selects the delayless outdoor spectral profile. It changes the outdoor material and air character without adding delay or tail."],
+        ["`DISTANCE`", "1 to 100 m · 15 m", "Source distance. Farther settings reduce level and high frequencies."],
+        ["`HEIGHT`", "0.2 to 5 m · 1.5 m", "Source height. It changes the broad ground colour only."],
+        ["`GROUND`", "0 to 100% · 50%", "Strength of the broad ground material colour, without a delayed reflection."],
+        ["`CHARACTER`", "0 to 100% · 60%", "Amount of the selected profile's spectral character."],
+        ["`MIX`", "0 to 100% · 100%", "Same-sample blend of the dry input and the processed tone. At 0% the dry signal is returned unchanged."]
+      ]
+    } },
+    { "p": "TB Ambient has zero latency and produces no reflections or reverb tail. Changes to the settings and the profile are crossfaded over 20 ms." },
+
+    { "h2": "Presets" },
+    { "p": "The eight factory presets in the Profiles group, one for each outdoor profile, all use DISTANCE 15 m, HEIGHT 1.5 m, GROUND 50%, CHARACTER 60%, and MIX 100%. LOAD USER PRESET opens a preset file, and SAVE stores the current settings as a user preset and selects it. The name shows Custom after you edit a control. Loading a preset starts a new Undo baseline; Undo and Redo step through the control changes made after that." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Voice across a field", "use": "A voice calling from far away in open country.",
+        "settings": [["PROFILE", "Open Field"], ["DISTANCE", "30 to 60 m"]],
+        "steps": ["Raise the track level after TB Ambient if the voice gets too quiet."] },
+      { "title": "Footsteps on asphalt", "use": "Foley that sits on a dry street.",
+        "settings": [["PROFILE", "Dry Asphalt"], ["HEIGHT", "0.2 to 0.5 m"], ["GROUND", "60 to 80%"]],
+        "steps": ["Keep DISTANCE short for close footsteps."] },
+      { "title": "Forest dialogue", "use": "Dialogue placed among trees.",
+        "settings": [["PROFILE", "Forest"], ["DISTANCE", "5 to 20 m"]],
+        "steps": ["Add a short, quiet reverb after it if the scene needs some space."] },
+      { "title": "Winter scene", "use": "A muted, wintry outdoor tone.",
+        "settings": [["PROFILE", "Snowfield"], ["CHARACTER", "60 to 80%"]],
+        "steps": ["Compare with MIX at 70 to 90% to keep some clarity."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["There is no reverb.", "That is by design: TB Ambient adds no reflections or tail. Use a reverb after it."],
+        ["The sound gets dull.", "Long distances reduce high frequencies. Lower DISTANCE or CHARACTER, or lower MIX."],
+        ["The level drops too much.", "DISTANCE lowers the level. Raise the track gain after the plug-in, or lower DISTANCE."],
+        ["The preset name shows Custom.", "A control was edited after the preset was loaded. Choose the preset again to restore it."],
+        ["Nothing changes.", "MIX is at 0% or the plug-in is bypassed."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`PROFILE`", "Outdoor Profile", "Open Field, Forest, Dry Asphalt, Damp Earth, Rocky Open, Coastal Air, Snowfield, Concrete Exterior", "Forest"],
+        ["`DISTANCE`", "Distance", "1 to 100 m", "15 m"],
+        ["`GROUND`", "Ground", "0 to 100%", "50%"],
+        ["`CHARACTER`", "Character", "0 to 100%", "60%"],
+        ["`HEIGHT`", "Height", "0.2 to 5 m", "1.5 m"],
+        ["`MIX`", "Mix", "0 to 100%", "100%"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.0 · 2026-08-18", "First public release: outdoor distance and ground-material tone without a reverb tail; eight outdoor profiles; level, air absorption, and ground colour that change together with distance and height; zero-sample latency, with MIX 0% returning the dry signal; an 8-bit pixel-art display whose background changes with each profile."]
+      ]
+    } }
+  ]
+}

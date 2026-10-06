@@ -1,0 +1,151 @@
+{
+  "file": "TB_XYZPanner",
+  "version": "1.3.0",
+  "date": "2026-10-02",
+  "subtitle": "Three-Axis Spatial Panner",
+  "tagline": "Reliable stereo panning with added cues for height, distance, and front-to-back position, rendered for speakers or for headphones with KEMAR HRTF.",
+  "facts": ["Top and side views", "Stereo or KEMAR HRTF headphones", "3 distance curves", "Surround-aware output"],
+  "ui": "tb_xyz_panner.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB XYZ Panner keeps dependable stereo panning at its core and adds procedural cues for height, distance, and front-to-back perspective." },
+    { "p": "The top view places a source left, right, in front, or behind without changing its distance. The side view shapes elevation and depth through level, tone, and early-reflection behaviour. Stereo mode gives solid conventional placement; Headphones mode uses KEMAR HRTF rendering for a more immersive binaural image. ROOM and OUTPUT finish the space." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Top view for left/right and front/back, side view for height and distance",
+      "`PAN`, `FRONT/BACK`, `HEIGHT`, `DISTANCE`, and `ROOM` controls",
+      "Three distance curves: Physical, Near Field, and Linear",
+      "STEREO rendering for speakers, HEADPHONES rendering with KEMAR HRTF",
+      "On surround outputs, the non-LFE channels are mapped by speaker direction",
+      "`OUTPUT` trim, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Position (PAN, FRONT/BACK, HEIGHT, DISTANCE) and ROOM", "STEREO or HEADPHONES renderer", "OUTPUT trim", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB XYZ Panner 1.3.0 for Windows (VST3). The current macOS build is version 1.0.2 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB XYZ Panner on a mono or stereo track. By default the source is centred, in front, at ear height, close, with `ROOM` at 35%.",
+      "Choose `STEREO` {{1}} for speakers or `HEADPHONES` for binaural listening.",
+      "Place the source left or right and front or back in the top view {{3}}, or with `PAN` and `FRONT/BACK` {{5}}.",
+      "Set height and distance in the side view {{4}}, or with `HEIGHT` and `DISTANCE`.",
+      "Add space with `ROOM` {{6}} and set the level with `OUTPUT` {{7}}."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_xyz_panner.jpg",
+      "caption": "Captured from version 1.2. Version 1.3.0 adds a DISTANCE CURVE selector (PHYSICAL, NEAR FIELD, LINEAR); the other controls are the same.",
+      "callouts": [
+        { "n": 1, "x": 65.2, "y": 5.5 },
+        { "n": 2, "x": 97.0, "y": 5.5 },
+        { "n": 3, "x": 12.9, "y": 15.2 },
+        { "n": 4, "x": 56.4, "y": 13.4 },
+        { "n": 5, "x": 25.9, "y": 73.8 },
+        { "n": 6, "x": 59.6, "y": 73.8 },
+        { "n": 7, "x": 79.5, "y": 73.8 }
+      ],
+      "legend": [
+        [1, "STEREO / HEADPHONES", "the render mode."],
+        [2, "Undo and Redo", "step back and forward through changes."],
+        [3, "Top view", "left, right, front, and back around the listener."],
+        [4, "Side view", "up and down, and near to far."],
+        [5, "POSITION", "PAN, FRONT/BACK, and HEIGHT."],
+        [6, "SPACE", "DISTANCE and ROOM."],
+        [7, "LEVEL", "OUTPUT trim."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "h3": "Position" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`PAN`", "Left 100% to right 100% · 0% (centre)", "Left-right position."],
+        ["`FRONT/BACK`", "Back 100% to front 100% · front 100%", "Front-back position. The panel shows F or B with the amount."],
+        ["`HEIGHT`", "Down 100% to up 100% · 0%", "Elevation, shaped through level, tone, and early-reflection cues."]
+      ]
+    } },
+    { "h3": "Space and level" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 26, 56],
+      "rows": [
+        ["`DISTANCE`", "0 to 100% · 0%", "How far the source is from the listener. Distance changes level, tone, and reflections."],
+        ["`DISTANCE CURVE`", "PHYSICAL, NEAR FIELD, LINEAR · PHYSICAL", "How the level falls as DISTANCE increases. Physical is the default."],
+        ["`ROOM`", "0 to 100% · 35%", "Amount of room reflections around the source."],
+        ["`OUTPUT`", "−24 to 0 dB · 0 dB", "Gain after rendering. Use it to keep headroom."]
+      ]
+    } },
+    { "h3": "Render mode" },
+    { "table": {
+      "cols": ["Mode", "What it does"],
+      "widths": [20, 80],
+      "rows": [
+        ["`STEREO`", "Conventional speaker placement. On surround tracks such as 5.1 or 7.1, the non-LFE channels are mapped by speaker direction. Surround behaviour can depend on the host."],
+        ["`HEADPHONES`", "Binaural rendering with KEMAR HRTF for headphone listening. The result depends on your headphones and the shape of your head."]
+      ]
+    } },
+    { "tip": { "text": "Check a mix made in Headphones mode on speakers too, and the other way round. HRTF cues that work on headphones can sound coloured on speakers." } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Push an element back", "use": "Make a pad or backing vocal sit behind the lead.",
+        "settings": [["DISTANCE", "40 to 70%"], ["ROOM", "35 to 60%"], ["DISTANCE CURVE", "Physical"]],
+        "steps": ["Raise DISTANCE until the element sits behind the lead, then adjust ROOM for depth."] },
+      { "title": "Overhead effect on headphones", "use": "A sound that seems to come from above.",
+        "settings": [["Render mode", "HEADPHONES"], ["HEIGHT", "60 to 100%"]],
+        "steps": ["Keep the source in front at first; height cues are clearer from the front."] },
+      { "title": "Behind the listener", "use": "Ambience or effects that come from behind on headphones.",
+        "settings": [["Render mode", "HEADPHONES"], ["FRONT/BACK", "Toward back"]],
+        "steps": ["Front-back cues are subtle on speakers; check them on headphones."] },
+      { "title": "Even, predictable fades", "use": "Distance automation with a simple level curve.",
+        "settings": [["DISTANCE CURVE", "Linear"], ["Automation", "Distance"]],
+        "steps": ["Automate DISTANCE and listen to the level change across the move."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The sound is too quiet when far away.", "Distance lowers the level. Try another DISTANCE CURVE, or raise OUTPUT up to 0 dB."],
+        ["Height or front-back is hard to hear on speakers.", "These cues are strongest in HEADPHONES mode."],
+        ["Headphones mode sounds coloured.", "HRTF filtering changes the tone. Use STEREO for speaker mixes."],
+        ["The output clips.", "Lower OUTPUT to keep headroom."],
+        ["Surround channels behave unexpectedly.", "Check the track's channel layout in the host; support for surround layouts can vary by host."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`PAN`", "Pan", "−1 (left) to +1 (right)", "0"],
+        ["`FRONT/BACK`", "Front Back", "−1 (back) to +1 (front)", "+1"],
+        ["`HEIGHT`", "Height", "−1 (down) to +1 (up)", "0"],
+        ["`DISTANCE`", "Distance", "0 to 1", "0"],
+        ["`ROOM`", "Room", "0 to 1", "0.35"],
+        ["`DISTANCE CURVE`", "Distance Model", "Physical, Near Field, Linear", "Physical"],
+        ["`STEREO` / `HEADPHONES`", "Render Mode", "Stereo, Headphones", "Stereo"],
+        ["`OUTPUT`", "Output Trim", "−24 to 0 dB", "0 dB"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.3.0 · 2026-09-30", "Added the Physical, Near Field, and Linear distance attenuation curves, with Physical as the default."],
+        ["1.2.0 · 2026-07-30", "Moved the effect logo and product name into a shared header."]
+      ]
+    } }
+  ]
+}

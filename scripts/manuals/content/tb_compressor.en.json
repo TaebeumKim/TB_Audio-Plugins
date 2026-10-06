@@ -1,0 +1,202 @@
+{
+  "file": "TB_Compressor",
+  "version": "2.1.0",
+  "date": "2026-10-02",
+  "subtitle": "Peak / RMS Compressor with Saturator",
+  "tagline": "Precise peak or RMS compression with lookahead, an external sidechain with filters, and an optional saturator with circuit-derived colour models.",
+  "facts": ["Peak / RMS detector", "Soft knee", "External sidechain", "6 saturation types · 5 models", "Up to 8x oversampling"],
+  "ui": "tb_compressor.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Compressor is a single-band compressor for tracks, buses, and full mixes. It reduces the level of loud passages above a threshold, and lets you shape how quickly it reacts, how smoothly it starts, and what it listens to." },
+    { "p": "Next to the classic controls you get a peak or RMS detector, lookahead, stereo linking, an external sidechain input with its own filters, and a saturator that adds harmonic colour after compression. Oversampling up to 8x keeps the saturator clean." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Threshold, ratio, soft knee, attack, release, and makeup gain",
+      "Peak detection, or 50 ms RMS detection that follows the average level",
+      "Up to 20 ms lookahead so the compressor can react before a peak arrives",
+      "External sidechain with high-pass and low-pass filters on the detector",
+      "Stereo link, so both channels receive the same gain reduction",
+      "Saturator with six types (Clean, Soft, Hard, Punch, Warm, Tape) and five circuit-derived models",
+      "1x, 2x, 4x, or 8x oversampling",
+      "Transfer curve, six-second level history, and IN, OUT, and GR readouts"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input trim", "Detector (internal or external, SC filters)", "Peak or RMS level", "Soft-knee gain computer", "Attack / release, stereo link", "Delay line (lookahead)", "Makeup and output", "Saturator, oversampling"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Compressor 2.1.0 for Windows (VST3). The current macOS build is version 1.1.3 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Compressor on a track or bus. The defaults are a gentle starting point: `THRESH` −18 dB, `RATIO` 2:1, `KNEE` 6 dB, `ATTACK` 10 ms, `RELEASE` 100 ms.",
+      "Play the loudest part and lower `THRESH` until the GR readout {{3}} shows the amount of reduction you want, typically 2 to 6 dB.",
+      "Set `ATTACK`: longer times let the start of each note through for more punch; shorter times catch peaks.",
+      "Set `RELEASE` so the gain recovers in time with the music, without audible pumping.",
+      "Raise `MAKEUP` {{8}} until the compressed signal matches the bypassed level, then compare with bypass.",
+      "Optional: switch on the `SATURATOR` {{11}} and raise `DRIVE` for colour, or connect an external sidechain {{10}} for ducking."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_compressor.jpg",
+      "caption": "TB Compressor interface. The sidechain filters appear when an external sidechain is active.",
+      "callouts": [
+        { "n": 1, "x": 36.0, "y": 5.4 },
+        { "n": 2, "x": 87.0, "y": 5.4 },
+        { "n": 3, "x": 67.2, "y": 13.0 },
+        { "n": 4, "x": 4.6, "y": 18.6 },
+        { "n": 5, "x": 41.7, "y": 27.0 },
+        { "n": 6, "x": 3.4, "y": 57.0 },
+        { "n": 7, "x": 22.4, "y": 54.4 },
+        { "n": 8, "x": 3.4, "y": 79.4 },
+        { "n": 9, "x": 19.8, "y": 79.4 },
+        { "n": 10, "x": 35.6, "y": 79.4 },
+        { "n": 11, "x": 51.4, "y": 79.4 },
+        { "n": 12, "x": 82.2, "y": 79.4 }
+      ],
+      "legend": [
+        [1, "Preset browser", "previous and next preset, and the current Factory or user preset."],
+        [2, "Save, Undo, Redo", "save the current state to a .tbcpreset file and step through recent changes."],
+        [3, "IN, OUT, GR", "input and output level and the current gain reduction."],
+        [4, "CURVE", "the transfer curve: input level against output level, with the current ratio."],
+        [5, "Level history", "the last six seconds of level, with the threshold (THR) as a dashed line."],
+        [6, "DYNAMICS", "`THRESH`, `RATIO`, `KNEE`, `ATTACK`, and `RELEASE`."],
+        [7, "Detector", "PEAK or RMS."],
+        [8, "GAIN", "`INPUT` trim before the detector, and `MAKEUP` after compression."],
+        [9, "PERFORMANCE", "oversampling factor and `LOOKAHD` (lookahead)."],
+        [10, "SIDECHAIN", "shows whether the internal (INT) or an external (EXT) key is used. With EXT, the SC HPF and SC LPF filters become active."],
+        [11, "SATURATOR", "on/off, `DRIVE`, `MIX`, the circuit model, and the saturation type."],
+        [12, "OUTPUT", "final `OUTPUT` level and `ST LINK` (stereo link)."]
+      ]
+    } },
+
+    { "h2": "Dynamics controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`THRESH`", "−60 to 0 dB · −18 dB", "Compression threshold. Signals above it are reduced; the lower it is, the more of the program is compressed."],
+        ["`RATIO`", "1:1 to 20:1 · 2:1", "Compression ratio: how strongly level above the threshold is reduced. High ratios limit transients firmly."],
+        ["`KNEE`", "0 to 6 dB · 6 dB", "Knee width. A wide knee starts compressing gently just below the threshold; 0 dB gives a hard knee."],
+        ["`ATTACK`", "0.1 to 200 ms · 10 ms", "How quickly gain reduction reaches its target. Too fast dulls the attack of notes; too slow lets the first peak through."],
+        ["`RELEASE`", "5 to 1000 ms · 100 ms", "How quickly the gain recovers. Short times can pump; long times can keep the next note down."],
+        ["Detector (`PEAK` / RMS)", "Peak, RMS · Peak", "Peak reacts to instantaneous peaks. RMS follows a 50 ms average and controls sustained energy rather than short peaks."]
+      ]
+    } },
+    { "h2": "Gain, performance, and output" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`INPUT`", "−24 to +24 dB · 0 dB", "Input trim before the detector and delay line. It changes how hard the compressor is driven."],
+        ["`MAKEUP`", "0 to 24 dB · 0 dB", "Gain added after compression to restore level."],
+        ["`OUTPUT`", "−24 to +24 dB · 0 dB", "Final output level."],
+        ["`LOOKAHD`", "0 to 20 ms · 0 ms", "Lookahead: lets the detector react before a peak reaches the output. It adds latency."],
+        ["Oversampling", "1x (Off), 2x, 4x, 8x · 1x", "Runs the processing at a higher sample rate to reduce aliasing from saturation. Higher settings use more CPU and add latency."],
+        ["`ST LINK`", "Off, On · On", "Links gain reduction across channels so the stereo image stays steady. Off lets each channel compress on its own."]
+      ]
+    } },
+    { "warn": { "text": "TB Compressor uses a delay line of up to 20 ms for lookahead, and oversampling adds further latency. It is designed for mixing rather than zero-latency monitoring while recording." } },
+
+    { "h2": "Sidechain" },
+    { "p": "By default the detector listens to the audio being compressed (INT). When your DAW sends a signal to TB Compressor's sidechain input, the indicator changes to EXT and the detector listens to that key signal instead, for example a kick drum that ducks a bass or a voice that ducks music. The external key is used only when the sidechain bus is active in your DAW." },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`SC HPF`", "20 Hz to 10 kHz · 20 Hz", "High-pass filter on the external key (host name Sidechain Low Cut). Removes low frequencies from what the detector hears."],
+        ["`SC LPF`", "100 Hz to 20 kHz · 20 kHz", "Low-pass filter on the external key (host name Sidechain High Cut). Removes high frequencies from what the detector hears."]
+      ]
+    } },
+    { "note": { "text": "The sidechain filters shape only what the detector hears. They do not filter the audio you hear, and they work only with an external key (FILTERS ON WITH EXT SC)." } },
+
+    { "h2": "Saturator" },
+    { "p": "The saturator sits after compression and adds harmonic colour. Switch it on with `ON`, set the amount with `DRIVE`, and blend it with `MIX`. The circuit model selects the character: Legacy, or the circuit-derived VCA, opto, FET, and vari-mu colour models XXL, LX-2X, FET-X76, and FX-67X. The type selector sets the Legacy saturation type." },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`ON`", "Off, On · Off", "Enables the saturator."],
+        ["`DRIVE`", "0 to 4 · 1", "Saturation drive. Higher values add more harmonics and density."],
+        ["`MIX`", "0 to 1 · 1", "Dry/wet blend of the saturator."],
+        ["Circuit model", "Legacy, XXL, LX-2X, FET-X76, FX-67X · Legacy", "Saturator circuit model."],
+        ["Type", "Clean, Soft, Hard, Punch, Warm, Tape · Clean", "Legacy saturation type."]
+      ]
+    } },
+    { "tip": { "text": "Compare the saturator at matched loudness. Saturation adds harmonics and level, which can make it seem better than it is." } },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows in the preset browser {{1}}. LOAD FROM FILE opens a saved .tbcpreset file, and Save stores the current state as a file. Undo and Redo step through recent changes." },
+    { "p": "Factory presets: **Clean Control**, **Vocal Leveler**, **Drum Punch**, **Bus Glue**, and **Sidechain Duck**." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear and check the GR readout." },
+    { "recipes": [
+      { "title": "Level a vocal", "use": "Even out a vocal performance without squashing it.",
+        "settings": [["Preset", "Vocal Leveler"], ["RATIO", "2:1 to 4:1"], ["ATTACK", "5 to 15 ms"], ["RELEASE", "60 to 150 ms"], ["GR", "3 to 6 dB on loud phrases"]],
+        "steps": ["Lower THRESH until only the loud phrases are reduced.", "Match the level with MAKEUP."] },
+      { "title": "Add punch to drums", "use": "More impact from kick, snare, or a drum bus.",
+        "settings": [["Preset", "Drum Punch"], ["ATTACK", "10 to 30 ms"], ["RELEASE", "50 to 100 ms"], ["RATIO", "4:1"]],
+        "steps": ["Lengthen ATTACK until the hit's initial crack comes through.", "Shorten RELEASE until the gain recovers before the next hit."] },
+      { "title": "Glue a mix bus", "use": "Make a mix feel more cohesive.",
+        "settings": [["Preset", "Bus Glue"], ["RATIO", "1.5:1 to 2:1"], ["KNEE", "6 dB"], ["GR", "1 to 3 dB"], ["ST LINK", "On"]],
+        "steps": ["Keep reduction small; the bus should breathe, not pump."] },
+      { "title": "Duck bass with the kick", "use": "Make room for the kick by ducking the bass on each hit.",
+        "settings": [["Preset", "Sidechain Duck"], ["Key", "Kick to the sidechain input (EXT)"], ["SC LPF", "Around 150 Hz to focus on the kick"], ["ATTACK", "Short"], ["RELEASE", "Timed to the groove"]],
+        "steps": ["Route the kick to TB Compressor's sidechain input in your DAW.", "Lower THRESH until the bass dips on each kick."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The track sounds better only because it is louder.", "Match levels with MAKEUP or OUTPUT and compare with bypass at the same loudness."],
+        ["Drums lose their snap.", "Lengthen ATTACK, lower RATIO, or try the PEAK detector with less reduction."],
+        ["The level pumps audibly.", "Lengthen RELEASE or reduce the amount of gain reduction."],
+        ["The stereo image shifts while compressing.", "Switch ST LINK on."],
+        ["The sidechain does not react.", "Check that your DAW routes a signal to the sidechain input and that the indicator shows EXT."],
+        ["The SC filters do nothing.", "They affect only an external key, and only what the detector hears."],
+        ["The plug-in adds latency.", "Lookahead and oversampling add latency. Set LOOKAHD to 0 ms and oversampling to 1x for the lowest delay."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [20, 26, 34, 20],
+      "rows": [
+        ["`INPUT`", "Input", "−24 to +24 dB", "0 dB"],
+        ["`THRESH`", "Threshold", "−60 to 0 dB", "−18 dB"],
+        ["`RATIO`", "Ratio", "1:1 to 20:1", "2:1"],
+        ["`ATTACK`", "Attack", "0.1 to 200 ms", "10 ms"],
+        ["`RELEASE`", "Release", "5 to 1000 ms", "100 ms"],
+        ["`KNEE`", "Knee", "0 to 6 dB", "6 dB"],
+        ["`MAKEUP`", "Makeup", "0 to 24 dB", "0 dB"],
+        ["`OUTPUT`", "Output", "−24 to +24 dB", "0 dB"],
+        ["`LOOKAHD`", "Lookahead", "0 to 20 ms", "0 ms"],
+        ["Detector", "RMS", "Off (peak), On (RMS)", "Off"],
+        ["`ST LINK`", "Stereo Link", "Off, On", "On"],
+        ["`SC HPF`", "Sidechain Low Cut", "20 Hz to 10 kHz", "20 Hz"],
+        ["`SC LPF`", "Sidechain High Cut", "100 Hz to 20 kHz", "20 kHz"],
+        ["Oversampling", "Oversampling", "1x (Off), 2x, 4x, 8x", "1x"],
+        ["Saturator `ON`", "Saturation Enabled", "Off, On", "Off"],
+        ["`DRIVE`", "Saturation Drive", "0 to 4", "1"],
+        ["`MIX`", "Saturation Mix", "0 to 1", "1"],
+        ["Type", "Saturation", "Clean, Soft, Hard, Punch, Warm, Tape", "Clean"],
+        ["Circuit model", "Saturator Circuit Model", "Legacy, XXL, LX-2X, FET-X76, FX-67X", "Legacy"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["2.1.0 · 2026-08-09", "Clearer input and gain-reduction readouts on the main display. Refined sidechain state feedback and meter visibility; the 2.0 control layout is unchanged."]
+      ]
+    } }
+  ]
+}

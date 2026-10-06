@@ -1,0 +1,188 @@
+{
+  "file": "TB_Shimmer",
+  "version": "1.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Granular Shimmer and Diffuse Tail",
+  "tagline": "Pitch-shifted, reversible grains climb through filtered feedback and bloom into an eight-line diffuse tail, from distinct sparks to a wide, floating cloud.",
+  "facts": ["13 panel controls", "Pitch −12 to +24 st", "Tail decay up to 45 s", "100 factory presets"],
+  "ui": "tb_shimmer.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Shimmer cuts the incoming sound into short grains, transposes them, and feeds them back so that each new generation climbs again. The grains then pass through an early diffuser into an eight-line late tail, so the result can move from separate sparks to a smooth, rising cloud." },
+    { "p": "The upper row shapes the grains: `TIME`, `SIZE`, and `DENSITY` set where, how long, and how often grains play, `SCATTER` spreads them, and `LEVEL VAR`, `POSITION RAND`, and `PITCH SPRAY` vary each grain. The lower row sets the shimmer: `PITCH`, `REVERSE`, `FEEDBACK`, `TONE`, `WIDTH`, and `MIX`. TB Shimmer works on mono or stereo tracks, reports no latency, and needs no external feedback routing." },
+    { "h3": "Key features" },
+    { "ul": [
+      "Windowed grains read from the recent input, 60 to 1200 ms behind it",
+      "PITCH from −12 to +24 semitones, with a REVERSE chance per grain",
+      "Pitch-shifted feedback through a TONE filter, so grain generations keep rising",
+      "Early all-pass diffuser and an eight-line late tail with a decay of up to 45 seconds",
+      "Per-grain level, position, and pitch randomisation",
+      "Live GRAIN HALO display driven by the parameters",
+      "100 factory presets in 14 groups, user presets, undo, and redo",
+      "VST3 and standalone on Windows"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Grains (TIME, SIZE, DENSITY, SCATTER)", "PITCH, REVERSE, randomisation", "TONE filter and FEEDBACK", "Early diffuser and late tail", "WIDTH and MIX", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Shimmer 1.0.0 for Windows (VST3 and standalone). The current macOS build (AU and VST3) is also version 1.0.0; small differences between platforms are possible."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Shimmer on a pad, guitar, vocal, or keys track, or on an effects return. The defaults are `PITCH` +12 st, `FEEDBACK` 42%, and `MIX` 48%.",
+      "Choose a preset from the preset list {{1}}, or start from Init.",
+      "Set the grain pattern with `TIME`, `SIZE`, and `DENSITY` {{3}}. Low DENSITY gives separate grain echoes; high DENSITY gives a smooth wash.",
+      "Choose the interval with `PITCH` {{6}}, then raise `FEEDBACK` {{8}} to let the shimmer climb and the tail grow.",
+      "Shape the tail with `TONE` and `WIDTH`, and set the balance with `MIX` {{9}}. On an effects return, set MIX to 100%."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_shimmer.jpg",
+      "caption": "TB Shimmer 1.0 interface with the default settings.",
+      "callouts": [
+        { "n": 1, "x": 27.6, "y": 5.8 },
+        { "n": 2, "x": 13.0, "y": 18.1 },
+        { "n": 3, "x": 15.3, "y": 60.5 },
+        { "n": 4, "x": 54.2, "y": 52.8 },
+        { "n": 5, "x": 68.9, "y": 52.8 },
+        { "n": 6, "x": 17.4, "y": 85.1 },
+        { "n": 7, "x": 31.5, "y": 77.4 },
+        { "n": 8, "x": 48.0, "y": 77.4 },
+        { "n": 9, "x": 78.4, "y": 77.4 }
+      ],
+      "legend": [
+        [1, "Preset bar", "previous and next preset, the preset list with factory groups and user presets, Save, Undo, and Redo."],
+        [2, "GRAIN HALO", "a live grain field driven by the parameters, with the current pitch, density, and time."],
+        [3, "TIME, SIZE, DENSITY", "where grains start, how long they last, and how often they play."],
+        [4, "SCATTER", "grain spread and motion in the tail."],
+        [5, "LEVEL VAR, POSITION RAND, PITCH SPRAY", "per-grain randomisation."],
+        [6, "PITCH", "grain transposition in semitones."],
+        [7, "REVERSE", "the chance that a grain plays backward."],
+        [8, "FEEDBACK, TONE", "regeneration and tail brightness."],
+        [9, "WIDTH, MIX", "stereo spread and the dry/wet balance."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "h3": "Grain, motion & random" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`TIME`", "60 to 1200 ms · 240 ms", "Sets how far behind the input each grain begins. Short times stay close to the source; long times give separate, delayed grain echoes."],
+        ["`SIZE`", "40 to 500 ms · 160 ms", "Sets the grain duration and the scale of the diffuse space. Short grains sound grainy and articulate; long grains blend smoothly."],
+        ["`DENSITY`", "2 to 24 gr/s · 9.0 gr/s", "Grains per second. Moves from sparse grain echoes to a smooth, dense wash. DENSITY also sets how much diffusion and late tail are mixed in."],
+        ["`SCATTER`", "0 to 100% · 32%", "Varies grain size, spreads grains across the stereo field, and adds slow motion inside the diffuse tail."],
+        ["`LEVEL VAR`", "0 to 12 dB · 0 dB", "Lowers each grain's level by a random amount, up to the selected value."],
+        ["`POSITION RAND`", "0 to 100% · 32%", "Randomises each grain's read-start position around TIME."],
+        ["`PITCH SPRAY`", "0 to 12 st · 0.112 st (shown as 0.1 st)", "Spreads each grain's pitch continuously around the main PITCH setting."]
+      ]
+    } },
+    { "h3": "Shimmer & output" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`PITCH`", "−12 to +24 st in semitone steps · +12 st", "Transposes the grain cloud. With FEEDBACK, each new generation is transposed again, so the shimmer keeps rising (or falling with negative values). At 0 st there is no pitch shift."],
+        ["`REVERSE`", "0 to 100% · 18%", "Sets the chance that a grain reads backward."],
+        ["`FEEDBACK`", "0 to 88% · 42%", "Extends both the rising grain generations and the diffuse decay. The tail can last up to 45 seconds."],
+        ["`TONE`", "1.2 to 18 kHz · 9 kHz", "Damps each tail circulation and sets the brightness of the wet signal. Lower values give a darker, softer tail."],
+        ["`WIDTH`", "0 to 200% · 135%", "Sets the stereo spread of the combined grain and tail field. At 0% the wet field is mono, as in the Mono Bloom preset."],
+        ["`MIX`", "0 to 100% · 48%", "Blends the dry input with the granular shimmer and diffuse tail."]
+      ]
+    } },
+    { "p": "TB Shimmer also has a host Bypass parameter. There is no bypass button on the panel." },
+    { "tip": { "text": "PITCH +12 st gives the classic octave shimmer, +7 st a fifth, and +19 st an octave plus a fifth. Negative values make the tail fall instead of rise." } },
+    { "warn": { "text": "High FEEDBACK with long TIME and SIZE can build a long, loud tail. Raise FEEDBACK gradually and watch the output level." } },
+
+    { "h2": "Presets" },
+    { "p": "Step through presets with the arrows, or open the list to browse the factory groups and your user presets. Save asks for a name and stores the current settings as a .tbshimmer file in Documents/TB_Shimmer/Presets/User; if the name exists, you are asked before it is replaced. Undo and Redo step through recent parameter changes. The factory presets also appear in the host's program list." },
+    { "table": {
+      "cols": ["Group", "Presets"],
+      "widths": [18, 82],
+      "rows": [
+        ["START", "Init, Soft Halo, Open Air"],
+        ["SHIMMER", "Glass Halo, Guitar Ascension, Vocal Starlight"],
+        ["CLOUD", "Pad Aurora, Slow Nebula, Wide Harmonic Fog"],
+        ["REVERSE", "Reverse Comet, Falling Glass, Dark Orbit"],
+        ["UTILITY", "Subtle Lift, Mono Bloom, Centered Glow, Bright Ambience, Warm Ambience, Transient Guard, Wet Shimmer Bus, Wet Diffuse Bus"],
+        ["DIFFUSE", "Opal Chamber, Silken Room, Wide Diffusion, Warm Current, Dense Air, Slow Chamber, Short Bloom, Deep Diffusion"],
+        ["SPARKLE", "Silver Dust, Prism Ticks, High Constellation, Fifth Glint, Octave Sparks, Bright Rain, Fine Chimes, Star Shower"],
+        ["RANDOM", "Gentle Variation, Loose Grains, Wandering Pitch, Soft Roulette, Broken Halo, Random Current, Wide Uncertainty, Total Scatter"],
+        ["PULSE", "Tight Glimmer, Broad Cloud, Staggered Drift, Slow Bloom, Quick Spark, Reverse Cadence, Slow Pulse, Long Cycle"],
+        ["VOCAL", "Vocal Sheen, Vocal Octave, Vocal Air Trail, Vocal Velvet, Vocal Reverse Bloom, Vocal Choir Cloud, Vocal Shadow, Vocal Stars"],
+        ["GUITAR", "Guitar Glow, Guitar Fifth, Guitar Octave Trail, Guitar Reverse Swell, Guitar Warm Cloud, Guitar High Mist, Guitar Low Orbit, Guitar Grain Storm"],
+        ["KEYS", "Piano Air, Piano Halo, Electric Silk, Organ Ascension, Synth Prism, Bell Mist, Keys Reverse Air, Low Key Cloud"],
+        ["PADS", "Pad Soft Field, Pad Octave Wash, Pad Fifth Veil, Pad Reverse Tide, Pad High Horizon, Pad Low Horizon, Pad Random Choir, Pad Endless Light"],
+        ["DARK", "Smoked Glass, Low Tide, Dim Chamber, Shadow Reverse, Black Velvet, Dusk Spray, Deep Random, Night Bloom"],
+        ["EXPERIMENTAL", "Frozen Fragments, Micro Swarm, Descending Mirage, Split Direction, No Pitch Cloud, Reverse Only Field, Shifting Constellation, Outer Limit"]
+      ]
+    } },
+    { "p": "The UTILITY presets Wet Shimmer Bus and Wet Diffuse Bus use MIX 100% for effects returns. The PULSE presets use TIME values that match note lengths at 120 BPM, such as 500 ms for a quarter note; TIME does not follow the host tempo." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Octave shimmer", "use": "A rising octave halo on pads or guitar.",
+        "settings": [["Preset", "Glass Halo"], ["PITCH", "+12 st"], ["FEEDBACK", "40 to 55%"]],
+        "steps": ["Lower TONE if the top end gets brittle."] },
+      { "title": "Vocal sheen", "use": "A subtle lift behind a lead vocal.",
+        "settings": [["Preset", "Vocal Sheen"], ["MIX", "15 to 25%"], ["REVERSE", "0%"]],
+        "steps": ["Keep SCATTER low so the words stay clear."] },
+      { "title": "Reverse swell", "use": "Backward swells that rise out of a guitar part.",
+        "settings": [["Preset", "Guitar Reverse Swell"], ["REVERSE", "70 to 100%"]],
+        "steps": ["Longer SIZE makes the swells smoother."] },
+      { "title": "Shimmer return", "use": "One shimmer send shared by several tracks.",
+        "settings": [["Preset", "Wet Shimmer Bus"], ["MIX", "100%"]],
+        "steps": ["Insert TB Shimmer on an effects return and set the send level on each track."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The tail grows too long or too loud.", "Lower FEEDBACK, shorten TIME or SIZE, or lower MIX."],
+        ["The shimmer is harsh or brittle.", "Lower TONE, reduce PITCH SPRAY, or try +7 st instead of +12 st."],
+        ["The grains sound choppy.", "Raise DENSITY or SIZE."],
+        ["The effect sounds static.", "Raise SCATTER, POSITION RAND, or PITCH SPRAY slightly."],
+        ["The sound is too wide or weak in mono.", "Lower WIDTH."],
+        ["The repeats do not follow the song tempo.", "TIME is free-running. Set it by ear, or calculate it: 60000 ÷ BPM gives one quarter note in milliseconds."],
+        ["Nothing changes.", "MIX is at 0% or the host Bypass parameter is on."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`TIME`", "Time", "60 to 1200 ms", "240 ms"],
+        ["`SIZE`", "Size", "40 to 500 ms", "160 ms"],
+        ["`DENSITY`", "Density", "2 to 24 gr/s", "9.0 gr/s"],
+        ["`SCATTER`", "Scatter", "0 to 100%", "32%"],
+        ["`LEVEL VAR`", "Level Var", "0 to 12 dB", "0 dB"],
+        ["`POSITION RAND`", "Position Rand", "0 to 100%", "32%"],
+        ["`PITCH SPRAY`", "Pitch Spray", "0 to 12 st", "0.112 st"],
+        ["`PITCH`", "Pitch", "−12 to +24 st (whole semitones)", "+12 st"],
+        ["`REVERSE`", "Reverse", "0 to 100%", "18%"],
+        ["`FEEDBACK`", "Feedback", "0 to 88%", "42%"],
+        ["`TONE`", "Tone", "1200 to 18000 Hz", "9000 Hz"],
+        ["`WIDTH`", "Width", "0 to 200%", "135%"],
+        ["`MIX`", "Mix", "0 to 100%", "48%"],
+        ["—", "Bypass", "Off, On", "Off"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.0 · 2026-08-04", "First release: octave-up granular voices with an early diffuser and an eight-line late tail; Level Var, Position Rand, and Pitch Spray; 100 factory presets; versioned preset and state migration."]
+      ]
+    } }
+  ]
+}

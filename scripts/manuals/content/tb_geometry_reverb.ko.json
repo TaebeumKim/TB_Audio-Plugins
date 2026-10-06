@@ -1,0 +1,240 @@
+{
+  "file": "TB_GeometryReverb",
+  "version": "1.0.0",
+  "date": "2026-10-02",
+  "subtitle": "Ray-Traced Geometry Reverb",
+  "tagline": "3D 도형으로 리버브를 만듭니다. 소리 광선이 닫힌 메시 안에서 이미터에서 리스너로 이동하며, 크기, 재질, 방사, 위치가 들리는 공간을 정합니다.",
+  "facts": ["내장 모델 13종 + OBJ/FBX 가져오기", "면별 표면 재질", "구형 또는 원뿔 방사", "팩토리 프리셋 30종"],
+  "ui": "tb_geometry_reverb.jpg",
+  "body": [
+    { "h2": "개요" },
+    { "lead": "TB Geometry Reverb는 3D 도형을 방으로 바꿉니다. 소리 광선을 닫힌 메시 안에서 이미터(E)부터 리스너(L)까지 추적하고, 리스너에 닿는 경로, 표면 재질, 메시 크기, 공기 온도로 공간의 음향 스냅샷을 만든 뒤, 8라인 피드백 딜레이 네트워크가 촘촘한 꼬리를 더합니다." },
+    { "p": "내장 모델을 고르거나 직접 만든 OBJ, FBX 메시를 가져와 표면에 재질을 입히고, 그 안에 이미터와 리스너를 둡니다. `SCALE`은 크기, `TEMP / HF`는 공기, `RADIATION`은 이미터의 방사 방식, `MIX`는 일정 파워 드라이/웻 비율을 정합니다. 화면에는 메시와 소리에 기여하는 광선 경로가 표시됩니다." },
+    { "h3": "주요 기능" },
+    { "ul": [
+      "64개 방향 구간과 3단계 광선 품질의 광선 추적 음향 스냅샷",
+      "정육면체부터 트레포일 매듭, 오디토리엄까지 내장 모델 13종과 OBJ·FBX 가져오기",
+      "실시간 상태와 빠져나간 광선 비율을 보여 주는 닫힌 메시 검사",
+      "면별 또는 전체 표면에 입히는 흡음·산란 재질",
+      "10 ~ 180° 원뿔을 고를 수 있는 구형 또는 원뿔 방사",
+      "이미터와 리스너의 3D 위치와 방향",
+      "0.25 ~ 20배의 SCALE, −271 ~ 100 °C의 공기 온도",
+      "계산된 프리딜레이, 삼각형 수, 중역 RT60",
+      "팩토리 프리셋 30종, 사용자 프리셋, 실행 취소와 다시 실행"
+    ] },
+    { "h3": "신호 흐름" },
+    { "flow": { "steps": ["입력", "이미터(RADIATION, ROTATE)", "메시 안의 광선(SCALE, SURFACE, TEMP / HF)", "리스너(LOCATE, ROTATE)", "스냅샷과 8라인 꼬리", "일정 파워 MIX"] } },
+    { "note": { "title": "이 설명서에 대해", "text": [
+      "이 설명서는 Windows용 TB Geometry Reverb 1.0.0(VST3)을 기준으로 합니다. 현재 macOS 빌드는 없습니다."
+    ] } },
+
+    { "h2": "빠른 시작" },
+    { "ol": [
+      "트랙이나 이펙트 리턴에 TB Geometry Reverb를 넣습니다. 기본값은 SCALE 1.00배의 2 m 정육면체이며, 이미터는 X −0.20, 리스너는 X 0.20, TEMP 20 °C, MIX 35%입니다.",
+      "프리셋 바 {{1}}에서 출발점을 고르거나 GEOMETRY {{5}}에서 모델을 고릅니다.",
+      "`SCALE` {{9}}로 크기를, `MIX` {{12}}로 비율을 정합니다.",
+      "SURFACE {{7}}에서 재질을 고르고 APPLY ALL을 누릅니다.",
+      "EMITTER와 LISTENER {{13}}를 전환하며 `LOCATE` {{14}}와 `ROTATE` {{15}}로 배치합니다. 상태 줄 {{4}}이 READY가 될 때까지 기다립니다."
+    ] },
+
+    { "h2": "화면 구성" },
+    { "ui": {
+      "image": "tb_geometry_reverb.jpg",
+      "caption": "기본 정육면체를 띄운 TB Geometry Reverb 1.0 화면.",
+      "callouts": [
+        { "n": 1, "x": 29.0, "y": 5.0 },
+        { "n": 2, "x": 45.0, "y": 17.0 },
+        { "n": 3, "x": 23.5, "y": 16.5 },
+        { "n": 4, "x": 26.0, "y": 77.0 },
+        { "n": 5, "x": 82.1, "y": 14.6 },
+        { "n": 6, "x": 82.4, "y": 42.4 },
+        { "n": 7, "x": 81.0, "y": 55.7 },
+        { "n": 8, "x": 90.5, "y": 72.2 },
+        { "n": 9, "x": 14.0, "y": 80.7 },
+        { "n": 10, "x": 29.5, "y": 80.7 },
+        { "n": 11, "x": 42.3, "y": 80.7 },
+        { "n": 12, "x": 55.0, "y": 80.7 },
+        { "n": 13, "x": 64.3, "y": 80.4 },
+        { "n": 14, "x": 57.0, "y": 87.6 },
+        { "n": 15, "x": 57.0, "y": 95.4 }
+      ],
+      "legend": [
+        [1, "프리셋 바", "이전/다음 프리셋, 프리셋 이름과 목록, SAVE, 실행 취소, 다시 실행."],
+        [2, "3D 보기", "메시, 이미터(E), 리스너(L), 금색으로 표시되는 기여 광선 경로."],
+        [3, "메시와 광선 정보", "닫힌 다양체 검사, 방향 구간, 광선 수."],
+        [4, "상태 줄", "READY, SIMULATING, BLOCKED 또는 오류와 함께 광선 수와 빠져나간 광선 비율."],
+        [5, "GEOMETRY", "IMPORT MESH, 내장 모델, 메시 정보, PRE-DELAY, TRIANGLES, RT60 MID."],
+        [6, "RADIATION", "SPHERE 또는 CONE, 광선 품질, CONE ANGLE."],
+        [7, "SURFACE", "재질 목록, 계수, APPLY FACE, APPLY ALL."],
+        [8, "BYPASS", "리버브를 우회합니다."],
+        [9, "SCALE", "메시의 크기."],
+        [10, "TEMP / HF", "공기 온도."],
+        [11, "STRESS", "추가 효과의 양."],
+        [12, "MIX", "일정 파워 드라이/웻."],
+        [13, "EMITTER / LISTENER", "아래 여섯 노브를 이미터와 리스너 사이에서 전환합니다."],
+        [14, "LOCATE", "선택한 지점의 X, Y, Z 위치."],
+        [15, "ROTATE", "선택한 지점의 방향."]
+      ]
+    } },
+    { "p": "보기 화면에서 선택한 지점에는 색이 있는 X, Y, Z 핸들이 표시됩니다. 모델 아래의 눈금 막대는 크기를, 오른쪽 패널 아래의 줄은 음속(20 °C에서 343 m/s)을 보여 줍니다." },
+
+    { "h2": "조절부" },
+    { "table": {
+      "cols": ["조절부", "범위 · 기본값", "동작"],
+      "widths": [18, 24, 58],
+      "rows": [
+        ["`SCALE`", "0.25 ~ 20배 · 1.00배", "경로 시간을 계산하기 전에 메시 좌표의 크기를 바꿉니다. 클수록 경로가 긴 큰 공간이 됩니다."],
+        ["`TEMP / HF`", "−271 ~ 100 °C · 20 °C", "공기 온도입니다. 음속을 정하고 고역(HF) 감쇠를 바꿉니다."],
+        ["`STRESS`", "0 ~ 100% · 0%", "공간을 더 세게 밀어붙이는 추가 효과의 양입니다. DRIVE 프리셋이 씁니다. 조금씩 올리세요."],
+        ["`MIX`", "0 ~ 100% · 35%", "일정 파워 드라이/웻 비율입니다."],
+        ["`RADIATION`", "SPHERE, CONE · SPHERE", "SPHERE는 64개 방향 구간 전부로 방사하고, CONE은 원뿔로 모읍니다."],
+        ["`CONE ANGLE`", "10 ~ 180° · 90°", "원뿔의 꼭지각입니다. RADIATION이 CONE일 때만 쓸 수 있습니다."],
+        ["광선 품질", "DRAFT, NORM, HIGH · NORM", "추적하는 광선 수입니다(그림의 NORM에서 4096개). 높을수록 정밀하지만 계산이 오래 걸립니다."],
+        ["`LOCATE` X, Y, Z", "−0.95 ~ 0.95 · 이미터 −0.20, 0, 0; 리스너 0.20, 0, 0", "메시를 기준으로 한 이미터나 리스너의 위치입니다. 둘 다 닫힌 메시 안에 있어야 합니다."],
+        ["`ROTATE`", "방위각 −180 ~ 180°, 앙각 −89 ~ 89°, 롤 −180 ~ 180° · 0°", "이미터나 리스너의 방향입니다. 리스너의 각도는 이미터 방향을 기준으로 재므로 0°는 소스를 향합니다. 원뿔은 축을 중심으로 대칭이므로 이미터에는 롤이 효과가 없습니다."],
+        ["`BYPASS`", "Off, On · Off", "리버브를 우회합니다."]
+      ]
+    } },
+    { "p": "다음 호스트 파라미터는 프리셋과 프로젝트에 저장되지만 위의 패널에는 나타나지 않습니다." },
+    { "table": {
+      "cols": ["호스트 파라미터", "범위 · 기본값", "동작"],
+      "widths": [22, 24, 54],
+      "rows": [
+        ["Rotation", "−180 ~ 180° · 0°", "메시를 회전합니다."],
+        ["Spin X, Spin Y, Spin Z", "−6 ~ 6 rpm · 0", "각 축을 중심으로 한 메시의 회전 속도입니다."],
+        ["Output", "−18 ~ +12 dB · 0 dB", "출력 트림입니다."],
+        ["Super Grain", "0 ~ 100% · 0%", "여러 팩토리 프리셋이 쓰는 추가 그레인 효과의 양입니다."]
+      ]
+    } },
+
+    { "h2": "지오메트리와 재질" },
+    { "h3": "모델과 가져오기" },
+    { "ul": [
+      "내장 모델: Tetrahedron, Cube, Sphere, Torus, Twisted Torus, Trefoil Knot, Superellipsoid, Harmonic Shell, Spiked Shell, Hyperboloid, Corrugated Drum, Capsule, Auditorium.",
+      "IMPORT MESH는 Wavefront OBJ나 FBX 파일을 백그라운드에서 불러옵니다. 파일은 1바이트 ~ 64 MiB, 꼭짓점 250,000개, 삼각형 500,000개 이하여야 합니다.",
+      "닫힌 다양체 메시만 새 음향 스냅샷을 만들 수 있습니다. 열린 메시나 다양체가 아닌 메시는 보이기만 하고 시뮬레이션되지 않으며, 자기 교차는 검사하지 않습니다.",
+      "이미터와 리스너는 모두 회전된 닫힌 메시 안에 있어야 합니다. 그렇지 않으면 상태 줄에 BLOCKED가 표시됩니다.",
+      "PRE-DELAY, TRIANGLES, RT60 MID는 현재 스냅샷에서 계산됩니다."
+    ] },
+    { "h3": "재질" },
+    { "ul": [
+      "팩토리 재질에는 Concrete, Concrete Block(Painted), Wood, Glass, Metal, Curtain이 있습니다.",
+      "재질 아래의 표시는 A(저역·중역·고역 흡음), R(반사), S(산란)입니다.",
+      "APPLY FACE는 선택한 면에, APPLY ALL은 모든 표면에 재질을 입힙니다. 메시 하나에 재질 스냅샷을 최대 256개 쓸 수 있습니다.",
+      "재질 메뉴에는 IMPORT JSON, LIBRARY, OPEN USER FOLDER, RESCAN도 있습니다. 사용자 재질은 0 ~ 1의 흡음·산란 계수를 담은 .tbmaterial.json 파일이며, 사용자 재질 파일은 최대 255개까지 읽습니다."
+    ] },
+
+    { "h2": "프리셋" },
+    { "p": "화살표로 프리셋을 넘기거나, 목록을 열어 팩토리 프리셋이나 사용자 프리셋을 고릅니다. SAVE는 메시와 재질을 포함한 현재 설정을 .tbgeometry 파일로 저장합니다. 실행 취소와 다시 실행으로 최근 변경을 오갈 수 있습니다. 표의 TEMP는 공기 온도, Quality는 광선 품질입니다." },
+    { "table": {
+      "compact": true,
+      "cols": ["프리셋", "모델", "SCALE", "TEMP", "Quality", "MIX", "참고"],
+      "widths": [19, 17, 9, 11, 10, 8, 26],
+      "rows": [
+        {"group": "START"},
+        ["Cube Studio", "Cube", "1×", "10 °C", "NORM", "35%", "—"],
+        ["Tetra Chamber", "Tetrahedron", "1.5×", "0 °C", "NORM", "40%", "—"],
+        ["Sphere Studio", "Sphere", "2×", "25 °C", "NORM", "42%", "—"],
+        {"group": "SPACE"},
+        ["Close Chamber", "Cube", "0.45×", "35 °C", "NORM", "30%", "—"],
+        ["Concrete Hall", "Cube", "8×", "−60 °C", "HIGH", "38%", "—"],
+        ["Warm Room", "Cube", "3×", "55 °C", "NORM", "34%", "—"],
+        ["Large Vault", "Sphere", "4×", "−120 °C", "HIGH", "48%", "—"],
+        {"group": "BEAM"},
+        ["Focused Cone", "Cube", "3.5×", "15 °C", "HIGH", "46%", "CONE 35°"],
+        ["Wide Cone", "Tetrahedron", "4×", "5 °C", "NORM", "45%", "CONE 125°"],
+        {"group": "MATH"},
+        ["Torus Ring", "Torus", "3×", "12 °C", "NORM", "44%", "—"],
+        ["Twisted Ring", "Twisted Torus", "3×", "30 °C", "HIGH", "44%", "—"],
+        ["Trefoil Knot", "Trefoil Knot", "2.5×", "−40 °C", "HIGH", "50%", "—"],
+        ["Squircle Room", "Superellipsoid", "6×", "8 °C", "NORM", "40%", "—"],
+        ["Harmonic Shell", "Harmonic Shell", "5×", "−20 °C", "HIGH", "45%", "—"],
+        ["Spiked Diffuser", "Spiked Shell", "4×", "25 °C", "HIGH", "46%", "—"],
+        ["Hyperboloid Waist", "Hyperboloid", "4.5×", "0 °C", "NORM", "40%", "—"],
+        ["Corrugated Drum", "Corrugated Drum", "3.5×", "40 °C", "HIGH", "42%", "—"],
+        ["Capsule Corridor", "Capsule", "4×", "20 °C", "NORM", "38%", "—"],
+        {"group": "HALL"},
+        ["Auditorium", "Auditorium", "1×", "−80 °C", "HIGH", "34%", "—"],
+        ["Auditorium Rear", "Auditorium", "1×", "−40 °C", "HIGH", "40%", "Super Grain 20%, 리스너 방위각 155°"],
+        {"group": "COMB"},
+        ["Sphere Focus", "Sphere", "3×", "0 °C", "HIGH", "50%", "—"],
+        ["Golden Ratio", "Cube", "4×", "10 °C", "HIGH", "45%", "—"],
+        ["Axial Stack", "Cube", "3×", "25 °C", "NORM", "46%", "—"],
+        ["Corner Pair", "Cube", "5×", "−30 °C", "HIGH", "44%", "—"],
+        ["Squircle Null", "Superellipsoid", "4×", "5 °C", "HIGH", "44%", "—"],
+        ["Drum Ripple", "Corrugated Drum", "3.5×", "20 °C", "HIGH", "45%", "—"],
+        {"group": "DRIVE"},
+        ["Pushed Room", "Cube", "3×", "30 °C", "NORM", "48%", "STRESS 72%"],
+        ["Knot Grain", "Trefoil Knot", "2.5×", "−60 °C", "HIGH", "52%", "STRESS 35%, Super Grain 85%"],
+        ["Turned Away", "Harmonic Shell", "5×", "15 °C", "HIGH", "46%", "Super Grain 30%, 리스너 방위각 95°, 앙각 20°"],
+        ["Deep Freeze", "Hyperboloid", "6×", "−265 °C", "HIGH", "50%", "CONE 60°, STRESS 20%, Super Grain 45%"]
+      ]
+    } },
+
+    { "h2": "작업 예시" },
+    { "p": "자주 하는 작업의 출발점입니다. 귀로 조정하세요." },
+    { "recipes": [
+      { "title": "작은 스튜디오", "use": "보컬과 악기를 위한 짧고 자연스러운 방.",
+        "settings": [["프리셋", "Cube Studio"], ["MIX", "25 ~ 40%"]],
+        "steps": ["방이 너무 좁게 느껴지면 SCALE을 조금 올립니다."] },
+      { "title": "콘크리트 홀", "use": "드럼이나 영화적인 타격음을 위한 크고 단단한 공간.",
+        "settings": [["프리셋", "Concrete Hall"], ["SCALE", "6 ~ 10배"]],
+        "steps": ["꼬리가 너무 밝으면 Curtain 같은 흡음 재질을 씁니다."] },
+      { "title": "방향성 있는 소스", "use": "공간 안으로 겨눈 소리의 빔.",
+        "settings": [["프리셋", "Focused Cone"], ["CONE ANGLE", "30 ~ 60°"]],
+        "steps": ["ROTATE로 이미터를 돌려 빔을 겨눕니다."] },
+      { "title": "추상적인 공간", "use": "수학적 도형이 만드는 독특한 공진.",
+        "settings": [["프리셋", "Trefoil Knot 또는 Spiked Diffuser"], ["Quality", "HIGH"]],
+        "steps": ["편집하는 동안에는 DRAFT, 최종 소리에는 HIGH를 씁니다."] }
+    ] },
+
+    { "h2": "팁과 문제 해결" },
+    { "table": {
+      "cols": ["증상", "확인할 점"],
+      "widths": [36, 64],
+      "rows": [
+        ["상태 줄에 BLOCKED가 표시된다.", "이미터나 리스너가 닫힌 메시 밖에 있습니다. LOCATE를 가운데 쪽으로 옮기거나 메시 회전을 확인하세요."],
+        ["가져온 메시에서 소리가 나지 않는다.", "닫힌 다양체가 아니거나, 너무 크거나, OBJ·FBX 파일이 아닙니다. 상태 줄과 토폴로지 표시를 확인하세요."],
+        ["꼬리가 너무 길다.", "SCALE을 낮추거나, 흡음이 큰 재질을 고르거나, MIX를 낮추세요."],
+        ["꼬리가 너무 밝거나 둔하다.", "표면 재질이나 TEMP / HF를 바꾸세요."],
+        ["갱신이 오래 걸린다.", "편집하는 동안에는 DRAFT 광선 품질을 쓰세요."],
+        ["아무 변화가 없다.", "MIX가 0%이거나 BYPASS가 켜져 있습니다."]
+      ]
+    } },
+
+    { "h2": "파라미터 참고표" },
+    { "table": {
+      "compact": true,
+      "cols": ["패널 표기", "호스트 파라미터", "범위", "기본값"],
+      "widths": [22, 24, 34, 20],
+      "rows": [
+        ["`SCALE`", "Scale", "0.25 ~ 20배", "1.00배"],
+        ["`RADIATION`", "Radiation", "Sphere, Cone", "Sphere"],
+        ["`CONE ANGLE`", "Cone Angle", "10 ~ 180°", "90°"],
+        ["—", "Rotation", "−180 ~ 180°", "0°"],
+        ["—", "Spin Y", "−6 ~ 6 rpm", "0"],
+        ["`TEMP / HF`", "Temperature", "−271 ~ 100 °C", "20 °C"],
+        ["광선 품질", "Quality", "Draft, Normal, High", "Normal"],
+        ["`LOCATE`(이미터)", "Source X, Y, Z", "−0.95 ~ 0.95", "−0.20, 0, 0"],
+        ["`LOCATE`(리스너)", "Receiver X, Y, Z", "−0.95 ~ 0.95", "0.20, 0, 0"],
+        ["`MIX`", "Mix", "0 ~ 100%", "35%"],
+        ["—", "Output", "−18 ~ +12 dB", "0 dB"],
+        ["`BYPASS`", "Bypass", "Off, On", "Off"],
+        ["—", "Spin X, Spin Z", "−6 ~ 6 rpm", "0"],
+        ["`ROTATE`(이미터)", "Emitter Azimuth, Emitter Elevation", "−180 ~ 180°, −89 ~ 89°", "0°"],
+        ["`STRESS`", "Stress", "0 ~ 100%", "0%"],
+        ["`ROTATE`(리스너)", "Listener Azimuth, Elevation, Roll", "−180 ~ 180°, −89 ~ 89°, −180 ~ 180°", "0°"],
+        ["—", "Super Grain", "0 ~ 100%", "0%"]
+      ]
+    } },
+
+    { "h2": "버전 기록" },
+    { "table": {
+      "cols": ["버전", "변경 내용"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.0.0 · 2026-08-17", "첫 릴리스. 메시 가져오기, 닫힌 메시 검사, 이미터·리스너 위치 검사를 갖춘 지오메트리 기반 리버브. 3단계 광선 품질의 64방향 스냅샷 광선 모델과 8라인 FDN 패스, 재질·크기·방사 패턴 제어, 스냅샷 계산을 위한 상태·프리셋·호스트 상태 처리."]
+      ]
+    } }
+  ]
+}

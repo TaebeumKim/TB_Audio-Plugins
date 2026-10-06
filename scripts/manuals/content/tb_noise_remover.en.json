@@ -1,0 +1,181 @@
+{
+  "file": "TB_NoiseRemover",
+  "version": "2.4.0",
+  "date": "2026-10-02",
+  "subtitle": "Neural and Spectral Noise Removal",
+  "tagline": "Reduces steady background noise, hum, hiss, clicks, and clipped peaks while protecting the voice, with a learnable noise print and a focus band for targeted work.",
+  "facts": ["Neural + spectral cleanup", "0.75 s noise print", "Focus Band", "7 targeted switches"],
+  "ui": "tb_noise_remover.jpg",
+  "coverImage": false,
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB Noise Remover reduces room tone, air conditioning, fans, hiss, and other steady background noise while protecting the voice. Its hybrid engine combines neural speech enhancement with spectral restoration, and switches to the spectral path whenever the neural path cannot run." },
+    { "p": "One `REDUCTION` control moves from natural cleanup to strong suppression. Separate switches treat specific problems, such as rumble, mains hum, hiss, digital whine, clicks, and clipped peaks, so each one is processed only when it is present. `LEARN NOISE` captures a noise print from a noise-only passage, and Focus Band concentrates the reduction on a frequency range you select on the analyzer." },
+    { "h3": "Key features" },
+    { "ul": [
+      "`BASIC`: the main hybrid cleanup for ambience, air, and room residue",
+      "`REDUCTION` from natural to maximum cleanup",
+      "`LEARN NOISE` captures 0.75 seconds of noise-only audio as a noise print; `CLEAR PRINT` returns to adaptive cleanup",
+      "Focus Band concentrates the reduction on a frequency range selected on the analyzer",
+      "Targeted switches: `LOW RUMBLE`, `50 Hz HUM`, `60 Hz HUM`, `HISS`, and `DIGITAL WHINE`",
+      "Repair switches: `CLICKS` and `CLIP REPAIR`",
+      "Analyzer showing the input spectrum and the estimated noise floor"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input analysis", "Spectral cleanup and HISS", "LOW RUMBLE and HUM", "DIGITAL WHINE", "CLICKS and CLIP REPAIR", "Neural speech enhancement (Windows)", "Output"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB Noise Remover 2.4.0 for Windows (VST3). The current macOS build is version 1.1.3. It uses the spectral path only, because the neural enhancer is Windows-only, and it may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB Noise Remover on the dialogue, vocal, or field recording. By default `BASIC` is on and `REDUCTION` is 70%.",
+      "Start playback over a passage that contains only noise, such as the pause before the first word, and click `LEARN NOISE`. The plug-in captures the next 0.75 seconds as a noise print.",
+      "Adjust `REDUCTION` while listening to the voice. Stop just before consonants, breaths, or room tone start to sound watery.",
+      "Switch on only the problems you can actually hear: `LOW RUMBLE`, `50 Hz HUM` or `60 Hz HUM`, `HISS`, or `DIGITAL WHINE`.",
+      "If the noise sits in one frequency region, select that range on the analyzer to set the Focus Band.",
+      "Use `CLICKS` and `CLIP REPAIR` only on damaged material, and compare with bypass at matched loudness."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_noise_remover.jpg",
+      "caption": "An earlier version is shown. In 2.4.0 the switches use the full names in this manual (for example, LOW RUMBLE instead of RUMBLE and CLIP REPAIR instead of DECLIP). The panel also adds the LEARN NOISE and CLEAR PRINT buttons and a Focus Band selection on the analyzer."
+    } },
+    { "table": {
+      "cols": ["Area", "What it does"],
+      "widths": [24, 76],
+      "rows": [
+        ["Preset bar", "Previous and next preset, the preset list (CUSTOM appears after you change a setting), Save, Undo, and Redo."],
+        ["Analyzer", "Shows the input spectrum (`INPUT`) and the estimated noise floor (`NOISE FLOOR`). The frequency grid is labelled from 32 Hz to 16 kHz and the level scale from 0 to −48 dB. `NO INPUT` appears when no signal arrives. Select a frequency range here to set the Focus Band."],
+        ["Noise print", "`LEARN NOISE` and `CLEAR PRINT`."],
+        ["`BASIC` and `REDUCTION`", "The main cleanup switch and its strength."],
+        ["Target and repair switches", "Switches for specific problems: `LOW RUMBLE`, `50 Hz HUM`, `60 Hz HUM`, `HISS`, `DIGITAL WHINE`, `CLICKS`, and `CLIP REPAIR`."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "h3": "Main cleanup" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 20, 62],
+      "rows": [
+        ["`BASIC`", "Off, On · On", "Enables the main hybrid cleanup for ambience, air, and room residue. When it is off, the neural path does not run. The target and repair switches still work on their own."],
+        ["`REDUCTION`", "0 to 100% · 70%", "Sets the cleanup strength from natural to maximum reduction. It raises the spectral amount, the reduction depth, and the noise bias together. High values can cause watery artifacts and remove consonants and room tone."]
+      ]
+    } },
+    { "h3": "Noise print" },
+    { "table": {
+      "cols": ["Control", "Type", "What it does"],
+      "widths": [18, 20, 62],
+      "rows": [
+        ["`LEARN NOISE`", "Button", "Captures the next 0.75 seconds of noise-only audio and applies that noise print to the cleanup. Playback must be running over a passage that contains only noise."],
+        ["`CLEAR PRINT`", "Button", "Clears the learned noise print and returns to the adaptive cleanup."]
+      ]
+    } },
+    { "tip": { "text": "Without a noise print, the cleanup adapts to the noise on its own. Learn a print when the noise is steady and you have a clean noise-only passage of at least 0.75 seconds." } },
+    { "h3": "Focus Band" },
+    { "p": "Focus Band concentrates the reduction on the noise inside a frequency range that you select on the analyzer. Use it when the noise sits in one region, such as a fan whir in the low mids or hiss in the top octaves. The three Focus values are also host parameters, so you can set or automate them from your DAW." },
+    { "table": {
+      "cols": ["Host parameter", "Range · default", "What it does"],
+      "widths": [24, 24, 52],
+      "rows": [
+        ["Focus Band", "Off, On · Off", "Turns the focused reduction on or off."],
+        ["Focus Low Frequency", "20 Hz to 20 kHz · 120 Hz", "Lower edge of the focus band."],
+        ["Focus High Frequency", "20 Hz to 20 kHz · 12 kHz", "Upper edge of the focus band."]
+      ]
+    } },
+    { "h3": "Targets" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 20, 62],
+      "rows": [
+        ["`LOW RUMBLE`", "Off, On · Off", "A fixed 80 Hz high-pass that removes low-frequency rumble and handling noise. It can also thin out bass and the body of low voices, so compare with bypass."],
+        ["`50 Hz HUM`", "Off, On · Off", "Removes 50 Hz mains hum and its harmonics."],
+        ["`60 Hz HUM`", "Off, On · Off", "Removes 60 Hz mains hum and its harmonics."],
+        ["`HISS`", "Off, On · Off", "Reduces steady broadband hiss with a separate high-frequency path that also works when BASIC is off. It overlaps cymbals, sibilance, and air, so start gently."],
+        ["`DIGITAL WHINE`", "Off, On · Off", "Suppresses narrow, steady digital whine tones. It cannot always tell a whine from a sustained musical note."]
+      ]
+    } },
+    { "h3": "Spectral repair" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 20, 62],
+      "rows": [
+        ["`CLICKS`", "Off, On · Off", "Repairs short clicks and impulse noise from the surrounding waveform. Long clicks and larger damage need manual editing."],
+        ["`CLIP REPAIR`", "Off, On · Off", "Reconstructs clipped, flat-topped waveform peaks. The result is an estimate and cannot recreate the original peak exactly."]
+      ]
+    } },
+    { "h3": "Neural and spectral paths" },
+    { "p": "On Windows, `BASIC` combines a neural speech enhancer with spectral restoration. If the neural path cannot run, the plug-in switches to the spectral path so processing continues. When `BASIC` is off, the neural path does not run at all. The macOS build always uses the spectral path. The plug-in reports its processing latency to the host so the track stays aligned." },
+    { "warn": { "text": "Real-time cleanup cannot restore what is not in the recording. Strong settings remove noise but can also remove consonants, breaths, and room tone. Always compare with bypass at matched loudness." } },
+
+    { "h2": "Presets" },
+    { "p": "Use the arrows to step through presets, or open the list to choose Init or one of your saved presets. Save stores the current settings as a .tbnoiseremoverpreset file. The name shows CUSTOM after you change a setting. Undo and Redo step through recent parameter changes." },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Dialogue with room tone", "use": "Steady room or air-conditioning noise under speech.",
+        "settings": [["BASIC", "On"], ["Noise print", "Learned from a pause"], ["REDUCTION", "40 to 70%"]],
+        "steps": ["Learn the print from the pause before the first word.", "Raise REDUCTION until the noise sits under the voice, then back off slightly."] },
+      { "title": "Mains hum", "use": "A steady low buzz from power or cabling.",
+        "settings": [["50 Hz HUM / 60 Hz HUM", "Match the mains frequency where it was recorded"], ["LOW RUMBLE", "On only if there is also rumble"]],
+        "steps": ["Mains power is 60 Hz in Korea and North America and 50 Hz in most of Europe.", "Try one hum switch at a time. The wrong one makes little difference."] },
+      { "title": "Fan noise in one band", "use": "A whir or whine that sits in one frequency region.",
+        "settings": [["Focus Band", "On, around the noise"], ["REDUCTION", "Moderate"]],
+        "steps": ["Select the range where the noise is strongest on the analyzer.", "Narrow the band if the voice starts to change."] },
+      { "title": "Damaged recording", "use": "Clicks or clipped peaks in a recording.",
+        "settings": [["CLICKS", "On"], ["CLIP REPAIR", "On, tried separately"]],
+        "steps": ["Render each repair on its own and compare, so you know which one changed the sound."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The voice sounds watery or swirly.", "REDUCTION is too high. Lower it, or learn a new noise print from a cleaner noise-only passage."],
+        ["The noise print did not help.", "The captured 0.75 seconds must contain only noise. Click CLEAR PRINT and learn again from a longer pause."],
+        ["The bass or the body of the voice is gone.", "Turn off LOW RUMBLE or the hum switch and compare."],
+        ["Cymbals or sibilance lost their air.", "Turn off HISS or lower REDUCTION."],
+        ["Nothing changes with BASIC off.", "With BASIC off, only the switched targets and repairs process the sound."],
+        ["The analyzer shows NO INPUT.", "No signal is reaching the plug-in. Check the track routing and playback."],
+        ["The macOS version sounds different.", "The macOS build uses the spectral path only, and its version is older."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [24, 26, 30, 20],
+      "rows": [
+        ["`BASIC`", "Basic", "Off, On", "On"],
+        ["`REDUCTION`", "Reduction", "0 to 100%", "70%"],
+        ["`LOW RUMBLE`", "Low Rumble", "Off, On", "Off"],
+        ["`50 Hz HUM`", "50 Hz Hum", "Off, On", "Off"],
+        ["`60 Hz HUM`", "60 Hz Hum", "Off, On", "Off"],
+        ["`HISS`", "Hiss", "Off, On", "Off"],
+        ["`DIGITAL WHINE`", "Digital Whine", "Off, On", "Off"],
+        ["`CLICKS`", "Clicks", "Off, On", "Off"],
+        ["`CLIP REPAIR`", "Clip Repair", "Off, On", "Off"],
+        ["Analyzer selection", "Focus Band", "Off, On", "Off"],
+        ["Analyzer selection", "Focus Low Frequency", "20 Hz to 20 kHz", "120 Hz"],
+        ["Analyzer selection", "Focus High Frequency", "20 Hz to 20 kHz", "12 kHz"]
+      ]
+    } },
+    { "p": "LEARN NOISE and CLEAR PRINT are buttons, not host parameters." },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["2.4.0 · 2026-09-30", "Added Focus Band, which concentrates the reduction on a frequency range selected on the analyzer."],
+        ["2.3.0 · 2026-09-21", "Added noise print capture with LEARN NOISE and CLEAR PRINT. The neural path no longer runs while BASIC is off, and the plug-in switches to a safe spectral fallback if the neural path fails."],
+        ["2.2.0 · 2026-07-30", "Moved the effect logo and product name into a shared rack header, and improved previous/next navigation and preset saving and loading."]
+      ]
+    } }
+  ]
+}

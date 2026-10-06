@@ -1,0 +1,168 @@
+{
+  "file": "TB_SubLow",
+  "version": "1.3.0",
+  "date": "2026-10-02",
+  "subtitle": "Additive Low-End Generator",
+  "tagline": "Creates new bass at the frequency you choose, independent of the input pitch, with focused Core, resonant Bloom, and onset Punch layers and zero latency.",
+  "facts": ["Target 32 to 250 Hz", "Core, Bloom, and Punch layers", "Zero latency", "12 factory presets"],
+  "ui": "tb_sublow.jpg",
+  "body": [
+    { "h2": "Overview" },
+    { "lead": "TB SubLow is an additive low-frequency engine. It creates new bass at a frequency you choose, independent of the input pitch, and builds that energy beneath the original sound." },
+    { "p": "`CORE` generates a focused, stable centre at `TARGET`. `BLOOM` adds resonant body, short diffusion, and subtle harmonics around the low end. `PUNCH` reinforces the onsets, and `RESPONSE` sets how the generated layers follow the body and release of the source. Unlike a fixed rumble generator or an octave-down effect, TB SubLow reacts to full-band mono or stereo material, and it adds no latency." },
+    { "h3": "Key features" },
+    { "ul": [
+      "TARGET from 32 to 250 Hz, independent of the input pitch",
+      "Three generated layers: CORE, BLOOM, and PUNCH",
+      "RESPONSE sets how quickly the layers follow and release",
+      "Zero reported latency; the dry signal is not delayed",
+      "Input (DRY) and output (SUM) meters with live Body, Bloom, Punch, and Generated feedback",
+      "12 factory presets in three groups, user presets, undo, and redo"
+    ] },
+    { "h3": "Signal flow" },
+    { "flow": { "steps": ["Input", "Body and onset analysis", "CORE at TARGET", "BLOOM resonance and diffusion", "PUNCH onset layer", "Sum with the dry signal", "OUTPUT"] } },
+    { "note": { "title": "About this manual", "text": [
+      "This manual describes TB SubLow 1.3.0 for Windows (VST3). The current macOS build is version 0.1.3 and may differ from the descriptions here."
+    ] } },
+
+    { "h2": "Quick start" },
+    { "ol": [
+      "Insert TB SubLow on a kick, bass, or full mix. The defaults are `TARGET` 55 Hz, `CORE` 30%, `BLOOM` 15%, `PUNCH` 20%, and `RESPONSE` 50%.",
+      "Set `TARGET` near the fundamental you want to reinforce, for example the kick's low thump.",
+      "Set the amount of steady sub with `CORE`.",
+      "Add `PUNCH` for impact on hits, or `BLOOM` for a fuller, resonant body.",
+      "Adjust `RESPONSE` for a faster or longer-lasting body.",
+      "Match the level with `OUTPUT` and compare with bypass on small speakers and headphones."
+    ] },
+
+    { "h2": "Interface" },
+    { "ui": {
+      "image": "tb_sublow.jpg",
+      "caption": "TB SubLow 1.3 interface (portfolio image)."
+    } },
+    { "table": {
+      "cols": ["Area", "What it does"],
+      "widths": [24, 76],
+      "rows": [
+        ["Preset bar", "Previous and next factory preset, the preset list, SAVE, UNDO, and REDO."],
+        ["`INPUT` meter (DRY)", "The stereo input level."],
+        ["SUB PRESSURE CHAMBER", "The TARGET frequency with live BODY, BLOOM, PUNCH, and GENERATED activity."],
+        ["`BYP`", "Bypasses all processing while keeping the current settings."],
+        ["Controls", "`TARGET`, `CORE`, `BLOOM`, `PUNCH`, `RESPONSE`, and `OUTPUT`."],
+        ["`OUTPUT` meter (SUM)", "The stereo output level: the dry signal plus the generated low end."]
+      ]
+    } },
+
+    { "h2": "Controls" },
+    { "table": {
+      "cols": ["Control", "Range · default", "What it does"],
+      "widths": [18, 22, 60],
+      "rows": [
+        ["`TARGET`", "32 to 250 Hz · 55 Hz", "Sets the centre frequency of the generated low layer. It is not a filter cutoff or a pitch shifter."],
+        ["`CORE`", "0 to 100% · 30%", "Sets the amount of narrow, stable generated low end. Too much stacks on top of the original bass."],
+        ["`BLOOM`", "0 to 100% · 15%", "Sets the amount of modal, diffused low-frequency bloom: resonant body, short diffusion, and subtle harmonics."],
+        ["`PUNCH`", "0 to 100% · 20%", "Sets the amount of short, onset-driven low impact. It does not raise sustained loudness."],
+        ["`RESPONSE`", "0 to 100% · 50%", "Sets how quickly the spectral envelope follows and releases. It does not add latency."],
+        ["`OUTPUT`", "−12 to +6 dB · 0 dB", "Sets the final level of the dry signal plus the generated layers. It is not a limiter."],
+        ["`BYP`", "Off, On · Off", "Bypasses all processing while keeping the current settings."]
+      ]
+    } },
+    { "warn": { "text": "TB SubLow adds new low-frequency energy. Check phase against the original bass, translation on small speakers, and headroom. There is no limiter or true-peak protection." } },
+
+    { "h2": "Presets" },
+    { "p": "Step through factory presets with the arrows, or open the list to choose a factory or user preset. SAVE stores the current settings as a .tbsl preset. UNDO and REDO step through recent parameter and preset changes." },
+    { "table": {
+      "compact": true,
+      "cols": ["Group", "Preset", "TARGET", "CORE", "BLOOM", "PUNCH", "RESP.", "OUTPUT"],
+      "widths": [14, 22, 11, 9, 9, 9, 9, 17],
+      "rows": [
+        ["Foundation", "Init", "55 Hz", "30%", "15%", "20%", "50%", "0 dB"],
+        ["Foundation", "Tight Impact", "52 Hz", "36%", "7%", "42%", "78%", "−1 dB"],
+        ["Foundation", "Deep Foundation", "42 Hz", "40%", "18%", "12%", "42%", "−1.5 dB"],
+        ["Foundation", "Subtle Mix Floor", "48 Hz", "16%", "9%", "8%", "60%", "0 dB"],
+        ["Bloom", "Bass Bloom", "46 Hz", "30%", "28%", "8%", "36%", "−1.5 dB"],
+        ["Bloom", "Pad Bloom", "65 Hz", "22%", "38%", "5%", "25%", "−2 dB"],
+        ["Bloom", "Cinematic Bloom", "36 Hz", "34%", "48%", "22%", "32%", "−3 dB"],
+        ["Bloom", "Slow Room", "58 Hz", "24%", "34%", "8%", "28%", "−2 dB"],
+        ["Special", "Kick Anchor", "50 Hz", "42%", "8%", "48%", "82%", "−1.5 dB"],
+        ["Special", "Bass Support", "41 Hz", "35%", "14%", "10%", "38%", "−1 dB"],
+        ["Special", "Punch Translator", "70 Hz", "27%", "7%", "58%", "86%", "−2 dB"],
+        ["Special", "Upper Bass Pulse", "110 Hz", "24%", "8%", "44%", "74%", "−1.5 dB"]
+      ]
+    } },
+    { "table": {
+      "cols": ["Preset", "Description"],
+      "widths": [24, 76],
+      "rows": [
+        ["Init", "A safe, audible starting point with balanced core, bloom, and punch."],
+        ["Tight Impact", "Adds a compact low strike while keeping the decay out of the way."],
+        ["Deep Foundation", "Builds a lower, steadier foundation with a restrained onset."],
+        ["Subtle Mix Floor", "Supports a full mix with low movement that stays behind the source."],
+        ["Bass Bloom", "Breathes around sustained bass while keeping the fundamental stable."],
+        ["Pad Bloom", "Lets sustained material open into a soft, slowly moving low field."],
+        ["Cinematic Bloom", "Creates a deep modal bloom for impacts and cinematic beds."],
+        ["Slow Room", "Turns sustained spectral motion into a warm, diffuse low tail."],
+        ["Kick Anchor", "Follows drum attacks firmly and adds a short target-centred anchor."],
+        ["Bass Support", "Adds stable weight to bass without turning every articulation into a hit."],
+        ["Punch Translator", "Prioritises the fast translated strike over sustained sub energy."],
+        ["Upper Bass Pulse", "Places a compact generated pulse above the usual sub range for translation."]
+      ]
+    } },
+
+    { "h2": "Recipes" },
+    { "p": "Starting points for common jobs. Adjust them by ear." },
+    { "recipes": [
+      { "title": "Kick that translates", "use": "A kick that still thumps on small speakers.",
+        "settings": [["Preset", "Kick Anchor"], ["TARGET", "Near the kick's fundamental"], ["PUNCH", "40 to 60%"]],
+        "steps": ["Check CORE first, then add PUNCH only on the onset.", "Compare with bypass on small speakers."] },
+      { "title": "Fuller bass body", "use": "Sustained bass that needs weight without more hits.",
+        "settings": [["Preset", "Bass Support or Bass Bloom"], ["BLOOM", "15 to 30%"]],
+        "steps": ["Lower CORE and PUNCH if the low end gets crowded."] },
+      { "title": "Cinematic impact", "use": "Deep blooms under hits and trailers.",
+        "settings": [["Preset", "Cinematic Bloom"], ["TARGET", "30 to 45 Hz"]],
+        "steps": ["Watch headroom; lower OUTPUT if the sum gets too hot."] },
+      { "title": "Mix floor", "use": "Gentle low support under a full mix.",
+        "settings": [["Preset", "Subtle Mix Floor"], ["CORE", "10 to 20%"]],
+        "steps": ["Keep it subtle; it should be felt rather than heard."] }
+    ] },
+
+    { "h2": "Tips and troubleshooting" },
+    { "table": {
+      "cols": ["Symptom", "What to check"],
+      "widths": [36, 64],
+      "rows": [
+        ["The low end gets muddy or too heavy.", "Lower CORE and BLOOM, or move TARGET away from the existing bass fundamental."],
+        ["The low end thins out against the original.", "The generated layer may be out of phase with the source bass. Move TARGET slightly and compare."],
+        ["The bass is lost on small speakers.", "Try Upper Bass Pulse or raise TARGET above the usual sub range."],
+        ["The sound clips.", "Lower OUTPUT; TB SubLow has no limiter."],
+        ["Hits sound too sharp.", "Lower PUNCH or RESPONSE."]
+      ]
+    } },
+
+    { "h2": "Parameter reference" },
+    { "table": {
+      "compact": true,
+      "cols": ["Panel label", "Host parameter", "Range", "Default"],
+      "widths": [22, 22, 36, 20],
+      "rows": [
+        ["`TARGET`", "Target", "32 to 250 Hz", "55 Hz"],
+        ["`CORE`", "Core", "0 to 100%", "30%"],
+        ["`BLOOM`", "Bloom", "0 to 100%", "15%"],
+        ["`PUNCH`", "Punch", "0 to 100%", "20%"],
+        ["`RESPONSE`", "Response", "0 to 100%", "50%"],
+        ["`OUTPUT`", "Output", "−12 to +6 dB", "0 dB"],
+        ["`BYP`", "Bypass", "Off, On", "Off"]
+      ]
+    } },
+
+    { "h2": "Version history" },
+    { "table": {
+      "cols": ["Version", "Changes"],
+      "widths": [20, 80],
+      "rows": [
+        ["1.3.0 · 2026-08-14", "Rebuilt the editor around a blue-cyan Sub Pressure Chamber with real stereo input and output meters, and added live feedback for Body, Bloom, Punch, and generated sub energy. Parameters and presets are unchanged."],
+        ["1.2.0 · 2026-07-30", "Adjusted the effect logo's size and margins in the header."]
+      ]
+    } }
+  ]
+}
