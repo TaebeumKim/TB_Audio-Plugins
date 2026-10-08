@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-10-07T00:54:18+09:00",
+  "updatedAt": "2026-10-08T14:31:13+09:00",
   "hubVersion": "1.3.18",
   "languages": [
     {
@@ -1520,14 +1520,15 @@
     },
     {
       "id": "tb_xyz_panner",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-10-08",
       "latestUpdate": {
-        "version": "1.3.0",
-        "date": "2026-09-30",
+        "version": "1.4.0",
+        "date": "2026-10-08",
         "notesKo": [
-          "Unified each product's effect logo and product name into a single shared rack header.",
-          "Improved previous/next navigation and save/load workflows for the central preset control.",
-          "Added Physical, Near Field, and Linear distance attenuation curves while keeping Physical as the default."
+          "HEADPHONES 모드에서 후방을 포함한 KEMAR 169개 측정 방향으로 바이노럴 처리를 개선했습니다.",
+          "5.1/7.1 입력을 채널별 방향에 따라 2채널 바이노럴로 자동 변환합니다.",
+          "거리 자동화 전환과 고샘플레이트 HRIR 처리를 개선하고 중복 후방 음색 처리를 제거했습니다.",
+          "기존 파라미터와 프리셋을 유지하며 출력 구성에 맞게 모드 표시를 정리했습니다."
         ]
       },
       "portfolio": {
@@ -1542,16 +1543,16 @@
         "visible": true
       },
       "name": "TB XYZ Panner",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "category": "Utility",
       "price": 2,
       "description": "Multi-axis panning.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=1.3.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=1.4.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.3.0",
-        "sha256": "4500e1710634ee57c54d5b3ca90669cd658e58b7a97b0fe2ed625ef7a3483db1",
-        "sizeBytes": 2888085
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.4.0",
+        "sha256": "70d69e42e6789cfd1c8e5f1556a7ffaced01885fe7973811b4b4ef25d615f172",
+        "sizeBytes": 3286751
       },
       "macos": {
         "formats": {
@@ -1576,10 +1577,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.2.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-XYZ-Panner-1.2.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "32d3cbb7518eec67d2f1ceba084f6ba543bc86f0abd93f780220b2c26d0ba103",
-          "sizeBytes": 4311468
+          "version": "1.4.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-xyz-panner-windows-v1.4.0/TB-XYZ-Panner-1.4.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "a761ce20f455d9bbb4e286b0bf2a4869d4a39b99bf03bcf2ae0a51971dd5d38f",
+          "sizeBytes": 4294447
         },
         "macosVst3": {
           "kind": "installer",
