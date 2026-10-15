@@ -6,6 +6,11 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-10-15
+
+- Released [TB XYZ Panner 1.4.1 for Windows x64 VST3](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-xyz-panner-windows-v1.4.1) with corrected Side View coordinates, a restored Front/Back knob, clearer control layout, and reliable Undo/Redo grouping.
+- Improved low-sample-rate filter stability, Height automation transitions, and headphone-mode re-entry. All 164 DSP and 48 editor checks passed; existing parameter/state contracts and macOS downloads are preserved. Live DAW listening remains unverified.
+
 ## 2026-10-08
 
 - Released [TB XYZ Panner 1.4.0 for Windows x64 VST3](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-xyz-panner-windows-v1.4.0) with measured rear-direction binaural rendering, automatic 5.1/7.1-to-stereo headphone rendering, and smoother distance automation.
@@ -17,11 +22,6 @@
 - Completed the missing TB Ambient feature mockup and the Ambient and Geometry Reverb DISPLAY brand masters.
 - Corrected the repository overview and portfolio coverage to match the 35 live catalog plug-ins.
 - Reverified TB Ambient 1.0.0 against the live catalog, Hub ZIP, project Release bundle, installed VST3, and cached TB Hub catalog; all published hashes and versions match.
-
-## 2026-08-19
-
-- Released TB Delay 1.0.2 with its current Windows VST3 bundle and matching catalog checksum.
-- Added 20-language manuals for TB Ambient, TB AudioPlayer, TB Filter Table, TB Geometry Reverb, TB Grain Phaser, and TB Multiband Compressor.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
