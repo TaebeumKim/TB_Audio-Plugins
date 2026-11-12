@@ -1,0 +1,897 @@
+{
+  "contractVersion": 1,
+  "pluginKey": "tb.multiband_compressor",
+  "componentClassId": "ABCDEF019182FAEB5462536454624D62",
+  "stateSchemaVersion": 4,
+  "presetFormatVersion": 4,
+  "parameters": [
+    {
+      "vst3ParamId": 108124,
+      "sourceParamId": "mix",
+      "semanticRole": "dry_wet_mix",
+      "description": "Global dry/wet mix.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1141971201,
+      "sourceParamId": "output",
+      "semanticRole": "output_gain",
+      "description": "Final output gain.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 773352680,
+      "sourceParamId": "bypass",
+      "semanticRole": "host_bypass",
+      "description": "Host-recognized global bypass.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "off"
+        },
+        {
+          "step": 1,
+          "key": "on"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 757438110,
+      "sourceParamId": "band1_enabled",
+      "semanticRole": "band_1_band_enabled",
+      "description": "Band 1: Enables this free dynamic band.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "off"
+        },
+        {
+          "step": 1,
+          "key": "on"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 462695801,
+      "sourceParamId": "band1_frequency",
+      "semanticRole": "band_1_processing_frequency",
+      "description": "Band 1: Processing-band centre frequency.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 714434766,
+      "sourceParamId": "band1_bandwidth",
+      "semanticRole": "band_1_processing_bandwidth",
+      "description": "Band 1: Processing-band width in octaves.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1134726280,
+      "sourceParamId": "band1_threshold",
+      "semanticRole": "band_1_dynamics_threshold",
+      "description": "Band 1: Detector threshold.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 559904730,
+      "sourceParamId": "band1_range",
+      "semanticRole": "band_1_signed_gain_range",
+      "description": "Band 1: Signed maximum dynamic gain change.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 559910568,
+      "sourceParamId": "band1_ratio",
+      "semanticRole": "band_1_dynamics_ratio",
+      "description": "Band 1: Compression or expansion ratio.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1855685451,
+      "sourceParamId": "band1_attack",
+      "semanticRole": "band_1_envelope_attack",
+      "description": "Band 1: Detector attack time.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1310143332,
+      "sourceParamId": "band1_release",
+      "semanticRole": "band_1_envelope_release",
+      "description": "Band 1: Detector release time.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1472612102,
+      "sourceParamId": "band1_knee",
+      "semanticRole": "band_1_soft_knee",
+      "description": "Band 1: Soft-knee width.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 109948420,
+      "sourceParamId": "band1_output",
+      "semanticRole": "band_1_band_output_gain",
+      "description": "Band 1: Static output gain for this band.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1472672614,
+      "sourceParamId": "band1_mode",
+      "semanticRole": "band_1_dynamics_mode",
+      "description": "Band 1: Compression or expansion mode.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "compress"
+        },
+        {
+          "step": 1,
+          "key": "expand"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 218955038,
+      "sourceParamId": "band1_source",
+      "semanticRole": "band_1_detector_source",
+      "description": "Band 1: Internal or mapped Sidechain 1 external detector source.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "internal"
+        },
+        {
+          "step": 1,
+          "key": "external"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 770578457,
+      "sourceParamId": "band1_detector_mode",
+      "semanticRole": "band_1_detector_filter_mode",
+      "description": "Band 1: Compatibility-only stored choice; current DSP always follows the processing band.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "band"
+        },
+        {
+          "step": 1,
+          "key": "free"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1871659174,
+      "sourceParamId": "band1_detector_frequency",
+      "semanticRole": "band_1_detector_frequency",
+      "description": "Band 1: Compatibility-only detector centre; current DSP follows the processing frequency.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 2123398139,
+      "sourceParamId": "band1_detector_bandwidth",
+      "semanticRole": "band_1_detector_bandwidth",
+      "description": "Band 1: Compatibility-only detector width; current DSP follows the processing bandwidth.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 690823358,
+      "sourceParamId": "band1_stereo_link",
+      "semanticRole": "band_1_stereo_link",
+      "description": "Band 1: Detector stereo-link amount.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1339624080,
+      "sourceParamId": "band1_audition",
+      "semanticRole": "band_1_detector_audition",
+      "description": "Band 1: Compatibility-only detector audition for generic hosts; the custom editor uses transient Delta Listen.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "off"
+        },
+        {
+          "step": 1,
+          "key": "on"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1097467295,
+      "sourceParamId": "band2_enabled",
+      "semanticRole": "band_2_band_enabled",
+      "description": "Band 2: Enables this free dynamic band.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "off"
+        },
+        {
+          "step": 1,
+          "key": "on"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 813228090,
+      "sourceParamId": "band2_frequency",
+      "semanticRole": "band_2_processing_frequency",
+      "description": "Band 2: Processing-band centre frequency.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1064967055,
+      "sourceParamId": "band2_bandwidth",
+      "semanticRole": "band_2_processing_bandwidth",
+      "description": "Band 2: Processing-band width in octaves.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1485258569,
+      "sourceParamId": "band2_threshold",
+      "semanticRole": "band_2_dynamics_threshold",
+      "description": "Band 2: Detector threshold.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1447408411,
+      "sourceParamId": "band2_range",
+      "semanticRole": "band_2_signed_gain_range",
+      "description": "Band 2: Signed maximum dynamic gain change.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1447414249,
+      "sourceParamId": "band2_ratio",
+      "semanticRole": "band_2_dynamics_ratio",
+      "description": "Band 2: Compression or expansion ratio.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1451012138,
+      "sourceParamId": "band2_attack",
+      "semanticRole": "band_2_envelope_attack",
+      "description": "Band 2: Detector attack time.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1650172517,
+      "sourceParamId": "band2_release",
+      "semanticRole": "band_2_envelope_release",
+      "description": "Band 2: Detector release time.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1501241253,
+      "sourceParamId": "band2_knee",
+      "semanticRole": "band_2_soft_knee",
+      "description": "Band 2: Soft-knee width.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1852758755,
+      "sourceParamId": "band2_output",
+      "semanticRole": "band_2_band_output_gain",
+      "description": "Band 2: Static output gain for this band.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1501301765,
+      "sourceParamId": "band2_mode",
+      "semanticRole": "band_2_dynamics_mode",
+      "description": "Band 2: Compression or expansion mode.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "compress"
+        },
+        {
+          "step": 1,
+          "key": "expand"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1961765373,
+      "sourceParamId": "band2_source",
+      "semanticRole": "band_2_detector_source",
+      "description": "Band 2: Internal or mapped Sidechain 2 external detector source.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "internal"
+        },
+        {
+          "step": 1,
+          "key": "external"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 130646618,
+      "sourceParamId": "band2_detector_mode",
+      "semanticRole": "band_2_detector_filter_mode",
+      "description": "Band 2: Compatibility-only stored choice; current DSP always follows the processing band.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "band"
+        },
+        {
+          "step": 1,
+          "key": "free"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1462834949,
+      "sourceParamId": "band2_detector_frequency",
+      "semanticRole": "band_2_detector_frequency",
+      "description": "Band 2: Compatibility-only detector centre; current DSP follows the processing frequency.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1714573914,
+      "sourceParamId": "band2_detector_bandwidth",
+      "semanticRole": "band_2_detector_bandwidth",
+      "description": "Band 2: Compatibility-only detector width; current DSP follows the processing bandwidth.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 397420351,
+      "sourceParamId": "band2_stereo_link",
+      "semanticRole": "band_2_stereo_link",
+      "description": "Band 2: Detector stereo-link amount.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1143110575,
+      "sourceParamId": "band2_audition",
+      "semanticRole": "band_2_detector_audition",
+      "description": "Band 2: Compatibility-only detector audition for generic hosts; the custom editor uses transient Delta Listen.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "off"
+        },
+        {
+          "step": 1,
+          "key": "on"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1437496480,
+      "sourceParamId": "band3_enabled",
+      "semanticRole": "band_3_band_enabled",
+      "description": "Band 3: Enables this free dynamic band.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "off"
+        },
+        {
+          "step": 1,
+          "key": "on"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1163760379,
+      "sourceParamId": "band3_frequency",
+      "semanticRole": "band_3_processing_frequency",
+      "description": "Band 3: Processing-band centre frequency.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1415499344,
+      "sourceParamId": "band3_bandwidth",
+      "semanticRole": "band_3_processing_bandwidth",
+      "description": "Band 3: Processing-band width in octaves.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1835790858,
+      "sourceParamId": "band3_threshold",
+      "semanticRole": "band_3_dynamics_threshold",
+      "description": "Band 3: Detector threshold.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 187428444,
+      "sourceParamId": "band3_range",
+      "semanticRole": "band_3_signed_gain_range",
+      "description": "Band 3: Signed maximum dynamic gain change.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 187434282,
+      "sourceParamId": "band3_ratio",
+      "semanticRole": "band_3_dynamics_ratio",
+      "description": "Band 3: Compression or expansion ratio.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1046338825,
+      "sourceParamId": "band3_attack",
+      "semanticRole": "band_3_envelope_attack",
+      "description": "Band 3: Detector attack time.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1990201702,
+      "sourceParamId": "band3_release",
+      "semanticRole": "band_3_envelope_release",
+      "description": "Band 3: Detector release time.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1529870404,
+      "sourceParamId": "band3_knee",
+      "semanticRole": "band_3_soft_knee",
+      "description": "Band 3: Soft-knee width.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1448085442,
+      "sourceParamId": "band3_output",
+      "semanticRole": "band_3_band_output_gain",
+      "description": "Band 3: Static output gain for this band.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1529930916,
+      "sourceParamId": "band3_mode",
+      "semanticRole": "band_3_dynamics_mode",
+      "description": "Band 3: Compression or expansion mode.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "compress"
+        },
+        {
+          "step": 1,
+          "key": "expand"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1557092060,
+      "sourceParamId": "band3_source",
+      "semanticRole": "band_3_detector_source",
+      "description": "Band 3: Internal or mapped Sidechain 3 external detector source.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "internal"
+        },
+        {
+          "step": 1,
+          "key": "external"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1638198427,
+      "sourceParamId": "band3_detector_mode",
+      "semanticRole": "band_3_detector_filter_mode",
+      "description": "Band 3: Compatibility-only stored choice; current DSP always follows the processing band.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "band"
+        },
+        {
+          "step": 1,
+          "key": "free"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1054010724,
+      "sourceParamId": "band3_detector_frequency",
+      "semanticRole": "band_3_detector_frequency",
+      "description": "Band 3: Compatibility-only detector centre; current DSP follows the processing frequency.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1305749689,
+      "sourceParamId": "band3_detector_bandwidth",
+      "semanticRole": "band_3_detector_bandwidth",
+      "description": "Band 3: Compatibility-only detector width; current DSP follows the processing bandwidth.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 104017344,
+      "sourceParamId": "band3_stereo_link",
+      "semanticRole": "band_3_stereo_link",
+      "description": "Band 3: Detector stereo-link amount.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 946597070,
+      "sourceParamId": "band3_audition",
+      "semanticRole": "band_3_detector_audition",
+      "description": "Band 3: Compatibility-only detector audition for generic hosts; the custom editor uses transient Delta Listen.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "off"
+        },
+        {
+          "step": 1,
+          "key": "on"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1777525665,
+      "sourceParamId": "band4_enabled",
+      "semanticRole": "band_4_band_enabled",
+      "description": "Band 4: Enables this free dynamic band.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "off"
+        },
+        {
+          "step": 1,
+          "key": "on"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1514292668,
+      "sourceParamId": "band4_frequency",
+      "semanticRole": "band_4_processing_frequency",
+      "description": "Band 4: Processing-band centre frequency.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1766031633,
+      "sourceParamId": "band4_bandwidth",
+      "semanticRole": "band_4_processing_bandwidth",
+      "description": "Band 4: Processing-band width in octaves.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 38839499,
+      "sourceParamId": "band4_threshold",
+      "semanticRole": "band_4_dynamics_threshold",
+      "description": "Band 4: Detector threshold.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1074932125,
+      "sourceParamId": "band4_range",
+      "semanticRole": "band_4_signed_gain_range",
+      "description": "Band 4: Signed maximum dynamic gain change.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1074937963,
+      "sourceParamId": "band4_ratio",
+      "semanticRole": "band_4_dynamics_ratio",
+      "description": "Band 4: Compression or expansion ratio.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 641665512,
+      "sourceParamId": "band4_attack",
+      "semanticRole": "band_4_envelope_attack",
+      "description": "Band 4: Detector attack time.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 182747239,
+      "sourceParamId": "band4_release",
+      "semanticRole": "band_4_envelope_release",
+      "description": "Band 4: Detector release time.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1558499555,
+      "sourceParamId": "band4_knee",
+      "semanticRole": "band_4_soft_knee",
+      "description": "Band 4: Soft-knee width.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1043412129,
+      "sourceParamId": "band4_output",
+      "semanticRole": "band_4_band_output_gain",
+      "description": "Band 4: Static output gain for this band.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1558560067,
+      "sourceParamId": "band4_mode",
+      "semanticRole": "band_4_dynamics_mode",
+      "description": "Band 4: Compression or expansion mode.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "compress"
+        },
+        {
+          "step": 1,
+          "key": "expand"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1152418747,
+      "sourceParamId": "band4_source",
+      "semanticRole": "band_4_detector_source",
+      "description": "Band 4: Internal or mapped Sidechain 4 external detector source.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "internal"
+        },
+        {
+          "step": 1,
+          "key": "external"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 998266588,
+      "sourceParamId": "band4_detector_mode",
+      "semanticRole": "band_4_detector_filter_mode",
+      "description": "Band 4: Compatibility-only stored choice; current DSP always follows the processing band.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "band"
+        },
+        {
+          "step": 1,
+          "key": "free"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 645186499,
+      "sourceParamId": "band4_detector_frequency",
+      "semanticRole": "band_4_detector_frequency",
+      "description": "Band 4: Compatibility-only detector centre; current DSP follows the processing frequency.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 896925464,
+      "sourceParamId": "band4_detector_bandwidth",
+      "semanticRole": "band_4_detector_bandwidth",
+      "description": "Band 4: Compatibility-only detector width; current DSP follows the processing bandwidth.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 1958097985,
+      "sourceParamId": "band4_stereo_link",
+      "semanticRole": "band_4_stereo_link",
+      "description": "Band 4: Detector stereo-link amount.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 750083565,
+      "sourceParamId": "band4_audition",
+      "semanticRole": "band_4_detector_audition",
+      "description": "Band 4: Compatibility-only detector audition for generic hosts; the custom editor uses transient Delta Listen.",
+      "aiWritable": false,
+      "choices": [
+        {
+          "step": 0,
+          "key": "off"
+        },
+        {
+          "step": 1,
+          "key": "on"
+        }
+      ]
+    },
+    {
+      "vst3ParamId": 1836359143,
+      "sourceParamId": "phase_mode",
+      "semanticRole": "processing_phase_mode",
+      "description": "Selects Dynamic or Linear processing topology.",
+      "aiWritable": false,
+      "choices": [
+        { "step": 0, "key": "dynamic" },
+        { "step": 1, "key": "linear" }
+      ]
+    },
+    {
+      "vst3ParamId": 1420097723,
+      "sourceParamId": "oversampling",
+      "semanticRole": "processing_oversampling",
+      "description": "Selects Off, 2x, 4x, or 8x dynamics-path oversampling.",
+      "aiWritable": false,
+      "choices": [
+        { "step": 0, "key": "off" },
+        { "step": 1, "key": "2x" },
+        { "step": 2, "key": "4x" },
+        { "step": 3, "key": "8x" }
+      ]
+    },
+    {
+      "vst3ParamId": 1131625090,
+      "sourceParamId": "lookahead",
+      "semanticRole": "dynamics_lookahead",
+      "description": "Global lookahead time from 0 to 20 ms.",
+      "aiWritable": false
+    },
+    {
+      "vst3ParamId": 265463330,
+      "sourceParamId": "band1_channel_mode",
+      "semanticRole": "band_1_channel_mode",
+      "description": "Band 1: Selects Stereo, Mid, or Side processing.",
+      "aiWritable": false,
+      "choices": [
+        { "step": 0, "key": "stereo" },
+        { "step": 1, "key": "mid" },
+        { "step": 2, "key": "side" }
+      ]
+    },
+    {
+      "vst3ParamId": 1907388353,
+      "sourceParamId": "band2_channel_mode",
+      "semanticRole": "band_2_channel_mode",
+      "description": "Band 2: Selects Stereo, Mid, or Side processing.",
+      "aiWritable": false,
+      "choices": [
+        { "step": 0, "key": "stereo" },
+        { "step": 1, "key": "mid" },
+        { "step": 2, "key": "side" }
+      ]
+    },
+    {
+      "vst3ParamId": 1401829728,
+      "sourceParamId": "band3_channel_mode",
+      "semanticRole": "band_3_channel_mode",
+      "description": "Band 3: Selects Stereo, Mid, or Side processing.",
+      "aiWritable": false,
+      "choices": [
+        { "step": 0, "key": "stereo" },
+        { "step": 1, "key": "mid" },
+        { "step": 2, "key": "side" }
+      ]
+    },
+    {
+      "vst3ParamId": 896271103,
+      "sourceParamId": "band4_channel_mode",
+      "semanticRole": "band_4_channel_mode",
+      "description": "Band 4: Selects Stereo, Mid, or Side processing.",
+      "aiWritable": false,
+      "choices": [
+        { "step": 0, "key": "stereo" },
+        { "step": 1, "key": "mid" },
+        { "step": 2, "key": "side" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "presetId": "init",
+      "displayName": "Init",
+      "aiCallable": false
+    },
+    {
+      "presetId": "gentle_balance",
+      "displayName": "Gentle Balance",
+      "aiCallable": false
+    },
+    {
+      "presetId": "broad_control",
+      "displayName": "Broad Control",
+      "aiCallable": false
+    },
+    {
+      "presetId": "vocal_focus",
+      "displayName": "Vocal Focus",
+      "aiCallable": false
+    },
+    {
+      "presetId": "bass_foundation",
+      "displayName": "Bass Foundation",
+      "aiCallable": false
+    },
+    {
+      "presetId": "drum_tamer",
+      "displayName": "Drum Tamer",
+      "aiCallable": false
+    },
+    {
+      "presetId": "mix_bus_balance",
+      "displayName": "Mix Bus Balance",
+      "aiCallable": false
+    },
+    {
+      "presetId": "drum_bus_glue",
+      "displayName": "Drum Bus Glue",
+      "aiCallable": false
+    },
+    {
+      "presetId": "mastering_touch",
+      "displayName": "Mastering Touch",
+      "aiCallable": false
+    },
+    {
+      "presetId": "kick_duck",
+      "displayName": "Kick Duck",
+      "aiCallable": false
+    },
+    {
+      "presetId": "rhythmic_pump",
+      "displayName": "Rhythmic Pump",
+      "aiCallable": false
+    },
+    {
+      "presetId": "transient_lift",
+      "displayName": "Transient Lift",
+      "aiCallable": false
+    },
+    {
+      "presetId": "transparent_master",
+      "displayName": "Transparent Master",
+      "aiCallable": false
+    },
+    {
+      "presetId": "loudness_guard",
+      "displayName": "Loudness Guard",
+      "aiCallable": false
+    },
+    {
+      "presetId": "de_harsh_master",
+      "displayName": "De-Harsh Master",
+      "aiCallable": false
+    },
+    {
+      "presetId": "low_end_anchor",
+      "displayName": "Low End Anchor",
+      "aiCallable": false
+    },
+    {
+      "presetId": "stereo_focus",
+      "displayName": "Stereo Focus",
+      "aiCallable": false
+    },
+    {
+      "presetId": "guitar_smooth",
+      "displayName": "Guitar Smooth",
+      "aiCallable": false
+    },
+    {
+      "presetId": "keys_space",
+      "displayName": "Keys Space",
+      "aiCallable": false
+    },
+    {
+      "presetId": "parallel_drum_punch",
+      "displayName": "Parallel Drum Punch",
+      "aiCallable": false
+    }
+  ]
+}

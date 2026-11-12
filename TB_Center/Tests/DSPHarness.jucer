@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="TbCtrT" name="TB_Center_DSPHarness" projectType="consoleapp"
+              useAppConfig="0" addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1"
+              cppLanguageStandard="17" defines="TB_CENTER_HEADLESS_TEST=1&#10;JUCE_MODAL_LOOPS_PERMITTED=1&#10;JucePlugin_Name=&quot;TB_Center&quot;&#10;JucePlugin_IsMidiEffect=0&#10;JucePlugin_IsSynth=0&#10;JucePlugin_WantsMidiInput=0&#10;JucePlugin_ProducesMidiOutput=0">
+  <MAINGROUP id="TbCtrTest" name="TB_Center_DSPHarness">
+    <GROUP id="{886B8BD7-95B2-42E4-8DE9-E221C6F7428E}" name="Source">
+      <GROUP id="{333DD2F7-8A51-4C89-97C1-05871420481F}" name="Assets">
+        <FILE id="testTbIcon" name="tb_mouse_icon.png" compile="0" resource="1"
+              file="../Source/Assets/tb_mouse_icon.png"/>
+        <FILE id="testTbEffectLogo" name="tb_effect_logo.png" compile="0" resource="1"
+              file="../Source/Assets/tb_effect_logo.png"/>
+      </GROUP>
+      <FILE id="testMain" name="DSPHarness.cpp" compile="1" resource="0"
+            file="DSPHarness.cpp"/>
+      <FILE id="testEngineCpp" name="RecenterEngine.cpp" compile="1" resource="0"
+            file="../Source/RecenterEngine.cpp"/>
+      <FILE id="testEngineHdr" name="RecenterEngine.h" compile="0" resource="0"
+            file="../Source/RecenterEngine.h"/>
+      <FILE id="testProcCpp" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="../Source/PluginProcessor.cpp"/>
+      <FILE id="testProcHdr" name="PluginProcessor.h" compile="0" resource="0"
+            file="../Source/PluginProcessor.h"/>
+      <FILE id="testEditCpp" name="PluginEditor.cpp" compile="1" resource="0"
+            file="../Source/PluginEditor.cpp"/>
+      <FILE id="testEditHdr" name="PluginEditor.h" compile="0" resource="0"
+            file="../Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors_headless" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="TB_Center_DSPHarness" extraCompilerFlags="/utf-8"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="TB_Center_DSPHarness"
+                       extraCompilerFlags="/utf-8"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors_headless" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+</JUCERPROJECT>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="SpatialRegression.vcxproj" />
+  <ItemGroup>
+    <ClCompile Remove="@(ClCompile)" />
+    <ClCompile Include="EditorRegression.cpp" />
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <ProgramDatabaseFile>$(OutDir)EditorRegression.pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>
