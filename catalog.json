@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-10-15T10:52:45+09:00",
+  "updatedAt": "2026-11-12T13:46:35+09:00",
   "hubVersion": "1.3.18",
   "languages": [
     {
@@ -1520,14 +1520,14 @@
     },
     {
       "id": "tb_xyz_panner",
-      "updatedAt": "2026-10-15",
+      "updatedAt": "2026-11-12",
       "latestUpdate": {
-        "version": "1.4.1",
-        "date": "2026-10-15",
+        "version": "1.4.2",
+        "date": "2026-11-12",
         "notesKo": [
-          "사이드뷰 클릭 좌표와 실제 높이·거리 값을 일치시키고 노브 값창 겹침을 수정했습니다.",
-          "Front/Back 노브를 복원하고 평면·노브·거리 곡선·모드 변경의 실행 취소 동작을 개선했습니다.",
-          "낮은 샘플레이트의 필터 안정성, 높이 자동화 전환, 헤드폰 모드 재진입 처리를 개선했습니다."
+          "청취자 기준 3D 정위와 전방·후방·고도 처리를 개선했습니다.",
+          "전체 KEMAR 고도 행, 도착시간 정렬 보간, 샘플레이트 독립 리샘플링을 적용했습니다.",
+          "DSP 222개·UI 48개 회귀 검사와 Release 빌드가 통과했습니다."
         ]
       },
       "portfolio": {
@@ -1542,16 +1542,16 @@
         "visible": true
       },
       "name": "TB XYZ Panner",
-      "version": "1.4.1",
+      "version": "1.4.2",
       "category": "Utility",
       "price": 2,
       "description": "Multi-axis panning.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=1.4.1",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=1.4.2",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.4.1",
-        "sha256": "df54abc5b3b1bb5477cba0b1aee23bb6a7b913569ed620b7bd1802d7aea9bad8",
-        "sizeBytes": 3288408
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.4.2",
+        "sha256": "15f61217e68affe760206d824f5831aa188b21075c48a0a6671b30b4b83a11b0",
+        "sizeBytes": 3296637
       },
       "macos": {
         "formats": {
@@ -2178,13 +2178,14 @@
     },
     {
       "id": "tb_shimmer",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-12",
       "latestUpdate": {
-        "version": "1.0.0",
-        "date": "2026-08-04",
+        "version": "2.0.0",
+        "date": "2026-11-12",
         "notesKo": [
-          "Combines octave-up granular voices with an early diffuser and eight-line FDN tail for crystalline spatial effects.",
-          "Adds Level Var, Position Rand, Pitch Spray, 100 Factory presets, and versioned preset/state migration."
+          "Tail 감쇠 물리, 오디오레이트 그래뉼레이션, 연속 Pitch, Freeze, Sparkle/Shatter 레이어를 2.0.0으로 정리했습니다.",
+          "Density·Size 범위와 상태 마이그레이션을 갱신하고 100개 Factory preset 계약을 유지했습니다.",
+          "Windows Release 62개 회귀 검사를 통과했습니다. 실제 DAW 청취는 미검증입니다."
         ]
       },
       "portfolio": {
@@ -2199,16 +2200,16 @@
         "visible": true
       },
       "name": "TB Shimmer",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "category": "Creative",
       "price": 2,
       "description": "Granular shimmer with pitch feedback and diffuse tails.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_shimmer.png?v=1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_shimmer.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Shimmer.zip?v=1.0.0",
-        "sha256": "c99f80fa43ba6e06c955ebce0254baf4484e4a0be2d8d64c215b09369f4e1253",
-        "sizeBytes": 5643911
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Shimmer.zip?v=2.0.0",
+        "sha256": "1d1545e789491f87baf681e118ed330385517b7c0396720ee69feeb1332fa5eb",
+        "sizeBytes": 5871348
       },
       "macos": {
         "formats": {
@@ -2260,14 +2261,14 @@
     },
     {
       "id": "tb_exciter",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-12",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-08-09",
+        "version": "1.2.0",
+        "date": "2026-11-12",
         "notesKo": [
-          "Added a compact 590x450 interface with an accessible Factory preset selector.",
-          "Introduced 30 categorized Factory presets with host-notified parameter changes, edited-state tracking, and recall.",
-          "Kept all five public parameters and the host program count unchanged for project compatibility."
+          "고역 보이싱 후보 3_cap9k를 BRIGHT 셸프 코너 상한 9 kHz로 반영했습니다.",
+          "Release DSP Harness 63개 검사를 통과했으며 공개 파라미터 5개·레이턴시 61 samples·프리셋 계약을 유지했습니다.",
+          "Windows Hub ZIP을 1.2.0으로 갱신했으며 설치 프로그램은 기존 버전을 유지합니다."
         ]
       },
       "portfolio": {
@@ -2282,16 +2283,16 @@
         "visible": true
       },
       "name": "TB Exciter",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "category": "Creative",
       "price": 5,
       "description": "Harmonic exciter and enhancer with 30 Factory presets.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.1.0-logo-20260817",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.2.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.1.0-20260930",
-        "sha256": "2719ac9e9efbbfbd6c509dfc87211283efc3f4f14880cfb5e0250eef0e57d9e6",
-        "sizeBytes": 2978654
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.2.0",
+        "sha256": "202eb5081476fde22121b543dd66d68a18b77d615f67f8a4d7794df28c0485c7",
+        "sizeBytes": 2982166
       },
       "webDownloads": {
         "windowsVst3": {
