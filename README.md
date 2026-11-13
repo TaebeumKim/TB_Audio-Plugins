@@ -6,6 +6,12 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-11-13
+
+- Released [TB EQ 2.0.3 for Windows x64 VST3](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-eq-windows-v2.0.3) with a unified applied-response curve, cleaner spectral range guides, and tighter analyzer/control layout. Spectral regression 723/723, latency handoff, all-pass, and Analyzer UX checks passed.
+- Released [TB Multiband Compressor 2.0.0 for Windows x64 VST3](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-multiband-compressor-windows-v2.0.0) with six bands, schema 5, 126 parameters, Sidechain 1–6, band Lookahead, Linear Slope, Solo, A/B, and EXPERT controls. DSP 76/76 and Processor Integration 11/11 passed.
+- Released [TB Delay 1.1.0 for Windows x64 VST3](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-delay-windows-v1.1.0) with cleaner low-frequency Shift, bounded Tape varispeed, safer time crossfades and feedback, high-frequency repeat preservation, wet compensation, and level-independent ducking. Delay validation passed 37/37.
+
 ## 2026-10-15
 
 - Released [TB XYZ Panner 1.4.1 for Windows x64 VST3](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-xyz-panner-windows-v1.4.1) with corrected Side View coordinates, a restored Front/Back knob, clearer control layout, and reliable Undo/Redo grouping.
@@ -15,13 +21,6 @@
 
 - Released [TB XYZ Panner 1.4.0 for Windows x64 VST3](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-xyz-panner-windows-v1.4.0) with measured rear-direction binaural rendering, automatic 5.1/7.1-to-stereo headphone rendering, and smoother distance automation.
 - Updated its Hub ZIP and Windows installer metadata while preserving existing plug-in/parameter IDs and macOS downloads. Automated spatial and host-contract checks passed; manual DAW listening and GUI interaction remain unverified.
-
-## 2026-08-21
-
-- Released current Windows VST3 builds for TB Colorizer 2.3.1, TB Parallel Reverb 3.0.2, TB Scrambler 2.3.1, TB Spectral Transient Shaper 1.4.1, TB Resonator 1.0.1, and TB Recorder 1.0.1, with matching catalog, archive, installer, and internal plug-in versions.
-- Completed the missing TB Ambient feature mockup and the Ambient and Geometry Reverb DISPLAY brand masters.
-- Corrected the repository overview and portfolio coverage to match the 35 live catalog plug-ins.
-- Reverified TB Ambient 1.0.0 against the live catalog, Hub ZIP, project Release bundle, installed VST3, and cached TB Hub catalog; all published hashes and versions match.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
@@ -249,7 +248,7 @@ A spectral phaser that moves a dense FFT notch grid with controlled stereo orbit
 
 #### TB Multiband Compressor
 
-A four-band free-placement dynamics processor with per-band compression or expansion, sidechain, stereo/Mid/Side targeting, signed Range, and Dynamic or Linear modes.
+A six-band free-placement dynamics processor with per-band compression or expansion, Sidechain 1–6, stereo/Mid/Side targeting, signed Range, band Lookahead, Linear Slope, and Dynamic or Linear modes.
 
 <img width="900" alt="TB Multiband Compressor feature mockup" src="Portfolio/Mockups/tb_multiband_compressor.jpg" />
 
