@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-11-13T23:30:00+09:00",
+  "updatedAt": "2026-11-21T14:23:43.125+09:00",
   "hubVersion": "1.3.18",
   "languages": [
     {
@@ -288,13 +288,12 @@
     },
     {
       "id": "tb_distortion",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "1.3.0",
-        "date": "2026-07-30",
+        "version": "2.0.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "Unified each product's effect logo and product name into a single shared rack header.",
-          "Improved previous/next navigation and save/load workflows for the central preset control."
+          "Drive 중심 Hero와 타입 선택 플레이트로 화면을 재구성하고 노브·재질·서체를 통일했습니다."
         ]
       },
       "portfolio": {
@@ -309,16 +308,16 @@
         "visible": true
       },
       "name": "TB Distortion",
-      "version": "1.3.0",
+      "version": "2.0.0",
       "category": "Distortion",
       "price": 3,
       "description": "Multi-stage distortion.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_distortion.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_distortion.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip?v=1.3.0",
-        "sha256": "4fd9401726780e246ec65e7f04a2f89fc473822a051b66e6f65719f633580bec",
-        "sizeBytes": 2804430
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Distortion.zip?v=2.0.0",
+        "sha256": "20bae0c402104b69903cddf22ecc543563ff9cccd69a00fe62b3d7dd6e04b665",
+        "sizeBytes": 3199416
       },
       "macos": {
         "formats": {
@@ -343,10 +342,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.3.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Distortion-1.3.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "4b85547e7659c5d974f4fa1bfc33e4c05d18de0226386e4b293961f52b53312d",
-          "sizeBytes": 4122013
+          "version": "2.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-distortion-windows-v2.0.0/TB-Distortion-2.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "811c4c924b30fc1c00eedec10ae6f547194ddbe92e73e78bcb130985319e38c5",
+          "sizeBytes": 4363487
         },
         "macosVst3": {
           "kind": "installer",
@@ -370,13 +369,12 @@
     },
     {
       "id": "tb_disperser",
-      "updatedAt": "2026-08-05",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "1.3.0",
-        "date": "2026-07-30",
+        "version": "2.0.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "Unified each product's effect logo and product name into a single shared rack header.",
-          "Improved previous/next navigation and save/load workflows for the central preset control."
+          "840×440 화면과 실제 그룹 지연을 반영하는 주파수 Hero를 적용하고 조작부·재질·서체를 개편했습니다."
         ]
       },
       "portfolio": {
@@ -391,16 +389,16 @@
         "visible": true
       },
       "name": "TB Disperser",
-      "version": "1.3.0",
+      "version": "2.0.0",
       "category": "Creative",
       "price": 4,
       "description": "Phase dispersion.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_disperser.png?v=display-restore-20260729",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_disperser.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=1.3.0",
-        "sha256": "3da6f136e3c19dba5228be0fdd276cb8f440b5feb8e16ec1c616cf9d55b74c74",
-        "sizeBytes": 2412293
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Disperser.zip?v=2.0.0",
+        "sha256": "6dd64eb893e0ee1b518155bf4bb0b8ff8cb1a4d2093108f50285981718d1e3c8",
+        "sizeBytes": 2705453
       },
       "macos": {
         "formats": {
@@ -425,10 +423,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.3.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Disperser-1.3.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "5f8e04142d499cc066bdf4ea22359e1f3bedaf1cfe9fd37c93250cce2700b1f9",
-          "sizeBytes": 3834127
+          "version": "2.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-disperser-windows-v2.0.0/TB-Disperser-2.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "00070fe408c759c1d9b952b5f5ec35f3f5b34a3a227548827bff55ecfed6615c",
+          "sizeBytes": 3989391
         },
         "macosVst3": {
           "kind": "installer",
@@ -535,13 +533,12 @@
     },
     {
       "id": "tb_colorizer",
-      "updatedAt": "2026-08-21",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "2.3.1",
-        "date": "2026-08-21",
+        "version": "3.0.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "최신 7개 컬러 모드 디자인과 현재 소스 자산을 Windows VST3 빌드에 반영했습니다.",
-          "카탈로그, VST3 moduleinfo, 설치본 버전을 2.3.1로 정렬했습니다."
+          "실제 응답에 기반한 Hero와 840×400 화면으로 개편하고 고정된 가상 소스·잘못된 배음 표시를 제거했습니다."
         ]
       },
       "portfolio": {
@@ -556,16 +553,16 @@
         "visible": true
       },
       "name": "TB Colorizer",
-      "version": "2.3.1",
+      "version": "3.0.0",
       "category": "Voice",
       "price": 2,
       "description": "Voice color shaping.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=2.3.1",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_colorizer.png?v=3.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=2.3.1",
-        "sha256": "697541a08bb029a2f29350808b0ca1719a1d68231dbd7dc31f6acd5825adb6b9",
-        "sizeBytes": 3141713
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Colorizer.zip?v=3.0.0",
+        "sha256": "d9ae9f737f90f96e98a439f8020242389cd94650ebd092e71e3f9c85a07201c1",
+        "sizeBytes": 3298924
       },
       "macos": {
         "formats": {
@@ -590,10 +587,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "2.3.1",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-21/TB-Colorizer-2.3.1-Windows-x64-VST3-Setup.exe",
-          "sha256": "b7bf91bc92c06c9f2512413eee88e5146f57b1b2c5d8ea2931bafd001be469de",
-          "sizeBytes": 4383609
+          "version": "3.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-colorizer-windows-v3.0.0/TB-Colorizer-3.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "b2985ca05e4a66925ace47a338de5342025171175941ab5082e3ac724272bec3",
+          "sizeBytes": 4399922
         },
         "macosVst3": {
           "kind": "installer",
@@ -617,13 +614,13 @@
     },
     {
       "id": "tb_inverted_flanger",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "2.0.0",
-        "date": "2026-08-04",
+        "version": "3.0.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "Rebuilt the interface as a warm hardware-style rack with a dedicated output waveform display.",
-          "Reorganized depth, rate, feedback, color, and mix into a clearer vertical control flow."
+          "840×420 화면과 실제 샘플레이트·딜레이를 반영한 콤 응답을 적용하고 INVERT 조작부를 새로 공개합니다. 기존 상태의 반전 극성은 유지합니다.",
+          "호스트 프리셋 번호의 상태 복원 누락을 수정했으며 이전 상태 파일도 계속 읽습니다."
         ]
       },
       "portfolio": {
@@ -638,16 +635,16 @@
         "visible": true
       },
       "name": "TB Inverted Flanger",
-      "version": "2.0.0",
+      "version": "3.0.0",
       "category": "Modulation",
       "price": 1,
       "description": "Inverted flanging.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=2.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_flanger.png?v=3.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=2.0.0",
-        "sha256": "30dc2b34084961a9e894760caac34226d55fd708e0037c2133cb9e44a57fd916",
-        "sizeBytes": 2370405
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedFlanger.zip?v=3.0.0",
+        "sha256": "326748ad063ce725bc4fe5c765174692bcccc5ace071088a07b1c7ecc14a2e5f",
+        "sizeBytes": 2705369
       },
       "macos": {
         "formats": {
@@ -672,10 +669,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "2.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Inverted-Flanger-2.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "d13c9f39691230e0b8fc030fc101ff629d2cae7367e499bd4254efb0c68d64d4",
-          "sizeBytes": 3812427
+          "version": "3.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-inverted-flanger-windows-v3.0.0/TB-Inverted-Flanger-3.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "3fb2fd5a87a9c081db7c5d24fba1500e8589969f73acca1e48ab7ea516266bb2",
+          "sizeBytes": 3999316
         },
         "macosVst3": {
           "kind": "installer",
@@ -699,13 +696,12 @@
     },
     {
       "id": "tb_inverted_phaser",
-      "updatedAt": "2026-08-05",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "3.0.0",
-        "date": "2026-08-04",
+        "version": "4.0.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "Rebuilt the interface as a warm hardware-style rack with the phase-response display integrated into the main panel.",
-          "Reorganized movement, colour, and mix controls into a compact console layout for faster scanning."
+          "840×456 화면에서 실제 응답을 표시하고 INVERT 조작부를 새로 공개합니다. 기존 상태의 일반 극성은 유지하며 12개 조작부를 그룹별로 정리했습니다."
         ]
       },
       "portfolio": {
@@ -720,16 +716,16 @@
         "visible": true
       },
       "name": "TB Inverted Phaser",
-      "version": "3.0.0",
+      "version": "4.0.0",
       "category": "Modulation",
       "price": 1,
       "description": "Subtractive phasing.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=3.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_inverted_phaser.png?v=4.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip?v=3.0.0",
-        "sha256": "b46517ddfe78f49df080116ba6397f8cf2564810c2c67e636bc9589877386f24",
-        "sizeBytes": 2397826
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_InvertedPhaser.zip?v=4.0.0",
+        "sha256": "dfe4190b11fbf85ebe7221b753c358b3213c7458a8a487a96dbc895a6cd38d5c",
+        "sizeBytes": 2727485
       },
       "macos": {
         "formats": {
@@ -754,10 +750,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "3.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Inverted-Phaser-3.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "6b96d706e8180fd07971594c66563b46a9239e14458ca3316177aaac4b2dd056",
-          "sizeBytes": 3831585
+          "version": "4.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-inverted-phaser-windows-v4.0.0/TB-Inverted-Phaser-4.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "2697e92859d4aca7b7cf61a2f3fdbf5bb202efdc68761e0d9ae6c09094baa587",
+          "sizeBytes": 4016396
         },
         "macosVst3": {
           "kind": "installer",
@@ -863,14 +859,13 @@
     },
     {
       "id": "tb_noise_remover",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "2.4.0",
-        "date": "2026-09-30",
+        "version": "3.0.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "노이즈 전용 구간을 버튼으로 학습하는 Noise Print 캡처와 적용·삭제 흐름을 추가했습니다.",
-          "BASIC이 꺼진 상태의 불필요한 뉴럴 추론을 막고, 실패 시 안전한 스펙트럴 폴백으로 전환합니다.",
-          "애널라이저에서 선택한 주파수 대역의 노이즈를 집중적으로 줄이는 Focus Band를 추가했습니다."
+          "Basic을 복원→FastEnhancer-B→음성 분리 게이트의 직렬 처리로 개선했습니다. REDUCTION 강도와 레이턴시가 변경되므로 기존 세션은 재조정이 필요할 수 있습니다. Noise Print·Focus Band는 유지합니다.",
+          "48 kHz 지연은 5120 샘플(약 107 ms)이며 44.1/48 kHz 버퍼 128 이상, 88.2/96 kHz 버퍼 256 이상을 권장합니다."
         ]
       },
       "portfolio": {
@@ -885,16 +880,16 @@
         "visible": true
       },
       "name": "TB Noise Remover",
-      "version": "2.4.0",
+      "version": "3.0.0",
       "category": "Restoration",
       "price": 5,
       "description": "Learnable neural and spectral noise removal.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=2.4.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_noise_remover.png?v=3.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=2.4.0",
-        "sha256": "5678e58ae2fe84365aeb3db1b539a2678ca6c0ddd281226fe095903eeec0de93",
-        "sizeBytes": 13765604
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_NoiseRemover.zip?v=3.0.0",
+        "sha256": "29ad41dacfb7719cd06a04f1c234263c5d10ec8faa7b24fbc403b17a21c4ea75",
+        "sizeBytes": 9888291
       },
       "macos": {
         "formats": {
@@ -919,10 +914,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "2.2.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Noise-Remover-2.2.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "72a0f97fd02966058883ca6324e2527d5d9604ec7101bece3f40cbad96c7a3cc",
-          "sizeBytes": 11138723
+          "version": "3.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-noise-remover-windows-v3.0.0/TB-Noise-Remover-3.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "f8462a82754f384ae2e21de8af5a55838e06fd2a36e00de0f4b1f56e801e55f3",
+          "sizeBytes": 8519014
         },
         "macosVst3": {
           "kind": "installer",
@@ -946,13 +941,12 @@
     },
     {
       "id": "tb_parallel_reverb",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "3.1.0",
-        "date": "2026-09-30",
+        "version": "3.2.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "최신 Glue, Bright, Space 페달 디자인과 현재 병렬 리버브 엔진을 Windows VST3에 반영했습니다.",
-          "기본 화면을 600×520으로 줄이고 창 크기 조절에 따라 엔진 카드와 컨트롤이 함께 맞춰집니다."
+          "16라인 FDN·입력 디퓨저와 감쇠 보정을 적용하고 밀도·스테레오 폭 동작을 개선했습니다. 기존 100개를 보존하며 프리셋을 150개로 확장했습니다."
         ]
       },
       "portfolio": {
@@ -967,16 +961,16 @@
         "visible": true
       },
       "name": "TB Parallel Reverb",
-      "version": "3.1.0",
+      "version": "3.2.0",
       "category": "Reverb",
       "price": 4,
       "description": "Three-engine parallel reverb.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=3.1.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=3.2.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=3.1.0",
-        "sha256": "757aac878ae6e17e3844aeefe216ec920cd25e35fedf3c50cb440843da2eb612",
-        "sizeBytes": 5714072
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=3.2.0",
+        "sha256": "0ff6905a4c942cfb48ca7a7ea94ff96ef8c05c716b23c4f6ad6a4d6e10c215e9",
+        "sizeBytes": 5719957
       },
       "macos": {
         "formats": {
@@ -1001,10 +995,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "3.0.2",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-21/TB-Parallel-Reverb-3.0.2-Windows-x64-VST3-Setup.exe",
-          "sha256": "5f1ea7c0f51a1b55cfecd7ae613aa949f85cc4a490bb8682c09118d793e28d74",
-          "sizeBytes": 6865641
+          "version": "3.2.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-parallel-reverb-windows-v3.2.0/TB-Parallel-Reverb-3.2.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "ce8b675f97b6a24cbb6478fcc71b76be272c41b076a30c5c2d48c6f44b95241a",
+          "sizeBytes": 6870611
         },
         "macosVst3": {
           "kind": "installer",
@@ -1028,13 +1022,12 @@
     },
     {
       "id": "tb_scrambler",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "2.3.1",
-        "date": "2026-08-21",
+        "version": "3.0.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "현재 LOW, HIGH, AMOUNT 기반 스크램블러 디자인과 최신 처리 빌드를 Windows VST3에 반영했습니다.",
-          "카탈로그, VST3 moduleinfo, 설치본 버전을 2.3.1로 정렬했습니다."
+          "840×420 화면에서 실제 31밴드 순열·시간 매핑을 표시하고 대역 경계 드래그와 알림 가시성을 개선했습니다."
         ]
       },
       "portfolio": {
@@ -1049,16 +1042,16 @@
         "visible": true
       },
       "name": "TB Scrambler",
-      "version": "2.3.1",
+      "version": "3.0.0",
       "category": "Creative",
       "price": 3,
       "description": "Scramble and glitch effects.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=2.3.1",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_scrambler.png?v=3.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=2.3.1",
-        "sha256": "f2d68c591022d6704226d33456a4544f672de6b3a9a044274c6c355b88f55873",
-        "sizeBytes": 3368595
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Scrambler.zip?v=3.0.0",
+        "sha256": "dfbf5122ac48eeabd2e61657741059d449747d5114f2aefcd7bc7793d0fd6744",
+        "sizeBytes": 3077477
       },
       "macos": {
         "formats": {
@@ -1083,10 +1076,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "2.3.1",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-21/TB-Scrambler-2.3.1-Windows-x64-VST3-Setup.exe",
-          "sha256": "91b1fd05556f2b107296f5774b74af7095c2a8239d3c61827ac433f8d41f3dac",
-          "sizeBytes": 4703461
+          "version": "3.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-scrambler-windows-v3.0.0/TB-Scrambler-3.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "d1bf15720ff3c3ab25023f68759a306d2e2b981cb7588bfedf9b554a3104f7af",
+          "sizeBytes": 4248356
         },
         "macosVst3": {
           "kind": "installer",
@@ -1110,13 +1103,12 @@
     },
     {
       "id": "tb_transient_shaper",
-      "updatedAt": "2026-08-21",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "1.4.1",
-        "date": "2026-08-21",
+        "version": "1.5.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "최신 어택·서스테인 그래프와 현재 스펙트럴 처리 빌드를 Windows VST3에 반영했습니다.",
-          "카탈로그, VST3 moduleinfo, 설치본 버전을 1.4.1로 정렬했습니다."
+          "기존 크기와 DSP를 유지하며 공통 재질·서체를 적용하고 노브의 135도 회전 범위 표현을 정리했습니다."
         ]
       },
       "portfolio": {
@@ -1131,16 +1123,16 @@
         "visible": true
       },
       "name": "TB Spectral Transient Shaper",
-      "version": "1.4.1",
+      "version": "1.5.0",
       "category": "Dynamics",
       "price": 8,
       "description": "Spectral transient shaping.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=1.4.1",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_transient_shaper.png?v=1.5.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.4.1",
-        "sha256": "0add0969582a32b7991bf44b3d0b0072df829bc3eed7dd60ebabf78a0f7016e2",
-        "sizeBytes": 2843161
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SpectralTransientShaper.zip?v=1.5.0",
+        "sha256": "c61ef22c59af8eb462e38b30862b8365de5c820d437c1b618c5a5c683f460b01",
+        "sizeBytes": 3157846
       },
       "macos": {
         "formats": {
@@ -1165,10 +1157,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.4.1",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-21/TB-Spectral-Transient-Shaper-1.4.1-Windows-x64-VST3-Setup.exe",
-          "sha256": "b33d843776e2058e9f80b185ebd3f681cd2e97f8d788ceaa68bb9bde26b39a3e",
-          "sizeBytes": 4156300
+          "version": "1.5.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-transient-shaper-windows-v1.5.0/TB-Spectral-Transient-Shaper-1.5.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "e1622bd171c8a654bac495f855b2b013b3d1e6427b5a510210f7336b2a0b79bd",
+          "sizeBytes": 4301748
         },
         "macosVst3": {
           "kind": "installer",
@@ -1520,14 +1512,12 @@
     },
     {
       "id": "tb_xyz_panner",
-      "updatedAt": "2026-11-12",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "1.4.2",
-        "date": "2026-11-12",
+        "version": "1.5.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "청취자 기준 3D 정위와 전방·후방·고도 처리를 개선했습니다.",
-          "전체 KEMAR 고도 행, 도착시간 정렬 보간, 샘플레이트 독립 리샘플링을 적용했습니다.",
-          "DSP 222개·UI 48개 회귀 검사와 Release 빌드가 통과했습니다."
+          "실제 근접 음장 경계와 0 기준 아크를 표시하도록 정리하고 공통 재질·서체를 적용했습니다. 공간 렌더링 DSP·배치는 유지합니다."
         ]
       },
       "portfolio": {
@@ -1542,16 +1532,16 @@
         "visible": true
       },
       "name": "TB XYZ Panner",
-      "version": "1.4.2",
+      "version": "1.5.0",
       "category": "Utility",
       "price": 2,
       "description": "Multi-axis panning.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=1.4.2",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_xyz_panner.png?v=1.5.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.4.2",
-        "sha256": "15f61217e68affe760206d824f5831aa188b21075c48a0a6671b30b4b83a11b0",
-        "sizeBytes": 3296637
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_XYZPanner.zip?v=1.5.0",
+        "sha256": "57202dd18385ca7d29c8b3a14e484aa098fabeec423571adf58f2602cad82000",
+        "sizeBytes": 3485056
       },
       "macos": {
         "formats": {
@@ -1576,10 +1566,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.4.1",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-xyz-panner-windows-v1.4.1/TB-XYZ-Panner-1.4.1-Windows-x64-VST3-Setup.exe",
-          "sha256": "0db60d85c83475e50f99f359e1d4931c34e7f50ae0629f7156d4ecb09e2f157d",
-          "sizeBytes": 4297521
+          "version": "1.5.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-xyz-panner-windows-v1.5.0/TB-XYZ-Panner-1.5.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "b28ab8ec9e4e3ea6976c19d4956ab2bcf370fd540e00c56f457f8c50f0ceb72e",
+          "sizeBytes": 4446606
         },
         "macosVst3": {
           "kind": "installer",
@@ -1603,13 +1593,12 @@
     },
     {
       "id": "tb_limiter",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-08-02",
+        "version": "1.3.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "Applied a faster mapping across the 50–100% Enhance range and up to 3 dB of pre-limiter drive.",
-          "Adjusted the True Peak guard at high Enhance settings while preserving existing parameter and state compatibility."
+          "730×292 화면에 4초 Gain Reduction 이력 표시를 정리하고 공통 재질·노브·서체를 적용했습니다."
         ]
       },
       "portfolio": {
@@ -1624,16 +1613,16 @@
         "visible": true
       },
       "name": "TB Limiter",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Dynamics",
       "price": 4,
       "description": "True peak mastering limiter.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_limiter.png?v=1.2.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_limiter.png?v=1.3.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Limiter.zip?v=1.2.0",
-        "sha256": "610cbc5eb92813cb019bc4eac4dc4cebec0c2b72150330dd03bf25c9b7d1adf4",
-        "sizeBytes": 3239153
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Limiter.zip?v=1.3.0",
+        "sha256": "825040793e3da8a6dcfd3a6030721589652473535b361a916c2bb724574eb749",
+        "sizeBytes": 3528731
       },
       "macos": {
         "formats": {
@@ -1658,10 +1647,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.2.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Limiter-1.2.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "edf3c01cc0b452bbf8392584b74d2eb77cfa51bbc2198458ab75fc947a6fe4cc",
-          "sizeBytes": 4557839
+          "version": "1.3.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-limiter-windows-v1.3.0/TB-Limiter-1.3.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "888634e72c110c0a3795df27a3f05d3c0075e9a9f62c720a8506fd648ff44cf8",
+          "sizeBytes": 4692426
         },
         "macosVst3": {
           "kind": "installer",
@@ -1685,13 +1674,12 @@
     },
     {
       "id": "tb_sublow",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "1.3.0",
-        "date": "2026-08-14",
+        "version": "1.4.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "Rebuilt the editor around a blue-cyan Sub Pressure Chamber with real stereo input and output meters.",
-          "Added live wavefront feedback for Body, Bloom, Punch, and generated sub energy while preserving the existing parameter and preset contracts."
+          "실제 Body·Bloom·Punch와 생성된 서브 에너지에 반응하는 링 표시, 공통 재질·서체를 적용했습니다. DSP·파라미터·프리셋은 유지합니다."
         ]
       },
       "portfolio": {
@@ -1706,16 +1694,16 @@
         "visible": true
       },
       "name": "TB SubLow",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "category": "Creative",
       "price": 3,
       "description": "Sub-bass generator.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_sublow.png?v=1.2.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_sublow.png?v=1.4.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.3.0",
-        "sha256": "0f57b1369ee4d1e42d01b4fd6038ad6e8aad77af8d42aaba305b7630bd04418f",
-        "sizeBytes": 2400534
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_SubLow.zip?v=1.4.0",
+        "sha256": "1a386ace59feb83ad7a51bf21a56f0c356804114a8010fa8cd7b3da07d571b5e",
+        "sizeBytes": 2723262
       },
       "macos": {
         "formats": {
@@ -1740,10 +1728,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.3.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-14/TB-SubLow-1.3.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "6c7903b534f2a8fdd3f7d4dfca6f28724b7633fc812c0935b9e1dcddb16fdd7e",
-          "sizeBytes": 3823523
+          "version": "1.4.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-sublow-windows-v1.4.0/TB-SubLow-1.4.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "822845066a718c1ce2f2791013ea546842d1d7f2d8b51da67617c6111029dcd5",
+          "sizeBytes": 4006532
         },
         "macosVst3": {
           "kind": "installer",
@@ -1850,18 +1838,17 @@
     },
     {
       "id": "tb_pitch_shifter",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "2.0.0",
-        "date": "2026-08-14",
+        "version": "3.0.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "Updated the Windows build with lower-hop STFT processing, smoother formant automation, and exact-dry neutral return.",
-          "Redesigned the editor as a bright dual-instrument panel while keeping Pitch and Formant independently controllable."
+          "780×300 화면과 대형 Pitch·Formant 조작부를 적용하고 초기 피치 오차와 75 ms 테일 보고를 수정했습니다. 기존 Pitch에 따른 포먼트 이동 동작은 유지합니다."
         ]
       },
       "portfolio": {
         "image": "assets/plugins/tb_pitch_shifter.png",
-        "descriptionKo": "음정과 목소리의 굵기를 따로 움직여 자연스러운 더블과 특수 효과를 만듭니다.",
+        "descriptionKo": "음정 이동과 추가 포먼트 이동을 두 노브로 조절합니다. Pitch를 움직이면 포먼트도 함께 이동합니다.",
         "tags": [
           "Pitch",
           "Formant",
@@ -1871,16 +1858,16 @@
         "visible": true
       },
       "name": "TB Pitch Shifter",
-      "version": "2.0.0",
+      "version": "3.0.0",
       "category": "Pitch",
       "price": 1,
-      "description": "Independent pitch and formant shifting.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_pitch_shifter.png?v=2.0.0",
+      "description": "Pitch shifting with an additional formant-envelope shift.",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_pitch_shifter.png?v=3.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_PitchShifter.zip?v=2.0.0",
-        "sha256": "af8a5abfb0dfd5707dcd23e6365a17ccfe6a8c4ed76a29675bc3ac98c4d22d8c",
-        "sizeBytes": 2390604
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_PitchShifter.zip?v=3.0.0",
+        "sha256": "1aa0ace828e908d7137e3da625edeaeb8fbe86f902fa4f7d745cb1f7228c21b3",
+        "sizeBytes": 2674007
       },
       "macos": {
         "formats": {
@@ -1905,10 +1892,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "2.0.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-14/TB-Pitch-Shifter-2.0.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "ae28eefd00760c5cffa0208f67804666f90dd729baeeca6f74e0a4c9801109c5",
-          "sizeBytes": 3823354
+          "version": "3.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-pitch-shifter-windows-v3.0.0/TB-Pitch-Shifter-3.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "cab185594b4ccad13f99f70e2aead4cfd5d9d14c583973a67d69908016a9d960",
+          "sizeBytes": 3967233
         },
         "macosVst3": {
           "kind": "installer",
@@ -2261,14 +2248,12 @@
     },
     {
       "id": "tb_exciter",
-      "updatedAt": "2026-11-12",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-11-12",
+        "version": "1.3.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "고역 보이싱 후보 3_cap9k를 BRIGHT 셸프 코너 상한 9 kHz로 반영했습니다.",
-          "Release DSP Harness 63개 검사를 통과했으며 공개 파라미터 5개·레이턴시 61 samples·프리셋 계약을 유지했습니다.",
-          "Windows Hub ZIP을 1.2.0으로 갱신했으며 설치 프로그램은 기존 버전을 유지합니다."
+          "Sparkle 표시가 실제 신호 피크와 사이드 에너지에 반응하도록 바꾸고 재질·서체를 통일했습니다. 오디오 경로는 유지합니다."
         ]
       },
       "portfolio": {
@@ -2283,26 +2268,26 @@
         "visible": true
       },
       "name": "TB Exciter",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "Creative",
       "price": 5,
       "description": "Harmonic exciter and enhancer with 30 Factory presets.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.2.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_exciter.png?v=1.3.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.2.0",
-        "sha256": "202eb5081476fde22121b543dd66d68a18b77d615f67f8a4d7794df28c0485c7",
-        "sizeBytes": 2982166
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Exciter.zip?v=1.3.0",
+        "sha256": "b73a884d31487ba90c643bceddaf491e4fee11902b4e5588f96c173e2e6878e1",
+        "sizeBytes": 3074281
       },
       "webDownloads": {
         "windowsVst3": {
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.1.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-09/TB-Exciter-1.1.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "fe90203e845382ea263cc9b4a90dcc35b04aec476ad70fa5907ab3cb8dbf38f3",
-          "sizeBytes": 4177684
+          "version": "1.3.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-exciter-windows-v1.3.0/TB-Exciter-1.3.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "a2f893cbc8a96172f91adff4fb319a5cd9efeecfba8417e47fb1d4c613f0b3a0",
+          "sizeBytes": 4244586
         },
         "macosVst3": {
           "kind": "installer",
@@ -2501,14 +2486,12 @@
     },
     {
       "id": "tb_filter_table",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-21",
       "latestUpdate": {
-        "version": "1.1.0",
-        "date": "2026-08-17",
+        "version": "2.0.0",
+        "date": "2026-11-21",
         "notesKo": [
-          "Restored the published 20 Hz–20 kHz Cutoff automation mapping while retaining the 200 Hz effective UI, DSP, and schema-5 floor.",
-          "Kept every public parameter ID and state schema unchanged, with the host contract showing only the intended Cutoff normalization correction.",
-          "Passed 185/185 full-harness checks, two quiet performance runs, 174 host-contract cases, and a Standalone smoke test; manual DAW, listening, DPI, signing, and rights checks remain deferred."
+          "한 화면으로 UI를 개편하고 미배포 상태였던 LFO 템포 싱크·Division·입력 엔벨로프 Amount/Speed·Stereo Spread를 공개합니다. 기존 11개 파라미터를 보존하며 5개를 추가하고 이전 상태를 schema 6으로 읽어 올립니다."
         ]
       },
       "portfolio": {
@@ -2523,26 +2506,26 @@
         "visible": true
       },
       "name": "TB Filter Table",
-      "version": "1.1.0",
+      "version": "2.0.0",
       "category": "Filter",
       "price": 4,
       "description": "Wavetable spectral filtering with morphing frames and phase modes.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_filter_table.png?v=1.1.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_filter_table.png?v=2.0.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_FilterTable.zip?v=1.1.0",
-        "sha256": "e1d57589cdb52ae5dce97fd0206b4fdc1cec55137a9b0c2d894f43786108ce6f",
-        "sizeBytes": 2956234
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_FilterTable.zip?v=2.0.0",
+        "sha256": "501cb3d0edc9fb152bca6cad3219c898155ec049dfb2939c096c8bf4aad86bf0",
+        "sizeBytes": 3284265
       },
       "webDownloads": {
         "windowsVst3": {
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.1.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-17/TB-Filter-Table-1.1.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "26615eda34fb8beff744521288fea7830ec694b427cf5b6bc22420a99316c0f2",
-          "sizeBytes": 4262006
+          "version": "2.0.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-filter-table-windows-v2.0.0/TB-Filter-Table-2.0.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "9f92400877a234e3e87dba757daf0bb095b4d06311852dca38b1c5dfe4f94674",
+          "sizeBytes": 4410375
         },
         "macosVst3": {
           "kind": "installer",

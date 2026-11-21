@@ -6,6 +6,32 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-11-21
+
+Windows x64 VST3 suite update. Each release below includes a Hub ZIP and Windows installer; catalogue prices and existing macOS downloads are unchanged.
+
+The shared raster-part cache now stores software images, fixing a Windows plug-in unload/shutdown hang caused by retaining static Direct2D images. Source and packaged module hashes are checked so a file locked by another process cannot silently ship an older build.
+
+| Plug-in | Version | Main change |
+| --- | --- | --- |
+| [TB Disperser](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-disperser-windows-v2.0.0) | 2.0.0 | Redesigned editor with actual group-delay response |
+| [TB Distortion](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-distortion-windows-v2.0.0) | 2.0.0 | Transfer/Drive-led editor and type plates |
+| [TB Exciter](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-exciter-windows-v1.3.0) | 1.3.0 | Signal-reactive Sparkle display and shared materials/fonts |
+| [TB Filter Table](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-filter-table-windows-v2.0.0) | 2.0.0 | One-screen editor plus LFO tempo sync, envelope motion and stereo spread |
+| [TB Colorizer](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-colorizer-windows-v3.0.0) | 3.0.0 | Response-led editor without synthetic harmonic decoration |
+| [TB Inverted Flanger](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-inverted-flanger-windows-v3.0.0) | 3.0.0 | New INVERT control, actual-rate comb display and host program-number persistence |
+| [TB Inverted Phaser](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-inverted-phaser-windows-v4.0.0) | 4.0.0 | New INVERT control, full-width response display and grouped controls |
+| [TB Limiter](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-limiter-windows-v1.3.0) | 1.3.0 | Four-second gain-reduction history and refreshed materials/fonts |
+| [TB Noise Remover](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-noise-remover-windows-v3.0.0) | 3.0.0 | Serial speech isolation, adaptive gate and smaller FFT model export |
+| [TB Parallel Reverb](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-parallel-reverb-windows-v3.2.0) | 3.2.0 | 16-line FDN, input diffusion/decay compensation and 150 presets |
+| [TB Pitch Shifter](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-pitch-shifter-windows-v3.0.0) | 3.0.0 | Redesigned editor, corrected startup pitch and 75 ms tail reporting |
+| [TB Scrambler](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-scrambler-windows-v3.0.0) | 3.0.0 | Actual 31-band mapping display and draggable band edges |
+| [TB Spectral Transient Shaper](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-transient-shaper-windows-v1.5.0) | 1.5.0 | Shared materials/fonts and corrected knob-travel rendering |
+| [TB SubLow](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-sublow-windows-v1.4.0) | 1.4.0 | Real Body/Bloom/Punch/sub-energy rings |
+| [TB XYZ Panner](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-xyz-panner-windows-v1.5.0) | 1.5.0 | Correct near-field boundaries/arc anchors and shared materials/fonts |
+
+Compatibility: existing plug-in IDs and product parameter contracts are retained. Noise Remover's Basic mode is stronger at the same REDUCTION value and reports 5120 samples at 48 kHz (previously 2048); review old sessions and use at least 128 samples at 44.1/48 kHz or 256 at 88.2/96 kHz. Parallel Reverb preserves the original 100 preset positions, but its upgraded decay/diffusion model changes the sound. Pitch Shifter preserves its existing pitch/formant coupling, not automatic formant compensation. Manual DAW listening, interactive GUI checks, installer execution and code-signing entitlement checks are not part of automated release verification.
+
 ## 2026-11-13
 
 - Released [TB EQ 2.0.3 for Windows x64 VST3](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-eq-windows-v2.0.3) with a unified applied-response curve, cleaner spectral range guides, and tighter analyzer/control layout. Spectral regression 723/723, latency handoff, all-pass, and Analyzer UX checks passed.
@@ -16,11 +42,6 @@
 
 - Released [TB XYZ Panner 1.4.1 for Windows x64 VST3](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-xyz-panner-windows-v1.4.1) with corrected Side View coordinates, a restored Front/Back knob, clearer control layout, and reliable Undo/Redo grouping.
 - Improved low-sample-rate filter stability, Height automation transitions, and headphone-mode re-entry. All 164 DSP and 48 editor checks passed; existing parameter/state contracts and macOS downloads are preserved. Live DAW listening remains unverified.
-
-## 2026-10-08
-
-- Released [TB XYZ Panner 1.4.0 for Windows x64 VST3](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/tb-xyz-panner-windows-v1.4.0) with measured rear-direction binaural rendering, automatic 5.1/7.1-to-stereo headphone rendering, and smoother distance automation.
-- Updated its Hub ZIP and Windows installer metadata while preserving existing plug-in/parameter IDs and macOS downloads. Automated spatial and host-contract checks passed; manual DAW listening and GUI interaction remain unverified.
 
 # Buy me a coffee?
 https://ko-fi.com/teamimpulseimpact
@@ -188,7 +209,7 @@ A creative stereo delay with a visual delay map, rhythm controls, and grain-tran
 
 #### TB Pitch Shifter
 
-An independent pitch and formant processor for transposing audio and changing perceived size with two direct controls.
+A two-control pitch and formant shifter. Pitch also moves the formants; Formant adds a separate envelope shift rather than automatically preserving the original vowel.
 
 <img width="900" alt="TB Pitch Shifter feature mockup" src="Portfolio/Mockups/tb_pitch_shifter.jpg" />
 
