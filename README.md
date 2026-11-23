@@ -10,6 +10,14 @@
 
 Five follow-up Windows x64 VST3 updates: TB De-Esser 1.1.0, TB Shimmer 2.1.0, TB Filter Table 2.0.1, TB Limiter 1.3.1, and TB Pitch Shifter 3.0.1. Existing prices and macOS downloads are unchanged. Vocoder 3.0.0 remains on hold because the current Host probe exceeded its 180-second watchdog; Resonator and Ring Modulation remain in progress. See [the release notes](reporting/releases/2026-11-23/README.md).
 
+### Latest macOS updates
+
+| Release | Products and highlights |
+| --- | --- |
+| [SVN r87 — 2026-10-07](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/plugins-macos-arm64-svn-r87-2026-10-07) | 22 changed products with Apple Silicon AU/VST3 builds; macOS 11.0+; AAX omitted; packages are unsigned and not notarized. |
+| [SVN r80 — 2026-08-22](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/plugins-macos-arm64-svn-r80-2026-08-22) | TB Delay, Grain Phaser, Parallel Reverb, and Recorder AU/VST3 updates; macOS 11.0+; automated product checks passed. |
+| [SVN r66 — 2026-08-14](https://github.com/TaebeumKim/TB_Audio-Plugins/releases/tag/plugins-macos-arm64-svn-r66-2026-08-14) | TB Tune, Delay, EQ, Exciter, FilterTable, MultiBand Compressor, PitchShifter, Vocoder, and Volume AU/VST3 updates. |
+
 ## 2026-11-21
 
 Windows x64 VST3 suite update. Each release below includes a Hub ZIP and Windows installer; catalogue prices and existing macOS downloads are unchanged.
