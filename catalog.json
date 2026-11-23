@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-11-23T01:00:00+09:00",
+  "updatedAt": "2026-11-23T18:10:00+09:00",
   "hubVersion": "1.3.18",
   "languages": [
     {
@@ -1266,13 +1266,13 @@
     },
     {
       "id": "tb_tune",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-23",
       "latestUpdate": {
-        "version": "2.1.0",
-        "date": "2026-08-14",
+        "version": "2.2.0",
+        "date": "2026-11-23",
         "notesKo": [
-          "Redesigned the editor with a brighter key-and-scale workflow, a dedicated pitch-status panel, and higher-resolution controls.",
-          "Preserved the pitch engine, parameter IDs, and state compatibility while refreshing the Windows build."
+          "호스트 bypass 전환 시 일반 모드와 Live Tone 모드의 지연·tail 보고를 정렬했습니다.",
+          "Live Tone 저지연 모드와 음성 반응형 컬러 워시를 추가하고 기존 CID·파라미터 ID·상태 호환성을 보존했습니다."
         ]
       },
       "portfolio": {
@@ -1287,16 +1287,16 @@
         "visible": true
       },
       "name": "TB Tune",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "category": "Voice",
       "price": 1,
       "description": "Vocal pitch correction.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=2.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_tune.png?v=2.2.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=2.1.0",
-        "sha256": "437cda22e864f512c262007254f4292113e5d7f69d9a32fbaa3ab7d88ae28d32",
-        "sizeBytes": 3004299
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Tune.zip?v=2.2.0",
+        "sha256": "86c2d656ade54483fdd28f7ad19bcbadb4ef084be1d7f16444664c551c70718b",
+        "sizeBytes": 3608422
       },
       "macos": {
         "formats": {
@@ -1321,10 +1321,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "2.1.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-14/TB-Tune-2.1.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "55d41f961ed89043d741faa9f28e850d3cc69ba004a342e75a56b5f72b960c04",
-          "sizeBytes": 4428033
+          "version": "2.2.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-tune-windows-v2.2.0/TB-Tune-2.2.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "2a37cc968abab8ce03beba3150e9b683e755d17f863f682ed310fc195d99667d",
+          "sizeBytes": 4870549
         },
         "macosVst3": {
           "kind": "installer",
@@ -1348,14 +1348,14 @@
     },
     {
       "id": "tb_volume",
-      "updatedAt": "2026-10-07",
+      "updatedAt": "2026-11-23",
       "latestUpdate": {
-        "version": "1.2.2",
-        "date": "2026-08-17",
+        "version": "1.3.0",
+        "date": "2026-11-23",
         "notesKo": [
-          "Reduced the product-title font so TB VOLUME is fully visible in actual VST3 hosts instead of clipping to TB VOLUM.",
-          "Kept all three public parameters, gain mapping, state compatibility, and brickwall limiter behavior unchanged.",
-          "Passed fresh mapping, limiter, state-recall, UI Automation, headless VST3, and installed-host capture checks; manual DAW and signing validation remains deferred."
+          "리미터 어택 램프와 호스트 bypass 지연 정렬을 보강해 레벨 전환 시 클릭을 줄였습니다.",
+          "OUTPUT LEVEL 노브와 dB/% 표시를 정리하고 기존 3개 파라미터·CID·상태 호환성을 유지했습니다.",
+          "매핑·리미터·UI 캡처·VST3 호스트 계약 검증을 통과했습니다. 수동 DAW 청감과 코드 서명은 별도 확인이 필요합니다."
         ]
       },
       "portfolio": {
@@ -1370,16 +1370,16 @@
         "visible": true
       },
       "name": "TB Volume",
-      "version": "1.2.2",
+      "version": "1.3.0",
       "category": "Utility",
       "price": 1,
       "description": "Simple gain control.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_volume.png?v=1.2.2",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_volume.png?v=1.3.0",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.2.2",
-        "sha256": "c462c13985345f8035fa5e9e5fb34047512827dbfea1858cc9b207f43a863157",
-        "sizeBytes": 2540817
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Volume.zip?v=1.3.0",
+        "sha256": "34d48391aeafdfb2e7d67b2c7117cc604881d1e6cedfc87344f6413b43e27f69",
+        "sizeBytes": 2682106
       },
       "macos": {
         "formats": {
@@ -1404,10 +1404,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.2.2",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/plugin-windows-installers-2026-08-17/TB-Volume-1.2.2-Windows-x64-VST3-Setup.exe",
-          "sha256": "9393e2d551cf73b2e53a2d07684f235ef518f945e3e871ccb5de479991c7172b",
-          "sizeBytes": 3921066
+          "version": "1.3.0",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-volume-windows-v1.3.0/TB-Volume-1.3.0-Windows-x64-VST3-Setup.exe",
+          "sha256": "41962e73da61acc68149164c5635a9f2b607446f661a239e62d7996a3f35b75b",
+          "sizeBytes": 4018998
         },
         "macosVst3": {
           "kind": "installer",

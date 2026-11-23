@@ -8,7 +8,7 @@
 
 ## 2026-11-23
 
-Five follow-up Windows x64 VST3 updates: TB De-Esser 1.1.0, TB Shimmer 2.1.0, TB Filter Table 2.0.1, TB Limiter 1.3.1, and TB Pitch Shifter 3.0.1. Existing prices and macOS downloads are unchanged. Vocoder 3.0.0 remains on hold because the current Host probe exceeded its 180-second watchdog; Resonator and Ring Modulation remain in progress. See [the release notes](reporting/releases/2026-11-23/README.md).
+Seven follow-up Windows x64 VST3 updates: TB De-Esser 1.1.0, TB Shimmer 2.1.0, TB Filter Table 2.0.1, TB Limiter 1.3.1, TB Pitch Shifter 3.0.1, TB Tune 2.2.0, and TB Volume 1.3.0. Existing prices and macOS downloads are unchanged. Vocoder 3.0.0 remains on hold because the current Host probe exceeded its 180-second watchdog; Resonator and Ring Modulation remain in progress. See [the release notes](reporting/releases/2026-11-23/README.md).
 
 ### Latest macOS updates
 
