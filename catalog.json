@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-11-25T18:30:00+09:00",
+  "updatedAt": "2026-11-26T02:07:00+09:00",
   "hubVersion": "1.3.18",
   "languages": [
     {
@@ -938,12 +938,12 @@
     },
     {
       "id": "tb_parallel_reverb",
-      "updatedAt": "2026-11-23",
+      "updatedAt": "2026-11-26",
       "latestUpdate": {
-        "version": "3.3.0",
-        "date": "2026-11-23",
+        "version": "3.3.1",
+        "date": "2026-11-26",
         "notesKo": [
-          "페달보드 화면을 엔진 패널 세 장과 MASTER 띠의 TB 공통 시각 언어로 바꾸고 기본 창을 900 × 620으로 키웠습니다. DSP와 프리셋은 그대로입니다."
+          "호스트 bypass 복귀 때 잔향이 다시 튀어나오지 않도록 세 엔진을 안전하게 비우고 실제 활성 엔진·pre-delay·decay·shimmer를 반영해 tail 보고를 보정했습니다. 기존 파라미터·CID·프리셋 계약은 유지했습니다."
         ]
       },
       "portfolio": {
@@ -958,16 +958,16 @@
         "visible": true
       },
       "name": "TB Parallel Reverb",
-      "version": "3.3.0",
+      "version": "3.3.1",
       "category": "Reverb",
       "price": 4,
       "description": "Three-engine parallel reverb.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=3.3.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_parallel_reverb.png?v=3.3.1",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=3.3.0",
-        "sha256": "eecc2e1616707f83a33b705fe888dc014f24af2c9a63dddb7ec5df36a2e91eac",
-        "sizeBytes": 3060785
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_ParallelReverb.zip?v=3.3.1",
+        "sha256": "04a31ee10935aca2b5d3068a4b6b6cfa24ef8133ddf193b0c96e958cf6910f9a",
+        "sizeBytes": 3062966
       },
       "macos": {
         "formats": {
@@ -992,10 +992,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "3.3.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-parallel-reverb-windows-v3.3.0/TB-Parallel-Reverb-3.3.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "2e78f5f3a92b3cd0ce13c0f8f207ca5ea8a1e8517a9adf210a73d13a1c2b2adb",
-          "sizeBytes": 4320823
+          "version": "3.3.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-parallel-reverb-windows-v3.3.1/TB-Parallel-Reverb-3.3.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "0d2edab8bc6ffdcad16d6746f3cca5517e85fec0dbcbf938f61a01b0394b74af",
+          "sizeBytes": 4321735
         },
         "macosVst3": {
           "kind": "installer",
@@ -1751,12 +1751,12 @@
     },
     {
       "id": "tb_delay",
-      "updatedAt": "2026-11-23",
+      "updatedAt": "2026-11-26",
       "latestUpdate": {
-        "version": "1.2.0",
-        "date": "2026-11-23",
+        "version": "1.2.1",
+        "date": "2026-11-26",
         "notesKo": [
-          "로그 범위 파라미터 6개의 호스트 표시를 소수 7자리에서 고정 자릿수로 바꿔 Low Cut 입력값 왕복 오차를 없애고, 화면을 TB 공통 시각 언어로 바꿨습니다."
+          "호스트 bypass 복귀 뒤 옛 echo가 다시 재생되지 않도록 엔진을 비우고, 실제 echo·grain·BLUR·SHIFT·WOBBLE 경로를 반영해 −60 dB tail 보고를 보정했습니다. 기존 파라미터·CID·상태 계약은 유지했습니다."
         ]
       },
       "portfolio": {
@@ -1771,16 +1771,16 @@
         "visible": true
       },
       "name": "TB Delay",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "category": "Delay",
       "price": 3,
       "description": "Creative stereo delay.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_delay.png?v=1.2.0",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_delay.png?v=1.2.1",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.2.0",
-        "sha256": "311731c54ac7da8c44aa839f1fb19c6f9528906a58d709ec25039a840c033832",
-        "sizeBytes": 2632391
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.2.1",
+        "sha256": "ae692384be995fbfaccbc7ca200ddcf5d3a278e41cc3b561ed7b21e007e5785e",
+        "sizeBytes": 2633857
       },
       "macos": {
         "formats": {
@@ -1805,10 +1805,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.2.0",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-delay-windows-v1.2.0/TB-Delay-1.2.0-Windows-x64-VST3-Setup.exe",
-          "sha256": "91d4e24a18379faa7e9f698cdc56e7b8958d084794dd70d14a553e32cad7633c",
-          "sizeBytes": 4005207
+          "version": "1.2.1",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-delay-windows-v1.2.1/TB-Delay-1.2.1-Windows-x64-VST3-Setup.exe",
+          "sha256": "27f6cb001e1967ffdda2a88cff665d9ba9d6ec10cb22df69564457a8e4744869",
+          "sizeBytes": 4006053
         },
         "macosVst3": {
           "kind": "installer",

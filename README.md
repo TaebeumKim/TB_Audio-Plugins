@@ -6,6 +6,10 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-11-26
+
+Two follow-up Windows x64 VST3 updates: TB Delay 1.2.1 and TB Parallel Reverb 3.3.1. Both fixes preserve existing CIDs, parameter IDs, state/preset contracts and catalogue prices. See [the release notes](reporting/releases/2026-11-26/README.md).
+
 ## 2026-11-25
 
 TB Compressor 2.2.0 for Windows x64 VST3: corrected latency reporting and host bypass alignment, OUTPUT moved after the saturator, linear-phase oversampling and a redesigned editor. Sessions using the saturator with a non-zero OUTPUT, or oversampling, may sound different. See [the release notes](reporting/releases/2026-11-25/TB_Compressor.md).
