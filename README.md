@@ -6,6 +6,10 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-11-25
+
+TB Compressor 2.2.0 for Windows x64 VST3: corrected latency reporting and host bypass alignment, OUTPUT moved after the saturator, linear-phase oversampling and a redesigned editor. Sessions using the saturator with a non-zero OUTPUT, or oversampling, may sound different. See [the release notes](reporting/releases/2026-11-25/TB_Compressor.md).
+
 ## 2026-11-23
 
 Fifteen follow-up Windows x64 VST3 updates: TB De-Esser 1.1.0, TB Shimmer 2.1.0, TB Filter Table 2.0.1, TB Limiter 1.3.1, TB Pitch Shifter 3.0.1, TB Tune 2.2.0, TB Volume 1.3.0, and TB Resonator 1.1.0, TB Ring Modulation 1.1.0, TB Vocoder (Beta) 3.0.0, TB Noise Remover 3.1.0, TB Center 1.4.0, TB Delay 1.2.0, TB Parallel Reverb 3.3.0, TB Grain Phaser 2.0.1. The later eight bring the TB common visual language plus the logic fixes listed in the release notes. Existing prices and macOS downloads are unchanged. See [the release notes](reporting/releases/2026-11-23/README.md).
