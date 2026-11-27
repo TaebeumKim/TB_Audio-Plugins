@@ -1,6 +1,6 @@
 {
   "catalogVersion": 1,
-  "updatedAt": "2026-11-26T02:07:00+09:00",
+  "updatedAt": "2026-11-28T12:00:00+09:00",
   "hubVersion": "1.3.18",
   "languages": [
     {
@@ -1751,12 +1751,12 @@
     },
     {
       "id": "tb_delay",
-      "updatedAt": "2026-11-26",
+      "updatedAt": "2026-11-28",
       "latestUpdate": {
-        "version": "1.2.1",
-        "date": "2026-11-26",
+        "version": "1.2.2",
+        "date": "2026-11-28",
         "notesKo": [
-          "호스트 bypass 복귀 뒤 옛 echo가 다시 재생되지 않도록 엔진을 비우고, 실제 echo·grain·BLUR·SHIFT·WOBBLE 경로를 반영해 −60 dB tail 보고를 보정했습니다. 기존 파라미터·CID·상태 계약은 유지했습니다."
+          "BBD·Digital 캐릭터에서 FEEDBACK이 높으면 echo가 마지막 한 단계에 걸려 끝나지 않던 문제를 고쳤습니다. 입력이 들어오는 동안의 음색은 1.2.1과 같습니다."
         ]
       },
       "portfolio": {
@@ -1771,16 +1771,16 @@
         "visible": true
       },
       "name": "TB Delay",
-      "version": "1.2.1",
+      "version": "1.2.2",
       "category": "Delay",
       "price": 3,
       "description": "Creative stereo delay.",
-      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_delay.png?v=1.2.1",
+      "iconUrl": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/Logos/tb_delay.png?v=1.2.2",
       "youtubeUrl": "https://www.youtube.com/@TeamImpulseImpact",
       "windows": {
-        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.2.1",
-        "sha256": "ae692384be995fbfaccbc7ca200ddcf5d3a278e41cc3b561ed7b21e007e5785e",
-        "sizeBytes": 2633857
+        "url": "https://raw.githubusercontent.com/TaebeumKim/TB_Audio-Plugins/main/Hub/TB_Delay.zip?v=1.2.2",
+        "sha256": "f065a01ac04e72ba6dd33257c7abba27965f12bf770e8f7f9334f4cd42c41942",
+        "sizeBytes": 2633942
       },
       "macos": {
         "formats": {
@@ -1805,10 +1805,10 @@
           "kind": "installer",
           "format": "VST3",
           "architecture": "x64",
-          "version": "1.2.1",
-          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-delay-windows-v1.2.1/TB-Delay-1.2.1-Windows-x64-VST3-Setup.exe",
-          "sha256": "27f6cb001e1967ffdda2a88cff665d9ba9d6ec10cb22df69564457a8e4744869",
-          "sizeBytes": 4006053
+          "version": "1.2.2",
+          "url": "https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-delay-windows-v1.2.2/TB-Delay-1.2.2-Windows-x64-VST3-Setup.exe",
+          "sha256": "df7f4ada7c89b842a9c23abb38456622c78351af67fa7bde161b58534f3cb5d3",
+          "sizeBytes": 4005989
         },
         "macosVst3": {
           "kind": "installer",

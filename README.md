@@ -6,6 +6,10 @@
 
 <!-- Keep only the latest three update dates. Add the newest date at the top whenever this repository is updated. -->
 
+## 2026-11-28
+
+TB Delay 1.2.2 for Windows x64 VST3: BBD and Digital echoes no longer hang on their last quantisation step at high FEEDBACK; the tone while input plays is unchanged from 1.2.1. See [the release notes](reporting/releases/2026-11-28/TB_Delay.md).
+
 ## 2026-11-26
 
 Two follow-up Windows x64 VST3 updates: TB Delay 1.2.1 and TB Parallel Reverb 3.3.1. Both fixes preserve existing CIDs, parameter IDs, state/preset contracts and catalogue prices. See [the release notes](reporting/releases/2026-11-26/README.md).
