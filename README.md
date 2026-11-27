@@ -8,7 +8,7 @@
 
 ## 2026-11-28
 
-TB Delay 1.2.2 for Windows x64 VST3: BBD and Digital echoes no longer hang on their last quantisation step at high FEEDBACK; the tone while input plays is unchanged from 1.2.1. See [the release notes](reporting/releases/2026-11-28/TB_Delay.md).
+TB Delay 1.2.2 and TB Loudness 1.0.0 for Windows x64 VST3. Delay fixes the high-FEEDBACK last-step hang; Loudness adds CLEAN/POWER/CRASH drive, band focus, LFE Leek and the UI v3 house style. See [the Loudness release notes](reporting/releases/2026-11-28/TB_Loudness.md) and [the Delay release notes](reporting/releases/2026-11-28/TB_Delay.md).
 
 ## 2026-11-26
 
