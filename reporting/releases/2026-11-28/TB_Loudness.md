@@ -14,6 +14,6 @@
 - ZIP: https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-loudness-windows-v1.0.0/TB_Loudness.zip
 - Installer: https://github.com/TaebeumKim/TB_Audio-Plugins/releases/download/tb-loudness-windows-v1.0.0/TB-Loudness-1.0.0-Windows-x64-VST3-Setup.exe
 
-ZIP SHA-256: `b98ef56bd6252aec42fe499e5fca22ee9d9f42edebb78ee0958de8716acf9ad1` (6382549 bytes)
+ZIP SHA-256: `c21698064e2eacdd158cdd13a63ed7a24271db0df9e9e8ef89efe6e18f67fe87` (6475380 bytes)
 
-Installer SHA-256: `daa28098077b42a02cb46540278db476f3a3f85ded98c0d3398eff35fef6b679` (5137476 bytes)
+Installer SHA-256: `4582aca75012675c2e4d8cfbcfa3fe6141d9500fb34f80375ff5020ca61663a9` (5183226 bytes)
